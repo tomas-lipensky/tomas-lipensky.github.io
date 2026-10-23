@@ -1,0 +1,58 @@
+
+=====Weby=====
+[[http://robodoupe.cz|robodoupe.cz]] ... Web o robotice a elektronice\\
+
+====Chytrá domácnost====
+[[https://iot.tuya.com/]] ... Tuya\\
+[[https://www.reddit.com/r/smartlife/comments/gj5ixd/smart_life_web_interface/]] ... Python skript pro Tuyapy\\
+====Elektro soucastky====
+[[http://nearbus.net/wiki/index.php?title=File:Resistor_color_codes.jpg|Barevne oznaceni rezistoru (odporu)]]
+
+==Ridici jednotky/mikropocitace==
+Raspberry Pi\\
+Arduino\\
+AVR Atmel atmegaXXX\\
+
+==elektro zarizeni==
+[[http://www.elektrobock.cz/cs/cidlo-vlhkosti/product.html?id=68|vlhkostat]] na elektrobock.cz\\
+[[http://www.snailshop.cz/|EShop snalshop]]\\
+[[|ges]]\\
+[[https://www.gme.cz|GM electronic]]\\
+    
+==I2C==
+[[http://cs.wikipedia.org/wiki/I%C2%B2C|I2C]] na cz.wikipedia.org\\
+[[http://www.amaterskaelektronika.cz/file/teplota-vlhkost-sht11-assembler|I2C teplotni citlo]] na amaterskaelektronika.cz\\
+
+==433==
+[[http://arduino8.webnode.cz/news/lekce-20-arduino-a-vyuziti-433-92-mhz/|Lekce jak na 433]]\\
+[[http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html|nakup 433]]
+[[http://robotstore.cz/obchod/arduino/433mhz-vysilac-a-prijimac-sada-arduino-modulu/|jiny nakup 433]]\\
+
+
+==ATMega:==
+[[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]
+
+
+=====Raspberry Pi=====
+[[http://elinux.org/RPi_Low-level_peripherals|Popis extension slotu Raspberry Pi A i B +, GPIO specifikace]]\\
+[[http://luketopia.net/2013/07/28/raspberry-pi-gpio-via-the-shell/|Ovladani GPIO z shellu Linuxu]]\\
+[[https://www.npmjs.com/package/pigpio|piGPIO]] - Knihovna pro nodeJs na ovladani GPIO\\
+[[https://nodered.org/docs/hardware/raspberrypi|Raspbian a Node-Red]] - navod na instsalaci Node-Red na Raspbianu\\
+[[https://www.npmjs.com/package/node-red-node-pi-gpiod|GPIOd]] - ovladani GPIO sbernice na Raspberry na [[../dev/node-red.html|Node-RED]]. V pripade "nrgpio python command not working" je problem nejspise s pravy k pinum, zkusit pod rootem.\\
+[[https://www.raspberrypi.org/documentation/usage/kodi/|Kodi]] ... multimedialni cetrum pro Raspberry Pi\\
+[[https://play.google.com/store/apps/details?id=org.leetzone.android.yatsewidgetfree&hl=en_US|Yatse]] ... Dalkovy ovladac pro Kodi na Androidu\\
+
+
+==Priklady==
+[[http://www.linuxsoft.cz/article.php?id_article=1953|Zapojeni diody na linuxsoft.cz]]\\
+[[http://www.raspi.cz/2012/06/prvni-experimenty-gpio-svitime-led-diodou-detekujeme-pohyb/|Jednoduche zapojeni diody a cidla pohybu]]\\
+[[https://sites.google.com/site/semilleroadt/raspberry-pi-tutorials/gpio|Ovladani GPIO z shellu (Raspbian Wheezy)]]\\
+[[https://www.linuxexpres.cz/hardware/raspberry-pi-vstup-vystup-gpio|Zapojeni prepinacu]]
+[[https://www.linuxexpres.cz/hardware/inteligentni-domacnost-s-raspberry-pi-3?highlightWords=Raspberry|Zapojeni Rele]]\\
+
+==Prikazy Raspbian Wheezy==
+echo 11 > /sys/class/gpio/export  ... aktivuje GPIO port 11 (vytvori soubor /sys/class/gpio/gpio11)\\
+echo out > /sys/class/gpio/gpio11/direction ... Aktuvuje na GPIO portu 11 rezim In/Out\\
+cat /sys/class/gpio/gpio11/value ... ukaze hodnotu GPIO portu\\
+echo 0 > /sys/class/gpio/gpio11/value ... vypne port 11\\
+echo 11 > /sys/class/gpio/unexport ... deaktivuje port 11\\

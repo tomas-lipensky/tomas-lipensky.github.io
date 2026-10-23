@@ -1,0 +1,77 @@
+
+======IBM Edge components - load balancer======
+
+dscontrol ... ovladaci centrum
+
+====nejaka procedura:====
+<code>
+Note: modifier le Backup avant le Primaire.
+
+goIdle in HA mode not usefull
+
+goActive
+add the line
+	ifconfig eth0:3 129.35.162.226 netmask 255.255.255.224 up
+
+goInOp
+add the line
+	ifconfig eth0:3 down
+
+goStandby
+add the line
+	ifconfig eth0:3 down
+
+vi /etc/hosts
+add the following lines
+129.35.162.227  ews01
+129.35.162.228  ews02
+129.35.162.229  ews03
+129.35.162.230  ews04
+
+vi /etc/init.d/loadbalancer
+
+add the following lines
+        arp -s 129.35.162.227 00:11:25:8C:82:0D
+        arp -s 129.35.162.228 00:11:25:8C:82:ED
+        arp -s 129.35.162.229 00:11:25:8C:81:A3
+        arp -s 129.35.162.230 00:11:25:8C:81:93
+
+
+
+dscontrol cluster add vip4 address 129.35.162.226 primaryhost 129.35.162.243
+dscontrol cluster set vip4 proportions 49 50 1 0
+
+dscontrol port add vip4:80 reset no
+dscontrol port set vip4:80 stickytime 14400
+
+dscontrol server add vip4:80:ews04 address 129.35.162.230
+dscontrol server add vip4:80:ews03 address 129.35.162.229
+dscontrol server add vip4:80:ews02 address 129.35.162.228
+dscontrol server add vip4:80:ews01 address 129.35.162.227
+
+dscontrol port add vip4:443 reset no
+dscontrol port set vip4:443 stickytime 14400
+dscontrol server add vip4:443:ews04 address 129.35.162.230
+dscontrol server add vip4:443:ews03 address 129.35.162.229
+dscontrol server add vip4:443:ews02 address 129.35.162.228
+dscontrol server add vip4:443:ews01 address 129.35.162.227
+
+dscontrol port add vip4:8080 reset no
+dscontrol port set vip4:8080 stickytime 14400
+dscontrol server add vip4:8080:ews04 address 129.35.162.230
+dscontrol server add vip4:8080:ews03 address 129.35.162.229
+dscontrol server add vip4:8080:ews02 address 129.35.162.228
+dscontrol server add vip4:8080:ews01 address 129.35.162.227
+
+dscontrol advisor start Http 8080 InternalAccess_8080.log
+
+dscontrol  file save default.cfg force
+
+SUR le Edge actif uniquement, executer la commande suivante pour monter la VIP4
+ifconfig eth0:3 129.35.162.226 netmask 255.255.255.224 up
+
+Commands & Updates HTTP servers:
+Comme la carte physique est partagee avec le flux d'une autre IP virtuelle, la commande iptables a ete modifiee comme suit:
+</code>
+
+   

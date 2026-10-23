@@ -1,0 +1,43 @@
+### IPsec VPN tunnel
+
+bezpečné, enkryptované spojení mezi síťemi (například lokální - cloud, cloud - cloud, lokální - lokální), nebo zařízením a sítí. 2 fáze spojení:
+*  IKE - 2 endpointy se ověří pomocí sdílených klíčů, certifikátů, nebo 2FA a vytvoří zabezpečený management kanál
+*  IPSec - pomocí zabezpečeného management kanálu vytvoří přenosový kanál, který zabezpečuje ankrypci a zabalení původních IP packetů (hlavičky a těla) do nového přenosového paketu
+
+Používá protokoly ESP (Encapsulating Security Payload) a AH (Authentication Header)  
+Je potřeba zamezit konfliktům sítí (překrývající se IP rozsahy)
+
+##### řešení
+
+*  specializov ané podnikové řešení pomocí NVA (Network Virtual Appliance) - Virtuální stroj, který hraje roli síťových prvků (routerů, firewallů, load balancerů), např. Fortinet, Cisco Secure Client (AnyConnect) , Cisco ASA či Catalyst, Check Point CloudGuard, Palo Alto Networks VM-Series
+*  Poskytovatelé ICT a ISP (Služba formou Managed VPN)
+*  Pro Cloud Microsoft Azure VPN Gateway,AWS VPN (Site-to-Site a Client VPN),Google Cloud VPN
+
+##### propojení AWS a Azure
+
+1.  AWS: Vytvořit Virtual Private Gateway (VGW) nebo použijte AWS Transit Gateway pro VPC
+2.  AWS: Vytvořit objekt Customer Gateway (CGW) a zadat do něj veřejnou IP adresu brány Azure VPN
+3.  AWS: Vytvoři Site-to-Site VPN připojení mezi VGW a CGW, ideálně s podporou protokolu BGP pro dynamickou výměnu tras
+4.  Azure: Vytvořit Virtual Network Gateway (VNG) s typem VPN (nebo využijte službu Azure Virtual WAN pro rozsáhlejší topologie)
+5.  Azure: Vytvořit objekt Local Network Gateway (LNG), do kterého vyplnit veřejnou IP adresu a rozsah IP adres (CIDR) sítě v AWS
+6.  Azure Vytvořit IPsec připojení typu Site-to-Site spojující obě brány
+7.  Směrování (Routing): Povolte BGP na obou branách pro automatickou synchronizaci routovacích tabulek
+  8. Ujistit se, že IP rozsahy (CIDR) v AWS VPC a Azure VNet se nepřekrývají.
+
+### Privátní linky
+
+Vyhrazené linky, např Direct Connect, ExpressRoute
+
+### SDN
+
+Software Defined Network, SDN controller - řídí nastavení celé lokální síťe pomocí protokolů. Výhoda SDN - Automatizace škálování a nastavení, bezpečnost, centrální pohled a kontrola na jednom místě. SDN odděluje řídící rovinu od datové roviny.  
+##### Aplikace / Uživatelé (Northbound)
+
+komunikace s řídicím mozkem sítě SDN pomocí Northbound API (např. pomocí REST nebo RESTCONF). To umožňuje vytvářet automatizované sítě nebo spravovat infrastrukturu přes grafické uživatelské rozhraní.  
+##### Síťové prvky (Southbound)
+
+komunikace se síťovými prvky, např. pomocí protokolů OpenFlow nebo NETCONF  
+
+### SD-WAN
+
+Implementace SDN principu na propojení lokálních datacenter se vzálenýma pobočkama (WAN). SDN na lokální síťě, SD-WAN propojení Lokální síťě s WAN

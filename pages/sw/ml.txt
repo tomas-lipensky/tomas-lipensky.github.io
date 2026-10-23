@@ -1,0 +1,7 @@
+====Nastroje====
+
+===Jupyter===
+[[https://jupyter.org/|Jupyter]] - Webove zapisniky, zive kody a data pro sdilene programovani ML\\
+[[https://naucse.python.cz/lessons/intro/notebook/]] - mini intro jak na Jupyter\\
+[[https://github.com/jupyter/jupyter/wiki/A-gallery-of-interesting-Jupyter-Notebooks#statistics-machine-learning-and-data-science|Zajimave Jypyter zapisniky]]\\
+

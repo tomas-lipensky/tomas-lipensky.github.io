@@ -1,0 +1,134 @@
+
+======TSM client======
+
+TSM klient (scheduller) posloucha na portu 1501
+
+===Start: ===
+
+/usr/tivoli/tsm/client/ba/bin/dsmc sched -servername= XXXXXXXX<br />
+
+===Stop: ===
+
+PID=$(ps -Af|grep "dsmc sched -servername= XXXXXXX"|grep -v grep|awk  ' { print $2 } ')<br />
+kill -9 $PID<br />
+
+===Status: ===
+
+dsmc q session\\
+dsmc q se 91 f=d ... query session 91 - informace o pripojeni, ukaze i jake medium pouziva\\
+q mo dd2185l4 f=d ... query mount - informace o mediu dd2185l4\\
+
+===Logy===
+$DSM_DIR/dsmsched.log\\
+$DSM_DIR/dsmerror.log\\
+
+===Nastaveni, umisteni, logy: ===
+
+/usr/local/scripts/tsm<br />
+/usr/tivoli/tsm/client/ba/bin/<br />
+/usr/tivoli/tsm/client/ba/bin/inclexcl.lst<br />
+/exploit/logs/tsm/<br />
+/exploit/shells/tsm
+$DSM_DIR /usr/tivoli/tsm/client/ba/bin/dsm.sys ... konf soubor pro tsm client
+$DSMI_CONFIG /usr/tivoli/tsm/api/bin/dsm.opt
+/etc/security/adsm/TSM.PWD ... heslo
+
+===Instalace===
+C:\tsm_images\TSMClient\Program Files 64\Tivoli\TSM\config\dsm.opt ... vlastni konfiguracni soubor, pokud se ma pouzit pri insalaci\\
+vcredist_x64.exe /install /quiet /norestart /log C:\Windows\Temp\vcredist.inst.log ... instalace C++ 2010\\
+vcredist_x64.exe /install /quiet /norestart /log C:\Windows\Temp\vcredist.inst.log ... instalace C++ 2012\\
+vcredist_x64.exe /q /c:"msiexec /i vcredist.msi /qn ... alternativa\\
+msiexec /i "Z:\tsm_images\TSM_BA_Client\[[https://www.ibm.com/support/knowledgecenter/en/SSGSG7_7.1.6/client/c_inst_winsilent.html|IBM Tivoli Storage Manager Client.msi]]" RebootYesNo="No" REBOOT="Suppress" ALLUSERS=1 INSTALLDIR="c:\program files\tivoli\tsm" ADDLOCAL="BackupArchiveGUI,BackupArchiveWeb,Api64Runtime, AdministrativeCmd" TRANSFORMS=1033.mst /qn /l*v "c:\log.txt"\\
+
+
+===Ziskani informaci o nastaveni a backupech===
+dsmc q arch -errorlogname=/tmp/log.log "/source_dir/rep1/*" ... ukaze zazalohovane soubory zadane lokace\\
+dsmc q backup -errorlogname=/tmp/log.log ... ukaze zazalohovane soubory\\
+dsmc q backup/arch -subdir=yes /FS/* ... ukaze i podadresare\\
+dsmc q ba "/vpars_archives/hp*/*" ... seznam zazalohovanych souboru\\
+dsmc q ba /vpars_archives -subdir=yes ... seznam zazalohovanych souboru vcetne podadresaru\\
+dsmc q ba /vpars_archives -inactive -su=yes ... seznam souboru i jejich starsich verzi (inactive), jiz prepsanych, su=subdir\\
+dsmc q inclexcl -errorlogname=/tmp/log.log ... ziskani seznamu include a exclude souboru a adresaru\\
+dsmc q file ... najde soubor (adsmorc ... oracle backup delany rman aplikaci)\\
+dsmc q fi ... ukaze, ktere FS (filesets) byly zalohovany\\
+dsmc mngt -detail ... seznam vsech management class\\
+dsmc query schedule ... ziskani nastaveni casovace backupu\\
+dsmc q vcl ... seznam pasek (medii) v knihovne\\
+
+===Ovladani - zalohovani a obnova===
+dsmc archive "/export/eznim/mksysb/ampsv01230prd_sysb" ... zazalohuje soubor jako archiv (nezapise jej do backup repository na DSMC serveru)\\
+dsmc arch -archsymlink=no '/*' ... nezalohuje symbolicke linky\\
+dsmc backup a b c ... zazalohuje soubory a b c\\
+dsmc inc / /usr /var ... incremental backup - zmeny oproti minulemu backupu. Muze se pouzit retantion period ve dnech, ci versioning, definovany v management class, kterou definuji TSM admini\\\\
+dsmc retrieve "/export/eznim/mksysb/ampsv01230prd_sysb" ... obnoveni zazalohovaneho souboru z archive<br />
+dsmc restore /aaa ... obnoveni souboru /aaa ze zalohy backup\\
+dsmc rest -sub=yes "source_dir/rep1/*" /target_dir/ ... i s podadresari\\
+dsmc rest -pitdate 02/28/06 et -pittime 17:03:21 (from windows -fromdate -fromtime, todate totime) /a ... obnova souboru podle data\\
+dsmc rest -replace=prompt/no/yes/all /a ... definice chovani pri prepisovani souboru\\
+dsmc rest -inactive -pick /etc/passwd ... obnovi /etc/passwd, da va nyber ze vsech zaloh, i ty stare, prepsane soubory\\
+dsmc rest -errorlogname=/tmp/log.log -sub=yes -inactive -pitdate=10/01/2012 -replace=no "/home/fredhopper/bin/*" bin/ ... obmova souboru z 10.1.2012 "/home/fredhopper/bin/*" do adresare bin/, neprepisuje, vcetne podadresaru\\
+dsmc rest -virtualnodename=DEAD-SERVER / -su yes ... obnovi data z jine masiny - TSM server heslo je potreba\\
+DALSI PREPINACE: -ifnever, -archmc=XXX ... management class\\
+dsmc selective ... muze se pouzit retantion period ve dnech, ci versioning, definovany v management class, kterou definuji TSM admini\\\\
+dsmc archive\\
+dsmc arch -archsymlink=no ... zaloha pomoci metody archive, nearchivuje symbolicke linky\\
+
+===Ostatni===
+set password  oldpassword  newpassword ... zmena hesla\\
+set acc backup /home/*/* another.node root ... umozni restore souboru z tohoto pocitace rootovi na pocitaci another.node\\
+dsmc q files -fromnode=ANOTHER.NODE ... vylistuje zazalohovane soubory z jineho pocitace\\
+dsmc rest -fromnode=ANOTHER.NODE /home/*/*  /home/restore/ ... obnovi soubor z jinedo pocitace\\
+
+<code>
+v $DSMI_DIR najdeme nodename uzivanych pri backupech
+dsmc -virtualnode=nodedape
+
+Update stg <pool_name> hi=70 lo=30 ... definovani trashholdu
+Migrate stg <pool_name> lo=30 duration=<minutes> ... presuniti data z poolu na pasky aby theshhold byla 30%
+
+Storage Agent
+dsmsta.opt ... conf. file ... soubor svoreny prikazama (dsmsta setstorageserver=HOSTNAMEsta mypasswd=tsm4danone myaddress=10.... servername=XXX serverpassword=tsm4danone hladdress=XXX lladdress=XXX)
+devconfig ... conf file
+
+lsdev -Cc tape
+musi data odpovidat zaznamum v "q pat HOSTNAME.sta f=d colonne device + online=yes
+
+START: nohup /usr/tivoli/tsm/StorageAfent/bin/rc.tsmstgagnt >/dev/console @?&1!
+STOP kill -9 $PID dsmsta
+
+
+</code>
+
+DSMADMC
+
+<code>
+Q mount ... drive usage
+Q session ... running sessions
+Q restore /cancel restore 
+Q actlog search="keyword"
+Q proc displays tsm processes
+Cancel proc NUP_PROC ... muze dlouho trvat
+
+hostsSTA: q se display storage agent session (mrknout na lanfree session)
+Free drive v pripade robot overload
+
+/exploit/scripts/maxdrives NBR_DRIVE
+
+cancel proc reclamation
+cancel proc migration
+
+</code>
+
+
+
+
+
+
+======TSM Server======
+
+TSM server posloucha na portu 1500\\
+
+<h6>Nastaveni a umisteni: </h6>
+dsmadmc<br />
+
+   

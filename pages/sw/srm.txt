@@ -1,0 +1,12 @@
+
+start:\\
+/var/adm/perfmgr/bin/verify.srm >/dev/console 2>&1\\
+status:\\
+ps -ef | grep -i srm\\
+stop:\\
+kill procesy z ps\\
+
+autostart: /etc/inittab:\\
+SRM:3:wait:/var/adm/perfmgr/bin/verify.srm >/dev/console 2>&1\\
+
+   

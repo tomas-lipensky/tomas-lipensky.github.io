@@ -1,0 +1,150 @@
+
+======TWS (Tivoli Workload manager) - maestro======
+
+<h6>Status: </h6>
+ps -ef| grep tws ... vypise procesy a uzivatele jedouciho TWS klienta (mailman, writer, batchman, netman)<br />
+
+<h6>Start/Stop: </h6>
+/exploit/scripts/appli/StartStop/start_tws_client.ksh<br />
+/opt/IBM/TWA/TWS/StartUp ... nastartuje netman (network management process) + WAS - ekvivalent conman start. Na Windows jeste Tivoli Token Service\\
+su - tws -c "conman start" ... nastartuje TWS\\
+su - tws -c "conman startappserver" ... nastartuje WAS\\
+su - tws -c "conman startmon" ... nastartuje event monitor process\\
+su - tws -c "conman stop,wait"\\
+su - tws -c "conman shut"\\
+
+
+====Cesty====
+%programFiles%/IBM/TWA/TWS\\
+/opt/Tivoli/TWS/twsadm<br />
+/opt/IBM/TWA/TWS<br />
+grep echec /opt/IBM/TWA/TWS/stdlist/2014.10.24/* ... projde logy z 24.10.2014 a zjisti, ktery selhal\\
+
+====Architektura====
+master domanin manager - generuje plan (bezne kazdych 24h). Muze byt Backup MasterDM\\
+Doman Manager - \\
+FTA - Fault Tolerant Agent - agent ktery ziska plan na cely den\\
+Standartni - ziskava pokyny v dany cas, potrebuje spojeni\\
+Extended agent - (FTA nebo standrartni) specificky interface na ovladani aplikaci (SAP, Datastage)\\
+Dynamic agent - agent ktery ma vic konektoru do aplikaci\\
+
+====Komponenty====
+netman - master proces, ma spojeni\\
+batchman - 
+
+[[http://www.softpanorama.org/Admin/Tivoli/TWS/Reference/conman_commands.shtml|/opt/IBM/TWA/TWS/bin/conman]]<br />
+%setsym 1<br />
+%sj PRFIDB#@.@+state=ABEND ... ukaze ukoly, jez skoncily spatne<br />
+%sj SERVER@JOBSTREAM.JOB ... ukaze ukol spusteny na SERVER, ktery se jmenuje JUBSTREAM.JOB\\
+%sj SICDB#BACKUP_ARCHIVE.ARCHIVE_LOG<br />
+%sj SINICISIDB#PPJGIT05H.PPGITEXT2;info ... Ukaze, ktery skript se spousti\\
+%sj PRFIDB#BACKUP_ARCHIVE.ARCHIVE_LOG;std ... Ukaze vystup skriptu<br />
+<br />
+[[http://www.ibm.com/support/knowledgecenter/SSGSPN_8.6.0/com.ibm.tivoli.itws.doc_8.6/awsrgconmancmds.htm|conman]] sc ... (showcpus) seznam TWS domeny (manazer a agenti) - kde je I J, ten nazev agenta bezi na tomto stroji<br />
+conman unlink cpu=&lt;CPUID&gt;<br/>
+conman link cpu=&lt;CPUID&gt;<br />
+conman [[https://www.ibm.com/support/knowledgecenter/SSGSPN_9.3.0/com.ibm.tivoli.itws.doc_9.3/distr/src_ref/awsrgshowjobs.htm?lang=en|sj]] ... ukaze probehle ukoly\\
+conman sj @#@ ... (showjobs) show jobs *#* ukaze seznam na vsech nodech vsech jobu<br />
+conman sj UP10#@ ... ukaze vsechny ukoly na nodu UP10\\
+sj UP10#@;info ... ukaze vsechny ukoly na nodu UP10 a zobrazi info o skriptu\\
+conman sj @#@+state=abend ... Ukaze ukoly, jez skoncily spatne\\
+conman sf ... (showfiles) ukaze soubory, ktere ovlivni joby - podminku\\
+conman shwodomain ... ukaze informace o domene\\
+conman sr ... (showresources) ukaze prostredky (promenne, kterymi se omezuji joby\\
+conman ss ... (showschedules) ukaze, jake posloupnosti ukolu jsou definovany (schedules, job streams)\\
+conman sp ... (showprompts) ukaze prompty - kde job ceka na inteakci\\
+/opt/tws8.1/sched.txt<br />
+/opt/tws8.1/prodsked<br />
+/opt/tws8.1/jobs.txt<br />
+
+====Agent====
+2 typy agentu - FTA (Fault Tolerant Agent) - ziska plan na zacatku dne a provadi tasky i kdyz neni spojeni na server. Standard - potrebuje spojeni. Taky Dynamic agent atd.
+\\
+
+
+====Ostatni====
+/opt/TWS/TWA/TWS/Symphony\\
+/opt/TWS/TWA/TWS/Sinfonia\\
+Sinfonia - je tam ulozen batch plan\\
+Symphony - ulozen day plan\\
+
+
+====Composer====
+
+Spousti se pod uzivatelem maestro
+
+
+
+  composer help ... help\\
+  composer help command ... seznam prikazu\\
+  composer help add ... napoveda k prikazu add\\
+  /opt/TWS/TWA/bin/composer dis cpu=PPRMS1 ... ukaze informace o Workstation PPRMS1\\
+  composer dis user=samae\\
+  composer dis user=DOMAIN\user\\
+  composer dis user=@#@twsadm@\\
+  composer dis j=PRRMS1#RUFNPFCUPLD ... informace o jobu na workstation\\
+  composer dis cal=OEM ... ukaze kalendar\\
+  composer create soubor from s=SERVER#schedupe ... vytvori soubor s definici\\
+  composer replace SOUBOR ... prepise aktualni definici novou ze souboru\\
+  composer dis [SCHEDULE,CPU,JOBS,JOB,RESOURCES,PROMPTS,PARMS,PARAMETERS,CALENDARS,USERS,WORKSTATION,DOMAIN,WORKSTATIONCLASS,WSCL,WS,J,JD,JOBDEFINITION,JOBSTREAM,JS,EVENTRULE,ERULE,VARTABLE,VT,VARIABLE,VB]\\
+
+
+
+====Priklady====
+<b>Nahrani noveho jobu</b>
+<code>
+echo '
+$JOBS
+CPU#JOBNAME
+  SCRIPTNAME "/test.sh"
+  STREAMLOGON user
+  DESCRIPTION "test job"
+  TASKTYPE UNIX
+  RECOVERY STOP
+' > JOBNAME.txt
+composer validate JOBNAME.txt
+composer add JOBNAME.txt
+</code>
+
+<b>Vytvoreni [[http://www.ibm.com/support/knowledgecenter/SSGSPN_8.5.0/com.ibm.tivoli.itws.doc_8.4/srf_mst113.htm|SCHEDULE]]</b>
+<code>
+echo '
+SCHEDULE CPU#TEST
+ON RUNCYCLE A "FREQ=WEEKLY;BYDAY=TU"
+AT 1240
+VALID FROM 10/18/2016
+:
+CPU#JOB1
+  AT 1245
+  
+CPU#JOB2
+  FOLLOWS JOB1
+  
+END
+' > JOBNAME.txt
+composer validate JOBNAME.txt
+composer add JOBNAME.txt
+conman sbs CPU#TEST # submit schedule
+conman ss CPU#TEST # show schedule
+conman sj CPU#TEST.@ # list of all  jobs
+conman sj CPU#TEST.JOB1 info # more info about job
+conman rr CPU#TEST.JOB1 # rerun
+conman sbj CPU#job1 #submit job
+conman sj CPU#JOBS.JOB #show job which was submited outside schedule
+conman sbj CPU#job1 into=CPU#TEST alias=CPU1_1 #submit job into submited schedule
+conman cs CPU#TEST # cancel schedule
+conman ss CPU@TEST(1234 10/18) ... show schedule from exact run
+conman set 1; ss CPU#JOBS.JOB ... shows job from yesterday
+conman sj @#65798 sin std ... shows single output from last run of job run #65798
+conman kill CPU#TEST # kills the job
+conman confirm CPU#TEST.JOB1 SUCC # zmeni status na jaky chci
+conman ap CPU#TEST.JOB2 ... alter priority
+conman deldep CPU#TEST.JOB2 follows CPU#TEST.JOB1 ... delete dependency
+</code>
+
+====Instalace====
+[[https://www.ibm.com/support/knowledgecenter/en/SSRULV_9.3.0/com.ibm.tivoli.itws.doc_9.3/zos/src_inst/eqqi1custlersz.htm|twsinst]]twsinst -new 
+-uname TWS_user -password qaz12qaz -jmportssl false -jmport 31114 -inst_dir "c:\Program Files\IBM\TWA\TWS_user"  ... instalace FTE (TWS agenta)\\
+[[http://www-01.ibm.com/support/docview.wss?uid=swg21646575|wdinstsp]] ... Jina ticha instalace \\
+
+   

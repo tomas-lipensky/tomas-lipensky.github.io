@@ -1,0 +1,127 @@
+====Externi odkazy====
+[[https://letsencrypt.org|Lets encrypt]] - autorita vydavajici SSL/TSL certifikaty zdarma\\
+[[http://www.hashkiller.co.uk/md5-decrypter.aspx|MD5 online decryptor]] na jednoducha hesla\\
+[[http://www.hashkiller.co.uk/sha1-decrypter.aspx|SHA-1 online decryptor]] na jednoducha hesla\\
+[[https://developer.mozilla.org/en-US/docs/Mozilla/Projects/NSS|Mozilla wiki - security part]]\\
+[[https://www.imperialviolet.org/|Clanky o bezpecnosti]]\\
+[[https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/Security_Guide/Red_Hat_Enterprise_Linux-6-Security_Guide-en-US.pdf|RHEL 6.8. Security guide]]\\
+[[http://www.cvedetails.com/cve/2014-0224|Seznam bezpecnostnich der]]\\
+[[https://www.ssllabs.com/ssltest/analyze.html]] ... otestovani sifrovani SSL/TLS pro zadanou domenu, parametry nastaveni\\
+
+====SSL/TLS Klice====
+Privatni klic se pouziva k rozkodovani textu. Verejny klic se pouziva k zakodovani textu. Podepsane certifikaty se generuji na
+serveru sluzby, pote se vyexportuje csr (certificate signing request) a odesle se CA (Certifikacni autorite) k overeni (zapsani
+do databaze klicu v CA databazi). Pote autorita odesle overeny verejny klic spoku s overenym podpisem autority. CA buze byt but korenova,
+duveryhodna, nebo intermediate - zretezena - CA overena korenovou CA, nebo CA co byla zretezene overena korenovou CA.
+**Revokace** - revokovaný certifikát je vydaný certifikát, který se zneplatní. Klient musí kontrolovat, zda je certifikát revokovaný. Lze ověřit pomocí čísla certifikáto, např:\\
+curl http://crl3.digicert.com/DigicertSHA2SecureServerCA-1.crl | openssl crl -inform DER -noout -text|less\\
+curl http://crl4.digicert.com/DigicertSHA2SecureServerCA-1.crl | openssl crl -inform DER -noout -text|less\\
+
+====Klicenky:====
+KEY.sth ... Stash soubor - soubor, kde je zakodovano heslo k privatnim klicum v kdb\\
+KEY.kdb ... Key DataBase - databaze ssl klicu - public i private klice\\
+keystore.jks ... Java Keystore
+keystore.p12 ... Klicenka ve formatu  PKCS12\\
+
+====Typy kódování====
+DER ... Distinguished Encoding Rules ... binární forma\\
+PEM ... Privacy Enhanced Mail = certifikát v base64 podobě a uzavřený -----BEGIN xxx----- a -----END xxx-----\\
+PKCS12 neboli PFX ... binární formát pro ukládání více klíču, či certifikátů chránněné heslem\\
+
+====Typy souboru====
+key.csr ... Certificate Signing Request - zadost o certifikaci certifikatu\\
+key.key ... Private key\\
+key.crt ... certifikat v textove podobe PEM nebo v binarni podobe DER\\
+key.cer ... certifikat textove podobe, PEM nebo v binarni podobe DER\\
+key.pem ... certifikat v PEM kodovani (X.509) v base64/asci podobe\\
+key.der ... certivikat v binarni podobe zakodovany pomoci DER\\
+keystore.p12 ... klicenka s certifikatama a klicema v PKCS#12\\
+keystore.pfx ... klicenka s certifikatama a klicema v PKCS#12\\
+.p7b, .p7c ... PKCS#7 - zakodovano v base64/asci podobe\\
+
+====Prace s SSL klici - GS Kit====
+[[http://publib.boulder.ibm.com/infocenter/wmqv6/v6r0/index.jsp?topic=/com.ibm.mq.amqzag.doc/fa16160_.htm|gsk7cmd]] -cert -import -db /tmp/key1.kdb -target /tmp/key2.kdb -pw HESLO1 -target_pw HESLO2 -label JMENO_V_KDB1 -new_label JMENO_V_KDB2 ... import certifikatu JMENO_V_KDB1 z KDB1 do KDB2\\
+gsk7cmd -cert -extract -db /tmp/key.kdb -pw HESLO -label POPIS -target /tmp/key.cer ... export certifikatu z KDB\\
+gsk7cmd -cert -list -db /tmp/key.kdb -pw HESLO ... seznam certifikatu v KDB\\
+gsk7cmd -cert -details -db /tmp/key.kdb -pw HESLO -label JMENO_CERTIFIKATU ... info o certifikatu JMENO_CERTIFIKATU v KDB\\
+
+====Prace s SSL klici - ikeyman====
+
+====Prace s klici pomoci keytool====
+keytool -genkey -alias mydomain -keyalg RSA -keystore keystore.jks -keysize 2048 ... vygeneruje dvojici klic v klicence - RSA o velikosti 2048\\
+keytool -certreq -alias mydomain -keystore keystore.jks -file mydomain.csr ... Vytvori z klice zadost o overeni CA\\
+keytool -import -trustcacerts -alias root -file Thawte.crt -keystore keystore.jks ... naimportuje zretezeny, korenovy, nebo overeny certifikat\\
+keytool -printcert -v -file mydomain.crt ... overi certifikat\\
+keytool -list -v -keystore keystore.jks ... vypise seznam zertifikatu v klicence\\
+
+====Prace s openssl====
+[[https://www.sslshopper.com/article-most-common-openssl-commands.html|Uzitecne priklady openssl prikazu]]\\
+
+''openssl s_client -showcerts -connect www.domain.com:443 -servername domena.com'' ... stahne a ukaze SSL/TSL certifikat z https serveru a navaze ssl komunikaci, pomoci SNI pozada o certifikat k domena.com\\
+''openssl s_client -showcerts -cert cert.cer -key cert.key -connect www.domain.com:443'' ... jako predtim, ale pouzije zadany klinentsky klic\\
+''echo n | openssl s_client -showcerts -connect www.domain.com:443 | openssl x509 -text'' ... ukaze vsechny zaznamy o certifikatu, vcetne expirace\\
+
+''openssl genrsa -out server.key 2048'' ... vytvoření privátního klíče\\ 
+''openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 365 -nodes'' ... interaktivní generování self-signed verejneho klice pro https komunikaci, nodes - nekoduje privátní klíč\\
+''openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt'' ... generovani self-signed verejneho klice pro https komunikaci z Certificate requestu\\
+''openssl req -x509 -newkey rsa:4096 -keyout key.pem -out cert.pem -sha256 -days 3650 -nodes -subj "/C=XX/ST=StateName/L=CityName/O=CompanyName/OU=CompanySectionName/CN=CommonNameOrHostname"'' ... vstupy z příkazové řádky\\
+''openssl req -new -key domena.key -out domena.csr -sha256 -subj "/C=CZ/L=Brno/O=Firma a.s./OU=tym/emailAddress=email@email.cz/CN=domena.cz" -addext "subjectAltName = DNS:domena1.cz,DNS:domena2"'' ... CSR s Alternate names\\
+''openssl req -key dummy.key -new -out a.csr'' ... generování CSR z klíče\\
+''openssl req -text -noout -verify -in CSR.csr'' ... informace o CSR\\
+''openssl x509 -in lipensky.cz.pem -text -noout'' ... informace o klici acs.qacafe.com.pem v textove podobe\\
+''openssl x509 -in root_ca.cer -inform DER -out root_ca.pem'' ... konverze z DER formatu do PEM\\
+\\
+''cat clientcert.pem trusted_ca.pem root_ca.pem >> clientcertchain.pem'' ... vytvori certifikacni retezec (certification chain)\\
+
+''openssl pkcs12 -info -in a.pfx'' ... informace o certifikatu\\
+''openssl pkcs12 -info -password pass:HESLO -passout pass:HESLO -in a.pfx'' ... informace o certifikatu, použití hesla\\
+''openssl pkcs12 -export -in lipensky.cz.crt -inkey lipensky.cz.key -out lipensky.cz.p12'' ... vytvoreni P12 klicekny\\
+''openssl pkcs12 -in certificate.p12 -out clientcert.pem -nodes -clcerts'' ... export certifikaty z p12 klicenky\\
+''openssl pkcs12 -export -in clientcertchain.pem -out clientcertchain.pfx'' ... vytvoreni/pridani certifikatu do p12/pfx klicenky\\
+''openssl pkcs7 -print_certs -in certificate.cer -out certificate.crt'' ... konverze certifikatu do jineho kodovani\\
+''openssl pkcs7 -print_certs -in old.p7b -out new.crt'' ... konverze certifikátu p7b na crt\\
+
+===RSA===
+''openssl genrsa -des3 -out server.key 1024'' ... generovani privatniho RSA klice, delka 1024 bytu, kodovani DES\\
+''openssl req -new -key server.key -out server.csr'' ... generovani CSR (zadosti o overeni) z privatniho klice\\
+''openssl rsa -in privateKey.key -check'' ... kontrola RSA klíče, jestli je validní\\
+''cp server.key server.key.org; openssl rsa -in server.key.org -out server.key'' ... odstraneni passphrase z klice\\
+''openssl rsa -in server.key -text > private.pem'' ... konverze privatniho klice z KEY do PEM\\
+
+====Analyza https toku====
+
+V prohlizeci lze videt obsah HTTPS komunikace pomoci pluginu jako FireBug, Developer Tool etc (klavesa F12)
+
+
+Externe lze sifrovanou komunikaci analyzovat pomoci flow capture nastroju (Wireshark, tcpdump, ssldump), ale je videt pouze proces komunikace - hello faze, atd.
+
+
+Aby bylo mozne komunikaci rozsifrovat, je nutne vedet privatni klic. Ten se musi naimportovat to flow capture toolu ([[http://packetpushers.net/using-ssldump-decode-ssltls-packets/|ssldump]], Wireshark) a ten pak umi zobrazit obsah komunikace
+
+==Firefox==
+Z Firefoxu lze privatni klic ziskat nasledujici [[https://jimshaver.net/2015/02/11/decrypting-tls-browser-traffic-with-wireshark-the-easy-way/|procedurou]]:\\
+Linux, MaxOS: export SSLKEYLOGFILE=~/path/to/sslkeylog.log\\
+Windows: Computer properties > System Properties > Advance system settings > Environment Variables > add new value "SSLKEYLOGFILE" with the path.\\
+restartujte Firefox s touto promennou.
+==JVM==
+Je potreba stahnout agenta [[http://jsslkeylog.sourceforge.net/|jSSLKeyLog]] a spustit JVM s -javaagent parametrem
+==Wireshark==
+V Wiresharku: Edit > Preferences > Protocols > SSL > (Pre)-Master Secret log filename > vlozit nastavenou cestu
+
+
+Dalsi moznost je analyza toku pres proxy, viz vice na [[http://stackoverflow.com/questions/516323/https-connections-over-proxy-servers|http://stackoverflow.com/questions/516323/https-connections-over-proxy-servers]] a [[http://wiki.squid-cache.org/Features/SslBump|http://wiki.squid-cache.org/Features/SslBump]].
+
+Seznam tcp traceru:\\
+tcpdump\\
+[[http://packetpushers.net/using-ssldump-decode-ssltls-packets/|ssldump]]\\
+wireshark\\
+
+====ssh====
+ssh-keygen -f id_rsa -p ... zmena passphrase\\
+
+====gpg====
+gpg -k ... seznam klíčů\\
+gpg --output public.pgp --armor --export username@email ... exportovaní veřejného klíče\\
+gpg --output private.pgp --armor --export-secret-key username@email ... exportování soukromého klíče\\
+gpg --import my-key.asc ... import klíče\\
+cat soubor | gpg --decrypt ... rozkódování\\

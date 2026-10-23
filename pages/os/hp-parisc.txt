@@ -1,0 +1,55 @@
+
+======PA-RISC======
+<a name="boot|]]
+====PA-RISC boot====
+
+<h6>Boot proces na PA-RISC</h6>
+<li>POST ... Power-On Self Test - Test ulozeny v BootROM</li>
+<li>PDC ... Processor Dependent Code - Test ulozeny v BootROM</li>
+<li>IODC ... I/O Dependent Code - Test ulozeny v BootROM</li>
+<li>PDC/BCD ... Boot Console Header - Spoustec firmware ukozeny v BootROM, ktery nacita informace o cestach k diskum z NVRAM\\
+<li>ISL/IPL ... Initial System/Program Loader - Spoustec systemu, ulozeny v LIF (Logical Interchange Format) oblasti bootovaciho disku. Ten nacte soubor AUTO, ktery ukazuje na defaultni jadro a defaultni parametry</li>
+<li>/stand/vmunix ... jadro</li>
+<li>init ... init proces s nadefinovanymi init levely a odpovidajicimi procesy</li>
+
+<h6>Struktura boot disku na PA-RISC</h6>
+<li>LIF Header</li>
+<li>PVRA ... Physical Volume Reserved Area - Informace o PV</li>
+<li>BDRA ... Boot Data Reserved Area - Ukazatele na /stand, swap a /</li>
+<li>LIF Area ... Obsahuje obsahuje ISP/IPL, AUTO a jine nastroje potrebne na lokalizaci jadra a jeho spusteni\\
+<li>VGRA ... Volume Group Reserved Area - informace o strukture VG</li>
+<li>LVs ... Logicke oddily</li>
+<li>volne misto</li>
+<li>BBRA ... Bad Blocks Reserved Area - misto na ukadani dat misto poskozenych sektoru na disku</li>
+Boot disky bez LVM maji misto VGRA, LVs a volneho mista heden HSF oddil a na konci disku misto pro swap\\
+
+<h6>Manualni boot proces - preruseni BCH stiskem klavesy Esc</h6>
+help ... napoveda\\
+in all ... ukaze informace o systemu\\
+search ... vylistuje vsechny bootovaci zarizeni\\
+search ipl ... vylistuje vsechny bootovaci zarizeni obsahujici IPL\\
+path ... ukaze, ktere cesty jsou nastavene jako pri, haa, alt\\
+path pri x/x.x.x ... nastavi cestu x/x.x.x jako primarni (1.) cestu v NVRAM\\
+path haa x/x.x.x ... nastavi cestu x/x.x.x jako HA alternativni (2.) cestu v NVRAM\\
+path alt x/x.x.x ... nastavi cestu x/x.x.x jako alternativni (3.) cestu v NVRAM\\
+boot pri ... nastartuje system z disku v primarni ceste\\
+boot haa ... nastartuje system z disku v HA alternativni ceste\\
+boot alt ... nastartuje system z disku v alternativni ceste\\
+boot x/x.x.x ... nastartuje system z disku v zadane ceste\\
+boot lan.x.x.x.x install ... nastartuje system ze site z Ignite serveru na IP adrese x.x.x.x\\
+auto ... ukaze parametry autobootu\\
+info ... ukaze informace o serveru?\\
+lan_addr ... Ukaze IP\\
+date ... datum a cas\\
+reset ... restartuje server\\
+
+<h6>ISL/IPL</h6>
+hpux ... nastartuje jadro, jak je nadefinovano v HP-UX\\
+hpux ls ... vylistuje seznam souboru v adresari /stand\\
+hpux show autofile ... ukaze obsah souboru AUTO\\
+hpux -is ... nastartuje do single-user modu\\
+hpux -lq ... nastartuje bez LVM quora\\
+hpux -lm ... nastartuje do LVM udrboveho modu\\
+hpux /stand/vmunix.prev nproc=6000 ... nastartuje jadro v /stand/vmunix.prev s parametrem nproc=6000\\
+
+   

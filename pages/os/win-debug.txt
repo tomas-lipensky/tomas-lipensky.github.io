@@ -1,0 +1,9 @@
+
+[[https://docs.microsoft.com/en-us/windows/desktop/debug/symstore-command-line-options|symstore.exe]] ... [[https://docs.microsoft.com/en-us/windows/desktop/debug/using-symstore|symstore]] je nastroj na vytvareni knihoven symbolu (symbol store). Je obsahem balicku [[https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/|Debugging Tools for Windows]]\\
+
+====SrcSrv====
+SrcSrv (Source Server) je nastroj na vylistovani presnych verzi zrojaku pouzitych na vytvoreni aplikace (build)
+
+
+[[https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/the-pdbstr-tool|pdbstr.exe]] ... nastroj na praci s .pdb soubory (indexovani) pro [[https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/srcsrv|SrcSrv]] (Source Server) a cteni streamu z PDB souboru\\
+[[https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/the-srctool-utility|srctool.exe]] ... seznam vsech naindexovanych souboru v PDB souboru\\

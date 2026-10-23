@@ -1,0 +1,46 @@
+
+======Infosphere Guardium Data Encryption - GDE======
+
+====Externi odkazy====
+[[http://www-01.ibm.com/support/docview.wss?uid=swg21579891|Must gather skript ktery posbira dulezite informace o sluzbe]]\\
+
+=====DSE=====
+
+DSM - Data Security Manager - server, kde se spravuji (nastavuji) klice, agenti, politiky
+
+
+Web management jede na portu 8445.
+
+
+===Start/stop/info===
+service cgss restart\\
+
+=====FS Agent=====
+
+Jiny nazev pro agenty je VTE - Vormetric Transparent Encryption, starsi nazev VEE - Vormetryc Encryption Expert
+
+
+===start/stop/info===
+vmd -v ... verze agenta\\
+/var/log/vormetrix/vordb2_usr.log\\
+service secfs start\\
+
+===install===
+./vee-fs-xxxxxx.bin ... interaktivni mod\\
+<code>
+cat 'SERVER_HOSTNAME=server
+AGENT_HOST_NAME=agent
+#AGENT_HOST_PORT=1212
+#STRONG_ENTROPY=1 # pro pouziti /dev/random
+#PKCS11_PASSWKORD=heslo - kdyz uz je agent registrovat
+#ONEWAY_COMMS=0' &gt; vee-fs.txt</code>
+./vee-fs-xxxxxx.bin -s vee-fs.txt ... automaticky mod\\
+./vee-fs-xxxxxx.bin -e ... rozbali pouze pkg/bff/rpm balicek\\
+pkgadd -d ./vee-fs/*.pkg ... instalace na solarisu, pro bff, rpm se pouzije nativni prikaz pro instalaci balicku\\
+installp -aX -d ./vee-fs-*.bff vee.fs\\
+/opt/vormetric/DataSecutipyExpert/agent/vmd/bin/uninstall
+
+=====DB2 agent=====
+db2 backup database testdb compress comprlib /opt/IBM/DB2TOOLS/LUWEncryptionExpert/agent/db2/lib/libeetdb2.so\\
+
+   

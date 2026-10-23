@@ -1,0 +1,69 @@
+   
+   ======IBM Cloud Private======
+
+     ====Externi odkazy====
+     [[https://github.com/IBM/deploy-ibm-cloud-private|IBM Cloud Private Community Edition]] - Gitlab repozitar\\
+     [[https://www.ibm.com/blogs/bluemix/2018/03/demo-try-private-cloud-install-an-app/|Hands-on time with IBM Cloud Private]]\\
+     [[https://www.ibm.com/cloud/garage/tutorials/cloudnative-microservices-cloud-private?task=3|Deploy a cloud-native microservices application on IBM Cloud Private]] - Tutorial\\
+     [[https://ibm-cloud-tech.slack.com/messages/C2HQFDAET/|Slack kanal o ICP]]\\
+     
+     
+Produkt pro managovani cloudu - jednoduchy webovy portal.
+
+
+          ====Instalace====
+     
+     
+Instalacni balik se stahne z IBM Cloud Manager with OpenStack
+
+     
+     ====Odinstalace====
+     
+
+     
+
+     
+     ====Start/stop/status====
+     
+
+     service icm-deployer stop\\
+     service icm-deployer start\\
+     service icm-deployer status\\
+     cat /opt/ibm/cmwo/version/product.version ... verze CMwO (Cloud Manager with OpenStack)\\
+     
+
+     
+     =====Komponenty=====
+     
+
+     [[../sw/prometheus.html|prometheus]] ... pro monitoring\\
+     
+
+     
+     
+     ====Cesty, soubory====
+     
+
+     /opt/ibm/cmwo/chef-repo ... repozitach Shefa\\
+     /opt/ibm/cmwo/cli/config/ ... yml soubory - Heat templaty\\
+     /opt/ibm/cmwo/properties/cmwo_4.3.lic ... licencni klic\\
+     
+
+     
+     ====Prikazy, management====
+     
+
+     knife os manage deploy cloud your-icos-hybrid-cloud.yml ... Deploy cloudu\\
+     knife node list ... seznam region serveru\\
+     knife node show FQDN ... informace o region serveru\\
+     
+
+
+     ====Operace====
+     [[https://www.ibm.com/support/knowledgecenter/SST55W_4.3.0/liaca/liacaresizeopenstack.html|Zmena flavor]] - CPU/MEM\\
+     
+     ====Problemy, trouble shooting====
+     [[http://www-01.ibm.com/support/docview.wss?uid=nas8N1020598|Kolekce logu a nastaveni]], napriklad pro IBM support\\
+     [[ftp://public.dhe.ibm.com/services/us/igsc/cloud/|qmgcollect.sh]] ... [[http://www-01.ibm.com/support/docview.wss?uid=nas8N1020618|kolekce logu]] o ICM pro poslani na IBM support\\
+
+   

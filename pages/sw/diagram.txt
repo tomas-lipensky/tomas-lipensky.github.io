@@ -1,0 +1,18 @@
+
+======Diagramy======
+
+=====Software=====
+[[https://en.wikipedia.org/wiki/Dia_%28software%29|dia]] - [[https://wiki.gnome.org/Apps/Dia|homepage]]\\
+
+=====Typy diagramu=====
+
+[[https://www.smartdraw.com/software-design/examples/|Priklady na smartdraw]]\\
+
+===SDL (Specification and Description Language) - stavove grafy===
+[[https://en.wikipedia.org/wiki/Specification_and_Description_Language|wikipedia - SDL]]\\
+[[http://www.cs.tut.fi/kurssit/TLT-9806/RolvBraekSDL.pdf|SDL tutorial]]\\
+[[https://www.edrawsoft.com/SDL-Diagrams.php|info na edrawsoft]]\\
+
+
+
+   

@@ -1,0 +1,10 @@
+
+
+======WEB - html======
+
+[[http://www.w3schools.com/html/html_tables.asp|w3schools.com]]\\
+[[http://www.jakpsatweb.cz/html/|www.jakpsatweb.cz/html/]] ... prehledny popis html prikazu\\
+[[http://www.w3.org/|www.w3.org]]\\
+[[http://validator.w3.org|validator.w3.org]]\\
+
+   

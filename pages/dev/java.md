@@ -1,0 +1,250 @@
+# Java
+
+[java virtual machine (JVM)](../sw/java.html) obecne  
+[J2EE](../web/j2ee.html) vyvoj  
+
+### Obsah:
+
+[Externi odkazy](#odkazy)  
+[Typy souboru](#soubory)  
+[Promenne](#promenne)  
+[Operatory](#operatory)  
+[Podminky, cykly](#podminky)  
+[Tridy, objekty, funkce](#tridy)  
+[Priklady](#priklady)  
+
+<a name="odkazy|]]
+### Externi odkazy:
+
+[Jave 1.5 API](http://download.oracle.com/javase/1.5.0/docs/api/)  
+[java.cz](http://java.cz)  
+
+<a name="soubory|]]
+### Typy souboru
+
+##### .java
+
+javac hello.java ... zkompiluje zdrojovy kod hello.java do hello.class  
+
+javadoc ... dokumentace k jave  
+
+##### .class
+
+java hello ... spusti hello.class v JVM (Java Virtual Machine)  
+appletviewer apHello.htm ... prohlizec appletu  
+javap hello.class ... dekompilace .class do .java  
+jdb ... debugger  
+
+##### .jar
+
+java -jar Archiv.jar ... spusti program v archivu Archiv.jar  
+
+jar cvf Archiv.jar *.class ... vytvori jar archiv (Java Archiv)  
+jar tvf Archiv.jar ... otestuje jar archiv (Java Archiv)  
+jar xvf Archiv.jar ... rozbali Archiv.jar  
+unzip -t Archiv.jar ... oteztuje JAR zabaleny zipem  
+
+<a name="promenne|]]
+### Promenne
+
+char x; ... (Character) unicode znak, 2 bajty  
+byte znak='a'; ... (Byte) bajt, -128 - 127  
+short x; ... kratke cislo, 2 baty -32768 - 32767  
+
+int x; ... integer, cele cislo, 4 bajty -2.147.483.648 - 2.147.483.647  
+long x; ... cele velike cislo, 8 bajtu, -9.223.372.036.854.775.808 &#341; 9.223.372.036.854.775.807  
+float r = 125.36f; ... realne cislo, 4 bajty, -1.4*10^-45 - 3.4*10^38  
+double r; ... realne dvojnasobne cislo, 8 bajtu, 4.9*10^-324 - 1.7*10^308  
+boolean	b; ... 0, 1 - lez pravda  
+x = (int)8.2 ... konverze na cele cislo  
+final float Pi=3.14; ... definice konstanty (nelze menit)  
+
+<a name="operatory|]]
+### Operatory
+
+(, ) ... seskupovani (priorita 16)  
+A++ [--) ... A=A+1 (priorita 15)  
+*, /, % ... matematicke operace * a /, modulo (priorita 14)  
++, - ... matematicke operace + a - (priorita 13)  
+= ... prirazeni (priorita 3)  
+A+=B, [*=, -=, /=] ... A=A+B (priorita 3)  
+A==3 [!=] ... A je (neni) rovno 3 (priorita 10)  
+A&lt;=3 (&gt;=,&lt;,&gt;) ... A je vetsi rovno (mensi rovno, vetsi, mensi) (priorita 11)  
+
+!A ... Negace vyroku A, vysledek vyrok (priorita 15)  
+A&lt&lt1, &gt;&gt;, &gt;&gt;&gt; ... bitovy posun o jednu pozici do leva u promenne A, do prava se zachovanim znamenka, do prava (priorita 12)  
+A && B ... plati vyrok A a zarovan B (priorita 6)  
+A || B ... plati vyrok A a nebo B (priorita 5)  
+A & B ... bitova operace a 1100 & 1001 = 1000 (priorita 9)  
+
+A ^ B ... bitova operace nebo 1100 & 1001 = 1101 (priorita 8)  
+A | B ... bitova operace XOR 1100 & 1001 = 0101 (priorita 7)  
+
+<a name="podminky|]]
+### Podminky, cykly
+
+if (podminka) {} else {}  
+(podminka) ? prikazy_pokua_pravda : prikazy_pokud_lez;\\
+
+```
+switch (promenna) {
+case hodnota1 :
+	prikazy
+	break;
+case hodnota2 :
+	prikazy
+	break;
+default: 
+	prikazy
+	break;
+}
+```
+
+for (pocitadlo;podminka;zmena_pocitadla) {}  
+
+while (podminka) {}  
+continue; ... Preskoci zbytek cyklu while, ci for a vrati se na zacatek na vyhodnocovani podminky  
+break; ... Vyskoci z cyklu for nebo while  
+
+<a name="tridy|]]
+### Tridy, objekty, funkce
+
+Definice tridy: cat trida.java\\
+
+```
+public class trida {
+int a; }
+```
+
+Deklarace objektu tridy pokus: cat pokus.java\\
+
+```
+public class pokus {
+  public static void main {
+    trida A = new trida();
+    A.a = 1;
+    System.Out.Println(A.a);
+  }
+}
+```
+
+Tridy mohou obsahovat i funkce, ktere umi pracovat s promennymy v objektu danne tridy:  
+public class trida {
+    public int a;
+    public trida (int a) {
+      this.a = a; }
+    public trida () {
+      this (1); }
+    public zdvoj () {
+      a *= 2; }
+}</code>
+Deklarace objektu tridy pokus: cat pokus.java\\
+
+```
+public class pokus {
+  public static void main {
+    trida A = new trida(2);
+    A.zdvoj();
+    System.Out.Println(A.a);
+  }
+}
+```
+
+
+<a name="funkce|]]
+### Funkce
+
+Integer.toString(12) ... prevede celociselnou hodnotu na string  
+
+Math.Random() ... Vygeneruje pseudonahodne cislo  
+(int)[^1]
+
+[^1]: Math.random()*6+1 ... prevede realne nahodne cislo na celociselne  
+
+<a name="priklady|]]
+### Priklady:
+
+==Hello.java==
+
+```
+class hello (
+  public static void main (String[] args){
+    System.out.println("Hello World");
+  }
+}
+```
+
+
+==apppletHello.java==
+
+```
+import java.awt.*;
+public class apHello extends java.applet.Applet {
+   public void init (){
+	add(new Label("Hello World"));
+   }
+}
+```
+
+
+==appletHello.htm==
+
+```
+&lt;BODY&gt;
+&lt;APPLET code="appletHello.class" width="100" height="30" align="left"&gt;
+aplet appletHello.class neni podporovan prohlizecem
+&lt;/APPLET&gt;
+&lt;/BODY&gt;
+&lt;/HTML&gt;
+```
+
+
+==servletHello.java==
+
+```
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.*
+
+public class servletHello extends HttpServlet {
+   public void doGet (HttpServletRequest request, HttpServletResponse resopnse) throws IOException {
+	PrintWriter out = response.getWriter();
+        java.util.Date today = new java.util.Date();
+        out.println("<http><body>Hello, now it is" + today + "</body></html>");
+   }
+}
+```
+
+%javac -classpath $PATH_TO_TOMCAT/common/lib/servlet-api.jar -d classes servletHello.java
+
+==WEB-INF/web.xml==
+
+```
+&lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
+&lt;web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4"&gt;
+&lt;servlet&gt;
+  &lt;servlet-name&gt;Servlet Hello&lt;/servlet-name&gt;
+
+  &lt;servlet-class&gt;servletHello&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;Servlet Hello&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/hello&lt;/url-pattern&gt;
+
+&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+```
+
+
+==time.jsp==
+
+```
+&lt;html&gt;
+&lt;body&gt;
+Hello, now it is &lt;%= new java.util.Date() %&gt;
+&lt;/body&gt;
+
+let-mapping&gt;
+&lt;/html&gt;
+```

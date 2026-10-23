@@ -1,0 +1,54 @@
+
+=====odkazy=====
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_file_system.htm|info na Veritas Filesystem]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_filesystem.htm|info na Veritas Filesystem]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_lvm.htm|Varitas prikazy]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_lvm_cs.htm|Veritas Volume Manager Cheet Sheet]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_lvm_tasks.htm|Veritas Volume Manager Tasks]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_simple_volume.htm|Using slices to create minimal rootdg]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_volume_simple_rootdg.htm|Using slices to create minimal rootdg]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/Veritas_VM_remove.htm|info na Veritas VxVM remove]]<br />
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_vxdmp.htm|Veritas VXDMP]]<br />
+[[http://www.blacksheepnetworks.com/security/resources/veritas/veritas_lvm_cs.htm|Veritas VxVM cheat sheet]]\\
+
+=====lvm=====
+[[http://docs.hp.com/en/B9106-90008/vxdg.1M.html|vxdg]] .. Spravuje Volume Manager diskove skupiny (disk groups)<br />
+vxassist make vol01 50m ... vytvori Volume vol01 o velikosti 50m<br />
+vxassist -g newDG make vol02 2g layout=raid5,nolog A2 A4 A5 ... vytvori Volume vol02 typu raid-5 o velikosti 2g<br />
+vxassist help showattr ... help<br />
+vxdg init newdg ... iniciuje novou diskovou skupunu newdg<br />
+vxdg init nevDG ndg-01=c0t0d0 ndg-02=c0t1d0 ... iniciuje DG nevDG a prida disky<br />
+vxdg list ... seznam diskovych skupin<br />
+vxdg adddisk newDG ndg-03=c2t5d0 ... prida disk do DG<br />
+vxdg rmdisk newDG ndg-03 ... odebere disk z DG<br />
+vxdg deport newDG ... exportuje diskovou skupinu<br />
+vxdg import newDG ... importuje diskovou skupinu<br />
+vxdg destroy ... zrusi diskovou skupinu<br />
+vxdg -g newDG free ... volne misto na discich<br />
+vxdisk list ... seznam dostupnych disku<br />
+vxdisk -g nevVG list ... seznam disku ve skupine newDG
+vxdisk -o alldgs list ... seznam vsech DGs, i tech exportovanych<br />
+vxdisk -s list ... seznam LUNu\\
+vxdiskadm ... interaktivni sprava LVM<br />
+vxdisksetup -v<br />
+vxdisksetup -i c2t0d0 format=sliced ... iniciuje disk k pouziti ve VVM, ale neprida do Diskove skupiny (zapise data do private region)<br />
+vxdiskunsetup -C c2t3d0 ... odebere disk z Veritas kontroly - zmaze data v private regoin<br />
+vxedit -g newDG rename ndg-01 newDG-disk01 ... prejmenuje disk<br />
+vxedit -g newDG set nohotuse=on ndg-01 ... nastavi nohotuse<br />
+vxevac -g newDG ndg-01 ndg-03 ... evakuace dat napr. pred vymenou disku<br />
+vxprint -Aht ... Seznam disku a LV<br />
+vxprint -g newDG ... seznam komponent DG newDG<br />
+vxdisk list ... Seznam PV<br />
+<br />
+vxupgrade -n 4 /mount_point ... online update veritas 3 na veritas 4
+vxfsconvert ... offline verze update veritasu
+<br />
+/etc/default/vassist<br />
+
+==[[http://prefetch.net/blog/index.php/2007/04/14/resizing-veritas-volumes-with-vxresize/|Zvetseni]] fs==
+df -k | grep actdb1<br />
+<i>/dev/vx/dsk/datadg/appsactubd1 379584512 365269618 13431842    97%    /apps/actuate8</i><br />
+vxdg free | grep datadg<br />
+/etc/vx/bin/vxresize -F vxfs -g datadg actdb1 +1<br />
+
+   

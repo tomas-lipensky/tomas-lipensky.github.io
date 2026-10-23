@@ -1,0 +1,53 @@
+### Druhy databazi
+
+SQL databaze splnuji tzv. ACID:  
+ACID - Atomicity - transkace bud probehne v poradku, nebo se neprovede vubec, Consistency - Dobry stav pred transakci => dobry stav po transakci, Isolation - transakce jsou nezavisle, operace cekaji, az jine operace jsou zcela aplikovany na stejnych datech, Durability - provedene zmeny v DB preckaji pad systemu (log).  
+
+Nerelacni databaze splnuji tzv. BASE:  
+Basically Available, Soft-state Eventual consistency)  
+
+### Relacni (SQL) databaze
+
+<dl>
+<dd>[MariaDB/MySQL](mysql.html)</dd>
+<dd>[postgresql.html](postgresql.html)</dd>
+<dd>[IBM DB2](db2.html)</dd>
+<dd>[Oracle](oracle.html), [Oracle SQL](oraclesql.html)</dd>
+<dd>[MSSQL](mssql.html)</dd>
+<dd>[SQLite](sqlite.html)</dd>
+<dd>[Teradata](td.html)</dd>
+<dd>[Derby](derby.html)</dd>
+<dd>Informix</dd>
+<dd>Sybase IQ</dd>
+<dd>Sybase</dd>
+</dl>
+
+### Nerelacni (NoSQL) databaze
+
+<dl>
+<dd>[Berklye DB](bdb.html)</dd>
+<dd>[CouchDB](couchdb.html)</dd>
+<dd>Cassandra</dd>
+<dd>HBase</dd>
+<dd>[Redis](redis.html)</dd>
+<dd>Voldemort</dd>
+<dd>MongoDB</dd>
+<dd>Hypertable</dd>
+<dd>Dynnomite</dd>
+<dd>BigTable</dd>
+</dl>
+
+### Data explorery
+
+[SQuirrel SQL](http://squirrel-sql.sourceforge.net/) - java datovy explorer  
+
+### Drivery
+
+Aplikace vyuzivajici data z databaze potrebuji pro komunikace s databazi drivery, ktere ji umoznuji komunikovat s danym typem databaze. Seznam zakladnich typu ovladacu:
+
+ODBC ... Open DataBase Connectivity - MS vytvorene standardizovane API pro siroke spektrum OS  
+JDBC typ 1 ... Java Database Connectivity - znamy tez jako JDBC-ODBC most - vyuziva pro komunikaci existujici ODBC ovladac. Potrebuje tez nativni ovladace pro dany OS aby mohl komunikovat s ODBC.  
+JDBC typ 2 ... Javovy ovladac vyuzivajici nativni-API ovladac - Plne javovsky ovladac ktery vyuziva knihovny lokalne nainstalovaneho DB klienta. Ovladac konvertuje JDBC metody na nativni volani DB API. Nevhodne pro applety.  
+JDBC typ 3 ... Plne javovsky Sitovy protokol pro Middleware mezivrtvu - Plne javovsky ovladac komunikuje s middlewarem, posila JDBC API volani, Middleware je prevadi na DB specificke volani a preposila do DB.  
+JDBC typ 4 ... Plne javovsky ovladac implementujici Databazovy protokol - Ovladac prevadejici JDBC volani primo na DB specificky protokol.  
+JDBC typ 5 ... Specialni vysokofunkcni ovladace pro extra vykon (napr. DataDirect Connect pro JDBC ovladace

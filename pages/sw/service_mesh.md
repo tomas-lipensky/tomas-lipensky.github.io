@@ -1,0 +1,5 @@
+### Service mesh
+
+Chytra infrastruktura, co umoznuje : Retry policy, circujit breaker, mTLS, observability, GRPC, traffic split (canary), GRSS (Ingress)
+
+Reseni napr. Istio, Linkerd, Sonsul Connect

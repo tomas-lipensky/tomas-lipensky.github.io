@@ -1,0 +1,19 @@
+
+======Firefox======
+
+====Externi odkazy====
+[[https://developer.mozilla.org/en-US/docs/Mozilla/Command_Line_Options|developer.mozilla.org]] - prikazove parametry\\
+
+====Vnitrni URL====
+about:sessionrestore\\
+about:config\\
+about:plugins\\
+about:addons\\
+about:memory ... report vyuziti pameti\\
+vice [[http://kb.mozillazine.org/About_protocol_links|about:]] URLek\\
+chrome://lucidor/content/viewepub.xul?uri=file:///home/ibm289zp/a.epub ... prohlizeni epub dokumentu\\
+
+
+   
+====Vyvojarsky rezim====
+shift-ctrl-M ... prepne vzhed na mobilni zarizeni\\

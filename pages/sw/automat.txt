@@ -1,0 +1,65 @@
+
+======Automatizace======
+
+====Obsah:====
+
+
+[[#odkazy|Interni a externi odkazy]]\\
+[[#|Programy pro praci s java aplikacemi]]\\
+
+
+
+<a name="odkazy|]]
+====Interni a Externi odkazy:====
+
+
+[[../web/index.html|Aplikacni servery]]\\
+[[../dev/java.html|Programovaci jazyk java]]\\
+[[../web/j2ee.html|J2EE]]\\
+
+
+
+====Automatizacni reseni pro instalaci systemu====
+
+
+[[http://www.ibm.com/developerworks/library/l-cobbler/|cobbler]] ... reseni automatickou instalaci linuxu\\
+
+
+
+====Automatizacni reseni pro instalaci systemu====
+
+
+cobbler ... reseni automatickou instalaci linuxu\\
+
+
+
+==Automatizace konfiguraci==
+
+
+Chef - automatizace managmentu a provisioningu - pouziva se i na cloud\\
+[[http://en.wikipedia.org/wiki/Puppet_%28software%29|Puppet]] - automatizace koniguraci\\
+[[http://spacewalk.redhat.com/|Redhat Spacewalk]] - projekt z ktereho se builduji RedHat Satelity\\
+Vagrant - automatizace vitualizaci\\
+Ansible - jako puppet nebo chef\\
+Salt\\
+
+
+
+==Log management==
+logstash - kolekce, procesovani a preposilani logu a eventu\\
+
+==Ostatni nastroje==
+
+
+[[http://www.ibm.com/developerworks/java/jdk/tools/healthcenter/|IBM Monitoring and Diagnostic Tools for Java - Health Center]] - monitorovaci a vysetrovaci nastroj na IBM Java procesy\\
+[[../dev/ant.html|ANT]] ... nastron na sestavovani aplikaci (kompilace, balickovani atd.)\\
+JCoverage ... Nastroj na vyhodnoceni pokryti kodu testovacimi prodecurami JUnit\\
+JSwat ... graficky jdb\\
+JUnit ... testovani procedur\\
+Pmd ... staticke testovani zdrojoveho kodu\\
+JMeter ... testovani vykonnosti http, ftp, ldap, soap atd. aplikaci\\
+[[../dev/maven.html|Maven]] ... sprava projektu\\
+
+
+
+   

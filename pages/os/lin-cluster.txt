@@ -1,0 +1,30 @@
+
+======LINUX - Cluster======
+
+====Externi odkazy====
+[[http://www.alphaworks.ibm.com/tech/xCAT|xCAT]] - Extreme Cluster Administration Toolkit - kolekce Perk a ksh skriptu atd. k ovladani clusteru\\
+[[http://www-1.ibm.com/servers/eserver/clusters/software/|CSM]] Cluster System Management - zpusob na centralni zpravovani clusteru\\
+[[http://www.alphaworks.ibm.com/tech/ect4linux|ECT]] Enhanced Cluster Tools . extra funkce pro CSM\\
+[[http://oscal.openclustergroup.org|OSCAR]] - kolekce opensource nastroju pro clustering\\
+[[http://www.linuxvirtualserver.org/|LVS]]Linux Virtual Server Project - poskytuje Loadbalancing\\
+[[http://www-306.ibm.com/software/tivoli/products/sys-auto-linux|Tivoli System Automation for Linux\\
+[[http://www.linux-ha.org|Lunux-HA]] projekt - poskytuje Heartbeat a [[http://www.vergenet.net/linux/fake/|fake]] - IP takeover\\
+[[http://www.tildeslash.com/monit/|Monit]] - umoznuje spravovat, monitorovat a provadet akce\\
+[[http://www.drbd.org|DRBD]] - sitovy mirroring disku\\
+Filesystemy pro Cluster: [[http://opengfs.sourceforge.net]]Open Global File System]], [[http://www-1.ibm.com/servers/eseerver/clusters/software/gpfs.html|General Parallel File System for Linux]], 
+[[http://www-124.ibm.com/developerworks/opensource/jfs/|Journaled File system]], [[http://olstrans.sourceforge.net/release/OLS2000-ext3/|ext3]]\\
+
+====RedHat clustering====
+system-config-cluster\\
+cluquorumd ... Quorum daemon\\
+clusvcmgrd ... Service manager daemon\\
+clurmtabd ... Synchronizes NFS mount entries in /var/lib/nfs/rmtab with a private copy on a service's mount point\\
+clulockd ... Global lock manager (the only client of this daemon is clusvcmgrd)\\
+clumembd ... Membership daemon\\
+/etc/cluster.xml\\
+clustat ... Cluser Status\\
+clufence ... Cluster fence\\
+/sbin/service clumanager start/stop\\
+/sbin/service cluster start/stop\\
+
+   

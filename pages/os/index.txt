@@ -1,0 +1,86 @@
+
+===== Síťě: =====
+  * [[../net/cisco.html|Cisco]]
+  * [[../net/openwrt.html|OpenWRT]]
+
+===== Mobilní zařízení - OS: =====
+  * [[android.html|Android]]
+
+===== Operační systémy: =====
+**[[unix.html|Unix obecně:]]**\\
+  * [[unix-commands.html|Unixové příkazy]]
+  * [[daemons.html|Služby]]
+  * [[emacs.html|Emacs]]
+  * [[awk.html|Awk]]
+  * [[vi.html|VI]]
+  * [[clib.html|Knihovny]]
+
+
+**[[linux.html|Linux]]**\\
+
+  * [[lin-manage.html|Správa systému]]
+  * [[lin-fs.html|Souborové systémy a data]]
+  * [[lin-net.html|Síť]]
+  * [[lin-services.html|Služby]]
+  * [[lin-vpars.html|Virtualizace]]
+  * [[lin-cluster.html|Cluster]]
+  * [[lin-xserver.html|X server]]
+  * [[lin-commands.html|Nezařazené příkazy]]
+  * [[lin-services.html|Seznam linuxovych sluzeb]]
+
+
+**[[aix.html|AIX]]**\\
+
+  * [[aix-manage.html|Správa systému]]
+  * [[aix-fs.html|Souborové systémy a data]]
+  * [[aix-net.html|Síť]]
+  * [[aix-print.html|Tisk]], [[http://tomas.lipensky.cz/os/aix-services.html|Sluzby]], [[http://tomas.lipensky.cz/os/aix-wpar.html|WPAR]]
+  * [[aix-lpar.html|Virtualizace]]
+  * [[aix-hacmp.html|Cluster]]
+  * [[aix-nim.html|NIM]]
+  * [[aix-errpt.txt|Errpt - logovani chyb]]
+
+
+**[[hpux.html|HP-UX]]**\\
+
+  * [[hp-manage.html|Správa systému]]
+  * [[hp-fs.html|Souborové systémy a data]]
+  * [[hp-net.html|Síť]]
+  * [[hp-services.html|Služby]]
+  * [[hp-partitions.html|Virtualizace]]
+  * [[hp-cluster.html|Cluster]]
+  * Zavaděcí proces: [[hp-integrity.html|Integrity]] a [[http://tomas.lipensky.cz/os/hp-parisc.html|PA-RISC]]
+
+**[[solaris.html|Solaris/SunOS]]**\\
+  * [[sol-manage.html|Správa systému]]
+  * [[sol-fs.html|Souborové systémy a data]]
+  * [[sol-net.html|Síť]]
+  * [[sol-services.html|Služby]]
+  * [[sol-cluster.html|Cluster]]
+  * [[sol-print.html|Tisk]]
+  * [[sol-prikazy.html|Ostatní příkazy]]
+
+
+**[[bsd.html|BSD]]**\\
+
+  * [[bsd-manage.html|Sprava systemu]]
+
+
+**[[windows.html|Windows]]**\\
+  * [[bat.html|.bat soubory]]
+  * [[citrix.html|Citrix klient]]
+  * [[win-ps.html|PowerShell]]
+  * [[../dev/vbs.html|.vbs soubory]]
+
+
+**[[virtualization.html|Virtualizace]]**
+  * [[esx.html|VMWare - ESX]]\\
+  * [[docker.html|Docker]]\\
+   
+==== Ostatni ====
+  * [[pac|Proxy PAC definice]]
+    
+   
+
+    
+   

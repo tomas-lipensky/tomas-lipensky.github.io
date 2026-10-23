@@ -1,0 +1,7 @@
+====Odkazy====
+[[http://pen.iana.org/pen/PenApplication.page]] ... registrace novych rozsireni AD schemat - generovani novych [[https://docs.microsoft.com/en-us/windows/desktop/ad/object-identifiers|OID]]\\
+[[https://blogs.technet.microsoft.com/askpfeplat/2012/05/28/best-practices-for-implementing-schema-updates-or-how-i-learned-to-stop-worrying-and-love-the-forest-recovery/]] ... clanek o rozsirovani AD schemata\\
+
+
+====Prikazy====
+[[https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc811556(v=ws.10)|repadmin /replsummary]] ... shrne replikacni stav a relativni zdravi AD lesa\\

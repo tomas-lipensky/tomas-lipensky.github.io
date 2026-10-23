@@ -1,0 +1,35 @@
+#OWNER;TAG;DRIVE;MODE;LTHR;LSEV;MTHR;MSEV;HTHR;HSEV;WeekdayStart;WeekdayEnd;TimeStart;TimeEnd;
+#
+#Owner	Responsible department / application
+#Tag	Responsible team
+#Drive	Logical drive name (support both drive letter and path name – for drives mounted on a directory name). For example: 
+#	C:
+#	C:\NewLogical
+#	Other possible value is:
+#	LOCAL – for all local drives (WMI drivetype=3)
+#Mode	MonitoringType: M | P | N
+#	(M: Free MB,
+#	P: Percent Space Free,
+#	N: No Monitoring)
+#LSEV	Severity if disk space is below low threshold – LTHR 
+#	Possible values: 
+#	HARMLESS; WARNING; MINOR; CRITICAL; FATAL
+#	If - or empty then WARNING
+#MSEV	Severity if disk space is below medium threshold - MTHR 
+#	Possible values: 
+#	HARMLESS; WARNING; MINOR; CRITICAL; FATAL
+#	If - or empty then MINOR
+#HSEV	Severity if disk space is below high threshold – HTHR 
+#	Possible values: 
+#	HARMLESS; WARNING; MINOR; CRITICAL; FATAL
+#	If - or empty then CRITICAL
+#LTHR	Threshold for low severity LSEV. To not use this severity enter here -1, - or leave empty
+#MTHR	Threshold for medium severity MSEV. To not use this severity enter here -1, - or leave empty
+#HTHR	Threshold for high severity HSEV. To not use this severity enter here -1, - or leave empty
+#WeekDayStart	The first day of week on which this service is monitored. Permitted values: 0,1,2,3,4,5,6. 0 means Sunday.
+#WeekDayEnd	The last day of week on which this service is monitored. Permitted values: 0,1,2,3,4,5,6. 0 means Sunday.
+#TimeStart	The first minute on which this service is monitored in format hhmm. Half past noon is 1230. See 4.1.2.
+#TimeEnd	The last minute on which this service is monitored in format hhmm. Half past noon is 1230.
+#
+someOWNER;someTAG;LOCAL;P;15;HARMLESS;10;WARNING;5;CRITICAL;0;6;0000;2359
+someOWNER;anotherTAG;G:;M;200;MINOR;50;CRITICAL;20;FATAL;0;6;0000;2359

@@ -1,0 +1,107 @@
+====Vítejte====
+[[https://www.linkedin.com/in/tomaslipensky/]] - Moje profesní představení\\
+
+Na stránkách se nachází predevšim stručný průřez mých znalostí a zkušenotí. Obsah stránek používám jako osobní vědomostní databázi, ale můžete jej použít i pro řešení vaších úkolů a výzev.
+
+==== Sítě a operační systémy====
+[[os:index|OS]]: [[os:aix|AIX]], [[os:linux|Linux]], [[os:bsd]], [[os:hpux]], [[os:sunos|Solaris/SunOS]], [[os:unix|Unix obecne]], [[oś:macos|MacOS]], [[os:Windows]]/[[os:powershell|PowerShell]]\\
+[[net:networking|Site]]: [[net:dns]], [[net:Cisco]], [[net:OpenWRT]], [[net:f5|F5 Big-IP - waf]], [[net:mitmproxy]], pfSense - opensource bezpecnostni reseni\\
+OS pro telefony: [[os:android|Android]]\\
+
+
+====Virtualizace, kontejnery====
+[[os:virtualization|Virtualizace]]: [[os:esx|VMware]], [[os:citrix]],  [[os:docker]]\\ 
+
+==== Automatizace IT====
+[[automatizace:index|Automatizace]]:\\
+Verejne cloudy: [[automatizace:azure|Azure]], [[automatizace:ibmcloud|IBM Cloud]], [[automatizace:aws|AWS]], [[automatizace:google|Google cloud]]\\
+Abstrakce virtualizaci, sprava virtualizaci a cloudu:  [[automatizace:terraform|Terraform]], [[automatizace:ico|IBM Cloud Orchestrator]], [[automatizace:openstack|OpenStack]], [[automatizace:vagrant|Vagrant]], OpenShift - nad Kubernetes\\
+Sprava konfiguraci (configuration management): [[automatizace:Ansible]], [[automatizace:chef|Chef]], [[automatizace:dsc|DSC]], Puppet, SaltStack, CFEngine\\
+Orchestrace kontejneru: [[automatizace:kubernetes]], [[automatizace:helm]] pro Kubernetes, Docker Swarm, OpenShift, Apache Mesos, EKS, AKS, ...\\
+Privatni cloudy: [[automatizace:ICM|IBM Cloud Manager]], [[automatizace:icp|IBM Cloud Private]]\\
+[[automatizace:cicd|CI/CD]]: [[automatizace:jenkins|Jenkins]], [[automatizace:octopus|Octopus]], [[automatizace:urbancode|UrbanCode]], [[automatizace:vsts|VSTS]], [[automatizace:liquibase|Liquibase]], Travis, Bamboo, Teamcity, [[automatizace:github|Github actions]], Gitlab, [[automatizace:argocd|Argo CD]]\\
+Artefaktove repozitare: [[automatizace:nuget]]
+
+==== Databáze====
+Relační: [[db:mysql|MySQL/MariaDB]], [[db:postgresql|PostgreSQL]], [[db:db2|DB2]], [[db:oracledb|Oracle DB]], [[db:teradata|Teradata]], [[db:mssql|MSSQL]], [[db:azuredb|AzureDB]]\\
+Nerelační: [[db:couchdb|CouchDB]], [[db:bdb|BerkleyDB]], [[db:mongodb|Mongo DB]], [[db:redis|Redis]], [[db:sqlite|SQLite]], [[db:derby|Derby]], [[db:elasticsearch|ElasticSearch]]\\
+
+==== Webove technologie====
+Webove servery a aplikacni servery: [[www:apache|Apache/IHS]], [[www:was|Websphere Application Server]], [[www:JBoss]], [[www:Tomcat]], [[web:iis|IIS]], [[web:nginx]]\\
+Web testovani: [[https://tools.pingdom.com/|Pingdom]], [[https://www.site24x7.com/web-page-analyzer.html|site24x7]] - test load time nastroje, Selenide - UI testy, JMeter - performance testy, Selenium, SauceLab, Cucumber, Moca (nodejs), TestEngine, Mstest, Apium Xcode\\
+Mocking - http server s odpovídacími pravidly pro testování (např. statické odpovědi, přeposílání, ..): Wiremock\\
+Messaging: [[www:MQ]], RabitMQ, [[sw:Kafka]]\\
+eComerce: [[www:fas|Fredhopper application server]]\\
+[[sw:api|API]]: GraphQL, [[https://webhook.site|webhook.site]] - testovani webhooku\\
+Content management: [[www:Sitecore]]\\
+Wiki a publikační technologie: [[https://www.dokuwiki.org|dokuWiki]], [[https://dynalon.github.io/mdwiki/|mdWiki]]
+
+==== Data management, Business inteligence, Big data====
+Reporting: [[data:cognos|Cognos BI]], [[data:Hyperion]], [[data:EssBase]], [[data:BIRT]], [[data:Pentaho]], [[data:SapBI]], [[data:TM1]]\\
+ETL nastroje: [[data:Datastage]], [[data:InformaticaMDM]], [[data:Streams]]\\
+MDM: [[data:mdm|Infosphere MDM CS]], [[data:informatica|Informatica ETL]]\\
+Bezpecnost dat: [[data:GDE]]\\
+Ostatni: [[data:Hadoop]], [[data:obi]], [[data:obid]], [[data:odi]], [[data:owb]]
+
+====Ostatní aplikace====
+[[sw:java|Java aplikace obecne]]\\
+[[sw:tsm|IBM TSM - Tivoli Storage Manager]], [[sw:netbackup|Veritas NetBackup]], [[sw:networker|EMC Networker]]\\
+Monitoring: [[sw:itm|ITM - IBM Tivoli Monitoring]], [[sw:zabbix]], [[sw:grafana]], [[sw:nagios]], [[https://github.com/netdata:netdata|Netdata]]\\
+[[sw:mobile|Mobilní aplikace]]\\
+Veritas LVM\\
+Veritas Cluster\\
+[[sw:tws|TWS - IBM Tivoli Workload Scheduller]], [[sw:ctm|BMC Control-M]], RunDeck\\
+[[sw:tlm|TLM]], [[sw:tscm|TSCM]], [[sw:srm|SRM]], [[sw:domino|Domino]], [[sw:edge|Edge]], [[sw:sap|SAP]]\\
+[[sw:security|Bezpecnost]]\\
+[[sw:blockchain]]: [[sw:etherneum]]\\
+Instant Messaging: [[sw:teams]]\\
+Kancelar: Office365, LibreOffice, [[sw:outlook:MS Outlook]]\\
+Alertovaci konzole: Alerta\\
+Analyza obrazu: [[sw:OpenCV]]\\
+Process management, logic management: [[automatizace:bpm]]\\
+Business rules, decission management system: JSON Rules-Json Rules engine, OpenRules\\
+[[sw:ad|Active Directory]]\\
+[[sw:ml|Machine learning - strojove uceni]]\\
+Logování: [[sw:splunk]], [[sw:dynatrace]], [[sw:datadog]]\\
+[[sq:ai|AI]]: [[https://www.phind.com/]], [[https://chat.openai.com/auth/login]]\\
+Secret managery: [[sw:vault|HashiCorp Vault]]\\
+Grafické aplikace: [[https://www.photopea.com/|photopea]]
+Autentifikace: [[sw:autentifikace]]
+==== Programování====
+Jazyky: [[dev:C]], [[dev:csharp]], [[dev:Java]], J2ee, [[dev:Perl]], [[dev:python|Python/Jython]], [[dew/tcl|TCL/JACL]], Unix scripts, [[sw:Ruby]], [[dev:vbs|Visual Basic]], [[dev:nodejs]], [[dev:node-red]], [[dev:javascript]], [[dev:jsp]], [[dev:graphql]]\\
+Verzovani: [[dev:svn]], [[dev:git]], [[dev:tfs]]\\
+Vývojové platformy: [[dev:github|GitHub]], GitLab, Bitbucket, [[dev:ado|Azure DevOps/vsts]]\\
+Web: [[dev:html]], [[dev:css]], [[dev:xml]], [[dev:php]]\\
+Soborove formaty: [[dev:json]], [[dev:xml]], [[https://developers.google.com/protocol-buffers||Protobuf]] (neco jako otypovany json)\\
+Protokoly: [[dev:soap]], [[dev:http]], REST, [[https://grpc.io/docs/guides/|gRPC]]\\
+Kvalita kodu: konvence, [[dev:testy-kodu]], Fortify, Sonarqube, coverity, Lintery, CodeQL, Trivy, Gitleaks, Dependabot, \\
+Balíčkové repozitáře: [[dev:artifactory|JFrog Artifactory]], Nexus, DevOps, GitHub\\
+Ostatni: [[dev:uml]], [[dev:term-ansicolor]], [[dev:re]]gularni vyrazy, [[dev:code_revision]], [[dev:test_services|testovací nástroje pro vývoj]]\\
+Buildovací nástroje: [[dev:maven|Maven]], Ant, Bundler
+IDE: [[dev:visualstudio]], [[dev:code|VSCode]], Geany, Eclipse\\
+
+==== Matematika====
+ceske a anglicke matematicke odkazy
+Matlab - Nekolik základních príkazu v Matlabu
+Maple - několik základních příkazů v Maple
+
+==== Ostatní====
+[[https://www.youracclaim.com/user/tomas-lipensky|Ziskane certifikace ulozene Acclaim]]\\
+[[blog:index|blog]]\\
+[[ostatni:itarch|IT architektura]]\\
+[[ostatni:scrum]]\\
+[[ostatni:internet|různé internetové odkazy]]\\
+[[ostatní:media]] - knihy, audia, videa\\
+[[ostatni:elektronika]]\\
+[[ostatni:dum|dům/stavby]]\\
+[[ostatni:ukulele]]\\
+[[ostatni:vareni|vaření/pečení]]\\
+[[ostatni:auto]]\\
+[[ostatni:pivo]]\\
+[[ostatni:tvoreni|tvoření]]\\
+[[ostatni:zdravi|zdraví]]\\
+[[ostatni:sport]]\\
+[[ostatni:jazyky]]: [[other:arabstina|Arabština]]\\
+[[ostatni:burza]]\\
+[[ostatni:finance]]\\
+[[ostatni:rodokmeny]]\\

@@ -1,0 +1,11 @@
+# Solaris - tisk
+
+lpsystem -l ... informace o print serveru  
+lpshut ... zastavi print server  
+enable/disable/accept/reject  
+/usr/lib/lpsched ... spusti print server  
+telnet printer 9000 ... pripoji se na BSD tiskarnu  
+/etc/lp/* koniguracni soubory  
+lpstat -t ... seznam tiskaren  
+lp -d TISKARNA soubor  
+[lpadmin](http://www.digitalissues.co.uk/html/os/unix/solaris.html) ... Definice tiskaren

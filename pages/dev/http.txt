@@ -1,0 +1,66 @@
+
+
+======WEB - http======
+
+Sitovy protokol ktery slouzi hlavne na prenos HTML stranek. Pracuje na TCP protokolu, je typu state-less, navaze spojeni, ziska co chce a ukonci spojeni. HTTP protokol se pripojuje k webovym (http) serverum, jako treba [[/linux/services.html#httpd|Apache]].
+HTTP oddeluje pozadavek (request) od odpovedi (reply) prazdnym radkem.
+
+[[http://cs.wikipedia.org/wiki/Hypertext_Transfer_Protocol|HTTP na cs.wikipedia.org]]\\
+[[http://en.wikipedia.org/wiki/Http|HTTP na en.wikipedia.org]]\\
+[[http://en.wikipedia.org/wiki/List_of_HTTP_headers|parametry HTTP hlavicky]]\\
+[[http://en.wikipedia.org/wiki/List_of_HTTP_status_codes|status kody HTTP]]\\
+
+==Otestovani http sluzby, primitivni ziskani dat z http serveru (http 1.0):==
+<code>telnet tomas.lipensky.cz 80
+GET /
+
+</code>
+
+==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
+<code>telnet tomas.lipensky.cz 80
+GET / HTTP/1.1
+Host: tomas.lipensky.cz
+
+</code>
+
+==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
+<code>telnet tomas.lipensky.cz 80
+GET / HTTP/1.1
+Host: tomas.lipensky.cz
+
+</code>
+
+==Otestovani http sluzby pres http proxy==
+<code>telnet proxy.server.com 8080
+CONNECT google.com:80 HTTP/1.0
+
+</code>
+
+==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
+
+<code>telnet tomas.lipensky.cz 80
+POST / HTTP/1.1
+Host: tomas.lipensky.cz
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1)
+Accept: text/xml,application/xml,application/xhtml+xml,text/html;q=0.9,text/plain;q=0.8video/x-mng,image/jpeg,image/gif;q=0.2,*/*;q=0.1
+Accept-Language: en-us,en;q=0.5
+Accept-Encoding: gzip,deflate
+Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Aplive: 300
+Connection: keep-alive
+
+Color=dark&taste=bitter
+
+</code>
+
+==HTTP Proxy==
+<code>
+telnet 1.2.3.4 8080
+CONNECT 1.2.3.5:80 GET /
+</code>
+
+
+==Dalsi prikazy pro http komunikaci==
+wget, curl, GET ... viz [[/unix/commands.html|Unix - prikazy]]\\
+
+   

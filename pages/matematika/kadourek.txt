@@ -1,0 +1,110 @@
+	   
+<blockquote>
+  ==== <font color="#000066|Texty k pøedná¹ce  MB101 Matematika I</font>====
+ [[http://www.math.muni.cz/%7Ekadourek/mnoziny.ps|Mno¾iny]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/relace.ps|Relace]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/zobraz.ps|Zobrazení]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/ekviv.ps|Ekvivalence a
+rozklady]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/uspor.ps|Uspoøádané
+mno¾iny]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/svazy.ps|Svazy]] \\
+         [[http://www.math.muni.cz/%7Ekadourek/svazalg.ps|Dvojí
+pohled na svazy]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/kombin.ps|Variace a
+kombinace]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/princip.ps|Princip
+inkluze a exkluze]] \\
+         [[http://www.math.muni.cz/%7Ekadourek/inkexk.ps|U¾ití
+principu inkluze a exkluze]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/permut.ps|Permutace]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/grupy.ps|Pologrupy,
+monoidy, grupy]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/cisla.ps|Vlastnosti
+celých èísel]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/zbytky.ps|Zbytkové tøídy]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/homomor.ps|Podgrupy a
+homomorfismy grup]] \\
+         [[http://www.math.muni.cz/%7Ekadourek/gener.ps|Generování
+podgrup]]
+  
+<b><font color="#000066|<font size="+1|Písemné zkou¹ky z
+pøedmìtu MB101 Matematika I</font></font></b> \\
+  <font color="#000066|<font size="+1|       leden, únor 2003</font></font> 
+
+  
+ [[http://www.math.muni.cz/%7Ekadourek/prvnirad.ps|První
+øádný termín]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhyrad-a.ps|Druhý
+øádný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhyrad-b.ps|Druhý
+øádný termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/tretirad-a.ps|Tøetí
+øádný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/tretirad-b.ps|Tøetí
+øádný termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/prvniopr-a.ps|První
+opravný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/prvniopr-b.ps|První
+opravný termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhyopr-a.ps|Druhý
+opravný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhyopr-b.ps|Druhý
+opravný termín B]] 
+
+  
+<b><font color="#000066|<font size="+1|Texty k pøedná¹ce  MB102
+Matematika II</font></font></b> 
+
+  
+ [[http://www.math.muni.cz/%7Ekadourek/okruhy.ps|Okruhy a
+tìlesa]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/polynom.ps|Okruhy
+polynomù]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/delitel.ps|Vlastnosti
+polynomù]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/koreny.ps|Koøeny polynomù]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/zlomky.ps|Racionální
+lomené funkce]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/matice.ps|Matice]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/determ.ps|Determinanty]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/vektor.ps|Vektorové
+prostory]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/dimenze.ps|Báze a
+dimenze vektorových prostorù]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/hodnost.ps|Hodnost matice]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/regular.ps|Regulární
+matice]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/systemy.ps|Soustavy
+lineárních rovnic]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/linear.ps|Lineární
+zobrazení]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/matlin.ps|Matice
+lineárních zobrazení]] 
+
+  
+<b><font color="#000066|<font size="+1|Písemné zkou¹ky z
+pøedmìtu MB102 Matematika II</font></font></b> \\
+  <font color="#000066|<font size="+1|       kvìten, èerven 2003</font></font> 
+
+  
+ [[http://www.math.muni.cz/%7Ekadourek/prvrad-a.ps|První
+øádný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/prvrad-b.ps|První øádný
+termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhrad-a.ps|Druhý øádný
+termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhrad-b.ps|Druhý øádný
+termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/prvopr-a.ps|První
+opravný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/prvopr-b.ps|První
+opravný termín B]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhopr-a.ps|Druhý
+opravný termín A]] \\
+ [[http://www.math.muni.cz/%7Ekadourek/druhopr-b.ps|Druhý
+opravný termín B]]
+
+</blockquote>
+
+   

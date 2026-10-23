@@ -1,0 +1,30 @@
+     
+======BPM======
+Business Process Manager
+
+====URL====
+/ProcessAdmin ... Process Admin Console\\
+/ProcessPortal/jsp/index.jsp ... \\
+/ProcessCenter/ \\
+/PerformanceAdmin/login.jsp\\
+/BusinessSpace\\
+
+
+====Start/stop/status====
+/opt/ibm/BPM/v8.5/bin/startManager.sh \\
+/opt/ibm/BPM/v8.5/bin/startNode.sh \\
+/opt/ibm/BPM/v8.5/bin/startServer.sh SERVER \\
+/opt/ibm/BPM/v8.5/bin/stopServer.sh SERVER\\
+/opt/ibm/BPM/v8.5/bin/stopNode.sh \\
+/opt/ibm/BPM/v8.5/bin/stopManager.sh \\
+/opt/ibm/BPM/v8.5/bin/serverStatus.sh SERVER \\
+
+====Utility====
+[[https://git.ng.bluemix.net/bpm-TWXUsage/default|TWXusage]] - nastroj na prohledavani TWX exportu (zip archive XML souboru) toolkitu a procesu\\
+
+====REST api====
+/rest/bpm/wle/v1/tasks/query/IBM.DEFAULTALLTASKSLIST_75/count?interactionFilter=ASSESS_AVAILABLE\\
+====log soubory====
+
+
+   

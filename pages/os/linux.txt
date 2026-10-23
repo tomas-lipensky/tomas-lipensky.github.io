@@ -1,0 +1,74 @@
+
+====Linuxove distribuce==== 
+[[https://cs.wikipedia.org/wiki/Seznam_distribuc%C3%AD_Linuxu|Seznam Linux distribuci na Wikipedii]] 
+. "Live" Linux (OS na vyndavacim mediu "CD/DVD/USB", nepotrebuje harddisk) existuje pro vsechny zname distribuce, nektere jsou vytovorene pouze pro tento ucel..
+
+[[lin-konfigurace|Best practice nastaveni]]\\
+[[lin-workstation|Linux pracovni stanice]]\\
+====Unixové príkazy====
+
+
+[[unix-commands|unixové príkazy]]\\
+[[daemons|Sluzby]]\\
+[[emacs|emacs]]\\
+[[vi|VI]]\\
+[[clib|C]]\\
+[[jq]]\\
+[[awk]]\\
+[[bash]]\\
+[[nc]] ... netcat, ncat\\
+====Linuxové príkazy====
+
+
+[[lin-manage|Správa systému]]\\
+[[lin-fs|Souborové systémy, LVM, ...]]\\
+[[lin-net|Sít]]\\
+[[lin-services|Sluzby]]\\
+[[lin-xserver|X server]]\\
+[[lin-vpars|Virtuální pocitace, kontejnery, emlulace OS]]\\
+[[lin-commands|Nezarazené príkazy]]\\
+[[lin-cluster|Cluster]]\\
+[[lin-media|Media]] - zvuk, video, obrazky, scanner, kamera\\
+[[manpage]]\\
+[[lin-pilotage.spec]]\\
+[[etc-asoundrc]] \\
+[[ssh-config]]\\
+[[lin-proc|/proc]] struktura\\
+
+
+
+====Externí odkazy:====
+
+
+
+[[http://www.abclinuxu.cz|abclinuxu.cz]]\\
+[[http://www.abclinuxu.cz/clanky/ruzne/abcserialy|Serialy na abclinuxu.cz]]\\
+[[http://www.penguin.cz|penguin.cz]]\\
+[[http://www.linuxworld.cz|linuxworld.cz]]\\
+[[http://www.linuxzone.cz|linuxzone.cz]]\\
+[[http://www.gnu.org|gnu.org]]\\
+[[http://www.root.cz|root.cz]]\\
+[[http://www.linuxsoft.cz|linuxsoft.cz]]\\
+[[http://www.linuxexpres.cz/|linuxexpres.cz]]\\
+[[http://www.interval.cz|interval.cz]]\\
+[[http://www.yolinux.com/TUTORIALS/|Tutorialy na yolinux.com]]
+
+
+
+
+
+[[http://www.informit.com/|InformIT]]\\
+[[http://linux.byexamples.com/|Linux by examples]]\\
+[[http://www.linuxjournal.com/|linuxjournal.com/]]\\
+[[http://www.linux.cz|www.linux.cz]] - cesky linuxovy portal\\
+[[http://docs.linux.cz|docs.linux.cz]]\\
+[[http://www.linux.cz/noviny|www.linux.cz/noviny]]   - Linuxové noviny\\
+[[http://www.cpress.cz/knihy/linux|www.cpress.cz/knihy/linux]] - Dokumentace k linuxu /tlusta kniha -> pdf/\\
+[[http://linux.tosovsky.info/|Linux clanky - linux.tosovsky.info]]\\
+[[http://www.redhat.com/docs/manuals/|Red Hat dokumentace]]\\
+[[http://www.troubleshooters.com/linux/|http://www.troubleshooters.com/linux/]]\\
+[[http://www.if-not-true-then-false.com/|if-not-true-then-false.com]]\\
+
+
+
+   

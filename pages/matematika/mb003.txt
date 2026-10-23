@@ -1,0 +1,76 @@
+
+ 
+
+ <b>Cviceni z predmetu Linearni algebra a geometrie I, MB003 pro jaro 2005:</b><hr/>
+ 
+
+
+ 
+
+ <b>Harmonogram cviceni:</b><br/>
+  1. cviceni (27.2.): komplexni cisla, zbytkove tridy, vektorove prostory<br/>
+  2. cviceni (3.3.): operace s maticemi - scitani, nasobeni, stopa<br/>
+  3. cviceni (10.3.): reseni systemu linearnich rovnic<br/>
+  4. cviceni (17.3.): inverzni matice<br/>
+  5. cviceni (24.3.): vektorove podprostory, linearni obaly<br/>
+  6. cviceni (31.3.): baze a dimenze V.P., souradnice, PISEMKA!!!<br/>
+  7. cviceni (7.4.): pruniky a sjednoceni podprostoru<br/>
+  8. cviceni (14.4.): linearni zobrazeni<br/>
+  9. cviceni (21.4.): matice linearniho zobrazeni, matice prechodu<br/>
+  10. cviceni (5.5): matice prechodu, afinni geometrie<br/>
+  11. cviceni (12.5.): afinni geometrie, permutace<br/>
+  12. cviceni (19.5.): determinanty, PISEMKA!!!<br/>
+ 
+
+
+ 
+
+  Zajimavy projekt na webu je [[http://micromat.webz.cz/|Micromat]], kde php stranky za vas vyresi soustavu n rovnic o n neznamych, pocitaji s komplexnimi cisly, vypocitaji determinant a urci zavislost vektoru.
+ 
+
+
+ 
+
+<b>Teorie</b> k predmetu [[http://is.muni.cz/predmety/predmet.pl?fakulta=1433;obdobi=2825;studium=160080;jazyk=cz;kod=MB003|Linearni algebra a geometrie I]]:<br/>
+<ul>
+<li>Texty k predmetu [[ftp://www.math.muni.cz/pub/math/people/Slovak/lectures/linearni.algebra/la.ps|Linearni algebra]] od prof. Slovaka (MU)</li>
+<li>Predbezna verze skript [[ftp://www.math.muni.cz/pub/math/people/Paseka/lectures/LAI/|Linearna algebra a geometria]] od doc. Zlatose (UKom)</li>
+<li>Texty [[http://adela.karlin.mff.cuni.cz/~motl/mzahrad/milos.ps|Pestujeme linearni algebru]] od Motla a Zahradnika (KU)</li>
+<li>Texty [[http://adela.karlin.mff.cuni.cz/~tuma/linalg.html|Linearni algebry]] od doc. Tumy (KU)</li>
+<li>Texty [[http://adela.karlin.mff.cuni.cz/~soucek/laa.ps|Linearni algebry pro fyziky]] od prof. Soucka (KU)</li>
+<li>Texty nejen k lin. algebre na [[http://www.math.slu.cz/studmat/index.php|Slezske univerzite]]</li>
+<li>Podrobny navod na priklady z LA [[http://old.mendelu.cz/~marik/prez/op-matice-cz.pdf|prvni]] a [[http://old.mendelu.cz/~marik/prez/matice-cz.pdf|druhy]] dil od Mgr. Marika</li>
+<li>Ucebni text [[ftp://math.feld.cvut.cz/pub/olsak/linal/linal.pdf|Linearni algebry]] od RNDr. Olsaka (CVUT)</li>
+</ul>
+
+
+
+
+
+<b>Priklady</b> k predmetu [[http://is.muni.cz/predmety/predmet.pl?fakulta=1433;obdobi=2825;studium=160080;jazyk=cz;kod=MB003|Linearni algebra I]]:</b><br/>
+<ul>
+<li>Resene priklady z [[ftp://www.math.muni.cz/pub/math/people/Cadek/lectures/linearni_algebra/sbirka.pdf|Linearni algebry a geometrie I]] od doc. Cadka</li>
+<li>Priklady z [[http://www.math.muni.cz/~slovak/Vyuka/la-priklady.ps|Linearni algebry]] od prof. Slovaka</li>
+<li>[[|Sbirka prikladu]] k linearni algebre od L.Motla a M.Zahradnika</li>
+<li>Pisemka [[ftp://www.math.muni.cz/pub/math/people/Cadek/lectures/linearni_algebra/la1-02ab.ps|1]] [[ftp://www.math.muni.cz/pub/math/people/Cadek/lectures/linearni_algebra/la1-02c.ps|2]] [[ftp://www.math.muni.cz/pub/math/people/Cadek/lectures/linearni_algebra/la1-02dg.ps|3]] z predmetu Linearni algebra a geometrie I od doc. Cadka</li>
+<li>[[http://www.fimuni.org/show_files.php?prefix=MB003|Pisemky]] z minulych roku na [[http://www.fimuni.org/|www.fimuni.org]]</li>
+</ul>
+
+
+
+
+
+<b>Podminky udeleni zapoctu:</b><br/>
+Podminky ziskani zapoctu jsou dve. Jedna je dochazka na cviceni, toleruji se 2 neomluvene absence. Druha podminka je napsat obstojne 2 pisemky.
+
+
+
+
+
+<b>Dalsi informace:</b><br/>
+  Textu, prikladu a pisemek je na internetu k sehnani prespriliz, nez abych sem dal na vsechno sem odkazy. Tedy krome vyse uvedenych a krome studijnich materialu uverejnenych na Informacnim systemu lze snadno na internetu dohledat dalsi.
+
+
+
+ 
+   

@@ -1,0 +1,132 @@
+
+======JBoss Application Server======
+
+[[http://docs.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/4.3/pdf/Getting_Started_Guide/JBoss_Enterprise_Application_Platform-4.3-Getting_Started_Guide-en-US.pdf|JBoss - Getting Started Guide]]\\
+[[http://www.jboss.org/jbossas/docs|Dokumentace k JBoss]]\\
+[[http://localhost:8080/|http://localhost:8080/]]\\
+
+====Aplikace pro JBoss:====
+napr. [[http://www.cse.chalmers.se/research/hats/node/150|FAS]] (Fredhopper Access Server)\\
+
+====Start/stop====
+
+echo $JAVA_HOME ... overeni cesty k Java JDK\\
+echo $JBOSS_HOME ... overeni cesty k JBoss\\
+bin/run.sh ... spusteni JBoss\\
+bin/run.sh -c minimal ... spusti JBoss s profilem "minimal"</br>
+bin/shutdown -S ... ukonceni JBoss\\
+bin/standalone.sh -b 1.2.3.4 -bmanagement  1.2.3.4 ... spusti JBoss v standalone modu, aplikace na ip 1.2.3.4, admin konzole na 1.2.3.4\\
+./standalone.sh server-config=standalone-full-ha.xml -b 1.2.3.4 -bmanagement  1.2.3.4 ... pouzije profil full-ha\\ 
+
+====Profily====
+ls server/* ... seznam profilu\\
+server/default/conf/jboss-service.xml ... zakladni sluzby profilu\\
+
+====Konfigurace====
+mgmt-users.properties ... definice uzivatelu do admin konzoly, lze pridat pomoci add-user.sh\\
+bin/add-user.sh ... prida uzivatele na manageovani, ci do aplikace\\
+
+====Jboss CLI====
+bin/jboss-cli.sh --connect controller=1.2.3.4:9999 ... pripoji CLI k domain controlleru 1.2.3.4:9999\\
+help ... help\\
+ls ... info\\
+shutdown --host hostone ... stopne hosta\\
+
+====Sluzby====
+
+====twiddle====
+
+twiddle je nastroj na ziskani a pracovani s Mbeans z JBoss instance.
+ 
+
+twiddle -s /*server name*/ [command] mbean attribute  ... Usage of twiddle.sh\\
+twiddle.sh -s bv_frameworkx serverinfo -cld  ... Getting a list of active mbeans is via command serverinfo. It has three options: c for count of mbeans, l to list them all and d for server domain name \\
+twiddle.sh -s bv_frameworkx get [mbean] [attribute(s)]  ... Command get is to get values of attributes of mbeans. Attributes are optional, if you don't specify them all attributes will be written out. But some mbeans need to have the attributes specified. If you don't know the attributes name, you use... \\
+twiddle.sh -s bv_frameworkx info [mbean] ... Command get is to get values of attributes of mbeans. It will list all available information about mbean. \\
+twiddle.sh -s localhost:44509 query 'jboss.system:*'\\
+twiddle.sh -s localhost:44509 get jboss.system:type=ServerInfo\\
+twiddle.sh -s localhost:44509 get jboss.system:type=ServerConfig\\
+twiddle.sh -s localhost:44509 query "jboss.jca:service=DataSourceBinding,*"\\
+twiddle.sh -s localhost:44509 query 'jboss.jdbc:*'\\
+twiddle.sh -s localhost:44509 query 'jboss.jca:*'\\
+\\
+query '*:*'\\
+query 'jboss.j2ee:*'\\
+query 'jboss:service=invoker,*'\\
+get jboss:service=invoker,type=jrmp RMIObjectPort StateString\\
+get jboss:service=invoker,type=jrmp\\
+get jboss.system:type=ServerInfo” ... Getting Server Information. Attributes: Port RmiPort \\
+get jboss:service=JNDIView” ... Getting Global JNDI Information: \\
+get jboss.system:type=Log4jService,service=Logging”  ... Getitng Jboss Logging Information \\
+get jboss.system:service=ThreadPool  ... Getting Thread Pool information: \\
+jboss:service=invoker,type=jrmp \\
+query "jboss.jca:service=DataSourceBinding,*"  ... Listing all datasources available\\
+name=###,service=DataSourceBinding ... To work with datasources use these mbeans, where ### is name of DS. \\
+name=###,service=LocalTxCM \\
+name=###,service=ManagedConnectionFactory \\
+name=###,service=ManagedConnectionPool \\
+
+==Dulezite atributy==:
+ConnectionCount shows how many connections are currently open to the database. \\
+AvailableConnectionCount shows how much room is left in the pool. \\
+ConnectionCreatedCount keep running totals of the number of connections created \\
+Connection-DestroyedCount keep running totals of the number of connections destroyed by the pool \\
+MinSize and MaxSize can be changed permanently in the xml configuration file. \\
+
+
+
+
+==Logovani : Log4j (Jakarta) - org.jboss.logging.Log4jService==
+server/PROFIL/conf/jboss-log4j.xml ... nastaveni logovani\\
+
+==Bezpecnost : JAAX - org.jboss.security.plugins.JaasSecurityManagerService==
+server/PROFIL/deploy/SERVICE.war/WEB/jboss-web.xlm ... (security-domain) \\
+server/PROFIL/deploy/SERVICE.war/WEB/web.xlm ... (security-constraint) \\
+server/PROFIL/conf/login-config.xml ... (application-policy) \\
+
+==JNDI : JNDI - org.jnp.server.NamingBeanImpl, org.jboss.naming.NamingService, org.jboss.naming.NamingProviderURLWriter, org.jboss.naming.JNDIView==
+
+==JDBC==
+[[http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html|Oracle 10 JDBC]] ovladace\\
+Datasource settings are in files *-ds.xml. There are all necessary settings. \\
+
+===jms====
+http://docs.redhat.com/docs/en-US/JBoss_Enterprise_SOA_Platform/5/html/ESB_Administration_Guide/chap-configuration.html#active_mq
+
+====Aplikace====
+
+==Tomcat==
+/server/PROFIL/deploy/jbossweb.sar/server.xml\\
+
+==[[http://download.oracle.com/javaee/5/tutorial/doc/gexaj.html|Duke's Bank]]==
+
+==[[http://download.oracle.com/javaee/6/firstcup/doc/gcqzl.html|First Cup]]==
+
+==[[http://www.oracle.com/technetwork/java/javaee/downloads/index.html|Java2EE priklady]]==
+
+====Produkty JBoss====
+JBoss Enterprise Application Platform (JBoss EAP)... JBoss Application Server + Hibernate + JBoss Seam + JBoss Web Framework Kit\\
+JBoss Enterprise Web Platform (or JBoss EWP) ... JBoss Enterprise Application Platform s odlechcenym profilem JBoss Applikacniho serveru\\
+JBoss Enterprise Portal Platform (or JBoss EPP) ... JBoss Enterprise Application Platform + GateIn + JBoss Portlet Bridge + Site Publisher\\
+JBoss Enterprise Web Server (or JBoss EWS) ... Tomcat + Apache - Balicek pro obsahle weby s lehkymi aplikacemi\\
+JBoss Enterprise SOA Platform (or JBoss SOA Platform) ... JBossESB + Business rules engine + JBoss jBPM + JBoss EAP + JBoss Messaging + JBoss jBPM + JBoss SSO\\
+JBoss Enterprise Service Bus (or JBossESB, or JBoss ESB)\\
+[[https://access.redhat.com/documentation/en-US/JBoss_Operations_Network/3.1/pdf/Admin_Setting_up_Monitoring_Alerts_and_Operations/JBoss_Operations_Network-3.1-Admin_Setting_up_Monitoring_Alerts_and_Operations-en-US.pdf|JBoss Operations Network]] (or JBoss ON or JON) ... Nastroj na monitorovani a rizeni zivotniho cykuy aplikaci pro Enterprise Platformy (deploy na test, uat, prod) ([[http://www.jboss.org/dms/judcon/2012india/presentations/day1track1session6.pdf|mala prezentace]])\\
+JBoss Cache (or JBC)\\
+JBoss Netty - programatorske nastroje pro praci s I/O pro vytvareni protokolu atd.\\
+JBoss Seam ... programatorske nastroje na tvorbu webovych aplikaci\\
+jBPM (Drools Workflow) ... Workflow engine k provadeni Business procesu\\
+JBoss Enterprise BRMS ... JBoss Rules + JBoss EWP + JBoss EAP\\
+Hibernate ... Nastroje na mapovani objeku na data v db\\
+JBoss Rules (drive Drools) ... Business Rule Management System (BRMS) nastroj\\
+GateIn Portal ... JBoss Portal + eXo Portal\\
+JBoss Developer Studio (JBDS) ... vyvojove prostredi postavene na Eclipse s nastroji JBoss Tools\\
+JBoss Federated Single Sign-On (JBoss SSO) ... Soucast JBoss SOA Platform na jedno prihlaseni do federovaneho systemu\\
+
+====Ostatni produkty====
+[[http://www.rtiperformance.com/what-is-rti|RootCause Transaction Instrumentation]] (RTI) je rozsizeni JON o performance aplikaci (response time, reporting, analyzy)\\
+
+====Vykon====
+[[http://www.agileload.com/agileload/blog/2013/01/31/jboss-enterprise-application-platform-performance-tuning|Tipy na ladeni vykonu]]\\
+
+   

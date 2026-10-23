@@ -1,0 +1,19 @@
+/proc/sys/kernel/hostname  
+/proc/meminfo  
+/proc/PID/cmdline  
+/proc/PID/status  
+/proc/PID/statm  
+/proc/PID/limits  
+/proc/PID/smaps_rollup  
+/proc/PID/fd  
+/proc/PID/task ... vlákna - thready  
+
+/sys/fs/cgroup/memory.current  
+/sys/fs/cgroup/memory.max  
+/sys/fs/cgroup/memory.peak  
+/sys/fs/cgroup/memory.stat  
+/sys/fs/cgroup/memory.events  
+/sys/fs/cgroup/memory.events.local  
+/sys/fs/cgroup/pids.current  
+/sys/fs/cgroup/pids.max  
+/sys/fs/cgroup/cpu.stat

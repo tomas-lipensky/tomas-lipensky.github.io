@@ -1,0 +1,72 @@
+# WebSphere MQ
+
+### Externi odkazy
+
+[Infocentral MQ 7.0 - Script (MQSC) Command Reference](http://publib.boulder.ibm.com/infocenter/wmqv7/v7r0/index.jsp?topic=%2Fcom.ibm.mq.csqzaj.doc%2Fsc10120_.htm)  
+
+### MQ Script Command - spusteni
+
+runmqsc test ... (Run MQ's commands) administracni konzola pro MQM test, neco jako wsadmin  
+echo "dis qmgr" | runmqsc ... zadani prikazu pro runmqsc  
+runmqsc QM1 &lt; commands.mqrc ... spusteni prikazu ze souboru  
+
+### Prikazy MQ pro runmqsc
+
+alter qmgr SCMDSERV(MANUAL) ... zmeni hodnotu SCMDSERV na MANUAL  
+alter channel('QM1.Clinet') chltype(svrconn) scyexit('svsex.dll(sventry)') scydata('bonza') ... zmeni security exit pro kanal a user data pro sceurity exit  
+ALTER QMGR SSLKEYR('/var/key') ... nastaveni SSL klicenky  
+DEFINE AUTHINFO(LDAP1) AUTHTYPE(CRLLDAP) CONNAME(ldap(389)') LDAPUSER('cn=user') LDAPPWD('heslo') ... definice LDAP serveru 1  
+DEFINE NL(LDAPNL) NAMES(LDAP1, LDAP2) ... nastaveni autentifikacnich zdroju  
+ALTER QMGR SSLCRLNL(LDAPNL)  
+end ... konec runmqsc  
+def ql('FRONTA') ... Vytvori frontu o nazvu FRONTA</br>
+dis ql(*) ... seznam vsech front  
+dis ql(*) CURDEPTH ... ukaze jen parametr CURDEPTH u vsech front (pocet zprav ve fronte)  
+dis ql('q1') ... ukaze paramery fronty q1  
+dis ql('q1') CURDEPTH ... ukaze jen parametr CURDEPTH u fronty q1  
+dis qmgr ... ukaze detaily MQM  
+dis qmgr SCMDSERV ... ukaze jen parametr SCMDSERV v MQM  
+dis chs(*) ... ukaze channel status  
+dis chl(*) ... ukaze seznam vsech kanalu  
+dis chl(SYSTEM.AUTO.RECEIVER) ... ukaze parametry kanalu SYSTEM.AUTO.RECEIVER  
+display channel('QM1.Client') chltype(svrconn) scyexit scydata ... ukaze security exit pro kanal QM1.Client, typ kanalu server connection  
+display channel('QM1.Client') chltype(clntconn) scyexit scydata ... ukaze security exit pro kanal QM1.Client, typ kanalu client connection  
+DISPLAY CHANNEL(SYSTEM.DEF.SERVER) CHLTYPE ... ukaze parametr CHLTYPE u kanalu SYSTEM.DEF.SERVER  
+start chl(SYSTEM.DEF.SERVER) ... spusti kanal SYSTEM.DEF.SERVER  
+stop chl(SYSTEM.DEF.SERVER) ... zastavi kanal SYSTEM.DEF.SERVER  
+startlistener('LISTENENR.TCP') ... spusti listener  
+define qlocal('LAB01.Test.Queue') replace ... vytvori novou lokalni frontu  
+define channel('QM1.Client') chltype(svrconn) replace ... vytvori novy kanal  
+define channel('QM1.Client') chltype(clntconn) conname('localhost(9001)') qmname(QM1) replace ... zmeni kanal  
+refresh security type(SSL) ... restartuje SSL spojeni  
+
+DISPLAY CLUSQMGR ... ukaze info o clusteru  
+SUSPEND QMGR ... ubere query manger z clusteru  
+RESUME QMGR ... vrati query manager z clusteru  
+REFRESH CLUSTER ..  
+RESET CLUSTER ...  
+
+##### Statistiky, monitoring, accounting
+
+DISPLAY QSTATUS(QUEUE) ... monitoring - ukaze stav fronty - vsechny parametry  
+DIS QSTATUS(QUEUE) MONITOR ... monitoring - ukaze parametr MONITOR u fronty QUEUE  
+
+### Priklady
+
+##### Preposilani zprav na vzdalenou frontu
+
+runmqsc QM2  
+DEF QL(SECRETS)  
+DEF CHANNEL(QM1.QM2) CHLTYPE(RCVR) ... vytvori kanal  
+
+runmqsc QM1  
+DEF QR(SECRETS) RNAME(SECRETS) RQMNAME(QM2) XMITQ(QM2) ... vytvori vzdalenou frontu SECRETS na vzdaleneho manager QM2, vzdalenou frontu SECRETS a skrze transmission queue QM2  
+DEF QL(QM2) USAGE(XMITQ) ... Vytvori lokalni frontu QM2 typu ansmission  
+DEF CHANNEL(QM1.QM2) CHLTYPE(SDR) CONNNAME(localhost(9002)) XMITQ(QM2) ... vytvori kanal typy Sender na port localhost:9002 a na transmission queue QM2  
+
+##### Priklady: Nastaveni SSL klice
+
+dis qmgr SSLKEYR ... ukaze adresar s SSL klicema  
+alter qmgr SSLKEYR(/var/mqm/qmgr/test/ssl/keys) ... zmeni parametr  
+dis chl(SYSTEM.DEF.SERVER) SSLCIPH SSLPEER ... ukaze parametry kanalu  
+alter chl('CH_SEND') CHLTYPE(RCVR) SSHCIPT('CIPHER_OF_KEY') SSLPEER('CN=*:OTHER_QMGR,O=COMPANY') ... nastaveni parametru

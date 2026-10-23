@@ -1,0 +1,37 @@
+
+====Interni odkazy====
+
+
+[[aix-errpt|ERRPT]] - errpt chyby\\
+[[aix-fs|FS]] - Souborove systemy, LVM, disky a data\\
+[[aix-hacmp|HACMP]] - HA/clustering\\
+[[aix-lpar|LPAR]] - LPARy, HMC, VIO a virtualizace\\
+[[aix-manage|MANAGE]] - Sprava systemu - uzivatele, balicky, jadro, logy...\\
+[[aix-net|NET]] - Sitove veci\\
+[[aix-nim|NIM]]\\
+[[aix-print|PRINT]] - Tisk\\
+[[aix-services|SERVICES]] - Sluzby\\
+[[aix-wpar|WPAR]]\\
+[[aix-parts]]\\
+[[aix-testlab]]\\
+[[aix-profiles]]\\
+
+
+
+====Externi odkazy====
+
+
+[[http://wiki.midrange.com/index.php/Main_Page|wiki.midrange.com]]\\
+[[https://www.ibm.com/developerworks/forums/index.html|Fora na IBM o AIX/HACMP]]\\
+[[http://wiki.lodbrok.be/?n=Main.AIXLedCodes|LED kody na P-Series serverech]]\\
+[[www.perzl.org|nejake rpm pro AIX]]\\
+[[http://publib.boulder.ibm.com/infocenter/powersys/v3r1m5/index.jsp|IBM Power Systems Hardware Information Center]]\\
+[[http://publib.boulder.ibm.com/infocenter/eserver/v1r2/index.jsp|IBM Systems Software Information Center]]\\
+[[http://www.ibm.com/developerworks/|IBM DevelpoerWorks]]\\
+[[http://www-03.ibm.com/systems/power/software/aix/linux/toolbox/download.html|IBM AIX Toolbox]]\\
+[[http://www.tablespace.net/quicksheet/|QuockSheets]]\\
+[[http://www.ibm.com/developerworks/aix/library/au-aixoracle/index.html|Running Oracle on AIX]]\\
+
+
+
+   

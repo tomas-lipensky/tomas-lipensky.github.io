@@ -1,0 +1,33 @@
+	   
+ 
+
+ <b>Cviceni z predmetu Matematika II, MB102 pro jaro 2005:</b><hr/>
+ 
+
+
+ 
+
+<b>Teorie</b> k predmetu [[http://is.muni.cz/predmety/uplny_vypis?fakulta=1433;obdobi=2825;kod=MB102|Matematika II]]:<br/>
+<ul>
+<li>28.2. Okruhy</li>
+<li>7.3. Obor integrity, tělesa</li>
+<li>14.3. Polynomy</li>
+<li>21.3. Kořeny polynomů</li>
+<li>4.4. Úvod do systémů rovnic</li>
+<li>11.4. systémy rovnic, operace s maticema</li>
+<li>12.4. Determinant</li>
+<li>18.4. Vektorový prostor</li>
+<li>25.4. Lineární závislost, lineární obal</li>
+</ul>
+
+
+
+
+
+<b>Podminky udeleni zapoctu:</b><br/>
+Podminky ziskani zapoctu jsou dve. Jedna je dochazka na cviceni, toleruji se 2 neomluvene absence. Druha podminka je napsat 2 pisemky v souctu alespon na 50%.
+
+
+
+ 
+   

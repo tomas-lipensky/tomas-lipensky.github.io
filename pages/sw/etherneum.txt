@@ -1,0 +1,14 @@
+====Nastroje====
+[[https://truffleframework.com/|Truffle framework]] vyvojove a testovaci prostredi pro Etherneum smart kontrakty. Programovaci jazyk Solidity\\
+[[https://truffleframework.com/ganache|Ganache]] osobni blockchain k testovani smart kontraktu\\
+[[https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en|Metamask]] rozsireni pro Chrome pro komunikaci s Ethernium, pouzeva web3 protokol\\
+Sublime IDE ma plugin pro zvyraznovani syntaxe Solidity\\
+
+====Truffle====
+npm install -g fruffle #... Instalace Truffle\\
+truffle migrate --reset ... Nasadi znova smart kontrakty\\
+truffle console ...spusti Truffle konzoli
+
+==Konzole==
+web3.eth.accounts ... Seznam Eth uctu\\
+web3.eth.accounts[2] ... Konkretni ucet\\

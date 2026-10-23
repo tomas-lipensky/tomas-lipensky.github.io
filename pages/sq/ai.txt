@@ -1,0 +1,108 @@
+====== AI - Artificial Intelligence - umělá inteligence ======
+
+===== Nástroje ====
+
+[[https://chatgpt.com/]] - prompt pro povídání sí s umělou inteligencí\\
+[[https://gemini.google.com/app]] - Google Gemini - Jak ChatGPT\\
+[[https://claude.ai/]] ... lepší na programování\\
+[[sw:copilot|Copilot]]\\
+[[https://www.perplexity.ai]] - jako ChatGPT, dodá internetové odkazy, odkud čepral pro odpověď\\
+
+== texty ==
+[[https://quillbot.com/]] ... přeformulování textu\\
+[[https://www.chatpdf.com/]] ... diskuze o loženém pdf\\
+[[https://www.humata.ai/]] ... podobné\\
+[[https://www.copy.ai/]] ... generování textu pro marketing, nebo odpovědi emailu ve steném duchu\\
+[[https://www.jasper.ai/]] ... podobné\\
+[[https://www.notion.com/product/ai]] ... podobné\\
+[[https://rytr.me/]] ... podobné\\
+
+== překlady ==
+[[https://www.deepl.com/en/translator]] ...překladač využívající umělou inteligenci\\
+
+== Grafika ==
+[[https://www.canva.com/ai-image-generator/]] ... Generování obrázků\\
+[[https://ideogram.ai/]] .. podobné\\
+[[https://www.bluewillow.ai/]] ... podobné\\
+[[https://www.freepik.com/]] ... generování obrázků a videí\\
+[[https://openai.com/index/dall-e-2/]] ... podobné\\
+[[https://www.midjourney.com/home?callbackUrl=%2Fapp%2F]] ... podobné\\
+[[https://stockimg.ai/]] ... přístup ke kvalitním obrázkům\\
+[[https://clipdrop.co/]] ... odstraní pozadí z fotky\\
+
+== Audio ==
+[[https://cleanvoice.ai/]] ... Vyčištění zvuku\\
+[[https://podcast.adobe.com/en/enhance]] ... zlepšení zvukové nahrávky\\
+Auphonic ... podobné
+Fireflies ... přepis zvuků do textu\\
+Cesky.ai ... podobné\\
+Evenlabs ... převodo mluvení na text a opačně\\
+Play.ht ... umí vytvářet hlasové nahrávky z textu\\
+[[https://speechify.com/]] ... převod textu do hlasu\\
+
+== Video ==
+[[https://www.descript.com/]] ... stříhání videí\\
+[[https://www.synthesia.io/]] ... generování videí\\
+Captions.ai ... přidá titulky k videu\\
+
+
+== Prezentace ==
+[[https://www.decktopus.com/]] ... vytváření prezentací\\
+[[https://gamma.work/]] ... podobné\\
+[[https://www.slidesai.io/]] ... podobné\\
+
+
+== Schůzky ==
+[[https://otter.ai/]] ... udělá zápisky ze schůzek jako Zoom, Google chat atd\\
+
+
+== Web ==
+[[https://10web.io/]] ... vytvoří webovou stránku ve WordPressu\\
+
+
+== Ostatní ==
+[[https://www.notion.com/product]] ... vedení projektu pomocí AI asistenta\\
+[[https://www.bardeen.ai/]] .. automatizace pro prohlížeč\\
+[[https://pimeyes.com/en|pimeyes]] ... vyhledávání na internetu podle fotky obličeje\\
+
+
+==== Programování ====
+[[https://strandsagents.com/latest/documentation/docs/user-guide/quickstart/|Strands Agents]] ... Knihovna pro Python pro AWS BedRock\\ 
+[[https://github.com/modelcontextprotocol/servers|MCP]] ... Model Context Protocol servery\\
+[[https://github.com/awslabs/mcp|AWS MCP]] klienti\\
+[[https://github.com/Stability-AI/strands-tools|Strands-tools nástroje]]\\
+
+Deep Learning, neuronové sítě:\\
+TensorFlow\\
+PyTorch a Keras\\
+JAX - od Googlu\\
+Matplotlib\\
+
+LLM a generativní AI:\\
+Transformers (Hugging Face)\\
+LongChain\\
+LlamaIndex\\
+
+Machine Learning:\\
+scikit-learn\\
+
+Matematika a datové operace:\\
+NumPy
+Pandas\\
+SciPy
+
+Počítačové vidění:\\
+OpenCV\\
+
+Práce se zvukem a řečí:\\
+librosa\\
+SpeechRecognition\\
+OpenAI Whisper\\
+
+Lehká AI pro automatizaci:\\
+spaCy\\
+NLTK\\
+
+from strands import [[https://strandsagents.com/latest/documentation/docs/user-guide/concepts/agents/prompts/|Agent]] ... Metoda Agenta\\
+from strands.models import [[https://strandsagents.com/latest/documentation/docs/user-guide/concepts/model-providers/amazon-bedrock/|BedrockModel]] ... Metoda na konfiguraci AI modelu\\
+import [[https://strandsagents.com/latest/documentation/docs/user-guide/concepts/tools/tools_overview/|strands-tools]] ... nástroje pro agenta - kalkukačka, práce se soubory...\\

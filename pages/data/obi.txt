@@ -1,0 +1,62 @@
+
+======Oracle Business Inteligence======
+
+====Obsah====
+<dl>
+<dt>[[#odkazy|Externi odkazy]]</dt>
+<dt>[[#interni|Interni odkazy]]</dt>
+</dl>
+
+<a name="odkazy|]]
+====Externi odkazy====
+http://technet.oracle.com\\
+http://metalink.oracle.com\\
+[[http://www.oracle.com/technetwork/middleware/bi-enterprise-edition/overview/index.html|OBI popis na oracle.com]]
+
+<a name="interni|]]
+====Interni odkazy====
+
+<a name="Popis|]]
+====Popis====
+
+OBI je z rodiny Oracle Fussion a je to Business Inteligence produkt.\\
+
+
+[[startstop|
+====Start/stop/status/info====]]
+Start:\\
+$WLC_HOME/server/bin/startNodeManager.sh\\
+$WLC_HOME/user_projects/domains/bifoundation_domain/bin/startWebLogic.sh\\
+$WLC_HOME/instances/instance1/bin/opmnctl startall\\
+\\
+Stop:\\
+$WLC_HOME/instances/instance1/bin/opmnctl stopall\\
+$WLC_HOME/user_projects/domains/bifoundation_domain/bin/stopWebLogic.sh\\
+ps -ef | grep NodeManager | grep -v grep | awk '{ print $2 }' | xargs kill\\
+\\
+Status:\\
+$WLC_HOME/instances/instance1/bin/opmnctl status\\
+
+<a name="konfigurace|
+====Konfigurace====]]
+./Oracle_BI1/bin/config.sh .. konfigurace produktu, pokud neprobehla pri instalaci\\
+
+<a name="logy|
+====Logy====]]
+$WLC_HOME/common/nodemanager/nodemanager.log\\
+
+<a name="prikazy|]]
+====Prikazy====
+ORACLE_HOME/jlib/cloningclient.jar ... klonovani BI\\
+OPatch ... patchovani Oracle produktu, i BI\\
+
+[[url|
+====URL====]]
+http://IP:7001/console ... administracni konsole WebLogicu\\
+http://IP:7001/em - enterprise konzole ... Enterprise manager na spravu Oracle produktu\\
+http://IP:7001/analytics ... Analytics tool\\
+http://IP:7001/xmlpserver ... BI Publisher\\
+
+
+
+   

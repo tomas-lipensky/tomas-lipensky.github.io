@@ -1,0 +1,6 @@
+[[https://microsoftteams.uservoice.com/forums/555103-public?filter=top&page=2]] - Microsoft UserVoice - napady na rozsireni a hlasovani\\
+
+API na posilani novych prispevku do kanalu:
+[[https://blogs.technet.microsoft.com/privatecloud/2016/11/02/post-notifications-to-microsoft-teams-using-powershell/]]\\
+
+[[https://adaptivecards.io/designer/]] ... graficky designer na posty v Teams\\

@@ -1,0 +1,217 @@
+==== IT ====
+== Posílání velikých souborů ==
+[[https://www.uschovna.cz/]]\\
+[[https://wetransfer.com/]]\\
+[[https://send-anywhere.com/]]\\
+
+
+====Odkazy - studia matematiky na MU:====
+
+[[http://spolek.sci.muni.cz|spolek.sci.muni.cz]] - Spolek přírodovědců\\
+[[http://library.muni.cz/ezdroje/|Elektronické informační zdroje MU]]\\
+
+====Odkazy na me zname:====
+
+[[http://astronomia.zcu.cz/|Mintakovy stranky]]\\
+[[http://www.beerboys.info/|Beerboys]] nove stranky\\
+
+====Slovniky, prekladace, jazyky:====
+
+[[http://slovnik.seznam.cz/|slovnik.seznam.cz]] - A,N,F,I,S,R\\
+[[http://www.slovnik.cz/bin/ecd|A->C: slovnik]] + Lat+Esp\\
+[[http://www.rewin.cz/WebForm1.aspx|rewin]] + Pl + Rum\\
+[[http://translate.google.com|translate.google.com]]\\
+[[http://french.about.com/|french.about.com/]]\\
+[[http://video.about.com/french/French-Dialogues--Directions.htm|Dialoques]]\\
+[[http://www.la-conjugaison.fr/|www.la-conjugaison.fr]]\\
+[[http://www.sogoodlanguages.com/english/cs/blog/2015/07/17/prezentace-v-anglictine/|sogoodlanguages.com]] - Anglictina, i obchodni\\
+[[https://learnenglishkids.britishcouncil.org/short-stories/]] kratke dobre videa pro deti a zacatecniky\\
+[[https://lindat.mff.cuni.cz/services/translation/]] - prekladac Lindat z Karlovy Univerzity, dobre preklady do cestiny\\
+[[https://www.deepl.com/translator#en/cs/Hello]] - Prekladac DeepL - lepsi nez Google Translate\\
+
+==Internetova radia:==
+
+
+[[http://dir.seznam.cz/Zabava_a_hry/Radio/Internetove_radia/|Odkazy ze seznamu]]\\
+[[http://www.turnuptheska.com/|TurnUpTheSka]]\\
+[[http://www.ceskyrozhlas.cz/|Cesky Rozhlas]]\\
+[[http://pandatron.cz/?1473&projekt_wifi_radia_i_-_uvod|Navod na vyrobu WiFi radia]]\\
+
+
+
+==Financni odkazy:==
+
+
+[[http://www.mesec.cz/|mesec.cz]]\\
+[[http://www.penize.cz/|penize.cz]]\\
+
+
+
+==Vyhledavaci sluzby:==
+
+
+[[http://www.seznam.cz/|www.seznam.cz]]\\
+[[http://www.google.cz|google.cz]]\\
+[[http://www.alenka.cz/|alenka.cz]] - vyhledacvac skrz ostatni vyhledavace\\
+
+
+
+====Cestovani:====
+
+
+[[http://www.hihostels.com/dba/list.php?lang=E|Hostely ve Fr a v Evrope]]\\
+[[http://www.tripadvisor.fr|Recenze hotelu ve Fr]]\\
+[[https://www.airbnb.cz]] - Ubytovani na cestach\\
+[[https://www.booking.com]] - Ubytovani na cestach\\
+[[https://www.agoda.com]] - Jako Booking, jine hotely\\
+[[https://www.airbdb.com]] - pronajimani soukromych bytu atd\\
+[[https://www.pitchup.com/search/?within=40&q=portsmouth&type=7]] - Kempy v UK\\
+[[https://ticket.southernrailway.com/]] ... jizdenky na vlak v jizni Anglii\\
+[[https://www.prahaneznama.cz/]] ... Praha znama neznama - Prazske ctvrti\\
+[[https://www.mapotic.com/praha-neznama/]] ... Praha znama neznama na Mapotic (mapy)\\
+[[https://mapy.spravazeleznic.cz/vlaky|Interaktivní mapa vlaků v ČR]], [[https://mapa.zsr.sk/index.aspx|SK]], [[https://fahrplan.oebb.at/webapp/|AT]], [[https://www.map.signalbox.io/|GB]], [[https://carto.tchoo.net/|FR]], [[https://transitflow.ch/|CH]], [[https://www.trafikverket.se/trafikinformation/tagkarta/|SE]], [[https://treinposities.nl/|NL]], [[https://elron.ee/#trainmap|EE]], [[https://www.rejseplanen.dk/bin/help.exe/mn?L=vs_livemap&tpl=fullscreenmap&view=dsb&responsive=1&custom=denmark|DK]], [[https://mobility.portal.geops.io/world.geops.transit|DE]]\\
+Aplikace: NaVlak - aktuální odjezdy vlaků\\
+Mapy: MapFactor Navigator, Cyclers, Waze, Mapy
+
+
+====Bydleni:====
+
+
+[[http://freedomky.cz/cs|Freedomky]]\\
+[[http://www.koma-modular-construction.cz/|Dalsi modularni domky]]\\
+[[http://www.unikozlin.cz/novinky.htm|Uniko Zlin]]\\
+
+
+
+==Materialy:==
+
+
+[[http://drevo-plast.eu/sk/|Drevoplast]]\\
+[[http://www.hapex.cz/stavebni-drevomaterialy/lepene-konstrukcni-hranoly-BSH|BSH Hranoly]]\\
+[[http://www.raj-dreva.cz/produkty/konstrukcni-hranoly-kvh-duo-trio-bsh/|KVH a DUO-TRIO Hranoly]]\\
+[[http://cze.sika.com/cs/produkty_a_reseni/stavebnictvi/02a011/02a011sa04.html|Vyztuzena PVC Folie SIKA]]\\
+
+
+====IT magaziny====
+[[http://businessworld.cz/|CIO]] - manazerzky ladeny IT magazin\\
+[[http://www.root.cz/|root.cz]]\\
+[[http://www.linuxexpres.cz/|linuxexpres]]\\
+[[http://www.lupa.cz/|Lupa.cz]]\\
+[[http://www.devbook.cz/|devbook.cz]]\\
+[[http://www.zive.cz/|zive.cz]]\\
+[[http://www.zdrojak.cz/|zdrojak.cz]]\\
+[[http://interval.cz/|interval.cz]]\\
+[[http://abclinuxu.cz/|abclinuxy.cz]]\\
+[[http://itbiz.cz/|itbiz.cz]]\\
+[[https://www.systemonline.cz]]\\
+[[https://azure.microsoft.com/en-us/blog/]]\\
+[[https://news.google.com]]\\
+[[https://www.itprotoday.com/]]\\
+[[https://www.maxiorel.cz/]]\\
+[[http://techthoughts.info/]]\\
+[[https://blog.mexia.com.au/]]\\
+====casopisy, noviny:====
+
+[[http://www.svetvedy.cz|svetvedy.cz]]\\
+[[http://www.reboot.cz/|Reboot]]\\
+[[http://zive.cpress.cz/|zive.cpress.cz]]\\
+[[http://neviditelnypes.lidovky.cz/|neviditelny pes]]\\
+[[http://www.idnes.cz/|www.idnes.cz]]\\
+[[http://www.ihned.cz/|www.ihned.cz]]\\
+[[http://www.ctk.cz/|www.ctk.cz]]\\
+[[http://www.washingtonpost.com/|www.washingtonpost.com/]]\\
+[[http://www.lefigaro.fr/|www.lefigaro.fr/]]\\
+[[http://www.latribune.fr/|www.latribune.fr/]]\\
+[[https://setrouver.wordpress.com/|wordpress]]\\
+
+
+
+
+==Postovni a SMS sluzby:==
+
+
+[[http://email.seznam.cz/|email.seznam.cz]]\\
+
+
+==Pocasi:==
+
+
+[[http://www.yr.no/place/Czech_Republic/South_Moravia/Brno/|yr.no]]\\
+[[http://pocasi.idnes.cz|pocasi.idnes.cz]]\\
+
+==Zabava==
+
+
+[[vtipnik.cz|vtipnik.cz]]\\
+
+
+
+==Vareni==
+
+
+[[http://www.jehnecimaso.cz|jehnecimaso.cz]]\\
+[[http://www.trebonskykapr.cz|trebonskykapr.cz]]\\
+
+
+
+==Internetove sluzby:==
+
+
+[[http://www.dropbox.com/|dropbox]] - Synchronizace FS pomoci vzdaleneho datoveho prostoru\\
+[[http://en.wikipedia.org/wiki/Ubuntu_One|one.ubuntu.org]] - to same pro ubuntu\\
+
+
+
+==Ekologie:==
+
+
+[[http://www.veronica.cz|Veronica]]\\
+[[http://www.vetesnictvi.info/|Blesi trhy na prodej nepotrebnych veci]]\\
+
+
+
+==Pomoc v nouzi, charita atd:==
+
+
+[[http://www.poradnabrno.eu|Obcanska poradna Brno - socialni poradenstvi, dluhy atd.]]\\
+[[http://www.skutecnydarek.cz/|Skutecny darek - darovani charity]]\\
+[[http://www.rozvojovka.cz/|rozvojovka.cz]]\\
+
+
+
+==Tvoreni a hrani:==
+
+
+[[http://cz.pinterest.com|pinterest]]\\
+[[http://www.ireceptar.cz/|ireceptar.cz]]\\
+[[http://www.i-creative.cz/2008/02/22/dopravni-prostredky/|Omalovanky a jine na i-creative.cz]]\\
+
+
+
+==Nastroje na spolupraci==
+[[https://akkroo.com|Formularova sluzba]] ... vytvareni, sdileni a vyplnovani formularu napr. pro ruzne udalosti, akce atd.\\
+[[https://www.strawpoll.me|Strawpool]] ... Webove hlasovani\\
+[[http://www.doodle.com|Doodle]] ... vybirani terminu pro akce - hlasovani\\
+
+====Brno====
+[[https://ticbrno.cz/mojebrno|Brno ocima Brnaku]]\\
+
+====Voda====
+[[https://www.padler.cz/turistika/38494-rozhovor-david-gros-dyje-je-vodacky-neobjevena-reka-na-ctyri-dny-pohodove-plavby/|Padler]] a rozhovor o vodacke Dyji\\
+
+====Hudba====
+[[https://bandzone.cz]]\\
+
+====Behani====
+[[https://www.wikihow.cz/Jak-m%C3%ADt-siln%C4%9Bj%C5%A1%C3%AD-kolena|Jak mit silnejsi kolena]]\\
+[[https://www.youtube.com/watch?v=uTMqdHUFcOw|Jak na bolave kolena]]\\
+[[https://www.fyzioklinika.cz/navody-na-cviceni-vse/boli-me/koleno/cviky-pri-bolestech-kolene|Cviky pri bolestech kolene]]\\
+
+====Zajimave audio/video====
+jocko willink - YouTube\\
+
+====volne (zadarmo) media - obrazky, zvuky, videa====
+[[https://pixabay.com/cs/]]\\
+[[https://unsplash.com/]]\\
+[[https://www.freeimages.com/]]\\
+[[https://www.pexels.com/]]\\

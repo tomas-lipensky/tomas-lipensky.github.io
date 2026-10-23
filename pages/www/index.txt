@@ -1,0 +1,149 @@
+     
+====Architektura====
+
+
+(Load Balancer + Proxy cache) --- (HTTP server) --- (Plugin) --- (Aplikacni server) --- (Aplikace na AS, jako treba WP, WSS, ...)
+
+
+
+Aplikace zpravidla bezi bud v Web kontejneru (programove prostredi umoznujici aplikaci vystupovat na netu), EJB konterneru (programove prostredi umoznujici aplikacim komunikovat s firemnim
+ softwarem  jako treba DB, ERP, oddelene od webu a obecnymi aplikacemi (aplikace zahrnujici v sobe ruzne programovaci kody, jako treba C/C++, ... WAS Network Deployment). Jednotlive aplikace
+ mezi sebou nejcasteji komunikuji pomoci JMS zprav. K tomu slouzi JMS infrastruktura, zajistovana napriklad WAS SIB, MQ, WESB atd. Pro komunikaci mezi jednotlivymi programy lze pouzivat SSL
+ sifrovani pomoci [[ssl.html|SSL klicu]].
+
+
+====load balancery, proxy cache atd.====
+<dl>
+<dd>IBM Edge Load Balancer ... Load balancer od IBM</dd>
+<dd>Pyranha ... Load balancer od RedHat</dd>
+<dd>Infinspas ... cachovani dat, soucast JBoss projektu</dd>
+<dd>[[http://memcached.org/|memcached]] ... Distribuovany, vykonny, opensource program pro cachovani dat</dd>
+</dl>
+
+====HTTP servery====
+<dl>
+<dd>[[ihs.html|IHS]] (IBM HTTP Server + [[plugin.html|WAS plugin]])</dd>
+<dd>IIS ... Internet Information Services (apache od Microsoft)</dd>
+<dd>[[https://letsencrypt.org|lets encrypt]] - Autorita vydavajici SSL/TSL klice zdarma</dd>
+</dl>
+
+====Aplikacni servery====
+<dl>
+<dd>[[../sw/java.html|JVM]] obecne</dd>
+<dd>[[was.html|WAS (WebSphere Application Server)]]</dd>
+<dd>WAS ESB (WAS Enterprise Service Bus) ... WAS rozsireny o spravu Service Busu - messagingu</dd>
+<dd>WASCE - WebSphere AS Community Edition + [[http://download.boulder.ibm.com/ibmdl/pub/software/websphere/wasce/updates/|update k wasce]] - WebSphere pro komunitu zalozeny na Apache Geronimo<dd>
+<dd>[[jboss.html|JBoss AS]] - JBoss Application Server (RadHat) ... Aplikacni server od RedHatu. Soucas JBosse je Apache TomCat</dd>
+<dd>[[wlc.html|Oracle WebLogic Server]], drive Bea WLC</dd>
+<dd>Apache [[tomcat.html|Tomcat]] (Apache) - Webovy kontejner</dd>
+<dd>Apache Geronimo - Aplikacni server od Apache, obsahuje Webovy kontejner Tomcat, nebo Jetty, ActiveMQ (JMS), OpenEJB (EJB), OpenJPA, ServiceMix (ESB), Axis (SOAP), Derby (DB), WADI (Clustering, Load Balancing) atd.</dd>
+<dd>Apache TomEE - Jiny aplikacni server od Apache, obsahujici Tomcat (Web Kontejner), ActiveMQ (JMS), OpenEJB (EJB), OpenJPA, MyFaces (JSF), CXF (SOAP), Derby (DB) a OpenWebBeans</dd>
+<dd>Internet Application Server (iAS), drive Oracle Application Server (OAS) a jeste drive Oracle Web Server (OWS)</dd>
+</dl>
+
+====Performance testing====
+[[https://app.loadimpact.com/account/login|Load Impact]]
+[[https://support.loadimpact.com/3.0/monitoring-agents/load-impacts-open-source-monitoring-agents/|Load Impact agent]]\\
+
+====JMS (Java messaging service)====
+
+Aplikace zajistujici vymenu zprav ci souboru mezi aplikacemi jako sluzbu. Komplexni Aplikacni servery (WAS, ...) v sobe obsahuji JMS providery, ale specializovane aplikace mohou poskytnout lepsi vykon, konfiguravatelnost a management sluzeb zprav.
+
+
+<dl>
+<dd>[[mq.html|Websphere MQ]] = MQ Series (IBM), [[mqsi.html|MBroker]]</dd>
+<dd>JBoss Messaging, HornetQ (RedHat)</dd>
+<dd>Oracle AQ (Oracle)</dd>
+<dd>Tibco Enterprise Message Service (Tibco)</dd>
+<dd>Apache ActiveMQ ... implementace JMS</dd>
+<dd>Apache ServiceMix ... ESB</dd>
+<dd>Apache Camel ... ESB</dd>
+<dd>WAS - SIB (Service Integration Bus) + enterprise balicek <!--a href="wesb.html"-->IBM WESB - WebSphere Enterprise Service Bus<!--/a--></dd>
+<dd>TalenD ESB ... OpenSource ESB</dd>
+<dd>WebSphere ESB</dd>
+</dl>
+
+====Aplikace====
+
+Aplikace v aplikacnich serverech vetsinou byvaji balene v baliccich:
+<li>WAR - balicek obsahujici webobou aplicaci - prezentacni vrstvu - zip archiv obsahujici metainformace definujici zakladni vlastnosti aplikace, Java knihovny - JAR, staticke stranky a jejich komponenty (css, obrazky, js, ...) a aktivni stranku (jsp, ...)</li>
+<li>EAR - Enterprise balicek - obsahuje balicek WAR a sadu komponent k entrerprise vrstve a metadate k ni</li>
+<li>JAR - balicek obsahujici javovske tridy - komponenta kazdeho WAS a EAR</li>
+
+====Aplikacni reseni postavene na Aplikacnich serverech====
+<dl>
+
+<dt>Commerce - nastroje pro obchod:</dt>
+<dd>IBM WSC (WebSphere Commerce) ... kompletni reseni pro e-commerce postavene na WebSphere AS, IBM Http Server a DB2</dd>
+<dd>[[fas.html|FAS (Fredhopper Access Server)]]</dd>
+
+<dt>Informacni portaly:</dt>
+<dd>[[wp.html|IBM WP (WebSphere Portal)]]</dd>
+<dd>JBoss EPP ... JBoss Enterprise Portal Platform, Soucasti JBoss Portal jako WebSphere Portal</dd>
+<dd>GateIn Portal ... jako WebSphere Portal</dd>
+
+<dt>Aplikace na rizeni procesu:</dt>
+<dd>IBM WPS (WebSphere Process Server) ... WAS ESB Rozsireny o spravu procesu</dd>
+<dd>[[http://www.softscout.com/software/Project-and-Business-Management/Flowcharting-and-Process-Modelling/FlowMind%28TM%29.html|flownimd]] ... Webovy a javovy integracni balik, ktey umoznuje graficke modelovani a definovani procesu</dd>
+
+<dt>Aplikacni servery pro telekomunikace:</dt>
+<dd>Mobicents (RedHat) ... Aplikacni server pro telekomunikace</dd>
+
+<dt>Aplikace pro bankovnictvi:</dt>
+<dd>[[http://www.sab-tm.com/|SAB]] ... kombinace Cobol aplikaci a aplikace pro aplikacni server integrujici web-based interface se cobol enginem</dd>
+
+<dt>[[../data/|Aplikace pro manipulaci dat - Business inteligence, warehousing, big data]]</dt>
+
+<dt>Aplikace na sledovani aplikacnich serveru:</dt>
+<dd>[[itcamdc.html|ITCAMDC]] (IBM Tivoli  Composite Application Manager) ... Data Collector</dd>
+
+</dl>
+
+====Aplikacni komponenty, API:====
+
+Vetsina javovych aplikaci pouziva obecne komponenty, ktere uznadnuji jejich beh a vyvoj.
+
+<dl>
+<dd>Apache Jetspeed2 ... portal od Apache pod Apache licenci</dd>
+<dd>Apache Axis2 ... Implementace SOAP od Apache pro poskytovani WebServices. Upoznuje pridat WebServices (komunikujici treba pres SOAP) Webovym Aplikacim, nebo provozovat samotne WebService aplikace</dd>
+</dl>
+
+====Testovani====
+<dl>
+<dd>[[http://jmeter.apache.org/|JMeter]] ... Apache produkt k testovani vykonnosti Webu (http, https), SOAP, mailu atd</dd>
+<dd>[[http://code.google.com/p/hotswap/|Java HotSwap]] ... Technologie na dynamicke nahravani javovskych trid bez restartu JVM</dd>
+</dl>
+
+====Vyvojove a integracni nastroje (IDE)====
+<dl>
+<dd>Eclipse</dd>
+<dd>Application Server Toolkit ... Rozsireni Eclipse</dd>
+<dd>Rational Application Developer ... Prostredi rozsirujici Eclipse zahrnujici funkce Application Server Toolkit a dalsi</dd>
+<dd>IBM WebSphere Integration Developer ... Nastroj rozsirujici Rational Application Developer o business procesy. Integrace s WebSphere ESB Server, WebSphere Express Server, WebSphere Process Server, WebSphere Server, Tomcat Server</dd>
+<dd>JRebel ... plugin do IDE na online implementace javovskych trid do JVM (pomoci HotSwap)</dd>
+</dl>
+
+====Inspekce a kontrola sitoveho toku====
+[[network_flow.html|Sitovy tok]]\\
+telnet a specificky protokol viz [[../dev/http.html|dev/http]], smtp, ...\\
+
+====Vyvoj====
+<dl>
+<dd>[[../dev/http.html|http]]</dd>
+<dd>[[../dev/html.html|html]]</dd>
+<dd>[[../dev/css.html|css]]</dd>
+<dd>[[../dev/javascript.html|javascript]]</dd>
+<!--dd>[[../dev/php.html|php]]</dd-->
+<dd>[[../dev/java.html|java]]</dd>
+<dd>[[j2ee.html|j2ee]] - Webove java aplikace</dd>
+</dl>
+
+====Prohlizece====
+Firefox\\
+[[https://developer.mozilla.org/en-US/docs/Mozilla/|Mozilla wiki]]\\
+[[https://vivaldi.com|Vivaldi]]\\
+Chrome\\
+curl ... CLI web klient\\
+wget ... CLI web klient\\
+
+   

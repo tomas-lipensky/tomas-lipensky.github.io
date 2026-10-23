@@ -1,0 +1,98 @@
+
+[[http://www.ibm.com/developerworks/lotus/documentation/|IBM Colaboration Solutions (Lotus)]] on IBM DeveloperWorks\\
+
+IBM Lotus Domino Messaging Server, IBM Lotus Domino Enterprise Server\\
+
+IBM Lotus Domino Designer\\
+
+IBM Lotus Domino Administrator\\
+
+======Lotus Notes Client======
+
+====Externi odkazy====
+[[http://www.giveawayoftheday.com/lotus+nsf+viewer+freeware/|NSF vierers]]\\
+[[http://nsf-file-viewer.qarchive.org/|NSF Viewers2]]\\
+
+Soubory [[http://www.nsf-files.com/index.asp|nsf]] (Notes Storage Format) v Lutus notes:\\
+bookmarks.nsf ... * naplanovane ukoly v kalendari\\
+desktop8.ndf ... * Workspace - odkazy na databaze\\
+as_NAME.nsf ... Autosave\\
+busytime.nsf ... prazdne\\
+headline.nsf ... Subscriptions, Odkaz na postu\\
+localfeedcontent.nsf ... rss kanaly?\\
+log.nsf ... aktivita lotus notes\\
+names.nsf ... * db vsech jmen, se kterymy se Lotus Notes setkal\\
+perweb.nsf ... asi bookmarky, historie atd Lotus Notes Browseru\\
+Cache.NDK  .. * automaticky se vytvori po startu notes - vsechna drive nactena data\\
+desktop8.ndk ... prazdne, asi nejake zalozky pro notes8\\
+diagindex.dbf ... odkaz na slozku s daty pro technickou podporu (v pripade padu notes8)\\
+exec.dbf ... odkaz na instalacni sloszku notes8\\
+help.dir ... odkaz na slozku s helpem\\
+mail.box ... odchozi slozka mailu\\
+
+Ostatni dulezite soubory:
+workspace/.metadata/* ... * posledne otevrena okna\\
+workspace/.config/org.eclipse.update ... * soubor s licenci pri startu\\
+workspace/.config/rcpinstall.properties ... * soubor s licenci pri startu\\
+
+==Programovani Agentu==
+pouziva se Vizual Basic. Create -> Agent, nebo View -> Agents\\
+Dim Counter As Integer ... (Dimension) definuje promennou Counter jako celociselnou promennou\\
+<code>
+	Dim s As New NotesSession
+	Dim ndb As NotesDatabase
+	Dim uiws As New NotesUIWorkspace
+	Dim doc As NotesDocument
+	Dim v As NotesView
+</code>
+
+Messagebox "Canceled" ... vyskoci hlaska s napisem "Canceled"\\
+Dim uiws As New NotesUIWorkspace
+ ... NotesUIWorkspace - objekt aktualniho pohledu v LotusNotes\\
+serv=uiws.Prompt(PROMPT_OKCANCELEDIT, "Server", "Type a name of the server, where the destination database is. If you want to copy documents into local server type explicit ""local"".", "local")
+... nacte do promenne serv co zada uzivatel do okynka. 1 parametr - definice tlacitek, 2 parametr titulek okna, 3 parametr - co se uzivateli zobrazi, 4 parametr - vychozi volba\\
+
+Priklad:
+<code>
+Sub Initialize
+	Dim s As New NotesSession
+	Dim db As NotesDatabase
+	Dim ndb As NotesDatabase
+	Dim uiws As New NotesUIWorkspace
+	Dim doc As NotesDocument
+	Dim ndoc As NotesDocument
+	Dim v As NotesView
+	
+	Set db=s.CurrentDatabase
+	
+	serv=uiws.Prompt(PROMPT_OKCANCELEDIT, "Server", "Type a name of the server, where the destination database is. If you want to copy documents into local server type explicit ""local"".", "local")
+	If serv="" Then
+		Messagebox "Canceled"
+		Exit Sub
+	End If
+	dbPath=uiws.Prompt(PROMPT_OKCANCELEDIT, "Database file", "Type a path to the database, where you want to store the documents. ", "archive/ibm02wrd.nsf")
+	If dbPath="" Then
+		Messagebox "Canceled"
+		Exit Sub
+	End If
+	If serv="local" Then serv=""
+	Set  ndb=s.GetDatabase(serv, dbPath, False)
+	If ndb Is Nothing Then
+		Messagebox "Wrong database server or file path."
+		Exit Sub
+	End If
+	
+	Set v=db.GetView("AllButPerson")
+	
+	Set doc=v.GetFirstDocument
+	Do While Not doc Is Nothing
+		Set ndoc=doc.CopyToDatabase(ndb)
+		Call ndoc.Save(True, False)
+		Set doc=v.GetNextDocument(doc)
+	Loop
+End Sub</code>
+
+Views:\\
+Create -> View, nebo Actions -> View Options -> Design\\
+
+   

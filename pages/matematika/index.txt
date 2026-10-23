@@ -1,0 +1,55 @@
+	   
+====Matematická činost a zájmy====
+
+
+
+Na úvod uvedu, čím se zabývám a o co se v matematice zajímám. Především o diferenciální geometrii, konkrétně kontaktní struktury v užším i širším slovasmyslu. Mým školitelem je pan profesor [[http://www.math.muni.cz/~slovak|Jan Slovák]].
+
+
+
+====Mé práce====
+
+
+  Z mé činosti zatím vzešla pouze diplomová práce s názvem [[data/diplomka/con-symp.pdf|Kontaktní a symplektické konexe]].
+
+
+
+
+====Matematické odkazy====
+
+
+  Jelikož při studiu matematiky člověk potřebuje hodně zdrojů informací a jelikož dá někdy docela dost práce tyto informace najít, rozhodl jsem se udělat stránku s odkazy na matematické texty a jiné zdroje informací:
+
+
+
+<ul>
+  <li>[[mat-cz.html" >Matematické texty v českém jazyce]]</li>
+  <li>[[mat-eng.html" >Matematické texty převážně v anglickém jazyce]]</li>
+  <li>[[http://www.ped.muni.cz/wmath/dictionary/czw.html|česko-anglický matematický slovník]]</li>
+  </ul>
+
+
+====Matematické publikování====
+
+
+  Matematické (a nejen matematické) texty je třeba nějakým způsobem psát. Existuje mnoho způsobů zápisu a publikace matematických textů, od těch nejprimitivnějších - psaní rukou, psaní na psacím stroji, přes pokročilejší - MS Word, OpenOffice, ale snad nejrozšířenější a nejlepší je přes program [[http://www.cstug.cz|TeX]]. Výstup tohoto profgramu jsou soubory DVI, PS a PDF, které jsou velice dobře přenositelné. Na internetu lze sehnat mnoho manuálů a příruček ke psaní v TeXu, hodně odkazů je na stránkách [[http://www.math.muni.cz/~plch/vyuka/tex/tex.html|p. Plcha]], 
+
+
+
+
+====Matematické programy====
+
+
+Při matematické činnosti mnohdy pomůže spolupráce člověka s počítačem. Jelikož nenosím stále všechny programové příkazy v hlavě, vytvořil jsem takový malý [[maple.html|návod k programu MAPLE]] a malý [[matlab.html|návod k programu MATLAB]]
+
+
+
+====Vyuka:====
+<ul>
+      <li>[[mb101.html|MB101 - Matematika I]] - cvičení podzim 2005 a podzim 2004</li>
+      <li>[[mb103.html|MB103 - Matematika III]] - cvičení podzim 2005</li>
+      <li>[[mb003.html|MB003 - Lineární algebra a geometrie I]] - cvičení jaro 2005</li>
+      <li>[[mb102.html|MB102 - Matematika II]] - cvičení jaro 2005</li>
+      </ul>
+
+   

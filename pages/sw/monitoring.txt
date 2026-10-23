@@ -1,0 +1,12 @@
+
+
+======Monitoring======
+
+    [[itm.html|ITM - IBM Tivoli Monitoring]]
+    [[nagios.html|Nagios]]
+    [[hpom.html|HPOM]]
+    ELK Stack - Monitoring zalozeny na Elasicsearch - prohledavaci sluzba, sberac udalosti (logu, .. (logstash,...)) a analyze - Kibana\\
+    BMC Patrol
+    Xymon
+
+   

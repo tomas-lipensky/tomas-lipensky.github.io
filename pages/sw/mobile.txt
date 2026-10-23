@@ -1,0 +1,40 @@
+App Center ... platforma pro mobilní aplikace - repozitář, testování atd\\
+
+=== Firebase ===
+''export GOOGLE_APPLICATION_CREDENTIALS=/root/a.json'' ... cesta k JSON autentifikačnímu souboru\\
+''firebase projects:list --debug'' ... seznam projeků, kam se identita dostane\\
+''firebase -P projekt-aaa apps:list'' ... seznam aplikací v projektu projekt-aaa\\
+
+==== iPhone aplikace ====
+[[https://developer.apple.com/account/resources/identifiers/list]] ... senzam zaregistrovaných aplikací a jejích Bundle ID\\
+
+=== Cocoapod ===
+manažer závislostí pro Swift a Objective-C Cocoa projekty (pro Xcode projekty)
+
+''sudo gem install cocoapods'' ... nainstaluje Cocoapods\\
+Podfile ... konfigurační soubor pro Cocoapods, obsahuje požadované knihovny z cocoapods.org, 
+''pod --version'' ... verze \\
+''pod install'' ... nainstaluje závislosti\\
+open XYZ.xcworkspace ... spustí XCode\\
+
+=== IPA balíčky ===
+jsou zabalené zip soubory. Chce li se člověk podívat do metainformací, rozbalí zip, a v adresáři payload klikne v MacOS na aplikační balíček pravým tlačítkem a zvolí 'Show Package Contents', kde se podívá na Info.plist
+
+''security cms -D -i PROFIL.mobileprovision'' ... prevede mobileversion binarni verzi profilu do plist formatu\\
+''codesign -d --entitlements :- "Payload/DigitalOpco.app"''\\
+
+''sudo xcode-select -s /Applications/Xcode.app/Contents/Developer'' ... nastavi xcode cestu na adresář s Xcode\\
+''xcodebuild -version'' ... build aplikace\\
+''xcodebuild -list -project PROJEKT.xcodepro''j ... Informace o projektu - targety, schemata atd\\
+''xcodebuild -list -workspace VFCZDigitalOpco.xcworkspace'' ... Informace o workspacu - targety, schemata atd\\
+''xcpretty''\\
+
+
+''PlistBuddy'' ... prace s plist souborem - čtení a úprava\\
+''PlistBuddy -c "Print :CFBundleVersion" ./Info.plist'' ... přečte hodnotu CFBundleVersion\\
+''PlistBuddy -c "Set :CFBundleVersion 15" ./Info.plist'' ... Nastaví hodnotu CFBundleVersion\\
+''/usr/libexec/PlistBuddy -c 'Print :UUID' /dev/stdin <<< $(security cms -D -i VodafoneOne_AppStore.mobileprovision)'' ... zobrazí UUID z mobileprovision profilu\\
+
+=== altool ===
+''altool --validate-app -f SOUBOR.ipa -u UZIVATEL -p HESLO -t ios'' ... zvaliduje soubor\\
+''altool --upload-package SOUBOR.ipa -u UZIVATEL -p HESLO -t ios --bundle-id nazev.id.balicku --bundle-version 36 --bundle-short-version-string 1.0.1 --apple-id 123456'' ... nahraje balíček do TestFlight\\

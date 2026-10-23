@@ -1,0 +1,235 @@
+# ESX
+
+## Obsah:
+
+[Externi odkazy](#link)  
+[Klient - LPAR](#lpar)  
+[HMC](#hmc)  
+[VIOS - Virtual I/O Server](#vios)  
+
+## Externi odkazy
+
+[virtuallyGhetto](https://www.virtuallyghetto.com/kickstart) ... vyborne stranky o automatizaci VMware infrastruktury (William Lam)  
+[vCenter](https://www.vmware.com/cz/products/vcenter-server.html)  
+[vCenter Server Appliance](https://docs.vmware.com/en/VMware-vSphere/6.5/com.vmware.vsphere.vcsa.doc/GUID-223C2821-BD98-4C7A-936B-7DBE96291BA4.html) - vCenter na Linuxu - dedikovany linux + PostgreSQL + vCenter SA jako Linux alternativa k vCenteru  
+[PowerCLI](https://www.powershellgallery.com/packages/VMware.PowerCLI/10.0.0.7895300) - Rozsireni PowerShellu pro administraci vCentera (i pro [Linux](https://virtualizationreview.com/articles/2017/06/01/how-to-install-and-use-powershell-and-powercli-on-linux.aspx))  
+
+## Start/stop/status/info
+
+vim-cmd vmsvc/getallvms ... Seznam virtualnich masin (VM), jejich VMID  
+vim-cmd vmsvc/get.config 3 ... Vypis konfigurace 3. VM  
+vim-cmd solo/registervm /vmfs/volumes/534d2847-a2/POCITAC1.vmx ... registrace nove VM  
+vim-cmd vmsvc/power.on 5 ... start virtualni masiny  
+
+## Status/Info/Logy
+
+vmware -v ... verze ESX  
+
+### URL
+
+https://hostname:port/vsphere-client/ ... vCenter (port napr. 9443)  
+https://hostname/ ... ESX  
+
+### Disky, VMKF oddilu
+
+ls /vmfs/devices/disks/  
+esxcfg-scsidevs -l | grep "Console Device:" ... seznam pouzitych disku  
+esxcli system boot device get ... vypise bootovaci disk  
+esxcli storage core path list ... cesty ke storage  
+vmkfstools -P "/vmfs/volumes/DatastoreName" ... informace na kterem disku je vany volume  
+partedUtil get "/vmfs/devices/disks/mpx.vmhba0:C0:T0:L0" ... informace o disku  
+partedUtil getptbl "/vmfs/devices/disks/DeviceName" ... ukaze jednotlive oddily na disku  
+partedUtil resize "/vmfs/devices/disks/mpx.vmhba0:C0:T0:L0" 3 10229760 40000000 ... rozsireni  
+partedUtil fixGpt ... oprave GPT  
+vmkfstools --growfs "/vmfs/devices/disks/device:partition" "/vmfs/devices/disks/device:partition" ... rozsireni volume  
+ fdisk -u /vmfs/devices/disks/mpx.vmhba0:C0:T0:L0 ... ukaze informace o partition  
+vmkfstools -V ... refresh VMKF volumes  
+
+## VMDK - diskove soubory
+
+esxcfg-module multiextent ... nacte modul pro spojovani vicecetnych diskovych souboru  
+vmkfstools -i BigDataSolutions_Base-cl5.vmdk BigDataSolutions_Base-cl5-all.vmdk -d thin ... spoji vicesouborovy diskovy soubor  
+vmkfstools -i a.vmdk b.vmdk ... naklonuje vmdk  
+vmkfstools -c 2048m testdisk.vmdk ... vytvori novy disk device  
+vmkfstools -X 6G testdisk.vmdk ... rozsiri existujici disk device  
+mkfstools -i testdisk.vmdk testclone.vmdk -d thin ... naklonuje disk (bytvori kopii)  
+vmkfstools -U testdisk.vmdk ... smaze existujici disk  
+vmkfstools -E testclone.vmdk test.vmdk ... prejmenuje disk  
+
+<a name="snapshot|]]
+### Snapshoty, ESXv5
+
+vim-cmd vmsvc/get.snapshotinfo 3 ... informate o snapshotu  
+vim-cmd vmsvc/snapshot.get 3 ... informace o snapshotu pro vmid=3  
+vim-cmd vmsvc/snapshot.create CH50079753 desc no ... vytvoreni snapshotu  
+vim-cmd vmsvc/power.getstate 3 ... zjisti jesti je VM3 zapnuta  
+vim-cmd vmsvc/snapshot.removeall 10 ... smaze vsechny spapshoty pro VM10  
+## Snapshoty, ESXv4.1-
+
+vmware-cmd /vmfs/volumes/47ecbe04-acfca740-564c-001a4be960e0/VMname/VMname.vmx createsnapshot name desc 0 0  
+
+### Licence
+
+vim-cmd vimsvc/license --show  
+vim-cmd vimsvc/license --set XXXXX-XXXXX-XXXXX-XXXXX-XXX11  
+
+### Sitove nastaveni
+
+esxcli network firewall set --enabled false ... vypne firewall (jako sevice iptables stop)  
+esxcli network ip connection list ... seznam spojeni (jako netstat -an)  
+
+### Utility, reporty atd
+
+[RVTools](http://www.robware.net/rvtools/) - Windows .NET2 aplikace na extrakci
+dat z vCentra nebo ESX o virtualnich masinach, siti atd.  
+
+### Ladeni Vykonu, performace tuning
+
+[Doporucene nastaveni RHEL na virtualizacich](https://access.redhat.com/solutions/5427)  
+[Nastaveni VMware pro optimalizaci IO vykonu](http://www.raxco.com/user_data/white_papers/Getting_More_VMware_Performance_from_Fewer_IO_Requests.pdf)  
+
+### ovftool
+
+[OVFtool](https://www.vmware.com/support/developer/ovf/ovf10/ovftool_10_userguide.pdf) - prikazovy nastroj na export/import VM/templatu, prohlizeni/konverzi OVF/OVA/VMX/VMDK a jine aktivity  
+ovftool [--help debug](https://www.virtuallyghetto.com/2013/08/quick-tip-useful-ovftool-debugging.html) ... napoveda  
+
+### PowerShell vCenter PowerCLI
+
+Add-PSSnapin VMware.VimAutomation.Core ... aktivuje modul pro vCenter  
+Connect-VIServer localhost -User uzivatel -Password heslo ... prihlasi se do vcentra  
+Get-VM volume-e4544d03-fd0d-4e25-9600-39c2b9d2c6a6 | [Get-HardDisk](https://www.vmware.com/support/developer/PowerCLI/PowerCLI41U1/html/Get-HardDisk.html) | Format-List ... seznam disku dane VM  
+Get-VM -name server | select -expandProperty ExtensionData ... ukaze rozsirujici udaje o VM  
+Get-VM volume-e4544d03-fd0d-4e25-9600-39c2b9d2c6a6 | Get-Datacenter ... ukaze v jakem datacentru je VM  
+Get-VM SERVER | get-cluster ... ukaze v jakem clusteru je SERVER  
+Get-VM SERVER | get-datastore ... ukaze v jakem datastore je SERVER  
+Get-VM volume-e4544d03-fd0d-4e25-9600-39c2b9d2c6a6 | Get-View ... informace o VM  
+Get-VM SERVER | %{(Get-View $_.Id).config.uuid}  ... UUID  
+Get-VM SERVER | %{(Get-View $_.Id).config.Name}  ... Jmeno viditelne v klientovi a WEB UI  
+Get-VM SERVER | Suspend-VM ... uspi VM  
+Get-VM SERVER | Stop-VM ... vypne VM  
+Get-VM SERVER | Start-VM ... nastartuje VM  
+Get-VM SERVER | Move-VM -Destination (Get-VMHost MujHostServer) ... presune VM na jiny ESX  
+Get-VM SERVER | Move-VM -datastore (Get-datastore “MujDatastore“) ... [svMotion](http://www.virtu-al.net/2009/06/11/storage-vmotion-the-powercli-way/) - presun na jidy datastore (je potreba VMware tool na VM)  
+[Move-VM](https://pubs.vmware.com/vsphere-51/index.jsp?topic=%2Fcom.vmware.powercli.cmdletref.doc%2FMove-VM.html) -VM (Get-VM -Name MyVM)-Destination (Get-Folder -Name "Vyvoj") ... presun VM do jine vCenter slozky  
+Move-VM -VM (Get-VM -Name MyVM)-Destination (Get-ResourcePool -Name “Produkce“) ... presun VM do jineho resource poolu  
+Get-VM SERVER | Remove-VM ... Smaze VM  
+Get-Cluster ... seznam clusteru  
+Get-Inventory ... inventar vsech vCenter objektu (VM, Templaty, Resourcepoolu, clustery, ..)  
+Get-ScsiController -vm $a | fl  
+Get-VMHost ... seznam vsech hostovacich masin  
+Get-Datastore -VMHost mo2vsfx ... vylistuje datastory  
+Get-DatastoreCluster ... vylistuje data store clustery  
+[[https://www.vmware.com/support/developer/PowerCLI/PowerCLI41U1/html/Get-ResourcePool.html|
+Get-ResourcePool]] ... seznam Resource poolu (skupiny v Clusteru s danym mnozstvim CPU a MEM)  
+get-vm SERVER | new-snapshot -Name "Demo" -Description "popis" -Quiesce -Memory ... poridi kompletni snapshot (i pameti)  
+get-snapshot -vm SERVER ... seznam snapshotu  
+set-vm -VM SERVER -Snapshot $snap -whatif ... restore ze snapshoutu  
+get-snapshot -name Demo -VM SERVER | remove-snapshot ... smazani shanpshotu  
+
+Get-PowerCLIVersion ... verze PowerCLI  
+Get-PSSnapin -name VMware.VimAutomation.Storage ... Aktivuje PowerCLI pro Storage  
+Get-PSSnapin -name VMware* | ft ... vylistuje VMware spapiny  
+C:\Program Files (x86)\VMware\Infrastructure\vSphere PowerCLI\Modules ... Snapiny PowerCLI  
+Get-Module -ListAvailable ... ukaze pouzitelne snapiny v aktualnim adresari  
+[Environment]::GetEnvironmentVariable("PSModulePath") ... cesta ke znamym snapinum  
+get-vm a | get-harddisk ... (VMware.VimAutomation.ViCore.Impl.V1.VirtualDevice.FlatHardDiskImpl)  
+
+### Import/export VM
+
+Set-Template $template -ToVM -confirm:$False .. prevede Template na VM  
+Get-VM -Name "test VM" | Export-VApp -Destination "C:\Template\" -Format Ova ... ulozi vypnute VM do souboru<< OVA  
+Get-VM -Name $template | Set-VM -ToTemplate -Confirm:$false ... prevede VM na Template  
+
+### Disky
+
+[Get-HardDisk](https://www.vmware.com/support/developer/PowerCLI/PowerCLI41U1/html/Get-HardDisk.html) -VM VM ... vylistuje disky virtualni masiny  
+Get-HardDisk -Datastore "Storage1" -DatastorePath "[Storage1] myVM/" ... vylistuje disky z datastoru v ceste  
+[Set-HardDisk](https://www.vmware.com/support/developer/PowerCLI/PowerCLI41U1/html/Set-HardDisk.html) -HardDisk $harddisk -Datastore $datastore ... presune disk na jiny datastore  
+Set-HardDisk -HardDisk $harddisk -CapacityKB ... rozsiri disk na pozadovanou velikost  
+VMware.VimAutomation.Storage ... Snapin pro praci se storage policy atd  
+[Get-SpbmStoragePolicy](http://pubs.vmware.com/vsphere-5-5/index.jsp?topic=%2Fcom.vmware.powercli.cmdletref.doc%2FGet-SpbmStoragePolicy.html) -Name "MojePolicy" ... Vypise storage policy MojePolicy  
+
+#### Namountovani Data storu jako Windows disk
+
+$vmxPath = $vm.ExtensionData.Config.Files.VmPathName ... extrakce cesty k VMX soubory pro VM $vm  
+$ds = Get-Datastore -Name $vmxPath.Split(']')[0].TrimStart('[') ... Etraktuje nazev DS  
+New-PSDrive -Name DS -PSProvider VimDatastore -Root '\' -Location $ds > $null ... namountuje DS  
+cd DS:/$($vm.Name)/  
+C:  
+Remove-PSDrive -Name DS -Confirm:$false ... odmountovani  
+
+### VMware VI SDK API
+
+Specifikace objektu: [VirtualDiskManager]( http///pubs.vmware.com/vi-sdk/visdk250/ReferenceGuide/vim.VirtualDiskManager.html )
+[Datacenter](http://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/vim.Datacenter.html),
+[HostSystem](http://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/vim.HostSystem.html),
+[HardwareInfo](http://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/vim.host.HardwareInfo.html),
+[VirtualMachine](http://www.vmware.com/support/developer/vc-sdk/visdk400pubs/ReferenceGuide/vim.VirtualMachine.html), ...  
+
+[sdk40programmingguide.pdf]( https///www.vmware.com/support/developer/vc-sdk/visdk400pubs/sdk40programmingguide.pdf)
+[vsdk_prog_guide_5_5.pd](http://pubs.vmware.com/vsphere-5-5/topic/com.vmware.ICbase/PDF/vsdk_prog_guide_5_5.pdf )
+
+Knihovny implementujici API:
+[Perl](https://gist.github.com/mintsoft/35859c8ed3ce33bfe9d4), [rbvmomi](https://gist.github.com/mintsoft/35859c8ed3ce33bfe9d4), [pyvmomi](https://github.com/vmware/pyvmomi), [Perlova ukazka](https://gist.github.com/mintsoft/35859c8ed3ce33bfe9d4), [esxi-control v Perlu](https://github.com/seblucas/www-blog/blob/master/content/blog/esxi-control.md), [vSphere VI Java API](http://pierrelx.com/19/), [2, [[https://github.com/chef-partners/knife-vsphere|knife implementace SDK api](http://vijava.sourceforge.net/doc/getstarted/tutorial.htm)]]
+
+curl  https://IP/sdk/vimServiceVersions.xml ... podporovane verze SDK API  
+
+Bash prototyp:
+
+```
+cat run.sh
+curl -c c.cookies -b c.cookies -s -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' --header 'Connection: Keep-Alive' --keepalive-time 5 --data @t_session.xml https://${VCENTER_IP}/sdk/
+
+POST_DATA=`cat t_login.xml | sed -e "s:#USER:$VUSER:" -e "s:#PASSWD:$VPASSWD:"`
+
+curl -c c.cookies -b c.cookies -k -s --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' --data "$POST_DATA" https://${VCENTER_IP}/sdk
+
+
+ROOT_FOLDER=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data @t_session.xml https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='rootFolder'])" -`
+
+POST_DATA=`cat t_folder_child.xml | sed -e "s:#FOLDER:$ROOT_FOLDER:"`
+
+DC=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='ManagedObjectReference'])" -`
+
+POST_DATA=`cat t_datacenter_name.xml | sed -e "s:#DC:$DC:"`
+
+DC_NAME=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='val'])" - `
+
+POST_DATA=`cat t_datacenter_vmfolder.xml | sed -e "s:#DC:$DC:"`
+
+DC_VMFOLDER=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='val'])" - `
+
+POST_DATA=`cat t_folder_child.xml | sed -e "s:#FOLDER:$DC_VMFOLDER:"`
+
+curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk > a.xml
+
+NUMBER_OF=`cat a.xml | xmllint --xpath "count(//*[name()='ManagedObjectReference'] -`
+
+for i in `seq 1 $NUMBER_OF`; do
+  ENTRY_NAME=`cat a.xml | xmllint --xpath "string(//*[name()='ManagedObjectReference'][$i])" -`
+  ENTRY_TYPE=`cat a.xml | xmllint --xpath "string(//*[name()='ManagedObjectReference'][$i]/@type)" -`
+  echo $ENTRY_NAME $ENTRY_TYPE
+  if test "$ENTRY_TYPE" = "VirtualMachine"; then
+    POST_DATA=`cat t_vm_name.xml | sed -e "s:#VM:$VM:"`
+    VM_NAME=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='val'])" - ` 
+    POST_DATA=`cat t_vm_datastore.xml | sed -e "s:#VM:$VM:"`
+    VM_DATASTORE=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='ManagedObjectReference'])" - `
+    POST_DATA=`cat t_datastore_summary.xml | sed -e "s:#DS:$VM_DATASTORE:"`
+    curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data "$POST_DATA" https://${VCENTER_IP}/sdk > c.xml
+    DS_NAME=`cat c.xml | xmllint --xpath "string(//*[name()='name'])" -`
+    DS_URL=`cat c.xml | xmllint --xpath "string(//*[name()='url'])" -`
+    DS_CAPACITY=`cat c.xml | xmllint --xpath "string(//*[name()='capacity'])" -`
+    DS_FREESPACE=`cat c.xml | xmllint --xpath "string(//*[name()='freeSpace'])" -`
+    DS_UNCOMMITED=`cat c.xml | xmllint --xpath "string(//*[name()='uncommitted'])" -`
+    DS_MULTIPLEHOSTS=`cat c.xml | xmllint --xpath "string(//*[name()='multipleHostAccess'])" -`
+    DS_TYPE=`cat c.xml | xmllint --xpath "string(//*[name()='type'])" -`
+    echo $VM_NAME $VM_DATASTORE
+  fi
+done
+
+
+# list of datastores:
+# curl -c c.cookies -b c.cookies -v -k 'https://${VCENTER_IP}/folder?dcPath=DC'
+# curl -c c.cookies -b c.cookies -v -k 'https://${VCENTER_IP}/folder?dcPath=CD&dsName=DS_CLUSTER_1'
+# curl -c c.cookies -b c.cookies -v -k 'https://${VCENTER_IP}/folder/server0116?dcPath=DC&dsName=DS%255fCLUSTER%255f1'
+```

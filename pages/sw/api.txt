@@ -1,0 +1,18 @@
+====== OpenAPI ======
+[[https://www.openapis.org|OpenAPI]] - take znamy jako Swagger - strojove citelna specifikace API\\
+TM forum API - TM (TeleMarketing) forum - sdruceni telco firem, ktere tvori standardy, v ruznych oblastech, treba v API\\
+
+=== Příklady ===
+[[https://petstore3.swagger.io/]] ... dummy eshop, včetně swaggeru\\
+[[https://petstore3.swagger.io/api/v3/openapi.json]] ... OpenAPI definice\\
+[[https://apis.guru/]] ... ukázky openapi, i na stažení\\
+[[https://cloud.ibm.com/apidocs/cos/cos-compatibility.json]] ... OpenAPI na ibm.com\\
+
+
+==== služby ====
+ApiGee\\
+Amazon API Gateway\\
+Azure API Management\\
+Apache APISIX\\
+Kong Gateway\\
+tyk\\

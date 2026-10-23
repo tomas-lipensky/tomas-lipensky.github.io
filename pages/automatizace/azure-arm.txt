@@ -1,0 +1,9 @@
+[[http://armviz.io/]] - graficke zobrazeni ARM sablony + editor\\
+[[https://docs.microsoft.com/en-us/azure/templates/|ARM template]]\\
+[[https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/template-functions-string|ARM - funkce pro retezce znaku]]\\
+[[https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/copy-resources|for-each look]] aneb copy\\
+[[https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-resource-group|Nested sablony]] aneb deploy do jine RG, subskripce atd.\\
+
+====Prikazy====
+az deployment group what-if %%--%%resource-group rginappserviceSTGEA %%--%%name inappnotificationstgea-blob-privlink %%--%%template-file ../../ArmTemplates/private_link.json %%--%%parameters @inappnotificationstgea-blob-privlink.json ... testove spusteni deploye, napise, co chce udelat\\
+az deployment group create %%--%%resource-group rginappserviceSTGEA %%--%%name inappnotificationstgea-blob-privlink %%--%%template-file ../../ArmTemplates/private_link.json --parameters @inappnotificationstgea-blob-privlink.json ... provede deployment\\

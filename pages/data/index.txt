@@ -1,0 +1,93 @@
+     
+====Architektura====
+
+
+Obecne kazda aplikace pro nakladani s daty (ETL - extract transform load, business inteligenci, master data management, ...) se sklada z mnoha komponenet, pricemz jedna z komponent je:
+
+
+[[../web/|aplikacni server]] a aplikace v nem, ktera zajistuje webovy management
+
+
+a dalsi komponenty, ktere provadi primo manipulaci s daty.
+
+
+====Odkazy====
+[[http://learning2.atlanta.ibm.com/qpg/university.nsf/analytics/BDA-Lobby|Big Data and Analytics University]] na learning2.atlanta.ibm.com\\
+[[http://www.ibmbigdatahub.com/|IBM BigData & Analytics Hub]]\\
+
+====ETL nastroje (Extract Transform Load====
+<dl>
+<dd>[[datastage.html|Infosphere Datastage]] (Infosphere Information Server)</dd>
+<dd>[[owp.html|Oracle Warehouse Builder]]</dd>
+<dd>[[odi.html|Oracle Data Integrator]]</dd>
+<dd>Informatica PowerCenter Express - https://community.informatica.com/solutions/pcexpress</dd> 
+<dd>[[informatica.html|Informatica PowerCenter]] - http://etl-tools.info/informatica/components.html http://etl-tools.info/informatica/tutorial.html</dd>
+<dd>[[https://www.talend.com/products/talend-open-studio/|TalenD ETL]] - OpenSource ETL</dd>
+</dl>
+
+====Kontinualni prisun dat - zpracovani====
+[[steams.html|IBM Steams]]\\
+
+====Business Inteligence, <a fref="http://www.ibm.com/analytics/us/en/index.html|business analytics]] - reporting====
+<dl>
+<dd>[[cognos.html|IBM Cognos BI]] - [[http://en.wikipedia.org/wiki/Business_intelligence|Business Intelligence]]  - Reporty, analyzy dashboardy a skorovani z dat</dd>
+<dd>[[tm1.html|IBM Cognos TM1]]</dd>
+<dd>[[http://www.ibm.com/software/products/us/en/cogninsi|IBM Cognos Insight]] - Analyzy a vizualizace a sdileni dat</dd>
+<dd>[[http://www-01.ibm.com/software/analytics/cognos/express/|IBM Cognos Express]]</dd>
+<dd>IBM SPSS</dd>
+<dd>[[http://www-01.ibm.com/software/analytics/spss/products/modeler/|IBM SPPS Modeler]] - prediktivni analyza</dd>
+<dd>[[http://www-01.ibm.com/software/analytics/spss/products/data-collection/|IBM SPPS Data Collection]] - </dd>
+<dd>[[http://www-01.ibm.com/software/analytics/spss/products/statistics/|IBM SPSS Statistics]] - Statistiky na porozumeni dat a trendu</dd>
+<dd>[[http://www.ibm.com/software/products/us/en/spss-collaboration|IBM SPSS Collaboration and Deployment Services]] - automatizace analytickeho procesu a bezpecne sdileni</dd>
+<dd>[[http://www.ibm.com/software/products/us/en/predictive-maintenance-quality|IBM Predictive Maintenance and Quality]]</dd>
+<dd>[[http://www-01.ibm.com/software/uk/analytics/algorithmics/|IBM Algorithmics software]] - financial analytics tool for decisions based on risk management</dd> 
+<dd>[[http://www-01.ibm.com/software/uk/analytics/openpages/|IBM OpenPages]] - tool for risk and compliance management</dd>
+<dd>[[http://www-03.ibm.com/software/products/en/qmf|DB2 Query Management Facility]]</dd>
+<dd>Microstrategy</dd>
+<dd>[[pentaho.html|Pentaho]]</dd>
+<dd>[[obi.html|Oracle BI]]</dd>
+<dd>[[obid.html|Oracle Business Intelligence Discoverer]] (Oracle Discoverer)</dd>
+<dd>[[hyperion.html|Oracle Hyperion]] ... [[http://en.wikipedia.org/wiki/Business_intelligence|Business Intelligence ]]- rozhodavaci software a mereni vykonu podniku</dd>
+</dl>
+
+====Master data management====
+<dl>
+<dd>[[mdm.html|InfoSphere MDM CS]] - Master Data Management Colaboration Server (Colaboration Edition), Drive [[http://www.ibm.com/developerworks/data/tutorials/dm0608lee/|WebSphere Product Center]] nebo PIM</dd>
+<dd>Physical MDM - drive Transactional MDM, [[http://www-01.ibm.com/software/data/masterdata/customer/|WebSphere Customer Center]] -  <!--a href="wcc.html"-->WCC<!--/a-->, MDM Server</dd>
+<dd>Virtual MDM - drive MDM Hub, nebo MDS - Master Data Service</dd>
+<dd>[[informaticamdm.html|]]Informatica MDM</dd>
+</dl>
+
+====Data Explorers====
+<dl>
+<dd>[[dataexplorer.html|IBM Watson Explorer]] - IBM InfoSphere Data Explorer ... Aplikace na prochazeni dat - objevuje, spojuje, nabizi a umoznuje prohledavani dat</dd>
+<dd>[[https://www.quora.com/What-is-the-ELK-stack|ELK (Elastic stack)]] - Log management platforma - prijimani logu a eventu, hledani v logach, analyza logu (bezpecnost, perfomance, ..). Vice na [[https://qbox.io/blog/welcome-to-the-elk-stack-elasticsearch-logstash-kibana|qbox]]</dd>
+<dd>[[https://en.wikipedia.org/wiki/Elasticsearch|Elasticsearch]] ... vyhledavaci engine postaveny na [[https://en.wikipedia.org/wiki/Apache_Lucene|Apache Lucene]]</dd>
+<dd>[[https://en.wikipedia.org/wiki/Kibana|Kibana]] ... vizualizacni plugin do Elasticsearch</dd>
+<dd>[[https://wikitech.wikimedia.org/wiki/Logstash|Logstash]] ... Nastroj na managovani udalosti a logu</dd>
+<dd>[[https://en.wikipedia.org/wiki/Apache_Lucene|Apache Lucene]] ... java knihovna na ziskavani informaci</dd>
+<dd>[[https://en.wikipedia.org/wiki/Apache_Solr|Apache Soir]] ... Vyhledavaci engine postaveni na [[https://en.wikipedia.org/wiki/Apache_Lucene|Apache Lucene]]</dd>
+<dd>[[https://en.wikipedia.org/wiki/Apache_Kafka|Apache Kafka]] ... stream processing platforma (streamy jako logy, audio, video, ...) - [[https://www.tutorialspoint.com/apache_kafka/apache_kafka_integration_spark.htm|pekny tutorial]]</dd>
+<dd>[[https://en.wikipedia.org/wiki/Apache_Spark|Apache Spark]] ... cluster framework pouzitelny napr. s Kafka. Komponenty - Spark SQL, Spark streaming, GraphX, MLib Machine Learning</dd>
+</dl>
+
+
+====Nastroje na rizeni rustu dat====
+<dd>IBM InfoSphere Optim Grow ... Aplikace na spravu politiky rustu dat - presouvani dat na levnejsi media, zalohovani, mazani atd.</dd>
+
+====Nastroje na kryptovani dat====
+<dd>[[gde.html|Infosphere Guardium Data Encryption - GDE]] ... Nastroj na enkrypci a zpristupneni dat na zaklade politik</dd>
+
+
+====Big Data====
+<dl>
+<dd>Netezza</dd>
+<dd>[[../db/td|Teradata Warehouse]] - datovy sklad pro strukturovana data v zadu peta bajtu</dd>
+<dd>Hadoop ... clusterovy filesystem - spojovani datovych ulozist na tisicovkach nodu - datove uloziste na nestrukturovana data</dd>
+<dd>[[http://dmg.org/pfa/docs/motivation/|FPA]] ... Portable Format for Analytics ... metoda k vyuziti hadoop a jinych nastroju na analyzu dat</dd>
+<dd>Aster DB - discovery platvorm - reseni na polostrukturovana data - ukladani, transformace nestrukturovanycn na polostrukturovana</dd>
+<dd>Hortonworks - Nahravani nestrukturovany dat pomoci Aster do datoveho skladu</dd>
+</dl>
+
+
+   

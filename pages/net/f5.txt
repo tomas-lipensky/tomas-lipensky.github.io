@@ -1,0 +1,30 @@
+
+[[https://support.f5.com/kb/en-us/products/big-ip_ltm/manuals/product/ltm-implementations-12-0-0/22.html|nastaveni http/2]]\\
+LTM - Local Traffic Manager - komponenta na load balancing, WAF
+
+====iRules===
+[[https://devcentral.f5.com/s/articles/irules-101-02-if-and-expressions|Logicke operatory pro iRules]] a jine temata\\
+[[https://regex101.com/]] ... online testovani regularnich vyrazu\\
+
+===Vestavene promenne===
+[TCP::local_port]\\
+[HTTP::uri]\\
+[IP::addr [IP::client_addr]]\\
+[HTTP::header Content-Length]\\
+
+===tmsh prikazy===
+show ltm virtual ... seznam virtualnich serveru a statistiky\\
+tmsh show ltm virtual all-properties \\
+list ltm virtual ... seznam a nastaveni virtualnich serveru\\
+list ltm node @^10\..*\.44\.\\
+list ltm rule\\
+list pool monitor\\
+lis pool\\
+list ltm data-group\\
+list ltm node\\
+list /net vlan all-properties\\
+list / net vlan\\
+show interface\\
+delete / ltm pool my_pool\\
+help / ltm pool\\
+list virtual-address\\

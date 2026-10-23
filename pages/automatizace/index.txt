@@ -1,0 +1,147 @@
+     
+====Architektura====
+
+Automatizacni nastroje jsou aplikace, ktere slouzi k automaticke opakujici se cinnosti k ovladani jinych komponent. Obsahuji vetsinou nasledujici vrstvy:
+
+<ul>
+<li>Prezentacni - webovy portal - aplikaci na aplikacnim serveru ktera slouzi k manazovani automatizace</li>
+<li>Vyvojove prostredi (IDE) k definovani automatizaci</li>
+<li>Automatizacni jadro (engine) vykonavajici automatizaci</li>
+</ul>
+
+
+====DevOps====
+
+Development &amp; Operations - nastroje na pruzny, rychly a bezpecny vyvoj a aplikaci na produkci.
+
+
+
+
+[[http://w3.devops.ibm.com/devops/#/toolchain/onboard|Objednani poskytovani u IBM: ]]GitHub, Gerrit, Jenkins, uDeploy, Slack, Mural\\
+[[http://w3.devops.ibm.com/devops/#/toolchain/advanced/ghe|GitHub enterprise]] ... 150$/osoba/rok - portal - SCM, code review, trackovani problemu, publikace a integrace\\
+Github free ... volna verze\\
+Gerit ... volny webovy nastroj na spolupraci vyvojaru. Vyvojari vidi upravy jinych a mohou je schvalit/zamitnout. Spoluprace s SCM\\
+Slack ... 150$/osoba/rok - komunikacni nastroj se spolupracovniky s mnoha moznostmi\\
+Mural ... Vizualni organizace myslenek.
+
+
+
+====Artifact repository====
+[[https://archiva.apache.org/index.cgi|Apache Archiva]]\\
+Nexus repository manager\\
+JFrog Artifactory\\
+
+====Automatizace integraci a nasazovani (Continues integration = CI, Continuous Deployment = CD)====
+
+
+[[urbancode.html|IBM UrbanCode (AnthillPro)]]\\
+[[jenkins.html|Jenkins]] / Travis\\
+[[vsts.html|VSTS / Azure Devops]] ... Visual Studio Team Services\\
+[[octopus.html|Octopus]] ... CD od Microsoft\\
+Buildbot — Python reseni na automatizaci kompilacnich/test cyklu k validaci zmen v kodu\\
+[[https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software|Porovnani CI nastroju]]\\
+
+
+
+====Automatizace konfiguraci a operaci, management cloudu====
+
+
+Pure AS ... Kompletni reseni HW+SW pro vytvareni a spravu aplikacnich serveru a aplikaci (a samozrejme nosnych virtualnich serveru)\\
+Pure DB ... Kompletni reseni HW+SW pro vytvareni a spravu databazi (a samozrejme nosnych virtualnich serveru)\\
+TPM - Tivoli Provisioning Manager ... Portal pro automatizaci instalaci serveru a aplikaci (TPM for Software, TPM for Images System x Edition, TPM Express for Inventory, TPM for Software distribution, IBM SmartCloud Cost Management/Patch management, IBM Clout Management Suite for System z\\
+[[ico.html|ICO - IBM Cloud Orchestrator]]\\
+OpenStack
+
+
+
+====Automatizace instalace====
+cobbler ... reseni automatickou instalaci linuxu\\
+
+
+===Orchestrace provisioningu VM a kontejneru===
+[[vagrant.html|Vagrant]]\\
+[[Kubernetes]]\\
+Boxgrinder\\
+Docker\\
+Hashicorp\\
+
+====Automatizace administrace stanic - planovane ukoly====
+Tivoli Endpoint Manager - BigFix - vzdalene spousteni skriptu (healthchecky, opravy, deploye atd.)\\
+[[http://www.ressoftware.com/uk/product/res-automation-manager/features|RES - automation management]]\\
+
+
+====Configuration management====
+
+
+[[chef.html|Chef]] - Opscode Chef / [[chef-recipe.html|programovani v Chef]]\\
+[[http://en.wikipedia.org/wiki/Puppet_%28software%29|Puppet]]\\
+Ansible\\
+[[dsc.html|DSC]] - MS Desired State Configuration\\
+Salt\\
+Vargant\\
+[[http://spacewalk.redhat.com/|Redhat Spacewalk]]\\
+NuGet a Chocolatey ... balickovaci system a deployment sluzba na automatizace konfigurace Windows\\
+[[https://en.wikipedia.org/wiki/Comparison_of_open-source_configuration_management_software|Porovnani CM nastroju]]\\
+
+
+
+
+====Automatizace na zaklade udalosti====
+
+Automatizace vyvolane na zaklade jistych udalosti (eventu), jako treba udalosti v monitoringu - incidenty.
+
+<P>
+IPSoft\\
+[[http://www-03.ibm.com/software/products/en/tivoli-system-automation|TSA]] - Tivoli System Automation ... reseni pro spravu automatizaci pro operatory - webovy portal nabizejici spousteni automatizaci (HA, performance) na zaklade pravidel\\
+
+
+
+
+=====Cloud=====
+
+
+IaaS - Infrastructure as a Service - automatizace datacentra - virtualni stroje, site\\
+SaaS - Software as a Service - automatizace aplikaci - vytvareni a manazovani aplikaci\\
+PaaS - Platform as a Service - vytvareni aplikacnich reseni z komponent (Napriklad BlueMix)\\
+Private cloud ... intranetovy cloud (Napriklad Pure atd)\\
+Public cloud ... internetovy cloud (Napriklad SoftLayer, Amazon atd)\\
+Hybrid cloud ... hybrid mezi Private a Public\\
+
+
+
+
+====Cloud platformy a abstrakce virtualizaci====
+
+poskytuji management objektu (virtualnich serveru, kontejneru, disku, ...), nacenovani ceny, separuji ucty (projekty) atd.
+
+[[https://wiki.openstack.org/wiki/Main_Page|OpenStack]] ... OpenSource Cloud Computing platforma\\
+[[https://wiki.openstack.org/wiki/Heat|Heat]] ... Orchestracni engine, Heat template (v textove forme)\\
+[[https://openwhisk.apache.org|OpenWhisk]] ... abstrakce virtualizaci bezserverovych kontejneru (Docker)\\
+VMware vSphere\\
+Kubernetes and Containers\\
+[[icp.html|IBM Cloud Private]]\\
+BlueMix Private ... Zjednoduseny BlueMix ve vlastnim datacentru\\
+Azure Stack ... zjednoduseny Azure ve vlastnim datacentru\\
+[[https://www.terraform.io|Terraform]] ... nastroj na managovani konfigurace infrastruktury (pomoci chef, heat, ...)\\
+
+
+====Public cloud====
+[[https://en.wikipedia.org/wiki/Category:Cloud_computing_providers|Prehled poskytovatelu na Wikipedia.org]]\\
+
+
+    [[bluemix.html|BlueMix]] ... IBM Cloud / BlueMix / [[softlayer.html|Softlayer]]\\
+    [[azure.html|Azure]] ... Microsoft Azure\\
+    [[aws.html|AWS]] ... Amazon AWS\\
+    Rackspace\\
+    [[https://www.blueboxcloud.com/products/blue-box-local|IBM Blue Box]] - Private Cloud as a Service - postaveny na OpenStack reseni, Bluemixu - Cloud-like prostredi v zakaznickem datacentru\\
+
+
+
+====Private cloud====
+
+
+[[https://sourceforge.net/p/xcat/wiki/Main_Page/|xCAT]] ... Extreme Cluster/Cloud Administration Toolkit\\
+
+
+
+   

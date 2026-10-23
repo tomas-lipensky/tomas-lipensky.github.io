@@ -1,0 +1,17 @@
+
+    ====csv====
+      q -t -H "SELECT hashed_source_machine,count(*) FROM ./clicks.csv GROUP BY hashed_source_machine" ... Prace s CSV pomoci SQL prikazu\\
+      [[https://github.com/dinedal/textql|textql]] ... dalsi program na SQL dotazovani na CSV\\
+      join -t ','  soubor1 soubor2 -a1 ... spojeni CSV souboru (pravy join)\\
+      [[http://giantdorks.org/alain/bash-and-awk-to-convert-delimited-data-csv-tsv-etc-to-html-tables/|csv2html.sh]] test.csv\\
+      
+    ====json====
+      [[../os/jq.html|jq]] - zobrazeni JSON v citelne forme, selekty a transofromace\\
+      [[https://gist.github.com/dsliberty/3de707bc656cf757a0cb|csv2json.sh]] ... konvertor csv na json\\
+   
+
+    
+   
+
+    
+   

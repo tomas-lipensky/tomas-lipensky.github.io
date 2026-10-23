@@ -1,0 +1,55 @@
+
+======VCS - Veritas Cluster Server======
+
+====Externi odkazy====
+[[http://www.blacksheepnetworks.com/security/resources/veritas-cluster/veritas_cluster.htm|Veritas Cluster Architecture]]\\
+[[http://www.blacksheepnetworks.com/security/resources/veritas-cluster/veritas_cluster_cs.htm|Veritas Cluster Cheat sheet]]\\
+[[http://www.blacksheepnetworks.com/security/resources/veritas-cluster/veritas_cluster_tasks.htm|Veritas Cluster Tasks]]\\
+[[http://www.datadisk.co.uk/html_docs/veritas/veritas_cluster_cs.htm|Veritas Cluster Cheat sheet]]\\
+[[eval.veritas.com/downloads/van/vcs_quickref.pdf|[pdf] - Basic VCS Commands]]\\
+
+====Info o clusteru====
+hastatus -summary ... prehled skupin resourcu, nodu a jejich stav + seznam chybnych resourcu\\
+hares -list ... seznam resourcu\\
+hares -dep RESOURCE ... ukaze zavislosti RESOURCE\\
+hagrp -list ... seznam skupin resourcu - skupin sluzeb\\
+hagrp -display SKUPINA ... vypis parametru skupin sluzeb SKUPINA\\
+hagrp -resources SKUPINA ... ukaze seznam resources skupiny sluzeb SKUPINA\\
+hagrp -state SKUPINA ... ukaze stav skupiny sluzeb SKUPINA\\
+haclus -display .. informace o parametrech clusteru\\
+haclus -value PARAMETR ... ukaze konkretni parametr\\
+hauser -display ... ukaze uzivatele
+hasys -list ... Seznam stavu systemu v clusteru\\
+hasys -state ... Ukaze stav systemu v clusteru\\
+
+====Start/stop clusteru====
+hastart ... spusti cluster\\
+hastart -stale ... spusti cluster a lokalni konfiguraci zkopiruje na "osvedcenou"\\
+hastart -force ... spusti cluster s "osvedcenou" konfiguraci\\
+hastop -local ... zastavi cluster ale necha bezet aplikace\\
+hastop -local -evacuate ... zastavi cluster a prevede sluzby na jiny node\\
+hastop -all -force  ... zastavi cluster na vsech nodech\\
+
+====Operace s Clusterem====
+hares -clear RESOURCE -sys NODE ... vycisteni statusu resourcu RESOURCE na nodu NODE\\
+hagrp -online RESOURCE_GRP -sys NODE ... nastartovani skupiny resourcu RESOURCE_GRP na nodu NODE\\
+hagrp -offline RESOURCE_GRP -sys NODE ... ukonceni skupiny resourcu RESOURCE_GRP na nodu NODE\\
+hagrp -switch SKUPINA -sys NODE ... prehodi skupinu sluzeb SKUPINA na node NODE\\
+hagrp -clear RESOURCE_GRP NODE ... vycisti spatne udalosti vsech spatnych resourcu ve skupine RESOURCE_GRP na nodu NODE\\
+hagrp -enableresources SKUPINA ... povoli resourcy ve SKUPINE\\
+hagrp -disableresources SKUPINA ... zakaze resourcy ve SKUPINE\\
+
+====konfigurace clusteru====
+haclus -modify JMENO_PARAMETRU HODNOTA ... Zmeni hodnotu parametru\\
+hauser -[addupdate|delete] UZIVATEL ... pridani, modifikace, smazani uzivatele\\
+hasys -[add|delete] SYSTEM ... prida/odebere system do/z clusteru\\
+hasys -modify SYSTEM PARAMETR ... modifikuje nastaveni systemu\\
+
+====Konfiguracni soubory clusteru</br>
+/etc/llthosts\\
+/etc/VRTS/conf/config\\
+
+====Logy clusteru====
+/var/adm/messages\\
+
+   

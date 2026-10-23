@@ -1,0 +1,5 @@
+==== Priklady uziti ====
+
+[[https://realpython.com/face-recognition-with-python/|rozpoznani obliceje]]\\
+[[https://medium.com/machine-learning-world/tutorial-making-road-traffic-counting-app-based-on-computer-vision-and-opencv-166937911660|rizeni dopravniho toku]]\\
+[[https://github.com/ad8454/OpenCV-UseCases|automaticke vylepseni obrazku]]\\

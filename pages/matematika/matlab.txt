@@ -1,0 +1,111 @@
+
+
+====Maple====
+
+
+
+
+Volna alternativa k programu Maple je [[http://www.gnu.org/software/octave/|Octave]], ve kterem vsechny zaklady, o kterych zde pisi, funguji stejne, ci podobne, jako v Matlabu. Kromě těchto stránek najdete jistě celou řadu ostatních stranek, se základy ovládání a používání programu Matlab v českém jazyce. Ale třeba Vám budou právě tyto vyhovovat lépe než ty ostatní, jako třeba mě.<br/>
+
+
+<dl>
+<dt><b>Popis kapitoly</b>\\
+<dd>
+Seznam příkazů, které obsahuje. Kliknutím na aktivní popis kapitoly se přemístíte na stránku, která dané téma popisuje.\\
+</dl>
+
+
+
+<dl>
+<dt><b>Základní poznatky</b></dt>
+<dd>
+Zadávání skalárů (matic 1x1), vektorů (matic 1xm) a matic:\\
+x=1\\
+v=[1,2,3,4]\\
+A=[1,2;3,4]\\
+\\
+Výpis proměnné a:\\
+a\\
+\\
+Přiřazení matici (skaláru, vektoru) výsledek funkce:\\
+a=sin(1)\\
+[a]=sin(1)\\
+b=[sin(1),sin(0)]\\
+[c,d]=[sin(0),sin(-1)]\\
+</dl>
+
+
+
+<dl>
+<dt><b>Základní funkce</b></dt>
+<dd>
+<b>zeros(m,n)</b> - matice plná nul o rozměrech mxn<br/>
+<b>eye(m,n)</b> - jednotková matice o rozměrech mxn<br/>
+<b>rand(m,n)</b> - matice o rozměrech mxn plná náhodných čísel v intervalu (0,1)\\
+<b>randn(m,n)</b> - matice o rozměrech mxn plná náhodných čísel v intervalu (-6?,6?)<br/>
+<b>min([a,b,c])</b> - minimum z a,b,c<br/>
+<b>max([a,b,c])</b> - maximum z a,b,c<br/>
+<b>abs(a)</b> - absolutni hodnota z a<br/>
+<b>disp('ahoj')</b> - vypíše hlášku "ahoj"<br/>
+
+</dl>
+
+
+
+<dl>
+<dt><b>Základní operace s maticema</b></dt>
+<dd>
+\\
+<b>X+Y</b> součet matic, souhlasi-li dimenze<br/>
+<b>X+a</b> každé buňce matice X se přičte skalár a<br/>
+<b>X-Y</b> rozdíl matic, souhlasi-li dimenze<br/>
+<b>X-a</b> od každé buňky matice X se odečte skalár a<br/>
+<b>X*Y</b> součin matic, souhlasi-li dimenze<br/>
+<b>X*a</b> každá buňka matice X se vynásobí skalárem a<br/>
+<b>X'</b> matice X se transponuje a komplexně sdruží<br/>
+<b>X.'</b> matice X se transponuje<br/>
+<b>X^p</b> matice X se vynásobí p-krát sama se sebou (mocnina), souhlasi-li dimenze<br/>
+<b>X.+Y</b> součet matic po složkách, souhlasi-li dimenze<br/>
+<b>X.-Y</b> rozdíl matic po složkách, souhlasi-li dimenze<br/>
+<b>X.*Y</b> součin matic po složkách, souhlasi-li dimenze<br/>
+<b>X.^p</b> prvky matice X se vynásobí p-krát samz se sebou (mocnina)<br/>
+<b>X>Y</b> porovnání matic po složkách, souhlasi-li dimenze, vysledek matice plná nul a jednicek. (alternativy <, <=, >=, ==, ~=, &, |)<br/>
+</dl>
+
+
+
+
+<dl>
+<dt><b>Podmínky</b></dt>
+<dd>
+if elseif else end\\
+for break end<br/>
+while end</dd>
+</dl>
+
+
+
+<dl>
+<dt><b>Kreslení</b></dt>
+<dd>
+plot\\
+</dl>
+
+
+
+<dl>
+<dt><b>Argumenty funkcí</b></dt>
+<dd>
+nargin</dd>
+</dl>
+
+
+
+
+<dl>
+<dt><b>načítání/ukládáni dat z/do souboru</b>\\
+<dd>
+</dl>
+
+
+   

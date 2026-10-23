@@ -1,0 +1,11 @@
+
+====Interni odkazy====
+
+
+[[bsd-manage.html|manage]] - sprava systemu (balicky, uzivatele atd.)\\
+[[bsd-manage]]\\
+[[bsd-net]]\\
+
+
+
+   

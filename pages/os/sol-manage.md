@@ -1,0 +1,89 @@
+# Sprava systemu - uzivatele, balicky, jadro, logy...
+
+admintool ... manazer nastaveni systemu<br />
+boot ... poradi bootovacich medii<br />
+luxadm ... administrace diskovych poli<br />
+luxadm -v display<br />
+luxadm -v port<br />
+dmesg ... zpravy z jadra<br />
+/usr/platform/`uname -i`/sbin/prtdiag -v ... informace o hardware<br />
+modinfo ... informace o nactenych modulech v jadru<br />
+modload ... nacte modul do jadra<br />
+modunload ... odstrani modul z pameti v jadre<br />
+prtconf ... ukaze nastaveni systemu<br />
+psrinfo ... informace o procesoru<br />
+sar ... (System acrivity report)<br />
+showrev ... ukaze informace o OS<br />
+top<br />
+vmstat ... (virtual memory statistics)<br />
+swap -l ... ukaze informace o swapu<br />
+echo '$c' | adb -k /var/crash/`hostname`/vmunix.0 ... analyza system dumpu<br />
+pstack core.2580 ... analyza dumpu<br />
+[Explorer Data Collector](http://uk.sun.com/service/stb/index.jsp) ... sberac dat o systemu<br />
+
+## Zarizeni
+
+admintool ... graficky manazer nastaveni systemu (uzivatele, tiskarny, hosts atd.)<br />
+iostat -ne ... statistika chub v tabulce<br />
+iostat -En ... upovidana statistika I/O zarizeni<br />
+prtvtoc /dev/rdsk/c0t1d0s0 ... informace o fyzickem disku - oddily, velikost atd.<br />
+drvconfig ... vytvari zarizeni v /devices<br />
+devfsadm ... udela vsechny prikazy: disks, tapes, atd.<br />
+devlinks ... vytvori /dev/ zarizeni pro pseudo zarizeni a doplnkove zarizeni<br />
+disks ... vytvori /dev/ zarizeni pro disky<br />
+tapes ... vytvori /dev/ zarizeni pro paskove mechaniky<br />
+ports ... vytvori /dev/ zarizeni pro seriove porty<br />
+rem_drv ... odinstalovani ovladace zarizeni<br />
+sysdef ... seznam nainstalovanych zarizeni<br />
+/etc/minor_perm ... prava nove vytvarenych zarizeni<br />
+
+## Balicky, programy, software
+
+pkgadd ... pridani balicku<br />
+pkgadd -d /patch nmap-4.76-sol9-intel-local ... nainstaluje balicek /patch/nmap-4.76-sol9-intel-local<br />
+pkgadd -d . -s spool SMCnmap ... presune balicek SMCnmap z aktualniho adresare do /var/spool/pgk<br />
+pkgchk ... otestuje nainstalovany balicek<br />
+pkgchk -l -P /usr/bin/showrev ... napise, zda je nainstalovany tento soubor, pod jakym balickem atd.<br />
+pkginfo ... vylistovani nainstalovanych balicku<br />
+pkginfo -l ... vylistovani podrobnych informaci o nainstalovanych baliccich<br />
+pkgparam ... informace o baliccich<br />
+find /usr/package | pkgproto > Prototype ... vytvareni definice balicku pro pkgmk  
+pkgrm ... odebere balicek<br />
+pkgtrans -s Product /var/tmp stream.pkg SUNWzlib SUNWftpr ... Prevede balicek, ktery je adresar, na stream balicek<br />
+pkgmk ... vytvoreni balicku. [Postup na tvorbu balicku](http://www.ibiblio.org/pub/packages/solaris/sparc/html/creating.solaris.packages.html)  
+patchadd 114568-24 ... Nainstaluje patch 114568-24<br />
+patchadd -p ... ukaze nainstalovane patche<br />
+patchrm 114568-24 ... odinstaluje patch 114568-24<br />
+showrev -p ... ukaze nainstalovane patche<br />
+/var/sadm/install/contents ... vsechny nainstalovane balicky, soubory zmeny<br />
+/var/sadm/patch ... seznam patchu<br />
+/var/sadm/pkg ... seznam nainstalovanych balicku<br />
+[sunsolve.sun.com](http://sunsolve.sun.com) ... patche pro Solaris<br />
+
+## Uzivatele
+
+passwd -x -1 user ... nastavi maxage na -1 pro usivatele user<br />
+useradd<br />
+userdel<br />
+usermod<br />
+modprpw -k user ... vynuluje pocitadlo neuspesnych backupu<br />
+listusers, logins<br />
+/etc/passwd, /etc/shadow, /etc/group, /etc/pam.conf, /etc/skel/local.profile<br />
+
+## Procesy
+
+ptree ... ukaze strom procesu<br />
+pfiles 232... ukaze ktere soubory ma otevrene proces 232<br />
+pgreg tmp ... ukaze, ktere cislo procesu ma v nazvu tmp<br />
+pldd 232 ... ukaze ktere knihovny uziva proces 232<br />
+prun ... spusti job<br />
+pstop ... zastavi job<br />
+pwdx .. vypise aktualni cestu, ve ktere je proces<br />
+
+## Parametry jadra
+
+vi /etc/systemfile<br />
+ndd ... vytvori bootovaci skript s parametry z predchoziho souboru<br />
+
+[[http://uk.sun.com/download/index.jsp?cat=Operating%20Systems&tab=3&subcat=Solaris%20Operating%20Systems|
+SUN Software for download]]<br />

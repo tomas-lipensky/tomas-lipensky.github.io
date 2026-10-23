@@ -1,0 +1,22 @@
+
+======LibreOffice======
+
+====Obsah:====
+
+
+[[#odkazy|Interni a externi odkazy]]\\
+[[#|Programy pro praci s java aplikacemi]]\\
+
+
+
+<a name="odkazy|]]
+
+====galerie====
+[[https://www.iconfinder.com/icons/172627/male_user_icon#size=128|Galerie grafik]]\\
+
+====Calc:====
+
+=[[https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_CONCATENATE_function|CONCATENATE]]("ENV_RDC_",[[https://wiki.openoffice.org/wiki/Documentation/How_Tos/Calc:_IF_function|IF]](AND(C71="TEST"),"T_",(IF(AND(C71="INDUS"),"A_",(IF(AND(C71="DEV"),"D_")))))) ...
+ spoji retezce a pouzije IF pro volbu moznosti\\
+
+   

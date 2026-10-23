@@ -1,0 +1,215 @@
+
+
+======Tivoli Monitoring======
+
+Konkurence ITM: [[https://communities.bmc.com/communities/thread/56418|BMC Patrol Agent]], Nagios, Xymon, [[http://www.zabbix.com/|Zabbix]] ...\\
+[[https://www.ibm.com/developerworks/community/blogs/jalvord/?sortby=0&maxresults=50&lang=en|Tipy a vychytavky ITM]]\\
+[[http://www-01.ibm.com/support/docview.wss?uid=swg21265222|produktove kody ITM]]zkratky pro jednotlive agenty ITM\\
+
+
+
+====Tivoli DM Monitor====
+Tivoli Distributed Machine Monitor
+
+
+
+
+
+==Start/stop/status: ==
+/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start<br />
+/opt/Tivoli/lcf/dat/1/lcfd.sh stop ... stop\\
+ps -ef | grep -i dm_ep_engine ... status<br />
+ps -ef | grep lcf<br />
+
+
+
+
+
+
+
+==konfigurace/logy==
+/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Disk.conf.txt|LGE_generique_Process.conf]] ... konfigurace monitorovani procesu<br />
+/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Process.conf.txt|LGE_generique_Disk.conf]] ... konfigurace monitorovani disku<br />
+/opt/Tivoli/lcf/dat/1/conf/[[LGE_unix_checkErrpt.data.txt|LGE_unix_checkErrpt.data]] ... Konfigurace monitorovani errpt (syntaxe EXCLUDE=AAAAAA#AAAABB#...\\
+c:\ProgramFiles\tivoli\lcf\dat\1\conf\conf\[[LGE_windows_eventlog.data.txt|LGE_windows_eventlog.data]] & [[LGE_windows_eventlog_NortonAntivirus.conf.txt|LGE_windows_eventlog_NortonAntivirus.conf]] ... Windows NT Event monitor\\
+c:\ProgramFiles\tivoli\lcf\dat\1\conf\conf\[[LGE_windows_eventlogtime.data.txt|LGE_windows_eventlogtime.data]] & [[LGE_windows_eventlogtime_EventType.conf.txt|LGE_windows_eventlogtime_EventType.conf]] ... EventLog Time Monitoring\\
+c:\progra~1\tivoli\lcf\dat\1\conf\[[LGE_filefilter_filefilter.data.txt|LGE_filefilter_filefilter.data]] & [[LGE_filefilter_filefilter.conf.txt|LGE_filefilter_filefilter.conf]] ... file filter monitor\\
+conf\LGE_generique_Service.conf ... konfigurace sluzeb\\
+conf/[[LGE_files_fileage.data.txt|LGE_files_fileage.data]] ... age of files\\
+C:\tiv\lcf\dat\1\conf[[LGE_services_dns.data.txt|LGE_services_dns.data]] & [[LGE_services_dns.conf.txt|LGE_services_dns.conf]] ... dns server check\\
+conf/[[LGE_preventive_aixchecking.data.txt|LGE_preventive_aixchecking.data]] ... memory usage\\
+conf/[[LGE_unix_cpuaverage.data.txt|LGE_unix_cpuaverage.data]] ... cpu usage\\
+touch /opt/Tivoli/lcf/dat/1/tmp/LGE_unix_checkErrpt.flag ... dokud existuje, tvori se log soubor LGE_unix_checkErrpt.log s logovanim konfigurace a udalosti\\
+tail -60 /opt/Tivoli/lcf/dat/1/tmp/LGE_generique_Disk.events<br />
+
+
+
+
+
+====ITMv5:====
+ITMv5 ma javovske endpointy. Lze na nich spoustet Javaskripty.
+
+
+
+
+
+==Start/stop/status: ==
+/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start<br />
+/opt/Tivoli/lcf/dat/1/lcfd.sh stop ... stop<br />
+a pak killnout zbyvajici jedouci procesy\\
+ps -ef | grep -i dmunix  ... status<br />
+ps -ef | grep lcf<br />
+
+
+
+
+
+==konfigurace/logy==
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_process.param ... konfigurace monitorovani procesu<br />
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_DMXFileSystem.param ... konfigurace monitorovani disku<br />
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_Maintenance_Mode.param ... konfigurace [[http://d12db054.de.ibm.com/q_dir/qmx/wes/qc4pl.nsf/procnum/WES-PRD-00632|maintenance flagu]]\\
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_file_filter.param.sample ... filefilter - monitorovani log souboru\\
+/LCFNEW/Tmw2k/bin/TSA_AllStartedServices.param\\
+/LCFNEW/Tmw2k/bin/TSA_Free_Disk_Space.param\\
+/LCFNEW/Tmw2k/bin/TSA_process.param\\
+TSA_FileExist.conf.sample ... file exist monitori\\
+/opt/Tivoli/lcf/dat/1/LCFNEW/AMW/logs/msg_dmxengine.log ... logy Tivoli</br>
+grep file_filter /opt/Tivoli/lcf/dat/1/LCFNEW/AMW/logs/msg_dmxengine.log ... soubory s filefiltrama, ktere se alertovaly\\
+
+
+
+
+
+<h6>Infrastruktura ITMv5</h6>
+\\
+ITM klient\\
+|\\
+Gateway\\
+|
+TMR Server (Tivoli management region) ... hlavni server - TDW
+|\\
+TEPS (DB) (Tivoli Enterprise Portal Server)\\
+|\\
+TEP (Tivoli Enterprise Portal)\\
+
+
+
+
+
+====ITMv6====
+[[http://www.softpanorama.org/Admin/Tivoli/ITM/index.shtml|ITMv6.1]] je prejmenovany produkt Omegamon. Omegamon prevzalo IBM od firmy Candle, kterou IBM ovladlo v roce 2004. Komunikace probiha pomoci SOAP protokolu.
+
+
+
+
+
+==Start/Stop/Status==
+CANDLEHOME='/opt/IBM/ITM'\\
+/opt/IBM/ITM/bin/itmcmd agent -f stop all ... zastavi agenty\\
+/opt/IBM/ITM/bin/itmcmd agent start all ... nastartuje agenty\\
+/opt/IBM/ITM/bin/itmcmd -o INSTANCE agent stop AGENT_CODE ... zastavi konkretniho agenta\\
+/opt/IBM/ITM/bin/itmcmd -o INSTANCE agent start AGENT_CODE\\
+/bin/ksh -c '/opt/IBM/ITM/bin/itmcmd agent -o db2inst2 start ud ... start ud agenta (DB2)\\
+itmcmd audit -h /opt/IBM/ITM -l both ... cleans ITM logs\\
+itmcmd help ... help\\
+/etc/rc.tma1<br />
+/opt/IBM/ITM/bin/cinfo -r ... status agentu\\
+cat /opt/IBM/ITM/config/.ConfigData/RunInfo ... status agentu\\
+/opt/IBM/ITM/bin/itmcmd agent start XXXX ... ITMv6, podrobnosti v /etc/rc.itmX\\
+ps -ef | grep ITM ... status\\
+kuxagent ... monitoring CPU + SRM (AIX)\\
+kpxagent ... 2. cast SRM (AIX)\\
+k03agent ... errpt + maintenanace flag\\
+k26agent ... FS + procesy\\
+klzagent ... CPU+SRM (Linux)\\
+koqagent.exe ... MSSQL agent ($candlehome/tmaitm6_x64/corrupt .str ... situation files)\\
+/opt/IBM/ITM/aix526/ud/bin/kuddb2 GP1P02IDSD02_db2inst1 ... db2 agent\\
+/usr/bin/su - db2inst2 -c "/bin/ksh -c '/opt/IBM/ITM/bin/itmcmd agent -o db2inst2 stop ud'" ... start ud agenta (DB2 monitoring)\\
+
+
+
+
+
+
+==konfigurace/logy==
+/opt/IBM/ITM/config/.ConfigData/k<xx>env ... konfigurace agenta\\
+/opt/IBM/ITM/CONFILES=C:\IBM\ITM\CONFILES\\
+/opt/IBM/ITM/CONFILES/ufs_all_configured.loc ... konfigurace monitorovani disku<br />
+/opt/IBM/ITM/CONFILES/ups_all_configured.loc ... konfigurace monitorovani procesu<br />
+C:\IBM\ITM\CONFILES\[[Service.cfg.txt|Service.cfg]] ... konfigurace monitorovani sluzeb (Win)\\
+C:\IBM\ITM\CONFILES\[[FS.cfg.txt|FS.cfg]] ... konfigurace monitorovani disku (Win)\\
+C:\IBM\ITM\CONFILES\[[Process.cfg.txt|Process.cfg]] ... konfigurace monitorovani procesu (Win)\\
+/opt/IBM/ITM/CONFILES/gsma_errpt_monitoring.param ... nastaveni alertovani errpt\\
+/opt/IBM/ITM/CONFILES/maintenance.cfg ... nastaveni [[http://d12db054.de.ibm.com/q_dir/qmx/wes/qc4pl.nsf/procnum/WES-PRD-00654?OpenDocument#_Section3|Maintenance window]]\\
+lsitab -a | grep tma\\
+rctma1:2:wait:/etc/rc.tma1 > /dev/console 2>&1 # Tivoli Management Agent<br />
+$candlhome/config/kcirunas.cfg ... konfigurace ITM pod jakym uzivatelem jet jakeho agenta. $candlehome/bin/UpdateAutoRun.sh prepise pak startup scripty\\
+
+
+
+
+
+==Infrastruktura ITMv6==
+ITM agent (Tivoli Enterprise Monitoring Agent )\\
+|\\
+RTEMS (Remote TEMS) - analogie Gateway v ITMv5\\
+|\\
+Hub TEMS (Tivoli Enterprise Monitoring Server) ... hlavni server - TDW (DB) (Tivoli Data Warehouse) - Customer reporting tool\\
+|\\
++- TEC (Tivoli Enterprise Console)\\
+|\\
+TEPS (DB) (Tivoli Enterprise Portal Server)\\
+|\\
+TEP (Tivoli Enterprise Portal)\\
+
+
+
+
+
+
+====TMR (TEMS) server====
+<i>TMR server (frmpmtm01srb4xm) - enpoint health check - viz SMI Information Server</i>\\
+/usr/local/Tivoli/bin/aix4-r1/bin ... binarky TMR\\
+$DBDIR/???/logs ... logy\\
+[[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst148.htm#idx304|wdmcmd -e ANT_bckinfups1 -stop]] ... zastavi (nastartuje ITM na endpointu z TMR\\
+[[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst159.htm#idx326|wdmlseng -e Endpoint]] ... Vylistuje seznam Resourcu na Endpoint-u<br.
+[[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst161.htm#idx330|wdmmngcache -m INF_frmpqmn00srb2xm -l -v]] ... ukaze (-d smaze) (-v rozsireny) status Ednpointu z chache historie\\
+wep help ... napoveda k wep\\
+wep ls ... seznam endpointu\\
+wep ls -g B14_b14gw01-b14-gaw ... seznam vsech edpointu na nade GW\\
+wep SLD_lefgateway ... informace o nastaveni Endpointu\\
+wep INF_fremop2csxprx01 status ... vypise aktualni status Endpointu\\
+wlookup -aLr Endpoint ... ukaze seznam vsech enpointu\\
+wlookup -ar Gateway ... ukaze seznam vsech GW\\
+wlookup -ar ManagedNode ... seznam manazovanych nodu\\
+wepstatus -g INF_frmpqmn00srb2xm-all-gaw ... seznam vsech endpointu na dane GW a jejich status\\
+wepstatus Endpoint ... ukaze status endpointu,GW atd\\
+[[http://publib.boulder.ibm.com/tividd/td/framework/SC32-0806-01/en_US/HTML/ref115.htm#idx519|wgateway]] ... vylistuje seznam GW\\
+wgateway GW describe ... ukaze parametry GW\\
+wgateway logstatus ... status logovani na GW\\
+wgateway start/stop/restart ... startuje/stopuje/restrtuje Tivoli GW\\
+[[http://publib.boulder.ibm.com/tividd/td/framework/SC32-0806-01/en_US/HTML/ref47.htm|odadmin]] help .. napoveda\\
+odadmin odlist ... ukaze seznam Objektovych dispeceru (Manazovanych nodu)\\
+odadmin shutdown 1111 ... zastavi ITM dispecera cislo 1111\\
+[[http://publib.boulder.ibm.com/tividd/td/dist_mon/commands_362/en_US/HTML/wrunprb.htm|wrunprb "*" "*" "*" ZJ0_zj0gw01]] ... spusti vsechny testy na Endpountu\\
+[[http://publib.boulder.ibm.com/tividd/td/dist_mon/GC31-8382-04/en_US/HTML/usems219.htm|wstopeng ZJ0_zj0gw01]] ... zastavi Tivoli Distributed Monitoring na endpointu a ulozi jeho stav\\
+[[http://publib.boulder.ibm.com/tividd/td/framework/SC32-0806-01/en_US/HTML/ref59.htm|wadminep -h]] ... napoveda k prikazu\\
+wadminep ENDPOINT view_directory /opt/IBM/ITM/CONFILES ... vylistuje adresar na ENDPOINTu\\
+wadminep ENDPOINT view_file /opt/IBM/ITM/CONFILES/ufs_all_configured.loc ... vypise obsah souboru na ENDPOINTu\\
+wadminep ENDPOINT get_file LCFNEW/Tmw2k/Unix/TSA_OracleTablespacesAuto.param abcd ... zkopiruje soubor z ENDPOINTu do souboru abcd\\
+wadminep ENDPOINT remove_file /tivoli_ep_A/opt/Tivoli/lcf/inv/SCAN/core ... smaze soubor na ENDPOINTu\\
+telnet 1.2.3.4 9495 (nc -vz  -w3 -n 1.2.3.4 9495) ... otestuje, zda je otevreny port 9495, na kterem enpoint posloucha\\
+tacmd listsystems ... sezanm managovanych agentu a jejich status\\
+tacmd login -s SERVER -u sysadmin -p HESLO -t 1340 \\
+tacmd cleanms\\
+tacmd getdeploystatus\\
+tacmd getfile\\
+/opt/IBM/ITM/bin/tacmd putfile\\
+tacmd listsit -d ; -n -m ab0_fraspar30case:NT\\
+
+<i>Logy</i>\\
+/usr/OV/log/trapd.log ... Logy Heartbeat na netview serverech\\
+
+
+
+   

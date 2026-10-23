@@ -1,0 +1,45 @@
+
+  =====Weby=====
+  [[http://robodoupe.cz|robodoupe.cz]] ... Web o robotice a elektronice\\
+
+  ==Ridici jednotky/mikropocitace==
+  Raspberry Pi\\
+  Arduino\\
+  AVR Atmel atmegaXXX\\
+
+  ==elektro zarizeni==
+    [[http://www.elektrobock.cz/cs/cidlo-vlhkosti/product.html?id=68|vlhkostat]] na elektrobock.cz\\
+[[http://www.snailshop.cz/|EShop snalshop]]\\
+	   
+  ==I2C==
+  [[http://cs.wikipedia.org/wiki/I%C2%B2C|I2C]] na cz.wikipedia.org\\
+  [[http://www.amaterskaelektronika.cz/file/teplota-vlhkost-sht11-assembler|I2C teplotni citlo]] na amaterskaelektronika.cz\\
+  
+  ==433==
+  [[http://arduino8.webnode.cz/news/lekce-20-arduino-a-vyuziti-433-92-mhz/|Lekce jak na 433]]\\
+  [[http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html|nakup 433]]<br
+  [[http://robotstore.cz/obchod/arduino/433mhz-vysilac-a-prijimac-sada-arduino-modulu/|jiny nakup 433]]\\
+  
+  
+  ==ATMega:==
+  
+
+  [[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]<br/>
+  
+
+
+  ====Raspberry Pi====
+  [[http://elinux.org/RPi_Low-level_peripherals|Popis extension slotu Raspberry Pi A i B +, GPIO specifikace]]\\
+  [[http://luketopia.net/2013/07/28/raspberry-pi-gpio-via-the-shell/|Ovladani GPIO z shellu Linuxu]]\\
+
+  ==Priklady==
+  [[http://www.linuxsoft.cz/article.php?id_article=1953|Zapojeni diody na linuxsoft.cz]]\\
+  [[http://www.raspi.cz/2012/06/prvni-experimenty-gpio-svitime-led-diodou-detekujeme-pohyb/|Jednoduche zapojeni diody a cidla pohybu]]\\
+  [[http://luketopia.net/2013/07/28/raspberry-pi-gpio-via-the-shell/|Ovladani GPIO z shellu]]\\
+  
+  
+  
+
+  
+
+   

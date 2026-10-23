@@ -1,0 +1,11 @@
+
+
+======UML - Unified Modeling Language======
+
+====Externí odkazy====
+
+[[http://www.agilemodeling.com/essays/umlDiagrams.htm|Uvod do UML]]\\
+[[http://en.wikipedia.org/wiki/Unified_Modeling_Language|UML na wiki]]\\
+[[http://moon.felk.cvut.cz/~voracem/students/goc26-voracek-070724.pdf|Slidy o UML]] z CVUT\\
+
+   

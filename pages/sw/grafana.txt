@@ -1,0 +1,4 @@
+Opensource dashboard (nastenka grafu) a alertovaci nastroj\\
+
+[[http://docs.grafana.org/alerting/notifications/]] ... posilani alertu/notifikaci\\
+[[http://docs.grafana-zabbix.org/reference/direct-db-connection/]] ... integrace Grafany a Zabbixu

@@ -1,0 +1,97 @@
+# HP-UX - Nastaveni site
+
+### balicky pro sit
+
+swlist -l product Networking ... seznam balicku pro sit  
+swlist -l bundle | grep HW= ... seznam balicku pro podporu sitovych karet  
+swlist TOUR ... podpora IPv6 v 11i v1 a nizsich  
+
+### start site
+
+/sbin/init.d/hostname - /etc/rc.config.d/netconf ... hostname  
+/sbin/init.d/hpbtlan - /etc/rc.config.d/hpbtlanconf ... nastaveni link layer pro sitove karty s obladacem hpbtlan  
+/sbin/init.d/hpgelan - /etc/rc.config.d/hpgelanconf ... nastaveni link layer pro sitove karty s obladacem hpgelan  
+/sbin/init.d/hpietrer - /etc/rc.config.d/hpietrerconf ... nastaveni link layer pro sitove karty s obladacem hpietrer  
+/sbin/init.d/hpigelan - /etc/rc.config.d/hpigelanconf ... nastaveni link layer pro sitove karty s obladacem hpigelan  
+/sbin/init.d/net - /etc/rc.config.d/netconf, /etc/rc.config.d/nddconf ... Nastaveni network layer - IP adresy atd.  
+/sbin/init.d/net-ipv6 - /etc/rc.config.d/netconf-ipv6 ... Nastaveni network layer - IPv6 adresy atd.  
+
+### fyzicka sitova zarizeni a nastaveni 2. sitove vrstvy - link
+
+ioscan -fC lan	... seznam sitovych adapteru v serveru, vcetne HW cest, ovladacu a nazvu SDF atd.<br />
+ll /dev/dlpi* ... seznam SDF potrebnych do diagnostickych nastroju (linkloop, lanadmin  
+insf /d dlpi -e ... znovuvytvoreni SDF  
+
+lanscan	... seznam sitovych karet, jejich MAC, ovladace, atd.<br />
+lanadmin ... konfigurace parametru 2. sitove vrstvy pro sitove adaptery na HP &lt; 11i v3  
+lanadmn -a 0 ... ukaze MAC adresu 1. sitove karty  
+lanadmin -A 0x080009CCCCCC 0 ... nastavi MAC adresu prvni sitove karty na 08:00:09:CC:CC:CC  
+lanadmin -X 100FD 0 ... nastavi rychlost prvni sitove karty na 100Mb/s a Full-Duplex  
+lanadmin -X auto_on 1 ... nastavi autonegation  
+lanadmin -x 1 ... ukaze nastavenou rychlost pro 2 sitovou kartu  
+lanadmin -r 0 ... resetne sitovou kartu  
+lanadmin -c 1 ... vynuluje pocitadla o link layer  
+lanadmin -g 1 ... ukaze statistiky link layer vrstvy pro 2. sitovku  
+nwmgr ... nahrada lanscan, lanadmin a linkloop v HP-UX 11i v3  
+nwmgr ... nahrada lanscan v 11i v3 - seznam sitovych karet, jejich MAC, ovladace, atd.<br />
+nwmgr --get --attribute all -c lan0 ... ukaze veskere nastaveni spojove vrstvy 1. sitove karty  
+nwmgr --get --attribute speed,mac -c lan0 ... ukaze nastaveni mac a rychlost 1. sitove karty  
+nwmgr --set attribute all --from default -c lan0 ... nastavi defaultni nastaveni pro 1. sitovou karty  
+nwmgr --set attribute speed=100fd -c lan0 ... nastavi rychlost prvni sitove karty na 100Mb/s a Full-Duplex  
+nwmgr --ser attribute all --sa --from current -c lan0 ... ukozi aktualni nastaveni sitove karty do /etc/rc.config.d/, po restartu nastaveni nezmizi  
+nwmgr --reset -c lan0 ... resetne sitovou kartu  
+nwmgr --diagnose --attribute dest=0x0060b007c179 -c lan0 ...  test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)<br />
+linkloop [ -i N ] 0x0060b007c179 ... test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)<br />
+ndd ... parametry sitoveho nastaveni<br />
+ndd -h ... ukaze vsechny nastavitelne parametry site  
+ndd -h ip_forwarding ... ukaze popis parametru ip_forwarding  
+ndd /dev/ip6 ? ... ukaze volitelne parametry ipv6  
+ndd --get /dev/ip ip_forwarding ... ukaze nestaveni parametru ip_forwarding  
+ndd --set /dev/ip ip_forwarding 0 ... zmeni nastaveni ip_forwarding  
+
+### nastaveni a informace o 3. sitove vrstve - newtork
+
+ifconfig lanX	... informace o sitovem zarizeni<br />
+ifconfig lan0 128.1.1.1 netmask 255.255.0.0 up ... nastavi IP adresu pro sitovou kartu a aktivuje ji  
+ifconfig lan0:1 129.1.1.1 netmask 255.255.0.0 up ... nastavi alias (multiplexing) pro lan0  
+ifconfig lan0:1 0.0.0.0 ... vypne alias  
+ifconfig lan1 plumb ... umozni pouzivat kartu lan1 v OS, pokud se nestane automaticky po pridani zarizeni  
+ifconfig lan1 unplumb ... zakaze OS pouzivat sitovou kartu  
+ifconfig lan 1 down ... deaktivuje lan1, zakaze provoz  
+ifconfig lan0 inet6 up ... aktivuje IPv6 pro kartu a nastavi lokalni IPv6 adredu  
+ifconfig lan0:1 inet6 3ffe:1111:0000:0000:0230:6eff:fe1e:0ee0/64 up ... aktivuje alias IPv6 pro kartu lan0 a nastavi IPv6 adredu s maskou site 64 bitu  
+ifconfig snap0:0 130.1.1.1 netmast 255.255.0.0 ... konfigurace 1 sitove karty ne pro IP/Ethernet, ale pro IP/IEEE 802.3 (vlany)  
+netstat -in	... Sezanam sitovych zarizeni a jejich adres<br />
+arp -a ... ukaze arp tabulkou  
+arp -d aaa.com ... smaze ARP zaznam pro adresu aaa.com  
+ping 1.2.3.4 ... poslani ICPM Hello na ip 1.2.3.4 na zjisteni, zda je dostupny  
+route add host 129.1.1.2 128.1.1.1 ... nastavi cestu na server 129.1.1.2 pres router 128.1.1.1 v routovaci (smerovaci) tabulce  
+route del host 129.1.1.2 128.1.1.1 ... smaze cestu na server 129.1.1.2 pres router 128.1.1.1 z routovaci (smerovaci) tabulky  
+route add net 129.1.1.0 netmask 255.255.255.0 129.1.1.1 ... nastavi cestu na sit 129.1.1.0/24 pres router 129.1.1.1  
+route del net 129.1.1.0 netmask 255.255.255.0 129.1.1.1 ... smaze cestu na sit 129.1.1.0/24 pres router 129.1.1.1  
+route add default 1.2.3.4 ... prida defaultni routu. Kdyz jsou 2 tak se distribuuje zatez  
+route del default 1.2.3.4 ... zrusi defaultni routu  
+route -f ... smaze celou routovaci tabulku  
+route inet6 add net 2222::/64 4567::8 1  ... prida IPv6 routu s hop-countem 1  
+netstat -rn ... vypis routovaci tabulky  
+traceroute 1.2.3.4 ... hledani routeru po ceste k ip 1.2.3.4  
+nettl ... trace<br />
+netfmt ... trace<br />
+tcpdump  
+ethereal  
+net-snmp  
+
+### Vyssi sitove vrstvy, sluzby
+
+hostname AAA ... nastavi TCP/IP jmeno pocitace AAA  
+hostname ... ukaze TCP/IP jmeno pocitace  
+uname -S AAA ... nastavi UUCP jmeno pocitace  
+uname -n ... ukaze UUCP jmeno pocitace  
+/etc/hosta/, /etc/resolv.conf, etc/nsswitch.conf ... nastaveni prekladu adres  
+nslookup 1.2.3.4 www.seznam.cz ... zepta se na preklad jmena www.seznam.cz DNS serveru 1.2.3.4  
+nsquery hosts sanfran.cz.hp.com ... nastroj na hledani problemu s prekladem jmen. Podle nsswitch provede dotaz na preklad  
+dig @1.2.3.4 www.seznam.cz ... zepta se na preklad jmena www.seznam.cz DNS serveru 1.2.3.4  
+dig @1.2.3.4 +short -x 128.1.1.2  ... zepta se na preklad adresy 128.1.1.2 DNS serveru 1.2.3.4, kratsi vypis  
+landiag<br />
+gdc createconf ... nastaveni routovacich sluzeb<br />
+grep -il SERVICE /etc/rc/config.d/* /sbin/init.d/* ... hledani skriptu pro jednotlive sluzby (apache, bootp, cde, ...)

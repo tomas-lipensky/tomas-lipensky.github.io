@@ -1,0 +1,51 @@
+
+======Networker klient======
+
+Klient je soucasti AIXoveho balicku LGTOnw.clnt.rte
+
+
+===Nastaveni, umisteni, logy: ===
+/nsr/apps/logs/nmda_db2.messages.raw ... logy backupu backups\\
+/nsr/res/nsrladb ... konfigurace networkeru\\
+/nsr/logs/daemon.log ...logy daemonu\\
+/bin/nsrexecd ... Networker agent komunikujici se serverem. Daemon ktery musi jet\\
+
+
+===Ziskani informaci o nastaveni a backupech===
+/usr/bin/mminfo -s SERVER | grep -i KLIENT ... vylistovat backupy pro server KLIENT\\
+/usr/bin/mminfo -s SERVER -N DB2:/DATABAZE/NODE0000 ... vylistuje vsechny zalohy (i na paskach, jez nejsou k dispozici) pro zalohu DB2:/DATABAZE/NODE0000\\
+/usr/bin/mminfo -s SERVER -N DB2:/DATABAZE/NODE0000 -q "savetime>=08/01/2014" ... jako predtim, ale mladsi nez datum\\
+/usr/bin/mminfo -s SERVER -N DB2:/DATABAZE/NODE0000 -q "savetime>=08/01/2014" -ot ... jako predtim, ale seradi je podle casu\\
+/usr/bin/mminfo -s SERVER -N DB2:/DATABAZE/NODE0000 -q "savetime>=08/01/2014" -ot -r volume,name,savetime,ssflags,level,pool ... jako pretim, ale zobrazi nadefinovane sloupce\\
+nsrinfo -s frdosinsr1a -n db2 -X All frelixprddb1a ... listovani zaloh db2 i s casem\\
+\\
+/usr/bin/mmlocate -s SERVER | egrep -e "PF5257|PF5256"		... Ukaze umisteni pasek\\
+PF5257  EXTANN_06/10/2014   .... in library - not available\\
+PF5256  EqPhy   .... in tape - available\\
+\\
+/usr/bin/mmpool -s SERVER | grep PF5256 ... ukaze ke ktere skupine patri PF5256\\
+PF5256     ArchEq1SBrz\\
+\\
+nsradmin -p nsrexec; print type: NSRLA ... informace o backup klientovi\\
+
+
+===Zaloha DB2:===
+db2 backup db DATABAZE load /usr/lib/libnsrdb2.so open 1 sessions options @/home/dbuser/nmda_db2.manual.cfg\\
+/usr/bin/nsrdasv -T db2 -s SERVER -g GRUPA -LL -m KLIENT -t 1420630209 -l incr -q -W 78 -N DB2:/DATABAZE/NODE0000 DB2:/DATABAZE/NODE0000\\
+/bin/nsrdasv -z /nsr/apps/config/nmda_db2.cfg -T db2\\
+
+===Obnova DB2===
+db2 restore database QDB taken at TIMESTAMP load /usr/lib/libnsrdb2.so open 1 sessions options @nmda_db2.manual.cfg replace existing ... obnova DB z Networkeru\\
+nsrdb2rlog -s frdosinsr1a -a ELIXLPDP -d  /elixdb2/db/loga/ELIXLPDP/OWERFLOW ... obnova archivovanych logu\\
+
+===Zalohovani souboru:===
+/usr/bin/save\\
+/usr/bin/save -q -s SERVER -l full -c KLIENT -g GRUPA -L -x /nsr/apps/tmp/db2_system_config_1420671614.txt\\
+
+===Obnova souboru===
+[[http://www.ipnom.com/Legato-NetWorker-Commands/recover.html|/usr/bin/recover]] -s backup_server ... priposi se k Networker serveru a zapne interaktivni mod pro obnoveni - help napoveda pro interaktivni mod.\\
+/usr/bin/recover -s  server -a -d /var/logs ... zapne neinteraktivni obnoveni adresare (-d) /var/logs\\
+/usr/bin/recover -s  server -t 12/28/2014 -d /tmp /var/adm ... zacne interaktivni mode, uvodni adresar /var/adm k datu 12/28/2014, obnovu provede do /tmp\\
+
+
+   

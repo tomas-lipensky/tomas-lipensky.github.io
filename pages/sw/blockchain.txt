@@ -1,0 +1,8 @@
+====Externi odkazy====
+[[https://medium.com/bitfwd/top-5-most-compelling-use-cases-for-blockchain-technology-d198e500e3d3|Priklady uziti]]\\
+[[https://youtu.be/3681ZYbDSSk|youtube -Etherneum Dapp tutorial]]\\
+[[https://www.stateofthedapps.com/|Seznam Dapps - hitparada blockchainovych distribuovanyvh appikaci]]
+====Blockchain platformy====
+[[https://poa.network/|POA]]\\
+[[https://en.m.wikipedia.org/wiki/EOS.IO|EOS]]\\
+[[https://www.ethereum.org/|Etherneum]]\\

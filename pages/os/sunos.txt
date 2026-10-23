@@ -1,0 +1,22 @@
+
+====Interni odkazy====
+
+
+[[sol-manage|Sprava systemu - uzivatele, balicky, jadro, logy...]]\\
+[[sol-fs|Souborove systemy a data]]\\
+[[sol-cluster|clustering]]\\
+[[sol-prikazy|ostatni prikazy]]\\
+[[sol-net|Sitove veci]]\\
+[[sol-print|Tisk]]\\
+[[sol-services|Sluzby]]\\
+
+
+====Externi odkazy====
+
+
+[[http://archive.rootvg.net/|rootvg.net]]\\
+crossbow project - virtualizace\\
+
+
+
+   

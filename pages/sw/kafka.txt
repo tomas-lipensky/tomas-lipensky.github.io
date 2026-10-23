@@ -1,0 +1,16 @@
+====== Apache Kafka ======
+Streamovací platforma, vlastni protokol, binarni. Kafka cluster muze sestavat z nekolika clusteru
+
+
+==== Odkazy ====
+https://medium.com/@cobch7/what-is-kafka-9cc8591d2063 - Seriál na Medum popisující podrobně Kafku\\
+https://anishmahapatra.medium.com/apache-kafka-102-how-to-set-up-kafka-on-your-local-68f432dfb1ab ... Tutoriál na neautentifikovanou Kafku\\
+https://developer.ibm.com/tutorials/kafka-authn-authz/ - Konfigurace autentifikované služby Kafka\\
+==== Architektura ====
+*Kafka cluster* je tvořen skupinou nodu = *brokeru*, 0,1, .., n, t.j. serverů=instancí a službou *Zookeeper*, který registruje, odregistruje brokery, vybírá leadera, ukládá konfiguraci topiců\\
+Topic ... objekt podobný kanálu, nebo frontě, obsahuje 1, či více *partition* (indexy 0, ..., n), do kterých ukládá zprávy. Pořadí konzumace se zachovává v rámci partition, ovšem mezi partition se pořadí nezachovává. Zprávy se steným klíčem se ukládáji do stejné partition. Topic má své consumers a producers\\
+Broker ... instance Kafka clusteru\\
+Partition ... Oddíl topicu, který je replikován na vice brokerů. Replika = ISR (in-sync replica)\\
+Consumer - aplikace, která odebírá zprávy - instance\\
+Consumer group - Skupina Consumeru - Může obsahovat 1 a více consumerů. Každý consumer může odebírat z 1 partition, pokud se nastaví concurency, tak i z více partition. 1 partition může být konzumována pouze 1 consumerem\\
+Producer - umí ukládat zprávy do topicu a do partition. Zpráva je pak neměnná. Přiřadí se jí pořadové číslo v partition. Jak na ní ukáže ofset, tak bude k přečtení\\

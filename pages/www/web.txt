@@ -1,0 +1,19 @@
+====Staticke weby====
+
+Lacine reseni na staticke weby jsou ulozna zarizeni na cloudech, jako treba:
+
+  * Azure Storage Account - Blob
+  * Google Storage
+  * AWS S3
+  * [[https://pages.github.com/|github]]
+
+Napriklad Azure Storage Account nabizi sluzbu Static Web, ktera resi problem indexu.
+
+====Txt2Html====
+
+[[http://dynalon.github.io/mdwiki/#!index.md]] MDwiki - Stranky generovane z MD souboru na strane prohlizece (pomoci JavaSkriptu)\\
+
+====Generatory statickych webu====
+[[https://www.gatsbyjs.org/blog/2018-11-05-deploying-gatsby-to-azure/|Gatsby]]\\
+[[https://jekyllrb.com/|Jekyll]]\\
+[[https://vuepress.vuejs.org/guide/getting-started.html#quick-start|VuePress]]\\

@@ -1,0 +1,50 @@
+# Informatica MDM
+
+ORS - metadata pro Informatica MDM
+
+### Obsah
+
+<dl>
+<dt>[Externi odkazy](#odkazy)</dt>
+<dt>[Interni odkazy](#interni)</dt>
+</dl>
+
+<a name="odkazy|]]
+### Externi odkazy
+
+[comunity.informatica.com](https://community.informatica.com/message/111559)  
+[Install guide](http://www.scribd.com/doc/239239225/MDM-901-Install-Guide#scribd)  
+[Informatica for beginners](http://www.deepinopensource.com/informatica-tutorials-beginners/)  
+
+<a name="interni|]]
+### Interni odkazy
+
+[WAS](was.html)  
+
+<a name="url|]]
+### URL aplikace
+
+http://IP:7507/ ... MDM aplikace  
+https://IP:9043/ibm/console/ ... WAS Administracni konzole  
+
+### Procesy, adresare, konfiguracni soubory
+
+### Start/stop
+
+### Prikazy
+
+export SIP_HOME=/opt/applications/websphere/MDM/hub/server ... Definice domovskeho adresare pro HUB Server  
+export SIP_HOME=/opt/applications/websphere/MDM/hub/cleanse ... definice domovskeho adresare pro Cleanse  
+export JAVA=/usr/WebSphere/v7.0/AppServer/java/jre/bin/java ... Definice javy  
+. $SIP_HOME/setSiperianEnv.sh ... nastavi MDM promenne prostredi  
+$JAVA  -classpath $SIP_HOME/lib/ProductVersion.jar:$SIP_HOME/lib/xml-apis.jar:$SIP_HOME/lib/log4j-1.2.16.jar:$SIP_HOME/lib/xercesImpl.jar com.siperian.ia.prodversion.SoftwareVersionInfo $SIP_HOME ... verze MDM  
+$JAVA  -classpath $SIP_HOME/lib/siperian-common.jar com.siperian.common.security.Blowfish PASSWORD_KEY "PASSWORD" ... zakryptuje heslo  
+
+### Instalace
+
+$SIP_HOME/postInstallSetup.sh -Ddatabase.password=$DB_PASSWORD-CMX -Dwebsphere.password=$WAS_PASSWORD ... nainstaluje MDM do aplikacniho serveru (WAS)  
+$SIP_HOME/patchInstallSetup.sh ... Aplikuje zaplaty  
+
+========Resource kit
+
+../hub/resourcekid/automation/*Tools*/MDMResourceKit_BATCH/scripts/get_encr_pwd.cmd ... zakryptuje heslo

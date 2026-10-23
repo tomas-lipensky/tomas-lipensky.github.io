@@ -1,0 +1,40 @@
+
+====Interni odkazy====
+
+
+[[hp-manage|Sprava systemu]]\\
+- Boot proces [[hp-integrity|Integrity]] serveru\\
+- Boot proces [[hp-parisc|PA-RISC]] serveru\\
+[[hp-fs|Souborove systemy a data]]\\
+[[hp-net|Sitove veci]]\\	
+[[hp-services|Sluzby]]\\
+[[hp-cluster|HACMP - clustering]]\\
+[[hp-partitions|nPary, vPary, VM, ...]]\\
+Ignite\\
+Tisk\\
+
+[[hp-idf]]\\
+[[hp-dsf]]\\
+[[hp-mp]]\\
+
+
+
+====Externi odkazy====
+
+
+[[http://docs.hp.com|docs.hp.com]]\\
+[[http://docs.hp.com/en/hw.html|http://docs.hp.com/en/hw.html]]\\
+[[http://software.hp.com|software.hp.com]]\\
+[[http://itrc.hp.com|itrc.hp.com]]\\
+[[http://www.hp.com|www.hp.com]]\\
+[[http://www.hp.com/go/itanium|www.hp.com/go/itanium]] - Integrity servery HP s procesory Itanium\\
+[[http://www.hp.com/go/hp9000|www.hp.com/go/hp9000]] - servery HP s procesory PA-RISC\\
+[[http://www.hp.com/go/servers|www.hp.com/go/servers]] - servery HP\\
+[[http://www.hp.com/go/hpuxservermatrix|http://www.hp.com/go/hpuxservermatrix]] - HP-UX a hardware kompatibilita atd.\\
+[[http://www.hp.com/go/hpux11i|http://www.hp.com/go/hpux11i]]\\
+[[http://www.hp.com/education|www.hp.com/education]]\\
+[[http://docstore.mik.ua/manuals/hp-ux/en/5991-1247B/index.html|nPartition Administrator's Guide]]\\
+
+
+
+   

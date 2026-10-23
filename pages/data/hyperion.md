@@ -1,0 +1,6 @@
+# Hyperion
+
+EPM (Enterprise Performance Management) se sklada ze 2 hlavnich soucasti - Planning & Forcasting nebo Financial Close & Reporting management.
+
+http://machine:19000/workspace  
+http://machine:19000/interop

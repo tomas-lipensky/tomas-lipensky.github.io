@@ -1,0 +1,60 @@
+
+    ====Jiné programy====
+    <dl>
+     
+     <dt>Typy souboru:</dt>
+       <dd>[[soubory.html|Typy soubory (koncovky)]] a manipulace s nimi</dd>
+     <dt>Jiné programy:</dt>
+       <dd>[[java.html|Java aplikace obecne]]</dd>
+       <dd>[[automat.html|Automatizace]]</dd>
+       <dd>[[security.html|Bezpecnost]]</dd>
+     <dt>Zálohování:</dt>
+       <dd>[[tsm.html|IBM TSM - Tivoli Storage Manager]]</dd>
+       <dd>[[networker.html|EMC Networker]]</dd>
+       <dd>[[netbackup.html|Veritas (Symantec) NetBackup]]</dd>
+     <dt>[[monitoring.html|Monitoring:]]</dt>
+       <dd>[[itm.html|ITM - IBM Tivoli Monitoring]]</dd>
+       <dd>[[nagios.html|Nagios]]</dd>
+       <dd>[[hpom.html|HPOM]]</dd>
+       <dd>Zabbix</dd>
+       <dd>OMS</dd>
+       <dd>Application Insights</dd>
+       <dd>BMC Patrol</dd>
+       <dd>Xymon</dd>
+       <dd>[[prometheus.html|Prometheus]]</dd>
+     <dt>LVM a souborové systemy:</dt>
+       <dd>[[fs.html|Veritas LVM]]</dd>
+     <dt>Clustering:</dt>
+       <dd>[[cluster.html|Veritas Cluster]]</dd>
+     <dt>Časovače:</dt>
+       <dd>[[tws.html|IBM TWS - Tivoli Workload Scheduller]]</dd>
+       <dd>[[http://www.bmc.com/products/control-m-workload-automation/what-you-get/job-scheduling-software.html|BMC Control-M]]</dd>
+     <dt>Bezpečnost, licence atd.:</dt>
+       <dd>[[tlm.html|TAD4D(drive TLM)]], [[tscm.html|TSCM]], BigFix (drive IEM IBM Endpoint Manager), [[srm.html|SRM]], [[gde.html|GDE]]</dd>
+       
+     <dt>Analyzatory logu a udalosti</dt>
+       <dd>Splunk</dd>
+     <dt>Podnikové systémy (ERP,CRP,...):</dt>
+       <dd>[[sap.html|SAP]]</dd>
+       <dd>Oracle E-Busness suite</dd>
+     <dt>Poštovní a komunikační programy:</dt>
+       <dd>[[domino.html|Lotus Domino]]</dd>
+     <dt>Service Management, IPC nastroje (Incident, Problem, Change)</dt>
+       <dd>Maximo - IBM Control Desk - drive SCCD (SmartCloud Control Desk), Service Now, Remedy,  </dd>
+     <dt>Privilege management</dt>
+       <dd>sudo, PowerBroker</dd>
+     <dt>ID Management</dt>
+       <dd>Giama</dd>
+     <dt>User directory</dt>
+       <dd>LDAP, AD</dd>
+     <dt>Procesy</dt>
+       <dd>[[https://en.wikipedia.org/wiki/Capability_Maturity_Model_Integration|CMMI]], [[https://en.wikipedia.org/wiki/ESCM-SP|eSCM-SP]] - support, [[https://en.wikipedia.org/wiki/ITIL|ITIL]]</dd>
+   </dl>
+
+   
+
+    
+   
+
+    
+   

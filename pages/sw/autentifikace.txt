@@ -1,0 +1,18 @@
+==== OAuth ====
+JWT token
+
+OAuth se kombinuje pro případ aplikace2aplikace s mTLS, SecIP, nebo privátním linkem.
+
+== řešení ==
+  * Azure AD / Microsoft Entra ID
+  * Kong
+  * KeyCloak
+  * Amazon Cognito (as an identity provider/broker) and IAM Identity Center
+  * API Gateway
+
+==== SAML ====
+
+SAML (Security Assertion Markup Language) - protokol založený na XML pro výměnu autentifikačních a autorizačních dat, nejčastějí pro SSO
+
+==== SSO ====
+Single Sing-On

@@ -1,0 +1,156 @@
+
+======Informatica======
+
+Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
+
+
+====Obsah====
+<dl>
+<dt>[[#odkazy|Externi odkazy]]</dt>
+<dt>[[#interni|Interni odkazy]]</dt>
+</dl>
+
+<a name="odkazy|]]
+====Externi odkazy====
+[[https://network.informatica.com/community/informatica-network|Informatica network]]\\
+[[https://marketplace.informatica.com/search-solr.jspa?facets=isservices:0;cid3:c-cat1;|Informatica marketplace]] - utility na stazeni\\
+[[https://marketplace.informatica.com/solutions/powercenter_useful_script_files|Skripty k PowerCenter]]\\
+[[https://network.informatica.com/message/106450|End Of Life Matrix]]\\
+[[https://velocity.informatica.com/index.php/best-practices-all|Velocity - best practices]]\\
+[[https://marketplace.informatica.com/index.jspa|Informatica Marketplace]]\\
+[[https://network.informatica.com/downloadsView.jspa|Informatica Network - Downloads]]\\
+
+<a name="interni|]]
+====Interni odkazy====
+[[was.html|WAS]]\\
+
+<a name="architektura|]]
+====Architektura====
+
+
+Domena - je uzolovana administracni jednotka. Muze obsahovat mnoho nodu a sluzeb. Pro kazdou domenu je jedna Administracni konzole (Administrator tool)\\
+Node - ekvivalent pro server\\
+Service Manager - Gateway (Primary gateway) - Startuje a obsluhuje vsechny Informatica procesy na node, komunikuje s ostatnimi Service Managery, jeden SM je vzdy hlavni, pusobi jako takzvany dispatcher nebo primary gateway\\
+Administracni konzola na protu 6008/6443 - tomcat catalina webova aplikace na administraci domeny a sluzeb v domene\\
+Klienti - komunikuji na portu 6007 s master gateway - Designer (pro vyvojare), Workflow manager, PowerCenter Workflow Monitor, Repository Manager\\
+Web Service Hub - port 7333 - sluzba na webovou integraci\\
+PowerCenter Workflow Manager ... klient na tvoreni a spravu workflow\\
+PowerCenter Repository Manager\\
+PowerCenter Workflow Monitor\\
+PowerCenter Workflow Designer ... klient na tvoreni mappingu atd.\\
+Informatica Developer ... client for  Data Quality\\
+Administrator Tool - Web interface - administrcni konzole\\
+Mapping - transformace - reprezentace transformace v designeru\\
+session - implementace mappingu jako soucast workflow managera - vyplneni detailu jako nazev souboru, cest atd.\\
+workflow - kompletni posloupnost tasku\\
+task - jednotlive kroky workflow (session, command, email atd.)\\
+metadata - data about data, datamodel\\
+Configuration database ... knofigurace cele domeny\\
+Repository ... informace o objektech PC a IPQ atd\\
+Repository database ... databaze ktera uchovava informace o opjektech repozitare\\
+Repository service ... sluzba ktera ma pristup k repository databazi a poskytuje informace o repozitari sluzbam\\
+Folder ... slozka v PowerCenter\\
+Project ... slozka v IDQ\\
+PowerExchange ... solo produkt se solo klientem, data categorization, conektory k aplikacim jako MS Dynamics, SalesForce, AS400, atd.\\
+Proactive Monitoring - monitor operations in Informatica PowerCenter operations\\
+TDM - masking product\\
+Studio pro Data Transformatin - B2B klient na import dat z PPDF, word atd.\\
+
+
+
+====Sluzby====
+
+
+PowerCenter Integration Service ... motor PowerCentra, ktery spousti transformace\\
+PowerCenter Repository Service ... sluzba ktery\\
+Reporting Service - Reporting\\
+Data Inte S - IDQ - pmserver process\\
+Analyst Service ... IDQ sluzba, klient Informatica Analyst\\
+Model Repository Service ... IDQ sluzba zpristupnujici data v Repository DB IDQ sluzbam\\
+Data Integration Service
+
+
+
+====Instal====
+
+Instalaci myslime vzdy instalaci Service Managera + volba - vytvorit domenu, nebo pridat k domene
+
+
+<a name="url|====URL====]]
+
+
+http://localhost:6008/administrator ... Administracni konzole\\
+
+
+
+====Prostredi====
+
+====Procesy, adresare, konfiguracni soubory====
+isp/bin ... infacmd a infasetup + jar knihovny\\
+isp/logs ... logy domeny\\
+java/jre/bin java\\
+server/bin ... cmd utility\\
+server/infa_stared ... PC app soubory + app logy\\
+tomcat/bin ... startup/stop skripty\\
+tomcat/logs ... logy Tomcatu\\
+
+====Start/stop====
+$INFHOME/tomcat/bin/infaservice.sh startup\\
+$INFHOME/tomcat/bin/infaservice.sh shutdown\\
+
+====Konfigurace====
+$INFA_HOME/domains.infa ... konfigurace domeny\\
+
+====Logy====
+C:\Informatica\9.6.0\server\infa_shared\SessLogs ... logy jobu (sessions)\\
+
+====Procesy - komponenty====
+
+====Prikazy====
+infacmd\\
+infasetup\\
+pmpasswd HESLO ... zakryptuje heslo HESLO. V prikazove radce lze pouzit pouze zakryptovane heslo\\
+pmcmd\\
+pmrep help\\
+$INFA_HOME/server/bin/pmrep connect -d DOMAIN -r RS -n user -X PWC_PASS ... pripojeni k repozitare RS v domene DOMAIN uuzivatelem USER s kryptovanym heslem ulozenem v promenne PWC_PASS\\
+$INFA_HOME/server/bin/pmrep objectimport -i SOUBOR.xml -c CONTROL_file\\
+[[https://marketplace.informatica.com/mpresources/docs/Userguide_2075.pdf|pmp massupdate]] ... hromadny update, pouziva jako vstup vystup z ExecuteQuery\\
+pmrep backup -o outputdirectory\outputfile –f ... zaloha \\
+pmrep cleanup ... odpojeni z repozitare, smaze pmrep.cnx\\
+./tools/debugtools/infaDump/infa9dump.sh
+cat $INFHOME/version.txt ... ukaze verzi\\
+export INFA_DEFAULT_DOMAIN_PASSWORD=dfasdff23r23= ... zakryptovane heslo pro infacmd.sh\\
+infacmd.sh ping -dn DOMAIN ... zjisti zda jede domena DOMAIN\\
+infacmd.sh ping -dn DOMAIN -nn NODE ... zjisti zda jede node NODE\\
+infacmd.sh isp ListServices -dn DOMAIN ... vylistuje sluzby v domene DOMAIN\\
+infacmd.sh listPlugins ... vylistuje pluginy\\
+bind27 VASDB ... zkouska ODBC spojeni, seznam nadefinovanych spojeni v ODBC.ini\\
+
+====monitoring====
+
+====Struktura DB====
+SELECT A.SUBJ_NAME AS FOLDER_NAME FROM OPB_SUBJECT A ORDER BY 1 ... seznam slozek\\
+
+====Best practice====
+
+====Zaloha====
+<li>binarni - adresare s instalaci</li>
+<li>Infra_shared ... adresar se behovymi info</li>
+<li>svechny data databazi</li>
+
+====Databaze====
+===Configuration DB===
+
+Databaze
+
+===Repository DB===
+MX ... nahledy (views) na objekty PowerCentra - workflows atd.\\
+
+====Otazky====
+Otazky\\
+Informatica Support - information about environment - how to synchronize, reason\\- 
+
+
+
+
+   

@@ -1,0 +1,15 @@
+
+======Machine learning - Strojove uceni======
+
+<a name="odkazy|]]
+====Externi odkazy====
+[[https://www.datacamp.com/community/tutorials/machine-learning-in-r#gs.YGInHTU|Introducing: Machine Learning in R]]\\
+[[https://en.wikipedia.org/wiki/R_%28programming_language%29|Wikipedia - R]]\\
+[[http://search.cpan.org/~gmpassos/Statistics-R-0.02/lib/Statistics/R.pm|Perl::Statistics::R]]\\
+[[http://www.cyclismo.org/tutorial/R/index.html|R tutorial]]\\
+[[https://www.youtube.com/watch?v=Cdcx4lbUbes|Youtube - An Introduction to Machine Learning with Perl]]\\
+[[http://www.perlmonks.org/?node_id=638391|Machine Learning Development with Perl]]\\
+[[http://moo.nac.uci.edu/~hjm/biolinux/Linux_Tutorial_2.html|Linux Tutorial - Intro to Linux, bash, Perl, R]]\\
+
+
+   

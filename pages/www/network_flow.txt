@@ -1,0 +1,39 @@
+     
+====Inspekce sitoveho toku====
+
+
+
+mitmproxy ... [[https://www.owasp.org/index.php/Man-in-the-middle_attack|Man in the middle proxy]] pro sledovani provozu na weby (http a ssl proxy), male [[https://blog.heckel.xyz/2013/07/01/how-to-use-mitmproxy-to-read-and-modify-https-traffic-of-your-phone/|howto]] a nebo [[https://www.trustwave.com/Resources/SpiderLabs-Blog/Intercepting-SSL-And-HTTPS-Traffic-With-mitmproxy-and-SSLsplit/|toto]]. Navod na instalace viz [[../dev/python.html|python]] stranka. Ruzne druhy [[http://docs.mitmproxy.org/en/stable/modes.html|proxy modu.]]\\
+[[www.doublecloud.org/doublecloud-proxy/|DoubleCloud Proxy]] ... Jednoducha java Reverse proxy, ktera lze pouzit napr. na debuging API za https\\
+OSWAP ZAP ... MITP & penetration test tool\\
+SSLSplit ... MITP pro obecne SSL protokoly, ne jen na https\\
+firebug ... doplnek pro Firefox pro zobrazovani http/https dotazu a odpovedi\\
+
+
+
+
+
+<a name="tcpdump|tcpdump]]
+tcpdump -tn ... ukazuje tcp paket, adresy ukazuje v IP adresach\\
+tcpdump -c 20 -s 0 -i any -A 'host 9.220.24.160' and 'tcp port http' ... ukaze jake balicky a jejich obsah sel na adresu/port\\
+tcpdump -vv -x -X -s 1500 -i eth1 '[[https://danielmiessler.com/study/tcpdump/|port 25]]' ... vypise obsah paketu co chodi na SMTP (posta)\\
+tcpdump -n -c 30000 -w /root/port.80.debug.txt ... ulozeni provozu do souboru (30.000 packetu)\\
+tcpdump -X -vv -r /root/port.80.debug.txt ... analyza provozu ze souboru\\
+
+
+
+====Preposilani, smerovani, prekonavani uzavrenych siti====
+[[https://www.rosehosting.com/blog/install-and-configure-tinyproxy/|tinyproxy]] ... HTTP a HTTPS proxy\\
+ssh -R 8888:localhost:8888 user@server ... forwardovani proxy\\
+export http_proxy="http://localhost:8888" ... nastaveni http proxy na linuxu\\
+export https_proxy="https://localhost:8888" ... nastaveni https proxy na linuxu\\
+
+====Firewall a zmeny sitoveho toku - network rules====
+
+
+[[../os/lin-net.html|iptables]]\\
+
+
+
+
+   

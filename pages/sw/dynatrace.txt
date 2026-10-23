@@ -1,0 +1,9 @@
+==== DLQ ====
+[[https://docs.dynatrace.com/docs/discover-dynatrace/references/dynatrace-query-language|DLQ]] jazyk pro vytváření hledacích dotazů v databázi logů\\
+
+příklad výpisu logu pomoci DLQ:
+
+<code>fetch logs, from:now() - 1h, to:now() 
+| filter content.environment == "PROD" 
+| filter `content.service-name` == "služba" 
+| sort timestamp desc</code>

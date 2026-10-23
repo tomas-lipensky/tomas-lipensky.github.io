@@ -1,0 +1,16 @@
+
+======SQ Lite======
+
+
+
+
+
+====Externi odkazy====
+[[http://mailliststock.wordpress.com/2007/03/01/sqlite-examples-with-bash-perl-and-python/|SQLite examples in Python, Perl, Bash]]\\
+
+====Pouziti====
+
+sqlite3 sm.sqlite ... otevre databazi sm.sqlite (.quit pro opusteni interaktivniho modu)\\
+sqlite3 sm.sqlite "select * from workitems where workitem LIKE 'CH50125053'" ... vylistovani tabulky\\
+
+   

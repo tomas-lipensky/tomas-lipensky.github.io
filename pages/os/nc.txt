@@ -1,0 +1,2 @@
+''nc -X connect -x 127.0.0.1:8080 google.com 443''  ... připojení na google.com port 443 přes proxy na portu 8080 (connect - HTTP proxy, 4 - SOCKS4, 5 - SOCKS 5)\\
+''nc -zv 1.2.3.4 22'' ... tcp ping - otestuje, jestli na IP 1.2.3.4 na portu 22 lze navázat TCP spojení\\

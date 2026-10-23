@@ -1,0 +1,34 @@
+# Apache Hadoop
+
+### Architektura
+
+<li>Node - jednotlivy pocitac</li>
+<li>Rack - 30-40 Nodu na stejnem switchi - velky sitovy provoz</li>
+<li>Cluster - Racky managovane pomoci Hadoop</li>
+
+### Komponenty
+
+<li>Distribuovane filesystemy: Hadoop Distributed File System (HDFS), nebo IBM Spectrum Scale</li>
+<li>MapReduce Engine - Framework na provadeni kalkulaci na datach v FS a obsahujici casovac a resource manager</li>
+
+### Projekty souvisejici s Hadoop
+
+<li>Lucene je knihovna na engine textoveho vyhledavani napsana v Java</li>
+<li>Hbase je Hadoop databaze</li>
+<li>Hive poskytuje data warehousing nastroj k extrakci, transformani a natazeni (ETL) dat, a dotazovani techto dat ulozenych v Hadoop souborech</li>
+<li>Pig je high level jazyk, ktery produkuje MapReduce kod k analyze velkych mnozin dat</li>
+<li>Spark je cluster computing framework</li>
+<li>ZooKeeper je centralizovany configuracni sluzba a jmenny registr pro velke distribuovane systemy</li>
+<li>Ambari spravuje a monitoruje Hadoop clustery pomoc intuitivniho web UI</li>
+<li>Avro je data serialization system</li>
+<li>UIMA je architekture pro vyvoj, nachazeni, kompozici a nasazovani pro analyzu nestrukturovanych dat</li>
+<li>Yarn is a large-scale operating system for big data applications</li>
+<li>Mapreduce is a software framework for easily writing applications which processes vast amounts
+of data</li>
+<li>Highly extensible, highly scalable Web crawler Nutch 1.x enables fine grained configuration, relying on Apache Hadoop™ data structures, which are great for batch processing.</li>
+<li>Jaql is primarily a query language for JavaScript Object Notation (JSON)</li>
+<li>[IBM BigInsight Quick Start Edition](https://ibm-open-platform.ibm.com/biginsights/download-pages/download-qse-vm/?&S_TACT=M1610EPW)</li>
+
+#### HDFS
+
+FS na existujicich FS operacniho systemu, navrzeny k toleranci selhani komponent a k obsahovani velikych souboru. Male soubory - pomaly pristup. Hledani draha operace. Designovano na streamy nebo sekvencni data. Hadoop blok je soubor na disku o jiste velikosti (napriklad 128MB).

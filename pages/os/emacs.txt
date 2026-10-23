@@ -1,0 +1,12 @@
+	   
+Ctrl-A ... Home\\
+Ctrl-E ... End\\
+Ctrl-B ... back\\
+Ctrl-F ... Froward\\
+Esc-B ... Word Back\\
+Esc-F ... Work Forward\\
+Ctrl-D ... Del\\
+Ctrl-R ... Redisplay\\
+Ctrl-U ... Erase Line\\
+Ctrl-W ... Erase Word\\
+   

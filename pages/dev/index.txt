@@ -1,0 +1,78 @@
+
+  
+
+  Seznam programovacich jazyku, se kterymi jsem se setkal a pouzival je na ruznych urovnich a popis nekterych specifik, odkazy a postrehu z nich:
+
+
+
+<dl>
+<dt>Nastroje na management vyvoje a projektu</dt>
+<dd>[[https://www.atlassian.com/software/jira?_mid=650d1ec8c12a9adeaf0857e0f40fa379&gclid=CKCzusjIr8UCFSXHtAodkkMAQQ|Jira]]</dd>
+<dd>TFS - Team Fountation Server</dd>
+
+====Representace designu====
+<dd>[[uml.html|UML]]</dd>
+
+====Spravovani kodu / verzi kodu====
+<dd>[[svn.html|Subversion]]</dd>
+<dd>git</dd>
+<dd>Team Foundation Version Control</dd>
+
+====Editory, IDE====
+<dd>Geany ... rychle IDE pro Linux a Windows</dd>
+<dd>Sublime / Visual Studio Code ... jednoduche, nenarocne a rychle IDE pro Lin/Win/iOS</dd>
+<dd>Komodo Editor ... umi zvyraznovat, naseptavat, nabizet funkce, manazovat projekty, ...</dd>
+<dd>Eclipse ... IDE - Programatorske prostredi pro vyvoj - podpora ruznych jazyku a doplnku</dd>
+<dd> JBDS ... JBoss Development Studio - Sada nastroju postavenych na Eclipse od RedHatu, obsahujici dalsi balicky, jako JBoss Tools</dd>
+<dd> JBoss tools ... sada doplnku pro Eclipse of JBoss projektu</dd>
+
+====Porovnavani kodu====
+<dd>tkdiff ... graficke porovnavani souboru, casto integrovane v IDE</dd>
+<dd>meld</dd>
+<dd>diff</dd>
+<dd>compare</dd>
+
+====Testovani kodu====
+<dd>JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani</dd>
+<dd>[[http://wiki.hudson-ci.org/display/HUDSON/Unit+Test| Hudson a Unit testy]]</dd>
+<dd>[[https://wiki.jenkins-ci.org/display/JENKINS/Unit+Test| Jenkins]] a Unit testy</dd>
+</dl>
+
+<dl>
+<dt>[[http://www.whoishostingthis.com/resources/programming/|Programovací jazyky]]:</dt>
+ <dd>[[c.html|C]]</dd>
+ <dd>[[java.html|Java]]</dd>
+</dl>
+
+<dl>
+ <dt>Skriptovaci jazyky:</dt>
+ <dd>[[http://cs.wikipedia.org/wiki/Bash|Bash]]/[[../os/unix-commands.html|Unixove prikazy]]</dd>
+ <dd>[[perl.html|perl]]</dd>
+ <dd>[[python.html|Python/Jython]]</dd>
+ <dd>[[tcl.html|TCL/JACL]]</dd>
+ <dd>[[../os/bat.html|BAT soubory]]</dd>
+ <dd>[[vbs.html|VBScript]]</dd>
+ <dd>[[http://www.autoitscript.com/forum/topic/32299-gui-designer-koda-1730/|GUI Designer: Koda]] - [[http://www.autoitscript.com/site/|Autoit]] - Skriptovaci nastroj na Windows</dd>
+</dl>
+  
+
+<dl>
+  <dt>Programovani pro WEB:</dt>
+  <dd>[[http.html|http]]</dd>
+  <dd>[[html.html|html]]</dd>
+  <dd>[[css.html|css]]</dd>
+  <dd>[[php.html|php]]</dd>
+  <dd>[[javascript.html|javascript]]</dd>
+  <dd>[[mobilap.html|mobilni aplikace]]</dd>
+  <dd>[[../web/j2ee.html|j2ee aplikace]]</dd>
+  <dd>[[http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179|Java programovani pro web - tutorial na linux zone]]</dd>
+</dl>
+
+<a name="dev-infrastruktura|
+====Infrastruktura pro vyvoj produktu====
+[[https://developer.ibm.com/open/amalgam8/|Amalgam8]] - Opensource platforma - integruje a loadbalancuje mikrosluzby\\
+[[https://developer.ibm.com/open/apache-toree/|Apache Toree]] - prostrednik pro komunikaci s Apache Spark nabizejici API pro interaktivni komunikaci s vypoctama\\
+[[http://www.spark.tc/spark-kernel-architecture/?cm_mc_uid=41539605277314736978328&cm_mc_sid_50200000=1473833868|Apache Spark]] - rychly clusterovaci software pro large-scale zpracovani dat\\
+]]
+
+   

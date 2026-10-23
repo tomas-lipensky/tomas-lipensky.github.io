@@ -1,0 +1,62 @@
+# UNIX - awk
+
+### Externi odkazy
+
+[uvod do awk](http://www.well.ox.ac.uk/~johnb/comp/awk/awk.html)  
+[AWK na DW](http://www.ibm.com/developerworks/linux/library/l-awk1/index.html)  
+[maly kurz (en)](https://www.linkedin.com/learning/awk-essential-training?storeRef=voyager_feed_cymbii_learning&trk=n-feed-course-learning)  
+
+### Prepinace
+
+1.F"\t" ... nastavi Field Separator na tabulator (vstupni oddelovac)  
+2.v LANG=$LANG ... prevede systemovou promennou LANG na promennou v awk  
+3.f prikazy_awk.txt ... spusti prikazy awk ze souboru prikazy_awk.txt  
+
+### Promenne
+
+NR .. Number of Rows - pocet radku  
+NF ... Number of Fields - pocet slov na radku  
+RS ... Record Separator - znak oddelujici radky  
+RT ... Record Terminator - znak ukoncujici zaznamy,br>
+OFS ... Output Field Separator - oddelovac slov na radku na vystupu  
+FS ... Field Separator - na vstupu, definuje se i prepinacem -F  
+ORS ... Output Rows Separator - Oddelovac radku  
+ENVIRON["HOME"] ... hodnota promenne $HOME z prostredi  
+IGNORECASE=1 ... Hodnota, nastavujici, ze se budou ignorovat rozdilne velikosti pismen pri hledani  
+PROCINFO["pid"] ... pid procesu  
+
+### podminky
+
+if ( podminka ) { prikazy; } else { prikazy; }  
+(podminka)?(prikaz):(prikaz) student-marks
+
+### funkce
+
+length() = length($0) ... delka retezce  
+rand() ... nahodne cislo v intervalu 0,1  
+toupper() ... prevede na velka pismena  
+tolower() ... prevede na mala pismena  
+match($0,"ss") ... vrati pozici v textu $0, kde se nachazi regularni vyraz "ss"  
+gsub(/a/,"b",$0) ... nahradi v $0 vsechna a za b (nevypise, je treba pouzit print  
+sub(/a/,"b",$0) ... nahradi v $0 prvni a za b (nevypise, je treba pouzit print  
+
+### Priklady
+
+[awk](http://people.cs.uu.nl/piet/docs/nawk/) ... programovatelny editor textu z stdin do stdout<br />
+awk '/^22/ || /^13/' .. jen radky, co zacinaji 22 nebo 13<br />
+awk '$1=="1",$1=="10"' .. jen radky co 1. slovo je mezi 1 a 10<br />
+awk '!/^#/ && $2 == "162/udp"' /etc/services ... najde radky, ktere nezacinaji znakem # a druhe slovo je 162  
+awk 'FS=":" $2=="mopb4sminim" { OFS=';' ; ORS="\n\n" } { print $5,$6 }' ... vypise 5 a 6 slovo z radku oddelene strednikem, kazdy radek oddeleyny 2 entrama, kde 2. slovo je mopb4sminim, oddelovac slov je :<br />
+awk 'BEGIN { print "Counting of 'mopb4sminim'" } /mopb4sminim/ { ++aaa } END   { print "'mopb4sminim' appears " aaa " times" }' ... secte vyskyty slova mopb4sminim<br />
+awk ' {split($1,TAB,".");printf("%s.ini",TAB[1]) }' ...  
+awk -F"\"" ' { print $2 } ' ... napise 2 slovo, kde oddelovac je "  
+echo "12345678" | awk '{ print substr($0,2,3) }' vypise 2. az 2+3 pismeno: 234  
+awk ' { printf("%s%s%s",substr($1,2,1),substr($1,4,1),substr($1,6,1)) } '  
+awk  ' $0~"java" { for (i=1; i<=NF; i++) if ($(i) ~ "app-name") print substr($(i),12,20)  }' ... na radcich obsahujici "java" vypise slova, kde se nachazi "app-name", ale jen 12-32 znak  
+awk -F","  { printf ("%s.%s\n",$2,$3) } ... vypise 2 a treti pole oddelene ve zdroji carkou a ve vystupu teckou a odentruje  
+awk '{if ($0 ~ /-W/) sub(/AA/,"CONFIG",$0)}1' ... pokud radek obsahuje retezec -W pak nahrad prvni vyskyt AA na CONFIG  
+awk '{ if (NF > 1) print $(NF-1),$NF ; else print $NF; }' ... vytiskne posledni 2 slova na radku  
+awk 'NR == 22' ... bypise radek 22  
+awk '$1 !~ /^#/ && $0 ~ /[^ ]/ {print $2+$3+$4,"\t",$1}' filename.txt ... precte soubor, ignoruje radky, ktere zacinaji mezerou ci mrizkou a secte 2. 3. a 4. hodnotu kazdeho radku  
+awk 'ORS=NR%3?",":"\n"' student-marks ... zmeni na oddelovac radku - carku, na enter  
+awk '/^\[DEFAULT\]/{f=1;}f && /^maxretry =/{print "maxretry = "x;f=0;next}1' x=$NUMBER_OF_RETRIES file ... editace konfigu --- po sekci [DEFAULT] se zameni prvni vyskyt

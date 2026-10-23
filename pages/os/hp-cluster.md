@@ -1,0 +1,45 @@
+# HP-UX - cluster (Serviceguard)
+
+##### status
+
+cmviewcl ... ukaze stav slusteru<br />
+cmviewcl -v ... Vice ukecany stav clusteru  
+cmviewcl -f line ... radkovy vypis pro scripty  
+
+##### start/stop
+
+cmruncl -v ... nastartje cluster (cmcld)  
+cmrunnode -v node ... privede node znovu do clusteru  
+cmhaltnode ... zastavi cluster  
+cmhaltcl -v ... zastavi Cluster services  
+smhaltpkg -v Package ... zastavi balicek sluzeb a resourcu  
+cmrunpkg -v -n SystemB Package ... spusti balicek Package na node SystemB  
+cmmodpkg -e Package ... Zapne povoleni presouvani balicku  
+cmmodpkg -e -n node Package ... Umozni nodu node prijimat balicek  
+
+##### Konfigurace
+
+/etc/cmcluster/cmclnodelist ... seznam nodu  
+/etc/cmcluster/SD_CLUSTER.cfg ... nastaveni clusteru<br />
+cmquerycl -v [-q QS_HOST] -C cmclconfig.ascii -n node1 -n node2 ... vygeneruje prazdny konfiguracni soubor s nekterymi vyplnenymi udaji  
+cmcheckconf -v -C /etc/cmcluster/cmclconf.ascii ... otestuje syntaxi  
+cmapplyconf -v -C /etc/cmcluster/cmclconf.ascii ... zkompiluje configuraci do binarniho formatu  
+grep /usr/lbin/qs /etc/inittab ... zjisteni, zda je nakonfigurovany Quorum Server  
+
+##### Logy
+
+/var/adm/syslog/syslog.log ... informace o stavu a akcich  
+/var/adm/qs/qs.log ... log Quorum Server demonu  
+/etc/cmcluster/<pkgname>/pkgname.cntl.log ... logy o baliccich v clusteru  
+/etc/cmcluster/package_name/control_script.log ... logy kontrol skriptu  
+
+##### Procesy
+
+/usr/lbin/cmclconfd ... ServiceGuard Configuration Daemon - Sbira informace o clusteryu (Siti, volume grupach). Spousti se v /etc/inetd.conf  
+/usr/lbin/cmcld ... ServiceGuard Cluster Daemon - Ovlivnuje clenstvi v clusteru. Spousti se pod cmcld  
+/usr/lbin/cmlogd ... ServiceGuard Syslog Log Daemon - pouzivany cmcld k zapisovani syslog zprav  
+/usr/lbin/cmlvmd ... Cluster Logical Volume Manager Daemon - dohlizi na informace o Volume groupe  
+/usr/lbin/cmomd ... Cluster Object Manager Daemon - logy /var/opt/cmom/cmomd.log - poskytuje informace klientovi o clusteru. /etc/inetd.conf  
+/usr/lbin/cmsnmpd ... Cluster SNMP subagent - vytvaru MIB pro snmp  
+/usr/lbin/cmsrvassistd ... ServiceGuard Service Assistant Daemon - forkuje a spusti skripty v clusteru  
+/usr/lbin/cmtaped ... ServiceGuard Shared Tape Daemon - Dohlizi na sdilene paskove zarizeni

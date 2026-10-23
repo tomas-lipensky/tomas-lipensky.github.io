@@ -1,0 +1,98 @@
+
+
+====Maple====
+
+
+
+
+Kromě těchto stránek najdete celou řadu ostatních dokumentu, se základy ovládání a používání programu Maple v českém jazyce. Zde je pár odkazů:<br/>
+[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Fakulty strojního inženýrství VUT v Brně]]<br/>
+[[http://www.math.muni.cz/~plch/|na stránkach doktora Romana Plcha na Katedře metematiky Přírodovědecké fakulty MU v Brně]]<br/>
+[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Vysoké školy chemicko-technologické v Praze]]<br/>
+
+
+<dl>
+<dt><b>Popis kapitoly</b>\\
+<dd>
+Seznam příkazů, které obsahuje. Kliknutím na aktivní popis kapitoly se přemístíte na stránku, která dané téma popisuje.\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple1.html|Základní poznatky]]</b>\\
+<dd>
+Popis prostředí\\
+Systémové znaky\\
+Základní operátory\\
+Definice výrazů\\
+Definice funkcí\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple2.html|Řešení rovnic]]</b>\\
+<dd>
+Řešení soustav rovnic : solve\\
+Numerický výpočet výrazu : evalf\\
+Numerické řešení rovnic : fsolve\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple3.html|Úpravy rovnic]]</b>\\
+<dd>
+Substituce : subs\\
+Priřazení nového jména existujícímu výrazu : Alias\\
+Zjednodušení výrazu : simplify\\
+Úprava výrazu na součet členů : expand\\
+Rozklad polynomu : factor\\
+Konverze výrazu do jiného tvaru : convert\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple4.html|Grafy funkcí]]</b>\\
+<dd>
+Kreslení grafů : plot\\
+Kreslení 3D grafů : plot3d\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple5.html|Matematická analýza]]</b>\\
+<dd>
+Limity : limit\\
+Derivace : deff\\
+Integrál : int\\
+Součet posloupnosti : sum\\
+Součin posloupnosti : product\\
+</dl>
+
+
+
+<dl>
+<dt><b>[[maple6.html|Lineární algebra]]</b>\\
+<dd>
+Zadávání matice : array\\
+Maticové operátory : &*, +, ^, *\\
+Vyjádření matice : evalm\\
+</dl>
+
+
+
+
+<dl>
+<dt><b>[[maple7.html|Procedury a MPJ]]</b>\\
+<dd>
+Definice procedury : proc\\
+Smyčky : for, while\\
+Podminky : if\\
+</dl>
+
+
+   

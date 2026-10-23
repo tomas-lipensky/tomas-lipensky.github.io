@@ -1,0 +1,23 @@
+
+======IBM BigFix======
+
+Drive IEM - IBM Endpoint Manager, nebo BES client
+
+====API:====
+[[https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Tivoli%20Endpoint%20Manager/page/RESTAPI%20Computer|Popis API na Developersworks]]\\
+[[https://github.com/bigfix/restapi-examples|Curl ukazky BigFix API]]\\
+[[https://developer.bigfix.com/rest-api/gettingstarted.html|Ukazky vyhledavani]]\\
+
+====Start/Stop/Status====
+service besclient stop\\
+service besclient start\\
+service besclient status\\
+
+====konfigurace====
+/var/opt/BESClient/besclient.config\\
+
+
+====Logy:====
+/var/opt/BESClient/__BESData\\
+
+   

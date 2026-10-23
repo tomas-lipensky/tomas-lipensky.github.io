@@ -1,0 +1,58 @@
+    
+====Externi odkazy====
+IEEE 1471-2000 standard\\
+
+====Software====
+[[https://www.draw.io/]] ... online kreselni prezentaci, vcetne obrazku a ikon znamych poskytovatelu\\
+
+====IT (Software) architektura====
+[[https://en.wikipedia.org/wiki/Software_architecture|Software_architecture]] ... pekny popis na wikipedii, seznam arch stylu atd.\\
+[[https://en.wikipedia.org/wiki/Architectural_pattern|Architectural pattern]] ... pekny popis architektonickych vzoru  na wikipedii\\
+
+====Architektonicke metody:====
+[[https://en.wikipedia.org/wiki/Software_architecture_analysis_method|Wikipedia - Software_architecture_analysis_method]]\\
+[[http://trese.cs.utwente.nl/taosad/E-Tutorials/ClassificationOfSAMethods.pdf|http://trese.cs.utwente.nl/taosad/E-Tutorials/ClassificationOfSAMethods.pdf]]\\
+  * Artifact-driven
+  * [[http://www.sei.cmu.edu/architecture/tools/define/add.cfm|Attribute driven method]]
+  * Use case/Scenario-driven
+  * Pattern-driven
+  * Domain-driven
+
+====Aspekty====
+- funkcni aspekt - funkcionalita\\
+- technicky aspekt - procesy, implementace atd.\\
+- business aspekt - financni, cas dodani atd.\\
+
+===Techinicke aspekty===
+- planovani kapacity\\
+- zaloho a obnoveni\\
+- disaster recovery\\
+- konflikty s existujicimy systemy, procesy\\
+- bezpecnost\\
+- integrace, toky\\
+- sit\\
+- vykonnost\\
+
+====Referencni architektury====
+[[http://www.cloud-council.org/deliverables/cloud-customer-architecture-for-hybrid-integration.htm|Cloud Customer Architecture for hybrid integration]]\\
+[[https://www.ibm.com/developerworks/library/mw-1606-clark-trs/index.html|The evolving hybrid integration reference architecture]]\\
+[[http://www.iiconsortium.org/IIC_PUB_G1_V1.80_2017-01-31.pdf|INDUSTRIAL INTERNET REFERENCE ARCHITECTURE v 1.8]]\\
+[[http://www.cloud-council.org/deliverables/CSCC-Practical-Guide-to-Hybrid-Cloud-Computing.pdf|Practical Guide to Hybrid Cloud Computing]]\\
+[[https://www.ibm.com/devops/method/category/architectures/|IBM Architecture center]]\\
+[[https://aws.amazon.com/architecture/?nc1=f_cc|AWS Architecture Center]]\\
+
+====Prezentace====
+[[https://www.microsoft.com/en-us/download/confirmation.aspx?id=41937]] ... Obrazkova galerie symboly pro Azure\\
+
+  * zacatek prezentace - uvod o problematice (co je to, o cem mluvim, o cem budu mluvit)
+  * pribeh na zacatku, at si umime vse predstavit
+  * odrazky - idealne pridavat odrazky na stranku postupne, jak o nich mluvim, aby si posluchaci necetli dopredu a neztratili kontakt
+  * K soucasnym problemum pridat, ocekavany vysledek reseni - at se maj posluchaci na co tesit, at je videt co reseni cili
+  * slajdy delat tak, at se neskace dopredu, dozadu - ztrata orientace
+  * screenshoty ukazek
+  * Demo uvest strankou demo, at se posluchac pripravi a naladi
+  * Prednes - dynamicky, pauzy, emoce
+
+
+====IT reseni====
+[[sw:service_mesh]]\\

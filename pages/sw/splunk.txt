@@ -1,0 +1,8 @@
+====== Query jazyk ======
+
+service-name=sluzba1 environment=PRE logger=* | top limit=10 logger ... udělá přehled 10 nejčastějších výskytů záznamů podle pole logger\\
+
+%%| spath "http_status"%% ...\\
+%%| search "COLUMN_NAME"=5*%% ... podmínka pro filtr\\
+%%| stats count by COLUMN%% ... statistika podle pole COLUMN\\
+%%| sort count%% ... seřadí podle pole count\\

@@ -1,0 +1,8 @@
+```
+Load "freetype" ... modul odpovedny za TrueType Fonty *.ttf
+Load "type1" ... modul odpovednu za Adobe Type1 *.afm, *.pfm, *.pfb
+Load "bitmap" ... modul odpovedny za Bitmap fonty *.bdf
+Driver "evdev" "/dev/input/event3" ... v X11V7 (6.9) nahrazuje ovladac mouse, cislo event se dozvime z: cat /prc/bus/input/devices
+-- multiseat (6.9, 7) --
+Sekce Monitor0, Monitor1, Device0, Device1, atd., 2x ServerLayout, potom test: sleep 40 &amp;&amp; kilall Xorg; Xorg -novtswitch -sharevts -layout room0 :0 a Xorg -novtswitch -sharevts -layout room1 :1, nakonec nastaveni gdm: sekce [servers]: 0=Standart, 1=Standart, [server-Standard0]: name=Standard server command=/usr/X11R7/bin/Xorg -novtswitch -sharects -layout room 0 flexible=false a potom i druhy [server Standard1]
+```

@@ -1,0 +1,41 @@
+
+======SAP======
+
+SAP je zkratka pro "Systems, Applications and Products". Firmy SAP AG nabizi produkty pro informacni systemy pro stredni a velke firmy (ERP - planovani podnikovych zdroju, CRM (sprava vztahu se zakazniky, ...).
+
+====Interni odkazy====
+[[sap-backup.html|backup]]\\
+
+====SAP produkty:====
+[[../data/sapbi.html|SAP BO BI]] (SAP BusinessObjects Business Intelligence platform) ... Business Inteligence produkt\\
+[[../data/sapbi.html|SAP Business Objects]] - produktova rada prevzata z prebrane firmy Business Objects orientovana na BI\\
+[[../data/sapbi.html|SAP BW]] (puvodne BIW - Business Information Warehouse), pozdeji zkraceno SAP BW, pozdeji znamo jako "SAP BI" - soucast Netweaveru\\
+SAP ECC (Enterprise Central Component) - \\
+SAP ERP (Enterprise Resources Planning), drive SAP R/3, nyni modul v ECC ... reseni pro firmy zahrnujici moduly jako: Material Management, Platy a distribuci, Finance, Personaln (HR) atd. Vyvijeno v ABAPu\\
+SAP ERP HCM (Human Capital Management) - nastroj pro HR (personalni)\\
+SAP EP (SAP NetWeaver Enterprise Portal) ... portal na prezentaci dat a funkci k modulum, zpristupneni dat na intranetu, vyvoj v Jave\\
+SAP HANA - databaze "in memory" - vetsina dat je v pameti a tim nabizi vetsi vykon. SAP reseni na Warehouse a BI reseni, OLAP atd.\\
+SAP NetWeaver MDM (Master Data Management)\\
+[[http://scn.sap.com/docs/DOC-41766|SAP PI]] (Netwarer Process Integration) ... EAP (Enterprise Application Integration) nastron na vymenu dat mezi internimi a externimi aplikacemi SAP reseni, vyvoj v jave\\
+[[http://scn.sap.com/docs/DOC-27464|SAP PO]] (Process Orchestration) - produkt zahrnujici SAP Business Process Management, SAP Process Integration and SAP Business Rules Management nabizejici komponenty k optimalizaci business procesu.\\
+SAP PPM (Product & Portfolio Management - nastroj na denni vedeni projektu, spoluprace atd.\\
+SAP PS (Project System) - nastroj na prehled projekti, jejich rentability, nakladu atd\\
+SAP SLM (Supplier Lifecycle Management)\\
+SAP SRM (SAP Supplier Relationship Management) - reseni na rizeni procesu s klicivymi obchodnimi partnery\\
+SAP SCP (Supply Chain Management) ... reseni na vedeni dodavatelskych retezcu (planovani, koordinaci, vykonavani)\\
+SAP SLT (SAP Landscape Transformation Replication Server) - sluzba v Netweaver platforme na realtime/non-realtime transformaci dat z SAP ERP do SAP HANA\\
+SAP [[http://www.sdn.sap.com/irj/scn/go/portal/prtroot/docs/library/uuid/00de20e1-6160-2b10-b6ab-dedb9d10b8e8?QuickLink=index&overridelayout=true&32461362823501|TREXX]] - hledaci a klasifikacni engine v NetWeaver edici (wiz [[https://en.wikipedia.org/wiki/TREX_search_engine|wikipedie]])\\
+SAP XI (Exchange infrastructure) - EAI (enterprise application integration) sluzba na vymenu dat mezi firemnimi informacnimy  systemy a externimi IS\\
+
+====Aplikacni servery====
+ABAP Web Application Server for ABAP modules ... aplikacni server pro ABAP moduly\\
+Java Web Application Servers for Java modules ... aplikacni server pro java moduly\\
+
+====Pojmy====
+Legacy system ... puvodni informacni system, ktery musi jet s novym informacnim resenim\\
+
+====Nastroje====
+Alloy (IBM produkt na pristup do SAP aplikace z Lotus Notes)\\
+
+
+   

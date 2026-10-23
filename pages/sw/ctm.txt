@@ -1,0 +1,55 @@
+
+======BMC Control-M======
+
+Control-M pouziva tabulky ukolu. V kazde tabulce ukolu jsou nadefinovany ukoly. Kazda tabulka ma take prirazeno daily name (nazev casovace).
+Pro kazdy casovac je nadefinovana funkce "new day" (novy den), kdy se muzou aktivovat znova ukoly z tabulky.
+Kdyz ukol splni casovaci kriterium (scheduling criteria), tak se vlozi do casove tabulky (scheduling table).
+Kdyz ukol v casove tabukce splni aktivacni kriterium, tak se spusti (active job).
+
+
+====Agent====
+<h6>Status: </h6>
+ctmping\\
+ag_ping ... pingne server (node) - zjisti, zda funguje spojeni\\
+$CTMAGENT/scripts/ag_diag_comm ... diagnostika agenta, ukaze cast nastaveni, server, atd\\
+
+<h6>Start/Stop: </h6>
+$CTMAGENT/scripts/start-ag -p ALL -u ctmagent\\
+$CTMAGENT/scripts/shut-ag -p ALL -u ctmagent\\
+
+
+<h6>Ovladani</h6>
+ctmpsm -TABLE -LISTTABLE "*" ... vypise vsechny tabulky ukolu a nazvy casovace (daily name)\\
+ctmpsm -TABLE -LISTJOBS 28 ... seznam ukolu v casove tabulce c. 28 (z ctmps -TABLE -LISTABLE)\\
+ctmpsm -LISTAJFTAB  EXPORT-DAILY-APAC ... seznam jobu konkretni tabulky, a jejich stav v casove tabulce\\
+ctmpsm -LISTALL ALL \\
+ctmpsm -LISTALL ALL | grep 20141114 ... vypise vsechny joby na dany den\\
+ctmpsm -LISTJOB WAITTIME -SORT ORDERID ... vypise vsechny joby ze schedule table, ktere cekaji na spravny cas\\
+ctmpsm -LISTSYSOUT 00000fa6 ... vypise obsah sysout pro job 00000fa6\\
+ctmpsm -LISTFULLDETAILS 00000fa6 ... vypise parametry jobu\\
+ctmpsm -UPDATEAJF 00000f7b HOLD ... uspi job (FREE - uvolni, RERUN, ...)\\
+ctmpsm -UPDATETABLE EXPORT-DAILY-APAC HOLD\\
+ctmkilljob -ORDERID 00000cay ... ukonci job\\
+ctmorder -TABLE EXPORT-DAILY-APAC -name Purge_CPD -odate odate -FORCE y\\
+ctmudly -DAILY_NAME APACPPW ... seznam uklou pro UserDaily (casovac) APACPPW a jejich status\\
+
+<h6>Konfigurace</h6>
+export CONTROLM="/bmc/ctmagpp/ctm/"\\
+export IOA_HOME=$CONTROLM\\
+export LIBPATH="$LIBPATH:CONTROLM/exe"\\
+export PATH="$PATH:CONTROLM/exe"\\
+$CTMAGENT/data/OS.dat ... konfigurace parametru operacniho systemu\\
+$CTMAGENT/data/CONFIG.dat ... konfigurace parametru Control-M agenta\\
+
+====Server====
+ctm_menu\\
+ctmping\\
+ctmsetown ... konfikurace vlastnika procesu na "remote host"\\
+ctmhostmap ... seznam "remote host"\\
+ctmloadset ... reportovani CPU prostedku na load balancovanych nodech\\
+CTMLOG LIST 20141108 0900 20141108 2300 ... vylistuje logy od 8.11.2014 9:00 do 21:00\\
+CTMSCHEDT ... ukaze schedulovaci tabulku a DAILYNAME\\
+ctmudly -DAILY_NAME A2MPP -odate 20141109 ... ukaze jake ukoly jsou naplanovany do 9.11.2014\\
+   
+   emreportcli ... vyexportuje reporty z EM Reoport Facility (alerty)\\
+   em ctl ... ovladani komponent EM\\

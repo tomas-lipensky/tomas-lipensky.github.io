@@ -1,0 +1,380 @@
+# Lean
+
+Metodologie zahrnující Agile - iterativní přístup, nebo třeba Kanban. Lean (z Toyoty) dělá jen hodnotné věci, nehodnotné zahazuje. Principy: Eliminate waste, Amplify learning - learn from failures, Decision making - consider all  posibilities, Early delivery, Team empowerement - tým rozhoduje, Build ingerguty, See in larger picture. Value mapping. Brainstorming. Seven forms of waste. Každý proces dělá waste: Software waste - extra features, Partly work done, extra process in software, task switching, splitting tassk between teams, waiting teams, Defects. 5 kroku: Specifikovat hodnotu, identifikovat value stream, create flow, pull based system like Kanban, Continuous improvement
+
+Kanban (Toyota): Princip toku: Zaměřování na odstraňování problému. Vizualizace (Kanban board(, omezení počtu věcí v in progres stavu. Lead time - start to end time for a process, čas na dodání produktu. Cycle time - čas na dodání. Lead time = work-in-progress/throughput
+
+# Agile
+
+Agile je jeden project management metodologie, podobně jako waterfall model. Umožňuje měnící se požadavky, časté dodávky, iterativní a inkrementální přístup.  
+Waterfall - (inicializace, planování, provádění, monitorování a kntrola, uzavírání) změny drahé, musí se zmrazit požadavky, komplexní vše naplánovat, mění se technologie, těžké získat dohodu. Agilni metodologie: Scrum, Extrémní programování, Crystal, FDD, DSDM, AUP Agile Unified Process, ScrumBan...
+
+XP Extreme Programming - Test driven development, Refactoring, Pair programming, Simple design, Collective Code Ownership, Soding standards, Continuous integration, System metaphor, Sustainable pace, Whole team, Planning games, Small releases, Onsite customer, Energized team (chodit domů včas, ...), Informative workspace. Jestli je něco z toho dobré, tak to děláme vždy. XP tým zahrnuje zákazníky, vývojáře a testery, independent, selforganizing, multifunctional. Types of customers: Product managers, Domain experts, Interaction Designers, business analysts. Cross platform skills, 4-10 členů týmu, Testeři nemají specialní roli, 1 tester na 6 vývojářá
+
+Crystal - Frequent delivery, Reflective improvement, Osmotic communication, distribuční listy kam chodí komunikace, access to expert users.
+
+DSDM - Dynamic Systems Develepment Method - www.agilebusioness.com. Principy: User involvments, Requirements evolve and timeboxed, Early delivery, Follow80-20 rule - 80% hodnoty z 20% práce, nothing is built perfectly first time. Planning philosophy: Daný čas a cena, zákazník si vybírá naimplementované věci.  
+Timeboxing in MoSCoW prioritization - Time limit is fixed, tasks are fit into timebox (day, week, release). Must Should, Could Won't done now. Every timebox we decide what is M, S, C, W. Must<50%, Couls 10-20%
+
+## Reference
+
+Exin handbook for scrum masters and product owners  
+www.stateofagile.com - proč agile  
+www.standishgroup.com - statistiky firem  
+
+Agile Manifesto - popisuje hlavní hodnoty Agilního přístupu - Individuum > proces, funkčnost > dokumentace, reakce na změnu > plán, zákazník > kontrakt
+
+Agile principles:
+1. uspokojit zákazníka brzkýma a častýma dodávkama
+2. Příjmat změny, i když zdrží dodávku
+3. dodávat hodnoty často
+4. Business and development musi pracovat spolu na denní bázi
+5. Motivovat lidi a věřit jim
+6. přímá a otevřená komunikace
+7. Fungujici produkt je hlavní způsob měření stavu
+8. Dodávka je udržitelná, udržitelné tempo
+9. neustálá pozornost na kvalitu a dobrý design
+10. Jednoduchost
+11. Nejlepší řešení přichází přímo z týmu - důvěra týmu
+12. neustálé zlepšování a učení
+
+##### Agile project management (APM)
+
+Envision: product vision, project scope (requirements), project team, project approach - technika  
+Speculate: epics - high lever requirelements, user storeies, release plan  
+Explore: sprint planning, delivering values, ...  
+Adapt: learn and go back to speculate or to close - transition to the support  
+
+# Scrum
+
+Reference:
+www.scrumguides.org  
+
+Pilíře: transparence, inspekce, adaptation
+
+Values: Commitment, Focus, Openness, Respect, Courage
+
+Proces Product backlog -> sprint planning -> sprint backlog -> sprint run, standups -> sprint review
+
+cesta ke Scrumu
+ADAPT (Awareness, Desire, Ability, Promotion,  Transfer)  
+ADKAR (Awareness, Desire, Knowledge, Ability, Reinforcement)  
+Musíme vědět co očekáváme a jestli to Scrum donese
+
+**Balances score cards**, obsahuji future orientation metrics Employee metriky, (business values delivered by scrum - saving and revenue, new features, faster delivery), excelence metrics - predictibility of time to feature, prodductivity of team, quality metrics - defects, issues, customer orientation metrics - protuct performance, uptime, satisfaction, loyality
+
+### Backlog
+
+Seznam pracovních úkolů pro projekt, tým, produkt, sprint. Typy úkolů:
+* user story - dává hodnotu, user perspective
+* Epic - velké user story na několik sprintu, upravidla obsahuje několik storek
+* Feature - jedinečná vlastnost, která se dodá do produktu - jedna nebo více storek
+* úkoly na adresování rizik (SPIKE story)
+* Bug - úkoly na opravy chyb
+* Task
+
+### User story
+
+User storka je popis požadavků z uživatelské perspektivy. Přináší benefit pro uřivatele nebo investora.  
+
+INVEST model k popsání User story - Independent, Negotiables, Valuable, Estimable, Small, Testable.  
+Independent na ostatních user story, Negotiable - dobře popsané, Valuable - hodnota pro business, Estimable - dost informací potřebných k udělání, Small dost malé na dodělaní ve sprintu, Testable - acceptance test
+
+Story card: Nadpis, kód, popis kdo co chce a proč, acceptance criteria, priorita
+
+Acceptance criteria od PO. Jak se to chová za kterých podmínek - funkční, nebo nefunkční kriteria (bezpečnost, rychlost)
+
+Charakteristika úkolů v backlogu - DEEP:
+* Detailed properly
+* Estimated
+* Emergent
+* Prioritized
+
+Rozdělění storek na měnší:
+* Operational boundaries: create, retrieve, update, delete
+* data boundaries: uživatel, produkt, ...
+* Separate exceptions
+* Research vs implementation
+* separate non functional requirements: performace, scalability, security
+
+Story mapping: minimally marketable feature - zobrazení klíčových aktivit jako diagram
+
+Business value - new revenue, Incremental revenue from existing customers, Retained revenue from who wants leave, operational efficiency
+
+Benefit-cost analysis: Payback period - za jak dlouho se vyplatí nová funkcionalita 100k/25k=4 roky, net present value (npv), return of investment 25k/100k=25%, Internal rate of return IRR
+
+Prioritizace - value risk matrix - 1) high risk, high value, 2) low rirsk, high value 3) low value low risk (do or not to do) low risk, low value, Kano model : Mandatory, linear - story které udělají zákazníka spokojeným, Exciters, delighters - zákazník neočekává. Value score - poměr mezi ziskem a pokutou. priorita=hodnota/(cena*riziko)
+
+User persona - Hypotetický uživatel - umožnuje se vcítit do uživatele. Jméno, role, učel co chce udělat, jeho běžné činnosti
+
+User story format: Co kdeo chce, co chce udělat a proč, detaily, acceptance criteria
+As a accountant, I waould like accoubt screen to be simple that I do not have to scroll up and down
+
+Definition of Done - obecne pravidlo, co platí pro všechny user story (plně implementováno, otestovano, bez otevřených defektů, automatické testy, bezpečné a rychlé, dokumentace …)
+
+Definition of Ready - pravidla pro to, že jsme připraveni pracovat na storce - rozumíme? Máme akceptační kritéria? Máme na to dost lidí/času? Jsou vyřešené závislosti? Ohodnotili jsme úkol? non-functional požadavky jsou definované?
+Acceptance criteria - pro story
+
+Minimaly marketable feature mmf
+
+##### Hodnota user story
+
+Business value: New revenue, incremental revenue, retained revenue (aby neodešli), operational efficiency — top priority
+
+Benefit cost analysis
+Payback period - za kolik let se investice vrati: 100000 investice, 25000 naklady, 4 roky navrat
+Returnon investment 25k/100k=0.25
+Net present value npv
+Internal rate of value irr
+
+##### Estimace
+
+Storypoints - univerzální, nezávislé na člověku
+1 small
+5 medium
+13 big
+linear or fibonaci, if betveen, then higher
+
+Metoda estimace: Affinity estimation - vytřídíme všechny story cards od nejmenších po největší, potom podobné storky ohodnotíme pomocí fibbonaciho posloupností, nebo t-shirt velikostí (S, M, L, ...) - relativní velikostí
+
+Planning poker, read story point, than discuss, than every choose size, than discussion, than agreement on size www.planningpoker.com
+fun, involves all, effective, discuss risks
+
+Ideal time - absolutni cas na storku - lisi se clovek od cloveka, lepe se vysvetli mimo tym
+
+## Role
+
+SM Scrum master - pomáhá týmu zvládnout práci, koučuje process, organizuje mítingy, eviduje problémy a pomáhá je překonat, eskaluje, pobízí k tvořivosti. NENI nadřízený, nerozhoduje, nevlastní tásky, nedělá mikromanagement, není technický vedoucí, nechává tým rozhodovat a vede tým ke shodě. Zná scrum, rozumí tématu, musí umět ovlivňovat tým, je trpělivý, skromný, kooperativní, zlepšuje náladu. Neměl by být ani technický vedouci, pak rozhoduje, může se střídat, ale jen ti, kdo mají předpoklady, může být na cástečný úvazek.
+
+PO Project owner - Vytváří vize produktu a diskutuje ji se zákazníkem, technickým vedoucím, vedením, týmem, vytváří backlog, prioritizuje, rozděluje do sprintů a do releasů, slaďuje očekávání, určuje akceptační kriteria. PO musí být k dispozici ke konzultacím a pro tým pro upřesňování, musí rozumět odvětví produktu, dobře komunikovat s různými audiencemi, umět dělat rozhodnutí. Může být několik PO a zastřešuje je Lead PO pro velký produkt. Musí být k dispozici pro Planning a dema. Nesmí moc tlačit na tým a na relesovaní nekvalitních produktu.
+
+Agile Team - Malý, max 9 lidí, multifunkční tým, odborníci v jedné oblasti, ale schopní učit se dělat obecné věci v jiných doménách, různí lidé (pohlaví, věk, etnikum). Tým musí být samostatný, organizuje si sám práci. Malý tým tolik nekoketuje, je konstruktivnější, méně času na míting, nikdo se nemůže skrýt za ostatní, zabraňuje se přílišné specializaci. Důležitá je spolupráce, všichni jsou si rovni (architekt, QA, ...)
+
+## Sprint
+
+Délka sprintu je obvykle 1-4 týdnů, závislá na:
+1. stabilitě backlogu - často se mění, kratší sprint
+2. obtížnosti úkolů - delší úkoly delší sprint, cenou iterace - víc ceremoniálů, méně času.
+3. získavání odezvy zákazníka a akcionářů
+
+## Ceremonie
+
+##### Backlog Refinement/Grooming
+
+detailní dolaďování věcí v backlogu: prioritizace, estimace, popis, klasifikace do Epiku/featur  
+
+##### Sprint Planning
+
+závazek na dodán, cíl sprintu určuje PO, tým si rozdělí úkoly pro sprint a mezi sebou. Objem úkolů buď podle historické výkonnosti týmu (velocity-driven approach), nebo jak se tým dohodne a zaváže (commitment-driven approach). Tým se musí shodnout a pochopit úkoly a akceptační kritéria. Pokud si tým bere moc, nebo málo, SM chce zdůvodnění. Musí se respektovat dovolená a svátky
+
+##### Daily stand-up/daily scrum
+
+Tým + SM. Co se stalo včera, co se bude dělat dnes, co je za problémy. Neslouží k micromanagementu, mělo by být hodnotné pro všechny sdílet i poslouchat  
+
+##### Sprint Review/Demo
+
+tým, SM, PO, mohou být akcionáři či jiná audience. Cíl je prezentovat produkt sprintu, získat odezvu a případně přidat nové úkoly do backlogu. Výsledek musí být příjmán pozitivně, stejně tak zpětná vazba. Nemá se moc diskutovat nové řešení, ale očekáváni.  
+
+##### Retrospective
+
+tým + SM - zviditelnit problémy a najít cestu, jak to dělat lépe. Tým by měl vzít zlepšení pro sebe, ne jen obviňovat. Příležitost i k oslavám.  
+
+Velocity and planning - velocity - productivity of the team - work done in a sprint in story points, average value for past sprints
+
+Planning onion - vision, roadmap, release, sprint, daily
+
+Release planning - goal of release, select stories aligned to the goal, estimate and prioritize, determine sprint size, estimate team velocity, assign individual user stories to the sprint - do it together, to not have aggressive release plan
+Good to assign just some first iterations, rest of backlog tentative. Possible to use buffer. Plan can change
+
+Release planning process flowchart
+determine High level business goals —> decide epics, storeies -> estimate user stories, ->iteration size -> estimate velocity, -> prioritize -> select stories to iterations and release date
+Common failure - use sprints for specific activities, not for deliverables -> schedule risks, longer go from idea to feature
+
+### Měření, budíky stavu vývoje
+
+Burn down and burn up charts (information radiators)
+Burn down chart -linear chart how many work rest to the end of the project (ideal task remaining versus actual work)
+burndown bar chart - similar, but bars, starting from 0 or another number
+burn-up chart - how much done since start of project
+parking lot chart - project stutus - features groupped, green done, red attention, yellow in progress
+Scrum board - kanban board - todo, doing, done
+Nico Nico calendar - feeling of every of team - smaily per user and day
+
+* Měříme jen podstatné věci
+* Zaměřujeme se na trendy a předpovědi, ne jen na hodnoty
+* zaměření na týmové metriky
+* měříme pro zlepšování, ne pro trestání
+
+Other information radiators:
+Impediment log - list of impediments, and their status Resolved/outstanding
+cummulatiove flow diagram - square with status of workitems blue - backlog, green started yelllow designed, grey coded, red complete - in time
+
+### Velké projekty
+
+1. omezit velikost backlogu na 150, víc detailu ke storkám dříve
+2. používat Epiks a Themes
+3. Product line owner nad PO, Chief product owner
+4. one backlog per product, týmy mají jen view na svoje
+
+Scrum-of-scrums
+
+Standup zástupců jednotlivých týmu, nemusí být denně, probírají sezávislosti, problémy, co se dělalo před mítingem a do dalšího mítingu
+
+Plannig practices
+
+1. pravidla pro estimaci, aby všichni měli podobné estimace
+2. kick-of meeting - zástupci různých týmů
+3. look-ahead plan - přemýšlet víc plánů dopředu, hledat závislosti
+4. feeding buffer - extra dny mezi závislosti, sdílení lidí - lepší spolupráce a sdílení expertýzy.
+5. Establish integration teams - poskytují integrační nástroje, automatické testy ...
+
+FDD Feature Driven Development
+
+Scaling Framework
+
+Scaled Agile Framework SAFe - practices for scaled scrum. scaledagile.com
+
+Team level
+Program level
+Portfolio level
+
+Large Scale Scrum LeSS
+
+www.less.works Principes:
+
+1. Transparency
+2. More with Less
+3. Whole product focus
+4. Customer centric
+5. CI
+6. Lean thinking
+7. System Thinking
+8. Queue theory
+
+Scrum@Scale
+
+Disciplined Agile
+
+Nexus - skupiny týmů
+
+www.scrum.org
+
+##### Geograficky distribuované týmy
+
+* důležitost komunikace
+* vybírat časy vhodné skrz časové zóny, klidně zdvojit mítingy
+* komunikace audiovizuální
+* potřeba dát důvěru
+* občas potřeba vidět se fyzicky
+
+### Vhodnost Scrumu
+
+* Malé projekty
+* Projekty, kde je více alternativ, kde se zkoumají možnosti
+* Projeky, kde se mění často požadavky
+* Projekty, kde se setkaváme se zákazníky
+* Kde jsou potřeba ekonomické dodávky
+* požadavky na časté dodávání, například změny postupů atd.
+
+Co ovlivňuje použití Scrumu:
+* Vyspělost orgranizace na vysokou úroveň spolupráce
+* Podpora pro měnící se plánování
+* Ochota organizaci dát týmům autonomii
+* Podpora managementu a zákazníka
+
+### Nástroje
+
+##### Porject management nástroje
+
+* Práce s backlogem
+* tvoření releasu
+* přiřazení úkolů lidem
+* grafy a budíky
+* Editace statusů
+* Práce se storkama
+* Práce s hierarchií
+
+##### Inženýrské nástroje
+
+* Automatizační nástroje
+* testovací nástroje
+* CI CD
+* Validace kvality
+
+##### Testy
+
+Testovací pyramida: doporučené hodnoty 80% unit testy, 15% end-to-end testy, 5% UI testy
+
+### Agile transformace
+
+* Malý expriment : malé riziko, lze vybrat vhodný projekt (malý nezíská důvěru, velký může ztratit důvěru a trpělivost. Ideální: z 2/3 největší, nejůležitější, nejdelší, nejbohatší), garantuje brzký úspěch, redukuje nechuť. Ideální zvolit více pilotů a mít realistické očekávání
+* Všichni do toho : rychlejší transformace, menší cena, vzájemné učení
+
+##### Vzory adopce
+
+* public display - velká ochota organizace, versus tajný - pokud je silná resistence
+* Split-and-seed uspěšný tym se rozdělí a realokují se lidi do ostatních týmů - agenti, rychlejší šíření
+* Grow-and-split rozdělí se úspěšný tým na 2, hlubší šíření
+* Technická adopce od prvního dne, nebo po krocích (když je resistence)
+
+##### Tým
+
+* evangelisti
+* optimisti
+* otevření skeptici
+
+##### Iterativnost a inkremence
+
+přidávat postupně. Backlog pro transformaci, sponzor by měl věřit v Agile a být trpělivý, transformační komise Enterprise Transition Comitee, která řídí transformaci a identifikuje rizika
+
+##### Improvement comitee
+
+Skupina zaměřená na zlopšování, např. automatické testování
+Expectation up-front - nesmí být moc malé ani moc velké očekávání.
+* Pocity týmu: moc času na schůzkách. Časem se naučí vést mítingy efektivněji
+* Testeři : proč testovat opětovně nedokončenou práci?
+* Hvězdy nechtějí ztratit slávu
+* Procesně orientovaní: Méně dokumentace a formálnosti v procesech
+* Zákazník: proč trávit tolik času s týmem?
+
+Kulturní změny:
+* zmenšit specializaci
+* přiměřené výzvy
+* sdílení znalostí a profesní růst
+* čas na vzdělávání
+ Vítat rozdílnost
+
+Typy lidí:
+* konzervativní - prospěšní v plánování - vidí rizika
+* pragmatici - umí dělat kompromisy a zklidňovat konflikty
+* optimisti - šíří chuť do změn
+
+##### Řízení neochoty
+
+1. sabotéři - aktivní, nemají rádi scrum - potřeba jednat pevně, sdílet úspěchy, když nepomůže  přesun
+2. Skeptici - pasivní, nemají rádi scrum - dodat data
+3. nasledovníci - pasivní, nemají rádi změny - dodat data a adresovat  jejich obavy
+4. Diletanti - aktivní, nemají rádi změny - pokud se jim věnuje, mohou být podporovatelé
+
+Časté chyby:
+* nedostatečné vysvětlení z managementu
+* málo spolupráce
+* příliš velké očekávání od investoru
+* Překážky
+* nedostatečné věnování se dokončování
+* příliž ambicí, nebo žádné ambice si brát úkoly
+* špatně popsané úkoly
+* špatná kvalita
+
+Kulturní změny:
+* lidi musí cítit zodpovědnost za týmové cíle
+* vyzdvihovat jinakost v týmu
+* Self-organization, důvěra v rozhodnutí
+* potřeba stanovit hranice kompetenci
+* potřeba diskuzí
+
+Maturity model  
+* hodnocení, různé modely: Harman, Thoughtworks,  Cape management
+* vytvoření KPA (metrik) pro sledování
+* plán na zlepšení
+* implementace zlepšování

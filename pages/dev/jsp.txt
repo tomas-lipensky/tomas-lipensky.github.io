@@ -1,0 +1,101 @@
+
+
+======Java Servlet Pages======
+
+====Obsah:====
+[[#odkazy|Externi odkazy]]\\
+[[#HTMLznacky|JSP HTML znacky]]\\
+[[#promenne|JSP XML znacky]]\\
+[[#operatory|JSP HTML Skriptlety]]\\
+[[#podminky|JSM XML Skriptlety]]\\
+[[#tridy|JSP HTML Deklarace]]\\
+[[#priklady|JSP XML Deklarace]]\\
+
+<a name="odkazy|]]
+====odkazy:====
+[[http://docs.oracle.com/javaee/6/api/index.html|JAVA API Docs]] on Oracle\\
+[[java.html|JAVA]]\\
+
+
+<a name="HTMLznacky|]]
+====HTML - Skriptovaci znacky====
+
+Jsou jednotlive prikazy, je k dispozici [[http://www.tutorialspoint.com/jsp/jsp_implicit_objects.htm|8 objektu]]
+
+
+&lt;%= [[http://www.roseindia.net/jsp/requestobjectinjsp.shtml|request]].getParameter ("title") %&gt; ... vypise GET parametr "title"\\
+&lt;%= request.getRemoteHost () %&gt; ... vypise pocitac klienta\\
+&lt;%= [[http://www.exforsys.com/tutorials/jsp/jsp-response-object.html|response]].setContentType ("text/plain") %&gt; ... odpoved bude prosty text\\
+&lt;%= [[http://www.exforsys.com/tutorials/jsp/jsp-implicit-and-session-objects.html|session]].getId ("title") %&gt; ... vypise id sezeni\\
+&lt;%= new java.utilDate() %&gt; ... vypise cas\\
+&lt;%= out.println ("ahoj") %&gt; ... vypise ahoj\\
+&lt;%= [[http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html|config]].getInitParameter("hello");%&gt; ... ziska paramert hello z web.xml\\	
+
+<a name="XMLznacky|]]
+====JSP XML Skriptovaci znacky====
+
+V xml dokumnetech je se nepouziva &lt;% a %&gt; ale &lt;[[http://www.roseindia.net/jsp/xml-xhtml-jsp.shtml|jsp:expression]]&gt; a &lt;jsp:/expression&gt;]]
+
+
+&lt;jsp:expression&gt; request]].getParameter ("title") &lt;jsp:/expression&gt;
+
+
+====JSP HTML Skriptlety====
+
+Jsou casti kodu, ktere se vkladaji do zkompilovaneho servletu z JSP
+
+
+&lt;% String queryData = request.getQueryString();\\
+&lt;% if (pravda) { %&gt; ahoj &lt;% } %&gt; ... vypise ahoj, pokud promenna pravda je pravdiva\\
+out.println ("Attached GET data: " + queryData); %&gt; ... Sktiptlet, ktery vypise prilozene GET data\\
+&lt;jsp:scriptlet&gt; if (Math.random() < 0.5) { &lt;/jsp:scriptlet&gt; MENSI &lt;jsp:scriptlet&gt; } &lt;/jsp:scriptlet&gt; ... skriptlet, ktery podminien vypise MENSI\\
+
+====JSP XML Skriptlety====
+
+Vkladaji se do dvojic &lt;jsp:scriptlet&gt; a &lt;/jsp:scriptlet&gt;
+
+
+&lt;% String queryData = request.getQueryString();\\
+out.println ("Attached GET data: " + queryData); %&gt; ... Sktiptlet, ktery vypise prilozene GET data\\
+&lt;jsp:scriptlet&gt; if (Math.random() < 0.5) { &lt;/jsp:scriptlet&gt; MENSI &lt;jsp:scriptlet&gt; } &lt;/jsp:scriptlet&gt; ... skriptlet, ktery podminien vypise MENSI\\
+
+====JSP HTML Deklarace====
+
+Jsou casti kodu, ktere se davaji do hlavniho tela tridy servlety (vne jspService, neco jako do init u scriptletu)
+
+
+&lt;%! private int accessCount = 0; !&gt; ... vytvori promennou\\
+
+====JSP XML Deklarace====
+
+Vkladaji se mezi &lt;jsp:declaration&gt; a &lt;jsp:declaration&gt;
+
+
+====JSP HTML Direktivy====
+&lt;%@ page import="package.class,java.util.*" %&gt; ... naimportovani tridy, ktera pak bude k dispozici\\
+&lt;%@ page contentType="text/plain" %&gt; ... Volba typu Content-Type (to same jako response.setContentType trida)\\
+&lt;%@ page contentType="application/vnd.ms-excel" %&gt; ... Volba typu Content-Type (to same jako response.setContentType trida)\\
+&lt;%@ page isThreadSafe="true" %&gt; ... JSP pojede v single thread modu\\
+&lt;%@ page session="false" %&gt; ... znemozni pouziti session (sezeni)\\
+&lt;%@ page buffer="32kb" %&gt; ... nastavi velikost vyrovnavaci pameti na 32kb - pozadavek se odesle uzivateli, az bude mit 32 kb\\
+&lt;%@ page autoflush="true" %&gt; ... vyrovnavaci pamet (buffer) se automaticky vyprazdni, dojde li k preteceni (jinak vyjimka)\\
+&lt;%@ page info="Info o tomto JSP" %&gt; ... Text ktery se vyvola tridou getServletInfo\\
+&lt;%@ page import="package.class,java.util.*" %&gt; ... naimportovani tridy, ktera pak bude k dispozici\\
+&lt;%@ page errorPage="chyba_zpracovani.html" %&gt; ... v pripade neosetrene vyjimky se zobrazi nadefinovana stranka\\
+&lt;%@ page isErrorPage="true" %&gt; ... ato stranka se chova jako chybova (je strankou, na kterou odkazuje errorPage, vyjimka se zobrazi pomoci JSP znacky "exception", nebo trida scriptletonem exception.prontStackTrace (new PrintWriter(out)); \\
+&lt;%@ include file="navigacni_pruh.jsp" %&gt; ... v dobe kompilace servletu z JSP vlozi na toto misto jiny kod (aktualizuje se v dobe zmeny hlavniho JSP\\
+&lt;jsp:include file="navigacni_pruh.jsp" flush="true" %&gt; ... v dobe pozadavku JSP vlozi na toto misto jiny staticky kod\\
+&lt;jsp:plugin type="applet" code="applet.class" width="100" height="200" %&gt; ... vlozi na toto misto applet\\
+
+
+
+
+====JSP XML Direktivy====
+&lt;%jsp:directive.page import="package.class,java.util.*" /&gt; ... naimportovani tridy, ktera pak bude k dispozici\\
+
+
+
+
+
+
+   
