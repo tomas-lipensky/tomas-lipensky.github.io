@@ -1,8 +1,10 @@
-### Odkazy
+# Kubernetes
+
+## Odkazy
 
 [Changelog](https://github.com/kubernetes/kubernetes/tree/master/CHANGELOG) ... popis změn v jednotlivých verzích  
 
-### Architektura
+## Architektura
 
 Kubernetes běží nad konternerizační službou, jako Docker, ContainerD, cri-o atd. Na omezování zdrojů pro pody se používá cgroups.
 
@@ -61,7 +63,7 @@ Gremlin ... doplnek na testovani bezpecnosti, provede utok na CPU, pamet a overi
 [Keda](https://keda.sh/) ... Kubernetes Event-driven Autoscaling - Event-based skalovani, umoznuje skalovani od 0 podu, skalovani podle http requestu, poctu zprav ve fronte atd.  
 DAPR - Distributted APplication Runtime - nabizi okolni zdroje (aplikace - Service mash, hesla, storage, fronty) jako localhost:xxxxx/neco URL (sidekara k aplikaci)  
 Osiris ... doplnek na skalovani od 0 podu  
-[automatizace:helm](automatizace/helm) templatovací jazyk pro kubernetes  
+[automatizace:helm](helm) templatovací jazyk pro kubernetes  
 Knative serving ... skalovani od 0 podu, byuziva Istio  
 Linkerd ... jak istio, nebo Aspen,, ale lehci  
 [kustomize](https://kustomize.io/) ... Kubernetes configuration management, umí se odkazovat na sdílený kód mezi aplikacema, nepoužívá parametry (temlaty) jako helm  
@@ -158,18 +160,18 @@ Balickovaci system pro Kubernetes yamly (konfigurace), chart je balicek Helmu. D
 [https://hub.helm.sh](https://hub.helm.sh) ... Repozitar Helmovych balicku  
 
 `helm version`  
-`%%helm install --name ingress stable/nginx-ingress --debug%%` ... nainstaluje nový Helm chart - debug - ladící výstup  
-`%%helm template . --name myrelease%%` ... vezme defaultni hodnoty a vytvori vystup ze sablony na stdout (pro kontrolu vystupu a syntaxe)  
-`%%helm template . --name myrelease --set app.customvariable=aa,app.customnumber=2%%` ... jak predtim, ale vyzkousi vymenu parametru  
-`%%helm upgrade --install myrelease . --set app.image.repository=${DOCKER_REGISTRY} --namespace x%%` ... nainstaluje, nebo updatuje  
-`%%helm upgrade -i tester ealenn/echo-server --debug%%` ... instaluje, nebo upgraduje z repozitáře ealenn chart echo-server pod release name tester  
+`helm install --name ingress stable/nginx-ingress --debug` ... nainstaluje nový Helm chart - debug - ladící výstup  
+`helm template . --name myrelease` ... vezme defaultni hodnoty a vytvori vystup ze sablony na stdout (pro kontrolu vystupu a syntaxe)  
+`helm template . --name myrelease --set app.customvariable=aa,app.customnumber=2` ... jak predtim, ale vyzkousi vymenu parametru  
+`helm upgrade --install myrelease . --set app.image.repository=${DOCKER_REGISTRY} --namespace x` ... nainstaluje, nebo updatuje  
+`helm upgrade -i tester ealenn/echo-server --debug` ... instaluje, nebo upgraduje z repozitáře ealenn chart echo-server pod release name tester  
 `helm ls` ... seznam nainstalovanych chartu  
-`%%helm delete --purge aaa%%` ... smaze helm release  
+`helm delete --purge aaa` ... smaze helm release  
 `helm search hub redis` ... vyhledá v repozitáři [ArtifactHub](https://artifacthub.io/) vše pro redis  
-`%%helm repo add bitnami ht‌tps://charts.bitnami.com/bitnami%%` ... přidá repozitář  
+`helm repo add bitnami ht‌tps://charts.bitnami.com/bitnami` ... přidá repozitář  
 `helm repo list` ... vylistuje repozitáře  
 `helm search repo bitnami` ... prohledává v repozitářích  
-`%%helm fetch bitnami/apache --untar%%` ... stáhne a rozbalí helm chart  
+`helm fetch bitnami/apache --untar` ... stáhne a rozbalí helm chart  
 `helm uninstall tester` ... odinstaluje helm release tester  
 
 #### Struktura
@@ -183,16 +185,16 @@ templates/_helpers.tpl
 
 jsou uzavřené ve dvojitých složených závorkách `![]()`
 
-`%%![ template "fullname" ]( template "fullname" . )%%`  
-`%%![ .Chart]( .Chart.Name )-![ .Chart]( .Chart.Version )%%`  
-`%%![ .Release]( .Release.Name )%%`  
-`%%![ b64enc | quote ]( default "" .Values.mariadbRootPassword )%%`  
+`![ template "fullname" ]( template "fullname" . )`  
+`![ .Chart]( .Chart.Name )-![ .Chart]( .Chart.Version )`  
+`![ .Release]( .Release.Name )`  
+`![ b64enc | quote ]( default "" .Values.mariadbRootPassword )`  
 
 ### Kubectl
 
 [kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/#kubectl-context-and-configuration)  
 
-`%%kubectl --v=10%%` ... maximální verbosita, ukáže i API volání ve formě curl příkazu  
+`kubectl --v=10` ... maximální verbosita, ukáže i API volání ve formě curl příkazu  
 `kubectl api-resources` ... seznam zdrojů, např. pod, deploy  
 `kubectl explain pods.spec.containers` ... popis zdroje pod.spec.containers  
 
@@ -201,9 +203,9 @@ jsou uzavřené ve dvojitých složených závorkách `![]()`
 `kubectl config view` ... ukaze konfiguraci kubectl  
 `kubectl config get-contexts`  ... ukaze konfigurovane pripojeni  
 `kubectl config current-context`  ... ukaze aktualni pripojeni  
-`%%kubectl config view --minify -o jsonpath='{..namespace}'%%` ... ukaze vychozi namespace  
+`kubectl config view --minify -o jsonpath='{..namespace}'` ... ukaze vychozi namespace  
 `kubectl config use-context my-cluster-name`  ... nastavi aktualni nastaveni  
-`%%kubectl config set-context --current --namespace=NS%%` ... nastavi vychozi namespace  
+`kubectl config set-context --current --namespace=NS` ... nastavi vychozi namespace  
 KUBE_EDITOR="nano" ... nastavení editoru  
 ~/.kube/config ... konfigurace kubectl  
 ~/.kube/cache/discovery ... uložené předchozí hodnoty z běhu kubectl  
@@ -220,8 +222,8 @@ kubectl --kubeconfig ./admin.conf get nodes ... pusti kubectl s vlastnim confige
 #### events, ev
 
 `kubectl get events` ... ukaze udalosti clusteru  
-`%%kubectl get events --field-selector involvedObject.kind=Node, involvedObject.name=<node_name>%%`  
-`%%kubectl get events --field-selector type!=Normal%%`  
+`kubectl get events --field-selector involvedObject.kind=Node, involvedObject.name=<node_name>`  
+`kubectl get events --field-selector type!=Normal`  
 
 #### namespace, ns, re
 
@@ -238,7 +240,7 @@ API objekt reprezentující server, na kterém jede virtualizace a komponenty ku
 `kubectl get nodes` ... Seznam nodu  
 `kubectl describe minikube` ... popíše node, včetně využití resourců a podů  
 `kubectl top nodes` ... ukáže metriky podů  
-`%%kubectl taint nodes --all node-role.kubernetes.io/control-plane-%%` ... odstraní blokování nodu pro control plane aktivity  
+`kubectl taint nodes --all node-role.kubernetes.io/control-plane-` ... odstraní blokování nodu pro control plane aktivity  
 `kubectl taint nodes worker bubba=value:PreferNoSchedule` ... nodu worker přidá taint bubba:PreferNoSchedulle  
 
 ##### pods
@@ -248,20 +250,20 @@ Pod je jeden či více kontejnerů sdílející stejnou IP adresu, případně s
 `kubectl cp /cesta/k/souboru NAMESPACE/JMENO_PODY:/cesta/k/souboru` ... kopirovani souboru z/na POD  
 `kubectl describe pod aaaa -n nnnn` ... podrobne informace o podu  
 `kubeclt edit po nginx` ... editace podu  
-`%%kubectl exec -it aaa-6d5f854689-f28zp --namespace=default -- /bin/bash%%` ... spusti na danem podu bash  
+`kubectl exec -it aaa-6d5f854689-f28zp --namespace=default -- /bin/bash` ... spusti na danem podu bash  
 `kubectl attach POD1` ... připojí se do podu POD1 do spušťeného procesu  
-`%%kubectl debug POD1 --image debian --attach%%`  
+`kubectl debug POD1 --image debian --attach`  
 `kubectl get pods`  
 `kubectl get po nginx -w` ... sledování podu  
 `kubectl get pods -o=jsonpath="{.items[*]['metadata.name', 'metadata.namespace']}"` ... vypíše jen název a namespace ve formátu json  
-`%%kubectl get po nginx -o yaml --export%%` ... yaml s definicí podu, bez pod specifických informací  
+`kubectl get po nginx -o yaml --export` ... yaml s definicí podu, bez pod specifických informací  
 `kubectl get pods.metrics.k8s.io` ... ukáže metriky podů  
 `kubectl logs POD -n namespace` ... logy podu  
-`%%kubectl logs --since=1h <pod_name>%%` ... za poslední hodinu  
-`%%kubectl logs --tail=20 -f <service_name> [-c <$container>]%%` ... sledování logu (musí se přerušit ctrl-c) pro kontejner  
-`%%kubectl logs --previous POD%%` ... logy posledního failnutého podu  
-`%%kubectl run nginx --image=nginx --RM --restart=Never -- bash%%` ... vytvoří pod a spustí na něm příkaz, po skoncě  
-`%%kubectl run nginx2 --image=nginx --port=80 --dry-run -o yaml%%` ... vypíše yaml pro pod, nespustí  
+`kubectl logs --since=1h <pod_name>` ... za poslední hodinu  
+`kubectl logs --tail=20 -f <service_name> [-c <$container>]` ... sledování logu (musí se přerušit ctrl-c) pro kontejner  
+`kubectl logs --previous POD` ... logy posledního failnutého podu  
+`kubectl run nginx --image=nginx --RM --restart=Never -- bash` ... vytvoří pod a spustí na něm příkaz, po skoncě  
+`kubectl run nginx2 --image=nginx --port=80 --dry-run -o yaml` ... vypíše yaml pro pod, nespustí  
 `kubectl set image pod/nginx nginx=nginx:1.15-alpine` ... změní verzi obrazu (upgrade)  
 `kubectl top pods` ... ukáže metriky podů  
 `kubectl port-forward mongo 28015:27017` ... přesměruje tok z podu na lokálí stroj, lze směrovat i z deploymentu, replicasety a servicy (deployments/aaa, ..)  
@@ -271,7 +273,7 @@ Pod je jeden či více kontejnerů sdílející stejnou IP adresu, případně s
 
 Deploymenty řídí replicasety, tedy identické kopie podů
 
-`%%kubectl create deploy --image=nginx --dry-run=client -o yaml%%` ... vytvoří a ukáže yaml šablonu pro deployment  
+`kubectl create deploy --image=nginx --dry-run=client -o yaml` ... vytvoří a ukáže yaml šablonu pro deployment  
 `kubectl get pod,deploy,rs -n default` ... seznam podu, deployu a replika setu v namespace default  
 `kubectl get pod -L key1,key2, -l evn=prod` ... vylistuje pody které mají label env=prod, ukáže hodnoty labelu key1 a key2  
 `kubectl edit deployment.v1.apps/nginx-deployment` ... editace deploye  
@@ -282,15 +284,15 @@ Deploymenty řídí replicasety, tedy identické kopie podů
 `kubectl rollout status deployment/deploy1` ... stav rolování deploymentu  
 `kubectl rollout pause deployment/deploy1` ... pauza rolování deploymentu  
 `kubectl rollout resume deployment/deploy1` ... Obnova rolování deploymentu po pauze  
-`%%kubectl scale deployment sftp-la-service --replicas=1 -n default%%` ... skalovani  
-`%%kubectl autoscale deployment AAA --min=2 --max=10%%` ... autoškálování  
+`kubectl scale deployment sftp-la-service --replicas=1 -n default` ... skalovani  
+`kubectl autoscale deployment AAA --min=2 --max=10` ... autoškálování  
 
 `kubectl apply -f azure-vote.yaml` ... Deploy aplikace  
-`%%kubectl teplace -f azure-vote.yaml --force%%` ... přenasazení aplikace ze souboru /po modifikaci souboru/  
+`kubectl teplace -f azure-vote.yaml --force` ... přenasazení aplikace ze souboru /po modifikaci souboru/  
 `kubectl label pods POD novy-label=bbb` ... přidá label  
 `kubectl label node AAA novy-label=ccc` ... olabeluje node  
 `kubectl annotate pods POD anotace1=aaa` ... přidá anotaci  
-`%%kubectl annotate pods --all description='Production Pods' -n prod%%` ... pridá popisek/anotaci všem podům v namespace prod  
+`kubectl annotate pods --all description='Production Pods' -n prod` ... pridá popisek/anotaci všem podům v namespace prod  
 `kubectl -n prod annotate pod webpod description-` ... smaže anotaci  
 `kubectl rolling-update` ... Rolování změn replicasetu, nesmí spadnout sešna, jinak se nepovede  
 `kubectl delete rs rs-one --cascade=orphan` ... smaže replicaset, ale podechá pody, které teď nic nespravuje, když se znovu vytvoří rs, bude je opět sprovavat  
@@ -301,14 +303,14 @@ automatické horizontálí škálování (nové pody) pro deploy, nebo statefuls
 
 kubectl get horizontalpodautoscalers ... ukáže pravidla pro automatické horizontálí škálování  
 kubectl describe hpa ... ukáže nastavení HPA  
-`%%k patch scaledobject SERVICE-scaledobject --type=json -p='[{"op": "add", "path": "/metadata/annotations/autoscaling.keda.sh~1paused", "value": "true"}]'%%` ... pauzne škálování  
-`%%k patch scaledobject apixproxy-connector-scaledobject --type=json -p='[{"op": "remove", "path": "/metadata/annotations/autoscaling.keda.sh~1paused", "value": "true"}]'%%` ... odpauzuje škálování  
-`%%k patch ScaledObject SERVICE-scaledobject --type=json -p='[{"op": "replace", "path": "/spec/minReplicaCount", "value": 1}]'%%` ... změní škálování od 1 repliky  
+`k patch scaledobject SERVICE-scaledobject --type=json -p='[{"op": "add", "path": "/metadata/annotations/autoscaling.keda.sh~1paused", "value": "true"}]'` ... pauzne škálování  
+`k patch scaledobject apixproxy-connector-scaledobject --type=json -p='[{"op": "remove", "path": "/metadata/annotations/autoscaling.keda.sh~1paused", "value": "true"}]'` ... odpauzuje škálování  
+`k patch ScaledObject SERVICE-scaledobject --type=json -p='[{"op": "replace", "path": "/spec/minReplicaCount", "value": 1}]'` ... změní škálování od 1 repliky  
 
 #### replicaset, rs
 
 `kubectl describe replicaset.extensions/aaa-6d5f854689 -n default` ... popis repliky podu  
-`%%kubectl scale --replicas=3 rs/AAA%%` ... nastavení škálovaní pro replica set  
+`kubectl scale --replicas=3 rs/AAA` ... nastavení škálovaní pro replica set  
 
 #### statefulset, sts
 
@@ -337,8 +339,8 @@ API objekt, spravující metriky pro škálování a vyvolávání žádosti o p
 ##### =configmaps
 
 `kubectl get cm`  
-`%%kubectl create configmap mysqlenv --from-literal=WORDPRESS_DB_HOST="mysql:3306%%"` ... vytvoří config mapu  
-`%%kubectl create configmap mycm --from-literal=text=black --from-file=./favorite --from-file=./primary/%%"` ... vytvoří config mapu z textu, souboru a adresáře  
+`kubectl create configmap mysqlenv --from-literal=WORDPRESS_DB_HOST="mysql:3306"` ... vytvoří config mapu  
+`kubectl create configmap mycm --from-literal=text=black --from-file=./favorite --from-file=./primary/"` ... vytvoří config mapu z textu, souboru a adresáře  
 
 #### proxy
 
@@ -366,19 +368,19 @@ spec:
 EOF
 ```
 
-kubectl exec -it ubuntu %%--%% /bin/bash ... stahne a spusti ubuntu a na nem bash  
+kubectl exec -it ubuntu -- /bin/bash ... stahne a spusti ubuntu a na nem bash  
 
 nebo
 
-%%kubectl run mongosh --rm -i --tty --image ubuntu --overrides='{"spec":{"containers":[{"name":"awscli","tty":true,"stdin":true,"image":"amazon/aws-cli:2.13.6","command":["bash"],"resources":{"limits":{"cpu":"+100m","memory":"128Mi"}}}]}}'%%
+kubectl run mongosh --rm -i --tty --image ubuntu --overrides='{"spec":{"containers":[{"name":"awscli","tty":true,"stdin":true,"image":"amazon/aws-cli:2.13.6","command":["bash"],"resources":{"limits":{"cpu":"+100m","memory":"128Mi"}}}]}}'
 
 #### services, svc, endpoints, ep
 
 Síťový load balancer. Servisa je Kubernetes operátor běžící v kube-control-manažeru ovládající network driver a kube-proxy, nebo vytváří endpoint operátor.
 
 `kubectl get service` ... seznam servis a jejich IP (adresu dodává Cilium - Kubernetes CNI wnetworking)  
-`%%kubectl get service azure-vote-front --watch%%` ... Sledovani ap  
-`%%kubectl expose rc nginx --port=80 --target-port=3100%%` ... Typ servisy - ClusterIP  
+`kubectl get service azure-vote-front --watch` ... Sledovani ap  
+`kubectl expose rc nginx --port=80 --target-port=3100` ... Typ servisy - ClusterIP  
 `kubectl expose deployment/nginx` ... vytvoří službu na pod pro daný deployment, pokud má definovaný "containerPort", jedná se o typ ClusterIP, slouží pro interní komuinkaci  
 `kubectl expose deployment nginx --type=LoadBalancer` ... vytvoří servisu typu LoadBalancer - pro venkonvní komunikaci přes většinou přes cloud  
 `kubectl expose deployment/nginx --port=80 --type=NodePort` ... servisa typu NodePort - přiřadí daný port na každé NodeIP  
@@ -407,9 +409,9 @@ cronjob - časovač na spouštění jobů, job - jednorázová úloha - spuště
 
 `kubectl create job sleep --image=ubuntu  --dry-run=client -o yaml -- "sleep 5`  
 `kubectl get cronjob` ... ukaze plany ukolu  
-`%%kubectl get job --watch%%` ... sledovani jednotlivych jobu/ukolu  
+`kubectl get job --watch` ... sledovani jednotlivych jobu/ukolu  
 `kubectl describe job JOBID` ... informace o jobu, na kterem kontejneru byl spusteny atd.  
-%%pods=$(kubectl get pods --selector=job-name=JOBID --output=jsonpath={.items[*].metadata.name})%% ... najde ktery pod odpovida danemu jobu  
+pods=$(kubectl get pods --selector=job-name=JOBID --output=jsonpath={.items[*].metadata.name}) ... najde ktery pod odpovida danemu jobu  
 
 ##### certifikaty
 
@@ -445,11 +447,11 @@ kubectl config set-context minukume-user1 --cluster=minikube --namespace=develop
 
 Je kontrolována module authorization controllerem API serveru
 
-`%%kubectl auth can-i --list%%` ... zobrazí, na co mám práva  
-`%%kubectl auth can-i create deployments --as bob --namespace developer%%`  
+`kubectl auth can-i --list` ... zobrazí, na co mám práva  
+`kubectl auth can-i create deployments --as bob --namespace developer`  
 `kubectl create token default` ... vytvoření tokenu  
 `kubectl get rolebindings,clusterrolebindings`  
-`%%kubectl create clusterrolebinding admin-user-access --serviceaccount=project1:admin-user --clusterrole=cluster-admin%%` ... přiřadí cluster roli pro service account  
+`kubectl create clusterrolebinding admin-user-access --serviceaccount=project1:admin-user --clusterrole=cluster-admin` ... přiřadí cluster roli pro service account  
 `kubectl get clusterroles`  
 `kubectl get roles`  
 
@@ -508,10 +510,10 @@ networking:
 kubeadm config print init-defaults ... ukáže konfiguraci  
 `kubeadm token create` ... vytvoří token  
 `kubeadm token list` ... vylistuje certifikáty  
-`%%openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/ˆ.* //'%%` ... vytvoří discovery token  
-`%%kubeadm join --token zzz k8scp:6443 --discovery-token-ca-cert-hash sha256:xxx%%` ... přidá worker node  
-`%%kubeadm join k8scp:6443 --token xx.zz --discovery-token-ca-cert-hash sha256:xxx --control-plane --certificate-key yyy%%` ... přidá nový control plane do clusteru  
-`%%helm repo add cilium https://helm.cilium.io/; helm repo update; helm template cilium cilium/cilium --version 1.14.1 --namespace kube-system > cilium.yaml; kubectl apply -f cilium-cni.yaml%%` ... nastaví networking na Cilium  
+`openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/ˆ.* //'` ... vytvoří discovery token  
+`kubeadm join --token zzz k8scp:6443 --discovery-token-ca-cert-hash sha256:xxx` ... přidá worker node  
+`kubeadm join k8scp:6443 --token xx.zz --discovery-token-ca-cert-hash sha256:xxx --control-plane --certificate-key yyy` ... přidá nový control plane do clusteru  
+`helm repo add cilium https://helm.cilium.io/; helm repo update; helm template cilium cilium/cilium --version 1.14.1 --namespace kube-system > cilium.yaml; kubectl apply -f cilium-cni.yaml` ... nastaví networking na Cilium  
 `kubeadm version` ... verze Kubernetes  
 `kubeadm config print init-default` ... vypíše konfiguraci  
 `kubeadm upgrade plan` ... plan upgrade Kubernetes  
@@ -536,7 +538,7 @@ příkaz je k dispozici na nodu etcd
 
 Podmínkou pro běh minikube je běžící docker démon  
 
-`%%curl -Lo minikube ht‌tps://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64%%` ... stáhne nejnovější binárku  
+`curl -Lo minikube ht‌tps://storage.googleapis.com/minikube/releases/latest/minikube-darwin-amd64` ... stáhne nejnovější binárku  
 `chmod +x minikube` ... dá práva na spuštění  
 `sudo mv minikube /usr/local/bin` ... nakopíruje do bin  
 `minikube start` ... spustí služku  
@@ -551,7 +553,7 @@ Podmínkou pro běh minikube je běžící docker démon
 `sudo apt-get install -y kubeadm=1.28.1-00` ... upgrade na danou verzi  
 `udo apt-mark hold kubeadm` ... zafixuje verzi  
 `sudo kubeadm version`  
-`%%kubectl drain cp --ignore-daemonsets%%`  
+`kubectl drain cp --ignore-daemonsets`  
 `sudo kubeadm upgrade plan` ... ukáže aktuální a dostupnou verzi  
 `sudo kubeadm upgrade apply v1.29.1` ... provede upgrade  
 `kubectl get node` ... verze nodů  
@@ -596,9 +598,9 @@ export token=$(kubectl create token default)
 ```
 
 `curl ${server}/api/v1 --header "Authorization: Bearer $token" -k` ... autorizace pomocí tokenu  
-`%%curl --cert ${certificate} --key ${key} --cacert ${ca}  ${server}/api/v1/pods%%` ... list of pods  
-%%https://127.0.0.1:53479/api/apps/v1%%  
-`%%curl --cert /Users/lipenskyt/.minikube/profiles/minikube/client.crt --key /Users/lipenskyt/.minikube/profiles/minikube/client.key --cacert /Users/lipenskyt/.minikube/ca.crt -H "Accept: application/json, */*" -H "Content-Type: application/json" -XPOST -d '{"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"creationTimestamp":null},"spec":{"resourceAttributes":{"namespace":"default","verb":"create","group":"apps","resource":"deployments"}},"status":{"allowed":false}}' https://127.0.0.1:53479/apis/authorization.k8s.io/v1/selfsubjectaccessreviews%%` ... [|selfsubjectaccessreviews](https://kubernetes.io/docs/reference/kubernetes-api/authorization-resources/self-subject-access-review-v1/) informace, zna mohu vytvářet objekty typu deployment  
+`curl --cert ${certificate} --key ${key} --cacert ${ca}  ${server}/api/v1/pods` ... list of pods  
+https://127.0.0.1:53479/api/apps/v1  
+`curl --cert /Users/lipenskyt/.minikube/profiles/minikube/client.crt --key /Users/lipenskyt/.minikube/profiles/minikube/client.key --cacert /Users/lipenskyt/.minikube/ca.crt -H "Accept: application/json, */*" -H "Content-Type: application/json" -XPOST -d '{"kind":"SelfSubjectAccessReview","apiVersion":"authorization.k8s.io/v1","metadata":{"creationTimestamp":null},"spec":{"resourceAttributes":{"namespace":"default","verb":"create","group":"apps","resource":"deployments"}},"status":{"allowed":false}}' https://127.0.0.1:53479/apis/authorization.k8s.io/v1/selfsubjectaccessreviews` ... [|selfsubjectaccessreviews](https://kubernetes.io/docs/reference/kubernetes-api/authorization-resources/self-subject-access-review-v1/) informace, zna mohu vytvářet objekty typu deployment  
 
 /apis ... seznam dostupných API  
 /api/v1  

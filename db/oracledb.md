@@ -1,3 +1,5 @@
+# oracledb
+
 SQL prikazy pro Oracle jsou na strance [Oracle SQL](oraclesql).
 
 ### Externi odkazy
@@ -330,7 +332,7 @@ ALTER SYSTEM SCOPE=SPFILE ... zmeni parametry v SPFILE
 ALTER SYSTEM SET JOB_QUEUE_PROCESSES=50 COMMENT='temporary change 13/12/2010' SCOPE=MEMORY ... zmeni max. pocet frontovych procesu, SCOPE muze byt MEMORY,SPFILE,BOTH a nastavuje, kde se provede zmena  
 
 ALTER SYSTEM SET LOG_ARCHIVE_DEST_4='LOCATION=/u02/oracle/rbdb1/'MANDATORY,'REOPEN=2' SCOPE=SPFILE ... specifikuje, kam se bude ukladat archiv logu c. 4  
-%%ALTER SYSTEM SET LOG_ARCHIVE_DEST_$=''%% ... smazani parametru  
+ALTER SYSTEM SET LOG_ARCHIVE_DEST_$='' ... smazani parametru  
 ALTER SYSTEM SET DB_BLOCK_CHECKSUM TRUE; ... dybamicky prepne prepinac  
 SHOW PARAMETERS ... ukaze aktualni parametry  
 SELECT * FROM V$PARAMETER ... ukaze aktualni parametry  
@@ -430,7 +432,7 @@ create temporary tablespace tmpspc TABLESPACE GROUP tmpgroup1; ... vytvori docas
 ALTER TABLESPACE tblspc ADD DATAFILE '/u2/data/tblspc2.dbf' SIZE 100M; ... Zmeni tabulkovy prostor tblspc tak, ze prida datovy soubor o velikosti 100MB  
 alter tablespace tblspc TEMPORARY; ... zmeni tabulkovy prostor na docasny tabulkovy prostor  
 alter tablespace tblspc TABLESPACE GROUP tblgroup1; ... prida tabulkovy prostor do skupiny tabulkovych prostoru  
-%%alter tablespace tblspc TABLESPACE GROUP ''%%; ... odebere tabulkovy prostor ze skupiny tabulkovych prostoru  
+alter tablespace tblspc TABLESPACE GROUP ''; ... odebere tabulkovy prostor ze skupiny tabulkovych prostoru  
 alter tablespace tblspc RENAME TO users; ... prejmenuje tabulkovy prostor (COMPACTIBLE parametr musi byt &gt;= 10  
 alter tablespace tblspc RENAME DATAFILE '/u1/1.dbf' '/u1/2.dbf' TO '/u2/1.dbf' '/u2/2.dbf'; ... prejmenuje Datove soubory v definicich, po te, co jsou fyzicky prejmenovane<. Musi byt v OFFLINE  
 alter tablespace users OFFLINE NORMAL; ... prepne tabulkovy prostor do offline.  
@@ -549,7 +551,7 @@ Undo tabulkovy prostor slouzi na ukladani undo logu. Uchovavaji se tam informace
 
 ALTER SYSTEM SET UNDO_RETENTION=2400; ... zmeni UNDO_RETENTION - min. cas po ktery se uchovavaji data pri zmenach zpusobenych operacemi s daty  
 ALTER SYSTEM SET UNDO_TABLESPACE=undotbs2; ... zmeni tabulkovy prostor pro UNDO logy  
-%%ALTER SYSTEM SET UNDO_TABLESPACE=''%%; ... Vypne soucasny tabulkovy prostor z uzivani  
+ALTER SYSTEM SET UNDO_TABLESPACE=''; ... Vypne soucasny tabulkovy prostor z uzivani  
 ALTER TABLESPACE undotbs2 RETENTION NOGUARANTEE; ... Zmeni garantovani zpetnych logu na vypnuto  
 CREATE UNDO TABLESPACE undotbs2 RETENTION GUARANTEE; vytvori Undo TS undotbs2, ktery garantuje undo proceduru pro datove operace. Pokud opearce nemuze jiz zapisovat do undo, tak se stornuje  
 SELECT TUNED_UNDORETENTION FROM V$UNDOSTAT; ... ukaze hodnotu UNDO_RETENTION  

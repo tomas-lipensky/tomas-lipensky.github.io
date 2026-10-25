@@ -1,3 +1,5 @@
+# burza
+
 ## Nástroje
 
 G: pse koba ... graf akcie na Prazske burze, dlouhá historie  

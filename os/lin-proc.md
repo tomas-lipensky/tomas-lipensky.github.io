@@ -1,3 +1,5 @@
+# lin-proc
+
 /proc/sys/kernel/hostname  
 /proc/meminfo  
 /proc/PID/cmdline  

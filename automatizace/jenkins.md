@@ -1,4 +1,4 @@
-## Jenkins
+# Jenkins
 
 Integracni nastroj postaveny na Jave (frontend bezi na Tomcatu). Podporuje SCM (Source Contrl Management):  
 AccuRev, CVS, Subversion, Git, Mercurial, Perforce, Clearcase and RTC  
@@ -7,7 +7,7 @@ a ruyne typy nasazeni: Apache Ant, Apache Maven, shell a batch skripty
 [Male edu o Jenkins](http://w3.devops.ibm.com/devops/#/toolchain/advanced/jenkins)  
 [Prezentace o Jenkinsovi](http://www.slideshare.net/dstine4/jenkins-and-chef-infrastructure-ci-and-automated-deployment)  
 
-### Dokumentace
+## Dokumentace
 
 JENKINS_URL/env-vars.html ... popis preddefinovanych promennych  
 /queue/api/  
@@ -15,10 +15,10 @@ JENKINS_URL/env-vars.html ... popis preddefinovanych promennych
 /script ... scriptovaci konzole  
 /jnlpJars/jenkins-cli.jar ... stáhne jenkins-cli.jar pro Jenkins CLI  
 
-### Jenkins CLI
+## Jenkins CLI
 
 java -jar jenkins-cli.jar -s http://jenkins-test.oskarmobil.cz/ -noCertificateCheck -http -auth user:password  groovy = <plugins.groovy  
-### API
+## API
 
 curl -u UZIVATEL:TOKEN -k https://SERVER/cesta  
 curl -u $juser:$token -k https://SERVER/job/CESTA/job/JOB/1201/doDelete -v -X POST ... smazání buildu  
@@ -40,12 +40,12 @@ https://SERVER/pluginManager/api/xml?depth=1&xpath=/*/*/shortName|/*/*/version&w
 [Groovy](https://groovy-lang.org/documentation.html) jazyk  
 [Environment variables](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/#using-environment-variables) ... výchozí hodnoty prostředí Jenkinse, přistupuje se k nim přes ${env.WORKSPACE}  
 
-#### Kostra kódu
+### Kostra kódu
 
 kdekoliv může být definice proměnné, ne jen v environment sekci:
 def skipPublishDefault = (BRANCH_NAME == 'hotfix') ? true : false ... podmíněná definice
 
-```
+```groovy
 @Library([path])
 pipeline {
   agent none //
@@ -64,7 +64,7 @@ pipeline {
 
 nebo když se nedefinuje akce souborem ale v UI:
 
-```
+```groovy
 node {
   stage {}
   stage {}
@@ -81,7 +81,7 @@ none ... žádný agent se nealokuje
 
 node {} ... jak label, ale umožňuje další možnosti, vice na [https://www.jenkins.io/doc/book/pipeline/syntax/](https://www.jenkins.io/doc/book/pipeline/syntax/)
 
-```
+```groovy
 docker {
 image 'maven:1.2.3'
 label 'moje'
@@ -93,7 +93,7 @@ registryCredentialsId 'myPredefinedCredentialsInJenkins'
 
 dockerfile {} ... vice na [https://www.jenkins.io/doc/book/pipeline/syntax/](https://www.jenkins.io/doc/book/pipeline/syntax/)
 
-```
+```groovy
 kubernetes {
                             label "android-slave-dynamic"
                             defaultContainer "android-slave"
@@ -126,11 +126,11 @@ timestamps ()
 
 vstupní parametry pro běh pipeliny
 
-`%%string name: 'SERVICE_NAME', description: 'Service name.', trim: true%%` ... textový parametr  
-`%%choice name: 'ENVIRONMENT', choices: ['dev', 'stg'], defaultValue: 'NotProvided', description: 'Target environment.'%%` ... výběr  
-''%%booleanParam name: 'PIPELINE_REFRESH', description: """
+`string name: 'SERVICE_NAME', description: 'Service name.', trim: true` ... textový parametr  
+`choice name: 'ENVIRONMENT', choices: ['dev', 'stg'], defaultValue: 'NotProvided', description: 'Target environment.'` ... výběr  
+''booleanParam name: 'PIPELINE_REFRESH', description: """
 OPTIONAL
-Reload this pipeline from pipeline definition, parameters etc."""%%'' ... pravda, nepravda, popis na víc řádků  
+Reload this pipeline from pipeline definition, parameters etc."""'' ... pravda, nepravda, popis na víc řádků  
 text(name: 'BIOGRAPHY') ... víceřádkový text  
 password(name: 'PASSWORD') ... heslo - skryje se v logu  
 
@@ -169,12 +169,12 @@ sh 'echo ahoj' ... shell skript
 withCredentials() {} ... obsah {} se provede s kredencema načtenýma ze secretu, přiřazenýmá do proměnné  
 withCredentials([file(credentialsId: "AA${BB}", variable: 'VAR')]) { writeFile file: '.env.'+ ENV_TYPE.toLowerCase(), text: readFile(VAR) }  
 withCredentials([ string(credentialsId: 'AA', variable: 'BB'), string(credentialsId: 'CC', variable: 'DD') ]) { echo "${CC} ${DD}"}
-%%withCredentials([ usernamePassword(credentialsId: 'dxl-cz-github-user', usernameVariable: 'username', passwordVariable: 'password') ]) {sh 'git remote set-url origin "https://${username}:${password}@github.vodafone.com/VFCZ-DXL/${microserviceName}.git"' }%%  
+withCredentials([ usernamePassword(credentialsId: 'dxl-cz-github-user', usernameVariable: 'username', passwordVariable: 'password') ]) {sh 'git remote set-url origin "https://${username}:${password}@github.vodafone.com/VFCZ-DXL/${microserviceName}.git"' }  
 withNPM(npmrcConfig: 'npmrcs-cz') {} ... použije file npmrcs-cz a udělá z něj .npmrc  
-%%checkout([$class: 'GitSCM', branches: [name: 'develop'](name/ 'develop'), extensions: [$class: 'CleanBeforeCheckout']($class/ 'CleanBeforeCheckout'),userRemoteConfigs: [credentialsId: 'secret1',url: 'https://user@github.bbb.com/ccc/ddd.git'](credentialsId/ 'secret1',url/ 'https///user@github.bbb.com/ccc/ddd.git')])%%  
+checkout([$class: 'GitSCM', branches: [name: 'develop'](name/ 'develop'), extensions: [$class: 'CleanBeforeCheckout']($class/ 'CleanBeforeCheckout'),userRemoteConfigs: [credentialsId: 'secret1',url: 'https://user@github.bbb.com/ccc/ddd.git'](credentialsId/ 'secret1',url/ 'https///user@github.bbb.com/ccc/ddd.git')])  
 withDockerRegistry([credentialsId: 'aaa', url: "https://REPOSITORY"]) ... provede docker login s kredencema
 
-```
+```groovy
 configFileProvider([fileId:'conf_file', variable:'soubor']) {
       script {
         echo "Ctu soubor '${soubor}' ..." 

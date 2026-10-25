@@ -1,7 +1,5 @@
 # Oracle Warehouse Builder
 
-### Obsah
-
 ### Externi odkazy
 
 [OWB na wiki](http://en.wikipedia.org/wiki/Oracle_Warehouse_Builder)  

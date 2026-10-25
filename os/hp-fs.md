@@ -1,24 +1,5 @@
 # HP-UX - File Systemy, LVM, zalohovani, Storage
 
-### Obsah:
-
-Soubory  
-FS - souborove systemy  
-Swap  
-LVM - Logical Volume Manager  
-LV - Logical Volume  
-VG - Volume Group  
-PV - Physical Volume  
-Veritas LVM  
-Storage  
-Bootdisk  
-System backup  
-Omnibackup  
-Ignite backup  
-DRD  
-Priklad: rozsireni FS  
-<hr>
-
 ### Soubory
 
 chacl ... (change access list) meni ACL k souborum  

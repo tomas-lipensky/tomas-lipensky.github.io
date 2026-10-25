@@ -1,3 +1,5 @@
+# iis
+
 ### Start/stop/status
 
 iisreset /start ... start IIS
@@ -32,11 +34,11 @@ cd c:\windows\system32\inetsrv; .\appcmd list requests /elapsed:5000 ... seznam 
 gwmi -NS 'root\WebAdministration' -class 'WorkerProcess' | select AppPoolName,ProcessId ... seznam workeru  
 .\appcmd.exe list config  -section:webFarms ... vypis vsech load balancer prvku  
 .\appcmd.exe list config -section:system.webServer/rewrite/globalRules  
-.\appcmd.exe list config | select-string %%"%%^<%%"%% ... sezam vsech zakladnich sekci konfigu  
-.\appcmd.exe set config  -section:webFarms /+%%"%%[name='$($farm.name)']%%"%% /commit:apphost ... vyrvoreni web farmy  
-.\appcmd.exe set config %%"%%sonarqube%%"%% -section:httpRuntime /-maxRequestLength ... odebere atribut maxRequestLength ze sekce httpRunTime  
+.\appcmd.exe list config | select-string "^<" ... sezam vsech zakladnich sekci konfigu  
+.\appcmd.exe set config  -section:webFarms /+"[name='$($farm.name)']" /commit:apphost ... vyrvoreni web farmy  
+.\appcmd.exe set config "sonarqube" -section:httpRuntime /-maxRequestLength ... odebere atribut maxRequestLength ze sekce httpRunTime  
 .\appcmd.exe set config -section:httpRuntime /maxRequestLength:102400 ... prida/zmeni atribut maxRequestLength s hodnotou 102400  
-.\appcmd.exe set config -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:%%"%%104857600%%"%% ... zmeni/prida klic a atribut  
+.\appcmd.exe set config -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:"104857600" ... zmeni/prida klic a atribut  
 
 ### PowerShell
 

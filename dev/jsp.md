@@ -1,21 +1,11 @@
 # Java Servlet Pages
 
-### Obsah:
-
-[Externi odkazy](#odkazy)  
-[JSP HTML znacky](#HTMLznacky)  
-[JSP XML znacky](#promenne)  
-[JSP HTML Skriptlety](#operatory)  
-[JSM XML Skriptlety](#podminky)  
-[JSP HTML Deklarace](#tridy)  
-[JSP XML Deklarace](#priklady)  
-
-### odkazy:
+## odkazy:
 
 [JAVA API Docs](http://docs.oracle.com/javaee/6/api/index.html) on Oracle  
 [JAVA](java.html)  
 
-### HTML - Skriptovaci znacky
+## HTML - Skriptovaci znacky
 
 Jsou jednotlive prikazy, je k dispozici [8 objektu](http://www.tutorialspoint.com/jsp/jsp_implicit_objects.htm)
 

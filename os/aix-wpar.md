@@ -1,3 +1,5 @@
+# aix-wpar
+
 #### WPAR - Workload Partition
 
 mkwpar -n wpar1 -N interface=en1 address=10.1.1.81 ... vytvori wpar wpar1 s IP 10.1.1.81 na sitovce en1 a LV pro wpar  

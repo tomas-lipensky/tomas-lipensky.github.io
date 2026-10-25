@@ -1,12 +1,14 @@
+# azcli
+
 ### Azure CLI
 
 az login ... pripojeni k Azure  
-az account list %%--%%output table ... seznam predplatnyh  
-az account set %%--%%subscription %%"%%Testovani%%"%% ... vyber predplatneho  
+az account list --output table ... seznam predplatnyh  
+az account set --subscription "Testovani" ... vyber predplatneho  
 az account list-locations ... seznam lokaci  
 az account show … ukaze kde jsem pripojeny  
-az account show %%--%%query id … ukaze jenom subscription ID, kde jsem pripojeny  
-%%az rest --method get --url "https://management.azure.com/subscriptions/XYZ/providers/Microsoft.Authorization/roleAssignmentScheduleRequests?api-version=2020-10-01"%% ... PIM  
+az account show --query id … ukaze jenom subscription ID, kde jsem pripojeny  
+az rest --method get --url "https://management.azure.com/subscriptions/XYZ/providers/Microsoft.Authorization/roleAssignmentScheduleRequests?api-version=2020-10-01" ... PIM  
 
 ### VM
 
@@ -53,10 +55,10 @@ az network lb outbound-rule create --address-pool MyAddressPool --frontend-ip-co
 ### AKS - Azure Kubernetes Service
 
 https://docs.microsoft.com/en-us/azure/aks/ssh - zpusob pripojeni se na AKS node  
-`%%az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys%%` ... Vytvori AKS cluster  
+`az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys` ... Vytvori AKS cluster  
 `az aks install-cli` ... Stahne a nainstaluje kubectl  
-`%%az aks get-credentials --resource-group myResourceGroup --name myAKSCluster%%` ... Stahne a naistaluje kredence do kubectl (~/.kube/config)  
-`%%az aks browse --resource-group myResourceGroup --name myAKSCluster%%` ... vytvori tunel do Web GUI pro kubectl\
+`az aks get-credentials --resource-group myResourceGroup --name myAKSCluster` ... Stahne a naistaluje kredence do kubectl (~/.kube/config)  
+`az aks browse --resource-group myResourceGroup --name myAKSCluster` ... vytvori tunel do Web GUI pro kubectl\
 
 ### ACR - Azure Container Registry
 

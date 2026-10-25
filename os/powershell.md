@@ -54,9 +54,9 @@ get-variable ... seznam promennych
 $p | get-member ... vsechny vlastnosti a tridy objektu - popis objektu  
 $PSVersionTable ... objekt obsahujici hodnotu verze  
 $profile ... profilovy powershell  
-$a=%%"%%$profile je profil%%"%% ... vlozeni promenne do promenne  
-$a=%%"%%$profile je retezec%%"%% ... nezameni $profile za jeji hodnotu  
-$text=%%"%%Ahoj, moje cislo je {0:N0} je to {1:P2} procent%%"%% -f 50.5432 0.15555 ... formatovani textu  
+$a="$profile je profil" ... vlozeni promenne do promenne  
+$a="$profile je retezec" ... nezameni $profile za jeji hodnotu  
+$text="Ahoj, moje cislo je {0:N0} je to {1:P2} procent" -f 50.5432 0.15555 ... formatovani textu  
 $d=Get-Date; "Dnes je {0: d. M. YYYY H:mm:ss}" -f $d ... formatovani datumu  
 $a='1'; [int]$a ... prevede retezec na cele cislo  
 $? ... true posledni prikaz bez chyby. False- posledni prikaz selhal  
@@ -78,12 +78,12 @@ $asocpole.keys, $asocpole.values, $assocpole["Ferda"], $assocpole[0] ... seznam 
 $asocpole.add( 'Bob', 'kralik' ), $asspole.remove('Bo'") ... pridani, odebrani prvku  
 $null ... prazdny objekt  
 $error ... pole chyb od startu powershellu  
-$multiline=@%%"%%text na  
-vice radku%%"%%@  
+$multiline=@"text na  
+vice radku"@  
 $mycredentials = Get-Credential … interaktivni graficke okno na zadani kredenci (jmeno, heslo)  
 $password = [System.Web.Security.Membership]::GeneratePassword(16,3) … vygeneruje heslo
-$secpasswd = ConvertTo-SecureString %%"%%PlainTextPassword%%"%% -AsPlainText -Force … Vytvori promennou tajny text ze zadaneho textu  
-$mycreds = New-Object System.Management.Automation.PSCredential (%%"%%username%%"%%, $secpasswd) … vytvore promennou typu credence
+$secpasswd = ConvertTo-SecureString "PlainTextPassword" -AsPlainText -Force … Vytvori promennou tajny text ze zadaneho textu  
+$mycreds = New-Object System.Management.Automation.PSCredential ("username", $secpasswd) … vytvore promennou typu credence
 [string]::IsNullOrEmpty($null) ... vrati $true kdyz je parametr $null nebo prazdny  
 $person = new-object PSObject ... novy prazdy objekt  
 [string]::IsNullOrEmpty($text) ... vrati true, pokud je text prazdny, nebo neni definovany  
@@ -287,14 +287,14 @@ New-Object Security.AccessControl.FileSystemAccessRule 'DOMAIN\user', 'ListDirec
 Set-Location HKCU: ... prepne se do virtualniho souboroveho systemu registru  
 Test-Path .\Software\hsg  -ErrorAction silentlycontinue ... zjisti jestli existuje cesta v registrech  
 New-Item -Path HKLU:\Software -Name hsg ... bytvori novou registrovou slozku  
-get-item -path %%"%%HKLM:\SYSTEM\CurrentControlSet\Services\chef-client%%"%% ... ukaze registr  
+get-item -path "HKLM:\SYSTEM\CurrentControlSet\Services\chef-client" ... ukaze registr  
 Get-ItemProperty -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion
  … seznam promennych daneho registru  
 Set-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ EnableLUA 0 … nastavi [LUA](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-lua-settings-enablelua) na 0 (disabled) - zrusi omezeni prava uzivatelu s administratorskyma pravama  
 
 ### Certifikaty, klice
 
-Get-ChildItem Cert:\ -recursive -CodeSigningCert | where { $_.thumbprint -eq %%"%%dsafasdfasdfsadf%%"%% } ... najiti certifikatu podle thumbprintu  
+Get-ChildItem Cert:\ -recursive -CodeSigningCert | where { $_.thumbprint -eq "dsafasdfasdfsadf" } ... najiti certifikatu podle thumbprintu  
 set-authenticodesignature -filepath  .\a.ps1 -certificate $cert ... podepisovani klicem  
 Import-Certificate -FilePath cert.cer -CertStoreLocation LocalComputer\Root ... import certifikatu do knihovny certifikatu  
 Import-PfxCertificate -Exportable -Password "aaa" -CertStoreLocation LocalComputer\My -FilePath cert.pfx ... import klice a privatniho klice z klicenky, povoli exportovani  
@@ -322,14 +322,14 @@ $acl.Access
 
 ### vzdalene spousteni
 
-$Host.ui.PromptForCredential(%%"%%Matrix OS%%"%%, %%"%%Enter the credentials%%"%%,%%"%%Administrator%%"%%,%%"%%%%"%%) ... nepovinne, zmeni texty v get-credential  
+$Host.ui.PromptForCredential("Matrix OS", "Enter the credentials","Administrator","") ... nepovinne, zmeni texty v get-credential  
 $cred=get-credential ... ziska interaktivne kredence  
-$password=ConvertTo-Securestring -asPlainText -Force %%"%%Heslo%%"%%; $cred=New-Object System.Management.Automation.PSCredential(%%"%%User%%"%%, $password) ... ziska neinteraktivne kredence  
+$password=ConvertTo-Securestring -asPlainText -Force "Heslo"; $cred=New-Object System.Management.Automation.PSCredential("User", $password) ... ziska neinteraktivne kredence  
 Invoke-Command -scriptblock { cls } -credential $cred -computername ROCKET  
 
 ### Sit, firewall, networking
 
-New-NetFirewallRule –DisplayName %%"%%Allow ICMPv4-In%%"%% –Protocol ICMPv4  ... povili na firewallu ICMMP ping  
+New-NetFirewallRule –DisplayName "Allow ICMPv4-In" –Protocol ICMPv4  ... povili na firewallu ICMMP ping  
 New-NetFirewallRule -Name "WINRM-HTTPS-In-TCP" `  
   1.DisplayName "Windows Remote Management (HTTPS-In)" `  
   2.Description "Inbound rule for Windows Remote Management via WS-Management. [TCP 5986]" `  

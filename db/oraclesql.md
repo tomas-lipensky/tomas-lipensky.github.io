@@ -1,24 +1,6 @@
+# oraclesql
+
 Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
-
-### Obsah
-
-<dl>
-<dt>Externi odkazy</dt>
-<dt>[Tabukly](#tabulky)</dt>
-  <dd>Promenne</dd>
-  <dd>Vytvareni tabulek</dd>
-  <dd>Popis tabulky</dd>
-  <dd>meneni tabulky</dd>
-  <dd>smazani tabulky</dd>
-
-<dt>[Zaznamy](#zaznamy)</dt>
-  <dd>vkladani</dd>
-  <dd>mazani</dd>
-  <dd>modifikace</dd>
-  <dd>vypis</dd>
-
-<dt>[PL/SQL](#plsql)</dt>
-</dl>
 
 ### Externi odkazy
 
@@ -50,13 +32,13 @@ Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 #### Datove typy pro tabulky
 
 <dl>
-	<dd>CHAR(20) ... pole pro retezec dlouhy 20 znaku</dd>
-	<dd>VARCHAR(20) ... pole pro retezec dlouhy az 20 znaku</dd>
-	<dd>DATE ... datum a cas</dd>
-	<dd>INTEGER ... cele cislo</dd>
-	<dd>NUMBER ... Realne cislo, az 38 znaku dlouhe. NUMBER(6,2) je omezeni cisla na max delku xxxx.xx</dd>
-	<dd>BINARY_FLOAT ... (Oracle >= 10) binarni reprezentace realneho cisla - 32-bitu - uspornejsi a rychlejsi nez NUMBER. Hodnoty napr. 96.56f, BINARY_FLOAT_NAN, BINARY_FLOAT_INFINITY</dd>
-	<dd>BINARY_DOUBLE ... (Oracle >= 10) binarni reprezentace realneho cisla - 64-bitu - uspornejsi a rychlejsi nez NUMBER. Hodnoty napr. 96.56D, BINARY_DOUBLE_NAN, BINARY_DOUBLE_INFINITY</dd>
+	CHAR(20) ... pole pro retezec dlouhy 20 znaku
+	VARCHAR(20) ... pole pro retezec dlouhy az 20 znaku
+	DATE ... datum a cas
+	INTEGER ... cele cislo
+	NUMBER ... Realne cislo, az 38 znaku dlouhe. NUMBER(6,2) je omezeni cisla na max delku xxxx.xx
+	BINARY_FLOAT ... (Oracle >= 10) binarni reprezentace realneho cisla - 32-bitu - uspornejsi a rychlejsi nez NUMBER. Hodnoty napr. 96.56f, BINARY_FLOAT_NAN, BINARY_FLOAT_INFINITY
+	BINARY_DOUBLE ... (Oracle >= 10) binarni reprezentace realneho cisla - 64-bitu - uspornejsi a rychlejsi nez NUMBER. Hodnoty napr. 96.56D, BINARY_DOUBLE_NAN, BINARY_DOUBLE_INFINITY
 </dl>
 
 #### Vytvareni tabulek

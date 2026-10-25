@@ -1,3 +1,5 @@
+# etc-ppp-peers-xxx
+
 hide-password
 nopcomp
 noauth

@@ -1,7 +1,5 @@
 # Oracle Business Inteligence Discoverer
 
-### Obsah
-
 ### Externi odkazy
 
 [Popis na wiki](http://en.wikipedia.org/wiki/Oracle_Discoverer)  

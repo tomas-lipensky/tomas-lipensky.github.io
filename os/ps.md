@@ -35,13 +35,13 @@ help variables
 get-variable ... seznam promennych  
 $PSVersionTable ... objekt obsahujici hodnotu verze  
 $profile ... profilovy powershell  
-$a=%%"%%$profile je profil%%"%% ... vlozeni promenne do promenne  
-$a=%%"%%$profile je retezec%%"%% ... nezameni $profile za jeji hodnotu  
-$text=%%"%%Ahoj, moje cislo je {0:N0} je to {1:P2} procent%%"%% -f 50.5432 0.15555 ... formatovani textu  
-$d=Get-Date; %%"%%Dnes je {0: d. M. YYYY H:mm:ss}%%"%% -f $d ... formatovani datumu  
-$a=%%"%%1%%"%%; [int]$a ... prevede retezec na cele cislo  
+$a="$profile je profil" ... vlozeni promenne do promenne  
+$a="$profile je retezec" ... nezameni $profile za jeji hodnotu  
+$text="Ahoj, moje cislo je {0:N0} je to {1:P2} procent" -f 50.5432 0.15555 ... formatovani textu  
+$d=Get-Date; "Dnes je {0: d. M. YYYY H:mm:ss}" -f $d ... formatovani datumu  
+$a="1"; [int]$a ... prevede retezec na cele cislo  
 $? ... true posledni prikaz bez chyby. False- posledni prikaz selhal  
-[xml]$pes='<dogs><dog name=%%"%%alik%%"%%/><dog name="cvalik"/></dogs>'  
+[xml]$pes='<dogs><dog name="alik"/><dog name="cvalik"/></dogs>'  
 $pes.dogs.dog[0] ... ukaze vlastnost dogs, prvni prvek z pole  
 $p[5..-1] ... vsechny prvky od 5teho do posledniho  
 $soubor | Get-Content C:\aaa.txt ... nacte vsechny radky do promenne typu pole  

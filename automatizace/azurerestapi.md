@@ -1,3 +1,5 @@
+# azurerestapi
+
 ### API
 
 [Microsoft REST API catalog](https://docs.microsoft.com/en-us/rest/api/) - Azure REST API, VSTS, atd.  
@@ -24,12 +26,12 @@ Connect-AzAccount
 $context = Get-AzSubscription -SubscriptionName Predplatne | Set-AzContext  
 $cache = $context.TokenCache  
 $cacheItem = $cache.ReadItems()  
-$token = ($cacheItem | where { $_.Resource -eq %%"https://management.core.windows.net/"%% }).accessToken  
+$token = ($cacheItem | where { $_.Resource -eq "https://management.core.windows.net/" }).accessToken  
 $Headers = @{}  
-$Headers.Add(%%"%%Authorization%%"%%,%%"%%Bearer  $($token)%%"%%)  
-$ResourceGroupApiUri = %%"%%https://management.azure.com/subscriptions/$($context.Subscription)/resourcegroups?api-version=2017-05-10%%"%%  
+$Headers.Add("Authorization","Bearer  $($token)")  
+$ResourceGroupApiUri = "https://management.azure.com/subscriptions/$($context.Subscription)/resourcegroups?api-version=2017-05-10"  
 $ResourceGroups = Invoke-RestMethod -Method Get -Uri $ResourceGroupApiUri -Headers $Headers  
-Invoke-RestMethod -Method Put -ContentType %%"%%application/json%%"%% -Headers $Headers -Uri $URL -Body $json_ss
+Invoke-RestMethod -Method Put -ContentType "application/json" -Headers $Headers -Uri $URL -Body $json_ss
 
 ### REST API & Bash
 

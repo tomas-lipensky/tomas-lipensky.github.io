@@ -372,10 +372,10 @@ rpm -i nss_ldap openldap openldap-clients
 slapd  
 /etc/ldap.conf ... specifikuje, adresu LDAP serveru, DN, TLS sifrovani  
 /etc/openldap/ldap.conf ... specifikuje, adresu LDAP serveru, DN, TLS sifrovani pro manualni dotazy pomoci prikazu ldap klienta (ldapsearch -x -Z)  
-authconfig %%--%%enableldap %%--%%ldapserver=instructor.example.com %%--%%ldapbasedn=dc=example,dc=com %%--%%ldaploadcacert=ftp://instructor/pub/cacert %%--%%update ... zapne LDAP informace o uzivatelich  
-authconfig %%--%%enableldapauth %%--%%ldapserver=instructor.example.com %%--%%ldapbasedn=dc=example,dc=com %%--%%ldaploadcacert=ftp://instructor/pub/cacert %%--%%update ... zapne LDAP autentifikaci  
-authconfig %%--%%disableldap %%--%%update ... vypne LDAP informace o uzivatelich  
-authconfig %%--%%disableldapauth %%--%%update ... vypne LDAP autentifikaci  
+authconfig --enableldap --ldapserver=instructor.example.com --ldapbasedn=dc=example,dc=com --ldaploadcacert=ftp://instructor/pub/cacert --update ... zapne LDAP informace o uzivatelich  
+authconfig --enableldapauth --ldapserver=instructor.example.com --ldapbasedn=dc=example,dc=com --ldaploadcacert=ftp://instructor/pub/cacert --update ... zapne LDAP autentifikaci  
+authconfig --disableldap --update ... vypne LDAP informace o uzivatelich  
+authconfig --disableldapauth --update ... vypne LDAP autentifikaci  
 slapcat ... vypis hodnot v LDAP databazi  
 ldapsearch -b 'dc=example,dc=com' '(objectclass=*)' ... (balicek openldap-clients) dela  dotazy na ldap server  
 ldapsearch -b dc=local -D admin@local -H ldap://localhost -w $pwd "(mail=aaa@local)" cn ... zobrazi polozku cn pro filtr mail=aaa@local  

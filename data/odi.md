@@ -1,7 +1,5 @@
 # Oracle Data Integrator
 
-### Obsah
-
 ### Externi odkazy
 
 http://technet.oracle.com  

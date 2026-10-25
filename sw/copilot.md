@@ -1,10 +1,12 @@
+# copilot
+
 ### Odkazy
 
 https://copilot.microsoft.com/
 
 ### CLI
 
-[copilot](https://github.com/features/copilot/cli) %%--allow-all-paths --allow-all-tools --enable-all-github-mcp-tools --model "gpt-5-mini"%% ... spustí copilot CLI  
+[copilot](https://github.com/features/copilot/cli) --allow-all-paths --allow-all-tools --enable-all-github-mcp-tools --model "gpt-5-mini" ... spustí copilot CLI  
 
 ### Obecně
 

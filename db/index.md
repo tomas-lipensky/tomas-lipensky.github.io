@@ -1,3 +1,5 @@
+# index
+
 ### Druhy databazi
 
 SQL databaze splnuji tzv. ACID:  
@@ -9,32 +11,32 @@ Basically Available, Soft-state Eventual consistency)
 ### Relacni (SQL) databaze
 
 <dl>
-<dd>[MariaDB/MySQL](mysql.html)</dd>
-<dd>[postgresql.html](postgresql.html)</dd>
-<dd>[IBM DB2](db2.html)</dd>
-<dd>[Oracle](oracle.html), [Oracle SQL](oraclesql.html)</dd>
-<dd>[MSSQL](mssql.html)</dd>
-<dd>[SQLite](sqlite.html)</dd>
-<dd>[Teradata](td.html)</dd>
-<dd>[Derby](derby.html)</dd>
-<dd>Informix</dd>
-<dd>Sybase IQ</dd>
-<dd>Sybase</dd>
+[MariaDB/MySQL](mysql.html)
+[postgresql.html](postgresql.html)
+[IBM DB2](db2.html)
+[Oracle](oracle.html), [Oracle SQL](oraclesql.html)
+[MSSQL](mssql.html)
+[SQLite](sqlite.html)
+[Teradata](td.html)
+[Derby](derby.html)
+Informix
+Sybase IQ
+Sybase
 </dl>
 
 ### Nerelacni (NoSQL) databaze
 
 <dl>
-<dd>[Berklye DB](bdb.html)</dd>
-<dd>[CouchDB](couchdb.html)</dd>
-<dd>Cassandra</dd>
-<dd>HBase</dd>
-<dd>[Redis](redis.html)</dd>
-<dd>Voldemort</dd>
-<dd>MongoDB</dd>
-<dd>Hypertable</dd>
-<dd>Dynnomite</dd>
-<dd>BigTable</dd>
+[Berklye DB](bdb.html)
+[CouchDB](couchdb.html)
+Cassandra
+HBase
+[Redis](redis.html)
+Voldemort
+MongoDB
+Hypertable
+Dynnomite
+BigTable
 </dl>
 
 ### Data explorery

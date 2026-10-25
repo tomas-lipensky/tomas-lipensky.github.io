@@ -1,12 +1,5 @@
 # MDM CS - Colaborative Server (PIM, CE)
 
-### Obsah
-
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-<dt>[Interni odkazy](#interni)</dt>
-</dl>
-
 ### Externi odkazy
 
 [Product information](http://www-01.ibm.com/software/data/master-data-management/) - on IBM sites  
@@ -100,7 +93,7 @@ URL monitorin
 
 ### Best practice
 
-<li>Nesestavovat Master Data z casto menicich se polocek - cena atd.</li>
+- Nesestavovat Master Data z casto menicich se polocek - cena atd.
 
 ### Struktura DB
 

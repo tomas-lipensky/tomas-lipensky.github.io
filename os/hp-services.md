@@ -1,3 +1,5 @@
+# hp-services
+
 ### Procesy
 
 krm ... demon na ponitorovani parametru jadra, ktery vyuziva kusage  
@@ -10,9 +12,9 @@ swapper ... deaktivuje procesy a tim jim zabranuje swapovat (page-in, page-out)
 who -r ... ukaze aktualni runlevel  
 init 0[s,S,1,2,3,4] ... zastaveni,single,single s konzolou,single+fs mounted,multiuser,metwork multiuser+graficky,HP VUE. Spusti se, ci zastavi sluzby, ktere jsou v /etc/rcX.d  
 sluzby:
-<li>/etc/rcX.d ... linky do /sbin/init.d</li>
-<li>/sbin/init.d ... jednotlive skripty ke sluzbam</li>
-<li>/etc/rc.config.d ... nastaveni ke sluzbam. Nastaveni prezije restart</li>
+- /etc/rcX.d ... linky do /sbin/init.d
+- /sbin/init.d ... jednotlive skripty ke sluzbam
+- /etc/rc.config.d ... nastaveni ke sluzbam. Nastaveni prezije restart
 ch_rc -l -p CRON ... vypis konfigurovatelnych parametru sluzby cron  
 ch_rc -a -p CRON=0 ... zmena parametru sluzeb - zakaze spoousteni sluzby cron  
 grep -il cron /etc/rc.config.d/* hledani konfiguracniho souboru pro cron  

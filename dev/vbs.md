@@ -1,16 +1,16 @@
 # VBScript
 
-### Externi odkazy
+## Externi odkazy
 
 [Seznam prikazu a objektu](http://ss64.com/vb/)  
 [Scriptovani na MS](http://technet.microsoft.com/en-us/library/ee198844.aspx)  
 
-### Spousteni VBScriptu
+## Spousteni VBScriptu
 
 wscript a.vbs ... otevre VBScript v okne (neumoznuje vystup na stdout)  
 cscript a.vbs ... otevre VBScript v konzoli  
 
-### Promenne a komentare
+## Promenne a komentare
 
 dim aaa ... deklarace nove promenne  
 Const PI=3.14 ... definice konstanty  
@@ -31,7 +31,7 @@ Args(0) ... prvni parametr skriptu
 'komentar ... komentar pokud je prvni slovo na radku i jinak  
 Rem komentar ... komentar, pokud je prvni slovo na radku, jinak :Rem  
 
-### Podminky, cykly, vlastni funkce
+## Podminky, cykly, vlastni funkce
 
 If ? then ?  Else
 
@@ -88,7 +88,7 @@ End Sub
 
 Call PODPROGRAM (1, 2) ... volani podprogramu  
 
-##### Funkce na promennych
+### Funkce na promennych
 
 String(0, "*") ... vystup je 60 hvezdicek  
 UCase(aaa) ... prevede na velka pismena  
@@ -130,7 +130,7 @@ Exp, Log, Sin, Cos ... Matematicke funkce
 CInt ... prevede vyraz na cislo  
 CLng, CSng, CDbl, CCur, CStr, CBool, CByte, CDate ... prevede argument na urcity datovy typ  
 
-### funkce obecne
+## funkce obecne
 
 Wscript.Echo "Ahoj" ... Vypise "Ahoj" na std vystup  
 Document.Write "Ahoj" & jemnp & "!" ... tisk na "Ahoj" do aktualniho dokumentu (treba html)  
@@ -141,7 +141,7 @@ WScript.StdOut.Write("Enter Your full Name>") ... vypis na std. vystup
 WScript.StdIn.Read(0) ... cteni ze vstupu  
 strMyName = WScript.StdIn.ReadLine() ... Prirazeni cteni ze vstupu  
 
-### Objekty
+## Objekty
 
 Set Args=Wscript.Arguments ... Argumenty skriptu  
 Set objShell=CreateObject("WScript.Shell") ... vytvori novy objekt  
@@ -155,7 +155,7 @@ zip.Close ... uzavre soubor
 Set zip = nothing ... odstrani vazani promenne na objekt  
 Set ObjSehll(<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb774063%28v=vs.85%29.aspx|shell.application]])  
 
-##### Pouziti v HTML
+### Pouziti v HTML
 
 &gt;SCRIPT LANGUAGE="VBSCRIPT"&lt; ... Zacatek VBScript bloku  
 &gt;!-- ... VBScript blok musi byt v kometari  

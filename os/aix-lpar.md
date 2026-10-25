@@ -2,13 +2,6 @@
 
 Logicke oddily - LPARy se spravuji bud z HMC, nebo z IVM (Integrated Virtual Manager), jez ma stejnou IP jako VIO  
 
-## Obsah:
-
-[Externi odkazy](#link)  
-[Klient - LPAR](#lpar)  
-[HMC](#hmc)
-[VIOS - Virtual I/O Server](#vios)  
-
 ## Externi odkazy
 
 HMC web kilent ... https://IP adresa HMC (Drive byl potreba WebSM)

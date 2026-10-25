@@ -1,20 +1,9 @@
 # Perl
 
-### Obsah
-
-Externi odkazy  
-Binarka perl  
-Promenne  
-[Systemove promenne](perl-promenne.html)  
-Operatory  
-Cykly, podminky, vlastni funkce  
-
-Prace s retezci  
-vstup/vystup  
-soubory, presmerovani  
 
 ### Externi odkazy
 
+[Systemove promenne](perl-promenne.html)  
 [1radkovi perlici](http://www.catonmat.net/download/perl1line.txt)  
 [Programujeme v PERLu - I](http://www.abclinuxu.cz/clanky/programovani/programujeme-v-perlu-i)  
 [Programujeme v PERLu - II](http://www.abclinuxu.cz/clanky/programovani/programujeme-v-perlu-ii) na ABCLinuxu  

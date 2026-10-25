@@ -1,3 +1,5 @@
+# zivotopis
+
 Životopis na [LinkedIn](http://www.linkedin.com/in/tomaslipensky)  
 
 ### Zamestnani
@@ -30,55 +32,55 @@ Nemcina ... zacatecnik
 ### Znalosti v informatice
 
 <dt>Site:
- <dd>TCP/IP + Cisco - Dobre znalosti</dd>
+ TCP/IP + Cisco - Dobre znalosti
 </dt>
 <dt>Operacni Systemy:
- <dd>Linux - dobre znalosti</dd>
- <dd>Linux Clustering - prumerne znalosti</dd>
- <dd>Linux Virtualizace - prumerne znalosti</dd>
- <dd>AIX - dobre znalosti</dd>
- <dd>AIX Clustering - prumerne znalosti</dd>
- <dd>AIX Virtualizace - dobre znalosti</dd>
- <dd>HP-UX - prumerne znalosti</dd>
- <dd>Solaris - prumerne znalosti</dd>
- <dd>Veritas Clustering - zakladni znalosti</dd>
- <dd>FreeBSD - zakladni znalosti</dd>
- <dd>Windows 200x - prumerne znalosti</dd>
+ Linux - dobre znalosti
+ Linux Clustering - prumerne znalosti
+ Linux Virtualizace - prumerne znalosti
+ AIX - dobre znalosti
+ AIX Clustering - prumerne znalosti
+ AIX Virtualizace - dobre znalosti
+ HP-UX - prumerne znalosti
+ Solaris - prumerne znalosti
+ Veritas Clustering - zakladni znalosti
+ FreeBSD - zakladni znalosti
+ Windows 200x - prumerne znalosti
 </dt>
 <dt>Aplikacni servery:
- <dd>WebSphere Application Server - dobre znalosti</dd>
- <dd>WebSphereMQ - zakladni znalosti</dd>
- <dd>TomCat - zakladni znalosti</dd>
- <dd>JBoss - zakladni znalosti</dd>
- <dd>Fredhopper - prumerne znalosti</dd>
+ WebSphere Application Server - dobre znalosti
+ WebSphereMQ - zakladni znalosti
+ TomCat - zakladni znalosti
+ JBoss - zakladni znalosti
+ Fredhopper - prumerne znalosti
 </dt>
 <dt>Databaze:
- <dd>Oracle - zakladni znalosti</dd>
- <dd>MySQL - zakladni znalosti</dd>
- <dd>PostgreSQL - zakladni znalosti</dd>
+ Oracle - zakladni znalosti
+ MySQL - zakladni znalosti
+ PostgreSQL - zakladni znalosti
 </dt>
 <dt>Publikovani na webu
- <dd>html - dobre znalosti</dd>
- <dd>ccs - prumerne znalosti</dd>
- <dd>Javascript - zakladni znalosti</dd>
- <dd>php - zakladni znalosti</dd>
+ html - dobre znalosti
+ ccs - prumerne znalosti
+ Javascript - zakladni znalosti
+ php - zakladni znalosti
 </dt>
 <dt>Scriptovani a programovani
- <dd>Bash - dobre znalosti</dd>
- <dd>Perl - prumerne znalosti</dd>
- <dd>Python - zakladni znalosti</dd>
- <dd>tcl - zakladny znalosti</dd>
- <dd>Java - zakladni znalosti</dd>
- <dd>C - zakladni znalosti</dd>
+ Bash - dobre znalosti
+ Perl - prumerne znalosti
+ Python - zakladni znalosti
+ tcl - zakladny znalosti
+ Java - zakladni znalosti
+ C - zakladni znalosti
 </dt>
 <dt>Dalsi znalosti
- <dd>Lotus Notes Klient - dobre znalosti</dd>
- <dd>Postovni servery sendmail, postfix, dovecot - prumerne znalosti</dd>
- <dd>Monitoring - IBM Tivoli Monitoring, Nagios</dd>
- <dd>Matematicke programy Maple, Matlab - zakladni znalosti</dd>
- <dd>Open Office - dobre znalosti</dd>
- <dd>[ITIL](http://en.wikipedia.org/wiki/Information_Technology_Infrastructure_Library) - znalosti a praxe ze zamestnani v IBM</dd>
- <dd>Service Operation a Service Transition systemy - Remedy, Maximo, ManageNow - dobre znalosti</dd>
+ Lotus Notes Klient - dobre znalosti
+ Postovni servery sendmail, postfix, dovecot - prumerne znalosti
+ Monitoring - IBM Tivoli Monitoring, Nagios
+ Matematicke programy Maple, Matlab - zakladni znalosti
+ Open Office - dobre znalosti
+ [ITIL](http://en.wikipedia.org/wiki/Information_Technology_Infrastructure_Library) - znalosti a praxe ze zamestnani v IBM
+ Service Operation a Service Transition systemy - Remedy, Maximo, ManageNow - dobre znalosti
 </dt>
 
 ### Jine

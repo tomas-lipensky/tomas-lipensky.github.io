@@ -1,6 +1,6 @@
-Azure DevOps
+# Azure DevOps
 
-### Struktura
+## Struktura
 
 name: ... jméno pipeliny  
 trigger: ... událost, která spustí pipelinu  
@@ -9,12 +9,12 @@ variables: ... proměnné
 resources: ... repozitáře pro checkout  
 stages: ... jednotlivé kroky  
 
-### Proměnné
+## Proměnné
 
 echo "##vso[task.setvariable variable=TAJNA;issecret=true]$tasnost" ... nastavení tajné proměnné  
 echo "##vso[task.setvariable variable=NORMALNI;]"hodnota"" ... nastavení proměnná  
 
-### Tasky
+## Tasky
 
 bash  
 task: PublishBuildArtifacts@1  

@@ -17,7 +17,7 @@ psql -f vse.sql postgres ... obnovi vse z txt soubotu vse.txt
 
 #### klient
 
-%%psql -h HOSTNAME -p 5432 -U UZIVATEL DATABAZE%% ... připojení klientem do databáze  
+psql -h HOSTNAME -p 5432 -U UZIVATEL DATABAZE ... připojení klientem do databáze  
 
 ### Postgre SQL příkazy a SQL jazyk
 

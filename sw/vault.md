@@ -7,9 +7,9 @@ https://SERVER.cz:8200/ui/vault/storage/raft ... ukáže seznam nodá a který j
 
 #### Autentifikace
 
-%%curl --request POST --data '{"role_id":"aaa","secret_id":"bbb"}' http://127.0.0.1:8200/v1/auth/approle/login%% ... pomocí App Role získá token  
-%%curl --header "X-Vault-Token: AAA"  http://127.0.0.1:8200/v1/auth/approle/role/my-role/role-id%% ... vypíše role_id pro my_role  
-%%curl --insecure -H "X-Vault-Request: true" -H "X-Vault-Token: AAA" "https://127.0.0.1:8200/v1/KVv2/data/cesta/cesta"%% ... čtení secretů z Vaultu typu Secrets v2, z cesty cesta/cesta  
+curl --request POST --data '{"role_id":"aaa","secret_id":"bbb"}' http://127.0.0.1:8200/v1/auth/approle/login ... pomocí App Role získá token  
+curl --header "X-Vault-Token: AAA"  http://127.0.0.1:8200/v1/auth/approle/role/my-role/role-id ... vypíše role_id pro my_role  
+curl --insecure -H "X-Vault-Request: true" -H "X-Vault-Token: AAA" "https://127.0.0.1:8200/v1/KVv2/data/cesta/cesta" ... čtení secretů z Vaultu typu Secrets v2, z cesty cesta/cesta  
 
 ### CLI
 
@@ -68,7 +68,7 @@ vault operator generate-root ... zadají se 3 unseal klíče a vygeneruje se nov
 #### Vault v Dockeru, backup/restore
 
 docker volume create vault-volume  
-%%docker run --rm -it --name vault_local --cap-add=IPC_LOCK -e VAULT_ADDR='http:*0.0.0.0:8200' -e 'VAULT_LOCAL_CONFIG={"storage": {"raft": {"path": "/vault/"}}, "listener": [{"tcp": { "address": "0.0.0.0:8200", "tls_disable": true}}], "default_lease_ttl": "168h", "max_lease_ttl": "720h", "ui": true, "cluster_addr": "http:*127.0.0.1:8201", "api_addr": "http://0.0.0.0:8200"}' -p 8200:8200 -v vault-volume:/vault hashicorp/vault:1.14.10 server%%  
+docker run --rm -it --name vault_local --cap-add=IPC_LOCK -e VAULT_ADDR='http:*0.0.0.0:8200' -e 'VAULT_LOCAL_CONFIG={"storage": {"raft": {"path": "/vault/"}}, "listener": [{"tcp": { "address": "0.0.0.0:8200", "tls_disable": true}}], "default_lease_ttl": "168h", "max_lease_ttl": "720h", "ui": true, "cluster_addr": "http:*127.0.0.1:8201", "api_addr": "http://0.0.0.0:8200"}' -p 8200:8200 -v vault-volume:/vault hashicorp/vault:1.14.10 server  
 docker cp vault-snap/vault-raft-2023-11-24-14-45-00.snapshot vault_local:/tmp  
 docker exec -it vault_local /bin/sh  
 vault status  

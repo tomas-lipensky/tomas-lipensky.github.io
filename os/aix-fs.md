@@ -1,24 +1,5 @@
 # AIX - Souborove systemy, LVM, disky, ...
 
-[Pristupy k souborum](#soubory)  
-[FS](#FS)  
-[LV](#LV)  
-[VG](#VG)  
-[PV](#PV)  
-[informace o fyzickych discich](#disky)  
-[Magneticke pasky](#tape)  
-[CD/DVD](#CD)  
-[Paging space](#PS)  
-[dos](#dos)  
-[zalohovani](#backup)  
-[boot](#boot)  
-[system dump](#sysdump)  
-[GLVM](#GLVM)  
-[Storage, datova uloziste](#storage)  
-[Resene problemy s FS,LVM, ...](#problemy)  
-
-<hr>
-
 #### Pristupy k souborum
 
 aclget soubor ... (Access control get) informace o pristupu k souboru
@@ -423,7 +404,7 @@ smitty hacmp -> System management -> HACMP Logical Volume Manager -> Shared Logi
 smitty hacmp -> System management -> HACMP Logical Volume Manager -> Shared Logical Volumes -> Set Characteristics of Shared LV -> Increase the Size of a Shared LV
 nebo
 
-```
+```bash
 lslv aaa
 chlv -x 14000 aaa
 chlv -u 8 aaa
@@ -435,14 +416,14 @@ varyon
 
 ==Rozsireni FS v clusteru==
 
-```
+```bash
 lsfs -q /abc
 smitty hacmp -> System management -> HACMP Volume Manager -> Shared File Systems -> Enhanced JFS -> Change / Show ...
 ```
 
 ==Obnoveni smazaneho souboru==
 
-```
+```bash
 istat 1243 /dev/lv_cog # Block Pointer d0450
 echo "ibase=16;D0459 | bc # 853072
 lsfs -q /Cognos # block size: 4096

@@ -1,11 +1,5 @@
 # Cognos BI
 
-### Interni odkazy
-
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-</dl>
-
 ### Externi odkazy
 
 [Cognos BI training](www.ibm.com/cognos/training)  

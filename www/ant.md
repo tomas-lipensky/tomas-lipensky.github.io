@@ -2,13 +2,6 @@
 
 Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma za ukol zautomatizovat vytvareni programu pomoci nadefinovanych cilu, tedy napriklad kompilace, provadeni testu atd.
 
-### Obsah
-
-Externi odkazy  
-Minimalni definice  
-Zakladni prikazy Antu  
-Priklad projektu na WebSphere  
-
 ### Externi odkazy
 
 ### Minimalni definice

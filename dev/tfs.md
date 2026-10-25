@@ -1,13 +1,15 @@
+# tfs
+
 ## TFVC - Team Foundation Version Control
 
 TFS - Team Foundation Server hostuje TFVC
 
-### TEE - Team Explorer Everywhere
+## TEE - Team Explorer Everywhere
 
 [https://github.com/microsoft/team-explorer-everywhere](https://github.com/microsoft/team-explorer-everywhere)  
 Rider od JetBrains  
 
-#### =TFS-CLI
+### =TFS-CLI
 
 [https://github.com/microsoft/tfs-cli](https://github.com/microsoft/tfs-cli)  
 [https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/use-team-foundation-version-control-commands?view=azure-devops](https://docs.microsoft.com/en-us/azure/devops/repos/tfvc/use-team-foundation-version-control-commands?view=azure-devops)  

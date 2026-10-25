@@ -1,3 +1,5 @@
+# Artifactory
+
 URL:
 
 curl http://JFROG_URL/router/api/v1/system/ping ... ping, jestli je služba dostupná  

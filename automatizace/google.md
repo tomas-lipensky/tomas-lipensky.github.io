@@ -1,8 +1,10 @@
-[https://cloud.google.com/](https://cloud.google.com/)  
+# Google cloud
+
+[https://cloud.google.com/](https://cloud.google.com/)
 
 ### gcloud
 
-Google Cloud CLI  
+Google Cloud CLI
 
 #### Kubernetes
 

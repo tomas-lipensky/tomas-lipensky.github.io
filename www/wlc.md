@@ -1,12 +1,5 @@
 # Oracle WebLogic Server
 
-### Obsah
-
-<dl>
-<dt>Externi odkazy</dt>
-
-</dl>
-
 ### Interni odkazy
 
 [WAS - troubleshooting](was-troubleshoot.html)

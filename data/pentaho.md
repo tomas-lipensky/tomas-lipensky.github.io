@@ -1,7 +1,5 @@
 # Pentaho
 
-### Obsah
-
 ### Externi odkazy
 
 [Wikipedie - Pentaho](https://en.wikipedia.org/wiki/Pentaho)  

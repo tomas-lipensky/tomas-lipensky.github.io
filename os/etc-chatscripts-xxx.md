@@ -1,3 +1,5 @@
+# etc-chatscripts-xxx
+
 ABORT BUSY ABORT 'NO CARRIER' ABORT ERROR
 '' AT
 AT ""

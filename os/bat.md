@@ -19,7 +19,7 @@ ECHO %OS% ... bypise verzi operacniho systemu
 [IF](http://ss64.com/nt/if.html)  
 PRIKAZ1 && PRIKAZ2 ... jestli prikaz1 je v poradku, proved prikaz 2  
 [FOR](http://www.robvanderwoude.com/for.php) %A IN (1 2) DO ECHO %A ... pouziti FOR v prikazove radce  
-[FOR](http://www.robvanderwoude.com/for.php) %%A IN (1 2) DO ECHO %%A ... pouziti FOR v BAT souboru  
+[FOR](http://www.robvanderwoude.com/for.php) A IN (1 2) DO ECHO A ... pouziti FOR v BAT souboru  
 
 ##### Ostatni prikazy
 

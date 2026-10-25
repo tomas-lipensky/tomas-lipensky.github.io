@@ -1,10 +1,12 @@
+# github
+
 ### Odkazy
 
 https://www.githubstatus.com/ ... Status zdraví služeb  
 
 ### GitHub akce
 
-[ GitHub akce](automatizace/github)  
+[GitHub akce](/automatizace/github)  
 
 ### GitHub markdown
 
@@ -72,7 +74,7 @@ ctrp-enter ... otevře okno pro doplňování kódu
 gh alias set iv 'issue view --comments' ... vytvoření aliasu  
 gh iv https://github.com/a/b/issues/4 ... použití aliasu, zobrazení komentářů pro issue 5  
 gh issue view --comments https://github.com/a/b/issues/4 ... zobrazení komentářů pro issue 5  
-%%gh repo list  ORG -L 300 --json name,repositoryTopics | jq '.[] | select(.repositoryTopics != null)' %%... vylistuje repozitáře organizace ORG, které mají nadefinovaný nějaký topic (jak tag)  
+gh repo list  ORG -L 300 --json name,repositoryTopics | jq '.[] | select(.repositoryTopics != null)' ... vylistuje repozitáře organizace ORG, které mají nadefinovaný nějaký topic (jak tag)  
 gh repo set-default ORG/repo ... nastaví výchozí repozitář - mohu pal přímo pracovat s pull requesty, issues, konfigurací atd  
 gh org list ... seznam organizací  
 gh pr list ... seznam pull requestů  

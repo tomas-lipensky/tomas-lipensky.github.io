@@ -1,3 +1,5 @@
+# etc-asoundrc
+
 #definice zvkuoveho zarizeni - bluetooth, viz hcitool
 
 pcm.btheadset {

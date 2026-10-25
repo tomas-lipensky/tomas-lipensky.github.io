@@ -1,10 +1,12 @@
-### Odkazy
+# IBM Cloud
 
-[automatizace/softlayer](automatizace/softlayer)  
-[automatizace/bluemix](automatizace/bluemix)  
+## Odkazy
+
+[softlayer](softlayer)  
+[bluemix](bluemix)  
 [https://www.ibm.com/cloud/](https://www.ibm.com/cloud/) ... IBM Cloud  
 
-### Portal
+## Portal
 
 [https://console.bluemix.net/](https://console.bluemix.net/) ... Portal IBM Cloudu (byvala komponenta BlueMix)  
 [https://control.softlayer.com](https://control.softlayer.com) ... Portal na na SL softlayer cast IBM Cloudu  

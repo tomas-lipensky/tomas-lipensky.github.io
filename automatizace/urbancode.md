@@ -1,3 +1,5 @@
+# urbancode
+
 ### UrbanCode
 
 Integracni a automatizacni nastroj (CI - Continuous Integration, Configuration management, Application Release Automation), puvodne [AnthillPro](https://en.wikipedia.org/wiki/AnthillPro), pote UrbanCode.  
@@ -21,15 +23,15 @@ Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release
 
 ### [uDeploy](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
 
-<li>Automaticke deploye a rollbacky v pripade potreby</li>
-<li>deploy konfiguraci napric ruznymi servery, sluzbami, vrstvami</li>
-<li>Integrace s middlewarem, cloudem a virtualizaci</li>
-<li>prehled deployu, historie, reporting, bezpecnost, inventar</li>
-<li>Jednoduchy process designer - drag&amp;drop</li>
-<li>podpora skalovatelnosti, vysoke dostupnosti (HA)</li>
-<li>podpora procesu - schvalovani atd.</li>
-<li>[Agent / agentless deploye](http://www.ranger4.com/blog/bid/75183/Agents-to-be-or-not-to-be-in-IBM-UrbanCode)</li>
-<li>[Podpora pluginu](http://www.ranger4.com/blog/bid/75217/All-About-UrbanCode-Plugins), [pluginy ke stazeni](https://developer.ibm.com/urbancode/plugins/)</li>
+- Automaticke deploye a rollbacky v pripade potreby
+- deploy konfiguraci napric ruznymi servery, sluzbami, vrstvami
+- Integrace s middlewarem, cloudem a virtualizaci
+- prehled deployu, historie, reporting, bezpecnost, inventar
+- Jednoduchy process designer - drag&amp;drop
+- podpora skalovatelnosti, vysoke dostupnosti (HA)
+- podpora procesu - schvalovani atd.
+- [Agent / agentless deploye](http://www.ranger4.com/blog/bid/75183/Agents-to-be-or-not-to-be-in-IBM-UrbanCode)
+- [Podpora pluginu](http://www.ranger4.com/blog/bid/75217/All-About-UrbanCode-Plugins), [pluginy ke stazeni](https://developer.ibm.com/urbancode/plugins/)
 
 ### Skoleni
 
@@ -43,8 +45,8 @@ Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release
 
 ### [uRelease](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
 
-<li>Na potlaceni rizik spojenych s vydavanim novych verzi</li>
-<li>Planovani, dohl/ed nad projekty, prehled verzi, analyza vlivu, lessons learned, zavislosti atd.</li>
+- Na potlaceni rizik spojenych s vydavanim novych verzi
+- Planovani, dohl/ed nad projekty, prehled verzi, analyza vlivu, lessons learned, zavislosti atd.
 
 ### udclient
 

@@ -1,12 +1,12 @@
-## GIT
+# GIT
 
-### Externi odkazy
+## Externi odkazy
 
 [A successful Git branching model](http://nvie.com/posts/a-successful-git-branching-model/)  
 [Best practice](https://www.git-tower.com/learn/git/ebook/en/command-line/appendix/best-practices)  
 [Tutorial on workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/centralized-workflow)  
 
-### užitečné nástroje
+## užitečné nástroje
 
 [pre-commit](https://pre-commit.com) ... automatické akce v případě volání git hooku, jako třeba git commit. Např automaticky zformátuje a zvaliduje kód  
 conventional commits ... prefix konvence commitů pro lepší rozpoznání účelu a pro automatické generování changelogu  
@@ -15,23 +15,23 @@ sme
 [článek](https://medium.com/opensight-ch/git-semantic-versioning-and-conventional-commits-564aece418a0) o použití sematického verzování, conventional commits, release note, change logu atd  
 [Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) ... možnost mít v git repozitáři namountované i jiné repozitáře v podadresářích, když máme závislosti na jiné repa  
 
-### git promenne
+## git promenne
 
-`git config %%--global user.name "John Doe"%%`  
-`git config %%--%%global user.email johndoe@example.com`  
-`git config %%--%%list` ... seznam promennyh  
-`git config %%--list --%%system` ... zobrazi systemove promenne  
-`git config %%--list --%%global` ... zobrazi globalni promenne  
-`git config %%--list --%%show-origin` ... zobrazi všechny proměnné a kde jsou definovány  
-`git config %%--%%global alias.co checkout` ... aliasy  
-`git config %%--%%global credential.helper cache` ... cachovane kredence  
+`git config --global user.name "John Doe"`  
+`git config --global user.email johndoe@example.com`  
+`git config --list` ... seznam promennyh  
+`git config --list --system` ... zobrazi systemove promenne  
+`git config --list --global` ... zobrazi globalni promenne  
+`git config --list --show-origin` ... zobrazi všechny proměnné a kde jsou definovány  
+`git config --global alias.co checkout` ... aliasy  
+`git config --global credential.helper cache` ... cachovane kredence  
 /etc/gitconfig ... system config  
 ~/.gitconfig, ~/.config/git/config ... global config  
 .git/config ... local config  
 `git help` ... help  
 `git help remote` ... help k remote  
 
-### Vytvoreni repozitare, prace s repozitari
+## Vytvoreni repozitare, prace s repozitari
 
 git init ... vytvoreni lokalniho repozitare v aktualnim adresari  
 git clone git@github.rtp.raleigh.ibm.com:tomas.lipensky-cz/bi-dwh_tools.git ... vytvori adresar bi_dwh_tools s klonem repozitare z URL  
@@ -53,17 +53,17 @@ git remote rename origin repo2 ... prejmenuje git server origin na repo2
 `git status -s` ... aktualni zmeny - 1 soubor = 1 radek  
 `git add service_scanner.sh *.txt` ... pridani souboru do stage - kontrola GITem, po commitu se to ulozi k dane verzi projektu  
 `git blame -L 5,10 helm/values.yaml` ... ukaze autory jednotlivych radku  
-`%%git commit -m "komentar k commitnuti"%%` ... potvrzeni kodu k odeslani u vsech souboru pridanych pomoci add  
+`git commit -m "komentar k commitnuti"` ... potvrzeni kodu k odeslani u vsech souboru pridanych pomoci add  
 `git commit --amend` ... oprava posledniho commitu  
-`%%git commit --fixup 1e30877%%` ... commitne zmeny jako opravu commitu 1e30877  
+`git commit --fixup 1e30877` ... commitne zmeny jako opravu commitu 1e30877  
 `git reset HEAD service_scanner.sh` ... odebere soubor service_scanner z commitu  
-`%%git reset --hard origin/dev%%` ... prepise na tvrdo lokalni zmeny ?  
-`%%git checkout -- service_scanner.sh%%` ... vrati zmeny z service_scanner.sh, ktere jsme provedli v souboru  
+`git reset --hard origin/dev` ... prepise na tvrdo lokalni zmeny ?  
+`git checkout -- service_scanner.sh` ... vrati zmeny z service_scanner.sh, ktere jsme provedli v souboru  
 [git log](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History) ... seznam historie commitu - check sum, popis, datum, autor  
 `git log --pretty=oneline` ... jednoradkovy, pouze check sum a popis  
 `git log -p` ... ukaze historii i se zmenama  
 `git log --stat` ... ukaze jen statistiky zmen  
-`%%git log --oneline -5 --author lipensky --before "Fri Mar 26 2009"%%` ... filtr pro log  
+`git log --oneline -5 --author lipensky --before "Fri Mar 26 2009"` ... filtr pro log  
 `git show` ... ukaze posledni zmeny  
 `git diff` ... porovna zmeneny soubor oproti puvodnimu (z git lokalnih repozitare)  
 .gitignore ... ignore list pro stage a commit  
@@ -73,7 +73,7 @@ git remote rename origin repo2 ... prejmenuje git server origin na repo2
 `git reflog` ... seznam zmen  
 `git revert` ... vrati zmeny  
 `git reset` ... pozor, muze byt nebezpecne, ztrata zmen  
-`%%git rebase -i --autosquash 7dbe2a9%%` ... rebase - slouci fixupy (opravy), otevre v rebase interaktivnim modu  
+`git rebase -i --autosquash 7dbe2a9` ... rebase - slouci fixupy (opravy), otevre v rebase interaktivnim modu  
 `git merge origin master` ... udela pull commitu z masteru a jejich merge do aktualni vetve  
 `git rebase -i HEAD~3` ... rebase poslednich 3 commitu  
 `git shortlogs` ... vylistuje comity podle autoru  
@@ -83,15 +83,15 @@ git remote rename origin repo2 ... prejmenuje git server origin na repo2
 
 Vice info: [https://git-scm.com/book/en/v1/Git-Basics-Tagging](https://git-scm.com/book/en/v1/Git-Basics-Tagging)
 
-`%%git tag -a 1.0.1 -m "applied hotfix 1"%%` ... prida tag k posledni zmene (commitu)  
-`git tag -a 1.0.0 -m %%"initial version"%% 20721acbb115cc33848dfcc21` ... otaguje commit, jehoz check sum, nebo jeho cast je v parametru  
+`git tag -a 1.0.1 -m "applied hotfix 1"` ... prida tag k posledni zmene (commitu)  
+`git tag -a 1.0.0 -m "initial version" 20721acbb115cc33848dfcc21` ... otaguje commit, jehoz check sum, nebo jeho cast je v parametru  
 `git show 1.0.1` ... ukaze zmeny pro dany tag  
 `git tag` ... seznam tagu  
 `git tag pracovni` ... prida lehky tag - bez komentaru, k posledimu commitu  
-`git tag -l %%"prac*"%%` ... vylistuje vsechny tagy, co zacinaji na prac  
+`git tag -l "prac*"` ... vylistuje vsechny tagy, co zacinaji na prac  
 `git push REMOTE TAG` ... odesle zmeny do repozitare REMOTE s tagem TAG, jinak se tagy neprenasi  
-`git push REMOTE %%--%%tags` ... odesle zmeny do repozitare, prenese i tagy  
-`%%git notes add -m "Zkontrolovano 2019/05/12"%%` ... pridani note  
+`git push REMOTE --tags` ... odesle zmeny do repozitare, prenese i tagy  
+`git notes add -m "Zkontrolovano 2019/05/12"` ... pridani note  
 
 ### Vetve / branches
 
@@ -99,7 +99,7 @@ Vice o vetvich: [https://git-scm.com/book/en/v1/Git-Branching-Basic-Branching-an
 
 git checkout master ... prepne HEAD - ukazatel na aktualni vetev na "master" a prehodi vsechny soubory na aktualni soubory z vetver master  
 git checkout -b hotfix1 ... vytvori z aktualni vetve novou vetev hotfix1 a prepne se do ni  
-git commit -a -d %%"%%oprava hotfix1%%"%% ... add (-a = add na vsechny soubory, co se zmenily) a commit (schvaleni zmen)  
+git commit -a -d "oprava hotfix1" ... add (-a = add na vsechny soubory, co se zmenily) a commit (schvaleni zmen)  
 git checkout master ... prepne zpet do puvodni vetve  
 git branch -d hotfix1 ... smaze vetev hotfix1  
 git branch ... seznam vetvi, ukaze aktualni  
@@ -127,7 +127,7 @@ git reset --hard origin/master
 
 [GitLab api - skupiny](https://docs.gitlab.com/ce/api/groups.html)  
 [GitLab api - projekty](https://docs.gitlab.com/ee/api/projects.html)  
-curl -k --header %%"%%PRIVATE-TOKEN: $TOKEN%%"%% https://gitlab.url.com/api/v3/groups/my-group 2>/dev/null | grep -o "[^,\"]\+:my-group/[^,\"]\+\.git" ... url na vylistovani objektu grupy  
+curl -k --header "PRIVATE-TOKEN: $TOKEN" https://gitlab.url.com/api/v3/groups/my-group 2>/dev/null | grep -o "[^,\"]\+:my-group/[^,\"]\+\.git" ... url na vylistovani objektu grupy  
 
 ### Scenare
 

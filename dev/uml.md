@@ -1,6 +1,6 @@
 # UML - Unified Modeling Language
 
-### Externí odkazy
+## Externí odkazy
 
 [Uvod do UML](http://www.agilemodeling.com/essays/umlDiagrams.htm)  
 [UML na wiki](http://en.wikipedia.org/wiki/Unified_Modeling_Language)  

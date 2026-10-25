@@ -17,10 +17,10 @@
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 
-<li>Designer - windows program na vytvareni ETL jobu</li>
-<li>Director - windows program na spousteni a kontrolu jobu</li>
-<li>Administrator - windows program na administraci DS (projekty, uzivatele atd.</li>
-<li>Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)</li>
+- Designer - windows program na vytvareni ETL jobu
+- Director - windows program na spousteni a kontrolu jobu
+- Administrator - windows program na administraci DS (projekty, uzivatele atd.
+- Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)
 
 ### Procesy, adresare, konfiguracni soubory
 
@@ -124,10 +124,10 @@ dssearch -domain DATASTAGEDES:9080 -user wasadmin -password wasadmin -server DAT
 
 ### Databaze
 
-<li>XMETA - x metadata DB - Datastage metadata</li>
-<li>DSODB - Operations database</li>
-<li>IADB - Information Analysis DB - Information Analzer modul - hleda sloupce ktere jsou vhodne na primarni klice a jin</li>
-<li>QSDB - Qualitystage DB - Qualitystage modul</li>
+- XMETA - x metadata DB - Datastage metadata
+- DSODB - Operations database
+- IADB - Information Analysis DB - Information Analzer modul - hleda sloupce ktere jsou vhodne na primarni klice a jin
+- QSDB - Qualitystage DB - Qualitystage modul
 
 ### procesy
 

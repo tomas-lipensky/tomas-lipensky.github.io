@@ -160,19 +160,19 @@ echo Hello > /dev/pts/0 ... posle Hello na konzoli pts/0 (ukaze se v danem termi
 write ... posle radky textu prihlasenemu uzivateli (konce ctrl-d)  
 
 wget http://www.seznam.cz ... stahne html stranku do soubrou  
-[curl](http://curl.haxx.se/docs/manual.html) -u user:passwd ftp:%%//%%machine.domain:port/full/path/to/file ... stahne soubor s ftp serveru  
-curl -u username: %%--key ~/.ssh/id_dsa --pubkey ~/.ssh/id_dsa.pub scp://%%shell.example.com/~/personal.txt ... stahne soubor pres ssh  
-curl %%--ftp-ssl ftp://%%files.are.secure.com/secrets.txt ... stahovani pres sftp  
-curl -u user:passwd -x my-proxy:888 http:%%//%%www.get.this/ ... stahovani pres proxy  
-curl -o aaa.html http:%%//%%mypage.org/bbb.html ... ukozi stranku do souboru aaa.html
-curl -O http:%%//%%www.seznam.cz ... stahne stranku do souboru  
-curl -T - http:%%//%%www.upload.com/myfile ... nahraje standartni vstup na stranku (Musti tam byt "PUT" znacka)  
-curl %%-d "name=Rafael%20Sagula&phone=3320780"  http://%%www.where.com/guest.cgi Posle metodou POST data  
+[curl](http://curl.haxx.se/docs/manual.html) -u user:passwd ftp://machine.domain:port/full/path/to/file ... stahne soubor s ftp serveru  
+curl -u username: --key ~/.ssh/id_dsa --pubkey ~/.ssh/id_dsa.pub scp://shell.example.com/~/personal.txt ... stahne soubor pres ssh  
+curl --ftp-ssl ftp://files.are.secure.com/secrets.txt ... stahovani pres sftp  
+curl -u user:passwd -x my-proxy:888 http://www.get.this/ ... stahovani pres proxy  
+curl -o aaa.html http://mypage.org/bbb.html ... ukozi stranku do souboru aaa.html
+curl -O http://www.seznam.cz ... stahne stranku do souboru  
+curl -T - http://www.upload.com/myfile ... nahraje standartni vstup na stranku (Musti tam byt "PUT" znacka)  
+curl -d "name=Rafael%20Sagula&phone=3320780"  http://www.where.com/guest.cgi Posle metodou POST data  
 curl -X POST -H "Content-Type: application/json" -d {name=a; password=b} ... posilani JSONu  
-curl %%-F "file=@cooltext.txt" -F "yourname=Daniel" -F "filedescription=Cool text file with cool text inside" http://www.post.com/postit.cgi%% ... odesle soubor a vyplni pole na strance  
-curl -A 'Mozilla/3.0 (Win95; I)' http:%%//%%www.nationsbank.com/ ... tvari se jako mozilla  
-curl %%--verbose --header 'Host: www.example.com' 'http://10.1.1.36:8000/the_url_to_test'%% … Pouziti virtualni domeny na IP adrese  
-curl %%-w "$i: %{time_total} %{http_code} %{size_download} %{url_effective}\n" -o "/dev/null" -s http://address.cz/test.html%% ... vypis custom informaci k requestu (cas odezvy, http kod, velikost) - dobre pro performance testy  
+curl -F "file=@cooltext.txt" -F "yourname=Daniel" -F "filedescription=Cool text file with cool text inside" http://www.post.com/postit.cgi ... odesle soubor a vyplni pole na strance  
+curl -A 'Mozilla/3.0 (Win95; I)' http://www.nationsbank.com/ ... tvari se jako mozilla  
+curl --verbose --header 'Host: www.example.com' 'http://10.1.1.36:8000/the_url_to_test' … Pouziti virtualni domeny na IP adrese  
+curl -w "$i: %{time_total} %{http_code} %{size_download} %{url_effective}\n" -o "/dev/null" -s http://address.cz/test.html ... vypis custom informaci k requestu (cas odezvy, http kod, velikost) - dobre pro performance testy  
 
 ### vstup/vystup
 
@@ -189,14 +189,14 @@ fgrep ... (fast grep) rychlejsi grep - vyhledava jen slova
 [grep](http://www.techonthenet.com/unix/basic/grep.php) ... filtruje ze vstupu radky, ktere obsahuji nejaky text zadany [regularnimy](http://www.robelle.com/smugbook/regexpr.html) [vyrazy](http://www.panix.com/~elflord/unix/grep.html)  
 head ... prvnich 10 (nekolik) radku z vstupu  
 printf ... tisk formatovanych textu  
-LEN=20 ; printf -v char  "%${LEN}s" ""; echo ${char%%//%% /-} ... napise 20x pomlcku  
+LEN=20 ; printf -v char  "%${LEN}s" ""; echo ${char// /-} ... napise 20x pomlcku  
 printf "%5sahoj" ... 20xmezera + ahoj  
 rew ... vypise pozpatku, co se do nej posle  
 [sed](http://4bcad.com/doc/notes/sed) ... (stream editor) edituje tok textu  
 sed -e 'rozsah1PRIKAZ1;rozsah2PRIKAZ2' ... provede posloupnost prikazu na posloupnosti rozsahu  
 sed -ne '/TOM!/s/kde je TOM? /;1,5p' ... na radcich, kde neni retezec TOM, napis na zacatek "kde je TOM", vytiskni jen prvich 5 radku  
 sed 's:$:\r:' -i soubor ... prevede unixovy soubor na dosovy  
-sed 's/\s\{2,\}/ /g;s/^ %%//%%g;' -i soubor ... Provede 2 substituce - smaze vicenasobne bile znaky a mezery na zacatku radku  
+sed 's/\s\{2,\}/ /g;s/^ //g;' -i soubor ... Provede 2 substituce - smaze vicenasobne bile znaky a mezery na zacatku radku  
 sed '/^$/d' ... smaze prazdne radky  
 sed -i '/Windows/d' /tmp/data.txt ... Smaze radky se slovem Windows primo v souboru data.txt  
 sed '/WORD1/,/WORD2/d' ... smaze vsechny radky mezi slovem WORD1 a WORD2 vcetne techto 2 radku  
@@ -222,9 +222,9 @@ script -c bash vystup.txt ... presmeruje veskery vystup i do souboru. -t jsou ca
 
 alias l='ls -l' ... prezdivka l je misto ls -l  
 echo $$ $_ $(date + &quot;%m&quot;)... napise PID procesu, posledni prikaz(vystup) a minutu  
-echo %%$[^1]
+echo $[^1]
 
-[^1]: 10+10%% ... soucet 10+10  
+[^1]: 10+10 ... soucet 10+10  
 echo ${AAA} ... vypise promennou AAA  
 M=aa;aa=5;eval echo \${$M} ... vyhodnoceni promenne odkazujici na promennou  
 typeset l AAA ... zmeni pismena v promenne AAA na mala  
@@ -234,7 +234,7 @@ echo $? $! $1 ... napise posledni exit hodnotu, pid posledni bg aplikace, prvni 
 (sleep 6000) & sleep 2 ; kill $! ... timeout pro prikaz - ukonci prikaz po 2 sekundach, pokud se nedokonci  
 echo [${num:5:7}](http://www.softpanorama.org/Scripting/Shellorama/Reference/string_operations_in_shell.shtml) ... vypise 5 az 7 znak z promenne $num  
 ${probenna/CO/ZACO} ... zameni prvni retezec CO za ZACO  
-${probenna%%//%%CO/ZACO} .. zameni vsechny retezce CO za ZACO  
+${probenna//CO/ZACO} .. zameni vsechny retezce CO za ZACO  
 B=1;A=B;C=${!A} ... neprimy odkaz. Udela jakoby C=$($A) (to same co eval C=\$$A)  
 aaa="ahoj"; echo $aaa; echo ${aaa} ... prirazeni a vypis promenne  
 pole[0]="cau"; echo ${pole[0]} ... definovani prvku pole, vypis  
@@ -261,11 +261,11 @@ echo ${aaa:+"ahoj"} ... vypise "ahoj", pokud promenna aaa existuje
 echo ${aaa:?"aaa not defined"} ... vypise ahoj, nebo vyskoci s hlaskou "aaa not defined"  
 echo ${aaa:="ahoj"} ... vypise aaa, pokud existuje. Pokud ne, tak se aaa priradi ahoj a pak se vypise  
 echo ${aaa:%.*} ... v promenne smaze nejmensi mozny vyskyt regularniho vyrazu .* od konce  
-echo ${aaa:<nowiki>%%</nowiki>.*} ... v promenne smaze nejvetsi mozny vyskyt regularniho vyrazu .* od konce  
+echo ${aaa:<nowiki></nowiki>.*} ... v promenne smaze nejvetsi mozny vyskyt regularniho vyrazu .* od konce  
 echo ${aaa:#.*} ... v promenne smaze nejmensi mozny vyskyt regularniho vyrazu .* od zacatku  
 echo ${aaa:##.*} ... v promenne smaze nejmensi mozny vyskyt regularniho vyrazu .* od kacatku  
 IFS=":"; for i in "a:b:c"; do echo $i; done ... nastavi oddelovac :  
-${variable%%//%%pattern1/pattern2} ... Nahradi vsechny vyskyty vyrazu pattern1 za pattern2 v promenne  
+${variable//pattern1/pattern2} ... Nahradi vsechny vyskyty vyrazu pattern1 za pattern2 v promenne  
 ${variable/pattern1/pattern2} ... Nahrani prvni vyskyt vyrazu pattern1 za pattern2 v promenne  
 ${variable/#pattern1/pattern2} ... Nahradi prvni vyskyt  vyrazu pattern1 za pattern2 v promenne, jestlize promenna zacina vyrazem pattern1  
 ${variable/%pattern1/pattern2} ...  Nahradi posledni vyskyt  vyrazu pattern1 za pattern2 v promenne, jestlize promenna konci vyrazem pattern1  

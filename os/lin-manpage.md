@@ -1,3 +1,5 @@
+# lin-manpage
+
 .TH PILOTAGE 1 LOCAL
 .SH NAME
 pilotage - checks and print the status of monitored processes, FS's and URLs on stdout

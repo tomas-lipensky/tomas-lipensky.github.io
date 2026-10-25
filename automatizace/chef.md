@@ -1,16 +1,18 @@
+# chef
+
 ### Chef
 
 Configuration management nastroj. Jednotlive configuracni kroky jsou nazyvany recepty. Sady receptu jsou kucharky.  
 Chef muze fungovat jako server/klient - klient uklada konfiguraci prostredi do serverove databaze, recepty pak mohou tato data uzivat. Druhy rezim prace se "Chef-solo".
 Objekty:  
-<li>Repozitar - obsahuje kucharky</li>
-<li>kucharky - obsahuji recepty, atributy (default.rb), definice (/definitions), soubory (/files), klihovny (/libraries), metadata (metadata.rb), [vestavene](https://docs.chef.io/resources.html) a [vlastni](https://docs.chef.io/lwrp.html) resources  (maji ruzne typy - package, template, service) a vzory (/templates), testy. Kucharky mohou mit verze</li>
-<li>recept - postupy</li>
-<li>(template) vzor - staticka reprezentace souboru pro knihovny</li>
-<li>runlist - usporadany seznam receptu vybranych pro klienta</li>
-<li>environment - prostredi - prod, preprod, test</li>
-<li>politiky - role (web server, db), environment (prod), data bags (hesla atd), kucharky (verzovane)</li>
-<li>role - obsahuji 0 a vic atributu a runlistu. Kazdy node muze mit 0 a vice roli</li>
+- Repozitar - obsahuje kucharky
+- kucharky - obsahuji recepty, atributy (default.rb), definice (/definitions), soubory (/files), klihovny (/libraries), metadata (metadata.rb), [vestavene](https://docs.chef.io/resources.html) a [vlastni](https://docs.chef.io/lwrp.html) resources  (maji ruzne typy - package, template, service) a vzory (/templates), testy. Kucharky mohou mit verze
+- recept - postupy
+- (template) vzor - staticka reprezentace souboru pro knihovny
+- runlist - usporadany seznam receptu vybranych pro klienta
+- environment - prostredi - prod, preprod, test
+- politiky - role (web server, db), environment (prod), data bags (hesla atd), kucharky (verzovane)
+- role - obsahuji 0 a vic atributu a runlistu. Kazdy node muze mit 0 a vice roli
 
 ### Odkazy
 

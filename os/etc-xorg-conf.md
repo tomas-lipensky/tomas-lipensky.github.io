@@ -1,3 +1,5 @@
+# etc-xorg-conf
+
 ```
 Load "freetype" ... modul odpovedny za TrueType Fonty *.ttf
 Load "type1" ... modul odpovednu za Adobe Type1 *.afm, *.pfm, *.pfb

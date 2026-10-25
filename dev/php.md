@@ -1,28 +1,15 @@
 # Perl
 
-### Obsah
-
-Externi odkazy  
-Binarka perl  
-Promenne  
-[Systemove promenne](perl-promenne.html)  
-Operatory  
-Cykly, podminky, vlastni funkce  
-
-Prace s retezci  
-vstup/vystup  
-soubory, presmerovani  
-
-### Externi odkazy
+## Externi odkazy
 
 [uk3.php.ne](uk3.php.ne)  
 [http://www.w3schools.com/php/default.asp](http://www.w3schools.com/php/default.asp) ... PHP na w3schools  
 
-### Promenne
+## Promenne
 
 $A=1; ... definice a prirazeni promenne  
 strlen($str); ... vrati delku znaku  
 
-### Bezpecnost
+## Bezpecnost
 
 mysql_escape_string($item); ... prevede retezec na bezpecny retezec pro SQL (vyescapuje uvozovky)

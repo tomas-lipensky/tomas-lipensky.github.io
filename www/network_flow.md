@@ -1,3 +1,5 @@
+# network_flow
+
 ### Inspekce sitoveho toku
 
 mitmproxy ... [Man in the middle proxy](https://www.owasp.org/index.php/Man-in-the-middle_attack) pro sledovani provozu na weby (http a ssl proxy), male [howto](https://blog.heckel.xyz/2013/07/01/how-to-use-mitmproxy-to-read-and-modify-https-traffic-of-your-phone/) a nebo [toto](https://www.trustwave.com/Resources/SpiderLabs-Blog/Intercepting-SSL-And-HTTPS-Traffic-With-mitmproxy-and-SSLsplit/). Navod na instalace viz [python](../dev/python.html) stranka. Ruzne druhy [proxy modu.](http://docs.mitmproxy.org/en/stable/modes.html)  

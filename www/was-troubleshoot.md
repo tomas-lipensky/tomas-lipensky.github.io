@@ -1,26 +1,5 @@
 # WebSphere Application Server
 
-### Obsah
-
-<dl>
-<dt>Externi odkazy</dt>
-<dt>Interni odkazy</dt>
-<dt>Instalace/odinstalace/aplikace oprav</dt>
-<dt>Webove sluzby</dt>
-<dt>WAS: Start/Stop/Status</dt>
-<dt>WAS: konfiguracni binarky</dt>
-<dt>Logy</dt>
-<dt>Konfiguracni soubory</dt>
-<dt>Sluzby, poskytovatele sluzeb</dt>
-<dd>JMS</dd>
-<dd>JDBC</dd>
-<dd>Webovy server a webove sluzby</dd>
-<dt>Aplikace</dt>
-<dt>[Ant](ant.html)</dt>
-<dt>wsadmin prostredi - [JACL](jacl.html), [Jython](jython.html)</dt>
-<dt>shell: uzitecne prikazy</dt>
-</dl>
-
 ### Externi odkazy
 
 ### Interni odkazy
@@ -38,8 +17,8 @@ Ridi je parametr -Xdump - tzv. dump agent.
 Obsahuji stopovaci body (tracepoint data) ktera se drzi v stopovacich bugrech. Lokace v profilu, napr. /usr/WebSphere/v7/Profiles/node01
 
 <dl>
-<dd>java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -summary ... prohlizeni Snap.*.trc souboru</dd>
-<dd>java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -uservmid 30e41e00 ... podrobne indormace on VMID</dd>
+java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -summary ... prohlizeni Snap.*.trc souboru
+java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -uservmid 30e41e00 ... podrobne indormace on VMID
 </dl>
 
 ##### Javadumps - javacore.*.txt
@@ -47,9 +26,9 @@ Obsahuji stopovaci body (tracepoint data) ktera se drzi v stopovacich bugrech. L
 Javadumpy jsou analyzy JVM, obsahujici informace o vlaknech nactenych tridach a heap statistikach. Java parametr -Xdump:java ovlivnuje co se bude dit pri signalech jako napr. SIGQUIT nebo vaznych situacich
 
 <dl>
-	<dd>kill -3 PID ... vytvori thread dump</dd>
-	<dd>wsadmin prikaz k vyvolani AdminControl.invoke(objName,'dumpThreads')</dd>
-    <dd>IBM Support Assistent - IBM Thead and Monitor Dump Analyzer</dd>
+	kill -3 PID ... vytvori thread dump
+	wsadmin prikaz k vyvolani AdminControl.invoke(objName,'dumpThreads')
+    IBM Support Assistent - IBM Thead and Monitor Dump Analyzer
 </dl>
 
 ##### system dumps - core.*.dmp
@@ -57,12 +36,12 @@ Javadumpy jsou analyzy JVM, obsahujici informace o vlaknech nactenych tridach a 
 Java parametr -Xdump:system:events=vmstop,file=my.dmp ovlivnuje vytvareni heap dumpu.
 
 <dl>
-	<dd>jextract -Xrealtime <core_file></dd>
-	<dd>jdmpview -Xrealtime -zip <zip file></dd>
-	<dd>jextract -Xrealtime -nozip <core_file></dd>
-	<dd>jdmpview -Xrealtime -core <core file></dd>
-<dd>IBM Support Assistent - IBM Thead and Monitor Dump Analyzer</dd>
-<dd>IBM Support Assistent - IBM Monitoring and Diagnostic Tools for Java - Dump Analyzer</dd>
+	jextract -Xrealtime <core_file>
+	jdmpview -Xrealtime -zip <zip file>
+	jextract -Xrealtime -nozip <core_file>
+	jdmpview -Xrealtime -core <core file>
+IBM Support Assistent - IBM Thead and Monitor Dump Analyzer
+IBM Support Assistent - IBM Monitoring and Diagnostic Tools for Java - Dump Analyzer
 </dl>
 
 ##### heap dumps
@@ -70,12 +49,12 @@ Java parametr -Xdump:system:events=vmstop,file=my.dmp ovlivnuje vytvareni heap d
 Obvykle sobory phd. Java parametr -Xdump:none -Xdump:heap:events=vmstop,opts=PHD+CLASSIC
 
 <dl>
-	<dd>Memory Dump Diagnostic for Java™ (MDD4J) ... na prohlizeni Heap dumpu</dd>
-	<dd>Promenne WASu:</dd>
-	<dd>IBM_HEAPDUMPDIR ... lokace heap dumpu</dd>
-    <dd>IBM_HEAPDUMP_OUTOFMEMORY ... true - zapne generovani heap dumpu pri OutOfMemory problemu</dd>
-    <dd>IBM_HEAPDUMPIBM_HEAP_DUMP ... true - aktivuje produkci heapdumpyu pri volani signalu</dd>
-    <dd>JAVA_DUMP_OPTS ... [podminky](http://publib.boulder.ibm.com/infocenter/realtime/v1r0/topic/com.ibm.rt.doc.10/diag/tools/dumpagents_env.html) za jakych se tvori dumpy</dd>
+	Memory Dump Diagnostic for Java™ (MDD4J) ... na prohlizeni Heap dumpu
+	Promenne WASu:
+	IBM_HEAPDUMPDIR ... lokace heap dumpu
+    IBM_HEAPDUMP_OUTOFMEMORY ... true - zapne generovani heap dumpu pri OutOfMemory problemu
+    IBM_HEAPDUMPIBM_HEAP_DUMP ... true - aktivuje produkci heapdumpyu pri volani signalu
+    JAVA_DUMP_OPTS ... [podminky](http://publib.boulder.ibm.com/infocenter/realtime/v1r0/topic/com.ibm.rt.doc.10/diag/tools/dumpagents_env.html) za jakych se tvori dumpy
 
 </dl>
 

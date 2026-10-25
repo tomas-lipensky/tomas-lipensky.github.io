@@ -1,3 +1,5 @@
+# vi
+
 [Souhrn ovladani](http://lagmonster.org/docs/vi.html)  
 
 [viemu](http://www.viemu.com/vi-vim-cheat-sheet.gif) ... cheatsheet s ovladanim vi  

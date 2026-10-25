@@ -3,23 +3,26 @@
 ### PA-RISC boot
 
 **Boot proces na PA-RISC**
-<li>POST ... Power-On Self Test - Test ulozeny v BootROM</li>
-<li>PDC ... Processor Dependent Code - Test ulozeny v BootROM</li>
-<li>IODC ... I/O Dependent Code - Test ulozeny v BootROM</li>
-<li>PDC/BCD ... Boot Console Header - Spoustec firmware ukozeny v BootROM, ktery nacita informace o cestach k diskum z NVRAM  
-<li>ISL/IPL ... Initial System/Program Loader - Spoustec systemu, ulozeny v LIF (Logical Interchange Format) oblasti bootovaciho disku. Ten nacte soubor AUTO, ktery ukazuje na defaultni jadro a defaultni parametry</li>
-<li>/stand/vmunix ... jadro</li>
-<li>init ... init proces s nadefinovanymi init levely a odpovidajicimi procesy</li>
+    
+- POST ... Power-On Self Test - Test ulozeny v BootROM
+- PDC ... Processor Dependent Code - Test ulozeny v BootROM
+- IODC ... I/O Dependent Code - Test ulozeny v BootROM
+- PDC/BCD ... Boot Console Header - Spoustec firmware ukozeny v BootROM, ktery nacita informace o cestach k diskum z NVRAM
+- ISL/IPL ... Initial System/Program Loader - Spoustec systemu, ulozeny v LIF (Logical Interchange Format) oblasti bootovaciho disku. Ten nacte soubor AUTO, ktery ukazuje na defaultni jadro a defaultni parametry
+- /stand/vmunix ... jadro
+- init ... init proces s nadefinovanymi init levely a odpovidajicimi procesy
 
 **Struktura boot disku na PA-RISC**
-<li>LIF Header</li>
-<li>PVRA ... Physical Volume Reserved Area - Informace o PV</li>
-<li>BDRA ... Boot Data Reserved Area - Ukazatele na /stand, swap a /</li>
-<li>LIF Area ... Obsahuje obsahuje ISP/IPL, AUTO a jine nastroje potrebne na lokalizaci jadra a jeho spusteni  
-<li>VGRA ... Volume Group Reserved Area - informace o strukture VG</li>
-<li>LVs ... Logicke oddily</li>
-<li>volne misto</li>
-<li>BBRA ... Bad Blocks Reserved Area - misto na ukadani dat misto poskozenych sektoru na disku</li>
+
+- LIF Header
+- PVRA ... Physical Volume Reserved Area - Informace o PV
+- BDRA ... Boot Data Reserved Area - Ukazatele na /stand, swap a /
+- LIF Area ... Obsahuje obsahuje ISP/IPL, AUTO a jine nastroje potrebne na lokalizaci jadra a jeho spusteni
+- VGRA ... Volume Group Reserved Area - informace o strukture VG
+- LVs ... Logicke oddily
+- volne misto
+- BBRA ... Bad Blocks Reserved Area - misto na ukadani dat misto poskozenych sektoru na disku
+
 Boot disky bez LVM maji misto VGRA, LVs a volneho mista heden HSF oddil a na konci disku misto pro swap  
 
 **Manualni boot proces - preruseni BCH stiskem klavesy Esc**

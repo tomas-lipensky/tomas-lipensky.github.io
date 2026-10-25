@@ -1,11 +1,11 @@
 # [TCL](http://en.wikipedia.org/wiki/Tcl)/Jacl
 
-### Externi odkazy
+## Externi odkazy
 
 [Jacl](http://publib.boulder.ibm.com/infocenter/wsdoc400/v6r0/index.jsp?topic=/com.ibm.websphere.iseries.doc/info/ae/ae/rxml_commandline.html) na IBM  
 [dalsi popis Jacl](http://utenti.multimania.it/yanorel6/2/ch55.htm)  
 
-### Promenne
+## Promenne
 
 set a 5 ... nastavi promennou a  
 set b $a ... nastavi promennou a podle promenne b  
@@ -68,14 +68,14 @@ array nextelement POLE1 s-1-POLE1 ... vrati jmeno dalsiho indexu, pokud nejsme j
 array anymore POLE1 s-1-POLE1 ... vrati 1 pokud lde dal hledat, 0 pokud uz nejsou dalsi indexy  
 array donesearch POLE1 ... ukonci prohledavani indexu pole POLE1, zrusi ID prohledavani  
 
-### podminky
+## podminky
 
 if  boolean  then  body1  else  body2 ... podminky  
 if ![info exists a] {set a 0} else {incr a} ... podminka - pokud neexistuje promenna, definuje ji a priradi ji cislo nula. Jinak ji zvetsi  
 switch  flags  value  {pat1  body1  pat2  body2  ...} ... podminka s vyberem  
 switch  -exact  --  $HODNOTA  { 1  { incr(A) } 2	{ incr(A); incr(A) } default  { return A } } ... priklad podminky s vyberem  
 
-### Cykly
+## Cykly
 
 foreach HODNOTA SEZNAM commandBody  
 
@@ -85,7 +85,7 @@ set i 0; while {$i < 5} { puts "i is $i"; incr i} ... priklad
 for initial test final body  
 set numbers {1 3 5 7 11 13}; for {set i 0} {$i < [llength $numbers]} {incr i 1} { puts "i is $i" } ... priklad for  
 
-### Zakladni prikazy
+## Zakladni prikazy
 
 source c:/temp/script/SKRIPT.jacl ... spusti externi skript  
 
@@ -98,7 +98,7 @@ lindex  $argv  0 ... prvni parametr z volani interpreta/skriptu
 catch {expr 20 / 5} VYSLEDEK ... priradii vysledek do promenne VYSLEDEK. vrati 0  
 catch {expr aaa / 5} VYSLEDEK ... priradii chybu do promenne VYSLEDEK, vrati 1  
 
-### Prace se soubory
+## Prace se soubory
 
 open /tmp/aaa w ... otevre soubor pro zapis a vrati FileID  
 puts FileID aaa ... zapise do souboru FileID  
@@ -107,7 +107,7 @@ open /tmp/aaa r ... otevre soubor pro cteni a vrati FileID
 gets FileID ... precte radek ze souboru FileID  
 close FileID ... zavre soubor FileID  
 
-### Procedury
+## Procedury
 
 Definice procedury
 
@@ -123,7 +123,7 @@ global len ... nadefinuje promennou $len v procedure z globalniho globalni prost
 
 ====Jacl v html====
 
-```
+```tcl
 &lt;applet width=300 height=100 code=cornell.applet.Shell.class&gt;
 &lt;param NAME="jacl.script VALUE="buttons.tcl"&gt;
 &lt;/applet&gt;

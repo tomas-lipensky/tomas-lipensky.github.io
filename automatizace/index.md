@@ -1,12 +1,12 @@
+# Automatizace
+
 ### Architektura
 
 Automatizacni nastroje jsou aplikace, ktere slouzi k automaticke opakujici se cinnosti k ovladani jinych komponent. Obsahuji vetsinou nasledujici vrstvy:
 
-<ul>
-<li>Prezentacni - webovy portal - aplikaci na aplikacnim serveru ktera slouzi k manazovani automatizace</li>
-<li>Vyvojove prostredi (IDE) k definovani automatizaci</li>
-<li>Automatizacni jadro (engine) vykonavajici automatizaci</li>
-</ul>
+- Prezentacni - webovy portal - aplikaci na aplikacnim serveru ktera slouzi k manazovani automatizace
+- Vyvojove prostredi (IDE) k definovani automatizaci
+- Automatizacni jadro (engine) vykonavajici automatizaci
 
 ### DevOps
 

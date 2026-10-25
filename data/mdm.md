@@ -1,8 +1,6 @@
 # MDM CS - Colaborative Server (PIM, CE)
 
-### Obsah
-
-### Externi odkazy
+## Externi odkazy
 
 [Product information](http://www-01.ibm.com/software/data/master-data-management/) - on IBM sites  
 [MDM Developers](https://www.ibm.com/developerworks/community/blogs/64033fdd-4a35-4733-852f-a39abcdf4fb3/?lang=en) - on IBM DevelopersWorks  
@@ -19,14 +17,14 @@ konkurence - [Informatica MDM](http://www.informatica.com/us/products/master-dat
 [Python](../dev/python.html)  
 [JACL](jacl.html)  
 
-### MDM portfolio
+## MDM portfolio
 
-### URL aplikace
+## URL aplikace
 
 http://IP:7507/ ... MDM aplikace  
 https://IP:9043/ibm/console/ ... WAS Administracni konzole  
 
-### [Procesy](http://www-01.ibm.com/support/knowledgecenter/SSWSR9_11.4.0/com.ibm.pim.ins.doc/pim_con_pim_components.html?cp=SSWSR9_11.4.0%2F1-2-1-2), adresare, konfiguracni soubory
+## [Procesy](http://www-01.ibm.com/support/knowledgecenter/SSWSR9_11.4.0/com.ibm.pim.ins.doc/pim_con_pim_components.html?cp=SSWSR9_11.4.0%2F1-2-1-2), adresare, konfiguracni soubory
 
 admin ... Startuje a zastavuje sluzby na vzdalenych pocitacich  
 eventprocessor ... dispatchuje udalosti mezi jednotlivymy komponentami  
@@ -36,7 +34,7 @@ queuemanager ... posila dokumenty z MDM CS
 appsvr ... Aplikacni server - webove prostreni  
 rmiregistry ... registr dostupnych sluzeb, jejich funkci a pripojovacich metod k nim  
 
-### Start/stop
+## Start/stop
 
 **Kompletni stop MDM**
 su - -c "/opt/IBM/HTTPServer/bin/apachectl -k stop" ... stop IHS  
@@ -84,7 +82,7 @@ svc.pid ... pid procesu
 svc.out ... informace ze startu sluzby (classpath, jake sluzby komponenty jsou spusteny atd)  
 svc.err, exception.log ... chyby  
 
-### Procesy - komponenty
+## Procesy - komponenty
 
 rmi_LINUX01 ... RMI Registry - ELF process - ktery dela directory services pro MDM CS  
 admin_LINUX01 ... java com.ibm.ccd.admin.common.Admin  
@@ -94,7 +92,7 @@ queuemanager_LINUX01 ... java com.ibm.ccd.connectivity.common.QueueService
 appsvr_LINUX01 ... WAS  
 scheduler_LINUX01 ... java com.ibm.ccd.scheduler.common.Scheduler  
 
-### monitoring
+## monitoring
 
 bin/go/rmi_status.sh (perl /elixas/IBM/MDMPIM/bin/perllib/rmiStatus.pl) ktery spusti java tridu com.ibm.ccd.admin.common.RootAdmin na URL trigo_url=http://FRELIXPRDAS1A.loreal.wans:7514) neni
 vhodny na monitoring - kdyz nejede MDM, dlouhy timeout, kdyz jede ukaze vsechny procesy, neupozorni, kdyz nejake procesy chybi. Lze zkombinovat s jinym skriptem ktery obhospodari jine podminky (existence RMI portu, timeout, pocet procesu).
@@ -106,38 +104,38 @@ log monitor SystemOutLog na vsechny exception.log a SystemOut.log
 
 URL monitorin
 
-### Best practice
+## Best practice
 
-<li>Nesestavovat Master Data z casto menicich se polocek - cena atd.</li>
+- Nesestavovat Master Data z casto menicich se polocek - cena atd.
 
-### Struktura DB
+## Struktura DB
 
 Vsechna data se importuji fo tabulky ITA, ulozene sloupce ID (id polozky) a BLOB - serializovana data (specialni format obsahujici vsechny mozne atributy) ktere nejsou citelna z DB, ale pomoci API (napr. trida getItemId(attr1="red"). Pomale na operace, optimalizovane na extenzivni atributy a misto v DB. Tabulky ITM jsou interni idexace produktu podle atributu, interni indexace definovana jen v MDM.
 Od MDM9 nelze hledat nezindexovana data. Zavadi se ttabulka s XML. Pro kazdy pridany produkt se data updatuji v ITA, pokud se parametry indexuji, tak se updatuje ITM (idnex) a navic se produkt v XLM forme prida do XLM tabulky, kde probiha hledani v pripade nezindexovanych atributu.
 Hledani podle atributu probiha tak, ze se nejdriv vyraz provede na zindexovanych sloupcich - predfiltrovana data, a zbytek se hleda v XML tabulce.
 Kazda zmena parametru je verzovana. Zmena se prida jako dalsi polozka do ITA, updatuje se verze starte polozky a prida se do indexu nova verze. Cisteni lze delat jen smazanim starych verzi.
 
-### DocStore
+## DocStore
 
 Uloziste dokumentu, nachazi se jak v DB tak i na disku $TOP/public_html/suppliers. Pokud je soubor na disku, musi byt vytovrena reference v DB. Starcim a se o to "sluzba" docstore_mount (docstore_mount.xml je konfigurace). "Colaboration Manager - Document store"
 
-### Repports
+## Repports
 
 Jedna se o joby. Joby jsou but "import", "export", nebo "report". Reporty jsou joby ktere jsou bud napsany MDM skriptovacim jazyku (forma vbs), pripona .script, nebo skripty napsane v shelu nebo perlu na disku. "Product Manager - Repports"
 
-### Zaloha
+## Zaloha
 
 binarni - adresare s instalaci (MDM, WAS) - pred kazdym updatem, deployem. DB - svechny data v MDM, vcetne DocStore. Je monzo delat studeny i teply backup. Je potreba i zalohovat exporty/importy z/do SAP a byt optrny s restorem aby se neztratily data z importu/exportu
 
-### Scheduler
+## Scheduler
 
 Je proces, ktery cte v DB co ma delat. Admin proces zapise do DB udelej report1 s parametry1 a scheduler cte kazdych x min/sek tabulku a najde report1 parametry1 co ma vykonat a vykona to.
 
-### Monitoring
+## Monitoring
 
 uziti tablespaces, disku na DB, disku, procesu, URL, kontrola zprocesovani importu/exportu
 
-### Udrzba
+## Udrzba
 
 Mazani logu, DocStore, $TOP/src/db/schema/util/oracle/purge_profiles.sh - trace pri profilovani (debugu), $TOP/src/db/schema/util/drop_temp_agg_tables.pl, $TOP/src/db/schema/util/drop_log_tables_seq.pl, $TOP/src/db/schema/util/oracle/delete_versions_before_date.pl, $TOP/bin/db/analyze_schema.sh
 

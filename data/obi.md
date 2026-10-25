@@ -1,7 +1,5 @@
 # Oracle Business Inteligence
 
-### Obsah
-
 ### Externi odkazy
 
 http://technet.oracle.com  

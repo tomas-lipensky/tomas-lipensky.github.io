@@ -1,3 +1,5 @@
+# sunos
+
 ### Interni odkazy
 
 [Sprava systemu - uzivatele, balicky, jadro, logy...](sol-manage)  

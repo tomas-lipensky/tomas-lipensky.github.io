@@ -1,19 +1,5 @@
 # HP-UX - Sprava systemu
 
-[Administrace](#admin)  
-[Hardware](#hw)  
-[Vykon a sledovani systemu](#vykon)  
-[Jadro a ovladace](#kernel)  
-[Pamet a swap](#mem)  
-[Crash systemu](#crash)  
-[Specialni zarizeni - DSF](#dsf)  
-[Uzivatele](#user)  
-[Balicky](#sw)  
-[Boot/stop proces](#boot)  
-[Patchovani](#patch)  
-
-<hl>
-
 #### Administrace
 
 /usr/sbin/sam ... (System Administration Manager) konfiguracni nastroj na vsechno, textovy, pokud je $DISPLAY, tak i graficky
@@ -202,9 +188,9 @@ shutdown -ry 600 ... reboot systemu za 10 minut
 init 0 ... stop systemu  
 init 0[s,S,1,2,3,4] ... zastaveni,single,single s konzolou,single+fs mounted,multiuser,metwork multiuser+graficky,HP VUE. Spusti se, ci zastavi sluzby, ktere jsou v /etc/rcX.d  
 sluzby:
-<li>/etc/rcX.d ... linky do /sbin/init.d</li>
-<li>/sbin/init.d ... jednotlive skripty ke sluzbam</li>
-<li>/etc/rc.config ... nastaveni ke sluzbam. Nastaveni prezije restart</li>
+- /etc/rcX.d ... linky do /sbin/init.d
+- /sbin/init.d ... jednotlive skripty ke sluzbam
+- /etc/rc.config ... nastaveni ke sluzbam. Nastaveni prezije restart
 ch_rc -l -p CRON ... vypis konfigurovatelnych parametru sluzby cron  
 ch_rc -a -p CRON=0 ... zmena parametru sluzeb - zakaze spoousteni sluzby cron  
 /sbin/init.d/cron start[stop,start_msg,stop_msg] ... start, stop, vypis zavislosti, sluzby cron  
@@ -213,8 +199,8 @@ ctrl+\ ... preruseni skriptu startovani/stopovani sluzeb
 
 [Boot PA-RISC System](parisc.html#boot)  
 [Boot Integrity System](integrity.html#boot)  
-<li>jadro</li>
-<li>init</li>
+- jadro
+- init
 1. test a namountovani FS z /etc/fstab  
 2. provedeni /etc/inittab, ten spusti i /sbin/rc, ktery spouzti sluzby, spusti se nastaveny runlevel  
 

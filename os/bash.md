@@ -1,3 +1,5 @@
+# bash
+
 ### Odkazy
 
 [https://tldp.org/LDP/Bash-Beginners-Guide/html/](https://tldp.org/LDP/Bash-Beginners-Guide/html/) ... Bash pro zacatecniky  
@@ -19,9 +21,9 @@
 `echo ${promenna#A*j}` ... smaze z textu pocatecni nejkratsi mozny pattern ze zacatku textu, vypise jen konec bez patternu  
 `echo ${promenna##A*j}` ... smaze z textu pocatecni nejdelsi mozny pattern ze zacatku textu, vypise jen konec  
 `echo ${promenna%A*j}` ... smaze z textu koncovy nejkratsi mozny pattern ze zacatku textu, vypise jen zacatek bez patternu  
-`echo ${promenna<nowiki>%%</nowiki>A*j}` ... smaze z textu koncovy nejdelsi mozny pattern ze zacatku textu, vypise jen zacatek  
+`echo ${promenna<nowiki></nowiki>A*j}` ... smaze z textu koncovy nejdelsi mozny pattern ze zacatku textu, vypise jen zacatek  
 `echo ${promenna/aaa/j}` ... v promenne promenna nahradi jeden vyskyt podretezce aaa za j  
-`%%echo ${promenna//aaa/j}%%` ... v promenne promenna nahradi vsechny vyskyty podretezce aaa za j  
+`echo ${promenna//aaa/j}` ... v promenne promenna nahradi vsechny vyskyty podretezce aaa za j  
 `echo ${promenna/#*a/j}` ... v promenne promenna nahradi zacatecni vyskyt podretezce aaa za j, ekvivalent ^*a  
 `echo ${promenna/%*a/j}` ... v promenne promenna nahradi koncovy vyskyt podretezce aaa za j, ekvivalent *a$  
 `echo ${!a*}` ... vypise vsechny promenne, ktere zacinaji na a  

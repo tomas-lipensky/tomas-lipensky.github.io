@@ -1,13 +1,13 @@
 # Perl - Regularni vyrazy
 
-### Akce s regularnimi znakami
+## Akce s regularnimi znakami
 
 $RETEZEC =~ s/TEXT1/TEXT2/; ... zameni prvni vyskyt TEXT1 na radku textem TEXT2  
 $RETEZEC =~ s/TEXT1/TEXT2/g; ... zameni kazdy vyskyt TEXT1 na radku textem TEXT2  
 $RETEZEC =~ s/TEXT1/TEXT2/gi; ... zameni kazdy vyskyt text1 (nerozlisuje velka/mala pismena) na radku textem TEXT2  
 if( m/TEXT/ ) ... Vyhledavani pomoci regularnich znaku  
 
-### Metaznaky
+## Metaznaky
 
 | ...	zacatek retezce  
 $ ...	konec retezce  
@@ -30,7 +30,7 @@ a{2,} ... znak a alespon 2x po sobe
 a{2,3} ... znak a 2x az 3x  
 \ ...	quote or special  
 
-### Specialni lomitkove znaky
+## Specialni lomitkove znaky
 
 \t 	tabulator  
 \n 	novy radek  
@@ -45,9 +45,8 @@ a{2,3} ... znak a 2x az 3x
 \d 	ciselny znak - ekvivalent [0-9]  
 \D 	Neciselny znak  
 
-====Priklady regularnich znaku====
+### Priklady regularnich znaku
 
-```
 abc 	abc (that exact character sequence, but anywhere in the string)
 ^abc 	abc at the beginning of the string
 abc$ 	abc at the end of the string
@@ -69,4 +68,3 @@ a\.c 	a.c exactly
 100\s*mk 	the strings 100 and mk optionally separated by any amount of white space (spaces, tabs, newlines)
 abc\b 	abc when followed by a word boundary (e.g. in abc! but not in abcd)
 perl\B 	perl when not followed by a word boundary (e.g. in perlert but not in perl stuff)
-```

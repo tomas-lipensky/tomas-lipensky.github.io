@@ -1,3 +1,5 @@
+# lin-media
+
 ### Scaner
 
 xsane ... scanovani ze scaneru, videa atd. - vyuziva ,a href="http://www.sane-project.org|SANE]] (Scanner Access Now Easy)  
@@ -27,7 +29,7 @@ fmpeg -f alsa -ac 2 -ar 44100 -i hw:Loopback,1,0 out.wav ... zaznam z loopback z
 lsmod | grep snd  
 lame input_file.wav output_file.mp3 ... prevede wav do mp3  
 lame input.wav -b 256 --tt "song title" --ta "artist" output.mp3 ... prevede do mp3 v kvalite 265 Mbps a nastavi ID tagy  
-[mplayer](http://linux.tosovsky.info/exec.php/show=mplayer2) -cdrom-device /dev/sr0 -cache 4096 -ao alsa:noblock:device=hw=0 cdda:%%//%%.  
+[mplayer](http://linux.tosovsky.info/exec.php/show=mplayer2) -cdrom-device /dev/sr0 -cache 4096 -ao alsa:noblock:device=hw=0 cdda://.  
 play a.wav ... prehraje soubor wav  
 record a.wav ... nahrava z mikrofonu do a.wav  
 pulseaudio - nutno dat pozor na prava /dev/snd/control??  
@@ -45,14 +47,14 @@ sox infile.aiff -r 44100 -w -c 2 outfile.wav ... prevede aiff do wav
 ### Video
 
 [/etc/mplayer/mplayer.conf](http://how-to.wikia.com/wiki/How_to_configure_MPlayer)  
-mplayer mms:%%//%%63.251.167.32/theriversidechurch ... prehravani streamoveho videa  
+mplayer mms://63.251.167.32/theriversidechurch ... prehravani streamoveho videa  
 mplayer -ao pcm -aofile output.wav infile.wma ... konverze wma -&gt; wav  
 mplayer /usr/share/sounds/purple/receive.wav  -volume 100 -softvol -softvol-max 1000 -ao pcm:file=a.wav ... zasileni zvuku a ulozeni audia do souboru  
-mplayer dvd:%%//%%5 -dvd-device . -vf cropdetect ... detekce oriznuti obrazu pro zkopirovane DVD do soucasneho adresare  
-[mencoder](http://man.cx/mencoder(1)/cs) dvd:%%//%%5 -chapter 2-2 ... prekodovani hudby/videa  
-mencoder -ovc xvid -oac mp3lame -xvidencopts fixed_quant=5 -lameopts cbr:br=128:aq=1 -aid 128 -vf crop=672:560:20:8 -chapter 7-7 -o output.avi dvd:%%//%%5 ... Konverze 7 kapitoly DVD to avi-xvid + mp3 zvuk  
-mencoder dvd:%%//%%5 -vf crop=672:560:20:8 -ovc xvid -xvidencopts bvhq=1:chroma_opt:quant_type=mpeg:bitrate=658:pass=1 -aid 128 -oac copy -o /dev/null -chapter 5-5 ... zapis toku dat pro 2 krokove kodovani  
-mencoder dvd:%%//%%5 -vf crop=672:560:20:8 -ovc xvid -xvidencopts bvhq=1:chroma_opt:quant_type=mpeg:bitrate=658:pass=2 -aid 128 -oac mp3lame -lameopts br=128:cbr:vol=0 -chapter 5-5 -o VIDEO.avi ... 2 krok - prekodovani 5. kapitoly DVD do mpeg xvid avi souboru  
+mplayer dvd://5 -dvd-device . -vf cropdetect ... detekce oriznuti obrazu pro zkopirovane DVD do soucasneho adresare  
+[mencoder](http://man.cx/mencoder(1)/cs) dvd://5 -chapter 2-2 ... prekodovani hudby/videa  
+mencoder -ovc xvid -oac mp3lame -xvidencopts fixed_quant=5 -lameopts cbr:br=128:aq=1 -aid 128 -vf crop=672:560:20:8 -chapter 7-7 -o output.avi dvd://5 ... Konverze 7 kapitoly DVD to avi-xvid + mp3 zvuk  
+mencoder dvd://5 -vf crop=672:560:20:8 -ovc xvid -xvidencopts bvhq=1:chroma_opt:quant_type=mpeg:bitrate=658:pass=1 -aid 128 -oac copy -o /dev/null -chapter 5-5 ... zapis toku dat pro 2 krokove kodovani  
+mencoder dvd://5 -vf crop=672:560:20:8 -ovc xvid -xvidencopts bvhq=1:chroma_opt:quant_type=mpeg:bitrate=658:pass=2 -aid 128 -oac mp3lame -lameopts br=128:cbr:vol=0 -chapter 5-5 -o VIDEO.avi ... 2 krok - prekodovani 5. kapitoly DVD do mpeg xvid avi souboru  
 tcprobe -i jmeno_filmu.avi ... zjisti, jakym kodekem byl film zakodovan (balicek transcode)  
 ogle ... DVD prehravac  
 ffmpeg -init_hw_device  list ... seznam vsech hardware zarizeni ktere podporuje toto ffmpeg  
@@ -97,9 +99,9 @@ rtmp {
 }
 ```
 
-ffmpeg -f v4l2 -framerate 10 -i /dev/video0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp:%%//%%10.0.0.4/live/test ... streamovani kamery  
-ffmpeg -s 1680x1050 -r 10 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp:%%//%%10.0.0.4/live/test ... streamovani obrazovky  
-rtmp:%%//%%10.0.0.4/live/test ... link z Browseru, otevre se prehravacem
+ffmpeg -f v4l2 -framerate 10 -i /dev/video0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp://10.0.0.4/live/test ... streamovani kamery  
+ffmpeg -s 1680x1050 -r 10 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp://10.0.0.4/live/test ... streamovani obrazovky  
+rtmp://10.0.0.4/live/test ... link z Browseru, otevre se prehravacem
 
 ```
 rtmp {
@@ -113,10 +115,10 @@ rtmp {
 }
 ```
 
-a nahraje se do /usr/local/nginx/rtmp mp4 soubory. Prehrava se pak pomoci url: rtmp:%%//%%10.0.0.4/vod/file_example_MP4_640_3MG.mp4 pro video file_example_MP4_640_3MG.mp4  
+a nahraje se do /usr/local/nginx/rtmp mp4 soubory. Prehrava se pak pomoci url: rtmp://10.0.0.4/vod/file_example_MP4_640_3MG.mp4 pro video file_example_MP4_640_3MG.mp4  
 ### Kamera
 
-v4l2-ctl %%--%%list-devices ... seznam zarizeni asociovanych s kamerou  
+v4l2-ctl --list-devices ... seznam zarizeni asociovanych s kamerou  
 v4l2-ctl -L ... zobrazi nastaveni obrazu kamery  
 v4l2-ctl -c brightness=0 ... zmena nastaveni jasu  
 ffmpeg -f v4l2 -list_formats all -i /dev/video0 ... podporovane formatypro zarizeni kamery  
@@ -128,9 +130,9 @@ cdda2wav -JD /dev/cdrom ... vylistuje stopy z CD
 cdda2wav -D /dev/cdrom -B ... prevede stopy z CD na disk  
 cdda2wav -D /dev/cdrom -t 2 file.wav ... prevede 2 stopu do souboru  
 cdrdao copy ... zkopiruje audio CD na jine CD  
-cdrdao read-cd   %%--%%driver generic-mmc audiocd.toc ... cdrdao copy tremi kroky - zkopiruje na disk  
-cdrdao read-cddb %%--%%driver generic-mmc audiocd.toc ... overi s CDDB  
-cdrdao write  %%--%%driver generic-mmc audiocd.toc ... zapise na CDR  
+cdrdao read-cd   --driver generic-mmc audiocd.toc ... cdrdao copy tremi kroky - zkopiruje na disk  
+cdrdao read-cddb --driver generic-mmc audiocd.toc ... overi s CDDB  
+cdrdao write  --driver generic-mmc audiocd.toc ... zapise na CDR  
 cdplay ... prehravani CD  
 
 ### Zvuk

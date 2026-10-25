@@ -1,3 +1,5 @@
+# argocd
+
 ### Argo CD CLI
 
 argocd login URL ... --sso = SSO login  

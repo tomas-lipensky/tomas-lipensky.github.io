@@ -1,3 +1,5 @@
+# perl-promenne
+
 ### Perl - systémoveé proměnné
 
 $Config{'osvers'} ... verze OS  

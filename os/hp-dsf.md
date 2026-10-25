@@ -1,3 +1,5 @@
+# hp-dsf
+
 /dev/tty0p0 ... ternminal device file  
 /tev/ttyp0p0 ... modem dial-in  
 /dev/cul0p0 ... modem dial-out  

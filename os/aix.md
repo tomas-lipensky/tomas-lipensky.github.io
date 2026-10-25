@@ -1,3 +1,5 @@
+# aix
+
 ### Interni odkazy
 
 [ERRPT](aix-errpt) - errpt chyby  

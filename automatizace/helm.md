@@ -2,11 +2,9 @@
 
 ## Bloky/Akce
 
-#####
+### komentáře
 
-komentáře ====
-
-```
+```helm
 {{ */ komentář /* }}
 ```
 
@@ -14,18 +12,16 @@ komentáře ====
 
 definice funkce
 
-```
+```helm
 {{- define "TL.vypisObraz" -}}
 velikost: .Values.obraz.velikost
 {{- end -}}
 obraz: {{ include "TL.vypisObraz" $ }}
 ```
 
-#####
+### if
 
-if ====
-
-```
+```helm
 {{ if eq .Values.hodnota "ahoj"}}
   # Něco
 {{ else if eq .Values.hodnota "cau" }}
@@ -39,7 +35,7 @@ if ====
 
 změní rozsah operátoru .; tzn. blok
 
-```
+```helm
 {{ with .Values.doma }}
   vKuchyni: {{.vkuchyni}}
 {{end}}
@@ -51,27 +47,28 @@ tedy v bloku .vkuchyni je jako bez bloku .Values.doma.vkuchyni
 
 for-each blok
 
-```
+```helm
 barvy: |-
     {{- range .Values.barvy }}
     - {{ . | title | quote }}
     {{- end }}
 ```
 
-## Operatory
+## Operátory
 
-`%%velikost: ![ required "Je potřeba zadat velikost" .Values]( required "Je potřeba zadat velikost" .Values.velikost )%%` ... validace, zda proměnná je nadefinovaná
+`velikost: ![ required "Je potřeba zadat velikost" .Values]( required "Je potřeba zadat velikost" .Values.velikost )` ... validace, zda proměnná je nadefinovaná
 
-```
+```helm
 {{- if not (has .Values.lidi "Tom") }}
 {{- fail "proměnná lidi musí obsahovat Toma" }}
 {{- end }}
 ```
+
  ... vyskočení z běhu se zprávou, určená např. k validaci proměnných  
 
 ### proměnné
 
-$promanna := "aaa" ... nastavení proměnné  
+$promenna := "aaa" ... nastavení proměnné  
 .Value.aaa.bbb ... reference na proměnnou z values aaa.bbb  
 index "aaa" "bbb.ccc" ... reference na proměnnou, když obsahuje "divné" znaky, jako tečky, pomlčky atd.  
 
@@ -82,7 +79,7 @@ last ... vrátí poslední prvek pole/seznamu
 first ... vrátí první prvek pole/seznamu  
 list $ .  
 
-### logické:
+### logické
 
 contains "rn" "Brno" ... true, když řetězec obsahuje podřetězec rn  
 hasPrefix "Brn" .Value.mesto ... true, když řetězec obsahuje prefix Brn  

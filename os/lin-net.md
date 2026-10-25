@@ -1,20 +1,5 @@
 # LINUX - Site, sitove nastaveni
 
-### Obsah
-
-Konfiguracni soubory  
-Nastaveni sitoveho provozu  
-Bezdratova sit  
-Modem a GRPS/EDGE/4G pripojeni  
-Etherchannel = bonding  
-Testovani provozu, prohlizeni site, ...  
-IPv6  
-NAT a routing  
-Kernel a ovladace zarizeni pro sitove zarizeni  
-Bezpecnost - Firewall  
-Programy a nastroje pro komunikaci  
-Network Manager  
-
 #### Konfiguracni soubory
 
 /etc/sysconfig/network/[ifcfg*](etc-ifcfg)  
@@ -28,8 +13,8 @@ echo "alias net-pf-10 off\nalias ipv6 off" > /etc/modprobe.conf ... zakaze pouzi
 /etc/network/interface ... nove nastaveni site (Ubuntu 18.04)  
 /etc/netplan ... nastaveni sitovych karet  
 [systemd-resolve](https://wiki.archlinux.org/index.php/Systemd-resolved) --set-domain=home.local -i vpn0 ... nastaveni domeny pomoci systemd-resolve  
-systemd-resolve %%--%%status ... status  
-systemd-resolve %%--%%set-dns=10.0.0.138 -i wlp2s0 ... nastaveni DNS  
+systemd-resolve --status ... status  
+systemd-resolve --set-dns=10.0.0.138 -i wlp2s0 ... nastaveni DNS  
 /etc/systemd/network/soubor1
 
 ```

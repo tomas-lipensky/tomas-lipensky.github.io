@@ -1,12 +1,12 @@
 # Teradate
 
-#### odkazy
+## odkazy
 
 [Viewpoint](http://developer.teradata.com/viewpoint) - webova aplikace na sledovani a managovani Teradata databaze  
 
-#### Start/stop
+## Start/stop
 
-#### Prikazy z prikazove radky
+## Prikazy z prikazove radky
 
 ## PDE
 
@@ -30,7 +30,7 @@ DROP DATABASE student102_a1;
 
 ## Utility
 
-#### BTeq
+### BTeq
 
 I support TQL (Teradata Query Language). Uses datime Teradata native driver, not like TD studio etc (odbc, jdbc)
 

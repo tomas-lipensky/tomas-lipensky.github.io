@@ -2,7 +2,7 @@
 
 Jython je iplementace Pythonu cela napsana v Jave.
 
-### Externi odkazy
+## Externi odkazy
 
 [U&#269;íme se programovat v jazyce Python](http://howto.py.cz/index.htm)  
 [Python a Qt 1 (Uvod)](http://www.abclinuxu.cz/clanky/programovani/python-a-pyqt-1-uvod) na ABCLinuxu  
@@ -51,7 +51,7 @@ python -m venv ADRESAR ... vytvoří virtuální prostředí my_project_env
 source ADRESAR/bin/activate ... aktivuje virtuální prostředí  
 pip install mitmproxy ... nainstaluje balíček mitmproxy - buď globálně, nebo do aktivovaného virtuálního prostředí  
 python3 -m pip install -r requirements.txt ... instalace z **requirement.txt** souboru  
-%%python3.12 -m pip install --user ddgs==1.2%% ... jiný způsob na instalaci balíčku, jen pro daného uživatele  
+python3.12 -m pip install --user ddgs==1.2 ... jiný způsob na instalaci balíčku, jen pro daného uživatele  
 [pipx](https://github.com/pypa/pipx) install pycowsay ... nainstaluje lokálně pro daný adresář knihovnu (nemusí se používat venv)  
 pipx list ... seznam nainstalovaných knihoven  
 pipx run skript parametry ... spustí python aplikaci s parametrama a nainstalovanýma knihovnama  
@@ -166,7 +166,7 @@ has_key(x) ... vrati pravda/nepravda, pokud je x klic slovniku
 
 CISLO = 7 / 2 ... celociselne deleni  
 CISLE = 7 % 2 ... modulo po celociselnem deleni  
-CISLO= 3.13%%**%%2 ... 3.13 na druhou  
+CISLO= 3.13**2 ... 3.13 na druhou  
 a += 1 ... stejne jako a = a + 1  
 a < b <= 3 ... retezeni podminek  
 int(3.14) ... prevede text (cislo) na celociselnou hodnotu  

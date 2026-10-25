@@ -1,16 +1,18 @@
+# lin-workstation
+
 ### Install Ubuntu on encrypted physical volume
 
 lsblk ## list disks  
 DEV=/dev/xxx ## select a proper disk device  
-%%sgdisk --print $DEV%% ## list current partitions  
+sgdisk --print $DEV ## list current partitions  
 BOOTPAR=x;PVPAR=z;EFIPAR=u;GRUBFS=v  
-%%sgdisk --new=$BOOTPAR:0:+512M --typecode=$BOOTPAR:8301 --change-name=$BOOTPAR:/boot $DEV%% ## partition for /boot  
-#%%sgdisk -n $GRUBFS:0:+2M -t $GRUBFS:ef02 -c $GRUBFS:GRUB $DEV%%  
-#%%sgdisk -n $EFIPAR:0:+128M -t $EFIPAR:ef00 -c $EFIPAR:EFI-SP $DEV%%  
+sgdisk --new=$BOOTPAR:0:+512M --typecode=$BOOTPAR:8301 --change-name=$BOOTPAR:/boot $DEV ## partition for /boot  
+#sgdisk -n $GRUBFS:0:+2M -t $GRUBFS:ef02 -c $GRUBFS:GRUB $DEV  
+#sgdisk -n $EFIPAR:0:+128M -t $EFIPAR:ef00 -c $EFIPAR:EFI-SP $DEV  
 sgdisk -n $PVPAR:0:0 -t $PVPAR:8301 -c $PVPAR:rootfs  $DEV ## partition for /  
 sgdisk -p $DEV  
-%%cryptsetup luksFormat --type=luks1 ${DEV}$BOOTPAR%%  
-%%cryptsetup luksFormat --type=luks1 ${DEV}$PVPAR%%  
+cryptsetup luksFormat --type=luks1 ${DEV}$BOOTPAR  
+cryptsetup luksFormat --type=luks1 ${DEV}$PVPAR  
 cryptsetup open ${DEV}$BOOTPAR LUKS_BOOT  
 cryptsetup open ${DEV}$PVPAR rootfs_crypt  
 mkfs.ext4 -L boot /dev/mapper/LUKS_BOOT  
@@ -18,23 +20,23 @@ pvcreate /dev/mapper/rootfs_crypt
 vgcreate ubuntu-vg /dev/mapper/rootfs_crypt  
 lvcreate -L 4G -n swap ubuntu-vg  
 lvcreate -l 80%FREE -n root ubuntu-vg  
-%%while [ ! -d /target/etc/default/grub.d ]; do sleep 1; done; echo "GRUB_ENABLE_CRYPTODISK=y" > /target/etc/default/grub.d/local.cfg%%  
+while [ ! -d /target/etc/default/grub.d ]; do sleep 1; done; echo "GRUB_ENABLE_CRYPTODISK=y" > /target/etc/default/grub.d/local.cfg  
 INSTALL  
-%%mount /dev/mapper/ubuntu--vg-root /target%%  
-%%for n in proc sys dev etc/resolv.conf; do mount --rbind /$n /target/$n; done%%  
+mount /dev/mapper/ubuntu--vg-root /target  
+for n in proc sys dev etc/resolv.conf; do mount --rbind /$n /target/$n; done  
 chroot /target  
 mount -a  
 apt install -y cryptsetup-initramfs  
-%%echo "KEYFILE_PATTERN=/etc/luks/*.keyfile" >> /etc/cryptsetup-initramfs/conf-hook%%  
-%%echo "UMASK=0077" >> /etc/initramfs-tools/initramfs.conf%%  
+echo "KEYFILE_PATTERN=/etc/luks/*.keyfile" >> /etc/cryptsetup-initramfs/conf-hook  
+echo "UMASK=0077" >> /etc/initramfs-tools/initramfs.conf  
 mkdir /etc/luks  
 dd if=/dev/urandom of=/etc/luks/boot_os.keyfile bs=512 count=1  
 chmod 500 /etc/luks  
 chmod 400 /etc/luks/boot_os.keyfile  
 cryptsetup luksAddKey ${DEV}$BOOTPAR /etc/luks/boot_os.keyfile  
 cryptsetup luksAddKey ${DEV}$PVPAR /etc/luks/boot_os.keyfile  
-%%echo "LUKS_BOOT UUID=$(blkid -s UUID -o value ${DEV}$BOOTPAR) /etc/luks/boot_os.keyfile luks,discard" >> /etc/crypttab%%  
-%%echo "rootfs_crypt UUID=$(blkid -s UUID -o value ${DEV}$PVPAR) /etc/luks/boot_os.keyfile luks,discard" >> /etc/crypttab%%  
+echo "LUKS_BOOT UUID=$(blkid -s UUID -o value ${DEV}$BOOTPAR) /etc/luks/boot_os.keyfile luks,discard" >> /etc/crypttab  
+echo "rootfs_crypt UUID=$(blkid -s UUID -o value ${DEV}$PVPAR) /etc/luks/boot_os.keyfile luks,discard" >> /etc/crypttab  
 update-initramfs -u -k all  
 
 ### Nástroje

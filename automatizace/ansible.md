@@ -1,3 +1,5 @@
+# ansible
+
 ## Odkazy
 
 [galaxy.ansible.com](https://galaxy.ansible.com/) ... verejna knihovna roli  
@@ -12,12 +14,12 @@ ansible localhost -m command -a uptime ... spusti příkaz uptime
 win_regedit  
 win_regmerge  
 
-%%ansible-playbook playbook.yaml --syntax-check%%
-%%ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -e ansible_python_interpreter=/usr/bin/python3%% ... spusti playbook lokalne na mistnim pocitaci, nastavi python3 misto python, kdyz jsou nainstalovane oba  
-%%ansible-playbook -i inventory/hosts --limit testserver playbook1.yml%% ... Spusteni playbooku na omezem seznamu z inventare  
-ansible-playbook playbooktags.yml %%--%%tags untagged,tag1 ... provede jen neotagované tasky a tasky s tagem tag1  
-ansible-playbook playbooktags.yml %%--%%skip-tags=install,mydir ... vynechá otagované tásky tagy install, mydir  
-ansible-playbook playbooktags.yml %%--%%extra-vars action=install ... nadefinuje, nebo přepíše proměnnou/fakt  
+ansible-playbook playbook.yaml --syntax-check
+ansible-playbook --connection=local --inventory 127.0.0.1, playbook.yml -e ansible_python_interpreter=/usr/bin/python3 ... spusti playbook lokalne na mistnim pocitaci, nastavi python3 misto python, kdyz jsou nainstalovane oba  
+ansible-playbook -i inventory/hosts --limit testserver playbook1.yml ... Spusteni playbooku na omezem seznamu z inventare  
+ansible-playbook playbooktags.yml --tags untagged,tag1 ... provede jen neotagované tasky a tasky s tagem tag1  
+ansible-playbook playbooktags.yml --skip-tags=install,mydir ... vynechá otagované tásky tagy install, mydir  
+ansible-playbook playbooktags.yml --extra-vars action=install ... nadefinuje, nebo přepíše proměnnou/fakt  
 
 ## playbooky
 

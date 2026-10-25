@@ -1,3 +1,5 @@
+# lin-konfigurace
+
 ### Ubuntu
 
 [Ubuntu](Ubuntu) - apt remove example-content #… odebere zbytecny balik - pisnicka a video
@@ -8,7 +10,7 @@ root LV - sifrovat ci nesifrovat? Sifrovat = chrani proti nabootovani z docasneh
 ### Pravidelne cisteni Snap balicku
 
 snap list | grep disabled  
-snap remove &&--%%revision=45 nazev_balicku  
+snap remove &&--revision=45 nazev_balicku  
 
 ### update balicku
 

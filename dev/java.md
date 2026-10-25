@@ -3,16 +3,6 @@
 [java virtual machine (JVM)](../sw/java.html) obecne  
 [J2EE](../web/j2ee.html) vyvoj  
 
-### Obsah:
-
-[Externi odkazy](#odkazy)  
-[Typy souboru](#soubory)  
-[Promenne](#promenne)  
-[Operatory](#operatory)  
-[Podminky, cykly](#podminky)  
-[Tridy, objekty, funkce](#tridy)  
-[Priklady](#priklady)  
-
 ### Externi odkazy:
 
 [Jave 1.5 API](http://download.oracle.com/javase/1.5.0/docs/api/)  
@@ -81,7 +71,7 @@ A | B ... bitova operace XOR 1100 & 1001 = 0101 (priorita 7)
 if (podminka) {} else {}  
 (podminka) ? prikazy_pokua_pravda : prikazy_pokud_lez;
 
-```
+```java
 switch (promenna) {
 case hodnota1 :
 	prikazy
@@ -105,14 +95,14 @@ break; ... Vyskoci z cyklu for nebo while
 
 Definice tridy: cat trida.java
 
-```
+```java
 public class trida {
 int a; }
 ```
 
 Deklarace objektu tridy pokus: cat pokus.java
 
-```
+```java
 public class pokus {
   public static void main {
     trida A = new trida();
@@ -122,7 +112,9 @@ public class pokus {
 }
 ```
 
-Tridy mohou obsahovat i funkce, ktere umi pracovat s promennymy v objektu danne tridy:  
+Tridy mohou obsahovat i funkce, ktere umi pracovat s promennymy v objektu danne tridy:
+
+```java
 public class trida {
     public int a;
     public trida (int a) {
@@ -131,10 +123,11 @@ public class trida {
       this (1); }
     public zdvoj () {
       a *= 2; }
-}</code>
+}
+```
 Deklarace objektu tridy pokus: cat pokus.java
 
-```
+```java
 public class pokus {
   public static void main {
     trida A = new trida(2);
@@ -155,9 +148,9 @@ Math.Random() ... Vygeneruje pseudonahodne cislo
 
 ### Priklady:
 
-==Hello.java==
+#### Hello.java
 
-```
+```java
 class hello (
   public static void main (String[] args){
     System.out.println("Hello World");
@@ -165,9 +158,9 @@ class hello (
 }
 ```
 
-==apppletHello.java==
+#### apppletHello.java
 
-```
+```java
 import java.awt.*;
 public class apHello extends java.applet.Applet {
    public void init (){
@@ -176,9 +169,9 @@ public class apHello extends java.applet.Applet {
 }
 ```
 
-==appletHello.htm==
+#### appletHello.htm
 
-```
+```html
 &lt;BODY&gt;
 &lt;APPLET code="appletHello.class" width="100" height="30" align="left"&gt;
 aplet appletHello.class neni podporovan prohlizecem
@@ -187,9 +180,9 @@ aplet appletHello.class neni podporovan prohlizecem
 &lt;/HTML&gt;
 ```
 
-==servletHello.java==
+#### servletHello.java
 
-```
+```java
 import javax.servlet.*;
 import javax.servlet.http.*;
 import java.io.*
@@ -207,7 +200,7 @@ public class servletHello extends HttpServlet {
 
 ==WEB-INF/web.xml==
 
-```
+```xml
 &lt;?xml version="1.0" encoding="ISO-8859-1" ?&gt;
 &lt;web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4"&gt;
 &lt;servlet&gt;
@@ -226,7 +219,7 @@ public class servletHello extends HttpServlet {
 
 ==time.jsp==
 
-```
+```html
 &lt;html&gt;
 &lt;body&gt;
 Hello, now it is &lt;%= new java.util.Date() %&gt;

@@ -1,4 +1,4 @@
-### ICO a SCO
+# ICO a SCO
 
 Ibm Cloud Orchestrator a SmarCloud Orchestrator
 
@@ -157,16 +157,16 @@ https://developer.ibm.com/cloudorchestrator/videos/category/ibm-cloud-orchestrat
 
 [Dockerfile and IBM Cloud Orchestrator](https://andrewyuau.wordpress.com/2014/10/23/dockerfile-and-ibm-cloud-orchestrator/)  
 [IBM Cloud Orchestrator + Docker = ICOcker?](https://andrewyuau.wordpress.com/2014/10/21/ibm-cloud-orchestrator-and-docker/)  
-<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;UrbanCode&nbsp;Deploy](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-urbancode-deploy)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Docker&nbsp;Integration](https://www.ibm.com/cz-en/marketplace/ico-content-pack-for-docker-integration)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Tivoli&nbsp;Storage&nbsp;Manager](https://www.ibm.com/cz-en/marketplace/ico-content-pack-tivoli-storage-manager)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Chef](https://www.ibm.com/ae-en/marketplace/cloud-orchestrator-content-pack-for-chef)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;IBM&nbsp;Endpoint&nbsp;Manager](https://www.ibm.com/cz-en/marketplace/ico-content-pack-for-endpoint-manager)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;IP&nbsp;Address&nbsp;Management](https://www.ibm.com/us-en/marketplace/ico-content-pack-ip-address-management)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Control&nbsp;Desk](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-control-desk)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Pattern&nbsp;Management](https://www.ibm.com/uk-en/marketplace/ico-content-pack-for-pattern-management)</li>
-	<li>[IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;ServiceNow](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-servicenow)</li>
-</ul>
+
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;UrbanCode&nbsp;Deploy](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-urbancode-deploy)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Docker&nbsp;Integration](https://www.ibm.com/cz-en/marketplace/ico-content-pack-for-docker-integration)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Tivoli&nbsp;Storage&nbsp;Manager](https://www.ibm.com/cz-en/marketplace/ico-content-pack-tivoli-storage-manager)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Chef](https://www.ibm.com/ae-en/marketplace/cloud-orchestrator-content-pack-for-chef)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;IBM&nbsp;Endpoint&nbsp;Manager](https://www.ibm.com/cz-en/marketplace/ico-content-pack-for-endpoint-manager)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;IP&nbsp;Address&nbsp;Management](https://www.ibm.com/us-en/marketplace/ico-content-pack-ip-address-management)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Control&nbsp;Desk](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-control-desk)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Pattern&nbsp;Management](https://www.ibm.com/uk-en/marketplace/ico-content-pack-for-pattern-management)
+- [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;ServiceNow](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-servicenow)
 
 ### Problemy, trouble shooting
 

@@ -1,3 +1,5 @@
+# registry
+
 Bit , vyjadreni , popis
 
 8 , 0x0101 ... break disabled

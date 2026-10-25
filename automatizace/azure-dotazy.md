@@ -1,3 +1,5 @@
+# azure-dotazy
+
 ### Query Language
 
 Log Analytics query language (dotazovaci jazyk Log Analytiky) pouziva Kusto query - read-only SQL podobne dotazy na analyzudat.
@@ -12,10 +14,9 @@ Log Analytics query language (dotazovaci jazyk Log Analytiky) pouziva Kusto quer
 
 Event | where EventLevelName == "Error" | summarize count() by Source, Computer  
 
-search in (Updates) "error" .. hleda v tabulce Updates zaznamy, kde je retezec "error"  
-#####
+search in (Updates) "error" .. hleda v tabulce Updates zaznamy, kde je retezec "error"
 
-Event logy ====
+##### Event logy
 
 ```
 AzureActivity

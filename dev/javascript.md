@@ -142,8 +142,8 @@ unescape(text) ... odescapování
 [https://caniuse.com/queryselectorall](https://caniuse.com/queryselectorall) ... ukazuje které browsery opdporují metodu querySelectorAll  
 document.write("I say \"hello " + name + '"' ) ... výstup textu, slepený s proměnnou name  
 document.getElementById('id3').style.backgroundColor=red  
-%%<input type'text' id='mojeId'><script>var id=document.getElementById('mojeId'); id.value='hodnota'</script>%%  
-%%<div id='mojeId2'></div><script>var id=document.getElementById('mojeId2');id.innerHTML='<b>ahoj</b>'</script>%%  
+<input type'text' id='mojeId'><script>var id=document.getElementById('mojeId'); id.value='hodnota'</script>  
+<div id='mojeId2'></div><script>var id=document.getElementById('mojeId2');id.innerHTML='<b>ahoj</b>'</script>  
 element = document.querySelector('nav ul li a') ... vybere objekt pomocí dotazu, tedy v <nav><ul><li>  
 elements = document.querySelectorAll('nav ul li a') ... pole - vybere objekty pomocí dotazu, tedy v <nav><ul><li>  
 
@@ -174,10 +174,10 @@ window("http://tomas.lipensky.cz/", "_blank", "width=100,height=100,scrollbar=no
 
 onClick, onDblClick, onFocus, onBlur, onMouseDown, onMouseUp, onMouseOver, onMouseMove, onMouseOut, onKeyDown, onKeyUp, onKeyPress  
 
-%%<span onDblClick="location.href='index.jsp'">dvakrát klikni</span>%%  ... zmena URL aktualni stranky pri kliknuti  
-%%<a href="#home" onClick="location.reload()'">%%  ... znavunacteni stranky pri kliknuti  
-%%<a href="#home" onMouseOver="window.open('index.jsp#home')" >%% ... otevreni noveho okna a v nem stranky pri kliknuti
-%%<a href="javascript: void(0);" ></a>%% ... prázdný link, co nic nedělá  
+<span onDblClick="location.href='index.jsp'">dvakrát klikni</span>  ... zmena URL aktualni stranky pri kliknuti  
+<a href="#home" onClick="location.reload()'">  ... znavunacteni stranky pri kliknuti  
+<a href="#home" onMouseOver="window.open('index.jsp#home')" > ... otevreni noveho okna a v nem stranky pri kliknuti
+<a href="javascript: void(0);" ></a> ... prázdný link, co nic nedělá  
 
 element.addEventListener('click', function() {console.log('klik')}) ... nastavi poslouchání na události, callback volá funkci  
 element.attachEvent('mouseover', function(){}) ... jak addEventListener, ale pro Explorer  
@@ -203,7 +203,7 @@ objs.sort(compare);
 
 ### JQuery
 
-%%<script src="jquery.js"></script>%% ... inicializace jquery  
+<script src="jquery.js"></script> ... inicializace jquery  
 $(window).ready(function() {alert('Loaded')}); ... selektor - stránka, stav - načteno => vyskočí hláška  
 var MyID = $('#elementID') ... sekektor html značky s id='elementID'  
 var tucne = $('.bold') ... selektor značek s třídou class='bold'  

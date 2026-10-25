@@ -1,6 +1,6 @@
 # Veritas - NetBackup
 
-### Externi odkazy
+## Externi odkazy
 
 [Informace na Veritas Netbackup Cheat Sheet](http://www.datadisk.co.uk/html_docs/veritas/veritas_netbackup_cs.htm#tape)
 [Prehled prikazu i s popisy](http://www.pcs-computing.com/support/nb_daemons.html)

@@ -1,11 +1,5 @@
 # IBM Infosphere - Datastage
 
-### Index stranky
-
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-</dl>
-
 ### Odkazy
 
 [Datastage training](www.ibm.com/datastage/training)  
@@ -19,10 +13,10 @@
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 
-<li>Designer - windows program na vytvareni ETL jobu</li>
-<li>Director - windows program na spousteni a kontrolu jobu</li>
-<li>Administrator - windows program na administraci DS (projekty, uzivatele atd.</li>
-<li>Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)</li>
+- Designer - windows program na vytvareni ETL jobu
+- Director - windows program na spousteni a kontrolu jobu
+- Administrator - windows program na administraci DS (projekty, uzivatele atd.
+- Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)
 
 ### Procesy, adresare, konfiguracni soubory
 

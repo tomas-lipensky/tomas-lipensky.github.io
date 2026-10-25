@@ -1,12 +1,5 @@
 # ESX
 
-## Obsah:
-
-[Externi odkazy](#link)  
-[Klient - LPAR](#lpar)  
-[HMC](#hmc)  
-[VIOS - Virtual I/O Server](#vios)  
-
 ## Externi odkazy
 
 [virtuallyGhetto](https://www.virtuallyghetto.com/kickstart) ... vyborne stranky o automatizaci VMware infrastruktury (William Lam)  

@@ -1,3 +1,5 @@
+# macos
+
 ## MacOS
 
 ### GUI
@@ -35,10 +37,10 @@ brew install node            # ==> https://nodejs.org
 brew install tree            # ==> http://mama.indstate.edu/users/ice/tree  
 brew install vim             # ==> https://www.vim.orgtunnel SSH through HTTP proxies  
 brew install -vd Azure/kubelogin/kubelogin   ### nainstaluje kubelogin, -v verbose, -d debug  
-brew install %%--%%cask balícek ... nejaké balíčky jsou typu cask - instalace balíčku  
+brew install --cask balícek ... nejaké balíčky jsou typu cask - instalace balíčku  
 brew uninstall cask -balíček ... odinstalace cask balíčku  
-brew upgrade %%--cask --greedy --all%% ... upgrade a přeinstalování všech cask balíčků  
-brew %%--repository%% ... ukáže adresář Brew  
+brew upgrade --cask --greedy --all ... upgrade a přeinstalování všech cask balíčků  
+brew --repository ... ukáže adresář Brew  
 brew doctor ... hledá provlémy v Brew  
 
 #### Macports
@@ -77,7 +79,7 @@ networksetup -setadditionalroutes networkservice [dest1 mask1 gate1] [dest2 mask
 `pfctl -s all` ... ukáže všechna pravidla  
 `pfctl -v -s rules` ... ukáže pravidla RULES i se statistikama  
 `pfctl -vvsTables` ... seznam tabulek  
-%%echo "rdr pass on lo0 inet proto tcp from any to 10.0.0.1 port 80 -> 127.0.0.1 port 3000" | sudo pfctl -ef -%%  
+echo "rdr pass on lo0 inet proto tcp from any to 10.0.0.1 port 80 -> 127.0.0.1 port 3000" | sudo pfctl -ef -  
 `pfctl -v -n -f /etc/pf.conf` ... otestovani sitovych pravidel  
 `pfctl -v /etc/pf.conf` ... nacteni sitovych pravidel  
 `pfctl -q` .. tichy mod  

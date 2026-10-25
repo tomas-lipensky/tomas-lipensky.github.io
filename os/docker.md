@@ -6,7 +6,7 @@
 
 ### Konfigurace
 
-`%%export DOCKER_HOST=ssh://user@server%%` ... docker příkaz se bude vykonavat vzdáleně na zadaném serveru  
+`export DOCKER_HOST=ssh://user@server` ... docker příkaz se bude vykonavat vzdáleně na zadaném serveru  
 .docker/config.json ... konfigurace docker clienta  
 docker info ... ukáže informace o Dockeru: verze, ipadresy, certifikáty atd  
 docker system info ... to samé jako docker info  
@@ -36,7 +36,7 @@ docker tag b46fb5eafd46 server:port/image:3.3.0 ... přidá tag, repozitář ser
 ### Kontejnery
 
 docker [run](https://docs.docker.com/engine/reference/run/) -i -t -p 80:80 d4350798c2ee /bin/bash ... spusti kontejner s prikazem bash  
-docker %%--%%mount type=bind,source=/mnt/docker1,target=/data,readonly %%--%%name "kontejner_s_diskem" kontejner1 ... vytvori novy kontejner z obrazu kontejner1, pojmenuje ho a namountuje disk  
+docker --mount type=bind,source=/mnt/docker1,target=/data,readonly --name "kontejner_s_diskem" kontejner1 ... vytvori novy kontejner z obrazu kontejner1, pojmenuje ho a namountuje disk  
 docker run -mount source=myvol2,target=/app kontejner ... vytvori kontejner s namountovanym volume  
 docker run -v myvol,/app kontejner ... to same  
 docker run --rm -it --cap-add=SYS_ADMIN debian:jessie ... spusti docker se SYS_ADMIN pravama (moznost mountovat file systemy a jine)  
@@ -99,7 +99,7 @@ EXPOSE 80
 CMD ["/usr/sbin/init"]
 ```
 
-docker build %%--%%rm -t local/c7-systemd-httpd ... vytvori z obrazu jiny obraz, provede prikazy z Dockerfile  
+docker build --rm -t local/c7-systemd-httpd ... vytvori z obrazu jiny obraz, provede prikazy z Dockerfile  
 
 ### Docker pod Windows
 

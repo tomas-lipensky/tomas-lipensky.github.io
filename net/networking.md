@@ -1,4 +1,6 @@
-### IPsec VPN tunnel
+# networking
+
+## IPsec VPN tunnel
 
 bezpečné, enkryptované spojení mezi síťemi (například lokální - cloud, cloud - cloud, lokální - lokální), nebo zařízením a sítí. 2 fáze spojení:
 *  IKE - 2 endpointy se ověří pomocí sdílených klíčů, certifikátů, nebo 2FA a vytvoří zabezpečený management kanál
@@ -7,13 +9,13 @@ bezpečné, enkryptované spojení mezi síťemi (například lokální - cloud,
 Používá protokoly ESP (Encapsulating Security Payload) a AH (Authentication Header)  
 Je potřeba zamezit konfliktům sítí (překrývající se IP rozsahy)
 
-##### řešení
+### řešení
 
 *  specializov ané podnikové řešení pomocí NVA (Network Virtual Appliance) - Virtuální stroj, který hraje roli síťových prvků (routerů, firewallů, load balancerů), např. Fortinet, Cisco Secure Client (AnyConnect) , Cisco ASA či Catalyst, Check Point CloudGuard, Palo Alto Networks VM-Series
 *  Poskytovatelé ICT a ISP (Služba formou Managed VPN)
 *  Pro Cloud Microsoft Azure VPN Gateway,AWS VPN (Site-to-Site a Client VPN),Google Cloud VPN
 
-##### propojení AWS a Azure
+### propojení AWS a Azure
 
 1.  AWS: Vytvořit Virtual Private Gateway (VGW) nebo použijte AWS Transit Gateway pro VPC
 2.  AWS: Vytvořit objekt Customer Gateway (CGW) a zadat do něj veřejnou IP adresu brány Azure VPN
@@ -24,20 +26,22 @@ Je potřeba zamezit konfliktům sítí (překrývající se IP rozsahy)
 7.  Směrování (Routing): Povolte BGP na obou branách pro automatickou synchronizaci routovacích tabulek
   8. Ujistit se, že IP rozsahy (CIDR) v AWS VPC a Azure VNet se nepřekrývají.
 
-### Privátní linky
+## Privátní linky
 
 Vyhrazené linky, např Direct Connect, ExpressRoute
 
-### SDN
+## SDN
 
-Software Defined Network, SDN controller - řídí nastavení celé lokální síťe pomocí protokolů. Výhoda SDN - Automatizace škálování a nastavení, bezpečnost, centrální pohled a kontrola na jednom místě. SDN odděluje řídící rovinu od datové roviny.  
-##### Aplikace / Uživatelé (Northbound)
+Software Defined Network, SDN controller - řídí nastavení celé lokální síťe pomocí protokolů. Výhoda SDN - Automatizace škálování a nastavení, bezpečnost, centrální pohled a kontrola na jednom místě. SDN odděluje řídící rovinu od datové roviny. 
+
+### Aplikace / Uživatelé (Northbound)
 
 komunikace s řídicím mozkem sítě SDN pomocí Northbound API (např. pomocí REST nebo RESTCONF). To umožňuje vytvářet automatizované sítě nebo spravovat infrastrukturu přes grafické uživatelské rozhraní.  
-##### Síťové prvky (Southbound)
+
+### Síťové prvky (Southbound)
 
 komunikace se síťovými prvky, např. pomocí protokolů OpenFlow nebo NETCONF  
 
-### SD-WAN
+## SD-WAN
 
 Implementace SDN principu na propojení lokálních datacenter se vzálenýma pobočkama (WAN). SDN na lokální síťě, SD-WAN propojení Lokální síťě s WAN

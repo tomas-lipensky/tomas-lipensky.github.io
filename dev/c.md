@@ -1,4 +1,4 @@
-### C#
+# C#
 
 apt install dotnet-runtime-3.1  
 apt install dotnet-sdk-3.1  
@@ -7,9 +7,9 @@ dotnet new console ... vytvory Hello world program
 dotnet build ... zkompiluje projekt definovany v csproj\
 dotnet pack --interactive ... Vytvori NuGet balicek, interactive je pro nahrani do Artefakt repozitare pro autorizaci  
 
-### Kompilace
+## Kompilace
 
-##### Kompilace s pouzitim staticke knihovny
+### Kompilace s pouzitim staticke knihovny
 
 gcc -c knih1.c; gcc -c knih2.c ... kompilace knih1 a knih2. Vytvori se objektove soubory knih1.o a knih2.o ve formatu ELF  
 ar rcs libkinh.a knih1.o knih2.o ... zabali staticke knihovny (objektove soubory) do archivu knihoven  
@@ -21,7 +21,7 @@ export CPLUS_INCLUDE_PATH=~/include;$C_INCLUDE_PATH ... jako CPATH, ale pro C++
 gcc -o app app.c -lknih ... kompilace aplikace app.c, vystupni soubor app, prilinkuje se knihovna libknih (dynamicke knihovny maji prednost)  
 gcc -o app app.c -L~/lib -I~/include -lknih ... kompilace, kde zadavam cesty k objektum (pokud neni zadana cesta v LIBRARY_PATH) a k hlavickam (pokud neni zadana v CPATH)  
 
-##### Kompilace s pouzitim dynamicke knihovny
+### Kompilace s pouzitim dynamicke knihovny
 
 gcc -fPIC -g -Wall -c knih3.c ... kompilace knihovny do objektu (knih3.o), s dynamickym adresovanim pameti (fPIC - Position Independent Code), ukaze Warningy (Wall) a debugovani informace (g)  
 gcc -shared -W1,-soname,libknih.so.1 -o libknih.so.1.0.1 knih3.o knih4.o ... vytvori dybamickou knihovnu (Shared Objects), se SOName libknih.so.1, obsahujici objekty knih3.o a knih4.o  
@@ -30,7 +30,7 @@ gcc -o app app.c ./libknih.so.1 ... kompilace aplikace app s prilinkovanim dynam
 
 prace s knihovnama na Unixu/Linuxu, viz. [Unixovy prikazy - knihovny](../os/unix-commands.html).
 
-##### Kompilace na AIXu
+### Kompilace na AIXu
 
 Kompilace C programu na AIXu neni primocara v tom, ze AIX se standartne nedodava s C prekladacem. Existuji 2 moznosti:
 
@@ -38,11 +38,11 @@ Kompilace C programu na AIXu neni primocara v tom, ze AIX se standartne nedodava
 * zakoupit vyvojove prostredi obsahujici original cc_r
 * stahnou evaluation verzi vyvojoveho prostredi [XL C/C++](https://www14.software.ibm.com/webapp/iwm/web/reg/download.do?source=swg-xlcaix101&S_PKG=aix&lang=en_US&cp=UTF-8) nebo Visualage C, jejiz soucasti je i balicek s cc_r, viz [info](http://www.ibm.com/developerworks/forums/thread.jspa?threadID=166589)
 
-#### Programovaci jazyk C
+### Programovaci jazyk C
 
 Odkaz na ucebni texty [Ing. Jana Kucery](http://www.fi.muni.cz/usr/jkucera) (FI) na C a C++  
 
-##### Navrh algoritmu
+### Navrh algoritmu
 
 <!--blud1.c+blud1.h+bl.tbl
 blud3.c+dynamic.h+bl.tbl
@@ -84,7 +84,7 @@ zasobnik.c+zasobnik.h-->
 [slova2a.c](naval/slova2a.c), [sort.c](naval/sort.c)+[sort.h](naval/sort.h)  
 [zasobnik.c](naval/zasobnik.c)+[zasobnik.h](naval/zasobnik.h) - Zasobnik - program na vkladani cisel do zasobniku  
 
-##### Uvod do jazyka C
+### Uvod do jazyka C
 
 [cisla.c](cvic3/cisla.c),
 [znaky.c](cvic3/znaky.c),

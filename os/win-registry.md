@@ -1,3 +1,5 @@
+# win-registry
+
 ### Prace s registrama
 
 regedit.exe  

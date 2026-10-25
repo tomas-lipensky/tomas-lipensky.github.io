@@ -160,7 +160,7 @@ gsettings set org.nemo.desktop show-desktop-icons false ... schovani ikon z ploc
 gsettings set org.cinnamon.desktop.wm.preferences resize-with-right-button true ... zmena velikosti okna pravym tlacitkem  
 dconf dump /org/cinnamon/desktop/keybindings/ &gt; keybindings-backup.dconf ... export klavesovych zkratek  
 dconf load /org/cinnamon/desktop/keybindings/ &lt; keybindings-backup.dconf ... import klavesovych zkratek  
-gsettings set org.gnome.gnome-screenshot auto-save-directory %%file:///home/USER/some_path%% ... skreenshot  
+gsettings set org.gnome.gnome-screenshot auto-save-directory file:///home/USER/some_path ... skreenshot  
 /etc/xdg/autostart/nm-applet.desktop ... globalni profil appletu  
 ~/.config/autostart/nm-applet.desktop ... lokalni profil appletu  
 

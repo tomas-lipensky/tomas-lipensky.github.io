@@ -1,3 +1,5 @@
+# vsts
+
 ## Azure DevOps (VSTS, VSO), TFS
 
 Azure Devops, drive Visual Studio Team Services, nebo Visual Studio Online je online platforma pro  CI a CD

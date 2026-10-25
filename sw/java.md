@@ -1,10 +1,5 @@
 # Java aplikace
 
-### Obsah:
-
-[Interni a externi odkazy](#odkazy)  
-[Programy pro praci s java aplikacemi](#)  
-
 ### Interni a Externi odkazy:
 
 [Aplikacni servery](../web/index.html)  

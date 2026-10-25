@@ -1,6 +1,8 @@
-======Perl - Term::ANSIColor======
+# term-ansicolor
 
-```
+## Perl - Term::ANSIColor
+
+```perl
 use Term::ANSIColor;
 
 printf "sede a %4.4s\n", colored( 'barevne', 'magenta' );

@@ -1,3 +1,5 @@
+# terraform
+
 Terraform je abstrakce pro konfiguraci infrastruktury (jak ARM, mozna Cloud Foundry, ...)
 
 ### Komponenty
@@ -57,7 +59,7 @@ seznam_jmen = [for i in var.jmena: "$i.txt"]
 
 ===variable "region" {}===
 
-```
+```terraform
 variable "muj_tuple" {
   description = "example tuple"
   type        = tuple([string, number, bool])
@@ -122,7 +124,7 @@ null_resource
 
 for_each = toset(local.seznam_jmen) ... iterace celého resourcu
 
-```
+```terraform
 dynamic "statemen" {
   for_each = var.dpc_s3_designer-postfixes
   content {
@@ -132,7 +134,7 @@ dynamic "statemen" {
 ```
  ... iterace bloku v resourcu
 
-```
+```terraform
 lifecycle{
  precondition {}
  postcondition {}

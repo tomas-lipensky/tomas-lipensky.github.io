@@ -14,19 +14,19 @@
 Produkt Fredhopper - FAS je program, ktery umi naseptavat pri psani textu do vyhledavaciho policka, umi zobrazovat relevantni produkdy atd., umi strukturovat url tak,
 aby vyhledavace umely prohledat web (SEO) a umi reportovat data z fredhopperu. Soucasti fradhoperu jsou:
 
-<li>Program samotny - ktery obsahuje aplikacni server - jboss (ale umi jet i pod jinymi) a aplikaci samotnou</li>
+- Program samotny - ktery obsahuje aplikacni server - jboss (ale umi jet i pod jinymi) a aplikaci samotnou
 
-<li>Instance - jednotlive "profily", instance mohou mit ruzne funkce a muze jet vice instanci na jednou pocitaci</li>
-<li>Deployment agent - javovsky program na snadnou administraci fredhopperu a jeho instanci, transfer souboru, konfiguraci a instalaci</li>
-<li>Data manager - Nastroj na ETL - import dat do FAS</li>
-<li>Business manager - Web nastroj na business konfiguraci (business.xml, i18n - lokalizace, enrich.py, atd.)</li>
-<li>kitchen ... customizovatelny nastroj na import dat z DB do XML a pote do Derby DB</li>
-<li>qserver - spousteny $FAS/j2ee/jboss/bin/run.sh -c fas - engine ktery provadi vyhledavani polozek z DB a indexu na zaklade webovych pozadavku (obecne z aplikace - WCS, WAS atd)</li>
-<li>treebuilder - spousteny $FAS//bin/treebuilder -u catalog01 -U 0 -I 1 ... Vytvari seznamy kategorii a prirazuje k nim polozky</li>
-<li>searchindexer - spousteny $FAS/bin/searchindexer -I 1 ... Vytvari indexy z klicovych slov pouzivanych v qserveru na vyhledavani v datech z DB</li>
-<li>xmlloader - spousteny $FAS/bin/xmlloader -I 1... Nastroj na transformaci dat z xml z kitchen a import do treebuilderu searchindexeru</li>
-<li>syncclient - spousteny $FAS/bin/syncclient -I 1 -s SYNCSERVERNAME -P PORT ... nastroj na prijimani dat do LIVE qserveru obecne po indexaci</li>
-<li>reporting ... (reporting.pentaho.com) nastroj na reportovani a statistiky vyhledavani</li>
+- Instance - jednotlive "profily", instance mohou mit ruzne funkce a muze jet vice instanci na jednou pocitaci
+- Deployment agent - javovsky program na snadnou administraci fredhopperu a jeho instanci, transfer souboru, konfiguraci a instalaci
+- Data manager - Nastroj na ETL - import dat do FAS
+- Business manager - Web nastroj na business konfiguraci (business.xml, i18n - lokalizace, enrich.py, atd.)
+- kitchen ... customizovatelny nastroj na import dat z DB do XML a pote do Derby DB
+- qserver - spousteny $FAS/j2ee/jboss/bin/run.sh -c fas - engine ktery provadi vyhledavani polozek z DB a indexu na zaklade webovych pozadavku (obecne z aplikace - WCS, WAS atd)
+- treebuilder - spousteny $FAS//bin/treebuilder -u catalog01 -U 0 -I 1 ... Vytvari seznamy kategorii a prirazuje k nim polozky
+- searchindexer - spousteny $FAS/bin/searchindexer -I 1 ... Vytvari indexy z klicovych slov pouzivanych v qserveru na vyhledavani v datech z DB
+- xmlloader - spousteny $FAS/bin/xmlloader -I 1... Nastroj na transformaci dat z xml z kitchen a import do treebuilderu searchindexeru
+- syncclient - spousteny $FAS/bin/syncclient -I 1 -s SYNCSERVERNAME -P PORT ... nastroj na prijimani dat do LIVE qserveru obecne po indexaci
+- reporting ... (reporting.pentaho.com) nastroj na reportovani a statistiky vyhledavani
 
 Kazda instance obahuje vlastni procesy. Tyto procesu jsou: searchindexer, xmlloader, treebuilder, syncclient, syncserver, reporting, qserver.
 

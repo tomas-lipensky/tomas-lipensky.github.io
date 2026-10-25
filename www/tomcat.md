@@ -1,13 +1,13 @@
 # Tomcat
 
-### Externi odkazy
+## Externi odkazy
 
 [Tomcat Tutorial](http://www.coreservlets.com/Apache-Tomcat-Tutorial/)  
 [Tomcat Manager](http://tomcat.apache.org/tomcat-4.1-doc/manager-howto.html)  
 [http://tomcat.apache.org/](http://tomcat.apache.org/)  
 [Apache http + Tomcat](http://www.root.cz/clanky/apache-20-amp-tomcat-41/)  
 
-### Tomcat Manager
+## Tomcat Manager
 
 http://{host}:{port}/manager/{command}?{parameters}  
 http://localhost:8080/manager/html ... pripojeni do managera  

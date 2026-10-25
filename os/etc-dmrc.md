@@ -1,3 +1,5 @@
+# etc-dmrc
+
 [Desktop]
 Language=en_US.utf8
 Layout=us

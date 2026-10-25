@@ -1,3 +1,5 @@
+# zabbix
+
 Nastaveni metriky pomoci Zabbix trapu (data prichazi z klientu jako webhook pomoci zabbix_sender)  
 zabbix_sender -z <server IP address> -p 10051 -s "New host" -k trap -o "test value" ... posilani dat pro zabbix_trap metriku  
 

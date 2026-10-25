@@ -1,3 +1,5 @@
+# unix
+
 ### Unixové prikazy
 
 [unixové prikazy](unix-commands)  
@@ -22,7 +24,7 @@
 
 ##### netcat
 
-%%`(echo > /dev/tcp/google.com/22) >/dev/null 2>&1 && echo "UP" || echo "DOWN"`%% ... netcat -zv google.com  
+`(echo > /dev/tcp/google.com/22) >/dev/null 2>&1 && echo "UP" || echo "DOWN"` ... netcat -zv google.com  
 cat < /dev/null > /dev/tcp/<hostname or ip>/<port>; echo $? ... to samé  
 
 == curl/wget ==
@@ -42,12 +44,12 @@ cat </dev/tcp/time.nist.gov/13 ... ntp server
 
 for i in $(ls /proc/[0-9]*/cmdline ); do echo $i $(cat $i 2>/dev/null) | tr '\0' ' '; echo; done ... ps -ef  
 ls /proc/6/tasks ... seznam threadů, jako ps -T -p 6  
-%%echo $[^1]
+echo $[^1]
 
-[^1]:  $(cat /proc/uptime | cut -d. -f1) - ($(cat stat | awk '{ print $22}') / $(cat stat | awk '{ print $22}') ) %% ... kolik sekund jede proces  
-%%echo $[^2]
+[^1]:  $(cat /proc/uptime | cut -d. -f1) - ($(cat stat | awk '{ print $22}') / $(cat stat | awk '{ print $22}') )  ... kolik sekund jede proces  
+echo $[^2]
 
-[^2]:  $(cat stat | awk '{ print $14}') + $(cat stat | awk '{ print $15}') + $(cat stat | awk '{ print $16}') + $(cat stat | awk '{ print $17}') %% ... kolik tiků si vzal proces  
+[^2]:  $(cat stat | awk '{ print $14}') + $(cat stat | awk '{ print $15}') + $(cat stat | awk '{ print $16}') + $(cat stat | awk '{ print $17}')  ... kolik tiků si vzal proces  
 CPU% podíl předchzích  
 
 ##### free

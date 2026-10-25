@@ -1,20 +1,5 @@
 # [WebSphere Application Server](was.html) - jython
 
-### Obsah
-
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-<dt>[Interni odkazy](#interni)</dt>
-<dt>[wsadmin](#wasadmin)</dt>
-<dt>Moduly:</dt>
-<dd>[AdminControl](#AdminControl)</dd>
-<dd>[AdminConfig](#AdminConfig)</dd>
-<dd>[AdminApp](#AdminApp)</dd>
-<dd>[AdminTask](#AdminTask)</dd>
-<dd>[Help](#Help)</dd>
-<dt>[wsadmin: priklady administrace](#priklady)</dt>
-</dl>
-
 ### Externi odkazy
 
 $WAS/web/mbeanDocs/index.html ... Popisy vsech MBean typu  

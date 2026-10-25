@@ -2,9 +2,7 @@
 
 Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 
-### Obsah
-
-### Externi odkazy
+## Externi odkazy
 
 [Informatica network](https://network.informatica.com/community/informatica-network)  
 [Informatica marketplace](https://marketplace.informatica.com/search-solr.jspa?facets=isservices:0;cid3:c-cat1;) - utility na stazeni  
@@ -14,11 +12,11 @@ Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 [Informatica Marketplace](https://marketplace.informatica.com/index.jspa)  
 [Informatica Network - Downloads](https://network.informatica.com/downloadsView.jspa)  
 
-### Interni odkazy
+## Interni odkazy
 
 [WAS](was.html)  
 
-### Architektura
+## Architektura
 
 Domena - je uzolovana administracni jednotka. Muze obsahovat mnoho nodu a sluzeb. Pro kazdou domenu je jedna Administracni konzole (Administrator tool)  
 Node - ekvivalent pro server  
@@ -48,7 +46,7 @@ Proactive Monitoring - monitor operations in Informatica PowerCenter operations
 TDM - masking product  
 Studio pro Data Transformatin - B2B klient na import dat z PPDF, word atd.  
 
-### Sluzby
+## Sluzby
 
 PowerCenter Integration Service ... motor PowerCentra, ktery spousti transformace  
 PowerCenter Repository Service ... sluzba ktery  
@@ -58,15 +56,15 @@ Analyst Service ... IDQ sluzba, klient Informatica Analyst
 Model Repository Service ... IDQ sluzba zpristupnujici data v Repository DB IDQ sluzbam  
 Data Integration Service
 
-### Instal
+## Instal
 
 Instalaci myslime vzdy instalaci Service Managera + volba - vytvorit domenu, nebo pridat k domene
 
 http://localhost:6008/administrator ... Administracni konzole  
 
-### Prostredi
+## Prostredi
 
-### Procesy, adresare, konfiguracni soubory
+## Procesy, adresare, konfiguracni soubory
 
 isp/bin ... infacmd a infasetup + jar knihovny  
 isp/logs ... logy domeny  
@@ -76,12 +74,12 @@ server/infa_stared ... PC app soubory + app logy
 tomcat/bin ... startup/stop skripty  
 tomcat/logs ... logy Tomcatu  
 
-### Start/stop
+## Start/stop
 
 $INFHOME/tomcat/bin/infaservice.sh startup  
 $INFHOME/tomcat/bin/infaservice.sh shutdown  
 
-### Konfigurace
+## Konfigurace
 
 $INFA_HOME/domains.infa ... konfigurace domeny  
 
@@ -89,9 +87,9 @@ $INFA_HOME/domains.infa ... konfigurace domeny
 
 C:\Informatica\9.6.0\server\infa_shared\SessLogs ... logy jobu (sessions)  
 
-### Procesy - komponenty
+## Procesy - komponenty
 
-### Prikazy
+## Prikazy
 
 infacmd  
 infasetup  
@@ -112,31 +110,31 @@ infacmd.sh isp ListServices -dn DOMAIN ... vylistuje sluzby v domene DOMAIN
 infacmd.sh listPlugins ... vylistuje pluginy  
 bind27 VASDB ... zkouska ODBC spojeni, seznam nadefinovanych spojeni v ODBC.ini  
 
-### monitoring
+## monitoring
 
-### Struktura DB
+## Struktura DB
 
 SELECT A.SUBJ_NAME AS FOLDER_NAME FROM OPB_SUBJECT A ORDER BY 1 ... seznam slozek  
 
-### Best practice
+## Best practice
 
-### Zaloha
+## Zaloha
 
-<li>binarni - adresare s instalaci</li>
-<li>Infra_shared ... adresar se behovymi info</li>
-<li>svechny data databazi</li>
+- binarni - adresare s instalaci
+- Infra_shared ... adresar se behovymi info
+- svechny data databazi
 
-### Databaze
+## Databaze
 
-#### Configuration DB
+### Configuration DB
 
 Databaze
 
-#### Repository DB
+### Repository DB
 
 MX ... nahledy (views) na objekty PowerCentra - workflows atd.  
 
-### Otazky
+## Otazky
 
 Otazky  
 Informatica Support - information about environment - how to synchronize, reason\\-

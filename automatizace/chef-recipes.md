@@ -1,3 +1,5 @@
+# chef-recipes
+
 ### Chef - recipes
 
 ### Odkazy
@@ -43,7 +45,7 @@ tnode=Chef::Node.load(node.name)
 
 [registry_key](https://docs.chef.io/resource_registry_key.html) ... memeni windows registru
 
-```
+```chef
 ohai 'reload' do
   action :reload
 end

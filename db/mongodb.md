@@ -20,8 +20,8 @@ nslookup -type=txt dxl-cz-pre.hr9bm.mongodb.net
 nslookup -type=srv _mongodb._tcp.dxl-cz-pre.hr9bm.mongodb.net  
 ### JSON, Ovladani, atd
 
-`%%mongo --quiet dhsreport --eval "db.getCollectionNames().join('\n')"%%` ... spusti mongo prikaz z prikazove radky  
-`%%mongo "mongodb+srv://SERVER" --username USER -p HESLO%%` ... pripojeni do interaktivniho modu  
+`mongo --quiet dhsreport --eval "db.getCollectionNames().join('\n')"` ... spusti mongo prikaz z prikazove radky  
+`mongo "mongodb+srv://SERVER" --username USER -p HESLO` ... pripojeni do interaktivniho modu  
 
 ### prikazy v mongo klientovi
 
@@ -30,17 +30,17 @@ nslookup -type=srv _mongodb._tcp.dxl-cz-pre.hr9bm.mongodb.net
 `db.dropDatabase()` ... smaze databazi  
 `show collections` ... seznam collection - tabulek  
 `db.system.namespaces.find()` ... jiny zpusob listovani collections  
-`%%db.createCollection("COLLECTION")%%`  
+`db.createCollection("COLLECTION")`  
 `db.COLLECTION.count()` ... pocet radku v tabulce COLLECTION  
 `db.COLLECTION.deleteMany({})` ... smaže všechny řádky  
 `db.COLLECTION.deleteOne( { _id: "563237a41a4d68582c2509da" } )` ... smazání řádku  
-`%%db.COLLECTION.insert({"name":"tutorials point"})%%` ... vlozi zaznam do collection COLLECTION  
+`db.COLLECTION.insert({"name":"tutorials point"})` ... vlozi zaznam do collection COLLECTION  
 `db.COLLECTION.explain("executionStats").find[^1]
 
 [^1]:  { $and: [ { "userRrole":"owner", "userId":"10022"} ] } ` ... ukáže jak se zpracoval dotaz, kolik času zabral atd.  
 `db.COLLECTION.find().pretty()` ... vylistuje všechny dokumenty (záznamy) v databázi COLLECTION v pěkném json zápisu  
-`%%db.COLLECTION.find({"item.updated_iso": "2018-03-13T15:54:44+0100"}, {href: 1, "item.updated_iso": 1})%%` ... filtr: jen zaznamy, kde je item.updated_iso rovno danemu retezci, uaze jen "href" zaznam a _id  
-`%%db.COLLECTION.find({"item.created": { $gt: 1512054095781 }}).hint( "INDEX1" )%%` ... filtr za pouziti vetsi nez, vynutí hledání pomocí indexu INDEX1  
+`db.COLLECTION.find({"item.updated_iso": "2018-03-13T15:54:44+0100"}, {href: 1, "item.updated_iso": 1})` ... filtr: jen zaznamy, kde je item.updated_iso rovno danemu retezci, uaze jen "href" zaznam a _id  
+`db.COLLECTION.find({"item.created": { $gt: 1512054095781 }}).hint( "INDEX1" )` ... filtr za pouziti vetsi nez, vynutí hledání pomocí indexu INDEX1  
 db.COLLECTION.updateMany({}, {$set: {pozdrav: "Ahoj"}}) ... nastaví na všech záznamech vlastnost pozdrav na Ahoj  
 db.COLLECTION.update({}, {$set: {pozdrav: "Ahoj"}}) ... nastaví na prvnímu záznamu vlastnost pozdrav na Ahoj  
 db.COLLECTION.update({_id: "127893142751892"},{$set: {pozdrav: "Ahoj"}}) ... uprava záznamu s _id=127893142751892  
@@ -49,7 +49,7 @@ db.COLLECTION.update({_id: "127893142751892"},{$set: {pozdrav: "Ahoj"}}) ... upr
 `db.COLLECTION.getIndexes()` ... seznam indexu pro tabulku COLLECTION  
 `db.COLLECTION.hideIndex("INDEX")` ... skryje index - nebude se používat  
 `db.COLLECTION.unhideIndex("INDEX")` ... znovu aktivuje index  
-`%%db.COLLECTION.dropIndex("INDEX")%%` ... smaze index INDEX v tabulce COLLECTION  
+`db.COLLECTION.dropIndex("INDEX")` ... smaze index INDEX v tabulce COLLECTION  
 db.post.insert([
    {
       title: 'MongoDB Overview',
@@ -88,7 +88,7 @@ db.createUser({user: "reportsUser", pwd: "abcdefgh", roles: [
 
 ### Backup
 
-%%db.ZDROJ.find().forEach((doc) => {db.CIL.insert(doc);}) && print("HOTOVO!");%% ... záloha kolekce, kopírování kolekce  
+db.ZDROJ.find().forEach((doc) => {db.CIL.insert(doc);}) && print("HOTOVO!"); ... záloha kolekce, kopírování kolekce  
 
 ### Import/Export
 

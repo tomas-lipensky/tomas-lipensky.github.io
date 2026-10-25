@@ -1,3 +1,5 @@
+# azure
+
 ## Azure
 
 ### Externi odkazy
@@ -33,7 +35,7 @@
 [AZCLI](AZCLI)  
 [PowerShellAzure](PowerShellAzure)  
 [AzureRestApi](AzureRestApi)  
-[Azure dotazy na logy a diagnostiku](automatizace/azure-dotazy) .. Kusto Query Language  
+[Azure dotazy na logy a diagnostiku](azure-dotazy) .. Kusto Query Language  
 [azure-runbook](azure-runbook)  
 [azure-arm](azure-arm)  
 #### Komponenty, agenti
@@ -100,7 +102,7 @@ Find-AzResource -ResourceType 'Microsoft.Sql/servers' ... seznam databazi
 
 ### Automations
 
-[Find-WhoAmI.ps1](https://github.com/azureautomation/runbooks/blob/master/Utility/ARM/Find-WhoAmI) ... zjisti jaky automatizacni account spustil Runbook a ktery runbook]]
+[Find-WhoAmI.ps1](https://github.com/azureautomation/runbooks/blob/master/Utility/ARM/Find-WhoAmI) ... zjisti jaky automatizacni account spustil Runbook a ktery runbook
 
 Automatizace Azure prostredku, casovani. Vytvoreni noveho spojeni s jinym uctem popisuje [blog](https://blogs.endjin.com/2015/02/generating-and-using-a-certificate-to-authorise-azure-automation/).
 

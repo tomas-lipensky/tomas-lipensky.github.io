@@ -121,7 +121,7 @@ getent ... ziskava informace o uzivatelich z jinych serveru
 last ... vypis poslednich loginu
 newgrp -l users ... spusti novy shell a usivatel bude patrit jen do grupy users  
 passwd aaa ... zmena hesla uzivatele aaa  
-echo password | passwd %%--%%stdin username ... zmeni heslo v commandline
+echo password | passwd --stdin username ... zmeni heslo v commandline
 openssl passwd -1 redhat123 ... napise hash hesla redhat123, da se vlozit do /etc/shadow  
 openssl passwd -1 -salt Etg2ExUZ redhat ... to same, urcim salt cast hesla  
 useradd ... prida uzivatele

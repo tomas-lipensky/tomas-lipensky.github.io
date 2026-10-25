@@ -1,29 +1,6 @@
 # CISCO
 
-#### Obsah:
-
-<dl>
-<dd>[Mody:](#mody)</dd>
-<dd>[uzivatelsky](#mo-user)</dd>
-<dd>[privilegovany](#mo-priv)</dd>
-<dd>[konfiguracni](#mo-conf)</dd>
-<dd>[Router:](#router)</dd>
-<dd>[Smerovani](#ro-route)</dd>
-<dd>[Firewall](#ro-firewall)</dd>
-
-<dd>[NAT](#ro-nat)</dd>
-<dd>[VLANy na routeru](#ro-vlan)</dd>
-<dd>[WAN](#ro-wan)</dd>
-<dd>[Switch:](#switch)</dd>
-<dd>[porty](#sw-port)</dd>
-<dd>[STP](#sw-stp)</dd>
-<dd>[VLANy](#sw-vlan)</dd>
-<dd>[firewall](#sw-firewall)</dd>
-<dd>[IPv6](#ipv6)\\</dd>
-
-</dl>
-
-#### Okazy
+## Okazy
 
 [Cisco IOS](http://www.samuraj-cz.com/serie/cisco-ios/)  
 [Pocitacove site](http://www.samuraj-cz.com/serie/pocitacove-site-computer-networks/)  
@@ -32,7 +9,7 @@
 
 ## Mody
 
-#### uzivatelsky EXEC mod
+### uzivatelsky EXEC mod
 
 disconnect 4 ... prerusi telnetove spojeni c. 4  
 **en** (enable) ... prepnuti do privilegovaneho modu  

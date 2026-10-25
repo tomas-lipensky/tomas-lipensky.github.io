@@ -2,7 +2,6 @@
 
 Puvodni produkt byl MQ Series Integrator
 
-```
 dspmq ... ukaze q managery
 mqsilist ? ... help k prikazu
 mqsilist ... ukaze infrastrukturu brokeru
@@ -49,7 +48,6 @@ mqsicvp DEVBROKER ... otestuje brokera
 
 mqsisetsecurity ... nastroj na konfiuraci bezpoecnosti
 mqsiserdbparms ... nastaveni hesla do DB a jine parametry
-```
 
 mqsichangebroker BROKERNAME -s active ... zapne autentifikaci v Brokeru  
 mqsiwebuseradmin BROKERNAME -c -u USER -a PASSWD -r ... nastavi autentifikaci k webovemu pristupu k Brokeru v MB 8+ (port 4414)  

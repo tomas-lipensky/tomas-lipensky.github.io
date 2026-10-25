@@ -1,26 +1,5 @@
 # WebSphere Application Server
 
-### Obsah
-
-<dl>
-<dt>Externi odkazy</dt>
-<dt>Interni odkazy</dt>
-<dt>Instalace/odinstalace/aplikace oprav</dt>
-<dt>Webove sluzby</dt>
-<dt>WAS: Start/Stop/Status</dt>
-<dt>WAS: konfiguracni binarky</dt>
-<dt>Logy</dt>
-<dt>Konfiguracni soubory</dt>
-<dt>Sluzby, poskytovatele sluzeb</dt>
-<dd>JMS</dd>
-<dd>JDBC</dd>
-<dd>Webovy server a webove sluzby</dd>
-<dt>Aplikace</dt>
-<dt>[Ant](ant.html)</dt>
-<dt>wsadmin prostredi - [JACL](jacl.html), [Jython](jython.html)</dt>
-<dt>shell: uzitecne prikazy</dt>
-</dl>
-
 ### Externi odkazy
 
 [WAS - System requirements](http://www-01.ibm.com/support/docview.wss?uid=swg27006921)  
@@ -54,20 +33,20 @@ Administrative Agent, Job manager, Secure proxy server
 Pro nalezeni WebSphere Aplikacniho Serveru (WAS) je uzitecne vyjmenovat obvykle cesty k WAS soucastem:
 
 <dl>
-<dd>PLUGIN=/usr/WebSphere/Plugin|/opt/WebSphere/VERZE/Plugin ... AIX|Linux WebSphere HTTP Plugin adresar</dd>
-<dd>WAS=/usr/IBM/WebSphere/AppServer|/usr/Websphere|/opt/IBM/WebSphere/AppServer|C:\program Files\IBM\WebSphere\AppServer ... AIX|AIX|Linux|Win WebSphere AS adresar</dd>
-<dd>PROFILY=/usr/Websphere/profiles|/opt/IBM/Websphere/profiles ... AIX|Linux WAS adresar s profilama</dd>
-<dd>PROFIL=$PROFILY/PROFIL ... Adresar s profilem Aplikacniho Serveru WAS</dd>
-<dd>UI=/opt/IBM/WebSphere/UpdateLinstaller ... Adresar s Update Installerem</dd>
-<dd>WAS/wstemp ... docasna data administracni konzoly</dd>
+PLUGIN=/usr/WebSphere/Plugin|/opt/WebSphere/VERZE/Plugin ... AIX|Linux WebSphere HTTP Plugin adresar
+WAS=/usr/IBM/WebSphere/AppServer|/usr/Websphere|/opt/IBM/WebSphere/AppServer|C:\program Files\IBM\WebSphere\AppServer ... AIX|AIX|Linux|Win WebSphere AS adresar
+PROFILY=/usr/Websphere/profiles|/opt/IBM/Websphere/profiles ... AIX|Linux WAS adresar s profilama
+PROFIL=$PROFILY/PROFIL ... Adresar s profilem Aplikacniho Serveru WAS
+UI=/opt/IBM/WebSphere/UpdateLinstaller ... Adresar s Update Installerem
+WAS/wstemp ... docasna data administracni konzoly
 </dl>
 
 V pripade nainstalovanych balicku s WAS, lze hledat nasledujici:
 
 <dl>
-<dd>lslpp -l | grep WSBAA ... WebSphere Base - Aplikacni server</dd>
-<dd>rpm -qa | grep WSIHS ... WebSphere IBM Http Server</dd>
-<dd>lslpp -l | grep WSPAA ... WebSphere Plugin - Plugin WAS pro HTTP server</dd>
+lslpp -l | grep WSBAA ... WebSphere Base - Aplikacni server
+rpm -qa | grep WSIHS ... WebSphere IBM Http Server
+lslpp -l | grep WSPAA ... WebSphere Plugin - Plugin WAS pro HTTP server
 </dl>
 
 ##### Architektura

@@ -1,3 +1,5 @@
+# web
+
 ### Staticke weby
 
 Lacine reseni na staticke weby jsou ulozna zarizeni na cloudech, jako treba:

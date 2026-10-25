@@ -1,3 +1,5 @@
+# matlab
+
 ### Maple
 
 Volna alternativa k programu Maple je [Octave](http://www.gnu.org/software/octave/), ve kterem vsechny zaklady, o kterych zde pisi, funguji stejne, ci podobne, jako v Matlabu. Kromě těchto stránek najdete jistě celou řadu ostatních stranek, se základy ovládání a používání programu Matlab v českém jazyce. Ale třeba Vám budou právě tyto vyhovovat lépe než ty ostatní, jako třeba mě.

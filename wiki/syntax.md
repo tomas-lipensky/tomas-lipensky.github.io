@@ -243,26 +243,26 @@ The text to image conversion is mainly done for smileys. And the text to HTML co
 
 DokuWiki converts commonly used [wp>emoticon](wp>emoticon)s to their graphical equivalents. Those [doku>Smileys](doku>Smileys) and other images can be configured and extended. Here is an overview of Smileys included in DokuWiki:
 
-* 8-) %%  8-)  %%
-* 8-O %%  8-O  %%
-* :-( %%  :-(  %%
-* :-) %%  :-)  %%
-* =)  %%  =)   %%
-* :-/ %%  :-/  %%
-* :-\ %%  :-\  %%
-* :-? %%  :-?  %%
-* :-D %%  :-D  %%
-* :-P %%  :-P  %%
-* :-O %%  :-O  %%
-* :-X %%  :-X  %%
-* :-| %%  :-|  %%
-* ;-) %%  ;-)  %%
-* ^_^ %%  ^_^  %%
-* :?: %%  :?:  %%
-* :!: %%  :!:  %%
-* LOL %%  LOL  %%
-* FIXME %%  FIXME %%
-* DELETEME %% DELETEME %%
+* 8-)   8-)  
+* 8-O   8-O  
+* :-(   :-(  
+* :-)   :-)  
+* =)    =)   
+* :-/   :-/  
+* :-\   :-\  
+* :-?   :-?  
+* :-D   :-D  
+* :-P   :-P  
+* :-O   :-O  
+* :-X   :-X  
+* :-|   :-|  
+* ;-)   ;-)  
+* ^_^   ^_^  
+* :?:   :?:  
+* :!:   :!:  
+* LOL   LOL  
+* FIXME   FIXME 
+* DELETEME  DELETEME 
 
 ### Text to HTML Conversions
 
@@ -344,7 +344,7 @@ As you can see, it's the cell separator before a cell which decides about the fo
 | Heading 4    | no colspan this time |                    |
 | Heading 5    | Row 2 Col 2          | Row 2 Col 3        |
 
-You can have rowspans (vertically connected cells) by adding `%%:::%%` into the cells below the one to which they should connect.
+You can have rowspans (vertically connected cells) by adding `:::` into the cells below the one to which they should connect.
 
 | Heading 1      | Heading 2                  | Heading 3          |
 |  --- | --- | --- |
@@ -378,24 +378,24 @@ Note: Vertical alignment is not supported.
 
 ## No Formatting
 
-If you need to display text exactly like it is typed (without any formatting), enclose the area either with `%%<nowiki>%%` tags or even simpler, with double percent signs `<nowiki>%%</nowiki>`.
+If you need to display text exactly like it is typed (without any formatting), enclose the area either with `<nowiki>` tags or even simpler, with double percent signs `<nowiki></nowiki>`.
 
 <nowiki>
 This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
 </nowiki>
-The same is true for %%***this** text* with a smiley ;-)%%.
+The same is true for ***this** text* with a smiley ;-).
 
 <nowiki>
   This is some text which contains addresses like this: http://www.splitbrain.org and **formatting**, but nothing is done with it.
   </nowiki>
-  The same is true for %%***this** text* with a smiley ;-)%%.
+  The same is true for ***this** text* with a smiley ;-).
 
 ## Code Blocks
 
-You can include code blocks into your documents by either indenting them by at least two spaces (like used for the previous examples) or by using the tags ''%%
+You can include code blocks into your documents by either indenting them by at least two spaces (like used for the previous examples) or by using the tags ''
 
 ```
-%%'' or ''%%<file>%%''.
+'' or ''<file>''.
 
   This is text is indented by two spaces.
 
@@ -444,10 +444,10 @@ The following language strings are currently recognized: *4cs, 6502acme, 6502kic
 
 ### Downloadable Code Blocks
 
-When you use the ''%%
+When you use the ''
 
 ```
-%%'' or ''%%<file>%%'' syntax as above, you might want to make the shown code available for download as well. You can do this by specifying a file name after language code like this:
+'' or ''<file>'' syntax as above, you might want to make the shown code available for download as well. You can do this by specifying a file name after language code like this:
 
 <code>
 <file php myexample.php>
@@ -460,14 +460,14 @@ When you use the ''%%
 <?php echo "hello world!"; ?>
 ```
 
-If you don't want any highlighting but want a downloadable file, specify a dash (`-`) as the language code: ''%%
+If you don't want any highlighting but want a downloadable file, specify a dash (`-`) as the language code: ''
 
 ```
-%%''.
+''.
 
 ===== Embedding HTML and PHP =====
 
-You can embed raw HTML or PHP code into your documents by using the ''%%<html>%%'' or ''%%<php>%%'' tags. (Use uppercase tags if you need to enclose block level elements.)
+You can embed raw HTML or PHP code into your documents by using the ''<html>'' or ''<php>'' tags. (Use uppercase tags if you need to enclose block level elements.)
 
 HTML example:
 
@@ -545,8 +545,8 @@ Some syntax influences how DokuWiki renders a page without creating any output i
 
 | Macro           | Description |
 |  --- | --- |
-| %%~~NOTOC~~%%   | If this macro is found on the page, no table of contents will be created |
-| %%~~NOCACHE~~%% | DokuWiki caches all output by default. Sometimes this might not be wanted (eg. when the %%<php>%% syntax above is used), adding this macro will force DokuWiki to rerender a page on every call |
+| ~~NOTOC~~   | If this macro is found on the page, no table of contents will be created |
+| ~~NOCACHE~~ | DokuWiki caches all output by default. Sometimes this might not be wanted (eg. when the <php> syntax above is used), adding this macro will force DokuWiki to rerender a page on every call |
 
 ## Syntax Plugins
 

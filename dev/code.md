@@ -1,3 +1,5 @@
+# VS Code
+
 ### Klavesove zkratky
 
 ~/.config/Code/User/keybindings.json ... soubor s nastavenim klavesovych zkratek  
