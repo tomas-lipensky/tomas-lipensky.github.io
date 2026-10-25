@@ -18,9 +18,9 @@ Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma z
 
 &lt;priject name="a" depends="b,c"&gt; ... definice cile, nazev je povinny, zavislosti jsou nepovinne. zavislosti provedou akce b a c pred akci a  
 
-====Priklad projektu na WebSphere====
+### Priklad projektu na WebSphere
 
-```
+```xml
 &lt;project name="Jmeno projektu" default="init"&gt;
   &lt;property file="ant.properties"/&gt;
   &lt;target name="init"&gt;

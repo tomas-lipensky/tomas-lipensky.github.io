@@ -75,7 +75,6 @@ NuGet a Chocolatey ... balickovaci system a deployment sluzba na automatizace ko
 
 Automatizace vyvolane na zaklade jistych udalosti (eventu), jako treba udalosti v monitoringu - incidenty.
 
-<P>
 IPSoft  
 [TSA](http://www-03.ibm.com/software/products/en/tivoli-system-automation) - Tivoli System Automation ... reseni pro spravu automatizaci pro operatory - webovy portal nabizejici spousteni automatizaci (HA, performance) na zaklade pravidel  
 
