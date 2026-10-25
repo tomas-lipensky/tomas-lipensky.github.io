@@ -1,12 +1,10 @@
-# windows
+# Windows
 
-## Windows
-
-### Externi odkazy
+## Externi odkazy
 
 [Codeplex](https://www.codeplex.com/) - opensource projekty na Microsoft produkty  
 
-### Interni odkazy
+## Interni odkazy
 
 [CMD a .bat soubory](bat)  
 [Powershell](powershell)  
@@ -15,7 +13,7 @@
 [Powershell](ps)  
 [Debugging](win-debug) aneb hledani chyb  
 
-### Verze
+## Verze
 
 Verze se stenym jadrem
 
@@ -24,7 +22,7 @@ XP a 2003
 8 a 1012  
 10 a 2016 (2016 ma negrafickou variantu instalace - [Server Core](https://docs.microsoft.com/en-us/windows-server/administration/server-core/what-is-server-core))  
 
-### Administracni nastroje
+## Administracni nastroje
 
 RSAT - Remote Server Administration Tools ... Sada nastroju na vzdalenou konfiguraci MS sluzem (AD, ...)  
 Invoke-Expression (New-Object Net.WebClient).DownloadString(‘http://bit.ly/Win10RSATinstall2’) ... nainstaluje RSAT  
@@ -32,18 +30,18 @@ Windows Admin Center ... Web UI na spravu vzdalenych Windows systemu (konzole, v
 [WSL](https://www.linux.com/blog/learn/2018/2/how-get-started-using-wsl-windows-10) - Windows Subsytem for Linux ... virtualni Linux prostredi ve Windows  
 [Sysinternals](https://docs.microsoft.com/en-us/sysinternals/downloads/) - doplnujici nastroje na administraci Windows, i CLI utility  
 [Dependency walker](http://www.dependencywalker.com/) - ukase zavislosti knihoven  
-### Konfiguracni soubory
+## Konfiguracni soubory
 
 C:\WINDOWS\system32\drivers\etc\hosts ... nastaveni lokalniho prekladu jmen (jako DNS)
 
-### Promenne
+## Promenne
 
 echo %username% ... jmeno uzivatele  
-### Debugging nastroje
+## Debugging nastroje
 
 [Image File Execution Options](https://gooroo.io/GoorooTHINK/Article/17352/Image-File-Execution-Options-Good-Evil-Fun/28441#.W-wCDfZFyUl) ... volba registru pro spousteni debuggeru pri spousteni konkretniho spustitelneho souboru, detaily viz [stranka Windows registru](win-registry)  
 
-#### Spravce balicku
+### Spravce balicku
 
 WinGet ... pouze pro pracovni stanice  
 chocolatey list --local ... seznam nainstalovanych  
@@ -51,7 +49,7 @@ choco install azure-pipelines-agent ... instalace
 choco upgrade azure-pipelines-agent ... upgrade  
 choco uninstall azure-pipelines-agent ... odinstalace  
 
-### Pripojeni, sezeni (session), vzdalene spousteni
+## Pripojeni, sezeni (session), vzdalene spousteni
 
 mstsc ... remote desktop - vzdalena plocha  
 mstsc /v:10.1.0.4 ... pripojeni ke vzdalenemu pocitaci 10.1.0.4  
@@ -61,13 +59,13 @@ net session ... ukaze jaci uzivatele jsou pripojeni
 qwinsta ... (Query WINdows STAtion) ukaze vsechna soucasna pripojeni  
 rwinsta ... (Reset WINdows STAtion) prerusi aktualni ci cizi spojeni  
 
-##### Pripojeni k prikazove radce z Linuxu
+#### Pripojeni k prikazove radce z Linuxu
 
 [winexe](http://rpm.pbone.net/index.php3/stat/4/idpl/21768497/dir/redhat_el_6/com/winexe-1.00-2.2.x86_64.rpm.html) -U DOMAIN/USERNAME%PASSWORD //MACHINEIP "cmd.exe"  
 echo -ne '\n' | winexe -U DOMAIN/USERNAME%PASSWORD //MACHINEIP "powershell echo ahoj"  
 Lze pouzit i pro [kopirovani](http://blog.jazzpod.co.uk/winexe-the-linux-psexec/)  
 
-### Prikazy - binarky (ne cmd, ps) v \windows\System32
+## Prikazy - binarky (ne cmd, ps) v \windows\System32
 
 [rádkové príkazy Windows](http://www.samuraj-cz.com/clanek/radkove-prikazy-windows/)  
 attrib *.* -s -h /s /d ... zrusi prepinac souboru system (-s) a hidden (-h) pro vsechny soubory a adresare (/d) v adresari a podadresarich (/s)  
@@ -143,12 +141,12 @@ Winrm enumerate winrm/config/listener ... ukaze pocet listeneru na WinRM
 [winrs -r:http://vzdaleny_server "cmd"](https://blog.thesysadmins.co.uk/winrm-winrs-and-forwarded-event-logs.html) ... remote shell - vzdalene spusteni shellu ([WinRM traces - logy](https://blogs.msdn.microsoft.com/wmi/2010/03/16/collecting-winrm-traces/))  
 xcopy /h *.* C:\temp ... presune vsechny soubory vcetne skrytych (/h) do C:\temp  
 
-### Vykon, performance
+## Vykon, performance
 
 perfmon ... performance monitor - jako nmon na Unixu - umi ukladat statistiky vykonu  
 [perfview](https://github.com/microsoft/perfview) ... ziskani informaci o pameti, pameti a procesech, prohlizeni trid a vykonostni analyza ([tutorial](https://channel9.msdn.com/Series/PerfView-Tutorial)  
 
-### ostatni prikazy
+## ostatni prikazy
 
 DEVCON FIND =NET ... najde sitove adaptery  
 DEVCON disable @ROOT\NET\0000 ... zakaze prvni sitovy adapter  
@@ -156,18 +154,18 @@ DEVCON enable @ROOT\NET\0000 ... povoli prvni sitovy adapter
 fixmbr ... opravi boot sektor (nahraje bootovaci manazer windows) - lze z opravneho media  
 winmsd /report c:\temp\collect-winmsd.txt ... info o windows  
 
-### Graficke programy - soucasti Windows
+## Graficke programy - soucasti Windows
 
 mmc.exe ... Microsoft Management Console - manazovani certifikatu, firewall, sluzby a jinych administratorskych ukolu na tento i okolni pocitace  
 
-### Utility pro praci s WMI, registry atd.
+## Utility pro praci s WMI, registry atd.
 
 WMI - Windows Management Instrumentation - infrastruktura na managoivani Windows.
 
 [WMI Explorer](https://wmie.codeplex.com/) - pruzkumnik WMI objektu  
 [Scriptomatic](https://technet.microsoft.com/en-us/scriptcenter/dd939957.aspx) - nastron na generovani WMI skriptu  
 
-### Deployment Image Service and Management Tool (DISM)
+## Deployment Image Service and Management Tool (DISM)
 
 Nastroj na provadeni servisnich operaci na Windows, nebo offline obrazu v WIM formatu  
 
@@ -177,7 +175,7 @@ Dism /online /Get-Packages ... seznam balicku
 Dism /online /Get-Features ... seznam Features  
 Dism /online /Get-Intl ... seznam nainstalovanych jazyku  
 
-### Cisteni Windows
+## Cisteni Windows
 
 Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore ... analyza obsahu C:\Windows\WinSxS adresare  
 schtasks.exe /Run /TN "\Microsoft\Windows\Servicing\StartComponentCleanup" ... spusteni ukolu na cisteni C:\Windows\WinSxS adresare - smazani predchozich verzi komponent po 30 dnech  
@@ -186,7 +184,7 @@ Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase ... smazani vs
 Dism.exe /online /Cleanup-Image /SPSuperseded ... smazani zaloh pred aplikaci service packu  
 [https://www.ghacks.net/2017/11/16/how-to-delete-downloaded-windows-update-files/](https://www.ghacks.net/2017/11/16/how-to-delete-downloaded-windows-update-files/) ... Cisteni C:\Windows\SoftwareDistribution adresare  
 
-### Utility pro práci se soubory a disky
+## Utility pro práci se soubory a disky
 
 [Servant Salamander](http://www.altap.cz) -
 Souborový manažér ve stylu NC, VC, Windows Comander...  
@@ -204,7 +202,7 @@ notepad++ ... vylepseny notepad
 Visual Studio Code ... Textovy editor (IDE) ve stylu Sublime, Linux verze k dispozici  
 http://www.engelteddy.com/image-synchronizer/ ... synchronizace adresare s ftp serverem  
 
-### Programy pro práci s multimédii a internetem
+## Programy pro práci s multimédii a internetem
 
 [Firefox](http://www.czilla.cz/) - rychlý a propracovaný internetový prohlížeč s možností rozšíření  
 [Thunderbird](http://www.czilla.cz/) - vynikající poštovní klient s možností rozšíření  
@@ -215,21 +213,21 @@ http://www.engelteddy.com/image-synchronizer/ ... synchronizace adresare s ftp s
 xming ... program umoznujici zobrazovani X11 paketu z ssh (putty)  
 [RawCap](http://www.netresec.com/?page=RawCap) ... sniffer, umi i 127.0.0.1  
 
-### Konfigurace
+## Konfigurace
 
 Logon/Logoff scripts - definovane v policies - Grpup Policy Mangement > User Conf > Policies  Windows Setting > scripts  
 [Nastaveni kultury - nova kultura](https://stackoverflow.com/questions/28281161/installing-more-cultures-on-windows-server-2012)  
-### Prohlížení dokumentů:
+## Prohlížení dokumentů:
 
 PS - [Ghost View](http://www.cs.wisc.edu/~ghost/) , prohlíží i PDF  
 PDF - [Adobe Acrobat Reader](http://www.adobe.com)  
 DVI - DVIWIN  
 
-### Skriptovaci a automatizacni nastroje
+## Skriptovaci a automatizacni nastroje
 
 [Autoit](https://www.autoitscript.com/site/autoit/) ... automatizace klikani, basic like syntaxe  
 
-### Windows prikazy
+## Windows prikazy
 
 system32\slmgr.vbs -skms server:port ... nastaveni KMS klienta - centralni management Windows licneci  
 system32\slmgr.vbs" /ato ... automaticke spusteni sluzby?  
@@ -353,7 +351,7 @@ Windows Update Launches   wupdmgr
 Wordpad   write
 ```
 
-### Scenare
+## Scenare
 
 ==Spusteni jako administrator==
 
@@ -362,7 +360,7 @@ Wordpad   write
 PsExec.exe -s -i c:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe 
 ```
 
-### Active Directory
+## Active Directory
 
 [Microsoft Active Directory Topology Diagrammer](https://www.microsoft.com/en-us/download/confirmation.aspx?id=13380) ... vizualizace nastaveni Active Directory  
 nslookup -type=srv _kerberos._tcp.YOUR-DOMAIN ... získání Kerberos serveru na síti

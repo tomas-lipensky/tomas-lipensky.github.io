@@ -1,6 +1,6 @@
 # stavba
 
-##### elektro zarizeni
+## elektro zarizeni
 
 [vlhkostat](http://www.elektrobock.cz/cs/cidlo-vlhkosti/product.html?id=68) na elektrobock.cz  
     [Elektrobock - bezdratove termoventily](http://www.elektrobock.cz/cs/search.html?q=PH-HD03)  
@@ -14,12 +14,12 @@
     [Elektromagneticky ventil](http://www.bola.cz/elektromagneticke-ventily-na-vodu)  
     [elektro-paloucek.cz](https://www.elektro-paloucek.cz) - ventilatory a elektro material  
 
-##### Vzduchotechnika
+## Vzduchotechnika
 
 [haco](http://www.haco.cz) cesky vyrobce vzduchotechniky  
   [batacz.cz](http://www.batacz.cz/haco-dvirka-mrizky-vpusti-ventilatory/haco-vetraci-mrizka-krytka-nerez/) prodejce vzduchotechniky a jinych nastroju (i ceskych)  
   [ventilatory.net](http://www.ventilatory.net/spiro-potrubi) - spiro potrubi  
 
-##### Potrubi
+## Potrubi
 
 [pcvalfa.cz](http://www.pcvalfa.cz) - PVC potrubi (KG, HT atd.)

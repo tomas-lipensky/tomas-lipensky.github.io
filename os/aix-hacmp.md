@@ -1,13 +1,13 @@
 # AIX - HACMP - High Availability Cluster Multi-Processing
 
-### start/stop
+## start/stop
 
 smitty clstart ... 
 (/usr/es/sbin/cluster/utilities/clstart)  
 smitty clstop ... 
 (/usr/es/sbin/cluster/utilities/clstop)  
 
-### info
+## info
 
 lssrc g cluster
 lssrc -a | grep cluster
@@ -30,14 +30,14 @@ cat /var/hacmp/clverify/clverify.log
 ps -ef | grep $(lsvg dataVG | grep IDETNTIFIER | cut -d":" -f3) ... informace o tom, zda dataVG je v clusteru
 netmon.cf ... monitoruje sitove spojeni s ostatnimi clustery
 
-### kontrola, verifikace
+## kontrola, verifikace
 
 smitty clverify
 /usr/sbin/cluster/diag/clverify cluster topology check
 /usr/sbin/cluster/diag/clverify cluster config networks
 /usr/sbin/cluster/diag/clverify cluster config resources
 
-### logy
+## logy
 
 Problem Determination Tools - HACMP Log Viewing and Management - Change/Show a Cluster Log Directory  
 odmget -q HACMPlogs  
@@ -47,7 +47,7 @@ ls -lt /var/hacmp/log/ | head
 tail f50 /tmp/hacmp.out
 /usr/sbin/cluster/history/cluster.mmddyyyy  ... if crasshed
 
-### operace
+## operace
 
 smitty cm_hacmp_resource_group_and_application_management_menu ... prenaseni sluzeb  
 smitty cm_change_a_resource_group_select ... hacmp failover policy setting  
@@ -58,15 +58,15 @@ smitty cm_config_hacmp_communication_interfaces_devices_menu_dmn ... setup heart
 /usr/es/sbin/cluster/utilities/clRGmove -s 'false'  -u -i -g 'DB_DEV_R -G' -n 'odadev2006' ... nastartuje resource DB_DEV_R na node odadev2006  
 /exploit/HACMP/scripts/HA_environment
 
-### demoni
+## demoni
 
 clstrmgr
 grpsvcs
 snmpd
 
-### nastaveni
+## nastaveni
 
-##### disky
+#### disky
 
 /etc/cluster/disktype.lst ... ['lsdev -Cc disk -l hdisk9 -F PdDvLn' SCSIDISK|SSA|FCPARRAY|ARRAY|FCSCSI]
 /etc/cluster/lunreset.lst ... [
@@ -77,11 +77,11 @@ MISSINGPV_VARYON=TRUE ... Force varyon
 HACMP_MIRROR_VARYON=TRUE ... HACMP force varyon
 /usr/sbin/cluster/sbin/cl_updatevg ... update clusteru?
 
-##### klienti
+#### klienti
 
 /usr/es/sbin/cluster/etc/clinfo.rc
 
-##### [RSCT RM](http://post.doit.wisc.edu/library/aix51/nav/Books/nav_8.htm) - resource monitoring
+#### [RSCT RM](http://post.doit.wisc.edu/library/aix51/nav/Books/nav_8.htm) - resource monitoring
 
 /var/ct/IW/log/mc ... log soubory
 /usr/sbin/rsct/cfg ... konfiguracni soubory
@@ -92,7 +92,7 @@ IBM.FSRM ... (File System resource manager)
 IBM.HostRM ... (Host resource manager)
 ctrmc ... (Resource Monitoring and Control subsystem) 
 
-### [Balicky - announcement letter](http://www-03.ibm.com/systems/p/advantages/ha/)
+## [Balicky - announcement letter](http://www-03.ibm.com/systems/p/advantages/ha/)
 
 lslpp -L cluster.*  
 Prerekvizity:
@@ -132,11 +132,11 @@ smitty cm_cfg_snap_menu
 /usr/es/sbin/cluster/snapshots/*.info  
 tail -f /var/hacmp/adm/cluster.log  
 
-### problemy
+## problemy
 
 Resource ve stavu RELEASING ... Zkontrolovat hacmp.out, zjistit, zda skript na stop uz skoncil, najit proces /bin/ksh /usr/es/sbin/cluster/events/config_too_long 360 TE_FAIL_NODE a zabit, reboot serveru  
 
-##### odkazy
+#### odkazy
 
 http://www.emc.com/interoperability/matrices/EMCSupportMatrix.pdf
 http://www.storage.ibm.com

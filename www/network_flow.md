@@ -1,6 +1,6 @@
 # network_flow
 
-### Inspekce sitoveho toku
+## Inspekce sitoveho toku
 
 mitmproxy ... [Man in the middle proxy](https://www.owasp.org/index.php/Man-in-the-middle_attack) pro sledovani provozu na weby (http a ssl proxy), male [howto](https://blog.heckel.xyz/2013/07/01/how-to-use-mitmproxy-to-read-and-modify-https-traffic-of-your-phone/) a nebo [toto](https://www.trustwave.com/Resources/SpiderLabs-Blog/Intercepting-SSL-And-HTTPS-Traffic-With-mitmproxy-and-SSLsplit/). Navod na instalace viz [python](../dev/python.html) stranka. Ruzne druhy [proxy modu.](http://docs.mitmproxy.org/en/stable/modes.html)  
 [DoubleCloud Proxy](www.doublecloud.org/doublecloud-proxy/) ... Jednoducha java Reverse proxy, ktera lze pouzit napr. na debuging API za https  
@@ -14,13 +14,13 @@ tcpdump -vv -x -X -s 1500 -i eth1 '[port 25](https://danielmiessler.com/study/tc
 tcpdump -n -c 30000 -w /root/port.80.debug.txt ... ulozeni provozu do souboru (30.000 packetu)  
 tcpdump -X -vv -r /root/port.80.debug.txt ... analyza provozu ze souboru  
 
-### Preposilani, smerovani, prekonavani uzavrenych siti
+## Preposilani, smerovani, prekonavani uzavrenych siti
 
 [tinyproxy](https://www.rosehosting.com/blog/install-and-configure-tinyproxy/) ... HTTP a HTTPS proxy  
 ssh -R 8888:localhost:8888 user@server ... forwardovani proxy  
 export http_proxy="http://localhost:8888" ... nastaveni http proxy na linuxu  
 export https_proxy="https://localhost:8888" ... nastaveni https proxy na linuxu  
 
-### Firewall a zmeny sitoveho toku - network rules
+## Firewall a zmeny sitoveho toku - network rules
 
 [iptables](../os/lin-net.html)

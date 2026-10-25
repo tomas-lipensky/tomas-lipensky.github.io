@@ -5,10 +5,10 @@
 [https://en.wikipedia.org/wiki/Tempo](https://en.wikipedia.org/wiki/Tempo) ... Tempa a jejich BPM  
 [https://songbpm.com/](https://songbpm.com/) ... databáze písníček a jejich BPM  
 
-### Písničky
+## Písničky
 
-#### Noty
+### Noty
 
-#### Akordy
+### Akordy
 
 [https://www.ukulele-tabs.com/uke-songs/difficulty/beginner,2.html](https://www.ukulele-tabs.com/uke-songs/difficulty/beginner,2.html) ... písničny pro ukulele - akordy

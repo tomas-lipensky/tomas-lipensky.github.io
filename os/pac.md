@@ -2,7 +2,7 @@
 
 [https://findproxyforurl.com/pac-functions/](https://findproxyforurl.com/pac-functions/)
 
-### Funkce
+## Funkce
 
 if (shExpMatch(host, "*.local")) ... kdyz je host roven regularnimu vyrazu  
 if (dnsDomainIs(host, "google.com") || dnsDomainIs(host, "www.google.com")) ... kdyz je domena jedna z nasledujicich  

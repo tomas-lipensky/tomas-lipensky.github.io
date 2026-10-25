@@ -1,18 +1,18 @@
 # copilot
 
-### Odkazy
+## Odkazy
 
 https://copilot.microsoft.com/
 
-### CLI
+## CLI
 
 [copilot](https://github.com/features/copilot/cli) --allow-all-paths --allow-all-tools --enable-all-github-mcp-tools --model "gpt-5-mini" ... spustí copilot CLI  
 
-### Obecně
+## Obecně
 
 Copilot repo init
 
-### Soubory
+## Soubory
 
 .github/copilot-instructions.md ... instrukce, co se přidají k jakémukoli promptu  
 .github/instructions/*.instructions.md ... použijí se, když prompt obsahuje nějakou informaci, co vypadá, že souvisí s instrukcí  
@@ -20,7 +20,7 @@ Copilot repo init
 .github/agents/<agent_name>.md, nebo .github/agents/<agent_name>.agent.md ... agent, nebo subagent  
 .github/prompts/<název>.prompt.md  
 
-### Tipy
+## Tipy
 
 používání flowchartu:
 
@@ -40,14 +40,14 @@ Nepoužívat mnoho nástrojů, pluginů, skillů
 
 Používat implementační plány v lepším modelu, implementace v levnějším modelu
 
-### Nástroje
+## Nástroje
 
 https://github.com/obra/superpowers ... sada skillů  
 https://github.com/github/spec-kit ... sada skillů jak superpowers  
 https://github.com/JuliusBrussee/caveman ... skily, aby mluvil velmi narovinu a jednoduše  
 https://github.com/github/awesome-copilot ... Předpřipravené skilly pro konkrétní jazyky a tasky  
 
-### Agenti a subagenti
+## Agenti a subagenti
 
 Omezení kontextu, ať se šetří  
 Pro konkrétní úkoly pouštět subagenty, s omezeným kontextem a akcí, vrací výstupy agentovi  

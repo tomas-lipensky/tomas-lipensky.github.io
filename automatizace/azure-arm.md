@@ -6,7 +6,7 @@
 [for-each look](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/copy-resources) aneb copy  
 [Nested sablony](https://docs.microsoft.com/en-us/azure/azure-resource-manager/templates/deploy-to-resource-group) aneb deploy do jine RG, subskripce atd.  
 
-### Prikazy
+## Prikazy
 
 az deployment group what-if --resource-group rginappserviceSTGEA --name inappnotificationstgea-blob-privlink --template-file ../../ArmTemplates/private_link.json --parameters @inappnotificationstgea-blob-privlink.json ... testove spusteni deploye, napise, co chce udelat  
 az deployment group create --resource-group rginappserviceSTGEA --name inappnotificationstgea-blob-privlink --template-file ../../ArmTemplates/private_link.json --parameters @inappnotificationstgea-blob-privlink.json ... provede deployment

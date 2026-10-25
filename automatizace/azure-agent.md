@@ -1,6 +1,6 @@
 # azure-agent
 
-### Hybrid Worker
+## Hybrid Worker
 
 [Hybrid Runbook Worker](https://docs.microsoft.com/cs-cz/azure/automation/automation-hybrid-runbook-worker) ... agent nainstalovany v datacentru, ktery umi spoustet runbooky mimo Azure
 
@@ -33,7 +33,7 @@ Oprava spatnych prav k adresari s certifikatama:
 `Add-HybridRunbookWorker -GroupName TestGroup -EndPoint '$URL' -Token '$KEY' -Verbose` ... registrace Hybrid workera do group  
 `Remove-HybridRunbookWorker -EndPoint '$URL' -Token '$KEY' -Verbose` ... odregistrace hybrid workera z grupy  
 
-### Diagnostics extension agent (WAD)
+## Diagnostics extension agent (WAD)
 
 Rozsireny monitoring - data z OS
 
@@ -46,15 +46,15 @@ DiagnosticsPluginLauncher.exe -update
 DiagnosticsPluginLauncher.exe -resetState  
 DiagnosticsPluginLauncher.exe … restart agenta  
 
-### Dependency Agent
+## Dependency Agent
 
 Monitorovani procesu a zavislosti
 
-### Log Analytics agent (drive Microsoft Monitoring Agent, MMA)
+## Log Analytics agent (drive Microsoft Monitoring Agent, MMA)
 
 [MMA](https://docs.microsoft.com/en-us/azure/log-analytics/log-analytics-agent-windows) se stara o poskytovani Hybrid Worker a Log Analytics funkci. Data posila do OMS (Operations Management  Suit) Workspace.
 
-#### Windows
+### Windows
 
 dpkg -l omi omsagent omsconfig ... seznam balicku, verze agenta  
 C:\Program Files\Microsoft Monitoring Agent\Agent\AgentControlPanel.exe ... nastaveni MMA  
@@ -85,7 +85,7 @@ Logy z MMA v Azure:
 | where Category == "Direct Agent"
 | where TimeGenerated > ago(30m)
 
-#### Linux
+### Linux
 
 /opt/microsoft/omsagent/bin/omsadmin.sh -l  ... Seznam asociovanych workspacu  
 /etc/opt/omi/conf/omiserver.conf  
@@ -99,14 +99,14 @@ systemctl status omsagent-LAD.service ... status sluzby
 /var/lib/waagent/Microsoft.EnterpriseCloud.Monitoring.OmsAgentForLinux-*/omsagent.py -uninstall ... odinstalace agenta  
 omsagent.py -uninstall ... zakazani agenta  
 sudo -u omsagent /opt/microsoft/omsconfig/Scripts/PerformRequiredConfigurationChecks.py ... check  
-### Network Watcher Agent
+## Network Watcher Agent
 
 [NWA](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/network-watcher-windows) umi merit statistiky site.
 
 Get-AzureRmVMExtension -ResourceGroupName myResourceGroup1 -VMName myVM1 -Name networkWatcherAgent ... status z pohledu z Azure  
 C:\WindowsAzure\Logs\Plugins\Microsoft.Azure.NetworkWatcher.NetworkWatcherAgentWindows\  
 
-### PowerShell DSC Extension
+## PowerShell DSC Extension
 
 [DSC Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/dsc-windows) nahrava a spousti DSC soubory.
 
@@ -125,7 +125,7 @@ az vm extension set \
 az vm extension list --resource-group myResourceGroup --vm-name myVM -o table ... status  
 Set-AzureVMExtension -ExtensionName $extensionName -VM $vm -Publisher $publisher  -Version $version -PrivateConfiguration $privateConfig  -PublicConfiguration $publicConfig | Update-AzureVM  
 
-### Virtual Machine Access Extension
+## Virtual Machine Access Extension
 
 [VMAccess Extension](https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess) umoznuje pripojeni k VM z portalu.
 
@@ -141,7 +141,7 @@ az vm user delete
 
 az vm extension list --resource-group myResourceGroup --vm-name myVM -o table  
 
-### Windows Azure Linux Agent
+## Windows Azure Linux Agent
 
 WAA - Windows Azure Linux Agent - zajistuje trvalost hostname (jinak se meni po kazdem rebootu) a jine  
 /etc/waagent.conf  
@@ -153,6 +153,6 @@ waaagent -version
 /etc/waagent.conf ... nastaveni  
 systemctl restart walinuxagent.service  
 
-### InfluxData Telegraf Agent
+## InfluxData Telegraf Agent
 
 [Influx Telegraf](https://www.influxdata.com/time-series-platform/telegraf/) agent pro Linux na reportovani rozsirenych metrik

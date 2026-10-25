@@ -1,4 +1,4 @@
-# bluemix
+# Bluemix
 
 [https://clis.ng.bluemix.net/](https://clis.ng.bluemix.net/) ... CLI API download  
 ./install_bluemix_cli ... instalace CLI API bx  
@@ -11,7 +11,7 @@ bx target ... ukaze aktualni umisteni (ucet, organizace, prostor)
 bx target -s cloud-4-dev ... zmeni prostor na cloud-4-dev  
 bx iam org ORG ... ukaze info o organizaci vcetne kvot  
 
-#### aplikace
+## aplikace
 
 bx app push ... nahraje aplikaci v aktualnim adresari  
 bx app list ... seznam aplikaci v aktualnim prostoru  
@@ -21,7 +21,7 @@ bx app stop APP1 ... zastavi aplikaci APP1
 bx app start APP1 ... nastartuje aplikaci APP1  
 bx app delete APP1 ... smaze aplikaci  
 
-#### sluzby
+## sluzby
 
 bx service offerings ... seznam nabidek  
 bx service create language_translator lite "Language Translator-x1"  
@@ -29,10 +29,10 @@ bx service list
 bx service bind APP1 "Language Translator-x1"  
 bx app restage APP1 ... prekompiluje aplikaci pro novou sluzby  
 
-### Routy
+## Routy
 
 bx app routes ... 	seznam  
 
-### Cloud foundry
+## Cloud foundry
 
 cf target -o "tomas.lipensky@cz.ibm.com" -s "cloud-4-dev" ... prepne to noveho prostoru

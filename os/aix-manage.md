@@ -1,6 +1,6 @@
 # AIX - Sprava systemu, balicky, uzivatele, ...
 
-### Externi odkazy
+## Externi odkazy
 
 [AIX 6.1](http://www.ibm.com/support/knowledgecenter/ssw_aix_61/com.ibm.aix.base/kc_welcome_61.htm) - oficialni stranka podpory  
 [AIX komunita na DW](https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/AIX)  
@@ -10,7 +10,7 @@ RPM balicky: [AIX Toolbox for Linux Applications](http://www-03.ibm.com/systems/
 RPM balicky: [Perzl.org](http://www.perzl.org/aix/)  
 RPM balicky: [oss4aix.org](http://www.oss4aix.org/download/everything/RPMS/)  
 
-### Uzivatele
+## Uzivatele
 
 aixpert -f mysec.xml ... importuje bezpecnostni politiky ze souboru mysec.xml  
 chdev -l sys0 -a enhanced_RBAC='true' ... po rebootu aktivace [RBAC](http://www.ibm.com/developerworks/aix/library/au-aix_rbac/index.html) (Role Based Authentication Control)  
@@ -36,7 +36,7 @@ usrck ... zkontroluje definice uzivatelu v /etc/passwd
 /etc/security/limits  
 /etc/nologin ... pokud existuje tento soubor, uzivatele se nemohou pripojit  
 
-### Balicky
+## Balicky
 
 /usr/sbin/emgr -P ... zobrazi zamknute balicky  
 emgr -r -L DbgKernel ... Odebere vnitrni upravu jadra, ktera se jmenuje DbgKernel  
@@ -69,7 +69,7 @@ updateios -install -accept -dev 'FixPack11.1 path'
 ioslevel  
 http://www-933.ibm.com/support/fixcentral/main/System+p/AIX ... Fixy a nove TL a ML  
 
-#### Zarizeni
+### Zarizeni
 
 bindprocessor -q ... ukaze virtualni procesory
 bootinfo &#8211;r ... vypis velikosti pameti  
@@ -125,7 +125,7 @@ smtctl ... zobrazi/zmeni stav SMT (Simultaneous multi-threading). Pro parametru 
 uname -a ... ID pocitace + OS  
 /usr/lpp/EMC/CLARiiON/bin/inq.aix32_51 -clar_wwn ... informace o storage a lunech na Clarionu  
 
-#### [Firmware a aovladace](http://www.ibm.com/developerworks/wikis/display/WikiPtype/p5+System+Firmware+Upgrade)
+### [Firmware a aovladace](http://www.ibm.com/developerworks/wikis/display/WikiPtype/p5+System+Firmware+Upgrade)
 
 [Link](http://www-933.ibm.com/support/fixcentral/firmware/supportedCombinations) na podporovane firmware u jednotlivych stroju  
 lsmcode -c ... ukaze Firmware  
@@ -140,7 +140,7 @@ invscout ... oscanuje vsechna zarizeni a vypise jejich firmware (vcetne systemov
 /var/adm/invscout/microcode/catalog.mic ... lokace katalogu ovladacu (firmware, microcode)  
 [https://www-304.ibm.com/webapp/set2/mds/mds](https://www-304.ibm.com/webapp/set2/mds/mds ) ... misto na upload vystupu invscout (*.mup) - analyzuje vystup, doporuci upgrade, doda linky i postup  
 
-### Jadro
+## Jadro
 
 /etc/tunables/nextboot ... nastaveni paramertu jadra pro dalsi reboot  
 tuncheck -r -f nextboot ... zkontroluje parametry jadra v /etc/tunables/nextboot pro dalsi reboot  
@@ -148,7 +148,7 @@ smit load64bit ... zapne podporu 64-bitovych aplikaci na 32-bit. jadre
 /etc/tunables/lastboot ... parametry jadra po poslednim (soucasnem) startu OS  
 ln -sf /usr/lib/boot/unix_64 /unix; ln -sf /usr/lib/boot/unix_64 /usr/lib/boot/unix; bosboot -ad ipldevice; shutdown -Fr ... zmena jadra na 64-bit  
 
-### Procesy a vykon serveru
+## Procesy a vykon serveru
 
 /usr/lpp/perfagent/daily.cf ... konfiguracni soubor pro xmwlm  
 cat /proc/sys/fs/jfs2/memory_usage ... vyuziti bufferu (cache) file systemu - casti pameti pro cteni diskovych operaci dopredu  
@@ -195,7 +195,7 @@ wlmcheck -d Config ... Ukaze tridy v profilu "Config"
 lsclass -C System ... Ukaze tridu System  
 [lpar2rrd](http://www.lpar2rrd.com/) ... webovy tool na zubrazeni vykonnosti, pameti a konfigurace LPARu  
 
-### informace o discich LVM, FS, PS, Dump
+## informace o discich LVM, FS, PS, Dump
 
 bootinfo -s hdisk0 ... velikost disku hdisk0  
 lsdev -Cc adapter ... seznam radicu  
@@ -226,7 +226,7 @@ sysdumpdev -l ... ukaze aktivni sysdump disky
 sysdumpdev -e ... ukaze potrebne misto na system dump  
 kdb ... analyza sysdumpu nebo karnelu  
 
-### ODM
+## ODM
 
 odmadd [parts.add](parts.cre.txt) ... prida polozky v parts.add do ODM (odm soubor parts je definovan v souboru)  
 synclvodm ... synchronizuje LVM a ODM informace  
@@ -246,7 +246,7 @@ CuDvDr ... CurrectDevicesDrivers - minor/major cisla, atd.
 PdDv ... PredefinedDevices - preddefinovane parametry k zarizenim  
 PdDvLn  
 
-### Sluzby
+## Sluzby
 
 lssrc -a ... seznam a stav vsech sluzeb  
 lssrc -s tlmagent ... ukaze stav sluzby tlmagent  
@@ -255,7 +255,7 @@ refresh -s syslog ... Restartuje sluzbu syslog
 stopsrc -s inetd ... Zastavi sluzbu syslog  
 startsrc -s inetd ... spusti sluzbu syslog  
 
-### Chybove hlaseni, log soubory
+## Chybove hlaseni, log soubory
 
 alog -ot boot ... ?  
 audit on ... zapne auditovani ([Popis auditu na ibm support](http://www-01.ibm.com/support/docview.wss?uid=isg3T1000212)  
@@ -297,13 +297,13 @@ fwtmp < /var/adm/wtmp > /tmp/wtmp.txt ... manipulace se souborem wtmp - konverze
 /usr/sbin/acct/fwtmp -ic < /tmp/fwtmp.txt > /var/adm/wtmp ... konverze z txt do wtmp formatu  
 tcrpt/trcstop/trace ... sleduje jadro a dela zapisy do log souboru  
 
-#### accounting
+### accounting
 
 /usr/lib/acct/turnacct on/off ... zapne/vypne accounting  
 /usr/sbin/acct/ckpacct 10000 ... vypne accounting, necha jen pacct omezene velikosti a zbytek presune do pacct1, pote spusti accounting  
 /usr/sbin/acct/acctcom pacct1 ... ukaze zaznamy (procesy) v pacct1  
 
-### Ostatni
+## Ostatni
 
 banner ... velike napisy  
 swcons ... presmeruje vystup konzoly jinam  
@@ -315,7 +315,7 @@ odmget -q attribute=TCB_STATE PdAt ... zjisti, zda je zapnuty TCM - Trusted Comp
 telinit m = shutdown -m ... Prepne OS do Single-user=Maintenance modu  
 telinit q ... nastartuje nove veci v inittabu v aktualnim RC  
 
-### terminal
+## terminal
 
 tty ... vypise zarizeni aktualniho terminalu  
 echo "ahoj" > `tty` vypise ahoj na aktualni terminal  

@@ -1,12 +1,12 @@
 # HP-UX - Nastaveni site
 
-### balicky pro sit
+## balicky pro sit
 
 swlist -l product Networking ... seznam balicku pro sit  
 swlist -l bundle | grep HW= ... seznam balicku pro podporu sitovych karet  
 swlist TOUR ... podpora IPv6 v 11i v1 a nizsich  
 
-### start site
+## start site
 
 /sbin/init.d/hostname - /etc/rc.config.d/netconf ... hostname  
 /sbin/init.d/hpbtlan - /etc/rc.config.d/hpbtlanconf ... nastaveni link layer pro sitove karty s obladacem hpbtlan  
@@ -16,7 +16,7 @@ swlist TOUR ... podpora IPv6 v 11i v1 a nizsich
 /sbin/init.d/net - /etc/rc.config.d/netconf, /etc/rc.config.d/nddconf ... Nastaveni network layer - IP adresy atd.  
 /sbin/init.d/net-ipv6 - /etc/rc.config.d/netconf-ipv6 ... Nastaveni network layer - IPv6 adresy atd.  
 
-### fyzicka sitova zarizeni a nastaveni 2. sitove vrstvy - link
+## fyzicka sitova zarizeni a nastaveni 2. sitove vrstvy - link
 
 ioscan -fC lan	... seznam sitovych adapteru v serveru, vcetne HW cest, ovladacu a nazvu SDF atd.
 ll /dev/dlpi* ... seznam SDF potrebnych do diagnostickych nastroju (linkloop, lanadmin  
@@ -49,7 +49,7 @@ ndd /dev/ip6 ? ... ukaze volitelne parametry ipv6
 ndd --get /dev/ip ip_forwarding ... ukaze nestaveni parametru ip_forwarding  
 ndd --set /dev/ip ip_forwarding 0 ... zmeni nastaveni ip_forwarding  
 
-### nastaveni a informace o 3. sitove vrstve - newtork
+## nastaveni a informace o 3. sitove vrstve - newtork
 
 ifconfig lanX	... informace o sitovem zarizeni
 ifconfig lan0 128.1.1.1 netmask 255.255.0.0 up ... nastavi IP adresu pro sitovou kartu a aktivuje ji  
@@ -81,7 +81,7 @@ tcpdump
 ethereal  
 net-snmp  
 
-### Vyssi sitove vrstvy, sluzby
+## Vyssi sitove vrstvy, sluzby
 
 hostname AAA ... nastavi TCP/IP jmeno pocitace AAA  
 hostname ... ukaze TCP/IP jmeno pocitace  

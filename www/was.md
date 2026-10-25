@@ -1,6 +1,6 @@
 # WebSphere Application Server
 
-### Externi odkazy
+## Externi odkazy
 
 [WAS - System requirements](http://www-01.ibm.com/support/docview.wss?uid=swg27006921)  
 [Dokumenty k WAS](ftp://ftp.software.ibm.com/software/webserver/appserv/library/)  
@@ -16,11 +16,11 @@ AST ([L](http://www-01.ibm.com/support/docview.wss?uid=swg24014242),[W](http://w
 [IBM DevelopersWork](http://www.ibm.com/developerworks/views/websphere/libraryview.jsp) - Clanky k WebSphere  
 [Global WebSphere Comunity](http://www.websphereusergroup.org/)  
 
-### Interni odkazy
+## Interni odkazy
 
 [WAS - troubleshooting](was-troubleshoot.html)
 
-### Komponenty
+## Komponenty
 
 WebSphere Stand alone - typ profilu, ktery hostuje aplikace a neni managovany jinym procesem  
 Federated Application Server - (federovany node) typ profilu, ktery hostuje aplikace a je managovany jinym profilem (procesem) - Konfiguracni mnozina je cela (cell)  
@@ -28,7 +28,7 @@ Deployment Manager - (dmgr) typ profilu, ktery nehostuje aplikace ale managuje v
 Node Agent - nehostuje aplikace ale je prostrednik mezi dmgr a federovanymi nody  
 Administrative Agent, Job manager, Secure proxy server  
 
-### Instalace/odinstalace/aplikace oprav
+## Instalace/odinstalace/aplikace oprav
 
 Pro nalezeni WebSphere Aplikacniho Serveru (WAS) je uzitecne vyjmenovat obvykle cesty k WAS soucastem:
 
@@ -49,7 +49,7 @@ rpm -qa | grep WSIHS ... WebSphere IBM Http Server
 lslpp -l | grep WSPAA ... WebSphere Plugin - Plugin WAS pro HTTP server
 </dl>
 
-##### Architektura
+#### Architektura
 
 Deployment Manager - DMgr - Administracni centralni bod mnoha aplikacnich serveru v administracni skupine - Cell - soucast WAS ND edice (Network Deployment)  
 Nodeagent - JVM ktere dela prostrednika mezi DMgr a jednotlivymi servery - spousti, zastavuje, prenasi konfiguraci (synchronizuje)  
@@ -57,7 +57,7 @@ Aplikacni servery - bud standalone - administruje se kazdy sam, nebo soucasti Ce
 [CIM](http://www.ibm.com/support/knowledgecenter/SSAW57_8.0.0/com.ibm.websphere.installation.nd.doc/info/ae/ae/tins_cim_overview.html) - Centram Installation Manager - centralni misto na instalace, updaty a uninstalace AS  
 [Job Manager](https://www.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.nd.doc/ae/cagt_jobmanager.html) - administracni misto na posilani administracnich ukolu pro AS registrovanych v administracnich agentech ([admin agent](https://www.ibm.com/support/knowledgecenter/SS7K4U_8.5.5/com.ibm.websphere.nd.doc/ae/cagt_adminagent.html)) nebo DMgr. Popis v Redbooku [Flexible Management](http://www.redbooks.ibm.com/redpapers/pdfs/redp4839.pdf)  
 
-##### Instalace
+#### Instalace
 
 $PATH_TO_INSTALL_MEDIUM/WAS/install ... Instalace pomoci grafickeho pruvodce  
 $PATH_TO_INSTALL_MEDIUM/WAS/install -options [response.txt](response.txt) -silent ... ticha instalace bez grafiky  
@@ -65,18 +65,18 @@ $PATH_TO_INSTALL_MEDIUM/WAS/install -options [response.txt](response.txt) -silen
 C:\Docoments and settings\Administrator\Local settings\Temp\niflogs ... logy z instalace pod Win  
 $WAS/logs/install/log.txt ... log instalace  
 
-##### Odinstalace
+#### Odinstalace
 
 $WAS/_uninst/uninstall -silent ... odinstalace WASu  
 
-##### Aplikace oprav, update
+#### Aplikace oprav, update
 
 Spustit **IBM Update Installer** - pruvodce instalaci update-u pro WAS, IHS, ..:
 $UI/update.sh ... spusti UpdateInstaller pruvodce  
 $WAS/bin/versionInfo.sh ... Verze WASu  
 $WAS/logs/update/$VERZE/updatelog.txt
 
-### Webove sluzby
+## Webove sluzby
 
 http://HOSTNAME:9060/admin ... Administracni konzola na Manazeru Distribuovanych serveru  
 https://HOSTNAME:9043/admin ... Administracni konzola na Manazeru Distribuovanych serveru - SSL  
@@ -87,7 +87,7 @@ http://localhost:9080/WSamples
 http://localhost:9080/PlantsByWebSphere  
 https://localhost:9443/snoop ... test SSL HTTPS transportu  
 
-### WAS: Start/Stop/Status
+## WAS: Start/Stop/Status
 
 $WAS/bin/* ... binarky z tohoto adresare spousti akce na vychozi (default) profil, pokud se nezada jinak. Stejne binarky jsou v $PROFIL/bin a ty se spousti na dany profil  
 $PROFIL/bin/serverStatus -all ... Vypise status vsech serveru  
@@ -100,7 +100,7 @@ $PROFIL/bin/stopNode.sh NODE ... Spusti node NODE v distribuovanem systemu
 $PROFIL/bin/stopManager.sh ... spusti Deployment manager  
 $IBMHTTP/bin/apachectl start ... start IBMhttp server po startu WAS  
 
-### WAS: konfiguracni binarky
+## WAS: konfiguracni binarky
 
 $WAS/bin/* ... binarky z tohoto adresare spousti akce na vychozi (default) profil, pokud se nezada jinak. Stejne binarky jsou v $PROFIL/bin a ty se spousti na dany profil  
 $PROFIL/bin/ProfileCreatcd or/pctPLATFORM ... Profile Creation Wizard  
@@ -154,7 +154,7 @@ $WAS\bin\WASService.exe -remove ... Registrace sluzby
 [ikeyman](ssl.html) ... prace s SSL klici  
 [gsk7cmd](ssl.html) ... prace s SSL klici  
 
-### Logy
+## Logy
 
 $PROFIL/logs/dmgr/SystemOut.log ... Logy Deployment Manageru  
 $PROFIL/logs/nodeagent/SystemOut.log ... Logy Node Agenta (start/stop nodu)  
@@ -168,29 +168,29 @@ $PROFIL/wstemp ... sessions jednotlivych uzivatelu pres webovou administracni ko
 $PROFIL/log/AboutThisProfile.txt ... Informace o vytvorenem profilu (porty atd)  
 ??/commandAssistanceJythonCommands_USER.log ... logy Admin konzole  
 
-### Konfiguracni soubory
+## Konfiguracni soubory
 
 $PROFIL/config/cells/$CELL/nodes/$NODE/serverindex.xml ... porty  
 $PROFIL/config/cells/$CELL/virtualhosts.xml ... porty  
 $PROFIL/config/cells/$CELL/security.xml ... nastaveni bezpecnosti, napriklad secure pristup k admin konzole atd  
 $PROFIL/config/cells/FRELIXPRDAS1CCellAPAC/fileRegistry.xml ... nastaveni uzivatelu  
 
-### Sledovani/ladeni vykonu
+## Sledovani/ladeni vykonu
 
 PMI ( Performance Monitoring Infrastructure ) ... Monitoring and Tuning > Performance Monitoring Infrastructure (PMI)  
 
-### Sluzby, poskytovatele sluzeb
+## Sluzby, poskytovatele sluzeb
 
-##### JMS
+#### JMS
 
 SIB (Service Integration Bus) je "domena zprav" ve vychozim WebSphere AS. Na SIB se definuji jednotlivi clenove SIBu - jednotlive AS, ve kterych zpravidla byva vytvoren Messaging Engine.  
 1. Application servers &gt; server_name &gt; SIB service &gt; SIB_name &gt; Configuration reload enabled ... povoleni aktivace nekterych zmen bez restartu SIBu (Aplikacnich serveru, ktere jsou cleny SIBu)  
 
-##### JDBC
+#### JDBC
 
 [Oracle 10 JDBC](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html) ovladace  
 
-##### Webovy server a webove sluzby
+#### Webovy server a webove sluzby
 
 Vytvoreni Weboveho Serveru je potreba k umozneni **generovani konfiguracniho** souboru k [WebSphere Pluginu](plugin.html). U IHS serveru s povolenou administracni konzolou umoznuje
  Webovy server i **stop** a **start** weboveho serveru, **propagaci konfiguracniho souboru**, atd.
@@ -209,18 +209,18 @@ Aplikace, ktera bude k dispozici pres HTTP server se musi nastavit, aby byla HTT
 Applications &gt; WebSphere enterprise applications &gt; APLIKACE &gt; Manage Modules ... Oznacit webovy modul web.xml a oznacit aplikacni server i webovy server, pote dat aplikovat a restartovat
  aplikaci. Nasledovne se vygeneruje a propaguje konfiguracni soubor pluginu  
 
-### Aplikace
+## Aplikace
 
 Ziskani URL aplikace: HTTP konfiguracni soubor + Plugin + application.xml a web.xml meta deskriptor aplikace  
 grep context-root $PROFIL/InstalledApps/*/*.ear/META-INF/application.xml ... application.xml deskriptor aplikace  
 grep url-pattern $PROFIL/InstalledApps/*/*.ear/*.war/WEB-INF/web.xml ... web.xml deskriptor aplikace  
 
-### wsadmin prostredi
+## wsadmin prostredi
 
 wsadmin pouziva k administraci 5 zakladnich commandu: AdminControl, AdminConfig, AdminApp, AdminTask a Help  
 $WAS/web/mbeanDocs/index.html ... Popisy vsech MBean typu  
 
-### shell: uzitecne prikazy
+## shell: uzitecne prikazy
 
 ps -ef | grep -v grep | grep WebS | awk '{ print $(NF-2),$(NF-1),$(NF) }' | sort | uniq  
 ps -ef | grep httpd | grep -v grep | awk '{ print $9,$10,$11,$12,$13,$14 }' | sort | uniq  

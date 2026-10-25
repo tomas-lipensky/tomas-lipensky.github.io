@@ -1,6 +1,6 @@
 # hpux
 
-### Interni odkazy
+## Interni odkazy
 
 [Sprava systemu](hp-manage)  
 1. Boot proces [Integrity](hp-integrity) serveru  
@@ -17,7 +17,7 @@ Tisk
 [hp-dsf](hp-dsf)  
 [hp-mp](hp-mp)  
 
-### Externi odkazy
+## Externi odkazy
 
 [docs.hp.com](http://docs.hp.com)  
 [http://docs.hp.com/en/hw.html](http://docs.hp.com/en/hw.html)  

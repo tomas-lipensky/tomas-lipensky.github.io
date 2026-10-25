@@ -1,6 +1,6 @@
 # index
 
-### Architektura
+## Architektura
 
 (Load Balancer + Proxy cache) --- (HTTP server) --- (Plugin) --- (Aplikacni server) --- (Aplikace na AS, jako treba WP, WSS, ...)
 
@@ -9,7 +9,7 @@ Aplikace zpravidla bezi bud v Web kontejneru (programove prostredi umoznujici ap
  mezi sebou nejcasteji komunikuji pomoci JMS zprav. K tomu slouzi JMS infrastruktura, zajistovana napriklad WAS SIB, MQ, WESB atd. Pro komunikaci mezi jednotlivymi programy lze pouzivat SSL
  sifrovani pomoci [SSL klicu](ssl.html).
 
-### load balancery, proxy cache atd.
+## load balancery, proxy cache atd.
 
 <dl>
 IBM Edge Load Balancer ... Load balancer od IBM
@@ -18,7 +18,7 @@ Infinspas ... cachovani dat, soucast JBoss projektu
 [memcached](http://memcached.org/) ... Distribuovany, vykonny, opensource program pro cachovani dat
 </dl>
 
-### HTTP servery
+## HTTP servery
 
 <dl>
 [IHS](ihs.html) (IBM HTTP Server + [WAS plugin](plugin.html))
@@ -26,7 +26,7 @@ IIS ... Internet Information Services (apache od Microsoft)
 [lets encrypt](https://letsencrypt.org) - Autorita vydavajici SSL/TSL klice zdarma
 </dl>
 
-### Aplikacni servery
+## Aplikacni servery
 
 <dl>
 [JVM](../sw/java.html) obecne
@@ -41,12 +41,12 @@ Apache TomEE - Jiny aplikacni server od Apache, obsahujici Tomcat (Web Kontejner
 Internet Application Server (iAS), drive Oracle Application Server (OAS) a jeste drive Oracle Web Server (OWS)
 </dl>
 
-### Performance testing
+## Performance testing
 
 [Load Impact](https://app.loadimpact.com/account/login)
 [Load Impact agent](https://support.loadimpact.com/3.0/monitoring-agents/load-impacts-open-source-monitoring-agents/)  
 
-### JMS (Java messaging service)
+## JMS (Java messaging service)
 
 Aplikace zajistujici vymenu zprav ci souboru mezi aplikacemi jako sluzbu. Komplexni Aplikacni servery (WAS, ...) v sobe obsahuji JMS providery, ale specializovane aplikace mohou poskytnout lepsi vykon, konfiguravatelnost a management sluzeb zprav.
 
@@ -63,14 +63,14 @@ TalenD ESB ... OpenSource ESB
 WebSphere ESB
 </dl>
 
-### Aplikace
+## Aplikace
 
 Aplikace v aplikacnich serverech vetsinou byvaji balene v baliccich:
 - WAR - balicek obsahujici webobou aplicaci - prezentacni vrstvu - zip archiv obsahujici metainformace definujici zakladni vlastnosti aplikace, Java knihovny - JAR, staticke stranky a jejich komponenty (css, obrazky, js, ...) a aktivni stranku (jsp, ...)
 - EAR - Enterprise balicek - obsahuje balicek WAR a sadu komponent k entrerprise vrstve a metadate k ni
 - JAR - balicek obsahujici javovske tridy - komponenta kazdeho WAS a EAR
 
-### Aplikacni reseni postavene na Aplikacnich serverech
+## Aplikacni reseni postavene na Aplikacnich serverech
 
 <dl>
 
@@ -100,7 +100,7 @@ Mobicents (RedHat) ... Aplikacni server pro telekomunikace
 
 </dl>
 
-### Aplikacni komponenty, API:
+## Aplikacni komponenty, API:
 
 Vetsina javovych aplikaci pouziva obecne komponenty, ktere uznadnuji jejich beh a vyvoj.
 
@@ -109,14 +109,14 @@ Apache Jetspeed2 ... portal od Apache pod Apache licenci
 Apache Axis2 ... Implementace SOAP od Apache pro poskytovani WebServices. Upoznuje pridat WebServices (komunikujici treba pres SOAP) Webovym Aplikacim, nebo provozovat samotne WebService aplikace
 </dl>
 
-### Testovani
+## Testovani
 
 <dl>
 [JMeter](http://jmeter.apache.org/) ... Apache produkt k testovani vykonnosti Webu (http, https), SOAP, mailu atd
 [Java HotSwap](http://code.google.com/p/hotswap/) ... Technologie na dynamicke nahravani javovskych trid bez restartu JVM
 </dl>
 
-### Vyvojove a integracni nastroje (IDE)
+## Vyvojove a integracni nastroje (IDE)
 
 <dl>
 Eclipse
@@ -126,12 +126,12 @@ IBM WebSphere Integration Developer ... Nastroj rozsirujici Rational Application
 JRebel ... plugin do IDE na online implementace javovskych trid do JVM (pomoci HotSwap)
 </dl>
 
-### Inspekce a kontrola sitoveho toku
+## Inspekce a kontrola sitoveho toku
 
 [Sitovy tok](network_flow.html)  
 telnet a specificky protokol viz [dev/http](../dev/http.html), smtp, ...  
 
-### Vyvoj
+## Vyvoj
 
 <dl>
 [http](../dev/http.html)
@@ -143,7 +143,7 @@ telnet a specificky protokol viz [dev/http](../dev/http.html), smtp, ...
 [j2ee](j2ee.html) - Webove java aplikace
 </dl>
 
-### Prohlizece
+## Prohlizece
 
 Firefox  
 [Mozilla wiki](https://developer.mozilla.org/en-US/docs/Mozilla/)  

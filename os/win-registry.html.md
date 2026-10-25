@@ -1,6 +1,6 @@
 # win-registry.html
 
-### WER dumpy
+## WER dumpy
 
 [Windows Error Reporing](https://docs.microsoft.com/en-us/windows/desktop/wer/collecting-user-mode-dumps) dump je otisk procesy v okamziku jeho zhrouceni (.NET aplikace)
 

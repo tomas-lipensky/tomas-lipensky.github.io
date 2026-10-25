@@ -1,17 +1,17 @@
 # LINUX - Souborove systemy, disky, LVM, ...
 
-### Soubory
+## Soubory
 
 stat soubor ... informace o souboru - cas modifikace, pristupu atd.  
 
-##### Pristup k souborum procesama
+### Pristup k souborum procesama
 
 fuser /mnt/a ... seznam procesu, tere vyuzivatji /mnt/a  
 fuser -vk /mnt/a ... vypise vsechny procesy, ktere pristupovaly na /mnt/a a zabije je  
 lsof ... vypis otevrenych souboru  
 ls -l /proc/*/fd/* ... dalsi zpusob jak vylistovat otevrene soubory  
 
-##### Prava k souborum
+### Prava k souborum
 
 chown -R root:root /etc ... zmeni vlastnika adresare a souboru rekurzivne  
 chgrp root /etc/hosts ... zmeni skupinu vlastnika souboru  
@@ -24,7 +24,7 @@ setfacl -x g:visitors /home/schedule.txt ... zrusi ACL na soubor /home/schedule.
 setfacl -m d:u:student:rw /home ... nastavi defaultni ACL pro adresar /home pro studenta na rw  
 setfacl --remove-default /home ... zrusi defaultni prava k adresari home  
 
-### Souborove systemy
+## Souborove systemy
 
 [Filesystemy](http://www.lissot.net/partition/) - [ext2](http://www.freesoftware.fsf.org/ext2-doc/), ext3, ext4, RaiserFS, BrtFS  
 
@@ -103,7 +103,7 @@ tune2fs -j /dev/hda2 ... nastavovani parametru FS. Prida zurnal (ext2 -> ext3)
 tune2fs -l /dev/sda7 ... ukaze nastaveni FS  
 warnquota ... varuje uzivatele o prekrceni kvoty  
 
-### Kodovane FS
+## Kodovane FS
 
 [Truecrypt](http://www.truecrypt.org) + [popis](https://help.ubuntu.com/community/TruecryptHiddenVolume)
 truecrypt data.ts ... namapuje data.ts na /dev/mapper/truecrypt1, textovy rezim  
@@ -116,7 +116,7 @@ realcrypt -t --mount --filesystem=none data.tc ... rozkoduje a namapuje souborov
 cryptsetup - LUKS kodovani disku  
 [kodovani disku a instalace Ubuntu](https://medium.com/@chrishantha/encrypting-disks-on-ubuntu-19-04-b50bfc65182a)  
 
-### Boot sektor, bootovani
+## Boot sektor, bootovani
 
 mkinitrd /boot/initrd ... vytvori initrd RamDisk s modulama  
 **GRUB**  
@@ -130,7 +130,7 @@ dd if=stage1 of=/dev/fd0 bs=512 count=1;dd if=stage2 of=/dev/fd0 bs=512 seek=1 .
 /usr/sbin/update-grub ... doporucena cesta jak updatovat konfiguraci grubu2, napr.  po zmenach parametru v /etc/default/grub. Spousti grub-mkconfig  
 /usr/sbin/grub-mkconfig ... provadi prevod definic v /etc/grub.d/* do grub.cfg  
 
-### Swap disk
+## Swap disk
 
 mkswap -L SWAP-hda6 /dev/hda6 ... naformatuje FS /dev/hda6 jako swap FS s popiskem  
 mkswap /tmp/swap ... naformatuhe soubor pro swap FS  
@@ -139,7 +139,7 @@ swapon -s ... ukaze status vsech swapovacich zarizeni
 swapon /tmp/swap ... zapne swapovani i do souboru /tmp/swap  
 swapoff -a ... zrusi swapovani na vsechny zarizeni  
 
-### LVM
+## LVM
 
 [dmsetup](http://linux.die.net/man/8/dmsetup) ... low level prikaz pro praci s LV  
 vgchange -an designvg ... deaktivuje zmeny na VG  
@@ -169,7 +169,7 @@ vgextend Volume00 /dev/sda1  ... prida PV do VG
 vgreduce vg0 /dev/hda1 ... odebere /dev/hda1 z VG vg0  
 vgs ... seznam VG  
 
-### Softwarovy raid
+## Softwarovy raid
 
 cat /proc/mdstat ... ukaze konfiguraci softwaroveho RAID  
 mdadm ... prace s raid poli  
@@ -181,7 +181,7 @@ mdadm /dev/md0 -a /dev/sdm2 ... pridani disku /dev/sdm2 do pole
 mdadm -A --scan ... projde vsechny zarizeni a sestavi z nich raid pole, jez bylo drive vytvoreno  
 cat /proc/mdstat .. raid pole  
 
-### Multipathing
+## Multipathing
 
 [Device Mapper Multipathing](http://www.redhat.com/docs/manuals/csgfs/browse/4.6/DM_Multipath/index.html)  
 
@@ -196,14 +196,14 @@ dmsetup ls ... seznam multipath zarizeni
 echo "scsi-qlascan" &gt; /proc/scsi/qla2200/1 ... rescanuje zarizeni na FC  
 echo "scsi add-single-device 3 0 0 0" > /proc/scsi/scsi ... prida zarizeni (/dev) podle toho, co nasel qlascan  
 echo "scsi remove-single-device" 3 0 1 0 > /proc/scsi/scsi ... odebera zarizeni (/dev)  
-##### SDD driver
+### SDD driver
 
 cfgvpath ... rescanuje zarizenipro sdd  
 service sdd start/stop/status/restart ... sdd sluzba  
 datapath query device ... seznam disku spravovanych sdd  
 scli, sclient ... nastroj na konfiguraci FC - Fiber Channel karty  
 
-### Hardware
+## Hardware
 
 ==INFO - disky:==
 
@@ -251,7 +251,7 @@ echo "scsi remove-single-device" 3 0 1 0 > /proc/scsi/scsi ... odebrani disku ze
 echo "scsi add-single-device 3 0 0 0" > /proc/scsi/scsi ... pridani disku ze storage do /dev
 ```
 
-### Vypalovani CD
+## Vypalovani CD
 
 mkisofs -J -r -o output.iso dir_with_files/ ... z adresare idela ISO  
 mkisofs -J -r -C 0,145024 -M ATAPI:0,1,0 -o output1.iso dir_with_files/  
@@ -266,7 +266,7 @@ mkisofs -r -o (image file) (source directory); mount -t iso9660 -o ro,loop=/dev/
 growisofs ... kombinace mkisofs a cdrecord  
 paketovy zapis na CD (linux+06/3) (packet-cd.sourceforge.net/) (sourceforge.net/projects/linux-udf)  
 
-### SAN Event (Storage Area Network)
+## SAN Event (Storage Area Network)
 
 date  
 /var/log/messages  
@@ -276,12 +276,12 @@ sysreport (Red Hat)
 datapath query adapter  
 datapath query device  
 
-### Zalohy/obnoveni souboru
+## Zalohy/obnoveni souboru
 
 [MONDo](http://www.mondorescue.org/) ... bootovatelne zalohy linuxu  
 SystemImager ... instalace, zalohy Linuxu  
 
-### Priklady
+## Priklady
 
 ==Rozsireni FS v LVM s ext2/3==
 
@@ -300,17 +300,17 @@ resize2fs /dev/myvg/homevol
 mount /adr
 ```
 
-##### Rozsireni FS v LVM s reiser
+### Rozsireni FS v LVM s reiser
 
 mount /adr  
 resize_reiserfs -f /dev/myvg/homevol  
 
-##### Rozsireni FS v LVM s xfs
+### Rozsireni FS v LVM s xfs
 
 mount /adr  
 xfs_growfs /home  
 
-##### vytvoreni virtualniho FS ze souboru
+### vytvoreni virtualniho FS ze souboru
 
 dd if=/dev/zero of=/dev/fda obs=512 count=200k  ... low level formatovani  
 mkfs.ext2 fs1  
@@ -339,7 +339,7 @@ nebo
 mkisofs -J -r dir_with_files/ | cdrecord dev=ATAPI:0,1,0 -v -multi -pad -data -
 ```
 
-##### Vytvoreni RAM-disku - disk z pameni ROM
+### Vytvoreni RAM-disku - disk z pameni ROM
 
 mknod -m 660 /dev/ram b 1 1  
 chown root.disk /dev/ram  
@@ -347,6 +347,6 @@ dd if=/dev/zero of=/dev/ram bs=1k count=4k ... vycisti pamet o velikosti 4MB
 /sbin/mkfs -t ext2 -m 0 /dev/ram 4096 ... vytvori ext2 strukturu na 4MB RAM  
 mount -t ext2 /dev/ram /mnt/disk ... namountuje pametovy RAM disk  
 
-##### Odkazy
+### Odkazy
 
 [http://www.g-loaded.eu/2005/11/10/encrypt-devices-using-dm-crypt-and-luks/](http://www.g-loaded.eu/2005/11/10/encrypt-devices-using-dm-crypt-and-luks/) moc pekne navody na ruzne veci

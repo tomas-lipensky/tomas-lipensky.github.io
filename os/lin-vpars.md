@@ -3,9 +3,9 @@
 * Pro virtualizaci W2012, W10, W8 je potreba zapnout ochranu pameti v biosu, jinak se OS nespusti.
 * Pri konverzi obrazu z VMWare do KVM se smeni SATA radic na IDE. [Je treba radic zmenit](https://rbgeek.wordpress.com/2013/08/13/converting-a-vmware-workstation-virtual-machine-to-kvm/), jinak nenastartuje system, hlavne Windows
 
-### KVM
+## KVM
 
-##### KVM - Kernel Based Virtual Machine
+### KVM - Kernel Based Virtual Machine
 
 balicky: kvm virt-manager libvirt libvirt-python python-virtinst  
 
@@ -43,13 +43,13 @@ virsh start MDMCS ... spusti VM MDMCS
 virsh shutdown MDMCS ... posle signal k zastaveni VM  
 virsh destroy VM ... okamzite vypne VM  
 
-### LXC - Linux Container
+## LXC - Linux Container
 
 lxc-create -n web1 -t Ubuntu  
 lxc-start -n web1 -d  
 lxc-attach -n web1  
 lxc-ls --fancy ... seznam kontejnerů  
-### libvirt
+## libvirt
 
 Je potreba podpora virtualizace v jadru, viz sekce KVM a XEN
 
@@ -64,17 +64,17 @@ virt-view MACHINE ... otevre okno s pohledem na obrazovku virtualniho stroje MAC
 virsh -c qemu:///system list ... seznam virtualnich stroju  
 virt-install --connect qemu:///system -n vm10 -r 512 --vcpus=2 -f ~/vm10.qcow2 -s 1 -c /mnt/auto/win/Y82583/zip/CentOS-5.5-i386-netinstall.iso --vnc --noautoconsole --os-type linux --os-variant debianlenny --accelerate --hvm
 
-##### XEN
+### XEN
 
 balicky: xen, virt-manager, xen-tools  
 grep flags /proc/cpuinfo ... test, zda je tam prepinac "pae"  
 xm create wspd -n ... vytvori virtualni masinu ze souboru wspd  
 xm create -c MACHINE ... necha vybrat z GRUBu pri startu virt. stroje MACHINE  
 
-### Virtual Box
+## Virtual Box
 
 [VirtualBox](http://www.virtualbox.org/) virtualizacni reseni
-##### Instalace
+### Instalace
 
 wget http://download.virtualbox.org/virtualbox/rpm/rhel/virtualbox.repo ... instalace repo souboru  
 yum update ... update kernelu a balicku  
@@ -82,7 +82,7 @@ yum install binutils gcc make patch libgomp glibc-headers glibc-devel kernel-hea
 yum install VirtualBox-5.0 ... instalace VBoxu  
 /etc/init.d/vboxdrv setup ... konfigurace modulu jadra  
 
-##### prikazy, konfigurace
+### prikazy, konfigurace
 
 ls ~/VirtualBox\ VMs/ ... misto defaultnich VM obrazu  
 
@@ -113,7 +113,7 @@ mount -t vboxsf share ~/host ... namountovani sdileneho adresare na hostovi
 [Manual pro VirtualBox](http://www.virtualbox.org/manual/)  
 xclip ... program na ukladani schranky do souboru a cteni zchranky ze souboru pro nefungujici sdilenou schranku (gclip pro windows)  
 
-### VMware
+## VMware
 
 [VMWare](http://www.vmware.com/cz/) virtualizacni reseni  
 
@@ -124,13 +124,13 @@ vmware-mount CentOS-5.5-i386-virtual-machine-org.vmdk 5 /mnt/5 ... Namountovani 
 vmware-vdiskmanager fedora20-multi.vmdk -t 0 fedora20-uni.vmdk ... prevede multi part diskovy kontejner na jeden soubor  
 /etc/vmware/vmnet8/nat/nat.conf ... definice sitoveho nastaveni, vcetne port forwardingu  
 
-##### Konverze vmware obrazu do virtualboxu
+### Konverze vmware obrazu do virtualboxu
 
 vmware-vdiskmanager -r CentOS-5.5-i386-virtual-machine-org.vmdk -t 0 flattened.vmdk ... slouceni vicesvazkoveho VMware obrazu do jednosvazkoveho  
 qemu-img convert flattened.vmdk -O raw rawfile.bin  
 VBoxManage convertdd rawfile.bin CO.vdi  
 
-### Eucalyptus - cloud solution from Ubuntu
+## Eucalyptus - cloud solution from Ubuntu
 
 sudo euca_conf --no-rsync --discover-nodes ... zapne node controler  
 cd ~/.euca; sudo euca_conf --get-credentials mycreds.zip; unzip mycredents.zip ... ziska kredence od node controleru  
@@ -140,12 +140,12 @@ euca-authorize default -P tcp -p 22 -s 0.0.0./0 ... povoli ssh tok ze vsech mist
 euca-run-instances emi-A1 -k mykey -t c1.medium ... spusti image  
 wait -n5 euca-describe-instances ... kontroluje stav instance, aby jsme vedeli, kdy nastartovala  
 
-### Odblokovani Windows virtualniho pocitace (zapomenute heslo)
+## Odblokovani Windows virtualniho pocitace (zapomenute heslo)
 
 chntpw -l /tmp/mount/Windows/System32/config/SAM ... vylistovani uctu ve Windows  
 chntpw /tmp/mount/Windows/System32/config/SAM -u USER ... vymaze heslo u uzivatele  
 
-### WINE
+## WINE
 
 Funkcni instalace .NET do WINE na [winehq.org](https://appdb.winehq.org/objectManager.php?sClass=version&iId=25478) projektu  
 [winetricks](http://wiki.winehq.org/winetricks) ... instalace ruznych Windows programu pod WINE  
@@ -160,6 +160,6 @@ wine uninstaller ... odinstalace nainstalovanych programu
 wine aaa.exe ... spusti program aaa.exe ve wine  
 playconsole ... graficky interface pro wine  
 
-### Android - Anbox
+## Android - Anbox
 
 [Instalace Anboxu](https://docs.anbox.io/userguide/install_kernel_modules.html)

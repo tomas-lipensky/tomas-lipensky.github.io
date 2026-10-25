@@ -1,13 +1,13 @@
 # linux
 
-### Linuxove distribuce
+## Linuxove distribuce
 
 [Seznam Linux distribuci na Wikipedii](https://cs.wikipedia.org/wiki/Seznam_distribuc%C3%AD_Linuxu)
 . "Live" Linux (OS na vyndavacim mediu "CD/DVD/USB", nepotrebuje harddisk) existuje pro vsechny zname distribuce, nektere jsou vytovorene pouze pro tento ucel..
 
 [Best practice nastaveni](lin-konfigurace)  
 [Linux pracovni stanice](lin-workstation)  
-### Unixové príkazy
+## Unixové príkazy
 
 [unixové príkazy](unix-commands)  
 [Sluzby](daemons)  
@@ -18,7 +18,7 @@
 [awk](awk)  
 [bash](bash)  
 [nc](nc) ... netcat, ncat  
-### Linuxové príkazy
+## Linuxové príkazy
 
 [Správa systému](lin-manage)  
 [Souborové systémy, LVM, ...](lin-fs)  
@@ -35,7 +35,7 @@
 [ssh-config](ssh-config)  
 [/proc](lin-proc) struktura  
 
-### Externí odkazy:
+## Externí odkazy:
 
 [abclinuxu.cz](http://www.abclinuxu.cz)  
 [Serialy na abclinuxu.cz](http://www.abclinuxu.cz/clanky/ruzne/abcserialy)  

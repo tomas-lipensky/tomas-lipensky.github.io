@@ -2,9 +2,9 @@
 
 I have decided to keep this section in English as I can see overlapping of the topics over the borders. It makes the information more useful.
 
-#### =Secure workstation
+## Secure workstation
 
-##### 31.05.2023
+### 31.05.2023
 
 There is used to be lot of sensitive data stored on the computers (laptops, desktop, servers). It may consist pictures, texts, code, data, but one very sensitive type of data is identity (access to multiple cloud services), history, filled forms, passwords, sessions. To obtain the sensitive data, it is enough to have read access over the files, so for example root/admin access to the computer. How can it happen?
 1. steal device - boot from custom boot image as superadmin and access data
@@ -25,9 +25,9 @@ Another alternative is  to have encrypted just disk (filesystem, logical volume)
 
 Best thing is bind the account password with disk encryption password and enter is just once during login. There is quite new tool on linux - systemd-homed, which is a service maintaining such functionality and making security and login comfort on very nice level.
 
-#### =Huion 420 tablet
+## =Huion 420 tablet
 
-##### 22.06.2020
+### 22.06.2020
 
 I received an idea to test a pen together with the computer. Huion 420 was looking as a great option for
 the start. For first I wanted an ekonomic model for the play, for second I got an recomendation from a
@@ -58,9 +58,9 @@ lsusb
 
 and enjoy!
 
-### Onedrive synchronization issue on Linux
+## Onedrive synchronization issue on Linux
 
-##### 17.06.2020
+### 17.06.2020
 
 Cloud drive is a good way to have backup of your files and have your files synchronized and on single place and in single state on all your devizeces. Microsoft provides the Windows and Mac synchronization tool, but for Linux, there are few projects, who tries keep the same tool working despite the updated of API and other configuration on MS side. I was so happy with the [opensource implementation](https://www.maketecheasier.com/sync-onedrive-linux/) of this, until I moved to a different profile (with loosing config files of the previous profile) and the new attempt to set the synchronization failed. Apparently API was changed, or just something didn't work. I don't feel strong to update the code, or I don't have enough time to do it, but I succeeded to make work arround and set the synchronization. Here is the error obtained:
 
@@ -117,9 +117,9 @@ curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=
 
 so in other words, you obtain the refresh token manually and store it into the config file.
 
-### Zamyšlení nad zabezpečením domácí sítě a ochranou děti
+## Zamyšlení nad zabezpečením domácí sítě a ochranou děti
 
-##### 04.05.2020
+### 04.05.2020
 
 Jak nastavit domácí prostředí elektronických zařízení tak, aby poskytovalo bezpečí a zároveň vše, co od ní očekáváme? Zábavu, vzdělání, spojení s přáteli, rodinou, se všemi co potřebujeme, zdroj inspirace, zpráv atd? Předně je asi důležité si uvědomit, která nebezpečenství na nás mohou číhat, se kterými se dá bojovat a jak moc obtížné je vyrušit které z nich. Asi bych to rozdělil na nebezpečí, které se skládá z
 * nebezpečného obsahu (hlásání a šíření násilí, pohrdání jinými lidmi, sexuálně nevhodný obsah, vyzývání k nebezpečnému chování, nemorálních, čí podvodných stránek, které chtějí vylákat peníze, či jinak zneužít návštěvníky atd.) na celých webech, nebo jen na určitých stránkách, článcích
@@ -137,15 +137,15 @@ Existují již produkty, které nás mají chránit a které se zaměřují na j
 
 To by pro dnešek mohlo stačit.
 
-### Code Retreat
+## Code Retreat
 
-##### 09.12.2019
+### 09.12.2019
 
 Very interesting experience was the presence on Code retreat workshop. The objective was to have several (5) iterations over the same topic: [https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life). The common rule was work 45 in pair (random, each time different pair) on implementation of 0-player game, the the rule was to work in the mode for Test Driven Development (first unit tests, than the cone). We could choose any programming language, we had to delete the code after each iteration and we had 15 minutes after each iteration for retrospective. First iteration was just simple "do it" task, second with the limitation that each function must have just 3 lines and no if statements, next iteration without letter 3, +, u, q, h, next iteration one person doing tests, other the alghoritm, but no words, last one was splitted to 5 minutes iteration for one than other person in the pair. If the code not working, than delete the last iteration code. Really fun, really interesting to learn new approaches, how other person works, to learn new people and break the ice. Definetly great to test TDD on the simple task.
 
-### Ubuntu 18.04.2
+## Ubuntu 18.04.2
 
-##### 28.3.2019
+### 28.3.2019
 
 New release of Ubuntu 18.04 LTS appeared. Most important is hardware support. For instance my laptop started to face network connectivity issue and new firmware downloaded by OS update wasn't supported by kernel. This is solved by 18.04.2 because it comes with up to date kernel.
 

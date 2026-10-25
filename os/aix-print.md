@@ -2,21 +2,21 @@
 
 ## [lpd](http://www.ahinc.com/aix/printer.htm)
 
-#### Start
+### Start
 
 startsrc -s lpd
 
-#### Stop
+### Stop
 
 stopsrc -s lpd
 
-#### Status
+### Status
 
 lssrc -s lpd
 /usr/lib/lpd/pio/etc/piolsvp -p ... vypis vsech tiskaren vcetne ovladace  
 /usr/bin/lsallq ... vypis vsech tiskovych front  
 
-#### Konfigurace
+### Konfigurace
 
 smitty print ... prace s tiskarnama
 /usr/lib/lpd/pio/etc/piomkjetd mkpq_jetdirect -p 'generic' -D asc -q 'nlp103' -h 'nlp103' -x '9100' ... vytvori tiskovou frontu nlp103 s portem 9100
@@ -28,13 +28,13 @@ chvirprt -qnlp103 -dhp@nlp103 -a _Z=! ... zmeni parametr _Z tiskarny nlp103
 switch.prt -d ... ukaze typ tisku (BSD, SystemV)  
 switch.prt -s SystemV ... Zmeni typ tisku na SystemV  
 
-#### konfiguracni soubory
+### konfiguracni soubory
 
 /var/spool/lpd/pio/@local/custom/* ... definice vsech parametru tiskaren  
 /etc/qconfig ... konfiguracni soubor tiskaren
 /etc/bootptab ... definice boot/ptab  
 
-#### Tiskove fronty
+### Tiskove fronty
 
 qchk -Pskp044 ... vypise tiskovou frontu tyskarny skp044
 lpstat -pskp044 ... vypise tiskovou frontu tyskarny skp044

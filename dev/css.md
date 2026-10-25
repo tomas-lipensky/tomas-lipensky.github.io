@@ -1,19 +1,19 @@
 # WEB - CSS (Cascading Style Sheets)
 
-### Odkazy
+## Odkazy
 
 [atributy](http://www.jakpsatweb.cz/css/css-vlastnosti-hodnoty-prehled.html)  
 [w3schools.com - moc pekne stranky s popisem i prikladama](http://www.w3schools.com/css/css_border.asp)  
 
 ====Pouziti:====
 
-```
+```html
 &lt;LINK href="special.css" rel="stylesheet" type="text/css"&gt;
 ```
 
 nebo
 
-```
+```html
 &lt;HEAD&gt;
  &lt;STYLE type="text/css"&gt;
    H1 {border-width: 1; border: solid; text-align: center}
@@ -35,7 +35,7 @@ nebo:
 &lt;P style="font-size: 12pt; color: fuchsia"&gt;
 ```
 
-### Priklady
+## Priklady
 
 <pre style="font-size:8pt;padding:0.5em;border:1px dashed #000;color:Black;overflow:visible|
 font-size:8pt;padding:0.5em;border:1px dashed #000;color:Black;overflow:visible

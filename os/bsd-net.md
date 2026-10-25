@@ -1,10 +1,10 @@
 # BSD
 
-##### Externí odkazy
+## Externí odkazy
 
 [Load balancing u 2 internetovych pripojeni](http://www.root.cz/clanky/vyuziti-dvou-internetovych-pripojeni-ve-freebsd/)  
 
-##### Nastavení síťe
+## Nastavení síťe
 
 /etc/rc.conf: ifconfig_em0="inet 10.11.12.1 netmask 255.255.255.0 name wan0" ... nastavení síťové karty a přejmenování hned po startu  
 ifconfig em0 name wan1 ... přejmenování zařízení  

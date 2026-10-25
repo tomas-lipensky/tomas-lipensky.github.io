@@ -3,27 +3,27 @@
 [java virtual machine (JVM)](../sw/java.html) obecne  
 [J2EE](../web/j2ee.html) vyvoj  
 
-### Externi odkazy:
+## Externi odkazy:
 
 [Jave 1.5 API](http://download.oracle.com/javase/1.5.0/docs/api/)  
 [java.cz](http://java.cz)  
 
-### Typy souboru
+## Typy souboru
 
-##### .java
+### .java
 
 javac hello.java ... zkompiluje zdrojovy kod hello.java do hello.class  
 
 javadoc ... dokumentace k jave  
 
-##### .class
+### .class
 
 java hello ... spusti hello.class v JVM (Java Virtual Machine)  
 appletviewer apHello.htm ... prohlizec appletu  
 javap hello.class ... dekompilace .class do .java  
 jdb ... debugger  
 
-##### .jar
+### .jar
 
 java -jar Archiv.jar ... spusti program v archivu Archiv.jar  
 
@@ -32,7 +32,7 @@ jar tvf Archiv.jar ... otestuje jar archiv (Java Archiv)
 jar xvf Archiv.jar ... rozbali Archiv.jar  
 unzip -t Archiv.jar ... oteztuje JAR zabaleny zipem  
 
-### Promenne
+## Promenne
 
 char x; ... (Character) unicode znak, 2 bajty  
 byte znak='a'; ... (Byte) bajt, -128 - 127  
@@ -46,7 +46,7 @@ boolean	b; ... 0, 1 - lez pravda
 x = (int)8.2 ... konverze na cele cislo  
 final float Pi=3.14; ... definice konstanty (nelze menit)  
 
-### Operatory
+## Operatory
 
 (, ) ... seskupovani (priorita 16)  
 A++ [--) ... A=A+1 (priorita 15)  
@@ -66,7 +66,7 @@ A & B ... bitova operace a 1100 & 1001 = 1000 (priorita 9)
 A ^ B ... bitova operace nebo 1100 & 1001 = 1101 (priorita 8)  
 A | B ... bitova operace XOR 1100 & 1001 = 0101 (priorita 7)  
 
-### Podminky, cykly
+## Podminky, cykly
 
 if (podminka) {} else {}  
 (podminka) ? prikazy_pokua_pravda : prikazy_pokud_lez;
@@ -91,7 +91,7 @@ while (podminka) {}
 continue; ... Preskoci zbytek cyklu while, ci for a vrati se na zacatek na vyhodnocovani podminky  
 break; ... Vyskoci z cyklu for nebo while  
 
-### Tridy, objekty, funkce
+## Tridy, objekty, funkce
 
 Definice tridy: cat trida.java
 
@@ -137,7 +137,7 @@ public class pokus {
 }
 ```
 
-### Funkce
+## Funkce
 
 Integer.toString(12) ... prevede celociselnou hodnotu na string  
 
@@ -146,9 +146,9 @@ Math.Random() ... Vygeneruje pseudonahodne cislo
 
 [^1]: Math.random()*6+1 ... prevede realne nahodne cislo na celociselne  
 
-### Priklady:
+## Priklady:
 
-#### Hello.java
+## Hello.java
 
 ```java
 class hello (
@@ -158,7 +158,7 @@ class hello (
 }
 ```
 
-#### apppletHello.java
+## apppletHello.java
 
 ```java
 import java.awt.*;
@@ -169,7 +169,7 @@ public class apHello extends java.applet.Applet {
 }
 ```
 
-#### appletHello.htm
+## appletHello.htm
 
 ```html
 &lt;BODY&gt;
@@ -180,7 +180,7 @@ aplet appletHello.class neni podporovan prohlizecem
 &lt;/HTML&gt;
 ```
 
-#### servletHello.java
+## servletHello.java
 
 ```java
 import javax.servlet.*;

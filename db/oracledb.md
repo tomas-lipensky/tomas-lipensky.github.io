@@ -2,7 +2,7 @@
 
 SQL prikazy pro Oracle jsou na strance [Oracle SQL](oraclesql).
 
-### Externi odkazy
+## Externi odkazy
 
 [Uvod](http://www.abclinuxu.cz/clanky/navody/oracle-1-uvod-distribuce-oraclexe) na abc linuxu  
 [Rychlejsi aplikace](http://www.dbsvet.cz/view.php?cisloclanku=2008112101) na db svete  
@@ -23,11 +23,11 @@ SQL prikazy pro Oracle jsou na strance [Oracle SQL](oraclesql).
 [Pekny strucny navod na Oracle vcetne RMANu](http://www.cuddletech.com/articles/oracle/node1.html)  
 [Obrazek](http://a5.sphotos.ak.fbcdn.net/hphotos-ak-snc3/11039_104638359549190_100000090807855_123129_1238581_n.jpg) - jak hezke mohou byt sql dotazy  
 
-### Oracle soucasti a ovladani Oracle
+## Oracle soucasti a ovladani Oracle
 
 Oracle Enterprise Manager - webova aplikace na management Oracle databazi v prostredi
 
-#### I/SQL*Lnstalace
+### I/SQL*Lnstalace
 
 rpm -i oracle-xe-10.2.0.1-1.0.i386.rpm  
 service oracle-xe configure  
@@ -44,7 +44,7 @@ nebo [http://127.0.0.1:8080/apex](http://127.0.0.1:8080/apex)
 opatch lsinventory ... vypise vsechny nainstalovane soucasti  
 [opatch apply](https://taliphakanozturken.wordpress.com/tag/opatch-lsinventory/) ... aplikace pathcu  
 
-### Stop/start/status
+## Stop/start/status
 
 Start:  
 su - oracle  
@@ -64,7 +64,7 @@ Stop:
 sqlplus / as sysdba; shutown immediate;  
 lsnrctl stop ... stop listeneru  
 
-### Konfigurace
+## Konfigurace
 
 cat /etc/oratab ... SIDy, cesty atd.  
 env | grep ORA ... ukaze informace z promennych s jakou instanci pracuji>br>
@@ -73,7 +73,7 @@ sqlplus / as sysdba; create spfile from pfile; ... vytvori se defaultni specific
 $ORACLE_HOME/network/admin/listener.ora
 $ORACLE_HOME/network/admin/tnsnames.ora  
 
-#### Nastroje
+### Nastroje
 
 Database Configuration Assistant - DBCA - soucasti OUI, nebo pristupny pomoci GUI  
 Oracle Universal Installer - OUI  
@@ -87,7 +87,7 @@ netvgr ... Oracle Net Manager - konfigurace Oracle, jak Oracle Enterprise Manage
 DMBS_SERVER_ALERT ... PL/SQL balicek pro spravu alertu systemovych udalosti  
 DBMS_SESSIO, SBMD_MONITOR ... kontrolovani SQL tracovani  
 
-#### Systemove procesy
+### Systemove procesy
 
 [https://docs.oracle.com/cloud/latest/db112/CNCPT/process.htm#CNCPT9840](https://docs.oracle.com/cloud/latest/db112/CNCPT/process.htm#CNCPT9840)  
 
@@ -122,7 +122,7 @@ $ORACLE_HOME/bin/emctl start dbconsole
 $ORACLE_HOME/bin/emctl stop dbconsole  
 $ORACLE_HOME/bin/emctl status dbconsole  
 
-#### konfiruracni soubory Oracle
+### konfiruracni soubory Oracle
 
 $ORACLE_HOME/network/admin/listener.ora ... konfigurace listeneru  
 $ORACLE_HOME/network/admin/tsnames.ora ... konfigurace klientu pro listener  
@@ -134,9 +134,9 @@ $ORACLE_HOME/network/admin/listener.ora ... soubor s nastavenim listeneru
 SELECT * FROM PRODUCT_COMPONENT_VERSION; ... ukaze verze vsech komponent  
 SELECT * FROM V$VERSION ... Ukaze verze Oracle  
 
-#### soubory/adresare
+### soubory/adresare
 
-#### logy a alerty
+### logy a alerty
 
 SELECT
 [udump](http://www.orafaq.com/wiki/UDUMP) ... user dump - trace soubory a logy k uzivatelskym jobum - chyby  
@@ -159,7 +159,7 @@ SQL_TRACE = TRUE ... inicialsizacni parametr pro tracovani dumpu
 ALTR SESSION SET SQL_TRACE TRUE; ... zmeneni tracovani za behu  
 trcsess ... program Oracle (spousti se z shellu) na cteni trejsu dumpu  
 
-#### SQL Plus - pristup do Oracle
+### SQL Plus - pristup do Oracle
 
 sqlplus username/password AS SYSDBA ... spusti sqlplus a pripoji se pod uzivatelem username jako uzivatel SYSDBA  
 
@@ -169,7 +169,7 @@ desc V$SESSION ... ukaze popisy promennych tabulky (nahledu)
 [column](http://download.oracle.com/docs/cd/B19306_01/server.102/b14357/ch12013.htm) name format a10 ... format promenne NAME pri vypisu bude 10 znaku  
 column id format 9; ... nastavi format sloupce id na cislo  
 
-#### Pripojeni k databazi
+### Pripojeni k databazi
 
 CONNECT user/passwd ... pripojeni uzivatele user s heslem password  
 
@@ -179,7 +179,7 @@ CONNECT / ... pripoji se pod aktualnim systemovym uzivatelem
 CONNECT /@net_service ... pripoji  se na vzdalenou databazi net_service  
 /D
 
-#### Instance - proces Oracle, ktery se muze pripoji k nejake databazi a pracuje nad ni
+### Instance - proces Oracle, ktery se muze pripoji k nejake databazi a pracuje nad ni
 
 STARTUP ... startovani instance, hleda SPFILE v  $ORACLE_HOME/dbs  
 STARTUP PFILE= /mydb/pfile.ora ... spusti instanci s inicializacnimi parametry z /mydb/pfile.ora  
@@ -205,7 +205,7 @@ ALTER SESSION DISABLE PARALLEL DML; ... zakaze paralelni vykonavani SQL prikazu 
 ALTER SESSION ENABLE PARALLEL DDL; ... povoli paralelni vykonavani SQL prikazu CREATE, ALTER  
 ALTER SESSION ENABLE FORCE PARALLEL QUERY PARALLEL 5; ... prikaze paralelni vykonavani SQL prikazu QUERY se stupne paralelismu 5  
 
-#### Pamet SGA (System Global Area)
+### Pamet SGA (System Global Area)
 
 ALTER SYSTEM SGA_MAX_SIZE ... meneni max. velikosti SGA pameti  
 SELECT SUM(value) FROM V$SGA; ... celkova velikost jednotlivych slozek SGA pameti  
@@ -218,14 +218,14 @@ SELECT * FROM V$SGA_DYNAMIC_FREE_MEMORY; ... aktualni mnoztsvi volne pameti, kte
 SELECT * FROM V$SGA_RESIZE_OPS; ... ukaze poslednich 400 dynamickych zmen pameti  
 SELECT * FROM V$SGA_CURRENT_RESIZE_OPS; ... ukaze probihajici dynamicke zmeny pameti  
 
-#### Spousteni SQL, PL/SQL skriptu a shell prikazu
+### Spousteni SQL, PL/SQL skriptu a shell prikazu
 
 [[[http://download-west.oracle.com/docs/cd/B12037_01/appdev.101/b10807/toc.htm]([[http///download-west.oracle.com/docs/cd/B12037_01/appdev.101/b10807/toc.htm)
 
 @/u01/oracle/rdbms/admin/catalog.sql ... pusti davku SQL prikazu  
 !ls ... spusti prikaz ls z shellu  
 
-#### Sluzby
+### Sluzby
 
 Interni sluzby: SYS$BACKGROUND, SYS$USERS  
 DBA_SERVICES  
@@ -246,9 +246,9 @@ DBA_SCHEDULLER_JOB_CLASSES
 DBA_TRESHOLDS  
 SELECT * FORM [DBA_SERVICES,ALL_SERVICES=V$SERVICES,V$ACTIVE_SERVICES,V$SERVICE_STATS,V$SERVICE_EVENTS,V$SERVICE_WAIT_CLEASSES,V$SERV_MOD_ACT_STATS,V$SERVICE_METRICS,V$SERVICE_METRIC_HISTORY,V$SESSION,V$ACTIVE_SESSION_HISTORY,DBA_RSRC_GROUP_MAPPINGS,DBA_CHEDULER_JOB_CLASSES,DBA_THRESHOLDS] ... vypisy sluzeb  
 
-### DATABAZE
+## DATABAZE
 
-#### Databaze
+### Databaze
 
 Mozno pouzit DCA - Database Configuration Assistant  
 ALTER DATABASE DEFAULT TEMPORARY TABLESPACE tempts2 ... vytvori ci zmeni docasnou tablespace na tempts2. Tato ts musi byt jiz vytoverna  
@@ -282,7 +282,7 @@ CREATE DATABASE mydb
       SIZE 20M REUSE AUTOEXTEND ON MAXSIZE UNLIMITED;
 ```
 
-##### Jednodussi vytvoreni DB
+#### Jednodussi vytvoreni DB
 
 CREATE DATABASE mydb2; ... Vytvori databazi mydb2, s TS: SYSTEM, SYSAUX v DB_CREATE_FILE_DEST a REDO + Control files tolikrat, kolik je definovano DB_CREATE_ONLINE_DEST_n v tet olokaci. Vse velikost 100MB. Pokud je UNDO_MANAGEMENT povolen, vytvori se i UNDO TS o velikosti 10MB.  
 DROP DATABASE; ... smazani databaze vcetne datafile, redologs souboru, control files a souboru s inicializacnimi parametry  
@@ -292,7 +292,7 @@ SELECT * from V$DATABSE; ... zakladni parametry k databazim
 SELECT * FROM GLOBAL_NAME ... ukaze jmeno databaze  
 select NAME from V$DATAFILE; ... seznam datovych souboru  
 
-##### Parametry pro CREATE DATABASE
+#### Parametry pro CREATE DATABASE
 
 RESETLOGS ... Oracle vytvori sam soubory pro REDO  
 NORESETLOGS ... REDO soubory se musi specifikovat pri vytvareni DB pomoci klicoveho slova LOGFILE  
@@ -320,7 +320,7 @@ alter dadatabase datafile '/oracle/FIN02/system/system02.dbf' resize 1000M; ... 
 SELECT * FROM V$CONTROLFILE; ... seznam kontrolnich souboru  
 select VALUE from V$PARAMETER where name = 'control_files'; ... ukaze nazev kontrolniho souboru pro Databazi  
 
-#### SPF - Server Parameter File, PF a IPF - Initialisation PF
+### SPF - Server Parameter File, PF a IPF - Initialisation PF
 
 Binarni soubor s inicializacnimi parametry pro instanci, ktery se spusti automaticky pro STARTUP a nachazi se na strane serveru. Pokud neexistuje, musi se pri startu instance uvest nazev textoveho spuboru PFILE (parametr file), ktery muze byt na strane klienta, ne serveru. Pokud neni v defaultnim umisteni, musi se definovat SPFILE pred spustenim instance.  
 CREATE SPFILE='/oracle/dbs/spfilemydb.ora' FROM PFILE='[/oracle/admin/initmydb/scripts/init.ora](init.ora.html)'; SHUTDOWN; EXIT ... Vytvori SPF, pri pristim startu se pouzije DPF  
@@ -340,7 +340,7 @@ SELECT * FROM V$PARAMETER2 ... ukaze aktualni parametry, parametry v radcich
 SHOW PARAMETERS SPFILE; ... ukaze lokaci SPF, ktery se uziva  
 SELECT * FROM V$SPPARAMETER; ... ukaze parametry SPF, ktery se uziva  
 
-#### Parametry pro inicializacni soubory - PF (Parameter File)
+### Parametry pro inicializacni soubory - PF (Parameter File)
 
 SGA_MAX_SIZE ... maximalni velikost SGA pameti  
 PROCESSES = 60 ... maximalni pocet soucasne spustenych procesu Oracle k instanci v OS  
@@ -366,7 +366,7 @@ DISPATCHERS="(ADDRESS=(PROTOCOL=TCP)(HOST=144.25.16.201)(PORT=5000))(DISPATCHERS
 UNDO_TABLESPACE=undotbs_01 ... Undo tabulkovy prostor - pokud neexistuje, UNDO_MANAGEMENT se nespusti. Dynamicky paramert, pouziva se, kdyz je vice undo TS  
 UNDO_RETENTION=1800 ... Minimalni cas, po ktery se ukladaji data do undo tabulkoveho prostoru pri vykonavani prikazu, 900 vychozi hodnota. Dynamicky parametr  
 
-#### Parametry DB
+### Parametry DB
 
 USER SYS IDENTIFIED be heslo1 ... zabezpeceni uzivatele heslem heslo1  
 DATAFILE ... Definovani parametru, ci datafile pro SYSTEM TS, pokud neni uvedeno, Oracle vytvori a managuje soubor + TS sam  
@@ -395,7 +395,7 @@ READ_ONLY_OPEN_DELAYED=TRUE ... pri otevirani databaze necte read only datove so
 
 /
 
-#### Tablespace - Tabulkove prostory
+### Tablespace - Tabulkove prostory
 
 [http://aov.webzdarma.cz/oracle/tablespaces.html](http://aov.webzdarma.cz/oracle/tablespaces.html)  
 
@@ -494,7 +494,7 @@ EXECUTE DMBS_SPACE_ADMIN.TABLESPACE_MIGRATE_FROM_LOCAL('SYSTEM'); ... Soucast ba
 EXECUTE DMBS_SPACE_ADMIN.TABLESPACE_MIGRATE_TO_LOCAL('SYSTEM'); ... Soucast baliku DBMS_SPACE_ADMIN - prevod na localy managed tablespace  
 EXECUTE DBMS_TTS.TRANSPORT_SET_CHECK('tblspc1','tblspc2', TRUE); ... otestuje, zda tabulkove prostory neovsahuji odkazy na data v jinych tabulkovych prostorech a zda mohou byt transportovany. Vystup jde do TRANSPORT_SET_VIOLATIONS  
 
-#### [REDO Log](http://www.adp-gmbh.ch/ora/concepts/online_redo_logs.html)
+### [REDO Log](http://www.adp-gmbh.ch/ora/concepts/online_redo_logs.html)
 
 Parametry databaze (v PF): NOARCHIVELOG, ARCHIVELOG  
 
@@ -518,7 +518,7 @@ select member from v$logfile; ... ukaze ve kterem souboru je redolog tablespace
 select status from v$log; ... ukaze status REDOLogu  
 select * from V$LOG_HISTORY; ... vypis historie zmen v redo logach  
 
-#### Archiv Redologu
+### Archiv Redologu
 
 select log_mode from v$database; ... Stav archivu  
 show parameter log_archive_start; ... ukaze, zda se archiv startuje pri startu instance  
@@ -545,7 +545,7 @@ select * from V$ARCHIVE_PROCESSES; ... prehled archivacnich procesu
 select * from SYS.V$LOG; ... seznam REDOLOGu, kde je vicet, co je potreba zaarchivovat  
 select * from V$BACKUP_REDOLOG; ... informace o zalohach v archivech  
 
-#### Undo log
+### Undo log
 
 Undo tabulkovy prostor slouzi na ukladani undo logu. Uchovavaji se tam informace, ktere se meni v datovych souborech pri vykonavani operaci s daty  
 
@@ -585,7 +585,7 @@ DECLARE
 
 Vystup lze videt v DBA_ADVISOR_*, nebo v Automatic Database Diagnostic Monitor v Enterprise Manager\\. Velikost UndoTS se doporucuje: UndoSpace_bloky = Undo_retention * Undo_blocks_per_second + overhead.
 
-##### Balicek Flashback
+#### Balicek Flashback
 
 DBMS_FLASHBACK ... balicek na vraceni zmen pri omylem spustenych prikazech ci pri vyvoji  
 FLASHBACK TABLE ... umozni uzivatelum obnovit tabulku do predchoziho casoveho bodu  
@@ -600,9 +600,9 @@ BEGIN
 end;
 ```
 
-### Objekty v databazich
+## Objekty v databazich
 
-#### Uzivatele
+### Uzivatele
 
 Zakladni uzivatele: SYS (pwd: CHANGE_ON_INSTALL), SYSTEM (pwd: MANAGER)
 
@@ -622,7 +622,7 @@ select * from all_users; ... vypis vsech nuzivatelu
 select * from DBA_ROLES; ... vylistuje seznam roli  
 select * from DBA_ROLE_PRIVS; ... vylistuje seznam opravneni  
 
-#### Tabulky - Table
+### Tabulky - Table
 
 SELECT table_name FROM user_tables; ... seznam tabulek  
 CREATE TABLE test (name VARCHAR(20)); ... vytvori tabulku test s jednim sloupcem  
@@ -633,12 +633,12 @@ alter table sales EXCHANGE PARTITION mar04 WITH TABLE sales_march_2004 INCLUDING
 alter table MOVE PARTITION jan04; ... zrusi cast tabulky jan04  
 CREATE INDEX salex_index ON salex(invoice_no) LOCAL; vytvori index pro tabulku sales  
 
-#### Nahledy - View
+### Nahledy - View
 
 CREATE VIEW cz_firmy AS SELECT id, zakaznik FROM firmy WHERE zemeid='CZ'; ... vytvori nahled cz_firmy z tabuly firmy, vybere jen nektere radky a sloupce  
 SELECT * FROM cz_firmy; ... Oracle toto prelozi jako: SELECT * FROM (select id, zakaznik from firmy WHERE zemeid='CZ')  
 
-#### Oracle procesy
+### Oracle procesy
 
 ALTER SYSTEM SHARED_SERVERS = 3 ... nastavi minimalni pocet sdilenych procesu na 2  
 ALTER SYSTEM MAX_SHARED_SERVERS = 100 ... nastavi maximalni pocet sdilenych procesu na 100, mel by byt mensi nez inicializacni parametr PROCESSES  
@@ -659,7 +659,7 @@ SELECT * FROM V$SGA;
 SELECT * FROM V$SGASTAT;  
 SELECT * FROM V$SHARED_POOL_RESERVED;  
 
-#### Oracle zamky / locks
+### Oracle zamky / locks
 
 select * from V$LOCKS; ... seznam zamknutych zamku  
 select * from DBA_BLOCKERS; ... seznam procesu, ktere blokuji objekty, na ktere ostatni procesy cekaji  
@@ -669,9 +669,9 @@ select * from DBA_LOCKS; ... seznam zamku
 select * from DBA_LOCK_INTERNAL;  
 select * from V$LOCKED_OBJECT; ... seznam zamknutych objektu  
 
-### Zalohovani a obnova databazi
+## Zalohovani a obnova databazi
 
-#### Spusteni RMAN - Recovery MANager
+### Spusteni RMAN - Recovery MANager
 
 echo $ORACLE_SID ... kontrola, zda je nastaven SID instance  
 [rman](http://ss64.com/ora/rman.html) ... nastartuje RMAN, nepripoji se do zadne zatabaze  
@@ -690,7 +690,7 @@ run {
 rman nocatalog target / cmdfile='backup_full.rman' log='/export/rman/rman.log' ... spusti RMAN davkovy soubor
 ```
 
-#### Ovladani RMAN
+### Ovladani RMAN
 
 RMAN> @/my_dir/my_command_file.txt ... spusti prikazy ze souboru  
 RMAN> backup database; ... nejjednoduzsi zazalohovani databaze  
@@ -703,7 +703,7 @@ RMAN> startup force nomount; ... nastartuje instanci, ale nemountuje databazi
 RMAN> CONVERT TABLESPACE tblspe1,tblspc2 TO PLATFORM 'Microsoft Windows NT' FORMAT '/temp/%U'; ... zkonvertuje tabulkovy prostor do formatu Windows NT  
 RMAN> CONVERT DATADILE '/oradata/d1.dbf', '/oradata/d2.dbf' TO PLATFORM="Solaris(tm) OE (32-bit)" FROM PLATFORM="HP TRu64 UNIX" DBFILE_NAME_CONVERT "/oradata/", "/oradatasun" PARALLELISM=5; ... konvertuje datove souboru  
 
-#### DUMP
+### DUMP
 
 EXPORT:
 
@@ -726,7 +726,7 @@ $ impdp system/passwd FULL=y DIRECTORY=dump_dir DUMPFILE=Oracle-Oct11-fullexp.dm
 
 $IMPDP system/passwd DUMPFILE=expdat.dmp DIRECTORY=dpump_dir TRANSPORT_DATAFILES=/oradata/d1.dbf,/oradata/d1.dbf REMAP_SCHEMA=(orgiser1:newuser1) REMAP_SCHEMA=(orgiser2:newuser2) ... naimportuje prenesene tabulkove prostory  
 
-#### Kopirovani souboru pomoci Oracle DBMS_FILE_TRANSFER
+### Kopirovani souboru pomoci Oracle DBMS_FILE_TRANSFER
 
 CREATE DIRECTORY SOURCE_DIR AS '/usr/adim/source'; ... nastaveni promenne pro zdroj  
 CREATE DIRECTORY DEST_DIR AS '/usr/adim/destination'; ... nastaveni promenne pro cil  
@@ -740,7 +740,7 @@ BEGIN BBMS_FILE_TRANSFER.COPY_FILE@DB(source_directory_object => "SOURCE_DIR', s
 DBMS_FILE_TRANSFER.PUT_FILE@DB1 ... prenos na jiny server  
 DBMS_FILE_TRANSFER.GET_FILE@DB1 ... prenos z jineho serveru  
 
-#### SQL*Loader - Import dat ze souboru
+### SQL*Loader - Import dat ze souboru
 
 SQL*Loader nacita data ze souboru do Oracle tabulek. Je to velice rychlaa cesta, jak nacist data do tabulek.
 

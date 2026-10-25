@@ -1,13 +1,13 @@
 # hp-services
 
-### Procesy
+## Procesy
 
 krm ... demon na ponitorovani parametru jadra, ktery vyuziva kusage  
 vhand ... Vybira procesy, ktere bude swapovat (page-in, page-out)  
 swagentd ... demon, ktery se stara o balicky. Ceka na swagent-a, nebo spousti swagenta, ktery spousti dotazy a akce  
 swapper ... deaktivuje procesy a tim jim zabranuje swapovat (page-in, page-out)  
 
-### sluzby obecne
+## sluzby obecne
 
 who -r ... ukaze aktualni runlevel  
 init 0[s,S,1,2,3,4] ... zastaveni,single,single s konzolou,single+fs mounted,multiuser,metwork multiuser+graficky,HP VUE. Spusti se, ci zastavi sluzby, ktere jsou v /etc/rcX.d  
@@ -23,7 +23,7 @@ grep -il cron /etc/rc.config.d/* hledani konfiguracniho souboru pro cron
 /etc/rc.log ... log soubor spouzteni/zastavovani sluzeb  
 ctrl+\ ... preruseni skriptu startovani/stopovani sluzeb  
 
-### jednotlive sluzby
+## jednotlive sluzby
 
 /sbin/init.d/cron - /etc/rc.config.d/cron - CRON  
 /sbin/init.d/nfs.client - /etc/rc.config.d/nfsconf - NFS_CLIENT  
@@ -35,7 +35,7 @@ ctrl+\ ... preruseni skriptu startovani/stopovani sluzeb
 /sbin/init.d/xntpd - /etc/rc.config.d/netdaemons  
 /sbin/init.d/dt.login ... CDE graficke rozhrani  
 
-#### lpd
+### lpd
 
 check if printer exists
 ls -l /etc/lp/interface/name
@@ -50,12 +50,12 @@ lpshut ... zastavi scheduler
 disable/enable HP ... deaktivuje/aktivuje tiskovou frontu HP
 accept/reject HP ... spusti/zastavi tisk na tiskove fronte HP
 
-#### Cluster
+### Cluster
 
 **info:**
 cmviewcl
 
-#### swagent
+### swagent
 
 /sbin/init.d/swagentd stop
 /sbin/init.d/swagentd start

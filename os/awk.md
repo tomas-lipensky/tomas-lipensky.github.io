@@ -1,18 +1,18 @@
 # UNIX - awk
 
-### Externi odkazy
+## Externi odkazy
 
 [uvod do awk](http://www.well.ox.ac.uk/~johnb/comp/awk/awk.html)  
 [AWK na DW](http://www.ibm.com/developerworks/linux/library/l-awk1/index.html)  
 [maly kurz (en)](https://www.linkedin.com/learning/awk-essential-training?storeRef=voyager_feed_cymbii_learning&trk=n-feed-course-learning)  
 
-### Prepinace
+## Prepinace
 
 1.F"\t" ... nastavi Field Separator na tabulator (vstupni oddelovac)  
 2.v LANG=$LANG ... prevede systemovou promennou LANG na promennou v awk  
 3.f prikazy_awk.txt ... spusti prikazy awk ze souboru prikazy_awk.txt  
 
-### Promenne
+## Promenne
 
 NR .. Number of Rows - pocet radku  
 NF ... Number of Fields - pocet slov na radku  
@@ -25,12 +25,12 @@ ENVIRON["HOME"] ... hodnota promenne $HOME z prostredi
 IGNORECASE=1 ... Hodnota, nastavujici, ze se budou ignorovat rozdilne velikosti pismen pri hledani  
 PROCINFO["pid"] ... pid procesu  
 
-### podminky
+## podminky
 
 if ( podminka ) { prikazy; } else { prikazy; }  
 (podminka)?(prikaz):(prikaz) student-marks
 
-### funkce
+## funkce
 
 length() = length($0) ... delka retezce  
 rand() ... nahodne cislo v intervalu 0,1  
@@ -40,7 +40,7 @@ match($0,"ss") ... vrati pozici v textu $0, kde se nachazi regularni vyraz "ss"
 gsub(/a/,"b",$0) ... nahradi v $0 vsechna a za b (nevypise, je treba pouzit print  
 sub(/a/,"b",$0) ... nahradi v $0 prvni a za b (nevypise, je treba pouzit print  
 
-### Priklady
+## Priklady
 
 [awk](http://people.cs.uu.nl/piet/docs/nawk/) ... programovatelny editor textu z stdin do stdout
 awk '/^22/ || /^13/' .. jen radky, co zacinaji 22 nebo 13

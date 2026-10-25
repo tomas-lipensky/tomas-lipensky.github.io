@@ -1,6 +1,6 @@
 # HP-UX - Sprava systemu
 
-#### Administrace
+## Administrace
 
 /usr/sbin/sam ... (System Administration Manager) konfiguracni nastroj na vsechno, textovy, pokud je $DISPLAY, tak i graficky
 sam -r ... restricted SAM - omezeny pro jine uzivatele, nez root  
@@ -14,7 +14,7 @@ shmstartconfig -a off -b on ... Zapnuti smh start on boot url: https://localhost
 sqlist -l product | grep -i wbem ... ukaze doplnky pro smh  
 lanadmin -x card_info PPA ... ukaze firmware, drivery...
 
-#### Hardware
+## Hardware
 
 cstm ... info o hardwaru (map - vypis hardwaru, sel 1 - vyber, info - ziskani infa, il - vypis, exit)
 diskinfo ... info o disku
@@ -50,7 +50,7 @@ scsimgr get_attr -a lunid /H 64000/0xfa00/0x4 ... (11v3) ukaze LUN Id disku ve S
 scsimgr -f disable -H 1/0/2/1/0.0x50001fe15003112c.0x4001000000000000 ... zakaze cestu zadanou cestu k disku  
 scsimgr -f enable -H 1/0/2/1/0.0x50001fe15003112c.0x4001000000000000 ... povoli cestu zadanou cestu k disku  
 
-#### Vykon a sledovani systemu
+## Vykon a sledovani systemu
 
 top ... vyuziti pameti, CPU, procesu ...
 sar ... vyuziti CPU, pameti, disku ...
@@ -60,7 +60,7 @@ ipcs ... Monitorovani InterProcess Comunikace
 /var/adm/syslog/syslog.log  
 dmesg ... vypis udalosti jadra  
 
-#### Jadro a ovladace
+## Jadro a ovladace
 
 vi /etc/rc.config.d/nddconf
 /var/adm/kc.log ... logy vsech zmen na jadre (vsechny kc* prikazy)  
@@ -102,12 +102,12 @@ kcweb ... nastaveni ovladacu jadra pomogi grafckeho weboveho rozhrani
 sam - nastavovani parametru a modulu, vytvori /stand/build/*  
 kmupdate /stand/build/vmunix_test ... prehraje vmunix, dlkm atd. nove zkonfigurovanym v SAMu  
 
-#### Pamet a swap
+## Pamet a swap
 
 swapinfo ...Display swap size
 vmstat ... statistika virtualni pameti
 
-#### Crash systemu
+## Crash systemu
 
 /var/adm/crash ... crash dump
 crashconf ... konfigurace crashdump
@@ -115,7 +115,7 @@ crashconf -v ... vypocita misto pro crahdump
 savecrash ... ukozi crash dump obraz
 crashutil ... kopirovani crash dump a prace s crashdumpem
 
-##### Specialni zarizeni - [DSF](dsf.html)
+### Specialni zarizeni - [DSF](dsf.html)
 
 insf ... (install special Files) vytvori /dev/xxx soubory pro vsechna nova zarizeni (ktera byla vlozena od posledniho rebootu)
 insf -v -e -H 64000/0xfa00/0x0 ... znovu vytvori (-e) DSF pro disk v parametru -H a ukaze vysleden (-v)  
@@ -137,7 +137,7 @@ ls -l /dev/rchgr ... seznam /dev/rchgr souboru - (raw changer) a jejich major, m
 ioscan /dev/dsk/c11t0d1s1 ... parametry a HW cesta disku na sbernici c.11, disk c.0, lun c. 1, partition 1
 echo Hello > /dev/tty0p0 ... Posle Hello na prvni konzolu  
 
-##### Uzivatele
+### Uzivatele
 
 [/etc/default/security](http://docs.hp.com/en/B2355-90696/security.4.html) ... definice pro uzivatele  
 ls -l /tcl ... Zjisti, zda system jede v TCL (Trusted)  
@@ -153,7 +153,7 @@ useradd -u 12345 -g 54321 -m lipeto ... vytvori account lipeto s uid 12345 gid 5
 usermod ... modifikace uzivatelu mimo TCL
 userdel ... mazani uzivatelu
 
-##### Balicky
+### Balicky
 
 /var/adm/sw/update-ux.log ... logy prace s balicky  
 /var/adm/sw/swinstall.log ... log z instalace balicku  
@@ -179,7 +179,7 @@ update-ux -s /depot ... update UX
 /var/adm/sw/swagent.log,swremove.log ... logy
 uname -r ... ukaze verzi a release HP-UX  
 
-### Boot/stop proces
+## Boot/stop proces
 
 who -r ... ukaze aktualni runlevel  
 shutdown -hy 0 (init 0) ... zastaveni systemu  
@@ -204,7 +204,7 @@ ctrl+\ ... preruseni skriptu startovani/stopovani sluzeb
 1. test a namountovani FS z /etc/fstab  
 2. provedeni /etc/inittab, ten spusti i /sbin/rc, ktery spouzti sluzby, spusti se nastaveny runlevel  
 
-##### Patchovani
+### Patchovani
 
 cleanup -c 1 -p ... ukaze, ktere informace o starych patchich se smazou
 cleanup -c 1 ... zmaze informace o starych patchich - log je v /var/adm/cleanup.log

@@ -1,22 +1,22 @@
 # [WebSphere Application Server](was.html) - jython
 
-### Externi odkazy
+## Externi odkazy
 
 $WAS/web/mbeanDocs/index.html ... Popisy vsech MBean typu  
 
 [WebSphere Application Server Administration Using Jython](http://my.safaribooksonline.com/book/web-development/websphere/9780137043699) - kniha na Safari Books Online  
 
-### Interni odkazy
+## Interni odkazy
 
 [WAS](was.html)  
 [Python](../dev/pzthon.html)  
 [JACL](jacl.html)  
 
-### wsadmin
+## wsadmin
 
 wsadmin pouziva k administraci 5 zakladnich commandu: AdminControl, AdminConfig, AdminApp, AdminTask a Help  
 
-##### AdminControl:
+#### AdminControl:
 
 AdminControl.compleeObjectName('type=DeploymentManager,node=NODE1') ... vypise prvni obejkt, ktery odpovida zadani  
 AdminControl.getCell() ... vrati jmeno cely  
@@ -32,7 +32,7 @@ Graficky tool: [MBeanInspector](http://www.alphaworks.ibm.com/tech/mbeaninspecto
 AdminControl.setAttribute() ... nastavovani atributu  
 AdminControl.stopServer(SERVER_NAME, NODE_NAME) ... zastavi server na node  
 
-##### AdminConfig:
+#### AdminConfig:
 
 print AdminConfig.types() ... seznam vsech TYPu objektu (konfiguracnich typu)  
 print AdminConfig.attributes('ApplicationServer') ... seznam a popis atributu u jednotlivych polozek (z AdminConfig.types)  
@@ -59,7 +59,7 @@ AdminConfig.remove('SERVER_CONFIG_ID') ... odstraneni aplikacnihop serveru
 AdminConfig.save() ... ukozi zmeny udelane ve wsadminu  
 AdminConfig.reset() ... zrusi zmeny udelane ve wsadminu  
 
-##### AdminApp:
+#### AdminApp:
 
 print AdminApp.help() ... seznam funkci AdminApp  
 AdminApp.isAppReady("JMENO_APLIKACE") ... true, kdyz aplikace je ready (je ji mozne spustit)  
@@ -77,7 +77,7 @@ AdminApp.uninstallinstall('IVT App') ... odinstalace aplikace
 AdminApp.enitInteractive('IVM app') ... interaktivni editace aplikace  
 AdminApp.enit("IVT App", ["MapModulesToServers", ["IVT Application", "ivt_appr.war,WEB-INF/web.xml", "WebSphere:cell=CEL,node=NODE,server=SERVER,cluster=CLUSTER]("IVT Application", "ivt_appr.war,WEB-INF/web.xml", "WebSphere/cell=CEL,node=NODE,server=SERVER,cluster=CLUSTER)] ) ... editace app resveru, pote AdminConfig.save  
 
-##### AdminTask
+#### AdminTask
 
 print AdminTask.help('-commandGroups') ... Seznam vsech skupin administracnich ukolu  
 print AdminTaks.help('ClusterConfigCommands') ... Informace o skupine administracnich ukolu ClusterConfigCommands  
@@ -90,19 +90,19 @@ AdminTask.listNodes() ... seznam Nodu
 AdminTask.listServerTypes() ... seznam typu serveru  
 AdminTask.showServerInfo(ID_applikacniho_serveru) ... ukaze informace o appl. serveru  
 
-##### Help
+#### Help
 
 print Help.AdminControl() ... vypise prikazy v baliku AdminControl  
 print Help.AdminControl('compleeObjectName') .... popise prikaz AdminControl.completeObjectName  
 print Help.attributes(AdminControl.completeObjectName('type=Server,node=NODE1,*')) ... vypise atributy daneho MBeanu  
 
-### shell: uzitecne priklady
+## shell: uzitecne priklady
 
 ps -ef | grep -v grep | grep WebS | awk '{ print $(NF-2),$(NF-1),$(NF) }' | sort | uniq  
 ps -ef | grep httpd | grep -v grep | awk '{ print $9,$10,$11,$12,$13,$14 }' | sort | uniq  
 LANG=en_US
 
-### wsadmin: priklady administrace
+## wsadmin: priklady administrace
 
 Seznam aplikaci, jiny zpusob:
 

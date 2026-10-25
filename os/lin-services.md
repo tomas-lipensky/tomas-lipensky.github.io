@@ -1,12 +1,12 @@
 # LINUX - Sluzby
 
-### Externi odkazy
+## Externi odkazy
 
 [Seznam a popis sluzeb ve Fedore 13](http://www.mjmwired.net/resources/mjm-services-f13.html)  
 [cgconfig](http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Resource_Management_Guide/ch-Using_Control_Groups.html)  
 [dmks_autoinstaller](http://lists.us.dell.com/pipermail/dkms-devel/2003-September/000007.html)  
 
-### DHCP
+## DHCP
 
 [DHCP](http://interperson.ic.cz/dhcp.php)  
 
@@ -17,7 +17,7 @@ service dhcpd start/stop/status/configtest
 /etc/sysconfig/dhcpd  
 /var/lib/dhcpd/dhcpd.leases .. historie pridelenych adres  
 
-### DNS - Domain Name Server - named - BIND
+## DNS - Domain Name Server - named - BIND
 
 [DNS](http://interperson.ic.cz/dns.php) -  BIND (berkley Internet Name Domain)
 
@@ -33,7 +33,7 @@ nslookup a.b.c ... dotaz na DNS server
 rndc-confgen > rndc.conf ... generovani klice pro rnd  
 rndc reload ... povi Bindu, ze ma znovu nacist konfiguracni soubory  
 
-### NTP - Network Time Protocol
+## NTP - Network Time Protocol
 
 rpm -i ntp ntpd  
 iptables -p udp --dport 123  
@@ -45,11 +45,11 @@ ntpq -c peer ... ukaze prehled synchronizace
 rdate tik.cesnet.cz ... zjisti rozdil casu  
 rdate -s tik.cesnet.cz ... provede zmenu  
 
-### loadbalancer - pulse
+## loadbalancer - pulse
 
 [service pulse start/stop](http://docs.redhat.com/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Load_Balancer_Administration/s1-lvs-block-diagram-VSA.html)  
 
-### Apache2 - httpd
+## Apache2 - httpd
 
 service httpd|apache2 start/stop/status  
 /etc/httpd|apache2/conf/httpd.conf  
@@ -62,12 +62,12 @@ cp server.key server.key.org;openssl rsa -in server.key.org -out server.key ... 
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt ... vytvori ssl crt  
 openssl s_client -connect localhost:403 ... pripoji se na port 403 jako klient SSL a otestuje SSL sluzbu  
 
-### squid
+## squid
 
 service squid start/stop/service  
 /etc/squit/squid.conf  
 
-### sshd
+## sshd
 
 rpm -i openssh-server  
 iptables -p tcp --dports 22 -j ACCEPT  
@@ -89,7 +89,7 @@ ssh -L23:aaa.cz:123 a@aaa.cz; telnet localhost 123 ... sifrovane telnet spojeni
 ssh ... klavesy ~C - moznost psat dalsi volby, treba -R 10101:localhost:10102 pro reverzni tunel  
 [ssh](http://linux.byexamples.com/archives/115/ssh-dynamic-tunneling/) -p8332 -D4445 -N mysurface@1.2.3.4 ... Pripoji se na na 1.2.3.4:8332 a na portu 4445 udela socks5 proxy  
 
-### SMTP - odchozi posta
+## SMTP - odchozi posta
 
 SMTP (simple message transfer protocol) - odchozi posta
 
@@ -111,7 +111,7 @@ test
 QUIT
 ```
 
-##### sendmail
+#### sendmail
 
 rpm -i sendmail sendmail-cf sendmail-doc  
 iptables -p tcp --dport 25 -j ACCEPT ... smtp  
@@ -131,7 +131,7 @@ mailstats -f /var/log/mail/statistics ... statistika o poctu mailu
 makemap ... znovu nacte konfiguracni soubory v /etc/mail/  
 /etx/pki/tls/certs: make sendmail.pem ... vytvori klic pro smtps a zbytek se nastavi v sendmail.mc  
 
-##### postfix
+#### postfix
 
 service postfix start/stop/status  
 /usr/libexec/postfix/master  
@@ -150,7 +150,7 @@ postqueue -f ... Vycisti frontu
 postsuper ... prace s frontou  
 postsuper -r ALL ... vycisti frontu  
 
-### POP3/IMAP - prichozi posta
+## POP3/IMAP - prichozi posta
 
 POP3 = Post Office Protocol, IMAP=Internet Mail Access Protocol
 
@@ -162,14 +162,14 @@ service dovecot start/stop/status/restart/reload
 /usr/share/doc/dovecot-*/examples/mkcert.sh ... skript na vytvoreni certifikatu (Nastaveni je v /etc/pli/dovecot/dovecot-openssl.cnf)  
 make -C /etc/pkt/tls/certs dovecot.pem ... vytvori ssl klic  
 
-### FTP
+## FTP
 
 service inetd start/stop/status  
 service vsftpd status  
 /etc/inetd ... nastaveni FTP - zakazat, povolit  
 /etc/vsftpd/vsftpd.conf ... parametry FTP  
 
-### NFS
+## NFS
 
 service nfs start/stop/status  
 service nfslock status ... lock demon (lockd) - automaticky se spusti s nfs  
@@ -183,7 +183,7 @@ showmount -d server1 ... ukaze vsechny exportovane adresare na serveru server1
 showmount --all ... ukaze kdo ma naexportovany jaky adresar  
 man nfs ... napoveda k parametrum FS nfs  
 
-### Samba
+## Samba
 
 rpm -i samba samba-common smbclient  
 iptables -A INPUT -p udp --dport 137,139 -j ACCEPT ... povoleni Netbios Name service a Netbios Datagram Service (Klient)  
@@ -218,18 +218,18 @@ testparam smb.conf ... otestuje spravnost konfiguracniho souboru
 wbinfo ... informace o bezicim winbind demonu  
 Dokumentace: /usr/share/doc/samba-*/*  
 
-### CUPS - tisk
+## CUPS - tisk
 
 cupd - Common Unix Printing System (IPP: port 631)
 
 iptables -p tcp --dport 631 -j ACCEPT  
 service cups start/stop/status ... cups klient  
 service cups-lpd start/stop/status ... cups server  
-##### konfiguracni soubory
+#### konfiguracni soubory
 
 /etc/cups/cups.conf  
 /etc/cups/printers.conf  
-##### tiskove fronty
+#### tiskove fronty
 
 lpadmin ... konfigurace cups  
 lpadmin -d lj4 ... nastavi tiskarnu lj4 jako vychozi  
@@ -245,7 +245,7 @@ lpinfo -l ... ukaze dostupne zarizeni a ovladace
 cupsenable lj4 ... povoli tisk uloh z tiskove fronty  
 accept ... povoli prijmani uloh do tiskove fronty  
 reject ... zakaze prijmani uloh do tiskove fronty  
-##### tiskove ulohy
+#### tiskove ulohy
 
 ls | lp -d lj4 -n ... posle vystup ls do fronjy lj4, a.ps se vytiskne 2x  
 lpr -P lj4 -3 help.ps ... vytiskne help.ps ve trech kopiich na lj4  
@@ -253,45 +253,45 @@ lprm -P lj4 32 ... odstrani tiskovou ulohu 32 z fronty lj4
 lpmove lj5 lj4 ... presune ulohy z lj5 do lj4  
 cancel lj4 23 ... zrusi tiskovou ulohu 23 v tiskove fronte 23  
 
-### syslogd
+## syslogd
 
 service syslogd start/stop/status  
 /etc/sysconfig/syslog  
 /etc/syslog.conf  
 logger -i -t USER "Message for syslog" ... posle zpravu "Message for syslog" syslod demonovi s informaci, ze je to od uzivatele USER  
 
-### Matahari
+## Matahari
 
 Nastroj na vzdalene ovladani pocitacu pomoci sluzbe zprav bezicich na pocitacich
 
 yum install [matahari](http://fedoraproject.org/wiki/Features/Matahari)  
 
-### SPICE
+## SPICE
 
 Protokol pro vzdalenou (virtualni) plochu
 
 yum install spice-client  
 
-#### deltacloud
+### deltacloud
 
 Sada nastroju na vytvoreni cloudu
 
-### ABRT
+## ABRT
 
 Nastroj na spravu padu aplikaci - umi posbirat data o zhavarovane aplikaci a udelat s nimi prislusnou akci
 
-### PAM
+## PAM
 
 [Popis zakladu PAM na root.cz](https://www.root.cz/clanky/pam-sprava-autentizacnich-mechanismu/)
 
 /lib/security/, /usr/lib64/security/ ... zde jsou moduly pro PAM  
 /etc/security/ ... konfiguracni soubory  
 /etc/pam.d/ ... konfigurace pro aplikace. Pokud soubor pro aplikaci chybi, pouzije se other  
-##### Struktura:
+#### Struktura:
 
 auth|account|password|session required|requisite|sufficient|optional|include|[[] ](http://www.linux-pam.org/Linux-PAM-html/sag-configuration-file.html) modul|soubor  
 priklad "OR" operatoru: [default=cislo - ekvivalent goto](https://unix.stackexchange.com/questions/353272/using-pam-succeed-if-so-to-allow-passwordless-su-for-a-given-group)
-##### priklad:
+#### priklad:
 
 auth sufficient pam_root_ok.so ... pro _autentifikaci_ _staci_ aby byl uzivatel root  
 auth required pam_deny.so ... pro _autentifikaci_ se _vyzaduje_ nepovolit  
@@ -302,11 +302,11 @@ auth requisite pam_tally.so deny=3 unlock=300 ... kdyz se zada 3x spatne heslo, 
 auth reqisite pam_nologin  
 auth [user_unknow=ignore success=ok ignore=ignore auth_err=die default=bad] pam_securetty.so ... slozitejsi podminka: Nepusti nikoho krome roota, povoli mu pristup na specialni zarizeni  
 passwd include common-password ... pro _zmenu hesla_ _precist instrukce z_ common-password  
-##### napoveda
+#### napoveda
 
 man -k pam_ ... prehled modulu a jejich popis  
 
-##### moduly
+#### moduly
 
 [pam_listfile](https://linux.die.net/man/8/pam_listfile) ... seznam uzivatelu, skupin, ...  
 [pam_sss](https://linux.die.net/man/8/pam_sss) ... pouziti sssd  
@@ -319,10 +319,10 @@ pam_time .. pristup podle casu
 pam_unix ... Kontroluje užívateľov a heslá podľa /etc/passwd a /etc/shadow  
 pam_warn – zaznamená do systémového logu pokus o prístup  
 
-### NIS
+## NIS
 
 server, klient - Network Information Server - sdili /etc/passwd, /etc/shadow, /etc/groups, /etc/gpasswd
-##### NIS server
+#### NIS server
 
 balicky: rpm -i ypserv ypbind yp-tools portmap  
 SElinux bools: allow_ypbind  
@@ -336,7 +336,7 @@ domainname aaa ... nastavi NISDOMAIN (nastavuje se tez v /etc/sysconfig/network>
 cd /var/yp/DOMAIN/;make ... prekompiluje daa do map  
 /usr/lib/yp/ypxfr MAPfile ... prenese MAPu z primarniho serveru  
 
-##### NIS klient
+#### NIS klient
 
 rpm -i ypbind  
 /etc/yp.conf - nastaveni NIS serveru  
@@ -350,11 +350,11 @@ ypwhich -m ... seznam map na NIS serveru
 yppasswd -l aaa ... zmeni shell uzivatele aaa  
 yptest  
 
-### LDAP - Lighweight Directory Access Protocol
+## LDAP - Lighweight Directory Access Protocol
 
 /etc/nsswitch.conf nastaveni ldap autentifikace  
 
-##### LDAP server
+#### LDAP server
 
 rpm -i openldap openldap-server  
 iptables -L input -p tcp,udp -dport 636,389 -j enable ... povoleni portu ve firewallu  
@@ -366,7 +366,7 @@ slapcat ... vypis hodnot v LDAP databazi
 ldapmodify -s -f modify.ldif ... pridava, ubira, modifikuje zaznamy v LDAP databazi, jednoducha autentifikace  
 service ldap stop;slapindex;service ldap start ... preindexovani databaze  
 
-##### LDAP klient
+#### LDAP klient
 
 rpm -i nss_ldap openldap openldap-clients  
 slapd  
@@ -381,7 +381,7 @@ ldapsearch -b 'dc=example,dc=com' '(objectclass=*)' ... (balicek openldap-client
 ldapsearch -b dc=local -D admin@local -H ldap://localhost -w $pwd "(mail=aaa@local)" cn ... zobrazi polozku cn pro filtr mail=aaa@local  
 ldapmodify -D 'cn=root,dc=example,dc=com' -W -f modify.ldif ... pridava, ubira, modifikuje zaznamy v LDAP databazi, pta se na heslo pro root  
 
-### Kerberos
+## Kerberos
 
 **server**  
 rpm -i krb5-server krb5-workstation (ntp)
@@ -407,7 +407,7 @@ kdestroy ... zruseni existujiciho ticketu
 ktutil ... spusti nastroj na administraci klicenky  
 kvno XXX/YYY ... XXX/YYY je adresa z klist - vypise verzi klice Kerberos principal  
 
-### AD authentifikace (Active Directory)
+## AD authentifikace (Active Directory)
 
 **samba**  
 rpm -i pam_smb  
@@ -419,11 +419,11 @@ smbd  -b | grep CONFIGFILE ... konfiguracni soubor Samby
 adcli info DOMAIN ... informace o domene  
 adcli join -D DOMAIN -U tomas@DOMAIN -W --show-details -v ... pripojeni do domeny - musi existovat zaznam computer v AD a musi mit pravo na zapis od uzivatele tomas  
 
-### FreeIPA
+## FreeIPA
 
 [FreeIPA](http://freeipa.org/) je reseni bezpecnostniho informacniho managementu kombinujici Linux (Fedora), 389 (Fedora Directory Server), MIT Kerberos, NTP, DNS. Sklada se z weboveho ovladacio prostredi a prikazu.
 
-### SSSD - System Security Services Daemon
+## SSSD - System Security Services Daemon
 
 [SSSD](https://fedorahosted.org/sssd/) je systemovy demon, jehoz hlavni funkci je umoznit pristup k ID a autentifikace vzdalenych prostredku pomoci obecnehych nastroju. Poskytuje
 caching a offline podporu na systemu, PAM a NSS moduly a bude obsahovat D-BUS interfejs, k rozsireni uzivatelskych informaci.
@@ -437,7 +437,7 @@ sss_cache --everything ... vysypani cache
 [troubleshooting2](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/troubleshooting-sudo)  
 ldbsearch -H /var/lib/sss/db/cache_$domain.ldb -b cn=sysdb '$filter' ... prohlizeni cache  
 
-### auditd
+## auditd
 
 service auditd start/stop/status  
 /etc/audit/*  
@@ -445,7 +445,7 @@ service auditd start/stop/status
 ausearch  
 aureport  
 
-### cron
+## cron
 
 service cron start/stop/status  
 /etc/cron.allow  
@@ -453,12 +453,12 @@ service cron start/stop/status
 crontab -l ... seznam naplanovanych uloh  
 crontab -e ... editace naplanovanych uloh  
 
-### System crontab
+## System crontab
 
 /etc/crontab ... konfiguracni soubor  
 /etc/cron.* ... adresare se spoustenymi skripty  
 
-### SELinux
+## SELinux
 
 Security extended Linux - vetsi zabezpeceni prav pro soubory - cast jadra
 
@@ -479,22 +479,22 @@ sealert ... vypisuje okomentovane logy z messages
 man 0 selinux  
 man httpd_selinux samba_selinux ftpd_delinux named_selinux nfs_selinux  
 
-### Anaconda
+## Anaconda
 
-### homed
+## homed
 
 systemctl status systemd-homed ... stav služby  
 homectl ... seznam uživatelů  
 homectl create UZIVATEL ... vytvoří uživatele  
 
-### MRG
+## MRG
 
 Massages, Realtime, Grid - [MRG](http://www.redhat.com/f/pdf/MRG_whitepaper_web.pdf) je sada nastroju, vcedte casti jadra, konfiguracnich nastroju, nastroju na monitorovani vykonu,
 AMQP zprav, podpora virtualizace (posilani virtualnich stroju) a jinych, na vybudovani infrastruktury vyuzivajici lipe prostredku a zvyseni celkoveho vykonu
 
 yum install condor  
 
-### ostatni
+## ostatni
 
 [amanda](http://www.amanda.org) ... zalohovaci server  
 [nagios](http://nagios.sourceforge.net/docs/) ... monitorovaci sluzba - monitoruje stroje, sluzby, FS a tvori alerty  

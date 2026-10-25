@@ -2,7 +2,7 @@
 
 Defaultni uzivatel: Admin/Admin
 
-### zakladni MP&gt; mod
+## zakladni MP&gt; mod
 
 co ... COnsole interface - konzole serveru, nebo nParu  
 vtp ... Virtual Front Interface - monitoring stavu systemu  
@@ -13,7 +13,7 @@ fw ... FirmWare update
 he ... HElp - napoveda  
 x ... eXit  
 
-### CO - konzole
+## CO - konzole
 
 |B ... navrat do MP menu  
 |E cf ... aktivace klavesnice, pokud je vice uzivatelu v konzoli  
@@ -24,20 +24,20 @@ vparstatus -w ... cislo aktualniho vParu
 ====VFP - predni panel  
 |b (nebo q) ... navrat do MP menu  
 
-### CL - Console log
+## CL - Console log
 
 |b (nebo q) ... navrat do MP menu  
 ? ... napoveda ovladani  
 
-### SL - Show event log
+## SL - Show event log
 
 |b (nebo q) ... navrat do MP menu  
 
-### HE - Help
+## HE - Help
 
 q ... navrat do MP menu  
 
-### CM - Command Menu
+## CM - Command Menu
 
 |b (nebo ma) ... navrat do MP menu  
 sysrev ... ukaze vsechny firmware  

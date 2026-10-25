@@ -1,10 +1,10 @@
 # Mobilni aplikace
 
-### Externi odkazy
+## Externi odkazy
 
 [Linuxjournal.com - Developing Portable Mobile Web Applications](http://www.linuxjournal.com/article/10789?page=0,1), [Zdrojovy kod](ftp://ftp.linuxjournal.com/pub/lj/listings/issue197/10789.tgz)  
 
-### Jednoducha webova aplikace z Linuxjournalu, viz Externi odkazy
+## Jednoducha webova aplikace z Linuxjournalu, viz Externi odkazy
 
 napsani prenosne javove aplikace mezi systemy (iPhone, iTab, Android) neni snadne. Pro kazdy typ prenosneho zarizeni se aplikace musi vyvijep pod zvym vlastnim vyvojovym prostredi - SDK.
 Lze vsak vytvorit monilni aplikace jako HTML stranky + Javaskriptovy ovladaci prvek (MVC - Model View Controler koncept), jelikoz HTML5 jiz podporuje mnoho funkci, jako treba zapis dat,

@@ -2,23 +2,22 @@
 
 Seznam programovacich jazyku, se kterymi jsem se setkal a pouzival je na ruznych urovnich a popis nekterych specifik, odkazy a postrehu z nich:
 
-
 Nastroje na management vyvoje a projektu
 
 [Jira](https://www.atlassian.com/software/jira?_mid=650d1ec8c12a9adeaf0857e0f40fa379&gclid=CKCzusjIr8UCFSXHtAodkkMAQQ)
 TFS - Team Fountation Server
 
-### Representace designu
+## Representace designu
 
 [UML](uml.html)
 
-### Spravovani kodu / verzi kodu
+## Spravovani kodu / verzi kodu
 
 [Subversion](svn.html)
 git
 Team Foundation Version Control
 
-### Editory, IDE
+## Editory, IDE
 
 Geany ... rychle IDE pro Linux a Windows
 Sublime / Visual Studio Code ... jednoduche, nenarocne a rychle IDE pro Lin/Win/iOS
@@ -27,14 +26,14 @@ Eclipse ... IDE - Programatorske prostredi pro vyvoj - podpora ruznych jazyku a 
  JBDS ... JBoss Development Studio - Sada nastroju postavenych na Eclipse od RedHatu, obsahujici dalsi balicky, jako JBoss Tools
  JBoss tools ... sada doplnku pro Eclipse of JBoss projektu
 
-### Porovnavani kodu
+## Porovnavani kodu
 
 tkdiff ... graficke porovnavani souboru, casto integrovane v IDE
 meld
 diff
 compare
 
-### Testovani kodu
+## Testovani kodu
 
 JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani
 [ Hudson a Unit testy](http://wiki.hudson-ci.org/display/HUDSON/Unit+Test)
@@ -65,7 +64,7 @@ JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani
   [j2ee aplikace](../web/j2ee.html)
   [Java programovani pro web - tutorial na linux zone](http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179)
 
-### Infrastruktura pro vyvoj produktu
+## Infrastruktura pro vyvoj produktu
 
 [Amalgam8](https://developer.ibm.com/open/amalgam8/) - Opensource platforma - integruje a loadbalancuje mikrosluzby  
 [Apache Toree](https://developer.ibm.com/open/apache-toree/) - prostrednik pro komunikaci s Apache Spark nabizejici API pro interaktivni komunikaci s vypoctama  

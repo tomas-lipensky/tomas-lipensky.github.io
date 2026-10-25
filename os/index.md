@@ -1,15 +1,15 @@
 # index
 
-## Síťě:
+## Síťě
 
 * [Cisco](../net/cisco.html)
 * [OpenWRT](../net/openwrt.html)
 
-## Mobilní zařízení - OS:
+## Mobilní zařízení - OS
 
 * [Android](android.html)
 
-## Operační systémy:
+## Operační systémy
 
 **[Unix obecně:](unix.html)**  
 * [Unixové příkazy](unix-commands.html)

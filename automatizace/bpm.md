@@ -2,7 +2,7 @@
 
 Business Process Manager
 
-### URL
+## URL
 
 /ProcessAdmin ... Process Admin Console  
 /ProcessPortal/jsp/index.jsp ...  
@@ -10,7 +10,7 @@ Business Process Manager
 /PerformanceAdmin/login.jsp  
 /BusinessSpace  
 
-### Start/stop/status
+## Start/stop/status
 
 /opt/ibm/BPM/v8.5/bin/startManager.sh  
 /opt/ibm/BPM/v8.5/bin/startNode.sh  
@@ -20,11 +20,11 @@ Business Process Manager
 /opt/ibm/BPM/v8.5/bin/stopManager.sh  
 /opt/ibm/BPM/v8.5/bin/serverStatus.sh SERVER  
 
-### Utility
+## Utility
 
 [TWXusage](https://git.ng.bluemix.net/bpm-TWXUsage/default) - nastroj na prohledavani TWX exportu (zip archive XML souboru) toolkitu a procesu  
 
-### REST api
+## REST api
 
 /rest/bpm/wle/v1/tasks/query/IBM.DEFAULTALLTASKSLIST_75/count?interactionFilter=ASSESS_AVAILABLE  
-### log soubory
+## log soubory

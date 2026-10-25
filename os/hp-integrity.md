@@ -1,6 +1,6 @@
 # Integrity
 
-### Integrity boot
+## Integrity boot
 
 **Boot proces na Integrity**
 

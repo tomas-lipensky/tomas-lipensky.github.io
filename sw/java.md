@@ -1,13 +1,13 @@
 # Java aplikace
 
-### Interni a Externi odkazy:
+## Interni a Externi odkazy:
 
 [Aplikacni servery](../web/index.html)  
 [Programovaci jazyk java](../dev/java.html)  
 [J2EE](../web/j2ee.html)  
 [Testcontainers](https://testcontainers.com/guides/getting-started-with-testcontainers-for-java/) ... definování Docker test kontejnerů v Maven projektu, konterjer se vytvoří pouze na test v režii Maven buildu  
 
-### Nastroje z prikazove radku a JVM prepinace
+## Nastroje z prikazove radku a JVM prepinace
 
 java balik.program ... spusti balik/program.class  
 java -jar a.jar ... spusti a.jar  
@@ -16,7 +16,7 @@ jar tf util.jar ... vylistuje tridy z balicku
 javap -classpath util.jar com.myproject.add ... vylistuje metody pro tridu com/myproject/add.class z baliku util.jar  
 kill -3 PID ... provede thread dump procesu - nezabije  
 
-#### JVM přepínače
+### JVM přepínače
 
 java -version ... verze javy  
 java -XshowSettings:vm -version ... ukáže max. velikost heapy, další požnosti: all, locale, properties  
@@ -32,7 +32,7 @@ java -XshowSettings:vm -version ... ukáže max. velikost heapy, další požnos
 10.Xdump:heap:events=systhrow,filter=java/lang/OutOfMemoryError ... heap dump, když je OutOfMemory  
 11.Xss256k ... velikost stacku  
 
-#### Balicek java-VERZE-openjdk-devel:
+### Balicek java-VERZE-openjdk-devel:
 
 javac balik/program.java ... zkompiluje zdrojovy kod v adresari balik na balik/program.class  
 javadoc ... vytvari html prehled trid a funkci pomoci komentaru /** */  
@@ -63,7 +63,7 @@ jinfo PID ... informace o java procesu a o jave
 jmap PID ... Prirazeni pameti v procesu  
 ps -T -p 7 ... seznam vláken procesu, včetně třídy  
 
-#### Ostatni nastroje
+### Ostatni nastroje
 
 [IBM Monitoring and Diagnostic Tools for Java - Health Center](http://www.ibm.com/developerworks/java/jdk/tools/healthcenter/) - monitorovaci a vysetrovaci nastroj na IBM Java procesy  
 [ANT](../dev/ant.html) ... nastron na sestavovani aplikaci (kompilace, balickovani atd.)  
@@ -74,9 +74,9 @@ Pmd ... staticke testovani zdrojoveho kodu
 JMeter ... testovani vykonnosti http, ftp, ldap, soap atd. aplikaci  
 [Maven](../dev/maven.html) ... sprava projektu  
 
-### Scénáře
+## Scénáře
 
-#### Analýza CPU náročnosti
+### Analýza CPU náročnosti
 
 top -H -p 6 ... interaktivní sledování vláken a jejich CPU zdrojů  
 ps -eT -o pid,tid,pcpu,comm ... seznam vláken, nýzvů tříd a jejich CPU využití  

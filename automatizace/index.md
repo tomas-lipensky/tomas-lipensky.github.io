@@ -1,6 +1,6 @@
 # Automatizace
 
-### Architektura
+## Architektura
 
 Automatizacni nastroje jsou aplikace, ktere slouzi k automaticke opakujici se cinnosti k ovladani jinych komponent. Obsahuji vetsinou nasledujici vrstvy:
 
@@ -8,7 +8,7 @@ Automatizacni nastroje jsou aplikace, ktere slouzi k automaticke opakujici se ci
 - Vyvojove prostredi (IDE) k definovani automatizaci
 - Automatizacni jadro (engine) vykonavajici automatizaci
 
-### DevOps
+## DevOps
 
 Development &amp; Operations - nastroje na pruzny, rychly a bezpecny vyvoj a aplikaci na produkci.
 
@@ -19,13 +19,13 @@ Gerit ... volny webovy nastroj na spolupraci vyvojaru. Vyvojari vidi upravy jiny
 Slack ... 150$/osoba/rok - komunikacni nastroj se spolupracovniky s mnoha moznostmi  
 Mural ... Vizualni organizace myslenek.
 
-### Artifact repository
+## Artifact repository
 
 [Apache Archiva](https://archiva.apache.org/index.cgi)  
 Nexus repository manager  
 JFrog Artifactory  
 
-### Automatizace integraci a nasazovani (Continues integration = CI, Continuous Deployment = CD)
+## Automatizace integraci a nasazovani (Continues integration = CI, Continuous Deployment = CD)
 
 [IBM UrbanCode (AnthillPro)](urbancode.html)  
 [Jenkins](jenkins.html) / Travis  
@@ -34,7 +34,7 @@ JFrog Artifactory
 Buildbot — Python reseni na automatizaci kompilacnich/test cyklu k validaci zmen v kodu  
 [Porovnani CI nastroju](https://en.wikipedia.org/wiki/Comparison_of_continuous_integration_software)  
 
-### Automatizace konfiguraci a operaci, management cloudu
+## Automatizace konfiguraci a operaci, management cloudu
 
 Pure AS ... Kompletni reseni HW+SW pro vytvareni a spravu aplikacnich serveru a aplikaci (a samozrejme nosnych virtualnich serveru)  
 Pure DB ... Kompletni reseni HW+SW pro vytvareni a spravu databazi (a samozrejme nosnych virtualnich serveru)  
@@ -42,11 +42,11 @@ TPM - Tivoli Provisioning Manager ... Portal pro automatizaci instalaci serveru 
 [ICO - IBM Cloud Orchestrator](ico.html)  
 OpenStack
 
-### Automatizace instalace
+## Automatizace instalace
 
 cobbler ... reseni automatickou instalaci linuxu  
 
-#### Orchestrace provisioningu VM a kontejneru
+### Orchestrace provisioningu VM a kontejneru
 
 [Vagrant](vagrant.html)  
 [Kubernetes](Kubernetes)  
@@ -54,12 +54,12 @@ Boxgrinder
 Docker  
 Hashicorp  
 
-### Automatizace administrace stanic - planovane ukoly
+## Automatizace administrace stanic - planovane ukoly
 
 Tivoli Endpoint Manager - BigFix - vzdalene spousteni skriptu (healthchecky, opravy, deploye atd.)  
 [RES - automation management](http://www.ressoftware.com/uk/product/res-automation-manager/features)  
 
-### Configuration management
+## Configuration management
 
 [Chef](chef.html) - Opscode Chef / [programovani v Chef](chef-recipe.html)  
 [Puppet](http://en.wikipedia.org/wiki/Puppet_%28software%29)  
@@ -71,7 +71,7 @@ Vargant
 NuGet a Chocolatey ... balickovaci system a deployment sluzba na automatizace konfigurace Windows  
 [Porovnani CM nastroju](https://en.wikipedia.org/wiki/Comparison_of_open-source_configuration_management_software)  
 
-### Automatizace na zaklade udalosti
+## Automatizace na zaklade udalosti
 
 Automatizace vyvolane na zaklade jistych udalosti (eventu), jako treba udalosti v monitoringu - incidenty.
 
@@ -88,7 +88,7 @@ Private cloud ... intranetovy cloud (Napriklad Pure atd)
 Public cloud ... internetovy cloud (Napriklad SoftLayer, Amazon atd)  
 Hybrid cloud ... hybrid mezi Private a Public  
 
-### Cloud platformy a abstrakce virtualizaci
+## Cloud platformy a abstrakce virtualizaci
 
 poskytuji management objektu (virtualnich serveru, kontejneru, disku, ...), nacenovani ceny, separuji ucty (projekty) atd.
 
@@ -102,7 +102,7 @@ BlueMix Private ... Zjednoduseny BlueMix ve vlastnim datacentru
 Azure Stack ... zjednoduseny Azure ve vlastnim datacentru  
 [Terraform](https://www.terraform.io) ... nastroj na managovani konfigurace infrastruktury (pomoci chef, heat, ...)  
 
-### Public cloud
+## Public cloud
 
 [Prehled poskytovatelu na Wikipedia.org](https://en.wikipedia.org/wiki/Category:Cloud_computing_providers)  
 
@@ -112,6 +112,6 @@ Azure Stack ... zjednoduseny Azure ve vlastnim datacentru
     Rackspace  
     [IBM Blue Box](https://www.blueboxcloud.com/products/blue-box-local) - Private Cloud as a Service - postaveny na OpenStack reseni, Bluemixu - Cloud-like prostredi v zakaznickem datacentru  
 
-### Private cloud
+## Private cloud
 
 [xCAT](https://sourceforge.net/p/xcat/wiki/Main_Page/) ... Extreme Cluster/Cloud Administration Toolkit

@@ -3,27 +3,28 @@
 Mongo DB patri mezi nerelacni (NoSQL) natabaze, tedy databaze dvojic - (klic, hodnota). Couch DB je databaze, ktera bezi jako sluzba, tedy typu Server - Klient.
 Vychozi port pro Couch DB je 27017.
 
-### Externi odkazy
+## Externi odkazy
 
 [Inside MongoDB: the Internals of an Open-Source Database](https://www.slideshare.net/mdirolf/inside-mongodb-the-internals-of-an-opensource-database) - prezentace o vnitrni architekture mongodb  
 
-### Start/stop/status
+## Start/stop/status
 
 service couchdb start/stop ... start/stop databaze  
 
-### Konfigurace
+## Konfigurace
 
 dig SRV _mongodb._tcp.hk-prod.h8dkbpg.mongodb.net ... informace o serverech, které obsluhují MongoDB cluster na mongodb.com  
 dig TXT  dxl-cz-pre.hr9bm.mongodb.net ... informace o replice na mongodb.com  
 nslookup -type=srv dxl-cz-pre.hr9bm.mongodb.net  
 nslookup -type=txt dxl-cz-pre.hr9bm.mongodb.net  
 nslookup -type=srv _mongodb._tcp.dxl-cz-pre.hr9bm.mongodb.net  
-### JSON, Ovladani, atd
+
+## JSON, Ovladani, atd
 
 `mongo --quiet dhsreport --eval "db.getCollectionNames().join('\n')"` ... spusti mongo prikaz z prikazove radky  
 `mongo "mongodb+srv://SERVER" --username USER -p HESLO` ... pripojeni do interaktivniho modu  
 
-### prikazy v mongo klientovi
+## prikazy v mongo klientovi
 
 `show dbs` ... seznam databazi  
 `use testdb` ... prepne se do databaze testdb, i kdyz neexituje (vytvori se prvnim zaznamem)  
@@ -78,7 +79,7 @@ db.post.insert([
    }
 ])  
 
-### Bezpecnost
+## Bezpecnost
 
 'db.getUsers()' ... seznam uzivatelu  
 db.createUser({user: "reportsUser", pwd: "abcdefgh", roles: [
@@ -86,11 +87,11 @@ db.createUser({user: "reportsUser", pwd: "abcdefgh", roles: [
        { role: "readWrite", db: "accounts" ]}) ... vytvori uzivatele  
 'db.dropUser("reportsUser")' ... smaze uzivatele  
 
-### Backup
+## Backup
 
 db.ZDROJ.find().forEach((doc) => {db.CIL.insert(doc);}) && print("HOTOVO!"); ... záloha kolekce, kopírování kolekce  
 
-### Import/Export
+## Import/Export
 
 mongoexport -d dbname -c colname | gzip > dump.txt.gz  
 zcat dump.txt.gz | mongoimport -d dbname -c colname  

@@ -8,7 +8,7 @@ scanbutond ... demon, ktery monitoruje tlacitko scaneru a provadi akce
 xte 'sleep 5' 'str ahoj' 'key Return' ... posle z klavesnice retezec 'ahoj'. Soucast balicku xautomation  
 xte 'sleep 5' 'mousemove 9999 0' ... posune mys na pozici (9999,0)  
 
-#### Prostredi - zeme, jazyk, kodovani
+## Prostredi - zeme, jazyk, kodovani
 
 locale ... vypise nastaveni prostredi  
 /etc/sysconfig/i18n ... nastaveni prostredi po startu  
@@ -47,7 +47,7 @@ uuencode
 uudecode
 ```
 
-##### json
+### json
 
 [jq](jq.html) - utilita na zpracovani JSON souboru a manipulaci s JSON objekty  
 
@@ -105,25 +105,25 @@ sfdisk -l -x |more ... ukaze logicke oddily vsech disku
 loadkeys /usr/share/kbd/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz ... nacteni prekladove tabulky pro klavesy
 ```
 
-### SNPM
+## SNPM
 
 snmpwalk -v2x -c OriRead 1.2.195.4 ... projde commuity OriRead na serveru 1.2.195.4  
 snmpwalk -v2x -c OriRead 1.2.195.4 sss ... ukaze metriky pro sss  
 
-### cloud
+## cloud
 
 [rclone](http://rclone.org/drive/) ... CLI nastroj na synchronizace s cloudovymi diskovymi sluzbami - Google Drive, Dropbox atd.  
 
-#### PS, PDF
+## PS, PDF
 
 gswin32 -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=Merged.pdf -dBATCH 1.pdf 2.pdf 3.pdf
 
-#### RSA konzola
+## RSA konzola
 
 [OpenIPM](http://openipmi.sourceforge.net/) ... otevreny projekt k [IMPI](http://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)  
 [IBM Advanced Settings Utility (ASU)](http://www-947.ibm.com/support/entry/portal/docdisplay?brand=5000008&lndocid=MIGR-55021) ... nastroj na konfiguraci RSA kartet na IBM xSeries  
 
-#### Hry
+## Hry
 
 [Openarena](http://www.root.cz/clanky/openarena-arena-s-novymi-bojovniky/) - RPG strilecka  
 [Warzone 2010](http://www.root.cz/clanky/warzone-2100-bitva-lidstva-proti-lidstvu/) - realtime strategie  

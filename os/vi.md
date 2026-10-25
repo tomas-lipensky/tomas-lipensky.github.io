@@ -4,7 +4,7 @@
 
 [viemu](http://www.viemu.com/vi-vim-cheat-sheet.gif) ... cheatsheet s ovladanim vi  
 
-### EDITACE
+## EDITACE
 
 Y, yy, :y, y$ ... aktualni radek do schranky  
 y3l ... 3 pismena do schranky
@@ -18,7 +18,7 @@ J ... spoji radek s nasledujicim
 x ... smaze jeden znak dozadu  
 X ... smaze 1 znak pred kurzorem (backspace)  
 
-### POHYBY V SOUBORU
+## POHYBY V SOUBORU
 
 ctrl-b ... page back  
 ctrl-f ... page forward  
@@ -47,7 +47,7 @@ ma ... (marker) oznaceni znaku oznacovacem a
 'a ... skoci na prvni slovo za oznacovacem a  
 `a ... skoci na znak oznaceny oznacovacem a  
 
-### HLEDANI, NAHRAZOVANI
+## HLEDANI, NAHRAZOVANI
 
 /asdf ... najde dalsi vyskyt asdf  
 ?asdf ... najde predchozi vyskyt asdf  
@@ -59,11 +59,11 @@ CO
 CIM ... "&" -  text, ktery vyhovuje podmince  
 PARAMETRY ... "g" - vsechny vyskyty na radku, "c" - potvrzeni kazde zmeny, "i" - ignoruje velikost pismen  
 
-### Nastaveni
+## Nastaveni
 
 :set number/nonumber ... zobrazuji se cisla radku na levo od radku  
 
-### PRIKLADY
+## PRIKLADY
 
 Smazani vsech radku, na kterych je vyraz "abc":
 

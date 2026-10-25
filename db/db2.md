@@ -1,6 +1,6 @@
 # IBM DB2
 
-#### Odkazy
+## Odkazy
 
 [Historie na linuxsoft](http://www.linuxsoft.cz/article.php?id_article=1684)  
 [DB2 clanky](http://www.databasejournal.com/features/db2/) na databasejournal.com  
@@ -34,7 +34,7 @@ db2licm -l ... informace o licenci
 
 ## Instance
 
-### Prace s instancemi
+## Prace s instancemi
 
 db2cmd -i -w db2clpsetcp  ... iniciace promennych ve Windows, aby bylo mozne spoustet DB2 prikazy  
 db2greg -g -dump ... Vypise DB2 registry (seznam instanci, cesta k instanci atd)  
@@ -52,7 +52,7 @@ db2fmcd ... DB2 Fault Monitoring components
 db2support c:\windows\temp -o collect-db2support ... kolektivani dat na IBM podporu  
 db2support c:\windows\temp -o collect-db2support-xmeta -d XMETA -c ... kolektovani dat na IBM podporu pro databazi XMETA  
 
-### Struktura, konfiguracni soubory, logy
+## Struktura, konfiguracni soubory, logy
 
 [Popis adresaru pro DB2](http://www-01.ibm.com/support/knowledgecenter/SSEPGG_10.5.0/com.ibm.db2.luw.qb.server.doc/doc/r0024443.html?cp=SSEPGG_10.5.0)  
 adsm/db2adutl --- prace s TSM  
@@ -62,7 +62,7 @@ $INSTANCE/sqllib/db2systm ... konfigurace dbm
 /var/db2/global.reg ... globalni registry - seznam instalaci, instanci atd  
 $INSTANCE/sqllib/db2dump/db2diag.log  
 
-### Procesy
+## Procesy
 
 [DW - Everything You Wanted to Know About DB2 Universal Database Processes](http://www.ibm.com/developerworks/data/library/techarticle/0304chong/0304chong.html)  
 db2fmp ... proces pro fenced procedures  
@@ -71,7 +71,7 @@ db2chpw ... process ktery overuje autentifikaci
 
 ## Database Manager
 
-### Start/stop/status database managera
+## Start/stop/status database managera
 
 db2start ... nastartovani DB2 sluzeb  
 db2start open keystore using HESLO ... nastartovani zakryptovane databaze (od 10.5.5)  
@@ -82,7 +82,7 @@ db2_kill ... ekvivalent ipclean + kill -9
 db2 get instance ... ukaze pod jakou (DBM) instanci zrovna operuji  
 db2val -o ... validatce instalace - projde instalacni soubory a konfigurace  
 
-### konfigurace database managera
+## konfigurace database managera
 
 db2 attach to INSTANCE ... pripojeni k instanci k "show detail" v get dbm cfg  
 db2 get dbm cfg ... vypis konfigurace managementu instance  
@@ -99,7 +99,7 @@ db2 list node directory
 
 ## Databaze
 
-### pripojeni k DB2
+## pripojeni k DB2
 
 db2 connect ... ukaze info, zda a jako kdo  a do jake DB jsem pripojeny  
 db2 connect to DATABASE ... pripoji se do databaze, pokud neni zadne spojeni, stane se db aktivni  
@@ -108,7 +108,7 @@ db2 connect reset ... odpoji se z databaze, necha bezet procesy na pozadi
 db2 terminate ... ukonci spojeni k db2 vcetne procesu na pozadi  
 db2 disconnect current  
 
-### prace s databazema
+## prace s databazema
 
 db2sampl ... vytvori samle databaze  
 db2 uncatalog dv DB ... vyradi databazi z DBM katalogu  
@@ -126,7 +126,7 @@ db2 activate db DATABASE ... zaktivuje databazi, i kdyz neni zadne spojeni
 db2 deactivate db DB ... deaktivuje databazi  
 db2look -d simple -e ... vygeneruje DDL pro zkopirovani databaze  
 
-### HADR
+## HADR
 
 db2 "restore db SAMPLE from /tmp taken at 20150429145726 on /home/db2inst2/AUTOSTORAGE  
 db2 "update db cfg for SAMPLE using HADR_LOCAL_HOST localhost HADR_LOCAL_SVC DB2_HADR_STANDBY HADR_REMOTE_HOST localhost HADR_REMOTE_SVC DB2_HADR_PRIMARY HADR_REMOTE_INST db2inst1"  
@@ -153,7 +153,7 @@ db2 list history archive log all for ELIXLPDP ... ukaze zaarchivane logy
 db2 archive log for db ELIXLPDP ... zaarchivuje logy  
 db2 "rollforward db  ELIXLPDP to end of logs overflow log path ( /elixdb2/db/loga/ELIXLPDP/OWERFLOW )" ... provede znovu operace z transakcnich logu  
 
-### Konfigurace
+## Konfigurace
 
 db2 get db cfg for QDB ... vypis konfigurace pro databazi QDB  
 db2 get admin cfg ... vypis konfigurace nastaveni instance  
@@ -162,7 +162,7 @@ db2 update db cfg using STMT_CONC LITERALS ... meni soubor sqllib/db2systm
 db2 get db cfg for DB show detail  
 **[Logging](http://www.ibm.com/developerworks/data/library/techarticle/0301kline/0301kline.html)**
 
-### Prace s table space
+## Prace s table space
 
 db2 list tablespaces  
 db2pd -db testdb -tablespaces ... ukaze v kterych souborech jsou ulozene ktere tabulky  
@@ -176,7 +176,7 @@ db2 -v "alter tablepace TS1 lower high water mark" ... presune HWM (high water m
 db2 -v "alter tablespace DMSTBSPDATA managed by automatic storage" ... prevede tablespace na automated storage  
 db2 "create system temporary tablespace TEMPSPACE2 pagesize 4096 MANAGED BY AUTOMATIC STORAGE" ... vytvori temporary TS managovany automaticky  
 
-### Prace s tabulkama
+## Prace s tabulkama
 
 db2 list tables for all ... vylistuje tabulky pro vsechna schemata  
 db2 list tables for schema ABC ... vylistuje tabulky pro schema ABC  
@@ -198,7 +198,7 @@ db2 "select  type, substr(tabschema,1,12) as tabschema, substr(tabname,1,30) as 
   substr(base_tabschema,1,12) as base_tabschema, substr(base_tabname,1,30) as base_tabname
   from [syscat.tables](https://www.ibm.com/support/knowledgecenter/SSPT3X_4.0.0/com.ibm.swg.im.infosphere.biginsights.commsql.doc/doc/r0001063.html) where type='A'" ... ukaze jaky alias je na jakou tabulku  
 
-### Aplikace - pripojeni
+## Aplikace - pripojeni
 
 db2 list applications ... sezanm operaci  
 db2 get snapshop for application ... informaci o aplikaci (podle spojeni - operace)  
@@ -214,7 +214,7 @@ db2top -d A2MPIMP ... ukaze realtime vyuziti databaze
 db2 list history ALL  for db A2MPIMP ... ukaze historii vsech udalosti  
 db2 get snapshot for database manager ... ukaze snapshot (status, informace) o DB manazeru  
 
-### Prace s uzivateli a pravy
+## Prace s uzivateli a pravy
 
 [Popis roli v DB2](http://www-01.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.admin.sec.doc/doc/c0055206.html)  
 [Graficke znazorneni roli v DB2](http://db2commerce.com/2013/03/01/db2-basics-users-authentication-and-authorization/)  
@@ -233,11 +233,11 @@ db2 select \* from SYSCAT.ROUTINEAUTH; ... ukaze prava uzivatelu k routinam (fun
 db2 "SELECT * FROM TABLE (SYSPROC.AUTH_LIST_GROUPS_FOR_AUTHID('user'))" ... ukaze ke kterym grupam patri uzivatel  
 db2 "grabtselect on db2inst.test to user test1 with grant option;"
 
-### Prace s balicky
+## Prace s balicky
 
 REBIND PACKAGE (USIBMSTODB22.TEST.DSN8BC81.(MAY_VERSION)) ... napoji baliky aplikace, kdyz se meni balicky ale nemeni se SQL vyrazy (napriklad po resotoru DB na jinou verzi DB2)  
 
-### Backup/restore
+## Backup/restore
 
 Pro backup/resotre jsou potreba DBADM prava na databazi a SYSADM-SYSMAIN prava na instanci
 
@@ -294,10 +294,10 @@ db2 -tf createSchema.DLL ... spusti davku DLL (Data Definition Language)
 db2 -x "select TRIM(tabschema)||'.'||TRIM(tabname) from syscat.tables" ... trim smaze mezery na konci, || spoji 2 retezce, vysledek - seznam tabulek  
 db2 "select char(tabname,30),stats_time from syscat.tables where (stats_time &lt; current timestamp -1 day) or ( stats_time is NULL ) and tabschema='DB2TEST'"  
 
-### SQL vyrazy specificke pro DB2
+## SQL vyrazy specificke pro DB2
 
 SLECT * FROM table FETCH FIRST 10 ROWS ONLY ... privnich 10 radku  
 
-### Autentifikace, GSS pluginy
+## Autentifikace, GSS pluginy
 
 [JDBC sample k gssapi_simple](https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.sample.doc/doc/java_jdbc/s-README.html)

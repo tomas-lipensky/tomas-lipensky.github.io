@@ -1,12 +1,12 @@
 # urbancode
 
-### UrbanCode
+## UrbanCode
 
 Integracni a automatizacni nastroj (CI - Continuous Integration, Configuration management, Application Release Automation), puvodne [AnthillPro](https://en.wikipedia.org/wiki/AnthillPro), pote UrbanCode.  
 
 Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release  
 
-### Odkazy
+## Odkazy
 
 [developer.ibm.com/urbancode/](https://developer.ibm.com/urbancode/) ... domovska stranka  
 [Male edu o mDeploy](http://w3.devops.ibm.com/devops/#/toolchain/advanced/ucd)  
@@ -21,7 +21,7 @@ Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release
 [DW - UrbanCode Release and Deploy Learning Roadmap](https://www.ibm.com/developerworks/mydeveloperworks/activities/service/html/mainpage#activitypage%2C657e717a-8c4a-4835-a1c1-c65fbd226103)  
 [IBM UrbanCode Deploy: Building Continuous Delivery Pipeline](https://www.youtube.com/watch?v=ip9HxkZSGjw&t=314s) - ukazka UCD pipline  
 
-### [uDeploy](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
+## [uDeploy](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
 
 - Automaticke deploye a rollbacky v pripade potreby
 - deploy konfiguraci napric ruznymi servery, sluzbami, vrstvami
@@ -33,7 +33,7 @@ Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release
 - [Agent / agentless deploye](http://www.ranger4.com/blog/bid/75183/Agents-to-be-or-not-to-be-in-IBM-UrbanCode)
 - [Podpora pluginu](http://www.ranger4.com/blog/bid/75217/All-About-UrbanCode-Plugins), [pluginy ke stazeni](https://developer.ibm.com/urbancode/plugins/)
 
-### Skoleni
+## Skoleni
 
 [Youtube - uDeploy v4.8 3-day training (part 1 of 6)](https://www.youtube.com/watch?v=lUNPm1T0LHY)  
 [Youtube - uDeploy v4.8 3-day training (part 2 of 6)](https://www.youtube.com/watch?v=0dPntG_svsE)  
@@ -43,17 +43,17 @@ Komponenty: UrbanCode Build, UrbanCode Deploy (uDeploy), UrbanCode Release
 [Youtube - uDeploy v4.8 3-day training (part 6 of 6)](https://www.youtube.com/watch?v=Azw6yw69G70)  
 [UrbanCode and Jenkins Webcast](https://www.youtube.com/watch?v=slEQ88zDtzY)  
 
-### [uRelease](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
+## [uRelease](http://www.ranger4.com/blog/bid/76893/What-is-UrbanCode)
 
 - Na potlaceni rizik spojenych s vydavanim novych verzi
 - Planovani, dohl/ed nad projekty, prehled verzi, analyza vlivu, lessons learned, zavislosti atd.
 
-### udclient
+## udclient
 
 udclient -username jsmith -password passwd -weburl https://myserver.example.com:8443 addTagToApplication -application JPetStore -tag Tag1 ... java interpret na
 komunikaci s UCD pomoci REST API (/cli/), vystup v JSON  
 
-### URL - REST API - /cli/
+## URL - REST API - /cli/
 
 vystup v JSON, novy podporovany REST API
 
@@ -66,7 +66,7 @@ Copy
 https://IP:8443/cli/resource/tag?resource=/SYSTEM/lnx024  
 https://IP:8443/cli/application/info?application=APLIKACE ... informace o aplikaci  
 
-### URL - interni REST API - /rest/deploy
+## URL - interni REST API - /rest/deploy
 
 vystup v JSON, stary REST API pouzivany web portalem, nepodporovany IBM supportem
 
@@ -84,7 +84,7 @@ IP:8443/rest/deploy/component?[?filterFields=name&amp;filterValue_name=JPetStore
 IP:8443/rest/deploy/component?name=abcd ... informace o aplikaci se jmenem abcd  
 :8443/rest/deploy/version  
 
-### Procedury
+## Procedury
 
 promenne: ${d:PROMENNA} nebo ${PROMENNA}  
 working dir: /opt/ibm-ucd/agent/bin

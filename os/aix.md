@@ -1,6 +1,6 @@
 # aix
 
-### Interni odkazy
+## Interni odkazy
 
 [ERRPT](aix-errpt) - errpt chyby  
 [FS](aix-fs) - Souborove systemy, LVM, disky a data  
@@ -16,7 +16,7 @@
 [aix-testlab](aix-testlab)  
 [aix-profiles](aix-profiles)  
 
-### Externi odkazy
+## Externi odkazy
 
 [wiki.midrange.com](http://wiki.midrange.com/index.php/Main_Page)  
 [Fora na IBM o AIX/HACMP](https://www.ibm.com/developerworks/forums/index.html)  

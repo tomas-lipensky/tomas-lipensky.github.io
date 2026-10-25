@@ -1,6 +1,6 @@
 # perl-promenne
 
-### Perl - systémoveé proměnné
+## Perl - systémoveé proměnné
 
 $Config{'osvers'} ... verze OS  
 $^O = $Config{'archname'} ... typ OS  

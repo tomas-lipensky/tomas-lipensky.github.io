@@ -1,6 +1,6 @@
 # unix
 
-### Unixové prikazy
+## Unixové prikazy
 
 [unixové prikazy](unix-commands)  
 [Sluzby](daemons)  
@@ -12,7 +12,7 @@
 [manpage](manpage)  
 [nc](nc) ... netcat, ncat  
 
-### Externi odkazy
+## Externi odkazy
 
 [expect](http://oreilly.com/catalog/expect/chapter/ch03.html) - programovani v [TCL](/tcl/), umi poslouchat a posilat odpovedi (mozno uzit pro telnet atd)  
 [bash](http://www.gnu.org/s/bash/manual/bash.html)  
@@ -20,9 +20,9 @@
 [http://www.g-loaded.eu/2005/11/10/](http://www.g-loaded.eu/2005/11/10/) ... blogy o Linux problemech a jejich reseni  
 [http://tldp.org/HOWTO/HOWTO-INDEX/howtos.html](http://tldp.org/HOWTO/HOWTO-INDEX/howtos.html) ... navody na ruzne linux problemu  
 
-### Minimální unix - příkazové ekvivalenty
+## Minimální unix - příkazové ekvivalenty
 
-##### netcat
+#### netcat
 
 `(echo > /dev/tcp/google.com/22) >/dev/null 2>&1 && echo "UP" || echo "DOWN"` ... netcat -zv google.com  
 cat < /dev/null > /dev/tcp/<hostname or ip>/<port>; echo $? ... to samé  
@@ -36,11 +36,11 @@ cat <&3
 ```
  .... curl, nebo wget  
 
-##### ntp
+#### ntp
 
 cat </dev/tcp/time.nist.gov/13 ... ntp server  
 
-##### ps
+#### ps
 
 for i in $(ls /proc/[0-9]*/cmdline ); do echo $i $(cat $i 2>/dev/null) | tr '\0' ' '; echo; done ... ps -ef  
 ls /proc/6/tasks ... seznam threadů, jako ps -T -p 6  
@@ -52,7 +52,7 @@ echo $[^2]
 [^2]:  $(cat stat | awk '{ print $14}') + $(cat stat | awk '{ print $15}') + $(cat stat | awk '{ print $16}') + $(cat stat | awk '{ print $17}')  ... kolik tiků si vzal proces  
 CPU% podíl předchzích  
 
-##### free
+#### free
 
 cat /proc/meminfo
 

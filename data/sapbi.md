@@ -1,10 +1,10 @@
 # SAP Business Inteligence
 
-### Externi odkazy
+## Externi odkazy
 
 SAP Community Network (SCN)
 
-### Produkty
+## Produkty
 
 SAP BO BI (SAP BusinessObjects Business Intelligence platform) ... Business Inteligence produkt  
 SAP BIW (Business Information Warehouse), pozdeji zkraceno SAP BW, pozdeji znamo jako "SAP BI" - soucast Netweaveru  

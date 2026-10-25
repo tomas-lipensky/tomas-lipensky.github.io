@@ -1,13 +1,13 @@
 # chef-recipes
 
-### Chef - recipes
+## Chef - recipes
 
-### Odkazy
+## Odkazy
 
 [Chef](chef.html)  
 [Ruby](../dev/ruby.html)  
 
-### Prikazy
+## Prikazy
 
 include_recipe 'ibm_tsm-client::client-config_linux'  
 
@@ -28,7 +28,7 @@ server_bag = **data_bag_item**('directory', 'file') ... vytvori objekt server_ba
   createFile("#{fileLocation}", "#{messageText}", "#{checkOriginalInstallationDate}")  
   registry_get_values('HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters')  
 
-### Promenne
+## Promenne
 
 #{recipe_name}  
 #{cookbook_name}  
@@ -41,7 +41,7 @@ tnode=Chef::Node.load(node.name)
   this_node.normal_attrs["ad"]["domain_name"]  
   tnode.save  
 
-### Zdroje - Resorces
+## Zdroje - Resorces
 
 [registry_key](https://docs.chef.io/resource_registry_key.html) ... memeni windows registru
 

@@ -1,10 +1,10 @@
 # BSD
 
-##### Odkazy
+## Odkazy
 
 [http://www.freebsddiary.org/](http://www.freebsddiary.org/encrypted-fs.php)  
 
-##### Parametry jadra
+## Parametry jadra
 
 vi /etc/sysctl.conf
 pkg_add ... prida balicek

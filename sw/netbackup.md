@@ -7,7 +7,7 @@
 [Net backup tipy](http://www.bettssoftware.com/docs/tips-netbackup.html)
 [Netbackup Help](http://uk.geocities.com/cochranejwink/nbu.html)
 
-### Logy, chyby, joby, ukoly
+## Logy, chyby, joby, ukoly
 
 /usr/openv/netbackup/logs ... logy
 /usr/openv/netbackup/bin/bpdbjobs ... job status
@@ -19,7 +19,7 @@ bpclntcmd -pn ... ukaze, komu veri backup klient
 bpclntcmd -hn ... ukaze ipadresu master serveru
 bpclntcmd -ip ... ukaze jmeno serveru
 
-### Pasky, media
+## Pasky, media
 
 bpmedialist -ev PSA226 
 vmquery -m PSA226 
@@ -38,7 +38,7 @@ xnb ... device management
 
 vmupdate -recommend -rt tld -rn 0 
 
-### Zaloha,obnova
+## Zaloha,obnova
 
 <tt>bpbackup -c DAILY_FULL_L1000B -h ar0003p -i</tt>
 /usr/openv/netbackup/bin/bb ... text based backup/restore  

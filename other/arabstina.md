@@ -1,6 +1,6 @@
 # arabstina
 
-### Odkazy
+## Odkazy
 
 [Arabská abeceda](https://ufal.mff.cuni.cz/~smrz/www/pismo.htm)  
 [Arabská klávesnice](https://www.arabic-keyboard.org/)  
@@ -13,14 +13,14 @@
 [Kurz Arabštiny - stavby věty](https://human.libretexts.org/Bookshelves/Languages/Arabic/Arabic_Level_One/01%3A_Chapter_Oner-_An_Overview_of_Arabic/1.05%3A_Type_of_Sentences_in_Arabic)  
 [Pozdravy a omluvy - kurz Užitečné fráze v Arabštině](https://cs.forvo.com/guides/uzitecne_fraze_v_arabstine/pozdravy_a_omluvy/) -  
 
-##### Podcasty
+#### Podcasty
 
 [Learn Arabic for biginers](https://open.spotify.com/show/147YnqfxcmzEGv0pQ6Xcu9)  
 [Learn Levantine Arabic](https://open.spotify.com/show/2HWJsEeHilOq8sA4wZFLEY)  
 
-### Slovíčka
+## Slovíčka
 
-#### Zdvořilost
+### Zdvořilost
 
 شكرا ... děkuji  
 عفوا ... není zač  
@@ -42,11 +42,11 @@
 ما فيش مشكلة  ... není problém  
 فاضي امتي النهارة لنتحدث ... Kdy máš dnes volno, abychom si mohli promluvit?  
 
-#### Otázka, zápor
+### Otázka, zápor
 
 هَل otázka, první místo ve větě  
 يا oslovení  
-#### Povolání
+### Povolání
 
 مُعَلَمٌ (علم) učitel  
 مُهَنْدِسُ (هندس) Inženýr, technik  
@@ -55,7 +55,7 @@
 أُسْتَاذُ pan, profesor  
 باحث vědec, výzkumník  
 ناس lidé  
-#### Rodina, společnost
+### Rodina, společnost
 
 أب otec  
 الأم matka  
@@ -66,7 +66,7 @@
 صديق přítel  
 لَتّة babička  
 عائلة rodina  
-#### Příslovce
+### Příslovce
 
 أين kde  
 أَيْضًا taky  
@@ -77,13 +77,13 @@
 للأسف naneštěstí  
 دائماً vždy  
 كَثيراً hodně  
-#### Osobní zájmena
+### Osobní zájmena
 
 أنا já  
 أنت ty  
 هو on  
 هِيّ ona  
-#### Předložky
+### Předložky
 
 في v  
 من z  
@@ -93,7 +93,7 @@
 مع s  
 قَريبه من ... poblíž něčeho  
 
-#### Přídavná jména
+### Přídavná jména
 
 جديد nový  
 جَميل pěkný  
@@ -128,7 +128,7 @@
 مشمس slunný  
 مريض nemocný  
 
-#### Podstatná jména
+### Podstatná jména
 
 سيارة auto  
 شيء věc  
@@ -163,7 +163,7 @@
 تَلْفاز televize  
 خَريف podzim  
 أخبار novinka  
-#### aktivity
+### aktivity
 
 السَّفَرُ cestování  
 النَّوْمُ spaní  
@@ -180,7 +180,7 @@
 أريد chci  
 أتعلم studuji, učím se  
 اعد počítám, připravuji  
-#### místa, nábytek
+### místa, nábytek
 
 بَئْت dům  
 مَكان místo  
@@ -208,25 +208,25 @@
 ضَوَاحِي předměstí  
 طَبِيعَةٌ příroda  
 جَزِيرَةٌ ostrov  
-#### barvy
+### barvy
 
 أَبْيض bílý  
 أزْرَق modrý  
 بني hnědý  
-#### oblečení
+### oblečení
 
 مِعطف kabát  
 وِشآح šátek  
 تي شيرْت tričko  
 تَنّورة sukně  
 بَلوزة halenka  
-#### přivlastňovací zájmena
+### přivlastňovací zájmena
 
 كلبي můj pes  
 كلبك tvůj pes  
 كَلْبَتُهُ  jeho pes  
 كلبها její pes  
-#### Slovesa
+### Slovesa
 
 عِنْد ... má (u něj)  
 اتمني(تمن) doufám, přeji si (přání)  
@@ -238,7 +238,7 @@
 أُحِبُّ má rád, zbožňuji  
 اِعْدْ počítám  
 أَدخلْ vstupuji  
-#### Časování
+### Časování
 
 أفتح otevírám  
 تفتح otevíráš  
@@ -246,13 +246,13 @@
 فتحت ona otevírá  
 نفتح my otevíráme  
 يفتحون oni otevírají  
-#### Částice
+### Částice
 
 نعم ano  
 لا ne  
 لَيسَ neni  
 تمام OK  
-#### číslovky
+### číslovky
 
 صفر ٠ 0  
 واحد ١ 1  

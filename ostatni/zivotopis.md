@@ -2,7 +2,7 @@
 
 Životopis na [LinkedIn](http://www.linkedin.com/in/tomaslipensky)  
 
-### Zamestnani
+## Zamestnani
 
 od 2008 - [Manpower](http://www.manpower.cz) - IT specialista - Unix administrator francouzskych klientu pro IBM na 2. urovni  
 4 mesice 2008 - [Cooperl](http://www.cooperl-hunaudaye.fr) - Supervizor pracovni skupiny (Francie)  
@@ -10,26 +10,26 @@ od 2008 - [Manpower](http://www.manpower.cz) - IT specialista - Unix administrat
 2005-2008 - Vyuka matematiky na MU a MZLU  
 2000-2006 - Brigady na zivnostensky list - tvorba internetovych prezentaci, stavebni cinnost  
 
-### Studium
+## Studium
 
 2005-2008 - [MU](http://www.muni.cz) - Ustav matematiky Pr.F. - Doktorske studium diferencialni geometrie, nedokonceno  
 1999-2005 - [MU](http://www.muni.cz) - Ustav matematiky Pr.F. - Magisterske studium odborne matematiky - Matematicka analyza  
 1991-1999 - Gymnazium J.G.Mendela</b>, Cechynska 19  
 
-### Certifikaty
+## Certifikaty
 
 [RHCE](https://www.redhat.com/wapps/training/certification/verify.html?certNumber=805009771944976) - Red Hat Certified Engineer  
 CCNA - Cisco Certified Network Associate</b>  
 IBM Certified System Administrator - AIX 6.1  
 
-### Jazykove znalosti
+## Jazykove znalosti
 
 Anglictina ... stredne pokrocila znalost  
 Francouzstina ... mirne pokrocila znalost  
 Polstina ... porozumeni  
 Nemcina ... zacatecnik  
 
-### Znalosti v informatice
+## Znalosti v informatice
 
 <dt>Site:
  TCP/IP + Cisco - Dobre znalosti
@@ -83,6 +83,6 @@ Nemcina ... zacatecnik
  Service Operation a Service Transition systemy - Remedy, Maximo, ManageNow - dobre znalosti
 </dt>
 
-### Jine
+## Jine
 
 Ridicske opravneni skupiny A, B, C, T

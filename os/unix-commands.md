@@ -1,13 +1,13 @@
 # UNIX - Prikazy
 
-### Odkazy
+## Odkazy
 
 [1-liners](https://github.com/pkrumins/bash-one-liners/blob/master/part1.txt) 1. cast jedno radkovych prikazu P.Kurminse  
 [1-liners](https://github.com/pkrumins/bash-one-liners/blob/master/part2.txt) 2. cast jedno radkovych prikazu P.Kurminse  
 [1-liners](https://github.com/pkrumins/bash-one-liners/blob/master/part4.txt) 3. cast jedno radkovych prikazu P.Kurminse  
 [Linuxjournal.com](http://www.linuxjournal.com/)  
 
-### Obrazovka
+## Obrazovka
 
 echo ... napise na obrazovku text  
 
@@ -16,7 +16,7 @@ tty ...  ukaze, ktera konzole je aktivni
 stty ... ukaze a meni parametry terminalu  
 [screen](http://www.unixwerk.de/unix/screens.html) ... multitasking terminalu v jednom procesu  
 
-### Procesy
+## Procesy
 
 /proc/$pid/fd/* ... seznam otevrenych souboru danym procesem  
 at ... jednou spousteny proces  
@@ -52,7 +52,7 @@ echo $$, $! ... napise PID aktualniho procesu a posledniho procesu na pozadi
 echo $- ... prepinace aktivniho shellu  
 $PPID ... PID rodicovskeho procesu  
 
-### Knihovny
+## Knihovny
 
 Objekty (soubory s priponou .o) jsou zkompilovane kody - knihovny, ktere lze linkovat ke spustitelnym souborum. Josu ve formatu ELF (Executable and Linkef Format).
 Ke kompilaci a liknovani je treba tez hlavickovy soubor s priponou .h.
@@ -73,7 +73,7 @@ objdump -a /usr/lib/libcupscgi.so.1 ... vylistuje z jakych knihoven se sklada ar
 objdump -x /usr/lib/libcupscgi.so.1 ... vylistuje hlavicky a zavislosti na jine dynamicke knihovny  
 readelf -s /usr/lib/libcupscgi.so.1 ... vylistuje funkce a objekty z knihovny (jako nm -D)  
 
-### Uzivatele
+## Uzivatele
 
 newgrp ... zmeni aktualni skupinu uzivatele  
 finger ... info o uzivateli  
@@ -90,12 +90,12 @@ w ... seznam zrovna prihlasenych uzivatelu
 who ... seznam zrovna prihlasenych uzivatelu  
 whoami ... login aktualniho uzivatele  
 
-### Cas
+## Cas
 
 date ... zobrazeni, zmena datumu  
 cal ... zobrazeni kalendare  
 
-### Disky, filesystemy
+## Disky, filesystemy
 
 pwd ... aktualni adresar  
 df ... disk free - ukaze volne misto na primountovanych discich  
@@ -105,7 +105,7 @@ sync ... synchronizuje disk
 mt ... (magnetic tape) ovlada magnetickou pasku
 swpon -a ... aktivuje definovane swapdisky  
 
-### Soubory, adresare
+## Soubory, adresare
 
 cat ... vypise obsah souboru  
 cd ... (change directory) zmena adresare  
@@ -150,7 +150,7 @@ whence x y... kde se nachazi, vcetne aliasu spustitelny soubor x a y
 zcat (compress, uncompress) ... cteni zkompresovaneho .Z, .gz souboru, komprese, dekomprese  
 zip ... komprese, dekomprese do .zip  
 
-### Komunikace
+## Komunikace
 
 mail ... cteni posty  
 mail a@b.c ... napise mail na adresu a@b.c (konec ctrl-d)  
@@ -174,7 +174,7 @@ curl -A 'Mozilla/3.0 (Win95; I)' http://www.nationsbank.com/ ... tvari se jako m
 curl --verbose --header 'Host: www.example.com' 'http://10.1.1.36:8000/the_url_to_test' … Pouziti virtualni domeny na IP adrese  
 curl -w "$i: %{time_total} %{http_code} %{size_download} %{url_effective}\n" -o "/dev/null" -s http://address.cz/test.html ... vypis custom informaci k requestu (cas odezvy, http kod, velikost) - dobre pro performance testy  
 
-### vstup/vystup
+## vstup/vystup
 
 [awk](awk.html) ... programovatelny editor textu z stdin do stdout  
 du -smx .[!.]* | awk '{if( $1 > 10){print $2}} ... pokud prvni slovo je > 10, vypis drue slovo  
@@ -218,7 +218,7 @@ wc ... pocita radky, slova
 ls >/tmp/ls 2> &1 ... vystup, i vystup chyb jde do /tmp/ls  
 script -c bash vystup.txt ... presmeruje veskery vystup i do souboru. -t jsou casove znamky  
 
-### shell
+## shell
 
 alias l='ls -l' ... prezdivka l je misto ls -l  
 echo $$ $_ $(date + &quot;%m&quot;)... napise PID procesu, posledni prikaz(vystup) a minutu  
@@ -305,7 +305,7 @@ xargs prg ... Precte radky z stdin preda je jako argumenty programu prg
 ls | xargs -t -I {} mv {} {}.old ... priklad :-)  
 [set -o emacs](http://www.unixwerk.de/unix/ksh_emacs.html) ... prepne ksh do emacs ovladani  
 
-### programovani (podminky)
+## programovani (podminky)
 
 cd a &amp;&amp; echo jsem v a ... pokud se povede cd a, pak udelej druhy prikaz  
 cd a || echo nejsem v a ... pokud se nepovede cd a, pak udelej druhy prikaz  
@@ -324,7 +324,7 @@ break ... ukonci cyklus
 function aaa { } ... definovani funkce  
 aaa () {} ... definovani funkce  
 
-##### Parametry skriptu
+#### Parametry skriptu
 
 getopts ":s:a:" PARAMETR ... vrati parametr, se kterym byl volan prikaz (-XXX), kde povolene parametry jsou a a s
 
@@ -344,12 +344,12 @@ $* parametry oddelene mezerou
 $# pocet parametru  
 $0, $1, ... nulty, prvni parametr  
 
-### samorozbalovaci skripty
+## samorozbalovaci skripty
 
 clanek [Bash Self-Extracting Script](http://www.linuxjournal.com/node/1005818) na Linuxjournal  
 [Jak rozbalit soubor ze samorozbalovaciho skriptu](http://stackoverflow.com/questions/20758981/self-extracting-script-in-sh-shell)  
 
-### kodovani, kryptovani, komprese
+## kodovani, kryptovani, komprese
 
 echo -n 'Ahoj' | base64 ... enkryptuje text do base64  
 echo -n c2NvdHRsaW51eC5jb20gcm9ja3MK | base64 -d ... dekryptuje base64 text  
@@ -358,7 +358,7 @@ gzip ... komprese a rozbaleni .gz souboru
 gpg ... gpg kryptovani  
 openssl  
 
-### ostatni
+## ostatni
 
 basename /a/b/c ... vrati jmeno souboru, tedy c  
 expr 1 + 2 ... vypocita 1 + 1  
@@ -391,35 +391,35 @@ watch -n 60 ls ... spusti ls kazdych 60 sekund
 
 ftpwho ... kdo je pripojeny na ftp  
 
-### Konverze
+## Konverze
 
 catdoc ... prevod MS Word .doc do txt a tex  
 
-### sitove nastroje
+## sitove nastroje
 
 [nc](http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples/) ... netcat  
 nc -vz  -w3 -n 129.39.133.239 9497 ... otestuje, zda je na adrese 129.39.133.239 otevreny port 9495, timeou 3 sec  
 nc -l 3333 ... posloucha na portu 3333  
 nc 1.2.3.4 3333 ... posila na port 3333  
 
-##### Transfering files
+#### Transfering files
 
 cat backup.iso | nc -l 3333  
 nc 192.168.0.1 3333 > backup.iso  
 
-##### Transfering - pkazuje progress
+#### Transfering - pkazuje progress
 
 cat backup.iso | pv -b | nc -l 3333  
 nc 192.168.0.1 3333 | pv -b > backup.iso  
 
-##### Zalohovani
+#### Zalohovani
 
 dd if=/dev/hdb5 | gzip -9 | nc -l 3333  
 nc 192.168.0.1 3333 | pv -b > myhdb5partition.img.gz  
 tar -czf - /etc/ | nc -l 3333  
 nc 192.168.0.1 3333 | pv -b > mybackup.tar.gz  
 
-##### Bezpecnost
+#### Bezpecnost
 
 cat backup.iso | nc -l 3333  
 ssh -f -L 23333:127.0.0.1:3333 me@192.168.0.1 sleep 10;  

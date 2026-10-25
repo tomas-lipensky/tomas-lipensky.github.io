@@ -2,9 +2,9 @@
 
 Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma za ukol zautomatizovat vytvareni programu pomoci nadefinovanych cilu, tedy napriklad kompilace, provadeni testu atd.
 
-### Externi odkazy
+## Externi odkazy
 
-### Minimalni definice
+## Minimalni definice
 
 &lt;?xml version="1.0" encoding="iso-8859-2" standalone="yes"&gt; ... definice xml dokumentu  
 &lt;project name="minimalni projekt" basedir="." default="pozdrav"&gt; ... cely dokument musi byt uzavren ve znackach projekt  
@@ -14,7 +14,7 @@ Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma z
 &lt;/target&gt; ... ukonceni cile  
 &lt;/project&gt; ... ukonceni projektu  
 
-### Zakladni prokazy ANTu
+## Zakladni prokazy ANTu
 
 &lt;priject name="a" depends="b,c"&gt; ... definice cile, nazev je povinny, zavislosti jsou nepovinne. zavislosti provedou akce b a c pred akci a  
 

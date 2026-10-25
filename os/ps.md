@@ -1,11 +1,11 @@
 # Powershell
 
-### Externi odkazy
+## Externi odkazy
 
 [http://commandwindows.com](http://commandwindows.com/)  
 []()  
 
-### Programy managovatelne PS
+## Programy managovatelne PS
 
 Exchange 2007+  
 SQL 2008+  
@@ -14,20 +14,20 @@ System Center Operations Manager
 System Center Virtual Machine Manger  
 atd.  
 
-### Prikazy
+## Prikazy
 
 &amp; spustitelny_soubor parametrt ... spusti spustitelny soubor s parametry, ktere se neinterpretuji jako PS parametry  
 
 CALL D:\BATCH\SendSuccessMail.vbs ... spusti VBS  
 
-### Nahrady z shellu
+## Nahrady z shellu
 
 prikaz | grep ... prikaz | out-string -stream | select-string  
 1.ErrorAction SilentlyContinue ... 2> /dev/null ... prepinac na potlaceni chyb  
 Get-ChildItem -Path . -recurse | where { ($_.Mode -notlike 'd') -and ($_.LastWriteTime -gt (Get-Date).AddDays(-1)) } ... find . -mtime -1  
 foreach ($i in $(ls *)) {"{0:N0} MB $i".replace('\','/') -f ( ( Get-ChildItem "$i" -Recurse | Measure-Object -Property Length -Sum -ErrorAction Stop).Sum / 1MB)} … du - smx * (velikost vsech podadresaru)  
 gci -r| sort -descending -property length | select -first 10 name, length … 10 nejvetsich souboru  
-### Promenne
+## Promenne
 
 Promenne jsou objekty, mohou obsahovat 1-dimenzionalni promenne, ale i sady promennych
 
@@ -55,12 +55,12 @@ $error ... pole chyb od startu powershellu
 $multiline=@"text na  
 vice radku"@  
 $LASTEXITCODE, $? ... posledni return code, True/False jestli posledni prikaz skoncil dobre (bez chyb/vyjimek)  
-### Konfigurace
+## Konfigurace
 
 $profile ... profily - skripty co se vykonaji pri startu PS  
 C:\Windows\System32\WindowsPowerShell\v1.0\*ps1xml ... vychozi vzhled zobrazeni prikazu jako get-process atd. Nemenit, prestane fungovat. Je treba vytvorit vlastni a podepsat  
 
-### Operatory
+## Operatory
 
 help operators
 #, <# #> ... komentare  
@@ -74,7 +74,7 @@ $p -is "array" ... napise, zda je promenna pole
 (1..10) -join ";" ... spoji prvky pole pomoci oddelovace, vrati jako text  
 "1,2,3" -split "," ... vrati pole, kde rozdeli text podle oddelovacu  
 
-### Funkce
+## Funkce
 
 Funkce ulozene v souboru psm1 (modul), mohou byt naimportovany
 
@@ -86,7 +86,7 @@ Get-module -listavailable ... seznam registrovanych modulu
 import-module SQLPS ... nacte modul pro praci MS SQL server  
 get-command -module SQLPS ... ukaze prikazy modulu SQLPS  
 
-### rizeni toku
+## rizeni toku
 
 foreach-object ($i in $array) { Write-Host $i; $_ } ... (foreach, %) pro kazdy prvek $i v poli $array, vypis ho a vrat ho jako objekt  
 if ($promenna -eq $null) { "neni definovano" } elseif { "OK" } elseif { "nemuze nastat" } ... if else podminky  
@@ -96,7 +96,7 @@ while ( $i -ne 2 ) {} ... while smycka
 break ... prerusi cyklus  
 continue ... preskoci zbytek bloku a skoci zase na dalsi beh bloku  
 
-### Chyby, debugging
+## Chyby, debugging
 
 1.ErrorAction SilentlyContinue ... potlaceni chybovych hlaseni - akce jako $errorview, ale jen pro tento beh  
 2.errorVariable x ... chyba se ulozi do promenne $x pro tento beh prikazu i do $error  
@@ -115,7 +115,7 @@ $host.EnterNestedprompt() ... skoci v tomto radku do debug modu ve skriptu a po 
 Set-PSBreakPoint -Command Stop-Process ... definice break pointu pro prikazu Stop-Process (jine uziti: pri zmene promenne, na radku x), h help v interaktivnim modu  
 Get-PSBerakPoint ... vylistovani break pointu  
 
-### MSSQL
+## MSSQL
 
 Import-Module SQLPS  
 cd SQLSERVER:/  
@@ -124,14 +124,14 @@ Invoke-SqlCmd "CREATE TABLE Lide (id int, jmeno nvarchar(50), prijmeni nvarchar(
 import-csv C:\labs\lide.csv | foreach { Infoke-sqlcmd ("INSERT INTO dbo.lide (id, jmeno, prijmen) VALUES (" + $_.id + ", '" + $_.jmeno "', '" + $_.prijmeni + "')") }  
 Invoke-SqlCmd "SELECT TOP 10 * FROM lide"  
 
-### promenne
+## promenne
 
 $env:temp ... promenna prostrendi (Get-help about_Environment_Variable)  
 $args ... argumenty (parametry) ktere doplnuji prikaz, skript  
 'banan' ... retezec  
 ('banan').GetType() ... typ promenne  
 
-### Comlet-y
+## Comlet-y
 
 add-content ... to same jako >>, podporuje parametr -encoding  
 add-windowsfeatire / install-windowsfeature  
@@ -206,19 +206,19 @@ where-object { $_.name -eq "notepad" } ... (where) vybere jen specifikovane obje
 write-host $profile -foregroundcoler red ... vypise na obrazovku promennou $profile cervene  
 write-host "`n`n`thello`n" ... vypise : novy radek, novy radek, tabulator, hello, novy radek  
 
-### Podepisovani klicem
+## Podepisovani klicem
 
 cd Cert:  
 $cert=dir -recursive -CodeSigningCert | where { $_.thumbprint -eq "dsafasdfasdfsadf" }  
 set-authenticodesignature -filepath  .\a.ps1 -certificate $cert  
 
-### vzdalene spousteni
+## vzdalene spousteni
 
 $Host.ui.PromptForCredential("Matrix OS", "Enter the credentials","Administrator","") ... nepovinne, zmeni texty v get-credential  
 $cred=get-credential    nebo   $password=convertto_securestring -asPlainText -Force "Heslo"; $cred=New-Object System.Management.Automation.PSCredential("User", $password)  
 Invoke-Command -scriptblock { cls } -credential $cred -computername ROCKET  
 
-### Active Directory
+## Active Directory
 
 Import-Module ActiveDirectory  
 cd AD:\  
@@ -230,7 +230,7 @@ $secure=ConvertTo-SecureString "Password1" -asplaintext -force
 new-ADUser franta -AccountPassword $sercure -Enabled $true  
 Invoke-SqlCmd -hostname . -Database AdventureWorks2012 -query "SELECT TOP 10 * from person.person" | foreach { New-ADUser -name ("user" + $_.id) -AccountPassword $password -Enabled $true -Given name $_.FirstName -Surname $_.LastName } ... vytvoreni uzivatelu z SQL tabulky  
 
-### COM integrace - COM objekty
+## COM integrace - COM objekty
 
 $object=New-Object -comObject WScript.Shell  
 $object|Get-Member -memberType *Method  
@@ -256,7 +256,7 @@ $Excel=New-Object -Com Excel.Application
 $excel.visible=$true  
 $excel.workbook.add()  
 
-### WMI
+## WMI
 
 Informace poskytuje WMI sluzba (Windows Management Instrumentation)
 
@@ -270,7 +270,7 @@ Get-CimInstance CIM-Processor -ComputerName .
 Get-WmiObject -class Win32_LogicalDisk  
 Get-WmiObject -Query "Select * from Win32_LogicalDisk WHERE DeviceID='C:'"  
 
-### Remoting
+## Remoting
 
 Get-WinEvent -logName Security -ComputerName DC1 -credental startrek\administrator ... jedna cesta jak spoustet prikazy  
 
@@ -286,7 +286,7 @@ get-pssession ... seznam PS spojeni
 exit-pssession ... vyskoci ze spojeni  
 remove-pssession ... ukonci spojeni  
 
-### Jobs
+## Jobs
 
 Start-Job -name NewJob -Scriptblock {Get-Service} ... spusti ulohu na pozadi, napr. na jinem pocitaci  
 Get-Job ... informace of ulohach  
@@ -298,23 +298,23 @@ Set-SchedulerJob
 Set-ScheduledTask  
 get-SchedulerTask  
 
-### Logovani, auditovani
+## Logovani, auditovani
 
 [Start-Transcript](https://technet.microsoft.com/en-us/library/hh849687.aspx)  
 
-### Regularni vyrazy
+## Regularni vyrazy
 
 "cislo 00420 111 222 333" - match "\d{1-4}[ -]\n{1-3}[ ]?\n{1-3}[ ]?\n{1-3}" ... zjisti pritomnost regularniho prikazu  
 $matches ... vysledek hledani  
 $text -replace "(?m)^",| " ... substituce na vice radcich, na zacatek kazdeho radky vlozi | "  
 
-### prace s xml
+## prace s xml
 
 [xml]$xml="&lt;a&gt;&lt;b&gt;&lt;c&gt;text&lt;/c&gt;&lt;d&gt;3&lt;/d&gt;&lt;/b&gt;&lt;/a&gt;" ... import xml lze provest i zadanim retezce  
 $xml.a.b.text="5"  
 $xml.save("C:\employees.xml")  
 
-### Eventlog
+## Eventlog
 
 Get-Eventlog -list ... stara metoda, pomale, ne vsechny eventy, funguje vsude  
 Get-EventLog Aplication | where { $_.EventType -eq "Error" }  
@@ -322,25 +322,25 @@ Get-WinEvent -ListLog *operational*
 [xml]$filter=Get-Content("xmlfilter.xml")  
 Get-WinEvent -filterXml $filter  
 
-### Bitlocker
+## Bitlocker
 
 Suspend-BitLocker ... docasne vypne protekci disku  
 Enable-BitLocker ... zakryptuje disk  
 Disable-BitLocker ... zrusi enkrypci disku  
 Resume-BitLocker ... obnovi enkrypci  
 
-### Interaktivni priazy
+## Interaktivni priazy
 
 Get-Counter -listSet * | where { $_.CounterSetName -like "*processor*" }  
 get-Counter -Counter "\Processor(0)\% User Time" -Continuous | where { $_.CounterSamples.CookedValue -gt 10 } | foreach { "{0};{1}" -f (Get-date),($_.CounterSamples.CookedValue) }  
 
-### Sanpin-y
+## Sanpin-y
 
 Stare moduly v PS v.1. V novych verzich je nahradily moduly, ale snapiny jsou furt podporovane
 
-### Moduly
+## Moduly
 
-### .NET integrace
+## .NET integrace
 
 PowerShell is .NET aplikace (.NET alternativa Javy na Win platformach)
 
@@ -374,6 +374,6 @@ $b=13.45; $b.toString("c") ... preformatuje to na menu
 $b.toString("c",$a) ... preformatuje to na cz menu  
 $a.NumberFormat.CurrencySymbol="HUF" ... zmeni menu pro lokalizaci  
 
-### Priklady
+## Priklady
 
 Get-Mailbox | Sort Size | Selevt -first 100 | | Move-Mailbox Server2

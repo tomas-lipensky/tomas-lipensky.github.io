@@ -2,17 +2,17 @@
 
 Apache Maven - nastroj na spravu projektu. Umoznuje vest projekt od definice projektu, kompilaci zdrojovych kodu v Jave, testovani kodu, vytvareni dokumentaci, vytvareni internetovych stranek a distribuci balicku.
 
-### Externi odkazy
+## Externi odkazy
 
 [maven.apache.org](http://maven.apache.org/)  
 
-### Zalozeni projektu a uvod od aplikace Maven
+## Zalozeni projektu a uvod od aplikace Maven
 
 maven -b  -p POM.xml -d ~/maven -o AKCE1 AKCE2 ... spusti akce AKCE1 a AKCE2, nezobrazi logo (-b), zpracuje projekt POM.xml v adresari ~/maven, bude pracovat v offline modu (-o)  
 maven -b gennapp ... (maven-genapp-plugin) Vytvori novy projekt - vytvori project.xml a prvotni adresarovou strukturu  
 project.xml ... Definice obecnych vlastnosti projektu  
 
-### Prace s projektem
+## Prace s projektem
 
 maven -b pom:contentvalidate ... (maven-pom-plugin) zkontroluje platnost POMu v projekt.xml  
 maven -b pom:validate ... (maven-pom-plugin) zkontroluje posloupnost xml znacek, nepovinne, ale zlepsi prehlednost POMu  
@@ -63,6 +63,6 @@ maven -b dist:deploy-bin ... prenese pouze archiv s binarkou
 maven -b dist:deploy-snapshot ... prenese pouze archiv s aktualnim obrazem stavu projektu  
 maven -b dist:deploy-src ... prenese pouze archiv se zdroji  
 
-### Vlastni cile
+## Vlastni cile
 
 Definuji se pomoci souboru maven.xml

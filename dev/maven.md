@@ -4,24 +4,24 @@
 
 Maven je buildovací nástroj, který pracuje s [pom.xml](https://maven.apache.org/guides/introduction/introduction-to-the-pom.html) souborem, který definuje informace o produktu - název produktu, závislosti atd.
 
-### Odkazy
+## Odkazy
 
 [https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) ... maven za 5 minut - pěkný úvod  
 [pluginy](https://maven.apache.org/plugins/index.html)  
 
-### souborová struktura
+## souborová struktura
 
 ~/.m2/settings.xml ... společná nastavení pro všechny projekty, typicky hesla, cesty k repozitářům, [profily](https://maven.apache.org/guides/introduction/introduction-to-profiles.html) atd  
 ~/.m2/[settings-security.xml](https://maven.apache.org/guides/mini/guide-encryption.html) ... heslo na šifrování hesel v settings.xml  
 ~/.m2/repository ... cache stažených knihoven  
 pom.xml ... project object model - soubor v projektu, který definuje název balíčku, verzi, závislosti atd.  
 
-### Syntaxe
+## Syntaxe
 
 mvn -v ... verze Mavenu  
 mvn [mezerou_oddělené_fáze/pluginy](https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html) [přepínače](https://maven.apache.org/ref/3.9.11/maven-embedder/cli.html)
 
-### Přepínače
+## Přepínače
 
 1.DskipTests ... nebude dělat testy kódu, -D nastavuje systémové pproměnné Mavenu  
 2.Dmaven.test.skip=true ... to samé  
@@ -30,7 +30,7 @@ mvn [mezerou_oddělené_fáze/pluginy](https://maven.apache.org/guides/introduct
 5.X ... debug mód, vypisuje hodně informací o tom, co dělá  
 6.s ~/.m2/settings.jine.xml ... použití jiného settings.xml s kredencema  
 
-### Příklady
+## Příklady
 
 mvn help:active-profiles ... informace o aktivních profilech  
 mvn help:active-profiles -P-dev,prod ... to samé, jen se deaktivuje profil dev a aktivuje profil prod  

@@ -2,11 +2,11 @@
 
 Ibm Cloud Orchestrator a SmarCloud Orchestrator
 
-### Interni odkazy
+## Interni odkazy
 
 [OpenStack](openstack.html)  
 
-### Externi odkazy
+## Externi odkazy
 
 [KC: ICO 2.5 - Managing virtual images](http://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0.2/com.ibm.ico.doc_2.5/pc/pct_manage_cat_vi.html)  
 [Knowledge Center - ICO 2.4](http://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0.2/com.ibm.sco.doc_2.4/kc_welcome-ico.html)  
@@ -17,11 +17,11 @@ Ibm Cloud Orchestrator a SmarCloud Orchestrator
 [deployment automation](https://www.ibm.com/marketplace/cloud/deployment-automation/us/en-us)  
 [ICO 2.5 Content Development Guide](https://www.ibm.com/support/knowledgecenter/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/ICOv25_Content_Development_Guide.pdf)  
 
-### URL
+## URL
 
 IP:PORT/ProcessCenter/login.jsp  
 
-### Start/Stop/Status
+## Start/Stop/Status
 
 [[https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/t_start_stop_sco.html|
 /opt/ibm/ico/orchestrator/scorchestrator/SCOrchestrator.py --start ... Start ICO]]  
@@ -36,7 +36,7 @@ ps -ef | grep scui ... ukaze bezici procesy Self-service user interface
 /opt/ibm/pcg/startServer.sh ... spusti Public Cloud Gateway  
 ps -ef | grep pcg ... ukaze bezici procesy Public Cloud Gateway  
 
-### Komponenty
+## Komponenty
 
 Workload Deployer (konfigurace v /opt/ibm/rainmaker/purescale.app/private/expanded/ibm/rainmaker.cloud-4.0.0.1/config/zero.config)  
 Storehouse ... The Storehouse je repozitar obsahujii system artifakty, virtual application pattern workload artifakty ,virtual application pattern deployment runtime artifakty a virtual application pattern troubleshooting artifakty  
@@ -44,7 +44,7 @@ kernelservices
 scui - Web gui  
 zso - workload manager  
 
-### Logy
+## Logy
 
 BPM: /opt/ibm/ico/BPM/v8.5/profiles/Node1Profile/logs/SingleClusterMember1/SystemOut.log  
 /opt/ibm/ico/scui/logs/scoui.log ... logy grafickeho interfacu (SCO UI)  
@@ -55,7 +55,7 @@ OpenStack: /var/log/heat
 /opt/ibm/ico/WebSphere/Plugins/logs ... plugin logy  
 /var/ibm/InstallationManager/logs ... instalacni logy  
 
-### Udrzba
+## Udrzba
 
 rm /opt/ibm/ico/scui/core.* ... mazani core dumpu  
 /opt/ibm/cloud-deployer/ico.version ... verze ICO  
@@ -65,14 +65,14 @@ rm /opt/ibm/ico/scui/core.* ... mazani core dumpu
 [Zmena hesel](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/r_how_to_change_the_various_passwords.html)  
 Po pridani dalsiho region serveru nebo update CMwO se musi spustit konfiguracni skripty ICO  
 
-### BPM udrzba
+## BPM udrzba
 
 /opt/ibm/ico/BPM/v8.5/bin/wsadmin.sh
 AdminTask.setTraceSpecification(’[-persist true -traceSpecification *=info:WLE.wle_javascript=audit ]’); AdminConfig.save(); ... vyplne logovani v wsadminovi  
 AdminTask.setTraceSpecification(’[-persist true -traceSpecification *=info ]’); AdminConfig.save(); ... znovu zapne logovani  
 /opt/ibm/ico/BPM/v8.5/bin/PropFilePasswordEncoder.sh  ... zakoduje heslo pro pouziti v /opt/ibm/ico/BPM/v8.5/profiles/DmgrProfile/properties/soap.client.props  a /opt/ibm/ico/BPM/v8.5/profiles/Node1Profile/properties/soap.client.props  
 
-### Konfigurace
+## Konfigurace
 
 /opt/ibm/ico/pcg/etc/config.json  
 /opt/ibm/ico/pcg/etc/admin.json  
@@ -80,11 +80,11 @@ AdminTask.setTraceSpecification(’[-persist true -traceSpecification *=info ]�
 /opt/ibm/ico/pcg/etc/log4j.properties  
 /opt/ibm/ico/scui/etc/config.json  
 
-### Management z Deployment serveru
+## Management z Deployment serveru
 
 [CMwO](icm.html) prikazy, CMwO v adresari /opt/ibm/cmwo  
 
-### Obrazy
+## Obrazy
 
 **ICO 2.4**  
 [Procedura na vytvoreni image template na ICO 2.4](http://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0/com.ibm.sco.doc_2.4/t_creating_smartcloud_orchestrat.html)  
@@ -101,13 +101,13 @@ OVA (Open Virtual Applience) je tar balicek obsahujici OVF soubory a potrebne so
 [Heat Orchestration Template](http://docs.ansible.com/ansible/YAMLSyntax.html) - [YAML](http://yaml.org/) soubor na popsani Heat obrazu  
 [Uvod do tvoreni Heat obrazu](https://support.rackspace.com/how-to/building-cloud-orchestration-templates/), [Heat obrazy1](https://developer.rackspace.com/blog/openstack-orchestration-in-depth-part-1-introduction-to-heat/) a [Heat obrazy 2](https://developer.rackspace.com/blog/openstack-orchestration-in-depth-part-2-single-instance-deployments/) na popsane naRackspace  
 
-### ICO CLI
+## ICO CLI
 
 [deployer](http://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.4.0.2/com.ibm.sco.doc_2.4/cc/cct_initcli.html) -h SERVER -u USER -p PASSWORD ... interaktivni mod  
 deployer -h SERVER -u USER -p PASSWORD -c "deployer.hypervisors" ... prikaz  
 deployer -h SERVER -u USER -p PASSWORD -f skript.jy a1 a2 ... jython skript s argumenty a1, a2  
 
-### Ukoly
+## Ukoly
 
 **[Pridani noveho region serveru](https://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0/com.ibm.sco.doc_2.4/c_depl_region_server.html)**
 mkdir -p /opt/stack/vmware/wsdl/5.0  
@@ -118,7 +118,7 @@ wget --no-check-certificate https://$VMWAREAPI_IP/sdk/$i; done
 opravit XML u reflect-messagetypes.xsd reflect-types.xsd  
 ds wizard  
 
-### URL
+## URL
 
 IP/orchestrator/v2/categories ... [REST API](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0.2/com.ibm.ico.doc_2.5/c_core_services_api.html)  
 /orchestrator/v2/[offerings](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0.2/com.ibm.ico.doc_2.5/r_offering_instances.html)  
@@ -146,14 +146,14 @@ https://mpllnx0276.mpl.michelin.com/teamworks/executeServiceByName
 /rest/bpm/wle/v1/process  
 /rest/bpm/wle/v1/process/2920  
 
-### Business process manager programovani
+## Business process manager programovani
 
 [IBM Cloud Orchestrator: Create a new management policy](https://developer.ibm.com/cloudorchestrator/videos/ibm-cloud-orchestrator-create-a-new-management-policy-2/)  
 [Create a new use case for ICO Content Pack](https://developer.ibm.com/cloudorchestrator/2016/06/14/how-to-create-a-use-case-for-ico-content-pack-or-toolkit/)  
 [Developers corner](https://developer.ibm.com/cloudorchestrator/docs/docs-overview-page/)  
 https://developer.ibm.com/cloudorchestrator/videos/category/ibm-cloud-orchestrator-content/  
 
-### Rozsireni
+## Rozsireni
 
 [Dockerfile and IBM Cloud Orchestrator](https://andrewyuau.wordpress.com/2014/10/23/dockerfile-and-ibm-cloud-orchestrator/)  
 [IBM Cloud Orchestrator + Docker = ICOcker?](https://andrewyuau.wordpress.com/2014/10/21/ibm-cloud-orchestrator-and-docker/)  
@@ -168,20 +168,20 @@ https://developer.ibm.com/cloudorchestrator/videos/category/ibm-cloud-orchestrat
 - [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;Pattern&nbsp;Management](https://www.ibm.com/uk-en/marketplace/ico-content-pack-for-pattern-management)
 - [IBM&nbsp;Cloud&nbsp;Orchestrator&nbsp;Content&nbsp;Pack&nbsp;for&nbsp;ServiceNow](https://www.ibm.com/us-en/marketplace/ico-content-pack-for-servicenow)
 
-### Problemy, trouble shooting
+## Problemy, trouble shooting
 
 [[https://www.ibm.com/support/knowledgecenter/SS4KMC_2.5.0.1/com.ibm.ico.doc_2.5/t_pdcollect_run.html|
 /opt/ibm/ico/orchestrator/pdcollect/pdcollect.py]] ... Problem Detemination Collect nastroj na sbirani dat pro IBM support  
 
-#### SCOrchestrator_Scripting_Utilities_Toolkit (SCOSUTK)
+### SCOrchestrator_Scripting_Utilities_Toolkit (SCOSUTK)
 
 Umoznuje kopirovat soubory na servery a spoustet je pomoci ssh nebo RXA
 
-#### SCOrchestrator_Support_IaaS_Toolkit (SCOIAAS)
+### SCOrchestrator_Support_IaaS_Toolkit (SCOIAAS)
 
-#### SCOrchestrator Multi-Tenancy Toolkit (SCOMT)
+### SCOrchestrator Multi-Tenancy Toolkit (SCOMT)
 
-##### BPD
+#### BPD
 
 Create Group Action,
 Create Network in Project Action,
@@ -198,7 +198,7 @@ Enable Project Action,
 Modify Availability Zones in Proj,
 Modify Quota of Project Action,
 Modify Users in Project Action
-##### Integration Services
+#### Integration Services
 
 Check Assigned Resources For Project
 Check Context User Can Access Domain
@@ -279,7 +279,7 @@ Team Filter Service - All Users w,
 Team Service - All Users in Domain,
 Team Service - All Users in Proje,
 Team Service - All Users with Ro,
-##### BO
+#### BO
 
 AvailabilityZone,
 Domain,
@@ -297,26 +297,26 @@ ProjectQuotaLimits,
 RoleAssignment,
 User
 
-#### SCOrchestrator Email Notification Toolkit (SCOEMAI)
+### SCOrchestrator Email Notification Toolkit (SCOEMAI)
 
-#### [SCOrchestrator_Toolkit](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/enablement/scotoolkit.html) (SCOTLKT)
+### [SCOrchestrator_Toolkit](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/enablement/scotoolkit.html) (SCOTLKT)
 
-#### SCOrchestrator_Azure_Toolkit (SCOAZUR)
+### SCOrchestrator_Azure_Toolkit (SCOAZUR)
 
-#### SCOrchestrator OpenStack Services (SCOOS)
+### SCOrchestrator OpenStack Services (SCOOS)
 
-##### BPD
+#### BPD
 
 Approve and Fetch User Email, Deploy Lamp Template, Deploy Single Virtual Machine,
   Deploy Single Virtual Machine with approval, Wait for VM Connection status  
-##### Integration Service
+#### Integration Service
 
 Get Image, Get Instance Name, Send Email Notification, test_store_lamp  
-##### BO
+#### BO
 
 Image, SingleServerDeployment  
 
-#### SCOrchestrator Heat Support Toolkit (SCOHEAT)
+### SCOrchestrator Heat Support Toolkit (SCOHEAT)
 
 <H5>BPO</H5>
  Delete Heat Stack,
@@ -326,7 +326,7 @@ No Operation For Heat Template,
 Update Heat Template,
 Wait For Deletion of Heat Stack,
 Wait For Status of Heat Stack,
-##### Integration Services
+#### Integration Services
 
 Add Default ACL Entries,
 Delete Single Heat Stack,
@@ -353,7 +353,7 @@ updateHeatTemplate,
 Upload Document,
 Validate Heat Template,
 Validate Template,
-##### BO
+#### BO
 
 ACLEntry,
 Endpoint,
@@ -372,9 +372,9 @@ KeystoneService,
 LinkedServer,
 SingleFileImporterOutput,
 YamlParseException
-#### [SCOrchestrator_OpenstackBlockStorage_Toolkit](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0.2/com.ibm.ico.doc_2.5/enablement/Cinder/cinder_intro.html) (SUPCIND)
+### [SCOrchestrator_OpenstackBlockStorage_Toolkit](https://www.ibm.com/support/knowledgecenter/en/SS4KMC_2.5.0.2/com.ibm.ico.doc_2.5/enablement/Cinder/cinder_intro.html) (SUPCIND)
 
-##### BPD
+#### BPD
 
 Attach Script To Image
 Attach Volume
@@ -387,7 +387,7 @@ Detach Volumes
 Manage Volumes
 Script Upload Process
 Unregister Scripts Process
-##### Integration Services
+#### Integration Services
 
 Attach Volume Service
 Configure Volume
@@ -429,7 +429,7 @@ Unset Volume Metadata
 Update Image List
 Update Image Metadata
 Write File IS
-##### BO
+#### BO
 
 AttachVolumesToInstanceRequ
 CinderBreadcrumbsObject
@@ -441,9 +441,9 @@ Volume
 Volume_Attachment
 VolumeManager
 VolumeType
-#### SCOrchestrator Nova Support Toolkit (SCONOVA)
+### SCOrchestrator Nova Support Toolkit (SCONOVA)
 
-##### BDP
+#### BDP
 
 Attach Multiple Volumes,
 Attach Volume,
@@ -457,7 +457,7 @@ Unregister KeyPair,
 Wait For Deletion Of VM,
 Wait For Flavor Of VM,
 Wait For Status Of VM,
-##### Integration Service
+#### Integration Service
 
 Add MetaData To Server,
 Add VM Tag To Database,
@@ -503,7 +503,7 @@ Start Servers,
 Stop Servers,
 Store KeyPair in Credential Store,
 Tag Nova VM MetaData,
-##### BO
+#### BO
 
 Flavor,
 FlavorSelection,
@@ -523,27 +523,27 @@ VolumeAttachment,
 
 Umozni Deploy serveru, deploy se schvalenim a mailem a start/stop/delete VM
 
-#### Dashboards (SYSD)
+### Dashboards (SYSD)
 
-#### SCOrchestrator Service Composition Toolkit (SCOSCT)
+### SCOrchestrator Service Composition Toolkit (SCOSCT)
 
-#### SCOrchestrator_Persistence_Base_Toolkit (ICPBTKT)
+### SCOrchestrator_Persistence_Base_Toolkit (ICPBTKT)
 
 Umozni ulozit, ziskat, zmenit a smazat hodnotu v DB a zikat klice hodnot
 
-#### SCOrchestrator Coach Extension Toolkit (SCOCET)
+### SCOrchestrator Coach Extension Toolkit (SCOCET)
 
-#### Content Management (SYSCM)
+### Content Management (SYSCM)
 
-#### Coaches (SYSC)
+### Coaches (SYSC)
 
-#### System Data (TWSYS)
+### System Data (TWSYS)
 
-#### SAP Guided Workflow (SGW)
+### SAP Guided Workflow (SGW)
 
-#### System Governance (TWSYSG)
+### System Governance (TWSYSG)
 
-### Databaze
+## Databaze
 
 CMNDB ... The common database  
 BPMDB ... Process Server database  

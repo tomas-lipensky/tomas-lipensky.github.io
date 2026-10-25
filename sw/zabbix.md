@@ -3,7 +3,7 @@
 Nastaveni metriky pomoci Zabbix trapu (data prichazi z klientu jako webhook pomoci zabbix_sender)  
 zabbix_sender -z <server IP address> -p 10051 -s "New host" -k trap -o "test value" ... posilani dat pro zabbix_trap metriku  
 
-### Zabbix API
+## Zabbix API
 
 [Zabbix API](https://www.zabbix.com/documentation/3.0/manual/api)  
 [Zabbix API priklad v Powershellu](https://gist.github.com/Sam-Martin/43c78a9efc4916f35971e21843ffd37b)

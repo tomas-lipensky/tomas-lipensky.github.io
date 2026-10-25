@@ -1,14 +1,10 @@
-# mssql
+# MSSQL
 
-## MSSQL
-
-### Externi odkazy
+## Externi odkazy
 
 [SQL Server 2005 Waiting and Blocking Issues](http://www.informit.com/articles/article.aspx?p=686168&seqNum=5)  
 
-### Klienti
-
-#### Powershell
+## Powershell
 
 Import-Module Az.Sql -Force  
  Install-Module -Name SqlServer  
@@ -20,9 +16,9 @@ $Params = @{
 'Query' = 'select name from sys.database_principals;;'  
 }  
 Invoke-Sqlcmd @Params  
-### Databaze
+## Databaze
 
-#### Prikazy - database master
+## Prikazy - database master
 
 select name,log_reuse_wait_desc from sys.databases ... seznam databazi a pocet ???  
 alter login glob with password='HESLO123'; ... nastaveni hesla pro login na SQL server  
@@ -30,16 +26,16 @@ alter DATABASE [puvodni.nazev.databaze] modify name=[novy.nazev.databaze]; ... p
 DENY CONNECT TO account_name; ... zakaze pripojeni danemu uzivateli  
 alter login USER disable; ... zakaze login daneho uzivatele  
 
-#### Prikazy - hostovane databaze
+## Prikazy - hostovane databaze
 
 select name from sys.database_principals; ... seznam uzivatelu v databazi  
 alter user glob with login=glob;  ... propojeni uzivatele glob v databazi s loginem na SQL server - uprava SIDu  
 
-#### Scenare
+## Scenare
 
 == Obsah aktualniho transakcniho logu: ==
 
-```
+```sql
     SELECT RTRIM(name) AS [Segment Name], groupid AS [Group Id], filename AS [File Name],
     CAST(size/128.0 AS DECIMAL(10,2)) AS [Allocated Size in MB],
     CAST(FILEPROPERTY(name, 'SpaceUsed')/128.0 AS DECIMAL(10,2)) AS [Space Used in MB],
@@ -50,9 +46,9 @@ alter user glob with login=glob;  ... propojeni uzivatele glob v databazi s logi
     where name='log'
 ```
 
-== Seznam session a jejich stav: ==
+## Seznam session a jejich stav
 
-```
+```sql
     SELECT
     R.SESSION_ID,
     R.REQUEST_ID AS SESSION_REQUEST_ID,
@@ -92,9 +88,9 @@ FROM
 --WHERE R.STATUS NOT IN ('BACKGROUND','SLEEPING')
 ```
 
-== Seznam blokujicich a uzamykajicich sezeni: ==
+### Seznam blokujicich a uzamykajicich sezeni
 
-```
+```sql
     ;WITH Blockers AS
     (
               SELECT DISTINCT

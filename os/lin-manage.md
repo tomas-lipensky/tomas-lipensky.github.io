@@ -1,6 +1,6 @@
 # LINUX - Sprava systemu, uzivatele, balicky, jadro, ...
 
-### Externi odkazy
+## Externi odkazy
 
 [Wiki o linuxu](http://linuxvbashi.cz/doku.php) - Mirka  
 StressLinux ([www.srtesslinux.org](http://www.stresslinux.org)) - distribuce na testovani HW  
@@ -8,18 +8,18 @@ StressLinux ([www.srtesslinux.org](http://www.stresslinux.org)) - distribuce na 
 [Guide to the Secure Configuration of RHEL5](https://www.nsa.gov/ia/_files/os/redhat/rhel5-guide-i731.pdf)  
 [Red Hat Linux 5 Hardening Tips](http://www.nsa.gov/ia/_files/factsheets/rhel5-pamphlet-i731.pdf)  
 
-### Runlevely
+## Runlevely
 
 runlevel ... ukaze aktualni runlevel  
 init 5 ... prepne do levelu 5  
 
-##### Virtualni konzole
+#### Virtualni konzole
 
 chvt 1 ... prepne monitor do 1. konzole  
 
-### balicky
+## balicky
 
-##### Debian, Ubuntu, ...
+#### Debian, Ubuntu, ...
 
 dpkg -i aaa.deb ... nainstaluje balicek  
 dpkg -l ... seznam vsech balicku  
@@ -36,7 +36,7 @@ apt-mark hold linux-firmware ... zafixuje verzi balicku, nebude se upgradovat
 apt-cache showpkg linux-firmware ... ukaze udaje o balicku  
 apt-cache policy linux-firmware ... ukaze aktualni, dostupny balicek  
 
-##### Redhat, fedora, suse, ...
+#### Redhat, fedora, suse, ...
 
 cat /etc/*-release; cat /etc/issue; ... distribuce a verze linuxu
 /etc/yum.repos/*.repo ... definice repozitaru pro yum  
@@ -72,7 +72,7 @@ dnf install @cinnamon-desktop -y ... dnf je nahrada za yum. Instalace bez prtni 
 [Oprava pozkozene DB RPMek](http://www.informatimago.com/linux/rpm-rebuilddb.html)  
 [redhat-upgrade-tool](https://www.systutorials.com/docs/linux/man/8-redhat-upgrade-tool/) ... nastroj na [online upgrade](https://www.techmilk.today/single-post/2017/07/14/Red-Hat-Upgrade-67-to-70-Online-Offline) RHEL6 na RHEL7 nebo [CentOS](https://linuxacademy.com/blog/linux/centos-7-upgrading-from-centos-6-x-in-place/)  
 
-##### repozitare
+#### repozitare
 
 rpm --import /usr/share/doc/fedora-release-*/*GPG-KEY*  
 rpm --import http://freshrpms.net/RPM-GPG-KEY-freshrpms  
@@ -89,7 +89,7 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | r
 rpm --import http://www.skype.com/products/skype/linux/rpm-public-key.asc ... Skype GPG klic  
 rpm -Uhv http://apt.sw.be/redhat/el5/en/i386/rpmforge/RPMS/rpmforge-release-0.5.2-2.el5.rf.i386.rpm ... Repozitar pro RedHat RHEL 5  
 
-##### snap
+#### snap
 
 snap list ... seznam nainstalovanych balicku  
 snap remove "core" --revision="6531" ... smazani jedne (stare) verze balicku core  
@@ -98,7 +98,7 @@ snap search microsoft ... hledani balicku
 snap refresh --list ... update balicku  
 snap help ... napoveda  
 
-### Uzivatele
+## Uzivatele
 
 /etc/skel/ ... defaultni home directory  
 /etc/default/useradd ... nastaveni default parametru pro useradd  
@@ -131,7 +131,7 @@ usermod -L aaa ... zamkne uzivatele aaa
 usermod -p "" ... vynuluje heslo
 userdel aaa ... smaze usivatele aaa  
 
-### Sluzby
+## Sluzby
 
 chkconfig ... seznam sluzeb, ktere se spousti pri startu  
 service sshd restart ... restart sluzby sshd  
@@ -145,7 +145,7 @@ systemd-analyze ... ukaze rychlost bootu
 systemd-analyze blame ... ukaze rychlost startu kazde sluzby  
 systemctl suspend ... uspi pocitac  
 
-### Jadro, start systemu
+## Jadro, start systemu
 
 /usr/src/linux  ... symbolicky link na adresar, napr. /usr/src/linux-2.6.11  
 /usr/include/linux,asm,asm-generic ... hlavicky jadra  
@@ -173,7 +173,7 @@ sysctl -w net.ipv4.tcp_syncookies=1 ... zmeni parametr jadra
 sysctl -p ... nacte astaveni jadra z /etc/sysctl.conf  
 BOOT: smt-enabled=on ... zapnuti smt ve startovaci radce bootu jadra pro aktivaci SMT na P-Series  
 
-### Dumpy
+## Dumpy
 
 [strucne slidy o core dumpech](https://www.linkedin.com/feed/update/urn:li:activity:6951904189170020352?utm_source=linkedin_share&utm_medium=member_desktop_web)  
 gcore -o output.dump 1234 ... vytvori dump procesu pro budouci analyzu  
@@ -186,7 +186,7 @@ echo c > /proc/sysrq-trigger ... manualni metoda generovani coru jadra
 /usr/lib/debug ... nachazi se zde dumpy  
 apt install crash  
 
-### Moduly do jadra
+## Moduly do jadra
 
 [Pekny popis](http://www.tldp.org/LDP/lkmpg/2.6/html/x44.html) jak programovat, kompilovat a pridavat moduly do jadra
 
@@ -202,7 +202,7 @@ rmmod fan ... odebera z jadra modul fan
 /lib/modules/`uname -r` ... moduly jadra  
 /proc/modules .. moduly jadra (lsmod)  
 
-### firmware
+## firmware
 
 lspci -nnk ... identifikace PCI zarizeni - vezmu si cislo PCI, napr. 02:00.1, i nazev modulu  
 dmesg | grep 02:00.0 ... identifikace firmware, napr. iwlwifi a verzi firmware ktera se pouzije  
@@ -210,14 +210,14 @@ modinfo iwlwifi | grep 8265 ... identifikuje firmware ktery se pouzil pro mou ka
 ls /lib/firmware/*ucode | grep 8265 ... firmware dostupny na disku  
 [Skript na detekci maximalni verze firmware podporovane danou verzi jadra](https://github.com/LibreELEC/iwlwifi-firmware/blob/master/synciwl.sh)  
 
-### zarizeni /dev
+## zarizeni /dev
 
 /dev/vcs? ... obsah obrazovky virtualnich konzoli tty? (Alt-F?)  
 cat /dev/vcs1 ... vypise konzoli 1  
 /dev/tty? ... zarizeni jednotlivych virtualnich konzoli (obrazovek)  
 mkfifo /tmp/aaa; cat /etc/passwd > /tmp/aaa ... vytvori virtualni vstupni/vystupni zarizeni a posle do nej seznam uzivatelu, ceka az si to jiny proces precte  
 
-### Hardware
+## Hardware
 
 biosdecode ... vylistuje informace z biosu  
 dmidecode ... dotazovani SMSBIOSu ci DMI biosu - S/N, typ pameti, biosu, atd  
@@ -256,11 +256,11 @@ sosreport ... posbira informace o masine a systemu pro podporu RedHat
 /proc/devices ... zarizeni v pocitaci  
 /proc/bus/*/devices ... zarizeni v pocitaci  
 
-### Sitova zarizeni
+## Sitova zarizeni
 
 Wifi karty, sitove karty, modemy, ... [lin-net](lin-net)  
 
-### Sledovani systemu, vykonu a stabilita (selhani systemu)
+## Sledovani systemu, vykonu a stabilita (selhani systemu)
 
 free ... vyuziti pameti  
 mpstat 2 4 ... Vyuziti CPU, 4 testy po 2 sekundach  
@@ -294,7 +294,7 @@ stress -c 3 -i 2 -m3 --vm-bytes 128M -d1 --hdd-noclean --hdd-bytes 3G --timeout 
 en, 30 sekud
 ```
 
-### Pamet
+## Pamet
 
 vmstat ... velikost virtualni pameti a jeji vyuziti  
 free ... velikost a vyuziti pameti  
@@ -306,7 +306,7 @@ memtest86+ ... (www.memtest86.org)
 memtester ... (pyropus.cz/software/memtester)  
 strings /proc/$PID/environ ... ukaze promenne prostredi pro jedouci proces  
 
-### DISKY
+## DISKY
 
 /proc/ide/ide0/hda/model .. nazev modelu disku  
 /proc/ide/ide0/hda/capacity .. pocet 512-bajtovych bloku  
@@ -327,7 +327,7 @@ lsscsi
 echo 1 > /sys/bus/scsi/drivers/sd/0\:0\:6\:0/delete .. delete scsi zarizeni  
 lsscsi  
 
-### Zvukova karta
+## Zvukova karta
 
 /proc/asount/cards  
 aplay -l .. seznam zariceni, co mohou prehravat zvuk  
@@ -335,13 +335,13 @@ alsamixer
 aplay aaa.wav  
 aplay -D plug:surround51 chan-ad.wav - (ftp://ling.ll.hawaii.edu/pub/greg/Surround-SDL-testfiles.tgs) test surround zvuku  
 
-### Monitor, graficka karta, klavesnice, mys
+## Monitor, graficka karta, klavesnice, mys
 
 get-edit | parse-edit ... (john.fremlin.de/programos/linux/read-edit) info o monitoru, vystup text pro xorg.conf  
 screen-test ... (www.fi.muni.cz/~kar/screentest) graficky test monitoru  
 xev ... test mysi a klavesnice  
 
-### Logy, sledovani udalost
+## Logy, sledovani udalost
 
 tail -f /var/log/messages  
 dmesg ... vypisy jadra  
@@ -353,7 +353,7 @@ journalctl ... /var/log/messages na SystemD (RH6, Fedora 20 atd)
 journalctl --vacuum-time=10d ... vycisti logy (/var/log/journal), necha jen 10 dni logu  
 journalctl --vacuum-size=2G ... vycisti logy (/var/log/journal), necha jen 2 GB  
 
-### Napoveda, dokumentace
+## Napoveda, dokumentace
 
 export MANPATH=/usr/share/man ... nastavi cestu k MAN strankam  
 man -k disk ... vypise vsechny man stranky, kde je v popisu obsazen "disk"  
@@ -362,7 +362,7 @@ groff -man -Tascii page.txt ... zobrazi z ascii souboru manualovou stranku (jako
 groff -man manpage.txt > file.ps ... vytvori post skiptovy soubor z manualove stranky  
 man2html -title 'Titulek' < Ascii_soubor.txt > html_soubor.html  ... prevede soubor s definici manualovych stranek do html  
 
-### Konzole - RSA
+## Konzole - RSA
 
 [RSA](http://en.wikipedia.org/wiki/IBM_Remote_Supervisor_Adapter)  
 [OpenIPM](http://openipmi.sourceforge.net/) ... otevreny projekt k [IMPI](http://en.wikipedia.org/wiki/Intelligent_Platform_Management_Interface)  

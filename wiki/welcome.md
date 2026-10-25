@@ -1,29 +1,29 @@
 # Struktura stránek:
 
-#### Sítě a operační systémy:
+## Sítě a operační systémy:
 
 Cisco, OpenWRT
 Android
 Linux, AIX, HP-UX, Solaris/SunOS, [os/Windows](os/Windows), BSD, ESX, Unix obecne
-#### Databáze:
+## Databáze:
 
 MySQL/MariaDB, PostgreSQL, DB2, Oracle, Teradata
 CouchDB, BerkleyDB, Redis, SQLite
-#### Webove technologie:
+## Webove technologie:
 
 Apache/IHS
 Websphere Application Server, JBoss, Tomcat
 Fredhopper application server
-#### Integrace aplikaci:
+## Integrace aplikaci:
 
 MQ
-#### Data management, Business inteligence, Big data:
+## Data management, Business inteligence, Big data:
 
 Infosphere MDM CS, Cognos BI, Datastage, Hyperion, GDE
-#### Automatizace IT:
+## Automatizace IT:
 
 Chef, IBM Cloud Orchestrator, Jenkins, OpenStack, UrbanCode, Vagrant
-#### Ostatní aplikace:
+## Ostatní aplikace:
 
 Java aplikace obecne
 IBM TSM - Tivoli Storage Manager, Veritas NetBackup, EMC Networker
@@ -32,17 +32,17 @@ Veritas LVM
 Veritas Cluster
 TWS - IBM Tivoli Workload Scheduller, BMC Control-M
 TLM, TSCM, SRM, Domino, Edge, SAP
-#### Programování:
+## Programování:
 
 C, Java, J2ee, Perl, Python/Jython, TCL/JACL, Unix scripts, Ruby
 http, html, css, xml, php
-#### Matematika:
+## Matematika:
 
 ceske a anglicke matematicke odkazy
 Matlab - Nekolik základních príkazu v Matlabu
 Maple - několik základních příkazů v Maple
 
-#### Ostatní:
+## Ostatní:
 
 LinkedIn profil - profesionalni zivotopis
 IBM certifikace ziskane od zacatku roku 2017

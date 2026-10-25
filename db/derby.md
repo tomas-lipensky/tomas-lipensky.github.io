@@ -1,18 +1,18 @@
 # Apache Derby
 
-#### Odkazy
+## Odkazy
 
 [Starting ij](https://db.apache.org/derby/docs/10.7/tools/ttoolsij11815.html)  
 [Download derby](http://db.apache.org/derby/derby_downloads.html)  
 
-#### Derby Network Server
+## Derby Network Server
 
 $DERBY_HOME/setNetworkServerCP ... nastavi CLASSPATH  
 $DERBY_HOME/startNetworkServer.bat ... spusti network server  
 java -jar derbyrun.jar server start ... alternatijva k predchozim 2 prikazum  
 java -jar %DERBY_INSTALL%\lib\derbyrun.jar server shutdown ... zastavi Derby Network Server  
 
-#### Derby Client==
+## Derby Client==
 
 java -jar ~/derby/db-derby-10.12.1.1-bin/lib/derbyrun.jar org.apache.derby.tools.ij ... spusti interaktivni mod Derby klienta  
 java -jar ~/derby/db-derby-10.12.1.1-bin/lib/derbyrun.jar org.apache.derby.tools.ij abc.sql ... spusti SQL davku v Derby klientovi  

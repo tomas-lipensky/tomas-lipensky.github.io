@@ -1,6 +1,6 @@
 # lin-workstation
 
-### Install Ubuntu on encrypted physical volume
+## Install Ubuntu on encrypted physical volume
 
 lsblk ## list disks  
 DEV=/dev/xxx ## select a proper disk device  
@@ -39,12 +39,12 @@ echo "LUKS_BOOT UUID=$(blkid -s UUID -o value ${DEV}$BOOTPAR) /etc/luks/boot_os.
 echo "rootfs_crypt UUID=$(blkid -s UUID -o value ${DEV}$PVPAR) /etc/luks/boot_os.keyfile luks,discard" >> /etc/crypttab  
 update-initramfs -u -k all  
 
-### Nástroje
+## Nástroje
 
 `add-apt-repository ppa:unit193/encryption`  
 `apt install veracrypt keepassx`  
 
-### Teams for Linux
+## Teams for Linux
 
 ====MS Code====
 
@@ -65,9 +65,9 @@ sudo apt-get install pidgin pidgin-sipe
 
 Conferece attenance: [https://askubuntu.com/questions/296875/lync-attendee-meetings-on-ubuntu](https://askubuntu.com/questions/296875/lync-attendee-meetings-on-ubuntu)
 
-### MS Office 365 Online
+## MS Office 365 Online
 
-##### Chrome:
+#### Chrome:
 
 [https://askubuntu.com/questions/941330/how-can-i-install-office-365-and-avg-without-using-virtual-machine-on-linux-ubun](https://askubuntu.com/questions/941330/how-can-i-install-office-365-and-avg-without-using-virtual-machine-on-linux-ubun)
 
@@ -85,7 +85,7 @@ Another usefull resource:
 
 After implementing the configuration, close Evolution, go to the command line and kill all evolution processes.
 
-### OneNote
+## OneNote
 
 [https://pages.corifeus.com/github/onenote](https://pages.corifeus.com/github/onenote)
 
@@ -119,7 +119,7 @@ sudo apt-get install -y powershell
 pwsh
 ```
 
-### AZCLI
+## AZCLI
 
 [https://docs.microsoft.com/cs-cz/cli/azure/install-azure-cli-apt?view=azure-cli-latest](https://docs.microsoft.com/cs-cz/cli/azure/install-azure-cli-apt?view=azure-cli-latest)
 

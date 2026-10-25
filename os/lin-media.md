@@ -1,15 +1,15 @@
 # lin-media
 
-### Scaner
+## Scaner
 
-xsane ... scanovani ze scaneru, videa atd. - vyuziva ,a href="http://www.sane-project.org|SANE]] (Scanner Access Now Easy)  
+xsane ... scanovani ze scaneru, videa atd. - vyuziva [SANE](http://www.sane-project.org) (Scanner Access Now Easy)  
 sane-find-scanner ... najde USB scannery  
 scanimage -d 'smfp:usb;04e8;3469;ZF5RB8KG1F00KNZ' --page-format A4 --resolution=300 --format=tiff -b ... nascanuje obrazek do tiffu  
 xsane 'smfp:net;10.0.0.15' ... graficke scanovani, sitove spojeni s Samsung M2070  
 convert out1.tif -resize 50% prihlaska2.png ... zkonvertuje a zmenisi obrazek  
 convert *png prihlaska.pdf ... vytvori pdf  
 
-### Multimedia
+## Multimedia
 
 [Inspirace jak stahovat multimedia](http://blog.root.cz/nekolikero-postrehu-z-pc-sveta/jak-stahnout-multimedialni-obsah-z-internetu/)  
 /proc/asound/cards  
@@ -44,7 +44,7 @@ pacmd list-device ... vykonani Pulseaudio prikazu: ukaz moduly
 pacmd help ... seznam prikazu  
 sox infile.aiff -r 44100 -w -c 2 outfile.wav ... prevede aiff do wav  
 
-### Video
+## Video
 
 [/etc/mplayer/mplayer.conf](http://how-to.wikia.com/wiki/How_to_configure_MPlayer)  
 mplayer mms://63.251.167.32/theriversidechurch ... prehravani streamoveho videa  
@@ -76,7 +76,7 @@ ffmpeg -i output.mkv -c:v libx264 -crf 0 -preset veryslow output-smaller.mkv ...
 [http://4youngpadawans.com/stream-camera-video-and-audio-with-ffmpeg/](http://4youngpadawans.com/stream-camera-video-and-audio-with-ffmpeg/) ... streamovani a sledovani videa  
 [https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam) ... hodne pouziti ffmpeg  
 
-##### Streamovani
+#### Streamovani
 
 sudo apt install libnginx-mod-rtmp
 
@@ -116,7 +116,7 @@ rtmp {
 ```
 
 a nahraje se do /usr/local/nginx/rtmp mp4 soubory. Prehrava se pak pomoci url: rtmp://10.0.0.4/vod/file_example_MP4_640_3MG.mp4 pro video file_example_MP4_640_3MG.mp4  
-### Kamera
+## Kamera
 
 v4l2-ctl --list-devices ... seznam zarizeni asociovanych s kamerou  
 v4l2-ctl -L ... zobrazi nastaveni obrazu kamery  
@@ -124,7 +124,7 @@ v4l2-ctl -c brightness=0 ... zmena nastaveni jasu
 ffmpeg -f v4l2 -list_formats all -i /dev/video0 ... podporovane formatypro zarizeni kamery  
 ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv ... zaznam z kamery do souboru  
 [fakecam](https://snapcraft.io/fakecam) ... virtualni kamera, kde se da menit pozadi  
-### CD
+## CD
 
 cdda2wav -JD /dev/cdrom ... vylistuje stopy z CD  
 cdda2wav -D /dev/cdrom -B ... prevede stopy z CD na disk  
@@ -135,7 +135,7 @@ cdrdao read-cddb --driver generic-mmc audiocd.toc ... overi s CDDB
 cdrdao write  --driver generic-mmc audiocd.toc ... zapise na CDR  
 cdplay ... prehravani CD  
 
-### Zvuk
+## Zvuk
 
 Mixxx ... Nastroj pro mixovani, DJ, vysilani radia atd.  
 Audacity ... nahravani, editovani, efekty a prace se zvukem ve zvukovem soubory

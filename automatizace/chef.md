@@ -1,6 +1,6 @@
 # chef
 
-### Chef
+## Chef
 
 Configuration management nastroj. Jednotlive configuracni kroky jsou nazyvany recepty. Sady receptu jsou kucharky.  
 Chef muze fungovat jako server/klient - klient uklada konfiguraci prostredi do serverove databaze, recepty pak mohou tato data uzivat. Druhy rezim prace se "Chef-solo".
@@ -14,13 +14,13 @@ Objekty:
 - politiky - role (web server, db), environment (prod), data bags (hesla atd), kucharky (verzovane)
 - role - obsahuji 0 a vic atributu a runlistu. Kazdy node muze mit 0 a vice roli
 
-### Odkazy
+## Odkazy
 
 [Chef kucharky a recepty](chef-recipes) - popis programovani Chef cookbook a recipe  
 [www.chef.io](https://www.chef.io/) ... domovska stranka  
 [learn.chef.io](https://learn.chef.io/) ... tutorial Chefu  
 
-### Komponenty
+## Komponenty
 
 [Chef Development Kit](https://downloads.chef.io/chef-dk/)  
 [Chef Supermarket](https://supermarket.chef.io/cookbooks) - webovy repozitar volnych kucharek (cookbooks). Nastroje:
@@ -43,7 +43,7 @@ Habitat - zabaleni aplikace a automatizace do jednoho celku
 Ohai - nastroj na detekci atributu nodu a poskytnuji jich klientovi, soucasti instalace klienta i DK  
 chef-zero ... nastroj na provadeni receptu bez Chef serveru.  
 
-### Chef server
+## Chef server
 
 chef-server-ctl status ... status sluzeb  
 chef-server-ctl reconfigure  
@@ -63,7 +63,7 @@ knife raw /groups -s 'https://localhost/organizations/spolek' -u pivotal -k /etc
 knife raw https://mpllnx0189.mpl.michelin.com:443/organizations/michelin/search/node?q=*:* ... API prikaz search - vystup JSON  
 knife exec -E "search(:node,'*:*').select{|n|n.run_list.empty?}.each{|n| puts n.name}" ... Jiny zpusob hledani, konkretne nody s prazdnym runlistem, vystup JSON  
 
-### Chef workstation
+## Chef workstation
 
 chef-apply hello.rb ... aplikuje Ruby recept  
 knife configure  ... zkonfiguruje workstation  
@@ -82,14 +82,14 @@ knife search "platform:ubuntu* AND chef_environment:*_T_*" -a chef_environment .
 knife exec -E "nodes.transform(“chef_environment:_default”) { |n| n.chef_environment(“production-VM”) }" ... zmena chef environmentu  
 knife exec -E "nodes.transform(“NOT platform:win*“) {|n| puts n.run_list &lt;&lt; “role[linux]“; n.save }" ... prida role do runlistu  
 
-#### Rozsireni
+### Rozsireni
 
 Pomoci Chef DK lze rozsirovat knife o dalsi moduly, napr.:
 
 [chef gem install knife-acl](https://github.com/chef/knife-acl) ... nainstaluje novy gem knife-acl  
 [knife acl](http://www.rubydoc.info/gems/knife-acl/0.0.12) add group clients nodes cheftest1 update ... prida skupine clients k nodu cheftest1 pravo update  
 
-### Chef klient
+## Chef klient
 
 Chef klient je specialni uzivatel, ktery reprezentuje identitu (osobu) pocitace, ktera se pripojuje
 Chef nodu na Chef server. Chef node je reprezentace masiny. Vytvoreni managovane masiny se sesklada
@@ -99,7 +99,7 @@ vzdalene z Chef workstation pomoci prikazu "chef bootstrap", kde se pomoci ssh, 
 serveru, stahne instalacku, nainstaluje, nakonfiguruje profil vcetne klicu, zaregistruje node a clienta
 v chef serveru.
 
-#### Instalace
+### Instalace
 
 [knife bootstrap](https://docs.chef.io/install_bootstrap.html) windows winrm 95.138.188.93 -x Administrator -P A7not3si5ELo ... provede vse z workstation co je popsano nize  
 [knife client](https://docs.chef.io/knife_client.html) create cheftest1 ... vytvori novou identitu cheftest1 na chef serveru, vytvori klic  
@@ -135,13 +135,13 @@ chef-client ... registruje node na serveru, pouzije konfiguraci z konfiguracniho
 chef-client -S https://chefserver:443 -K /etc/chef/chef-validator.pam ... chef-client prijima i argumenty v prikazove radce  
 /etc/chef/*.pam, ~/.chef, c:\chef ... klice pro klienta  
 
-### Databag
+## Databag
 
 Skladiste dat pro jednotlive nody atd., muze obsahovat duverna data jako hesla, promenne atd.
 
 knife vault delete sea power ... smaze databag  
 
-### Chef cookbook
+## Chef cookbook
 
 knife cookbook create motd  
 vi $COOKBOOKS/motd/recipes/a.rb  
@@ -154,7 +154,7 @@ chef-client --local-mode hello.rb ... aplikuje recept na lokalnim stroji
 chef-client --local-mode --runlist 'recipe[cookbook_httpd::default]' ... aplikuje runbook, ktery obsahuje jen jeden recept "default" z kucharky "cookbook_httpd"  
 chef-client -z -o helloworld ... aplikuje cookbook helloworld (~/cookbooks/helloworld/recipes/default.rb)  
 
-#### Supermarket
+### Supermarket
 
 chef gem install knife-supermarket - nainstaluje knife supermarket na Workstation aby se dalo pracovat se Supermarketem  
 chef install knife-supermarket  
@@ -171,26 +171,26 @@ supermarket-ctl-reconfigure ... rekonfigurace Supermarketu po zmene udaju
 Popis API - [https://docs.chef.io/api_cookbooks_site.html](https://docs.chef.io/api_cookbooks_site.html)  
 fieri - dodatecna sluzba Supermarketu na testovani verze kucharek, musi se povolit  
 
-#### role
+### role
 
 [Pekny tutorial](http://mycodingtales.com/posts/automation-with-chef-part-4-setting-up-chef-client/) na vytvoreni role  
 knife role list ... seznam roli  
 
-#### Kitchen
+### Kitchen
 
 definice v  .kitchen.yml  
 Umoznuje testovani kucharky v mnoha kloudech a virtualizacich  
 Nabizi image z <a href=https://github.com/chef/bento|Bento]]  
 
-### [Cena](https://www.chef.io/pricing/), licence
+## [Cena](https://www.chef.io/pricing/), licence
 
 Chef Basics - zadarmo  
 [Hosted Chef](https://manage.chef.io/signup) - do 5 zadarmo, vic jak 5 72$ za rok/instance  
 [Chef Automate](https://www.chef.io/automate/) - $137/instance/rok - obsahuje Chef Manage (Web Management portal) a jine  
 
-### Chef recepty
+## Chef recepty
 
-#### Promenne
+### Promenne
 
 [node['platform'](https://docs.chef.io/attributes.html)] ... Operacni system node, napr. 'windows'  
 node['platform_version'], node['ipaddress'], node['macaddress'], ... dalsi promenne  
@@ -198,12 +198,12 @@ node['platform_version'], node['ipaddress'], node['macaddress'], ... dalsi prome
 node.chef_environment ... prostredi  
 node.name
 
-### Tridy
+## Tridy
 
 this_node=[Chef::Node](http://www.rubydoc.info/github/opscode/chef/Chef/Node).load(node.name) ... vytvori objekt, do ktrereho se nacte Chef objekt - node  
 this_node.run_list &lt;&lt; "role[windows100]" ... nastavi run list  
 
-### resources
+## resources
 
 [Vytvareni vlastnich LWRP resources](https://docs.chef.io/custom_resources.html)  
 [Vytvareni LWRP resources](http://dougireton.com/blog/2012/12/31/creating-an-lwrp/)

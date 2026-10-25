@@ -1,30 +1,30 @@
 # github
 
-### Odkazy
+## Odkazy
 
 https://www.githubstatus.com/ ... Status zdraví služeb  
 
-### GitHub akce
+## GitHub akce
 
 [GitHub akce](/automatizace/github)  
 
-### GitHub markdown
+## GitHub markdown
 
 [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)  
 [Barevný text](https://github.com/orgs/community/discussions/31570)  
 [Vysouvací bloky](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)  
 [emoji symboly](https://github.com/ikatyang/emoji-cheat-sheet/blob/github-actions-auto-update/README.md)  
 
-### GitHub Copilot
+## GitHub Copilot
 
-#### Adresářová struktura
+### Adresářová struktura
 
 .github/agents/*.agent.md  
 .github/instructions/*.instructions.md  
 .github/prompts/*.prompt.md ... předdefinované prompty  
 .github/copilot-instructions.md ... instrukce, které si Copilot přečte při jakémkoli promptu v repozitáři  
 
-#### prompty
+### prompty
 
 Explain this project  
 What are the dependencies for running the a.sh  
@@ -49,15 +49,15 @@ Can you fix the bugs in the code?
 Can you please generate unit test with terratest?  
 Convert the current file from json to yaml format  
 
-#### VSCode Copilot zkratky
+### VSCode Copilot zkratky
 
 ctrp-enter ... otevře okno pro doplňování kódu  
 
-### Repozitáře
+## Repozitáře
 
 .github ... speciální repozitář, který slouží jako vzor pro nové repozitáře  
 
-#### Konfigurační soubory v repozitáři
+### Konfigurační soubory v repozitáři
 
 .github/ISSUE_TEMPLATE/ ... vzory pro Issues  
 .github/workflows/ ... Definice GitHub akcí  
@@ -69,7 +69,7 @@ ctrp-enter ... otevře okno pro doplňování kódu
 .github/SUPPORT.md ... popis kanálů, jak žádat o podporu  
 .github/FUNDING.md ... vytvoří "Sponzor" tlačítko viditelné nahoře, seznam odkazů na sponzorské platformy  
 .github/linters/
-### GH - GitHub CLI
+## GH - GitHub CLI
 
 gh alias set iv 'issue view --comments' ... vytvoření aliasu  
 gh iv https://github.com/a/b/issues/4 ... použití aliasu, zobrazení komentářů pro issue 5  
@@ -84,7 +84,7 @@ gh pr merge 462 ... mergne PR 462
 gh run list ... reznam běhů akcí  
 gh workflow list ... seznam akcí - workflow  
 
-#### GH API
+### GH API
 
 gh api -X GET 'orgs/MYORG/teams/TEAM/members' -F per_page=100 --paginate --ca --jq '[.[].login] | map("involves:\(.)") | join(" ")' ... volání api, neřeším token jak v CURLu, použiji nativně jq zpracování  
 gh api "orgs/MYORG/teams?per_page=150" ... seznam týmů  

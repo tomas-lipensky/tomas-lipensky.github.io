@@ -1,6 +1,6 @@
 # index
 
-### Architektura
+## Architektura
 
 Obecne kazda aplikace pro nakladani s daty (ETL - extract transform load, business inteligenci, master data management, ...) se sklada z mnoha komponenet, pricemz jedna z komponent je:
 
@@ -8,12 +8,12 @@ Obecne kazda aplikace pro nakladani s daty (ETL - extract transform load, busine
 
 a dalsi komponenty, ktere provadi primo manipulaci s daty.
 
-### Odkazy
+## Odkazy
 
 [Big Data and Analytics University](http://learning2.atlanta.ibm.com/qpg/university.nsf/analytics/BDA-Lobby) na learning2.atlanta.ibm.com  
 [IBM BigData & Analytics Hub](http://www.ibmbigdatahub.com/)  
 
-### ETL nastroje (Extract Transform Load
+## ETL nastroje (Extract Transform Load
 
 [Infosphere Datastage](datastage.html) (Infosphere Information Server)
 [Oracle Warehouse Builder](owp.html)
@@ -22,11 +22,11 @@ Informatica PowerCenter Express - https://community.informatica.com/solutions/pc
 [Informatica PowerCenter](informatica.html) - http:*etl-tools.info/informatica/components.html http:*etl-tools.info/informatica/tutorial.html
 [TalenD ETL](https://www.talend.com/products/talend-open-studio/) - OpenSource ETL
 
-### Kontinualni prisun dat - zpracovani
+## Kontinualni prisun dat - zpracovani
 
 [IBM Steams](steams.html)  
 
-### Business Inteligence, <a fref="http://www.ibm.com/analytics/us/en/index.html|business analytics]] - reporting
+## Business Inteligence, <a fref="http://www.ibm.com/analytics/us/en/index.html|business analytics]] - reporting
 
 
 [IBM Cognos BI](cognos.html) - [Business Intelligence](http://en.wikipedia.org/wiki/Business_intelligence)  - Reporty, analyzy dashboardy a skorovani z dat
@@ -49,7 +49,7 @@ Microstrategy
 [Oracle Hyperion](hyperion.html) ... [Business Intelligence ](http://en.wikipedia.org/wiki/Business_intelligence)- rozhodavaci software a mereni vykonu podniku
 
 
-### Master data management
+## Master data management
 
 
 [InfoSphere MDM CS](mdm.html) - Master Data Management Colaboration Server (Colaboration Edition), Drive [WebSphere Product Center](http://www.ibm.com/developerworks/data/tutorials/dm0608lee/) nebo PIM
@@ -58,7 +58,7 @@ Virtual MDM - drive MDM Hub, nebo MDS - Master Data Service
 [informaticamdm.html](informaticamdm.html)Informatica MDM
 
 
-### Data Explorers
+## Data Explorers
 
 
 [IBM Watson Explorer](dataexplorer.html) - IBM InfoSphere Data Explorer ... Aplikace na prochazeni dat - objevuje, spojuje, nabizi a umoznuje prohledavani dat
@@ -72,15 +72,15 @@ Virtual MDM - drive MDM Hub, nebo MDS - Master Data Service
 [Apache Spark](https://en.wikipedia.org/wiki/Apache_Spark) ... cluster framework pouzitelny napr. s Kafka. Komponenty - Spark SQL, Spark streaming, GraphX, MLib Machine Learning
 
 
-### Nastroje na rizeni rustu dat
+## Nastroje na rizeni rustu dat
 
 IBM InfoSphere Optim Grow ... Aplikace na spravu politiky rustu dat - presouvani dat na levnejsi media, zalohovani, mazani atd.
 
-### Nastroje na kryptovani dat
+## Nastroje na kryptovani dat
 
 [Infosphere Guardium Data Encryption - GDE](gde.html) ... Nastroj na enkrypci a zpristupneni dat na zaklade politik
 
-### Big Data
+## Big Data
 
 
 Netezza

@@ -1,17 +1,17 @@
 # github
 
-### Repozitáře
+## Repozitáře
 
 [.github](https://dev.to/jajera/understanding-the-github-repository-2fpj) repozitář - šablony pro celou organizaci  
 
-#### .github adresář
+### .github adresář
 
 [speciální soubory v .github adresáři](https://medium.com/code-factory-berlin/github-repository-structure-best-practices-248e6effc405)  
 [Copilot soubory](https://docs.github.com/en/copilot/how-tos/copilot-on-github/customize-copilot/add-custom-instructions/add-repository-instructions)  
 
-### Akce
+## Akce
 
-#### Runner
+### Runner
 
 VERSION=2.311.0 curl -o actions-runner.tar.gz -L "https://github.com/actions/runner/releases/download/v${VERSION}/actions-runner-linux-x64-${VERSION}.tar.gz"  
 tar xzf ./actions-runner-linux.tar.gz && rm ./actions-runner-linux.tar.gz  
@@ -19,7 +19,7 @@ tar xzf ./actions-runner-linux.tar.gz && rm ./actions-runner-linux.tar.gz
 sudo ./svc.sh install ... instalace služby  
 sudo ./svc.sh start ... spuštění služby  
 
-#### Struktura
+### Struktura
 
 definuje se v .github/workflows, napr. build_workflow.yml
 
@@ -39,7 +39,7 @@ jobs:
    - run: echo "ahoj, promenna1: ${{env.promenna1}}"
    - run: echo "promenna=3" >> $GITHUB_OUTPUT
    - run: |
-        echo "### Test Summary" >> $GITHUB_STEP_SUMMARY
+        echo "## Test Summary" >> $GITHUB_STEP_SUMMARY
      id: vystup
    - name: failure
      id: aaa
@@ -48,22 +48,22 @@ jobs:
      if: ${{ failure() && steps.aaa.conclusion == 'failure' }}
 ```
 
-#### Proměnné
+### Proměnné
 
 $![ CONTEXT]( CONTEXT.OBJEKT ) ... Seznam contextů a objektů: [https://docs.github.com/en/actions/reference/workflows-and-actions/contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts)  
 $![ github]( github.repository )  
 $![ env]( env.MY_VARIABLE ) ... jsou tam i výchozí proměnné [https://docs.github.com/en/actions/reference/workflows-and-actions/variables](https://docs.github.com/en/actions/reference/workflows-and-actions/variables)  
 $![runner](runner.os)  
 $![matrix](matrix.version) ... provede krok několikrát, doplní data ze sekce matrix pro každý běh jiná  
-#### root sekce
+### root sekce
 
-##### on
+#### on
 
 push.branches: -master, 'releases/**' ... nastavení push requestu v určitých GIT větvích  
 pull_request.branches: - master, develop ... pull requesty  
 workflow_dispach: ... manuální spouštění  
 
-##### workflow_call
+#### workflow_call
 
 [workflow_call](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
@@ -80,16 +80,16 @@ secrets:
 workflow_call.outputs.PRVNI.description: "popis"  
 workflow_call.outputs.PRVNI.value: $![ job.EXAMPLE.outputs]( job.EXAMPLE.outputs.output1 )
 
-##### concurency
+#### concurency
 
 běh na více prostředích
 
 concurency.group: environment-$![github](github.ref)  
 concurency.cancel-in-progress: true  
 
-##### jobs
+#### jobs
 
-#### job
+### job
 
 runs_on: ubuntu-latest ... na jakém agentoviúworkeru job pojede  
 
@@ -111,22 +111,22 @@ uses.secrets:envPAT: $![ secrets]( secrets.envPAT )
 
 steps:
 
-#### Kroky, steps
+### Kroky, steps
 
-##### run
+#### run
 
 spustí příkaz, nebo příkazy  
 shell: bash ... volba shellu, kde se to supustí  
-echo "### Test Summary" >> $GITHUB_STEP_SUMMARY ... výstup do Job summary  
+echo "## Test Summary" >> $GITHUB_STEP_SUMMARY ... výstup do Job summary  
 echo "image_tag=$![ github]( github.run_id)" >> $GITHUB_ENV ... výstup do GitHub proměnné pro další joby, nebo stepy  
 echo $![ env]( env.image_tag ) ... pozdější použití proměnné  
 
-##### github
+#### github
 
 run: gh repo list aaa
 env.GITHUB_TOKEN: $![secrets](secrets.token)
 
-##### actions/cache
+#### actions/cache
 
 uses: actions/cache@v1.2.1  
 with:  
@@ -134,27 +134,27 @@ with.path: ~/.m2 ... ve kterém adresáři se cachuje. ~/.m2 pro maven, **/node_
 with.key: $![ runner]( runner.os )-cache  
 with.restore-keys: ""  
 
-##### actions/checkout
+#### actions/checkout
 
-##### actions/setup-node@v3
+#### actions/setup-node@v3
 
 with.node-version: '16'
 with.registry-url: https://registry.npmjs.org/
 
-##### actions/setup-java
+#### actions/setup-java
 
 with.java-version: '11'  
 with.distribution: 'temurin'  
 with.cache: 'maven'  
 
-##### docker/setup-buildx-action
+#### docker/setup-buildx-action
 
-##### docker/login-action
+#### docker/login-action
 
 with.username: $![ secrets]( secrets.DOCKER_USR )  
 with.password: $![ secrets]( secrets.DOCKER_PWD )  
 
-##### docker/build-and-push
+#### docker/build-and-push
 
 with.context: .  
 with.push: true  

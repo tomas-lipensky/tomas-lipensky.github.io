@@ -1,6 +1,6 @@
 # Machine learning - Strojove uceni
 
-### Externi odkazy
+## Externi odkazy
 
 [Introducing: Machine Learning in R](https://www.datacamp.com/community/tutorials/machine-learning-in-r#gs.YGInHTU)  
 [Wikipedia - R](https://en.wikipedia.org/wiki/R_%28programming_language%29)  

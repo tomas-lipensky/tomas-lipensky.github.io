@@ -1,6 +1,6 @@
 # argocd
 
-### Argo CD CLI
+## Argo CD CLI
 
 argocd login URL ... --sso = SSO login  
 argocd proj create PROJEKT  

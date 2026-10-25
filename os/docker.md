@@ -1,10 +1,10 @@
 # Docker
 
-### Externi odkazy
+## Externi odkazy
 
 [Docker - FAQ](http://prakhar.me/docker-curriculum/)  
 
-### Konfigurace
+## Konfigurace
 
 `export DOCKER_HOST=ssh://user@server` ... docker příkaz se bude vykonavat vzdáleně na zadaném serveru  
 .docker/config.json ... konfigurace docker clienta  
@@ -12,18 +12,18 @@ docker info ... ukáže informace o Dockeru: verze, ipadresy, certifikáty atd
 docker system info ... to samé jako docker info  
 docker system df ... informace o místu na disku, co docker zabírá  
 docker system events ... sledování událostí v reálném čase  
-### Nástroje
+## Nástroje
 
 [portainer](http://portainer.io) ... grafická administrace Dockeru, Swarmu, Kubernetes, Nomad  
 buildah ... nastroj na buildování a odesílání Docker obrazů  
 kaniko ... jako buildah - nastroj na buildování a odesíláni Docker obrazů  
 
-### Sluzba docker
+## Sluzba docker
 
 systemctl start docker.io  
 rm -rf /var/lib/docker/aufs ... v pripade problemu se startem je toto oprava  
 
-### Obrazy
+## Obrazy
 
 docker search centos ... hleda CentOS obrazy na [hub.docker.com/_/centos/](https://hub.docker.com/_/centos/)  
 docker pull centos:7 ... stahne Centos obraz z [hub.docker.com/_/centos/](https://hub.docker.com/_/centos/)  
@@ -33,7 +33,7 @@ docker image rm b46fb5eafd46 ... smaže obraz b46fb5eafd46
 docker history centos:7 ... historie obrazu (kdy se dely jake upravy)  
 docker inspect centos:7 ... podrobne informace o obrazu, jako treba obsah Docker souboru  
 docker tag b46fb5eafd46 server:port/image:3.3.0 ... přidá tag, repozitář server:port/image, verze 3.3.0  
-### Kontejnery
+## Kontejnery
 
 docker [run](https://docs.docker.com/engine/reference/run/) -i -t -p 80:80 d4350798c2ee /bin/bash ... spusti kontejner s prikazem bash  
 docker --mount type=bind,source=/mnt/docker1,target=/data,readonly --name "kontejner_s_diskem" kontejner1 ... vytvori novy kontejner z obrazu kontejner1, pojmenuje ho a namountuje disk  
@@ -52,23 +52,23 @@ docker commit 3a09b2588478 ubuntu:14.04 ... ulozi kontejner jako novy image
 docker container ls -a ... seznam vsech kontejneru, vcetne stopnutych  
 docker logs --since=-2h 3a09b2588478 ... vypis konzole kontejneru za poslední 2 hodiny  
 
-### volumes - disky
+## volumes - disky
 
 docker volume create my-vol ... vytvori novy volume  
 docker volume inspect my-vol ... ukaze informace o volume  
 docker volume ls ... vylistuje jednotky  
 docker volume rm my-vol ... smaze volume  
 docker volume  inspect my-vol ... informace o jednotce  
-### config - konfigurační soubory pro kontejnery
+## config - konfigurační soubory pro kontejnery
 
 docker config ls ... seznam uložených konfigurací  
 docker config inspect aaa ... ukáže konkrétní konfiguraci  
 
-### network
+## network
 
 docker network ls ... seznam síťových služeb  
 docker network inspect ingress ... konfigurace síťové služby  
-### Export/import
+## Export/import
 
 docker import /tmp/konterner.tgz ... naimportuje kontejner ze souboru  
 docker import  --message "konterner s debug parametrem" --change "ENV DEBUG 1" http://tomas.lipensky.cz/kontejner.tgz ... import z URL, komentar a zmena v kontejneru  
@@ -76,7 +76,7 @@ tar -c . | docker import - importovanykontys ... import z aktualniho adresare
 docker export kontejner1 > kontejner1.tar ... export konterneru do souboru  
 docker export --output="kontejner2.tar" kontejner2 ... export do souboru  
 
-### Docker Swarm
+## Docker Swarm
 
 Docker swarm umožnuje propojit a administrovat Docker na více nodech  
 docker node ls ... seznam nodů  
@@ -88,7 +88,7 @@ docker swarm ca ... certifikát swarmu
 docker swarm join ... připojení nodu do Swarmu  
 docker swarm leave ... odpojení od swarmu  
 
-### Dockerfile
+## Dockerfile
 
 Soubor z ktereho se builduji dalsi images
 
@@ -101,7 +101,7 @@ CMD ["/usr/sbin/init"]
 
 docker build --rm -t local/c7-systemd-httpd ... vytvori z obrazu jiny obraz, provede prikazy z Dockerfile  
 
-### Docker pod Windows
+## Docker pod Windows
 
 (Get-Item "HKLM:SOFTWARE\Microsoft\Windows NT\CurrentVersion").GetValue('ReleaseID') ... napr 1709  
 docker search microsoft/ ... seznam dosupnych obrazu z microsoftu  

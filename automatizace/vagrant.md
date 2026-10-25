@@ -4,7 +4,7 @@ Abstrakcni vrstva pro virtualizacni reseni. Vagrant zajistuje jednotne
 ovladani mnoha virtualizacnich technologii - libvirt, virtualbox,
 vmware, kvn atd.
 
-### prikazy
+## prikazy
 
 vagrant init custom ... ziniciuje vagrant v aktualnim adresari - vytvori json soubor s parametrama  
 
@@ -22,7 +22,7 @@ sed -e 's/^Defaults\(.*\)requiretty\(.*\)/#Defaults\1requiretty\2/' -i /etc/sudo
 sed -e 's/^Defaults\(.*\)visiblepw\(.*\)/#Defaults\1visiblepw\2/' -i /etc/sudoers
 ```
 
-### logy, debugging, ...
+## logy, debugging, ...
 
 export VAGRANT_LOG=debug ... zapne debug vypis Vagrantu  
 
@@ -67,8 +67,8 @@ tar cvzf custom_box.box ./metadata.json ./Vagrantfile ./box.img
 vagrant box add --name custom custom_box.box
 ```
 
-### Pripojeni na VM
+## Pripojeni na VM
 
-wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant ### Stahne privatni Vagrant klic  
+wget https://raw.githubusercontent.com/hashicorp/vagrant/master/keys/vagrant ## Stahne privatni Vagrant klic  
 chmod 600 vagrant # ... nastavi dobra prava (necitelne pro ostatni)  
 ssh -p 2222 -i vagrant vagrant@127.0.0.1

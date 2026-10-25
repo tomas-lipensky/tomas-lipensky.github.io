@@ -1,6 +1,6 @@
 # Berkley DB
 
-##### db4-utils
+## db4-utils
 
 db_archive
 db_checkpoint

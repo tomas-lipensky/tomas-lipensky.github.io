@@ -1,12 +1,12 @@
 # bash
 
-### Odkazy
+## Odkazy
 
 [https://tldp.org/LDP/Bash-Beginners-Guide/html/](https://tldp.org/LDP/Bash-Beginners-Guide/html/) ... Bash pro zacatecniky  
 
-### Promenne
+## Promenne
 
-#### typ znak
+### typ znak
 
 `promenna="Ahoj svete"` ... definice promenne  
 `: ${aaa?Promenna neni nadefinovana}` ... overi, zda je promenna aaa nadefinovana, jinak vyskoci s RC1 a textem: aa: Promenna neni nadefinovana  
@@ -31,7 +31,7 @@
 `echo ${#prommena}` ... vypise pocet znaku  
 `unset promenna` ... smaze (oddefinuje) promennou  
 
-#### typ pole
+### typ pole
 
 declare -p pole
 pole=(asi jeden clovek) ... definice pole  
@@ -39,15 +39,15 @@ declare -p pole1=(a v c) ... jina definice pole
 echo ${pole[1]} ... vypise druhy clen pole  
 declare -p pole ... vypise typ promenne a jeji hodnotu  
 
-#### typ cele cislo
+### typ cele cislo
 
 declare -i cislo=10  
 
-#### konstanty
+### konstanty
 
 readonly PI=3.14 ... definice konstatny, neda se zmenit  
 
-### specialni zarizeni
+## specialni zarizeni
 
 cat </dev/tcp/time.nist.gov/13 ... otevre spojeni na server time.nist.gov port 13, vypise cas  
 

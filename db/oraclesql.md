@@ -2,7 +2,7 @@
 
 Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 
-### Externi odkazy
+## Externi odkazy
 
 [Uvod](http://www.abclinuxu.cz/clanky/navody/oracle-1-uvod-distribuce-oraclexe) na abc linuxu  
 [Rychlejsi aplikace](http://www.dbsvet.cz/view.php?cisloclanku=2008112101) na db svete  
@@ -23,13 +23,13 @@ Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 [Pekny strucny navod na Oracle vcetne RMANu](http://www.cuddletech.com/articles/oracle/node1.html)  
 [Obrazek](http://a5.sphotos.ak.fbcdn.net/hphotos-ak-snc3/11039_104638359549190_100000090807855_123129_1238581_n.jpg) - jak hezke mohou byt sql dotazy  
 
-#### Spusteni SQL skriptu v sqlplus
+### Spusteni SQL skriptu v sqlplus
 
 @/tmp/createtable.sql  
 
-### Tabulky
+## Tabulky
 
-#### Datove typy pro tabulky
+### Datove typy pro tabulky
 
 <dl>
 	CHAR(20) ... pole pro retezec dlouhy 20 znaku
@@ -41,7 +41,7 @@ Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 	BINARY_DOUBLE ... (Oracle >= 10) binarni reprezentace realneho cisla - 64-bitu - uspornejsi a rychlejsi nez NUMBER. Hodnoty napr. 96.56D, BINARY_DOUBLE_NAN, BINARY_DOUBLE_INFINITY
 </dl>
 
-#### Vytvareni tabulek
+### Vytvareni tabulek
 
 CREATE TABLE zakaznici (  
   id_zakaznika INTEGER CONSTRAINT zakaznicky_pk PRIMARY KEY ... cislo pro id zakaznika - primarni klic (PRIMARY KEY - musi byt unikatni cislo, nesmi existovat stejne)  
@@ -59,29 +59,29 @@ CREATE TABLE nakupy (
   zaplaceno NUMBER(8,2)
 );  
 
-#### Popis tabulky
+### Popis tabulky
 
 DESCRIBE zakaznici; popise sloupce, promenne a podminky nenulovosti tabulky zakaznici  
 
-### Zaznamy v tabulce
+## Zaznamy v tabulce
 
-#### Vkladani
+### Vkladani
 
 INSERT INTO zakaznici (id_zakaznika, jmeno, prijmeni) VALUES (1, 'Alois', 'Skrivanek');  
 
-#### mazani
+### mazani
 
 DELETE FROM zakaznici WHERE id_zakaznika = 1; ... smaze cely radek s polozkou id_zakaznika 1  
 
-#### modifikace
+### modifikace
 
 UPDATE zakaznici SET jmeno = 'Albert' WHERE id_zakaznika = 1; ... modifikuje zaznam jmeno u radku s id_zakaznika 1  
 
-#### vypis
+### vypis
 
 SELECT * FROM zakaznici;  
 
-### PL/SQL
+## PL/SQL
 
 PL/SQL (Procedural Laguage) rozsiruje moznosti SQL o bloky, deklarace promennych, podminky, smycky, kursory a definice procedur a funkci
 

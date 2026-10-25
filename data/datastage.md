@@ -1,8 +1,6 @@
 # IBM Infosphere - Datastage
 
-### Index stranky
-
-### Odkazy
+## Odkazy
 
 [IIS - dokumentace](http://www-01.ibm.com/support/docview.wss?uid=swg27041358#qs)  
 [IIS system requirements](http://www-01.ibm.com/support/docview.wss?uid=swg27036191)  
@@ -13,7 +11,7 @@
 [IBM InfoSphere Information Server, system requirements](http://www-01.ibm.com/support/docview.wss?uid=swg21315971)  
 [Datastage tutorial](http://etl-tools.info/en/datastage/datastage_tutorial.htm)  
 
-### Komponenty
+## Komponenty
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 
@@ -22,7 +20,7 @@ Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 - Administrator - windows program na administraci DS (projekty, uzivatele atd.
 - Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)
 
-### Procesy, adresare, konfiguracni soubory
+## Procesy, adresare, konfiguracni soubory
 
 Pekny popis Datastage [procesu](https://dstagenotes.wordpress.com/tag/dsrpcd/)
 
@@ -42,7 +40,7 @@ RunAgent / ASBAgent - (Unix/Win) predava pozadavky Sluzebni vrstvy (service laye
 tl_dsservice ... DSTELNET windows sluzba umoznujici pripojeni telnetem  
 dsservice.exe ... DataStage Engine Resource Service sluzba  
 
-### Start/stop/status/info
+## Start/stop/status/info
 
 DS=`cat /.dshome` ... instalacni cesta instance (popripade .dshome2)  
 . $DS/dsenv ... inicializace prostredi  
@@ -60,7 +58,7 @@ $DS/../DSODB/bin/DSAppWatcher.sh -start EngMonApp ... start EngMonApp
 $DS/Server/PXEngine/java/jobmoninit -stop ... zastavi JobMonApp resource_tracker  
 $DS/Server/PXEngine/bin/shutdown_trackers [-local | -configFile $CONFIG_FILE] ... zastavi jen resource_tracker  
 
-### URL
+## URL
 
 http://IP:port/ibm/iis/launchpad/ ... rozcestnik pro konzole  
 http://IP:port/ibm/iis/console/ ... Web Administration console pro IIS  
@@ -70,7 +68,7 @@ http://IP:port/ibm/iis/qs/StandardizationRulesDesigner ... Standardization Rules
 http://IP:port/ ... Web console pro Datastage verze 8 a niz  
 http://IP:port/RegistrationServlet/registration ... Java naming space informace  
 
-### Konfigurace
+## Konfigurace
 
 $DS/../../ASBNode/bin/DirectoryCommand.sh ... prace s adresarem uzivatelu a skupin - vyzaduje autentifikaci  
 $DS/../../ASBNode/bin/DirectoryCommand.sh -usr isadmin -pwd isadmin -list USERS ... seznam uzivatelu  
@@ -87,13 +85,13 @@ DataStageJobExecutor.properties ... pripojovaci parametry TWS plug-inu pro DS pr
 Server/DSODB/DSODBConfig.cfg ... konfigurace pro kolektory dat (AppWatcher, EngMonApp, ODBQueryApp, ResMonApp)  
 $DS/../PXEngine/etc/restrack_settings ... konfigurace logu resource trackeru  
 
-### Logy
+## Logy
 
 $DS/../DSWLM/logs/wlm.properties  
 grep submitJob wlm.*.log ... vypise kdy se nastartoval jaky job
 [Logging agent](http://www-01.ibm.com/support/docview.wss?uid=swg21439251)  
 
-### prikazy
+## prikazy
 
 $DS/ASBNode/bin/SessionAdmin.sh -url https://server_hostname:server_port -user username -password plaintext_password -kill-user-sessions ... ukonci neadministratorske pripojeni  
 $DS/ASBNode/bin/SessionAdmin -url https://server_hostname:server_port -user username -password plaintext_password -set-maint-mode ON ... zapne maintenance mode - zakaze pripojovat neadministratorskym uctum  
@@ -116,20 +114,20 @@ $DS/../PXEngine/bin/orchadmin diskinfo -a .. ukaze info o discich
 $DS/../PXEngine/bin/orchadmin check  
 DSXImportService -List –DSXFile c:\archives\oldproject.dsx ... vylistuje obsah DSX souboru  
 
-### prikazy DS clienta
+## prikazy DS clienta
 
 dscmdimport.exe /H=myfrvmmop1datap /U=domain\user /P=heslo /NUA projekt a.dsx /V ... prenos dsx souboru  
 dscc /h server /u domena/uzivatel /p heslo PROJEKT /j JOB  
 dssearch -domain DATASTAGEDES:9080 -user wasadmin -password wasadmin -server DATASTAGEDES -ljobs -matches Transformacion *  
 
-### Databaze
+## Databaze
 
 - XMETA - x metadata DB - Datastage metadata
 - DSODB - Operations database
 - IADB - Information Analysis DB - Information Analzer modul - hleda sloupce ktere jsou vhodne na primarni klice a jin
 - QSDB - Qualitystage DB - Qualitystage modul
 
-### procesy
+## procesy
 
 com.ibm.iis.common.wlm.service.server.ds.DSWLMServer  
 com.ascential.acs.logging.agent.LoggingAgentSocketImpl  
@@ -147,11 +145,11 @@ resource_tracker
 DSAppWatcherStart  
 com.ascential.acs.logging.agent.LoggingAgentSocketImpl  
 
-### Utility, nastroje
+## Utility, nastroje
 
 ISA - nastroj na ziskavani informanci o IIS, exporty se posilaji na software support - PMR  
 
-#### uvsh - dssh
+### uvsh - dssh
 
 LOGTO projekt; ... pripojeni k projektu  
 SELECT * FROM DS_JOBS; ... seznam IDcek vsech jobu  
@@ -165,7 +163,7 @@ CLEAR.FILE RT_LOG$JOBNO; ... vycisti data o behu jobu - umi i "Clear" utilita v 
 LIST DS_JOBS WITH JOBNO=14 ... ukaze co je za job JOBID 14 (data v $PROJECTDIR/RT_CONFIG$JOBID)  
 SELECT PATH FROM UV_SCHEMA ... seznam cest k jednotlivym projektum  
 
-### Datastage databaze
+## Datastage databaze
 
 db2 connect to xmeta  
 select * from [DSODB.JOBRUN](https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_11.5.0/com.ibm.swg.im.iis.ds.monitor.ref.doc/topics/jobruntable.html) fetch first 10 rows ... seznam uloh z Workload managera z DSODB  

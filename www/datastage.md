@@ -1,6 +1,6 @@
 # IBM Infosphere - Datastage
 
-### Odkazy
+## Odkazy
 
 [Datastage training](www.ibm.com/datastage/training)  
 [IBM Education manager - Monitoring memory consumption of datastage process](http://publib.boulder.ibm.com/infocenter/ieduasst/imv1r0/index.jsp?topic=/com.ibm.iea.infosphere_is/infosphere_is/8.5/ProbDeter/MemoryUsage/player.html)  
@@ -9,7 +9,7 @@
 [IBM InfoSphere Information Server, system requirements](http://www-01.ibm.com/support/docview.wss?uid=swg21315971)  
 [Datastage tutorial](http://etl-tools.info/en/datastage/datastage_tutorial.htm)  
 
-### Komponenty
+## Komponenty
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 
@@ -18,7 +18,7 @@ Datastage (Infosphere Information Server) se sklada z nekolika komponent:
 - Administrator - windows program na administraci DS (projekty, uzivatele atd.
 - Manager - windows program na prohlizeni a editaci DS repozitare (tabulek, jobu, transformaci, ..)
 
-### Procesy, adresare, konfiguracni soubory
+## Procesy, adresare, konfiguracni soubory
 
 dsrpcd ... Datastage engine  
 BmtMDProviderMain ... Metadata Service - The metadata service handles metadata requests including lineage, queryMetadata, updateMetadata, and testDataSourceConnection.  
@@ -28,7 +28,7 @@ java com.cognos.xqe.cubingservices.DQServer ...
 java com.ibm.cgsBus.CGSServer ...  
 java org.apache.catalina.startup.Bootstrap ...  
 
-### Start/stop/status/info
+## Start/stop/status/info
 
 . ./dsenv ... inicializace prostredi  
 bi/uv -admin -stop ... stop DS  
@@ -41,7 +41,7 @@ cogbootstrapservice -isrunning -install_root=/usr/ibm/cognos/c10_64 -stdoutLog=D
 [Verze Cognosu](http://www-01.ibm.com/support/docview.wss?uid=swg21338694)  
 cat $DS/Server/DSEngine/.dsrel ... verze IIS Datastage  
 
-### URL
+## URL
 
 http://IP:port/ibm/iis/console/ ... Web console pro IIS  
 http://IP:port/ ... Web console pro Datastage verze 8 a niz  

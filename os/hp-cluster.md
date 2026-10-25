@@ -1,12 +1,12 @@
 # HP-UX - cluster (Serviceguard)
 
-##### status
+## status
 
 cmviewcl ... ukaze stav slusteru
 cmviewcl -v ... Vice ukecany stav clusteru  
 cmviewcl -f line ... radkovy vypis pro scripty  
 
-##### start/stop
+## start/stop
 
 cmruncl -v ... nastartje cluster (cmcld)  
 cmrunnode -v node ... privede node znovu do clusteru  
@@ -17,7 +17,7 @@ cmrunpkg -v -n SystemB Package ... spusti balicek Package na node SystemB
 cmmodpkg -e Package ... Zapne povoleni presouvani balicku  
 cmmodpkg -e -n node Package ... Umozni nodu node prijimat balicek  
 
-##### Konfigurace
+## Konfigurace
 
 /etc/cmcluster/cmclnodelist ... seznam nodu  
 /etc/cmcluster/SD_CLUSTER.cfg ... nastaveni clusteru
@@ -26,14 +26,14 @@ cmcheckconf -v -C /etc/cmcluster/cmclconf.ascii ... otestuje syntaxi
 cmapplyconf -v -C /etc/cmcluster/cmclconf.ascii ... zkompiluje configuraci do binarniho formatu  
 grep /usr/lbin/qs /etc/inittab ... zjisteni, zda je nakonfigurovany Quorum Server  
 
-##### Logy
+## Logy
 
 /var/adm/syslog/syslog.log ... informace o stavu a akcich  
 /var/adm/qs/qs.log ... log Quorum Server demonu  
 /etc/cmcluster/<pkgname>/pkgname.cntl.log ... logy o baliccich v clusteru  
 /etc/cmcluster/package_name/control_script.log ... logy kontrol skriptu  
 
-##### Procesy
+## Procesy
 
 /usr/lbin/cmclconfd ... ServiceGuard Configuration Daemon - Sbira informace o clusteryu (Siti, volume grupach). Spousti se v /etc/inetd.conf  
 /usr/lbin/cmcld ... ServiceGuard Cluster Daemon - Ovlivnuje clenstvi v clusteru. Spousti se pod cmcld  

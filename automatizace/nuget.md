@@ -1,17 +1,17 @@
 # nuget
 
-### HTTP
+## HTTP
 
 https://server.cz/_packaging/xxxxxxxxx/nuget/v3/query2/?q=&take=200&semverlevel=2.0.0 ... seznam balicku  
 
-### PowerShell
+## PowerShell
 
 Register-PackageSource -Location https://server.cz/_packaging/repo/nuget/v3/index.json
 1.Name REPO -ProviderName NuGet -Credential $cred -Trusted ... registrace repozitare  
 Unregister-PackageSource -Name REPO ... odregistrace repozitare  
 find-Package -name * -Source REPO ... seznam balicku v repu  
 
-### Nuget CLI
+## Nuget CLI
 
 [instalace nuget cli](https://docs.microsoft.com/cs-cz/nuget/install-nuget-client-tools)
 
@@ -22,7 +22,7 @@ nuget sources update -name "repozitar" -username "tomas" -password "heslo" ... n
 nuget list ... seznam balicku  
 nuget push -source "repozitar" -ApiKey APIKEY balicek.0.0.1.nupkg ... nahraje balicek do repozitare  
 
-### dotnet
+## dotnet
 
 dotnet nuget locals global-packages --clear ... CLI na linuxu napriklad  
 dotnet restore -s https:*oriflame.pkgs.visualstudio.com/_packaging/GlobalDev/nuget/v3/index.json --interactive ... interactive - zepta se na heslo diky [https:*github.com/Microsoft/artifacts-credprovider|credprovider], -s urci z jakeho repozitare  

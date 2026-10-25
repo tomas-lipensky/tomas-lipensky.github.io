@@ -1,6 +1,6 @@
 # AIX - Souborove systemy, LVM, disky, ...
 
-#### Pristupy k souborum
+## Pristupy k souborum
 
 aclget soubor ... (Access control get) informace o pristupu k souboru
 aclput -i /tmp/acl.txt -R /tmp ... nastavi ACL definovana v /tmp/acl.txt (muze byt vystup z aclget) rekurzivne na /tmp  
@@ -20,7 +20,7 @@ dircmp ... (directory compare) porovnava adresare
 uucp ... kopiruje soubory na jiny unix system  
 uuto/uupick ... kopiruje na jiny, z jineho unixu  
 
-#### informace o fyzickych discich
+## informace o fyzickych discich
 
 ipl_varyon -i ... seznam hdisku, invormace o PVID a jestli jsou bootovatelne  
 lsdev -Cc adapter ... seznam radicu
@@ -34,7 +34,7 @@ lsattr -El hdisk0 ... nastaveni driveru disku hdsik0
 lspath ... ktery radic ovlada ktery disk
 /lq  
 
-### Fibre Chanel, [SDD](http://kutngedg.homelinux.org/blog/?cat=5&paged=2) (Storagesystem Device Driver), <a fref="http://doc-tcpip.org/Aix/aix.mpio_sdd.html|SDDPCM]] (Path Control Module) - MPIO
+## Fibre Chanel, [SDD](http://kutngedg.homelinux.org/blog/?cat=5&paged=2) (Storagesystem Device Driver), <a fref="http://doc-tcpip.org/Aix/aix.mpio_sdd.html|SDDPCM]] (Path Control Module) - MPIO
 
 lsattr -El dpo ... informace o DPO (Data Path Optimiser)  
 lsattr -El vpath5 ... informace o vpath  
@@ -127,11 +127,11 @@ ssaraid ... SSA raid
 $SVCCLI svcinfo lsvdisk | grep 600507680190025518000000000009E4 ... zjisti, zda je naasignovany disk z nasledujicim SCSIid  
 $SVCCLI svcinfo lsvdiskhostmap vdisk1465 ... infomace o disku 1465  
 
-#### Storage
+## Storage
 
 [/tmp/emc/emcgrab/emcgrab.sh](http://www.aixhealthcheck.com/blog?id=48) ... ukaze vsechny informace tykajici se EMC storage - FC, LUNu atd.  
 
-#### PV
+## PV
 
 chpv -a n hdisk1 ... (change of physical volumes) nastavi allocation permission=no
 getlvcb -TA hdisk3 ... ziska Logical Volume Control Block - informace o LVM - VGDA/VGSA
@@ -139,7 +139,7 @@ lspv ... (list of physical volumes) seznam a informace o PV
 migratepv (-l lv01) pv1 pv2 ... (migrate physical volumes) prenese lv01 z pv1 na pv2
 readvgda -v3 hdisk19 ... precte VGDA (volume group distinct area) z PV  
 
-#### VG
+## VG
 
 chvg - chance volume group
 exportvg - export volume group
@@ -164,7 +164,7 @@ varyonvg - aktivuje deaktivovanou volume groupu, nebo ji reaktivuje (synchronizu
 varyoffvg - deactivate volume group
 readvgda / lquerypv / lqueryvg ... Verify VG integrity
 
-#### LV
+## LV
 
 extendlv - extend logical volume
 getlvcb -AT lvname ... detailni informace o LV lvname
@@ -201,7 +201,7 @@ mount -t glvm ... namountuje glvm disky
       mkcifsmnt]] -f /mnt -d share1 -h server1 -c user1  ... vytvori CIFS FS /mnt z disku share1 z windows pocitace server1 pod uzivatelem user1
 ```
 
-#### FS
+## FS
 
 crfs -v jfs -g rootvg -a size=16M -m /home ... (create filesystem) Vytvori FS na rootvg veliky 16MB, vytvori zaznam v /etc/filesystems, bude se mountovat do /home
 chfs - change file system
@@ -218,7 +218,7 @@ mknfsmnt -f backups -d backups -h host -a -S -t rw -w bg -g ... vytvori zaznam v
 rmnfsmnt ... smaze zaznam z /etc/filesystems pro NFS FS  
 ulimit ... Shows and sets limits for FS
 
-#### paging space
+## paging space
 
 lsps -a ... (list of paging space)
 mkps -s 1 -a rootvg ... (make paging space) Vytvori paging space na rootvg veliky 1 PP
@@ -230,12 +230,12 @@ swapon
 vmo -p -o lru_file_repage=0 ... meni parametry paging space
 vmstat 1 ... kazdou sekundu informace a statistiky virtualni pameti
 
-#### CD/DVD
+## CD/DVD
 
 /usr/sbin/diag -c -d cd1 -T format -s initialize  
 cdeject /dev/cd0 ... vysune CD/DVD  
 
-#### system dump
+## system dump
 
 sysdumpdev ... prace s system dump FS
 sysdumpdev -P -p /dev/SysDumpP
@@ -244,14 +244,14 @@ sysdumpdev -e ... ukaze potrebne misto na system dump
 /usr/lib/ras/dumpcheck ... test, jestli je sysdompfs dost veliky
 kdb soubor ... analyza sysdumpu
 
-#### boot
+## boot
 
 bosboot -a ... vytvori bootovaci obraz a zmeni bootlist
 bootlist -m normal -o ... vylistuje bootlist (jinak meni bootlist)
 chpv -c hdisk0 ... zrusi bootovaci zaznam na hdisk0  
 ipl_varyon -i ... seznam hdisku, invormace o PVID a jestli jsou bootovatelne  
 
-#### Magneticke pasky
+## Magneticke pasky
 
 lsdev -Cc tape</tt> ... Vypise vsachna zarizeni pro praci s magnetickou paskou
 lscfg -vl rmt*</tt> ... Vypise informcae o vsech mechanikach (serial number, ...)
@@ -264,7 +264,7 @@ mt ... jako mctl
 tapechk 2 ... precte 2 blok z pasky
 tcopy /dev/rmt0.1 /dev/rmt1.1 ... prekopiruje rmt0 na rmt0  
 
-#### zalohovani
+## zalohovani
 
 ald_disk_copy ... vytvari klony rootvg  
 alt_rootvg_op -q -d hdisk0 ... nastavi jako boot disk hdisk0 z ald_rootvg managementu  
@@ -290,7 +290,7 @@ nim -o update -a packages='bos.alt_disk_install.rte' -a source='[full_path]' -a 
 nim -o cust -a lpp_source=[lpp_source] -a filesets=bos.alt_disk_install.rte [spot]  
 lsnim -a if master To see NIM master hostname  
 
-#### Storage, datova uloziste
+## Storage, datova uloziste
 
 [MPIO](http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/devmpio.htm)
 
@@ -317,7 +317,7 @@ datapath (devices.sdd.53.rte) - existuji zarizeni vpathX, ktere zastupuji cesty+
 /usr/sbin/pathtest
 ```
 
-#### dos
+## dos
 
 dosdir
 dosread
@@ -328,7 +328,7 @@ dosformat
 format ... (format diskette)
 flcopy ... (flopy copy)
 
-##### Rozsireni­ LV
+### Rozsireni­ LV
 
 *Zjistit, zda se nejedna o cluster, napr. smitty clverify. Vice v kapitole [manage_diagnose](manage_diagnose.html)*
 lsvg -l rootvg
@@ -340,11 +340,11 @@ lslv hd4
 chfs -a size=**X** /dev/hd4
 *Jde-li o cluster zvetsime* smitty hacmp
 
-##### Mirrorovani VG vg01 na jiny PV hdisk3
+### Mirrorovani VG vg01 na jiny PV hdisk3
 
 mirrorvg vg01 hdisk3
 
-##### Odstraneni/vymena PV hdisk3 ve VG vg01 za pouziti nahradni PV hdisk6
+### Odstraneni/vymena PV hdisk3 ve VG vg01 za pouziti nahradni PV hdisk6
 
 mkdev -c disk -l hdisk6
 extendfs vg01 hdisk6
@@ -352,11 +352,11 @@ mirrorvg vg01 hdisk6
 unmirror vg01 hdisk3
 reducevg vg01 hdisk3
 
-##### Nalezeni souboru k danemu i nodu
+### Nalezeni souboru k danemu i nodu
 
 find /home -xdev -inum 25 -print
 
-##### SAN Event (Storage Area Network)
+### SAN Event (Storage Area Network)
 
 date
 errpt
@@ -398,7 +398,7 @@ Synchronize a Shared Volume Group Definition
 ---------------------
 ```
 
-##### Rozsireni LV v clusteru
+### Rozsireni LV v clusteru
 
 smitty hacmp -> System management -> HACMP Logical Volume Manager -> Shared Logical Volumes -> Change a shared LV
 smitty hacmp -> System management -> HACMP Logical Volume Manager -> Shared Logical Volumes -> Set Characteristics of Shared LV -> Increase the Size of a Shared LV

@@ -1,6 +1,6 @@
 # IBM Streams
 
-### Sluzby
+## Sluzby
 
 Zookeeper
 authent
@@ -12,6 +12,6 @@ app
 arm
 sam
 
-### Logy
+## Logy
 
 /tmp/Streams-*/logs/`hostname`/instances/*/jobs/$JOB_ID

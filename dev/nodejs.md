@@ -1,8 +1,8 @@
 # Nodejs
 
-### Externi odkazy
+## Externi odkazy
 
-### Instalace offline (na intranetu)
+## Instalace offline (na intranetu)
 
 npm install -g npmbox ... instalace nmpbox balicku  
 npmbox npmbox ... stahne npmbox a zavislosti do balicku  
@@ -14,7 +14,7 @@ tar --no-same-owner --no-same-permissions -xvzf npmbox.npmbox ... rozbali se arc
 npm install --global --cache ./.npmbox.cache --optional --cache-min 99999999999 --shrinkwrap false npmbox ... nainstaluje se obsah balicku - npmbox  
 npmunbox pm2.npmbox --global ... nainstaluje se pm2 z baliku  
 
-##### Jiny zpusob
+#### Jiny zpusob
 
 npm cache clear  
 npm install -g **package.x.y.z**  
@@ -24,7 +24,7 @@ npm install --global --cache **/cache-whatever-folder** --optional --cache-min 9
 
 [offline-npm](https://www.npmjs.com/package/offline-npm) ... dalsi alternativa  
 
-##### Yarn
+#### Yarn
 
 npm i yarn -g ... Instalace Yarnu  
 yarn install ... instaluje balicky  
@@ -32,13 +32,13 @@ yarn lint ... spusti lint (z balicku lint)
 yarn start ... spusti nodejs  
 /usr/local/lib/node_modules/yarn/bin/yarn build ... spusti prikaz build (z balicku build - zabaleni web stranky webpackem do javascriptu)  
 
-### Konfigurace projektu a balicku
+## Konfigurace projektu a balicku
 
 ~/[.npmrc](https://docs.npmjs.com/cli/v6/configuring-npm/npmrc) ... lokalni soubor s nastavenim repozitare pro npm a yarm, [priklad konfigurace pro Azure DevOps](https://docs.microsoft.com/en-us/azure/devops/artifacts/npm/npmrc?view=azure-devops&tabs=windows)  
 package.json ... seznam balicku pro projekt (hlavni adresar projektu)  
 package-lock.json ... nastaveni omezeni balicku (verze, dev balicek - nepouzity v produkci, atd)  
 
-### nastaveni, bezpecnost
+## nastaveni, bezpecnost
 
 npm config set proxy http://proxy.company.com:8080 ... nastavi HTTP proxy  
 npm config set https-proxy http://proxy.company.com:8080 ... nastavi pouziti HTTPS proxy  

@@ -1,6 +1,6 @@
 # iis
 
-### Start/stop/status
+## Start/stop/status
 
 iisreset /start ... start IIS
 iisreset /restart ... restart IIS
@@ -8,11 +8,11 @@ iisreset /stop ... stop IIS
 net stop WAS ... Stop Windows Process Activation Service (WAS) a W3SVC
 net start W3SVC ... start IIS - WAS + W3SVC
 
-### Konfigurace
+## Konfigurace
 
 [https://docs.microsoft.com/en-us/iis/configuration/](https://docs.microsoft.com/en-us/iis/configuration/) ... dokumentace ke konfigurace (web.config)  
 
-### Logy
+## Logy
 
 C:\Windows\System32\LogFiles\HTTPERR\httperr28.log  
 C:\Windows\system32\inetsrv\appcmd.exe list config | select-string "logFile.*directory"  
@@ -20,7 +20,7 @@ Get-EventLog Application | where Source -like "w3*"
 Get-EventLog Application | where Source -like ".NET*"  
 Get-WinEvent -LogName Microsoft-IIS-Configuration/Administrative | select -first 10  
 Get-WinEvent -LogName Microsoft-IIS-Configuration/Operational | select -first 10  
-### Prikazy
+## Prikazy
 
 dir IIS:\AppPools\MyAppPool\WorkerProcesses\ | % { Stop-Process -id $_.processId } ... zabije vsechny workery  
 cd c:\windows\system32\inetsrv; .\appcmd list wp ... sezam workeru  
@@ -40,7 +40,7 @@ gwmi -NS 'root\WebAdministration' -class 'WorkerProcess' | select AppPoolName,Pr
 .\appcmd.exe set config -section:httpRuntime /maxRequestLength:102400 ... prida/zmeni atribut maxRequestLength s hodnotou 102400  
 .\appcmd.exe set config -section:system.webServer/security/requestFiltering /requestLimits.maxAllowedContentLength:"104857600" ... zmeni/prida klic a atribut  
 
-### PowerShell
+## PowerShell
 
 Get-LocalIISSite ... informace o Site  
 Get-WebConfigurationProperty -Filter "//defaultDocument/files/add" -PSPath "IIS:\Sites\D

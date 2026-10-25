@@ -1,19 +1,19 @@
 # itarch
 
-### Externi odkazy
+## Externi odkazy
 
 IEEE 1471-2000 standard  
 
-### Software
+## Software
 
 [https://www.draw.io/](https://www.draw.io/) ... online kreselni prezentaci, vcetne obrazku a ikon znamych poskytovatelu  
 
-### IT (Software) architektura
+## IT (Software) architektura
 
 [Software_architecture](https://en.wikipedia.org/wiki/Software_architecture) ... pekny popis na wikipedii, seznam arch stylu atd.  
 [Architectural pattern](https://en.wikipedia.org/wiki/Architectural_pattern) ... pekny popis architektonickych vzoru  na wikipedii  
 
-### Architektonicke metody:
+## Architektonicke metody:
 
 [Wikipedia - Software_architecture_analysis_method](https://en.wikipedia.org/wiki/Software_architecture_analysis_method)  
 [http://trese.cs.utwente.nl/taosad/E-Tutorials/ClassificationOfSAMethods.pdf](http://trese.cs.utwente.nl/taosad/E-Tutorials/ClassificationOfSAMethods.pdf)  
@@ -23,13 +23,13 @@ IEEE 1471-2000 standard
 * Pattern-driven
 * Domain-driven
 
-### Aspekty
+## Aspekty
 
 1. funkcni aspekt - funkcionalita  
 2. technicky aspekt - procesy, implementace atd.  
 3. business aspekt - financni, cas dodani atd.  
 
-#### Techinicke aspekty
+### Techinicke aspekty
 
 1. planovani kapacity  
 2. zaloho a obnoveni  
@@ -40,7 +40,7 @@ IEEE 1471-2000 standard
 7. sit  
 8. vykonnost  
 
-### Referencni architektury
+## Referencni architektury
 
 [Cloud Customer Architecture for hybrid integration](http://www.cloud-council.org/deliverables/cloud-customer-architecture-for-hybrid-integration.htm)  
 [The evolving hybrid integration reference architecture](https://www.ibm.com/developerworks/library/mw-1606-clark-trs/index.html)  
@@ -49,7 +49,7 @@ IEEE 1471-2000 standard
 [IBM Architecture center](https://www.ibm.com/devops/method/category/architectures/)  
 [AWS Architecture Center](https://aws.amazon.com/architecture/?nc1=f_cc)  
 
-### Prezentace
+## Prezentace
 
 [https://www.microsoft.com/en-us/download/confirmation.aspx?id=41937](https://www.microsoft.com/en-us/download/confirmation.aspx?id=41937) ... Obrazkova galerie symboly pro Azure  
 
@@ -62,6 +62,6 @@ IEEE 1471-2000 standard
 * Demo uvest strankou demo, at se posluchac pripravi a naladi
 * Prednes - dynamicky, pauzy, emoce
 
-### IT reseni
+## IT reseni
 
 [sw:service_mesh](sw/service_mesh)

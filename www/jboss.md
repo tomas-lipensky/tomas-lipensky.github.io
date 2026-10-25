@@ -4,11 +4,11 @@
 [Dokumentace k JBoss](http://www.jboss.org/jbossas/docs)  
 [http://localhost:8080/](http://localhost:8080/)  
 
-### Aplikace pro JBoss:
+## Aplikace pro JBoss:
 
 napr. [FAS](http://www.cse.chalmers.se/research/hats/node/150) (Fredhopper Access Server)  
 
-### Start/stop
+## Start/stop
 
 echo $JAVA_HOME ... overeni cesty k Java JDK  
 echo $JBOSS_HOME ... overeni cesty k JBoss  
@@ -18,26 +18,26 @@ bin/shutdown -S ... ukonceni JBoss
 bin/standalone.sh -b 1.2.3.4 -bmanagement  1.2.3.4 ... spusti JBoss v standalone modu, aplikace na ip 1.2.3.4, admin konzole na 1.2.3.4  
 ./standalone.sh server-config=standalone-full-ha.xml -b 1.2.3.4 -bmanagement  1.2.3.4 ... pouzije profil full-ha  
 
-### Profily
+## Profily
 
 ls server/* ... seznam profilu  
 server/default/conf/jboss-service.xml ... zakladni sluzby profilu  
 
-### Konfigurace
+## Konfigurace
 
 mgmt-users.properties ... definice uzivatelu do admin konzoly, lze pridat pomoci add-user.sh  
 bin/add-user.sh ... prida uzivatele na manageovani, ci do aplikace  
 
-### Jboss CLI
+## Jboss CLI
 
 bin/jboss-cli.sh --connect controller=1.2.3.4:9999 ... pripoji CLI k domain controlleru 1.2.3.4:9999  
 help ... help  
 ls ... info  
 shutdown --host hostone ... stopne hosta  
 
-### Sluzby
+## Sluzby
 
-### twiddle
+## twiddle
 
 twiddle je nastroj na ziskani a pracovani s Mbeans z JBoss instance.
 
@@ -63,10 +63,10 @@ get jboss.system:type=Log4jService,service=Logging”  ... Getitng Jboss Logging
 get jboss.system:service=ThreadPool  ... Getting Thread Pool information:  
 jboss:service=invoker,type=jrmp  
 query "jboss.jca:service=DataSourceBinding,*"  ... Listing all datasources available  
-name=###,service=DataSourceBinding ... To work with datasources use these mbeans, where ### is name of DS.  
-name=###,service=LocalTxCM  
-name=###,service=ManagedConnectionFactory  
-name=###,service=ManagedConnectionPool  
+name=##,service=DataSourceBinding ... To work with datasources use these mbeans, where ## is name of DS.  
+name=##,service=LocalTxCM  
+name=##,service=ManagedConnectionFactory  
+name=##,service=ManagedConnectionPool  
 
 ==Dulezite atributy==:
 ConnectionCount shows how many connections are currently open to the database.  
@@ -75,40 +75,40 @@ ConnectionCreatedCount keep running totals of the number of connections created
 Connection-DestroyedCount keep running totals of the number of connections destroyed by the pool  
 MinSize and MaxSize can be changed permanently in the xml configuration file.  
 
-##### Logovani : Log4j (Jakarta) - org.jboss.logging.Log4jService
+#### Logovani : Log4j (Jakarta) - org.jboss.logging.Log4jService
 
 server/PROFIL/conf/jboss-log4j.xml ... nastaveni logovani  
 
-##### Bezpecnost : JAAX - org.jboss.security.plugins.JaasSecurityManagerService
+#### Bezpecnost : JAAX - org.jboss.security.plugins.JaasSecurityManagerService
 
 server/PROFIL/deploy/SERVICE.war/WEB/jboss-web.xlm ... (security-domain)  
 server/PROFIL/deploy/SERVICE.war/WEB/web.xlm ... (security-constraint)  
 server/PROFIL/conf/login-config.xml ... (application-policy)  
 
-##### JNDI : JNDI - org.jnp.server.NamingBeanImpl, org.jboss.naming.NamingService, org.jboss.naming.NamingProviderURLWriter, org.jboss.naming.JNDIView
+#### JNDI : JNDI - org.jnp.server.NamingBeanImpl, org.jboss.naming.NamingService, org.jboss.naming.NamingProviderURLWriter, org.jboss.naming.JNDIView
 
-##### JDBC
+#### JDBC
 
 [Oracle 10 JDBC](http://www.oracle.com/technetwork/database/enterprise-edition/jdbc-10201-088211.html) ovladace  
 Datasource settings are in files *-ds.xml. There are all necessary settings.  
 
-#### jms=
+### jms=
 
 http://docs.redhat.com/docs/en-US/JBoss_Enterprise_SOA_Platform/5/html/ESB_Administration_Guide/chap-configuration.html#active_mq
 
-### Aplikace
+## Aplikace
 
-##### Tomcat
+#### Tomcat
 
 /server/PROFIL/deploy/jbossweb.sar/server.xml  
 
-##### [Duke's Bank](http://download.oracle.com/javaee/5/tutorial/doc/gexaj.html)
+#### [Duke's Bank](http://download.oracle.com/javaee/5/tutorial/doc/gexaj.html)
 
-##### [First Cup](http://download.oracle.com/javaee/6/firstcup/doc/gcqzl.html)
+#### [First Cup](http://download.oracle.com/javaee/6/firstcup/doc/gcqzl.html)
 
-##### [Java2EE priklady](http://www.oracle.com/technetwork/java/javaee/downloads/index.html)
+#### [Java2EE priklady](http://www.oracle.com/technetwork/java/javaee/downloads/index.html)
 
-### Produkty JBoss
+## Produkty JBoss
 
 JBoss Enterprise Application Platform (JBoss EAP)... JBoss Application Server + Hibernate + JBoss Seam + JBoss Web Framework Kit  
 JBoss Enterprise Web Platform (or JBoss EWP) ... JBoss Enterprise Application Platform s odlechcenym profilem JBoss Applikacniho serveru  
@@ -128,10 +128,10 @@ GateIn Portal ... JBoss Portal + eXo Portal
 JBoss Developer Studio (JBDS) ... vyvojove prostredi postavene na Eclipse s nastroji JBoss Tools  
 JBoss Federated Single Sign-On (JBoss SSO) ... Soucast JBoss SOA Platform na jedno prihlaseni do federovaneho systemu  
 
-### Ostatni produkty
+## Ostatni produkty
 
 [RootCause Transaction Instrumentation](http://www.rtiperformance.com/what-is-rti) (RTI) je rozsizeni JON o performance aplikaci (response time, reporting, analyzy)  
 
-### Vykon
+## Vykon
 
 [Tipy na ladeni vykonu](http://www.agileload.com/agileload/blog/2013/01/31/jboss-enterprise-application-platform-performance-tuning)

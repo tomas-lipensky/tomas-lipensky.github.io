@@ -2,11 +2,11 @@
 
 [https://cloud.google.com/](https://cloud.google.com/)
 
-### gcloud
+## gcloud
 
 Google Cloud CLI
 
-#### Kubernetes
+### Kubernetes
 
 gcloud container clusters create linuxfoundation  ... vytvoření Kubernetes clusteru  
 gcloud container clusters list ... seznam clusterů  

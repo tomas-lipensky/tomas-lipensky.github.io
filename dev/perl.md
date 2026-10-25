@@ -1,7 +1,6 @@
 # Perl
 
-
-### Externi odkazy
+## Externi odkazy
 
 [Systemove promenne](perl-promenne.html)  
 [1radkovi perlici](http://www.catonmat.net/download/perl1line.txt)  
@@ -19,7 +18,7 @@
 [Perl Best Practice](http://buhoz.net/public/books/lenguajes/perl/Perl.Best.Practices.Jul.2009.pdf)  
 [Perl for Sysadmins](http://docstore.mik.ua/orelly/perl/sysadmin/)  
 
-### Binarky perlu
+## Binarky perlu
 
 perl -e 'print scalar localtime(1234567890)"\n"' ... prevede cas v sekundach do citelne podoby  
 perl -e 'print crypt("mypassword","Bz");' ... Zahashuje "mypassword" pro uziti v /etc/shadow  
@@ -39,13 +38,13 @@ cpan -i Nagios::NRPE::Packet ... stahne a nainstaluje modul Nagios::NRPE::Packet
 PERL_MM_USE_DEFAULT=1 perl -fi PAR::Packer ... stahne a nainstaluje modul PAR::Archive bez ptani na zavislosti  
 PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install PAR::Packer' ... jina alternativa instalace CPAN modulu bez ptani  
 
-### One liners - jednoradkace
+## One liners - jednoradkace
 
 cat last-1.xml | perl -MHTML::Entities -lne 'print decode_entities($_)' ... dekoduje HTML kodovani (apersand kodovani &apm;xxx;)
 
 echo "12/11/2016 00:53:24"|perl -MTime::Local -lne'my ($a,$b,$c,$d,$e,$f)=split(/[\s\/:]+/, $_);my $time = timelocal($f,$e,$d,$a,$b-1,$c); print "$time";'
 
-### Promenne
+## Promenne
 
 $A=1;  
 
@@ -72,7 +71,7 @@ defined($PROMENNA) ... vrati 1/0 jestli je promenna definovana/je typu undef
 \@POLE ... vrati adresu pameti, na ktere se nachazi pole  
 \@POLE->[0] ... prvni prvek pole  
 
-### Operatory
+## Operatory
 
 Numericke:  
 $i=1; ... prirazeni;
@@ -120,7 +119,7 @@ $multiline_string=~ /(zacatek bloku.*?)konec bloku/s; ... viceradkovy retezec s 
 (-D file > 30) ... vrati zda je soubor starsi 30 dni  
 ([-f file](http://www.cs.cf.ac.uk/Dave/PERL/node69.html) ... vrati zda je cesta soubor  
 
-### Cykly, podminky, vlastni funkce a knihovny
+## Cykly, podminky, vlastni funkce a knihovny
 
 for ($i=1;$i<=10;$i++) { print "$i \n"; }  
 
@@ -153,7 +152,7 @@ sub FUNKCE [(prototyp)] { print @_; $_; } ... definice vlastni funkce (podmodulu
 return [hodnota]; ... vrati hodnotu  
 use jméno_modulu [[verze]seznam] ... pouziti moduku, knihovny  
 
-### Prace s poli
+## Prace s poli
 
 grep { $_ > 4 } (1 2 3 4 5 6 7 8) ... vrati pole obsahujici cisla vetsi jak 4 (podpole puvodniho)  
 
@@ -173,7 +172,7 @@ splice (1,2,3,4,5) , 2, 2, (7,8,9) ... za 2 prvkem smaze 2 prvky z pole a nahrad
 @POLE2=sort funkce keys %HASH ... setridi hodnoty hashe podle funkce funkce  
 @INDEXY=sort { $POLE[$a] cmp $POLE[$b] } 0 .. ((scalar @POLE)-1); ... vrati indexy setrideneho pole alfanumericky  
 
-### Prace s hashi (asociativnimi poli)
+## Prace s hashi (asociativnimi poli)
 
 delete $HASH{'A'}; ... smaze prvek A hashe HASH  
 exists $HASH{'A'}; ... zkontroluje, jestli se klic A nachází v hashi HASH  
@@ -182,7 +181,7 @@ keys %HASH; ... vrati seznam indexu seznamoveho hashe HOST, u skalarniho hashe p
 values %HASH; ... vrati seznam vsech hodnot hashe HASH  
 each(%HASH); ... vrati dvojici dalsiho zaznamu z hashe ($KLIC,$ZAZNAM)  
 
-### Prace s retezci
+## Prace s retezci
 
 chomp $I ... zmeni retezec $I - smaze novy radek na konci retezce, vrati pocet zmen  
 chomp @I ... smaze konce radku v seznamu, vrati pocet zmen  
@@ -210,7 +209,7 @@ split [vzorek[,výraz[,limit]]]; - rozd&#283;lí výraz podle zadaného vzorku, 
 substr(text,index_pocatku) ... vypise cast textu text od pismene s indexem index_pocatku. Pokud je index_pocatku zaporny, bere se pocet znaku od konce textu  
 substr(text,index_pocatku,delka) ... vypise cast textu text od pismene s indexem index_pocatku o delce delka znaku. Pokud je index_pocatku zaporny, bere se pocet znaku od konce textu. Pokud je delka zaporna, bere se delka do konce textu, a neukaze se poslednich delka znaku  
 
-### Prace s cisly:
+## Prace s cisly:
 
 abs výraz; - vrací absolutní hodnotu výrazu  
 atan2 y,x; - vrací arctangens y/x v rozsahu od -pi do pi  
@@ -227,14 +226,14 @@ srand výraz; - nastavuje výchozí hodnotu pro rand
 chr výraz; - vrací znak o ASCII hodnot&#283; výrazu  
 hex výraz; - p&#345;evádí hexadecimální výraz na desítkovou hodnotu  
 
-### Cas:
+## Cas:
 
 time; ... vrací UNIXový &#269;as, po&#269;et sekund od 1.1.1970 8:8  
 
 @timeData = localtime(time); ... Vrati pole (minuta hodina den mesic rok-1900 den_v_tydnu den_v_roce)  
 gmtime výraz; - konvertuje unixový &#269;as na "lidský"; ve skalární souvislosti vrací &#269;as v plném tvaru (den v týdnu, m&#283;síc, den v m&#283;síci, &#269;as, rok), v seznamovém kontextu vrací tyto hodnoty rozlozené (vte&#345;ina, minuta, hodina, den, msíc, rok, den v týdnu, den v roce, letní &#269;as), m&#283;síce za&#269;ínají 0 - leden a dny v týdnu 0 - ned&#283;le  
 
-### vstup/vystup
+## vstup/vystup
 
 print "Ahoj\n"; ... tisk do vychoziho vstupu  
 print STDOUT "Jak se mas\n","Dobre",$OTAZNIK; ... tisk do vystupu STDOUT  
@@ -272,13 +271,13 @@ open(MAIL, "| /bin/mailx -s test user\@localhost ") || die "Chyba: $!\n";
 print MAIL "Ahoj";
 ```
 
-### Soubory/adresare
+## Soubory/adresare
 
 [chmod](http://perldoc.perl.org/functions/chmod.html) ... zmena prav k souboru  
 [IO::Uncompress::Unzip](http://stackoverflow.com/questions/16288977/perl-reading-zip-files-with-iouncompressanyuncompress) ... unzip  
 [-x -e -d -f](http://perldoc.perl.org/functions/-X.html) ... zjisti zda soubor je spustitelny, existuje, je to adresar, soubor atd.  
 
-### Ostatni
+## Ostatni
 
 $ENV{'PATH'} ... hodnota promenne PATH z shellu  
 $ARGV[0] ... prvni hodnota argumentu z volani funkce  
@@ -289,7 +288,7 @@ open(PS,"ps -ef |"); while ( &lt;PS&gt; ) { } ... spusti program, vystup jde do 
 exec("cp", "*", "/"); spusti program prikaz "cp * /" a ukonci program (pokud program existuje)  
 sleep 60; ... pocka 60 sekund  
 
-### Moduly
+## Moduly
 
 use lib 'directory'; ... prida cestu do @INC, kde hleda knihovny  
 PERL5LIB=$PERL5LIB:. ... prida cestu do @INC, kde perl hleda knihovny  

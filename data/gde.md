@@ -1,6 +1,6 @@
 # Infosphere Guardium Data Encryption - GDE
 
-### Externi odkazy
+## Externi odkazy
 
 [System Requirements](http://www-01.ibm.com/support/docview.wss?uid=swg27027174)  
 [Firewall pravidla pro GDE](http://www-01.ibm.com/support/docview.wss?uid=swg21569674)  
@@ -12,28 +12,28 @@ DSM - Data Security Manager - server, kde se spravuji (nastavuji) klice, agenti,
 
 Web management jede na portu 8445.
 
-### Instalace DSE
+## Instalace DSE
 
 [Popis instalace a registrace GDE](http://www-01.ibm.com/support/docview.wss?uid=swg21694412)  
 [Problemy s instalaci](http://www-01.ibm.com/support/docview.wss?uid=swg21960032)  
 
-#### Start/stop/info
+### Start/stop/info
 
 service cgss restart  
 /opt/vormetric/DataSecurityExpert/agent/vmd/bin/check_host  
 ssh <host> -l cliadmin;  system; restart  
 vmsec status | grep -i vmd_URL
 
-### konfigurace
+## konfigurace
 
 /opt/vormetric/DataSecurityExpert/agent/vmd/bin/register_host
 
-### logy
+## logy
 
 /var/log/vormetric/vorvmd_root.log  
 C:\ProgramData\Vormetric\DataSecurityExpert\agent\log\vorvmd.log  
 
-### Ovladani prikazovou radkou
+## Ovladani prikazovou radkou
 
 [vmssc](http://www.ibm.com/developerworks/cloud/library/cl-installguardium/)  -s $DSM_HOST_IP -u $DSM_LOGIN_NAME -p $DSM_LOGIN_PASSWD -d $DSM_DOMAIN server ... pripojeni na server  
 ./vmssc server show -h vormetric.dsm  
@@ -48,7 +48,7 @@ C:\ProgramData\Vormetric\DataSecurityExpert\agent\log\vorvmd.log
 
 Jiny nazev pro agenty je VTE - Vormetric Transparent Encryption, starsi nazev VEE - Vormetryc Encryption Expert
 
-#### start/stop/info
+### start/stop/info
 
 service secfs start  
 systemctl stop secfs-init  
@@ -68,12 +68,12 @@ secfsd -status auth
 secfsd -status lockstat  
 secfsd -status policy ... seznam aktivnich politik  
 
-#### install
+### install
 
 ./vee-fs-xxxxxx.bin ... interaktivni mod  
 sh vee-fs-xxxxxx.bin -e ... rozbali jen balicek  
 
-### Registrace agenta
+## Registrace agenta
 
 vmd/bin/register_host
 [Problemy s registraci agenta](http://www-01.ibm.com/support/docview.wss?uid=swg21694500)  
@@ -94,7 +94,7 @@ pkgadd -d ./vee-fs/*.pkg ... instalace na solarisu, pro bff, rpm se pouzije nati
 installp -aX -d ./vee-fs-*.bff vee.fs  
 /opt/vormetric/DataSecutipyExpert/agent/vmd/bin/uninstall
 
-### logy
+## logy
 
 /var/log/vormetric/secfsd.log  
 

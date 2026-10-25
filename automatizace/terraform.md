@@ -2,7 +2,7 @@
 
 Terraform je abstrakce pro konfiguraci infrastruktury (jak ARM, mozna Cloud Foundry, ...)
 
-### Komponenty
+## Komponenty
 
 tflint ... linter - zkontroluje kód a navrhne změny kvůli čitelnosti a standartizaci kódu  
 terraform-doc ... automatické generování dokumentace  
@@ -10,14 +10,14 @@ Terratest ... testovani Tarraformovych sablon
 Terragrunt ... umí generovat terraformy podle terragrunt parametrů - terraform soubory jsou šablona s parametrama  
 Yeoman ... pro praci s modulama  
 
-#### soubory
+### soubory
 
 main.tf ... povinny soubor, ktery se odkazuje na dalsi  
 inputs.tf ... nadefinovane vstupni promenne  
 terraform.tfvars ... pevne definovane vychozi promenne  
 terraform.tfstate ... status nasazenych zdroju, muze obsahovat citlive udaje  
 
-#### systémové proměnné
+### systémové proměnné
 
 TF_LOG=TRACE ... úroveň logování, DEBUG, INFO, WARN, ERROR  
 TF_LOG_CORE, TF_LOG_PROVIDER ... úroveň logování jednotlivých složek  
@@ -27,7 +27,7 @@ TF_VAR_promenna=hodnota ... nastavení hodnoty proměnné pro tf soubory
 TF_WORKSPACE=prod ... nastavení workspace  
 TF_DATA_DIR=/prod ... kde se nachárá .terraform složka  
 
-#### prikazy
+### prikazy
 
 cd /adresar .. prejdu do adresare ktery obsahuje main.tf
 terraform init ... vytvori si docasne soubory, kde si kompiluje tf soubory  
@@ -47,13 +47,13 @@ terraform force-unlock 9db590f1-b6fe-c5f2-2678-8804f089deba ... udemknutí tfsta
 terraform workspace list ... vylistuje worspaces - prostřředí = instance tfstate souboru  
 terraform workspace select prod ... vybere workspace prod a nastaví ho jako výchozí  
 
-### tf moduly
+## tf moduly
 
 [terraform-aws](terraform-aws)  
 
-### tf soubory
+## tf soubory
 
-#### locals {}
+### locals {}
 
 seznam_jmen = [for i in var.jmena: "$i.txt"]  
 
@@ -71,7 +71,7 @@ variable "muj_tuple" {
 }
 ```
 
-##### datové struktury
+#### datové struktury
 
 list ... uspořádaný seznam hodnot stejného typu  
 tuple ... uspořádaný seznam hodnot růžných typů  
@@ -80,11 +80,11 @@ map ... asociativní pole
 object ... seznam objektů  
 toset()
 
-#### output "timestamp" {}
+### output "timestamp" {}
 
-#### import{}
+### import{}
 
-#### moved{}
+### moved{}
 
 přejmenuje v tfstate (při refaktoringu objektů
 
@@ -93,7 +93,7 @@ from = resource.id
 to = resource.id
 }
 
-#### remove{}
+### remove{}
 
 odstraní z tfstate (jako terraform state rm)
 
@@ -104,20 +104,20 @@ lifecycle {
 }
 }
 
-#### provider {}
+### provider {}
 
-#### check {}
+### check {}
 
 data ... ziská data pro test  
 assert ... condition a error_message  
 
-#### provisioner {}
+### provisioner {}
 
 local-exec  
 remote-exec  
 file  
 
-#### resource {}
+### resource {}
 
 terraform_data ... třeba local  
 null_resource  
@@ -144,13 +144,13 @@ lifecycle{
 timeout ... timeout pro ukončení aktivity na resourcu, zachrání to tfstate, když to ukončí něco z venku násilně  
 provider = aws-we ... použití provideru s daným aliasem  
 
-#### podmínky a iterace
+### podmínky a iterace
 
 count=var.istest == true ? 1 : 0 ... podmínka  
 count=3 ... provede blok 3x  
 for_each = [for i in local.instances: "i.name"]  
 
-#### funkce
+### funkce
 
 sensitive() ... obsah se považuje za důvěrný obsah, nezobrazí se ve výstuperch  
 merge() ... sloučí mapy, poslední má přednost  

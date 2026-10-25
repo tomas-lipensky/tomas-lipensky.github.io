@@ -1,6 +1,6 @@
 # LINUX - Cluster
 
-### Externi odkazy
+## Externi odkazy
 
 [xCAT](http://www.alphaworks.ibm.com/tech/xCAT) - Extreme Cluster Administration Toolkit - kolekce Perk a ksh skriptu atd. k ovladani clusteru  
 [CSM](http://www-1.ibm.com/servers/eserver/clusters/software/) Cluster System Management - zpusob na centralni zpravovani clusteru  
@@ -14,7 +14,7 @@
 Filesystemy pro Cluster: [http://opengfs.sourceforge.net](http://opengfs.sourceforge.net)Open Global File System]], [General Parallel File System for Linux](http://www-1.ibm.com/servers/eseerver/clusters/software/gpfs.html),
 [Journaled File system](http://www-124.ibm.com/developerworks/opensource/jfs/), [ext3](http://olstrans.sourceforge.net/release/OLS2000-ext3/)  
 
-### RedHat clustering
+## RedHat clustering
 
 system-config-cluster  
 cluquorumd ... Quorum daemon  

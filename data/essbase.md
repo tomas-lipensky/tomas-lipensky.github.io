@@ -5,6 +5,6 @@ EPM (Enterprise Performance Management) se sklada ze 2 hlavnich soucasti - Plann
 http://machine:19000/workspace  
 http://machine:19000/interop  
 
-### Externi odkazy
+## Externi odkazy
 
 [Oracle dokumentace - manazovani aplikaci a databazi](https://docs.oracle.com/cd/E12825_01/epm.111/esb_dbag/frameset.htm?dappdb.htm)

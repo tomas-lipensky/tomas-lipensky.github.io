@@ -2,12 +2,12 @@
 
 Automatizace nasazování databázových změn. Verzování změn, nasazování změn spolu s verzí aplikace.
 
-#### CMD
+## CMD
 
 liquibase --version  
 liquibase --secure-parsing=false --defaultsFile=liquibase.docker.properties update --changelog-file db.changelog-master.xml  
 
-#### JAVA client
+## JAVA client
 
 `java -jar liquibase.jar --driver com.mysql.jdbc.Driver --classpath=mysql-connector-java-5.1.43-bin.jar --username=USR --password=PWD --url=jdbc://localhost/lb --changeLogFile=xmlsample/changelog.xml update` ... update operace nad mysql  
 `java -jar liquibase.jar --driver oracle.jdbc.driver.OracleDriver --classpath=ojdbc7.jar  --username=USR --password=PWD --url=jdbc:oracle:thin:@IP:1521/DB --changeLogFile=xmlsample/changelog.xml rollbackCount 1` ... rollback operace o jeden krok nad Oracle databází  

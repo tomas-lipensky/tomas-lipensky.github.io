@@ -1,6 +1,6 @@
 # Tomas Lipensky - UNIX - Sluzby
 
-##### [ntp](http://www.akadia.com/services/ntp_synchronize.html)
+## [ntp](http://www.akadia.com/services/ntp_synchronize.html)
 
 /usr/sbin/ntpdate -s -b -p 8 -u 129.132.2.21 ... synchronizace casu se serverem
 /etc/ntp.conf ... nastaveni serveru ntpd

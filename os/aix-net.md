@@ -1,6 +1,6 @@
 # AIX - sitove nastaveni, tcp/ip
 
-#### info
+## info
 
 arp testhost ... ukaze ARP zaznam pro testhost  
 dig -x 10.217.1.206 ... prelozi ip na jmeno  
@@ -45,11 +45,11 @@ tcpdunp -i en0 host 1.2.3.4 ... Ukazuje pakety mezi pocitacem a adresou 1.2.3.4
 traceroute 1.2.3.4  
 tracert 1.2.3.4  
 
-#### start/stop
+## start/stop
 
 /etc/rc.tcpip ... stusteni site pri startu
 
-#### konfigurace
+## konfigurace
 
 chdev -l 'en1' -a alias4=128.0.1.4,255.255.255.0 ... (= smit inetalias) prida alias sitove karty
 chdev -l 'en1' -a delalias4=128.0.1.4,255.255.255.0 ... (= smit inetalias) smaze alias sitove karty
@@ -61,7 +61,7 @@ mktcpip -hostname VIO1 -inetaddr 1.2.3.4 -start -netmask 255.0.0.0 -gateway 1.2.
 chdev -dev en3 -attr netaddr=10.0.0.5 netmask=266.0.0.0 state=up ... nastavi dalsi sitovou kartu a adresu  
 /etc/resolv.conf ... Nastaveni DNS serveru
 
-#### ether channel - virtualni adapter
+## ether channel - virtualni adapter
 
 lsdev -Cc adapter | grep -i ether ... virtualni adaptery
 lsattr -El ent7 ... parametry virtualnich adapteru a prim/sec karty + ping test
@@ -71,7 +71,7 @@ smitty ethercannel ... konfigurace ethercannel pres smitty
 chdev -l eth7 -a backup_adapter=ent5 ... zmeni backup adapter pro etherchannel ent7
 ethchan_config ... zmena dalsich parametru pro etherchannel
 
-#### connect
+## connect
 
 tn (telnet)
 ftp
@@ -83,11 +83,11 @@ ftp
 pdconfig
 ```
 
-#### Preklad adres na IP
+## Preklad adres na IP
 
 /etc/netsvc.conf ... poradi prekladu adres - lokalni, bind atd  
 
-#### Firewall
+## Firewall
 
 lsfilt -a -v4 -O ... vylistuje pravidla. Pokud neexistuje /dev/ipsec4_filt, filtrovani paketu neni zaple  
 smitty ipsec4 ... zapne ipsec - packet filtering  

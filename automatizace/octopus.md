@@ -1,8 +1,8 @@
 # Octopus
 
-### Agent - Tentacle
+## Agent - Tentacle
 
-##### Instalace
+### Instalace
 
 $URL='https://download.octopusdeploy.com/octopus/Octopus.Tentacle.3.24.0-x64.msi'  
 $output = "C:\Windows\Temp\Octopus.Tentacle.3.24.0-x64.msi"  
@@ -10,11 +10,11 @@ Invoke-WebRequest -Uri $url -OutFile $output
 . $output  
 msiexec /i $output /quiet  
 
-##### Ziskani otisku prstu ze serveru
+### Ziskani otisku prstu ze serveru
 
 C:\Program Files\Octopus\Tentacle\Tentacle.exe show-thumbprint --instance "Tentacle" --nologo  
 
-##### Inicializace
+### Inicializace
 
 cd "C:\Program Files\Octopus Deploy\Tentacle"  
 ./Tentacle.exe create-instance --instance "Tentacle" --config "C:\Octopus\Tentacle.config" --console  
@@ -26,16 +26,16 @@ netsh advfirewall firewall add rule "name=Octopus Deploy Tentacle" dir=in action
 ./Tentacle.exe register-with --instance "Tentacle" --server "https://OCTOPUS_SERVER" --apiKey="API-xxxxx" --role "Management" --environment "Management" --comms-style TentaclePassive --console  
 ./Tentacle.exe service --instance "Tentacle" --install --start --console
 
-### Nastroje
+## Nastroje
 
 octopack ... zabali cely framework .NET aplikaci z CI build procesu  
 [octo.exe](https://octopus.com/docs/packaging-applications/creating-packages/nuget-packages/using-octo.exe) ... dalsi balickovaci nastroj na .NET aplikace, vice flexibilni  
 [octopus.server.exe](https://octopus.com/docs/octopus-rest-api/octopus.server.exe-command-line/configure) ... nastroj na konfigurace Octopus Deploy serveru  
-### Promenne
+## Promenne
 
 [Systemove promenne](https://octopus.com/docs/deployment-process/variables/system-variables)  
 
-### Octopus API
+## Octopus API
 
 [https://octopus.com/docs/api-and-integration/api](https://octopus.com/docs/api-and-integration/api)  
 URL/api  

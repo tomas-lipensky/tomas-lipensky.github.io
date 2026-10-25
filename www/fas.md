@@ -1,6 +1,6 @@
 # FAS - Fredhopper Access Server
 
-### Externi odkazy:
+## Externi odkazy:
 
 [FAS](http://www.cse.chalmers.se/research/hats/node/150) (Fredhopper Access Server)  
 [Clanek a dokumnetace k FAS](http://www.itu.dk/courses/DSDS/F2010/notes/j_kohne_thesis.pdf)  
@@ -9,7 +9,7 @@
 [ETL](http://en.wikipedia.org/wiki/Extract,_transform,_load)Extract Transform Load proces  
 [SDL Fredhopper](http://retailingtoday.com/article/sdls-cloud-based-solution-optimizes-online-shopping-experience) - clanek  
 
-### Fredhopper
+## Fredhopper
 
 Produkt Fredhopper - FAS je program, ktery umi naseptavat pri psani textu do vyhledavaciho policka, umi zobrazovat relevantni produkdy atd., umi strukturovat url tak,
 aby vyhledavace umely prohledat web (SEO) a umi reportovat data z fredhopperu. Soucasti fradhoperu jsou:
@@ -30,7 +30,7 @@ aby vyhledavace umely prohledat web (SEO) a umi reportovat data z fredhopperu. S
 
 Kazda instance obahuje vlastni procesy. Tyto procesu jsou: searchindexer, xmlloader, treebuilder, syncclient, syncserver, reporting, qserver.
 
-##### Single Start/Stop
+#### Single Start/Stop
 
 $FAS/bin/qserver ... start qserveru  
 $FAS/bin/reporting ... start reportingu  
@@ -45,7 +45,7 @@ $FAS/bin/reporting stop ... stop
 /home/fredhopper/instance01/FAS/bin/treebuilder -u catalog01 -U 0 -I 1  
 /home/fredhopper/instance01/FAS/bin/xmlloader -I 1  
 
-##### info
+#### info
 
 ps -ef | grep java | awk -F"/" '{ a=1; for (i=1; i<=NF; i++) if [^1]
 
@@ -56,9 +56,9 @@ $[^2]
 
 [^2]:  $($FAS/bin/get-qserver-port) + 100  ... port, na kterem bezi reporting  
 
-### Deployment Agent
+## Deployment Agent
 
-##### Start/Stop/Status
+#### Start/Stop/Status
 
 Sluzba ktera umoznuje ovladat jednotlive instance a nabizi k tomu krome klienta (deployment-agent-client) i webove rozhrani (http://localhost:8177).
 
@@ -66,7 +66,7 @@ Sluzba ktera umoznuje ovladat jednotlive instance a nabizi k tomu krome klienta 
 ~/bin/deployment-agent start/stop ... Nastartuje/zastavi DA pomoci ~/deployment-agent/bin/deployment-agent  
 ~/deployment-agent/bin/deployment-agent ... Spusti java proces s com.fredhopper.deployment.agent.AgentBooter tridou  
 
-##### Ovladani a konfigurace pomoci Deployment agenta
+#### Ovladani a konfigurace pomoci Deployment agenta
 
 bin/deployment-agent-client ... vypise napovedu k prikazum  
 bin/deployment-agent-client info ( http://localhost:8177 ) ... vypise informace o instancich, verzi DA atd.  
@@ -104,7 +104,7 @@ bin/deployment-agent-client --location <HOST> get --instance <INSTANCE> config/j
 bin/deployment-agent-client --location FHORS01 put --instance LIVE1 config/java.options.qserver tmp/java.options.txt ... posle soubor na jiny server na kterem bezi DA  
 bin/deployment-agent-client --location FHORS01 delete --instance LIVE1 config/aaa ... smaze soubor na jinem serveru na kterem bezi DA  
 
-### Ostatni spustitelne soubory
+## Ostatni spustitelne soubory
 
 bin/chk-up LIVE1 ... zkontroluje kazdych 20 sec. dostupnost qserveru, indexy a upozorni na (ne)dostupnost a pocet polozek  
 bin/chk-publishing STAGING ... zkontroluje datum business.xml pro publikace (v data/business)  
@@ -128,13 +128,13 @@ bin/ws-query localhost 12180 '//company/de_CH&amp;fh_secondid=715831289856377166
 ~/deployment-agent/bin/deployment-agent-client ... runs java process with com.fredhopper.deployment.client.CLIMain class
 ```
 
-##### Role:
+#### Role:
 
 Role je definice procesu, ktere se startuji, ci stopuji pri spusteni instance. Zda se, ze existuji pouze pri existency Deployment Agenta.  
 lynx http://localhost:8177/instance/INSTANCE/role  
 ls $INSTANCE_PATH/role ... seznam roli a jejich xml definice  
 
-### URL qserveru
+## URL qserveru
 
 http://localhost:8180/fredhopper/query ... zobrazovani dotazu ve forme XML  
 http://localhost:8180/preview/  ... zobrazovani dotazu ve forme html  
@@ -146,7 +146,7 @@ http://localhost:8180/fredhopper ... Fredhopper Business manager - urava konfigu
 http://localhost:20180/fredhopper/sysadmin/ ... System admin - provadeni nekterych akci na qserveru  
 wget -O - http://MA1FHORS01:8180/fredhopper/sysadmin/reload-config.jsp?select=business ... znavu nacte business.xml  
 
-##### Konfiguracni soubory
+#### Konfiguracni soubory
 
 topology.txt ... definice instanci pro vytvoreni instalace pomoci ?cluster-config?. Cislo instance urcuje porty isntance. napr. instance 1 -> 7180 + 1*1000, 10 -> 7180 + 10*1000.  
 $FAS/conf/instance ... cislo instance  
@@ -156,7 +156,7 @@ $FAS/conf/enrich.py ... config nastaveni ktere se budur respektovat behem ?index
 $FAS/conf/business.xml ... business konfigurace pro qserver a indexaci  
 $FAS/conf/repporting-instance.conf ... globalni nastaveni pro pentaho reporting (ports, memory, ...)  
 
-##### LOG soubory
+#### LOG soubory
 
 data/log/agent.log ... log deployment agenta  
 data/instances/deployment/log/kitchen.log ... log deployment procesu (publikace konfigurace)  
@@ -173,7 +173,7 @@ data/instances/<INSTANCE>/log/syncclient.log ... logy synchronizavniho klienta (
 ~/data/instances/etl/log/pan.log ... output of data manager transformation (ETL - extract, transform, load)  
 ~/data/instances/<INSTANCE>/log/*log ... FAS logs of an instance  
 
-### Priklady JMX objektu
+## Priklady JMX objektu
 
 http://MA1FHORL01:8177/instance/LIVE1/process/searchindexer/monitor/mbeans.fredhopper.com:type=ItemStore/IndexingId  
 /instance/<INSTANCE>/process/qserver/monitor/mbeans.fredhopper.com:type=ItemStore/ItemCount  
@@ -184,7 +184,7 @@ instance/<INSTANCE>/process/qserver/monitor/mbeans.fredhopper.com:type=QServer/D
 /instance/<INSTANCE>/process/qserver/monitor/mbeans.fredhopper.com:engine=<UNIVERSE>-<LOCALE>,indextype=<INDEX>,server=Server,type=Search/Size ... Vrati pocet polozek pro universe-locale-index typ kmbinace. Available index types are  : "Index for spell correction suggestions", "Index over specific attributes of items", "Index over text content of items"  
 http://localhost:8177/instance/LIVE1/process/qserver/monitor/java.lang:name=ConcurrentMarkSweep,type=GarbageCollector/CollectionCount ... Ukaze pocet Full GC od startu procesu  
 
-### REPORTING:
+## REPORTING:
 
 V FAS &lt; 7 je soucasti FAS reporting. Konkretne Pentaho reporting:
 

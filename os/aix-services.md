@@ -5,14 +5,14 @@ refresh -s syslogd ... znovun nacte demona syslogd
 startsrc -l lpd ... start service lpd
 stopsrc -s syslogd ... stop service
 
-#### /etc/inittab
+## /etc/inittab
 
 chitab ... zmeni zaznam v inittabu
 mkitab ... vytvori zaznam v inittabu
 rmitab ... smaze zaznam v inittabu
 telinit n ... zmeni runlevel na cislo n
 
-#### nfs
+## nfs
 
 startsrc -g nfs ... start nfs service  
 lssrc -g nfs ... list nfs services  
@@ -26,17 +26,17 @@ mknfsmnt ... make nfs mount
 /usr/sbin/mknfsexp -d '/export/mksysb' '-B' -S 'sys' -t 'rw' -h '10.10.20.0/24' -c '10.10.20.0/24' -r '10.10.20.0/24' ... prida mountpoint do /etc/exports  
 /etc/xtab ... FS, ktere jsou namountovane na klienty (ktere pouziva nfs.mountd)  
 
-#### automounter
+## automounter
 
 automount
 stopsrc -s automount
 
-#### nis
+## nis
 
 chypdom - change nis domain
 ypset
 
-#### ldap
+## ldap
 
 start-secldapclntd  
 stop-secldapclntd  
@@ -57,25 +57,25 @@ mksecldap -c -h gsnixldap1,gsnixldap2 -p 389 -a "cn=SI4,cn=Clients,ou=unix,ou=SI
 ibmslapd
 mksecldap
 
-#### dhcp
+## dhcp
 
 startsrc -s hdcpcd
 
-#### nim
+## nim
 
 lsnim ... (list of Network Installer Manager) vypise seznam definovanych objektu
 nimclient ... klient nimu
 nim ... master nimu
 nimconfig ... nastaveni nim masteru
 
-#### Listener
+## Listener
 
 lsnrctl start
 lsnrctl stop
 lsnrctl stat
 ps eaf | grep LISTENER
 
-#### Oracle
+## Oracle
 
 sqlplus / as sysdba
 SQL> startup
@@ -86,7 +86,7 @@ ps eaf|grep Ť ora_ ť
 sqlplus /as sysdba
 SQL> select status, database_status from v$instance ;
 
-#### SAP
+## SAP
 
 **Start:**
 startsap_argisdb1_00
@@ -99,7 +99,7 @@ startsap check
 **Nastaveni a umisteni:**
 /usr/sap/PS1 ... sap adresar
 
-#### munin
+## munin
 
 Bezi na portu 4949
 **Start**
@@ -109,7 +109,7 @@ kill -9 $(ps -aef|grep munin|grep -v grep|awk '{print $2}')
 **informace o sluzbe**
 homepage: [http://munin.projects.linpro.no/](http://munin.projects.linpro.no/)
 
-#### ESM
+## ESM
 
 **Start:**
 /esm/esmrc start
@@ -119,11 +119,11 @@ homepage: [http://munin.projects.linpro.no/](http://munin.projects.linpro.no/)
 **Status:**
 /esm/esmrc status
 
-#### CWS
+## CWS
 
 hmmon -GQs 1:0 ... informace o zdroji ?
 
-#### audit
+## audit
 
 **start:**
 /usr/sbin/audit start
@@ -137,16 +137,16 @@ audit query ... ukaze nastaveni
 auditpr &lt; trail ... vypise systemove udalosti
 auditselect -e "event == FILE_Write && date >= 05/03/99" trail | auditpr -h e,l,R,t,c,r,p,P,h,T -v ... vyselektuje jen eventy FILE_Write  
 
-#### Proxy - squid
+## Proxy - squid
 
 **Start:**
 echo "/usr/sbin/squid -D >/dev/console 2>&1" | at now
 
-#### pcpmm - testovaci software na funkcnost stranek
+## pcpmm - testovaci software na funkcnost stranek
 
 /usr/lpp/pcpmm/instance/tecad/etc/pcpmmtecad start ... Spousti nejakou cast pcpmm - tecad_logfile
 
-#### [accounting](http://docstore.mik.ua/orelly/networking/puis/ch10_02.htm)
+## [accounting](http://docstore.mik.ua/orelly/networking/puis/ch10_02.htm)
 
 **start/stop**
 /usr/lib/acct/startup ... spusteni auditovani procesu  
@@ -156,7 +156,7 @@ acctcom ... vypis v minulosti spustenych procesu s informaci o vyuziti cpu/mem
 /var/adm/pacct ... datovy soubor s informacemi o spustenych procesech v minulosti  
 /var/adm/acct  
 
-#### RSCT (real scalar cluster technology)
+## RSCT (real scalar cluster technology)
 
 **start**
 startsrc -s ctrmc ... start CSM (Cluste System Management) v /etc/inittab  
@@ -186,6 +186,6 @@ IBM.ConfigRM ... Configuration RM
 **nezarazene**
 IBM.DRM ... (Lazy daemon)  
 
-#### Ostatni
+## Ostatni
 
 [SNA/Communications Server](http://www-01.ibm.com/software/network/commserver/aix/library/publications.html)

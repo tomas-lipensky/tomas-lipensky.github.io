@@ -1,6 +1,6 @@
 # index
 
-### Druhy databazi
+## Druhy databazi
 
 SQL databaze splnuji tzv. ACID:  
 ACID - Atomicity - transkace bud probehne v poradku, nebo se neprovede vubec, Consistency - Dobry stav pred transakci => dobry stav po transakci, Isolation - transakce jsou nezavisle, operace cekaji, az jine operace jsou zcela aplikovany na stejnych datech, Durability - provedene zmeny v DB preckaji pad systemu (log).  
@@ -8,9 +8,9 @@ ACID - Atomicity - transkace bud probehne v poradku, nebo se neprovede vubec, Co
 Nerelacni databaze splnuji tzv. BASE:  
 Basically Available, Soft-state Eventual consistency)  
 
-### Relacni (SQL) databaze
+## Relacni (SQL) databaze
 
-<dl>
+
 [MariaDB/MySQL](mysql.html)
 [postgresql.html](postgresql.html)
 [IBM DB2](db2.html)
@@ -22,11 +22,9 @@ Basically Available, Soft-state Eventual consistency)
 Informix
 Sybase IQ
 Sybase
-</dl>
 
-### Nerelacni (NoSQL) databaze
+## Nerelacni (NoSQL) databaze
 
-<dl>
 [Berklye DB](bdb.html)
 [CouchDB](couchdb.html)
 Cassandra
@@ -37,13 +35,12 @@ MongoDB
 Hypertable
 Dynnomite
 BigTable
-</dl>
 
-### Data explorery
+## Data explorery
 
 [SQuirrel SQL](http://squirrel-sql.sourceforge.net/) - java datovy explorer  
 
-### Drivery
+## Drivery
 
 Aplikace vyuzivajici data z databaze potrebuji pro komunikace s databazi drivery, ktere ji umoznuji komunikovat s danym typem databaze. Seznam zakladnich typu ovladacu:
 

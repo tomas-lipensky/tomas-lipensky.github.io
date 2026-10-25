@@ -1,6 +1,6 @@
 # LINUX - Site, sitove nastaveni
 
-#### Konfiguracni soubory
+## Konfiguracni soubory
 
 /etc/sysconfig/network/[ifcfg*](etc-ifcfg)  
 /etc/sysconfig/network/config  
@@ -28,7 +28,7 @@ DNS=192.168.1.1
 
 sudo systemctl restart systemd-resolved ... restart demona  
 
-#### Nastaveni sitoveho provozu
+## Nastaveni sitoveho provozu
 
 ifconfig -a ... ukaze vsechny sitove karty vcetne nastaveni adres  
 ip a l ... ukaze vsechny sitove karty vcetne nastaveni adres  
@@ -67,10 +67,10 @@ vconfig ... nastavovani virtualnich sitovych karet z VIO serveru na P-Series
 modprobe 8021q ... povoleni VLANU  
 setup ... RedHat, Fedora atd konfiguracni textovy agent  
 
-### Bezdratova zarizeni
+## Bezdratova zarizeni
 
 rfkill list all ... ukaze sitova zarizen a jejich stav - vypnuto/zapnuto  
-### Bezdratova sit
+## Bezdratova sit
 
 aircrack BIT.ivs ... Vypocita WEP, nebo WPE klic ze stopy site v souboru BIT.ivs  
 airodump-ng ... uklada pakety, ktere vycmucha bezdratova sitova karta ve vzduchu  
@@ -93,14 +93,14 @@ iwlist wlan0 frequency ... vylistuje seznam frekvenci a kanalu, ktere karta podp
 iwspy wlan0 ... pokud to karta podporuje tak se timto ziskavaji statistiky s provozu WiFi site  
 kismet ... detektor siti, cmuchac an detektor napadani v 802.11 bezdratovych sitich  
 
-##### Wifi nastaveni pomoci prikazu
+### Wifi nastaveni pomoci prikazu
 
 ifconfig wlan0  
 iwlist wlan0 scan  
 iwconfig wlan0 essid NETWORK_ID key WIRELESS_KEY  
 dhclient wlan0  
 
-##### Wifi [router](http://www.linuxreaders.com/2011/02/16/ubuntu-fedora-box-as-wifi-router/)
+### Wifi [router](http://www.linuxreaders.com/2011/02/16/ubuntu-fedora-box-as-wifi-router/)
 
 yum install [hostapd](http://wireless.kernel.org/en/users/Documentation/hostapd) -y  
 vi /etc/hostapd/hostapd.conf:
@@ -128,18 +128,18 @@ ifconfig wlan0 address 192.168.9.1 netmask 255.255.255.0
 echo 1 > /proc/sys/net/ipv4/ip_forward
 /sbin/iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
-### Modem a GRPS/EDGE/4G pripojeni
+## Modem a GRPS/EDGE/4G pripojeni
 
 pppd call XXX ... iniciuje spojeni s GRPS operatorem nastavenem v [/etc/ppp/peers/xxx](etc-ppp-peers-XXX)  
 [/etc/chatscripts/xxx](etc-chatscripts-xxx) ... [AT prikazy](at.html) pro komunikaci s modemem, na ktery se odkazuje /etc/ppp/peers/xxx  
 [/etc/ppp/chap-secrets](etc-ppp-chap-secrets) ... autentifikacni udaje pro pppd  
 killall -HUP pppd ... ukonci spojeni s operatorem a ukonci pppd  
 
-### DNS over TLS/HTTPS
+## DNS over TLS/HTTPS
 
 [apt install stubby](https://www.linuxbabe.com/ubuntu/ubuntu-stubby-dns-over-tls) ... Stubby, sluzba pro prenos dns over tls, v novych verzich dns-over-https  
 /etc/systemd/resolved.conf ... nativni cesta systemd-resolved na pouziti DNSSEC a DNS-over-TLS  
-### Etherchannel = bonding
+## Etherchannel = bonding
 
 echo -e "alias bond0 bonding\n  
 options bond0 mode=active-backup arp_interval=1000\n  
@@ -171,7 +171,7 @@ USERCTL=no
 stehne eth1  
 cat /proc/net/bonding/bond0  
 
-### Testovani provozu, prohlizeni site, ...
+## Testovani provozu, prohlizeni site, ...
 
 dig www.domena.cz ... provadi name resolving - preklady IP adres a jmen, dela dotazy na DNS server  
 host www.domena.cz  
@@ -200,7 +200,7 @@ tracepath ... ukaze cestu paketu jako traceroute
 traceroute  
 tshark -ni eth0 -R "tcp.srcport eq 110 or tcp.dstport eq 110" ... (balicek wireshark) zobrazuje obsah paketu, ktere jdou na port, nebo z portu 110  
 
-### IPv6
+## IPv6
 
 [IPv6](http://tldp.org/HOWTO/html_single/Linux+IPv6-HOWTO/)
 
@@ -229,7 +229,7 @@ tcpdump -t -n -i eth0 -s 512 -vv ip6 or proto ipv6
 traceroute6  
 tracepath6  
 
-### NAT
+## NAT
 
 [NAT](http://how-to.wikia.com/wiki/How_to_set_up_a_NAT_router_on_a_Linux-based_computer) routing
 
@@ -251,7 +251,7 @@ iptables -t nat -I POSTROUTING -s 192.168.56.102 -j SNAT --to-source 9.158.161.2
 iptables -t nat -I PREROUTING -d 9.158.161.207 -j DNAT --to 192.168.56.102  
 iptables -vnL -t nat ... ukaze natovaci taboulku a statistiku paketu k jednotlivym pravidlum  
 
-#### =Kernel a ovladace zarizeni pro sitove zarizeni
+## =Kernel a ovladace zarizeni pro sitove zarizeni
 
 ethtool ... nastaveni sitove karty  
 sysctl -a ... vypise parametry jadra sitoveho nastaveni  
@@ -270,15 +270,15 @@ tunctl -t tap0 -u user ... vytvori virtualni sitovou kartu
 ip l s tap0 up ... aktivuje sitovou kartu  
 brctl addif br0 tap0 ... prida tap0 do bridge br0  
 
-### Bezpecnost - Firewall
+## Bezpecnost - Firewall
 
 .rhosts  
-#### povoleni/zakaz pristupu tcp_wrappers
+## povoleni/zakaz pristupu tcp_wrappers
 
 /etc/hosts.allow  
 /etc/hosts.deny  
 ldd /usr/sbin/sshd | grep libwrap ... zjisti, zda sluzba lze blokovat pres hosts.deny/allow  
-##### Firewall filtry - iptables
+### Firewall filtry - iptables
 
 iptables --list ... ukaze filtry  
 iptables -L INPUT ... ukaze filtry pro prichozi pakety  
@@ -308,9 +308,9 @@ firewall-cmd --reload
 ufw allow 22 ... povoli port ssh v UFW  
 systemctl stop ufw.service ... vypne Ubuntu Firewall  
 
-### Programy a nastroje pro komunikaci:
+## Programy a nastroje pro komunikaci:
 
-##### telnet
+### telnet
 
 curl telnet://1.2.3.4:port ... telnet spojeni  
 telnet 1.2.3.4:80  
@@ -318,30 +318,30 @@ nc 1.2.3.4 80
 cat < /dev/tcp/127.0.0.1/22 ... otevření spojení bez síťových nástrojů  
 (echo > /dev/tcp/skinner/22) >/dev/null 2>&1 && echo "It's up" || echo "It's down" ... zjištění, zda je port otevžený  
 
-##### http/https
+### http/https
 
 wget ... stahovani www a ftp do souboru\  
 curl ... vymakanejsi stahovani www a ftp do souboru  
 lynx, links, w3m ... textovi w3 klienti  
 
-##### ssh
+### ssh
 
 ssh ... pripojeni ke vzdalenemu pocitaci pomoci Secure Shell na port 22  
 [~/.ssh/config](config.txt)\\ ... uzivatelnske nastaveni ssh  
 
-##### ssl
+### ssl
 
 Ochrana proti "man in middle" utokum - kryptovani dat
 
 `openssl` ... [Vice na Linux - sluzby - apache2](http://tomas.lipensky.cz/linux/services.html#httpd)  
 openssl s_client -connect bart.math.muni.cz:21 ... otestuje, zda bezi openssl na danem portu  
 
-##### Posta POP3,IMAP
+### Posta POP3,IMAP
 
 mutt, pine ... textovi smtp/pop3 klienti  
 fetchmail -u <username> -a -p POP3 --bsmtp temp.txt <server>.com ... stahne maily z smtp serveru do souboru  
 
-##### [socks](http://en.wikipedia.org/wiki/SOCKS)
+### [socks](http://en.wikipedia.org/wiki/SOCKS)
 
 [transocks](http://transocks.sourceforge.net/) ... forwardovani casti sitoveho provozu pres socks  
 [transocks_ev](http://oss.tiggerswelt.net/transocks_ev/) ... forwardowani casti sitoveho provozu pres socks(+ [instalace](http://board.raidrush.ws/showthread.php?t=637066))  
@@ -349,16 +349,16 @@ tsocks = toxsocks ... forwardovani casti provozu pres socks
 connect-proxy ... otevre spojeni pres socks server  
 proxychains telnet server.com ... otevre spojeni pres libovolny pocet proxy serveru nastavenych v /etc/proxychains.conf. Priklady [Volne dostupnych proxy serveru](http://aliveproxy.com/proxy-list-port-8080/)  
 
-##### COM, LPT komunikace
+### COM, LPT komunikace
 
 rx ... prijima soubory pod protokolem x(z,y)modem
 minicom ... ovladani a komunikace pres porty
 
-##### Wifi
+### Wifi
 
 [WICD](http://wicd.sourceforge.net/) - Manazer WIFI pripojeni  
 
-##### Ostatní síťové nástroje
+### Ostatní síťové nástroje
 
 `rsync` ... prenos velikych objemu dat  
 `rdist` ... synchronizace souboru na ruznych serverech  
@@ -366,7 +366,7 @@ minicom ... ovladani a komunikace pres porty
 `nc` ... netcat vytvareni tcp/udp spojeni na porty, cteni, zapis - viz [UNIX-Prikazy](http://tomas.lipensky.cz/unix/commands.html)  
 `whois seznam.cz` ... informace o domene z whois serveru  
 
-#### Network manager
+## Network manager
 
 /etc/NetworkManager/dispatcher.d ... konfigurace akci network managera  
 [nmcli](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/7/html/Networking_Guide/sec-Using_the_NetworkManager_Command_Line_Tool_nmcli.html) nm wifi on ... zapne Wifi v Network manageru  
@@ -377,7 +377,7 @@ nmcli c modify "vpn1" ipv4.dns 10.20.30.40 ... nastavi DNS
 nmcli c down "Wired connection 1" && nmcli c up "Wired connection 1", restartuje kartu  
 nm-applet --sm-disable ... spusti network manager applet  
 
-### Windows remoting
+## Windows remoting
 
 remmina ... pripojeni ke vzdalene plose  
 rdesktop ... pripojeni ke vzdalene plose  

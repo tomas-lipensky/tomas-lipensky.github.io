@@ -1,12 +1,12 @@
 # Scripting - batch files
 
-### Externi odkazy
+## Externi odkazy
 
 [Seznam NT preikazu](http://ss64.com/nt/)  
 
-### Prikazy
+## Prikazy
 
-##### Promenne, cykly, podminky, vystupy
+#### Promenne, cykly, podminky, vystupy
 
 SET AAA=HELO  
 ECHO %AAA%
@@ -21,7 +21,7 @@ PRIKAZ1 && PRIKAZ2 ... jestli prikaz1 je v poradku, proved prikaz 2
 [FOR](http://www.robvanderwoude.com/for.php) %A IN (1 2) DO ECHO %A ... pouziti FOR v prikazove radce  
 [FOR](http://www.robvanderwoude.com/for.php) A IN (1 2) DO ECHO A ... pouziti FOR v BAT souboru  
 
-##### Ostatni prikazy
+#### Ostatni prikazy
 
 ATTRIB ... meni prava na pristupy k souborum  
 ATTRIB +R +A +S -H D:\adresar\soubor ... zapne atribut na cteni, archiv a systemovy soubor, vypne skryty soubor  

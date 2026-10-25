@@ -1,11 +1,11 @@
 # Powershell
 
-### Externi odkazy
+## Externi odkazy
 
 [http://commandwindows.com](http://commandwindows.com/)  
 [Pester - unit testy PowerShell skriptu](https://github.com/pester/Pester)  
 [https://powershell.org/](https://powershell.org/) ... clanky, knizky, diskuze ohledne PowerShellu  
-### Programy managovatelne PS
+## Programy managovatelne PS
 
 Exchange 2007+  
 SQL 2008+  
@@ -14,20 +14,20 @@ System Center Operations Manager
 System Center Virtual Machine Manger  
 atd.  
 
-### Help, debugging
+## Help, debugging
 
 get-help .. napoveda  
 get-help get-member ... napoveda k get-member  
 get-member $aaa ... popise objekt $aaa, informace o objekty - tridy, hodnoty, vlastnosti  
 get-command notepad ... ukaze cestu k programu nebo plny nazev prikazu  
 
-### Prikazy
+## Prikazy
 
 shell.set --enabled true ... zapnuti Bash shellu  
 &amp; spustitelny_soubor parametrt ... spusti spustitelny soubor s parametry, ktere se neinterpretuji jako PS parametry  
 CALL D:\BATCH\SendSuccessMail.vbs ... spusti VBS  
 
-### Nahrady z shellu/bash
+## Nahrady z shellu/bash
 
 `prikaz | out-string -stream | select-string` ... prikaz | grep  
 `Get-ChildItem -Recurse *.* | Select-String -Pattern "RETEZEC" | Select-Object -Unique Path` ... grep -irl "RETEZEC" *  
@@ -46,7 +46,7 @@ get-childitem | select string -Pattern "txt" -NotMatch ... grep -v txt
     select  @{Name="Name"; Expression={$f}}, @{Name="Sum (MB)"; Expression={"{0:N3}" -f ($_.sum / 1MB) }}, Sum } | sort Sum -desc |
   format-table -Property Name,"Sum (MB)", Sum -autosize'' ... du -smx *  
 `Get-PSDrive | Where Used -ge 0 | Select-Object Name,Used,Free` ... df - velikost a misto na disku  
-### Promenne
+## Promenne
 
 Promenne jsou objekty, mohou obsahovat 1-dimenzionalni promenne, ale i sady promennych
 help variables  
@@ -91,19 +91,19 @@ $aaa.contains('`n') ... true kdyz retezec obsahuje novy radek
 $person | add-member -type NoteProperty -Name First -Value $FirstName ... prida objektu podpromennou  
 $person | Add-Member -NotePropertyName rodina -NotePropertyValue ([PSCustomObject]@{}) ... prida podobjekt  
 ($aaa.GetType()).Name ... vrati typ promenne  
-### Argumenty skriptu
+## Argumenty skriptu
 
 param([string]$soubor = "file", [string]$adresar = "directory") ... prevede -file a.txt do promenne $soubor  
 $MyInvocation.MyCommand.Name ... jmeno spusteneho skriptu prave jedouciho, neco jako v Bash basename $0  
 $pid ... cislo PID aktualniho procesu  
 $MyInvocation.MyCommand.Path ... cela cesta spusteneho skriptu (jake $0 v bashi)  
 
-### Konfigurace
+## Konfigurace
 
 $profile ... profily - skripty co se vykonaji pri startu PS  
 C:\Windows\System32\WindowsPowerShell\v1.0\*ps1xml ... vychozi vzhled zobrazeni prikazu jako get-process atd. Nemenit, prestane fungovat. Je treba vytvorit vlastni a podepsat  
 
-### Operatory
+## Operatory
 
 help operators
 #, &lt;# #&gt; ... komentare  
@@ -121,14 +121,14 @@ $p -is "array" ... napise, zda je promenna pole
 "1,2,3" -split "," ... vrati pole, kde rozdeli text podle oddelovacu  
 Test-Path a.txt ... vrati True/False podle toho, jestli soubor/adresar exituje  
 
-### Funkce
+## Funkce
 
 Funkce ulozene v souboru psm1 (modul), mohou byt naimportovany
 Function Pozdrav ($jmeno) { write-host "ahoj $jmeno"} ... (moznost zadat typ [string]$jmeno) definice funkce s parametrem  
 pozdrav "Honzo" ... (pozdrav -jmeno Honzo) vyvolani definovane funkce  
 function secti ([int]$cislo1=0, [int]$cislo2= $(throw "nezadan parametr cislo2")) {} ... vychozi hodnoty, druha vychozi hodnota je "vykonej chybovou hlasku"  
 
-### rizeni toku
+## rizeni toku
 
 foreach-object ($i in $array) { Write-Host $i; $_ } ... (foreach, %) pro kazdy prvek $i v poli $array, vypis ho a vrat ho jako objekt  
 if ($promenna -eq $null) { "neni definovano" } elseif { "OK" } elseif { "nemuze nastat" } ... if else podminky  
@@ -139,7 +139,7 @@ break ... prerusi cyklus
 continue ... preskoci zbytek bloku a skoci zase na dalsi beh bloku  
 & { write-out "ls" } ... scriptblock - spusti kod v zavorkach  
 
-### Chyby, debugging
+## Chyby, debugging
 
 1.ErrorAction SilentlyContinue ... potlaceni chybovych hlaseni - akce jako $errorview, ale jen pro tento beh  
 2.errorVariable x ... chyba se ulozi do promenne $x pro tento beh prikazu i do $error  
@@ -160,7 +160,7 @@ $host.EnterNestedprompt() ... skoci v tomto radku do debug modu ve skriptu a po 
 Set-PSBreakPoint -Command Stop-Process ... definice break pointu pro prikazu Stop-Process (jine uziti: pri zmene promenne, na radku x), h help v interaktivnim modu  
 Get-PSBerakPoint ... vylistovani break pointu  
 return ... konec behu smycky (for, while, ..) nebo funkce  
-### MSSQL
+## MSSQL
 
 Import-Module SQLPS  
 cd SQLSERVER:/  
@@ -169,7 +169,7 @@ Invoke-SqlCmd "CREATE TABLE Lide (id int, jmeno nvarchar(50), prijmeni nvarchar(
 import-csv C:\labs\lide.csv | foreach { Infoke-sqlcmd ("INSERT INTO dbo.lide (id, jmeno, prijmen) VALUES (" + $_.id + ", '" + $_.jmeno "', '" + $_.prijmeni + "')") }  
 Invoke-SqlCmd "SELECT TOP 10 * FROM lide"  
 
-### Comlet-y
+## Comlet-y
 
 add-content ... to same jako >>, podporuje parametr -encoding, prida dalsi obsah do soubory  
 add-windowsfeatire / install-windowsfeature  
@@ -260,7 +260,7 @@ tee-object ... ulozi objekt do souboru ale i na std. vystup
 write-host $profile -foregroundcoler red ... vypise na obrazovku promennou $profile cervene  
 write-host "`n`n`thello`n" ... vypise : novy radek, novy radek, tabulator, hello, novy radek  
 
-### Uzivatele
+## Uzivatele
 
 Get-WmiObject -Class Win32_UserAccount ... seznam vsech uzivatelu  
  Get-WmiObject -class Win32_UserAccount -Filter 'LocalAccount=True' | Select-Object -first 1 -Expa
@@ -271,7 +271,7 @@ Get-LocalGroupMember -name users ... lokalnich uzivatelu
 al.SecurityIdentifier]).value ... preklad uzivatele na SID  
  Get-EventLog System -Source Microsoft-Windows-WinLogon ... seznam prihlaseni, odhlaseni uziatelu, jako prikaz last v linuxu  
 
-### Prava k souborum
+## Prava k souborum
 
 ACL - Access Control List se sklada z ACE - Access Control Entries - objekty typu Security.AccessControl.FileSystemAccessRule. Kazde ACE se sklada z 5 parametru: "Kdo - uzivatel, skupina, ..", "[Prava](https://docs.microsoft.com/en-us/dotnet/api/system.security.accesscontrol.filesystemrights?redirectedfrom=MSDN&view=netframework-4.7.2)", "dedicnost", "[propagacni pravidla](https://docs.microsoft.com/en-us/previous-versions/ms229747(v=vs.110)), "[zakaz, povoleni](https://docs.microsoft.com/en-us/dotnet/api/system.security.accesscontrol.accesscontroltype?redirectedfrom=MSDN&view=netframework-4.7.2)"
 
@@ -282,7 +282,7 @@ $acl.AddAccessRule($accessRule) ... pridani noveho prava k existujicim pravum
 Set-Acl C:\Temp\a.txt $acl ... nastaveni prav souboru  
 New-Object Security.AccessControl.FileSystemAccessRule 'DOMAIN\user', 'ListDirectory, ReadAttributes, ...', 'ContainerInherit,  ObjectInherit', 'InheritOnly', 'Allow' ... vytvoreni pravidla (ACE) pro listovani adresaru a cteni atributu  
 
-### Prace s registry
+## Prace s registry
 
 Set-Location HKCU: ... prepne se do virtualniho souboroveho systemu registru  
 Test-Path .\Software\hsg  -ErrorAction silentlycontinue ... zjisti jestli existuje cesta v registrech  
@@ -292,7 +292,7 @@ Get-ItemProperty -Path Registry::HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\C
  … seznam promennych daneho registru  
 Set-ItemProperty HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\ EnableLUA 0 … nastavi [LUA](https://docs.microsoft.com/en-us/windows-hardware/customize/desktop/unattend/microsoft-windows-lua-settings-enablelua) na 0 (disabled) - zrusi omezeni prava uzivatelu s administratorskyma pravama  
 
-### Certifikaty, klice
+## Certifikaty, klice
 
 Get-ChildItem Cert:\ -recursive -CodeSigningCert | where { $_.thumbprint -eq "dsafasdfasdfsadf" } ... najiti certifikatu podle thumbprintu  
 set-authenticodesignature -filepath  .\a.ps1 -certificate $cert ... podepisovani klicem  
@@ -320,14 +320,14 @@ $acl=Get-Acl -Path $rsaFile
 $acl.Access 
 ```
 
-### vzdalene spousteni
+## vzdalene spousteni
 
 $Host.ui.PromptForCredential("Matrix OS", "Enter the credentials","Administrator","") ... nepovinne, zmeni texty v get-credential  
 $cred=get-credential ... ziska interaktivne kredence  
 $password=ConvertTo-Securestring -asPlainText -Force "Heslo"; $cred=New-Object System.Management.Automation.PSCredential("User", $password) ... ziska neinteraktivne kredence  
 Invoke-Command -scriptblock { cls } -credential $cred -computername ROCKET  
 
-### Sit, firewall, networking
+## Sit, firewall, networking
 
 New-NetFirewallRule –DisplayName "Allow ICMPv4-In" –Protocol ICMPv4  ... povili na firewallu ICMMP ping  
 New-NetFirewallRule -Name "WINRM-HTTPS-In-TCP" `  
@@ -346,13 +346,13 @@ Get-NetAdapter ... seznam sitovych adapteru
 Test-NetConnection -Port 53 -ComputerName 1.2.3.4 ... test sitoveho spojeni (ping nebo jako nettcat -z)  
 New-Object System.Net.Sockets.TcpClient("192.168.0.2", 80) ... jako netcat -zv server port  
 Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters -Name IpEnableRouter -Value 1 ... zapne IP forwarding - vyzaduje restart  
-### NUPKG - nuget packages
+## NUPKG - nuget packages
 
 Get-Package ... seznam nainstalovanych balicku  
 [Find-Package](https://docs.microsoft.com/en-us/powershell/module/packagemanagement/find-package?view=powershell-6) .\aaa* ... najde balicky v aktualnim adresari zacinajici na aaa  
 Find-Package .\aaa* | [Install-Package](https://docs.microsoft.com/en-us/powershell/module/packagemanagement/find-package?view=powershell-5) ... nainstaluje balicky ktery nalezl Find-Package  
 
-### Moduly
+## Moduly
 
 Get-module -listavailable ... seznam vsech nainstalovanych modulu, vcetne starych verzi, vcetne cest  
 Get-InstalledModule ... seznam nainstalovanych modulu - posledni verze  
@@ -367,7 +367,7 @@ Get-PSRepository -Name FileShareRepo ... informace o repozitari
 Find-Module -repository FileShareRepo ... zobrazi balicky v repozitari  
 Unregister-PSRepository -Name FileShareRepo ... odregistruje repozitar  
 
-### Active Directory
+## Active Directory
 
 Import-Module ActiveDirectory  
 
@@ -384,7 +384,7 @@ Get-ADGroup Skupina ... (portebuje RSAT) informace o AD skupine
 Get-ADUser TLipensky ... (portebuje RSAT) informace o AD uzivateli  
 [Get-ADDomain](https://docs.microsoft.com/en-us/powershell/module/addsadministration/get-addomain) ... (portebuje RSAT) informace o AD domene  
 Add-Computer -DomainName #{new_resource.name} -Credential $mycreds -Force:$true -OUPath 'OU_INFO' ... pridani do domeny v PS  
-### COM integrace - COM objekty
+## COM integrace - COM objekty
 
 $object=New-Object -comObject WScript.Shell  
 $object|Get-Member -memberType *Method  
@@ -410,7 +410,7 @@ $Excel=New-Object -Com Excel.Application
 $excel.visible=$true  
 $excel.workbook.add()  
 
-### WMI
+## WMI
 
 Informace poskytuje WMI sluzba (Windows Management Instrumentation)
 Get-WmiObject -list  
@@ -424,7 +424,7 @@ Get-CimInstance Win32_Process -Filter "name = 'notepad.exe'" | select CommandLin
 Get-WmiObject -class Win32_LogicalDisk  
 Get-WmiObject -Query "Select * from Win32_LogicalDisk WHERE DeviceID='C:'"  
 
-### Remoting
+## Remoting
 
 WinRM sluzba, jede na HTTP/HTTPS a SOAP, potrebuje PSv2, .NET2 a vyssi, ..., HTTP jede na portu 5985, HTTPS na portu 5986  
 Elegantni cesta jak nastavit WinRM remoting (neomezeny) : [https://gist.github.com/TechIsCool/d65017b8427cfa49d579a6d7b6e03c93](https://gist.github.com/TechIsCool/d65017b8427cfa49d579a6d7b6e03c93)  
@@ -442,7 +442,7 @@ exit-pssession ... vyskoci ze spojeni
 remove-pssession ... ukonci spojeni  
 [invoke-command](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/invoke-command?view=powershell-6) -computername aaa -Credential $cred -ScriptBlock {Get-Culture} ... spusti prikaz na vzdalenem pocitaci pomoci WinRM  
 Invoke-Command -Session $s -ScriptBlock {Get-Culture} ... spusti prikaz v otevrene session $s (pomoci new-session)  
-### Jobs
+## Jobs
 
 Start-Job -name NewJob -Scriptblock {Get-Service} ... spusti ulohu na pozadi, napr. na jinem pocitaci  
 Get-Job ... informace of ulohach  
@@ -458,17 +458,17 @@ $spoustec =  New-ScheduledTaskTrigger -Once -At 9am -User "System" ... nadefinuj
 Register-ScheduledTask -Action $akce -Trigger $spoustec -TaskName "skript" -Description "Skript na udrzbu disku" ... vytvori task  
 Start-ScheduledTask -TaskName "skript" ... spusti job okamzite nezavisle na casu ve spousteci  
 Get-ScheduledTask -TaskName "skript" | Get-ScheduledTaskInfo ... ukaze vysledek posledniho behu  
-### Logovani, auditovani
+## Logovani, auditovani
 
 [Start-Transcript](https://technet.microsoft.com/en-us/library/hh849687.aspx)  
 
-### Regularni vyrazy
+## Regularni vyrazy
 
 "cislo 00420 111 222 333" - match "\d{1-4}[ -]\n{1-3}[ ]?\n{1-3}[ ]?\n{1-3}" ... zjisti pritomnost regularniho prikazu  
 $matches ... vysledek hledani  
 $text -replace "(?m)^","> " ... substituce na vie radcich, na zacatek kazdeho radky vlozi "> "  
 
-### prace s xml
+## prace s xml
 
 [xml]$xml="<a><b f='q'><c>text</c><d>3</d></b><b><c>nextext</c></b></a>" ... import xml lze provest i zadanim retezce  
 $xml2=[xml] (Get-Content  c:\test.xml) … nacteni XML ze souboru  
@@ -479,18 +479,18 @@ Select-Xml -xml $xml -XPath //c | foreach { $_.node } … obsah vsech nodu
 Select-Xml -xml $xml -XPath "/a.b" | foreach { $_.node.InnerXml} … obsah vsech <b>, vcetne xml znacek  
 (Select-Xml -xml $xml -XPath "//*[@f = 'q']").node.d … vyhledavai podle atributu  
 
-### prace s JSON
+## prace s JSON
 
 $structure = get-content a.json | ConvertFrom-Json ... prevede JSON na pametovou strukturu  
 $structure.neco.z.jasona = 35 … zmena struktury, ze ktere pak provedeme json  
 ConvertTo-Json -InputObject $structure  
 
-### base64
+## base64
 
 [Convert]::ToBase64String([System.Text.Encoding]::Unicode.GetBytes("Nazdarek")) ... zakoduje text do base64  
 [System.Text.Encoding]::Unicode.GetString([System.Convert]::FromBase64String('QQBoAG8AagA=')) ... rozkoduje text z base64  
 
-### HTTP requesty
+## HTTP requesty
 
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes[^2]
 
@@ -503,7 +503,7 @@ Invoke-RestMethod 'http://httpbin.org/basic-auth/PsUser/MyPassword' -cred $cred 
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12 ... vynuti TLS1.2 komunikaci  
 
-### Eventlog (Windows udalosti)
+## Eventlog (Windows udalosti)
 
 Get-Eventlog -list ... stara metoda, pomale, ne vsechny eventy, funguje vsude  
 Get-EventLog Application | where { $_.EventType -eq "Error" }  
@@ -513,7 +513,7 @@ Get-WinEvent -ListLog *operational*
 Get-WinEvent -filterXml $filter  
 Get-WinEvent -ListLog * |Where-Object {$_.RecordCount} ... seznam event log slozek a pocty eventu  
 
-### Statistiky systemu (metriky)
+## Statistiky systemu (metriky)
 
 get-counter ... zakladni statistiky systemu (CPU, pamet)  
 Get-Counter -listSet * | where { $_.CounterSetName -like "*processor*" }  
@@ -521,7 +521,7 @@ get-Counter -Counter "\Processor(0)\% User Time" -Continuous | where { $_.Counte
 get-counter -Counter "\.NET CLR Memory(*)\# Gen 0 Collections" ... statistika pameti - Gen 0 commections  
 Get-Counter -ListSet * | Select-Object CounterSetName, Paths | Sort-Object CounterSetName ... prehled vsech kategorii a jednotlivych metrik  
 
-### Disky, operace, enkrypce - BitLocker
+## Disky, operace, enkrypce - BitLocker
 
 New-StoragePool -FriendlyName storagepool1 -StorageSubsystemFriendlyName "Windows Storage*" -PhysicalDisks (Get-PhysicalDisk -CanPool $true) ... Vytvori pool disku  
 New-VirtualDisk -StoragePoolFriendlyName storagepool1 -FriendlyName virtualdisk1 -Size 2046GB -ResiliencySettingName Simple -ProvisioningType Fixed ... vytvori z poolu disku novy virtualni disk  
@@ -529,13 +529,13 @@ Initialize-Disk -VirtualDisk (Get-VirtualDisk -FriendlyName virtualdisk1) ... in
 New-Partition -DiskNumber 4 -UseMaximumSize -DriveLetter Z ... namontuje novy disk za disk Z:  
 Suspend-BitLocker C: ... docasne vypne ochranu disku  
 Resume-BitLocker C: ... opet aktivuje ochranu disku  
-### Sanpin-y
+## Sanpin-y
 
 Stare moduly v PS v.1. V novych verzich je nahradily moduly, ale snapiny jsou furt podporovane
 
-### Moduly
+## Moduly
 
-### .NET integrace
+## .NET integrace
 
 PowerShell is .NET aplikace (.NET alternativa Javy na Win platformach)
 
@@ -579,7 +579,7 @@ $z=[IO.Compression.ZipFile]::OpenRead("C:\a.zip"); $z.Entries; $z.Dispose() ... 
 [System.IO.Compression.ZipFileExtensions]::CreateEntryFromFile($ZipFile, 'C:\a\soubor.txt', '\a\soubor.txt') … prida soubor do archivu  
 $ZipFile.Dispose() … zavre archiv  
 
-### Priklady
+## Priklady
 
 Get-Mailbox | Sort Size | Select -first 100 | Move-Mailbox Server2
 
@@ -591,7 +591,7 @@ $errors = $null
 $null = [System.Management.Automation.PSParser]::Tokenize($contents, [ref]$errors)
 ```
 
-##### Kultura a lokalizace
+#### Kultura a lokalizace
 
 [Seznam lokalizaci](https://docs.microsoft.com/en-us/windows-hardware/customize/mobile/mcsf/set-languages-and-locales)  
 Add-Type -AssemblyName "sysglobl" ... potrebna knihovna
@@ -606,7 +606,7 @@ $CultureBuilder.LoadDataFromCultureInfo($BaseCulture) ... naimportovani kultury
 $CultureBuilder.LoadDataFromRegionInfo($BaseRegion) ... naimportovani regionu  
 $CultureBuilder.save(C:\Windows\Temp\vi-VX.ldml') ... ulozeni do LDML souboru  
 
-### Powershell scripting - ps1
+## Powershell scripting - ps1
 
 Write-Host "Ahoj" ... vystup na obrazovku - napise Ahoj  
 write-output "aaa" ... vystup do dalsi roury, nebo na stdout  
@@ -616,7 +616,7 @@ Get-Content a.txt ... vypise obsah souboru
 Get-Content a.txt -totalcount 2 ... vypise prvni 2 radky souboru  
 Get-Content a.txt -last 2 ... vypise posledni 2 radky souboru  
 
-### Promenne
+## Promenne
 
 $aaa="Ahoj" ... prirazeni promenne  
 $heslo=$(Read-Host "Vloz heslo: ") ... nacte retezec z klavesnice  
@@ -642,9 +642,9 @@ $directory=$( Read-Host "Enter directory with dsx files: ")
   }
   Invoke-Expression "date"
 
-### Scenare
+## Scenare
 
-#### Preposilani paketu - rerouting
+### Preposilani paketu - rerouting
 
 Install-WindowsFeature RemoteAccess -IncludeManagementTools  
 Install-WindowsFeature -Name Routing -IncludeManagementTools -IncludeAllSubFeature  

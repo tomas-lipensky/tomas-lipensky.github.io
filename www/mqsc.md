@@ -1,16 +1,16 @@
 # WebSphere MQ
 
-### Externi odkazy
+## Externi odkazy
 
 [Infocentral MQ 7.0 - Script (MQSC) Command Reference](http://publib.boulder.ibm.com/infocenter/wmqv7/v7r0/index.jsp?topic=%2Fcom.ibm.mq.csqzaj.doc%2Fsc10120_.htm)  
 
-### MQ Script Command - spusteni
+## MQ Script Command - spusteni
 
 runmqsc test ... (Run MQ's commands) administracni konzola pro MQM test, neco jako wsadmin  
 echo "dis qmgr" | runmqsc ... zadani prikazu pro runmqsc  
 runmqsc QM1 &lt; commands.mqrc ... spusteni prikazu ze souboru  
 
-### Prikazy MQ pro runmqsc
+## Prikazy MQ pro runmqsc
 
 alter qmgr SCMDSERV(MANUAL) ... zmeni hodnotu SCMDSERV na MANUAL  
 alter channel('QM1.Clinet') chltype(svrconn) scyexit('svsex.dll(sventry)') scydata('bonza') ... zmeni security exit pro kanal a user data pro sceurity exit  
@@ -46,14 +46,14 @@ RESUME QMGR ... vrati query manager z clusteru
 REFRESH CLUSTER ..  
 RESET CLUSTER ...  
 
-##### Statistiky, monitoring, accounting
+#### Statistiky, monitoring, accounting
 
 DISPLAY QSTATUS(QUEUE) ... monitoring - ukaze stav fronty - vsechny parametry  
 DIS QSTATUS(QUEUE) MONITOR ... monitoring - ukaze parametr MONITOR u fronty QUEUE  
 
-### Priklady
+## Priklady
 
-##### Preposilani zprav na vzdalenou frontu
+#### Preposilani zprav na vzdalenou frontu
 
 runmqsc QM2  
 DEF QL(SECRETS)  
@@ -64,7 +64,7 @@ DEF QR(SECRETS) RNAME(SECRETS) RQMNAME(QM2) XMITQ(QM2) ... vytvori vzdalenou fro
 DEF QL(QM2) USAGE(XMITQ) ... Vytvori lokalni frontu QM2 typu ansmission  
 DEF CHANNEL(QM1.QM2) CHLTYPE(SDR) CONNNAME(localhost(9002)) XMITQ(QM2) ... vytvori kanal typy Sender na port localhost:9002 a na transmission queue QM2  
 
-##### Priklady: Nastaveni SSL klice
+#### Priklady: Nastaveni SSL klice
 
 dis qmgr SSLKEYR ... ukaze adresar s SSL klicema  
 alter qmgr SSLKEYR(/var/mqm/qmgr/test/ssl/keys) ... zmeni parametr  

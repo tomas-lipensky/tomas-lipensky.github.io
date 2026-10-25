@@ -1,14 +1,14 @@
 # azurerestapi
 
-### API
+## API
 
 [Microsoft REST API catalog](https://docs.microsoft.com/en-us/rest/api/) - Azure REST API, VSTS, atd.  
 
-### Azure Instance Metadata service REST API
+## Azure Instance Metadata service REST API
 
 [https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/instance-metadata-service)
 
-### Azure REST API
+## Azure REST API
 
 [jak pouzivat Azure Rest API](https://blog.jongallant.com/2017/11/azure-rest-apis-postman/) pomoci Postman za 2 minuty  
 [Mala ukazka REST API](https://docs.microsoft.com/en-us/azure/monitoring-and-diagnostics/monitoring-rest-api-walkthrough) - metriky k virtualnim masinam  
@@ -16,11 +16,11 @@
 [generovani uplne vlastnich custom metrik](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/metrics-custom-overview), vcetne popisu API  
 [https://dev.loganalytics.io/documentation/Using-the-API/RequestFormat](https://dev.loganalytics.io/documentation/Using-the-API/RequestFormat) ... https://api.loganalytics.io/ - API k Log Analytics s novymi Kusto query prikazy  
 
-### Storage API
+## Storage API
 
 [storage api by cUrl](https://stackoverflow.com/questions/51072445/azure-storage-table-api-rest-with-curl)
 
-### REST API & PowerShell
+## REST API & PowerShell
 
 Connect-AzAccount  
 $context = Get-AzSubscription -SubscriptionName Predplatne | Set-AzContext  
@@ -33,7 +33,7 @@ $ResourceGroupApiUri = "https://management.azure.com/subscriptions/$($context.Su
 $ResourceGroups = Invoke-RestMethod -Method Get -Uri $ResourceGroupApiUri -Headers $Headers  
 Invoke-RestMethod -Method Put -ContentType "application/json" -Headers $Headers -Uri $URL -Body $json_ss
 
-### REST API & Bash
+## REST API & Bash
 
 az login  
 TOKEN=$(az account get-access-token | jq .accessToken | sed -e 's/"//g') ... tady ziskame bareer kod  

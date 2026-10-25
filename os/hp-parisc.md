@@ -1,6 +1,6 @@
 # PA-RISC
 
-### PA-RISC boot
+## PA-RISC boot
 
 **Boot proces na PA-RISC**
     

@@ -1,18 +1,16 @@
 # WebSphere Application Server
 
-### Externi odkazy
-
-### Interni odkazy
+## Interni odkazy
 
 [WAS](was.html)
 
-### Generovani snapu, dumpu atd.
+## Generovani snapu, dumpu atd.
 
-### Prohlizeni logu, snapu, dumpu atd.
+## Prohlizeni logu, snapu, dumpu atd.
 
 Ridi je parametr -Xdump - tzv. dump agent.
 
-##### Snap traces - Snap.*.trc
+#### Snap traces - Snap.*.trc
 
 Obsahuji stopovaci body (tracepoint data) ktera se drzi v stopovacich bugrech. Lokace v profilu, napr. /usr/WebSphere/v7/Profiles/node01
 
@@ -21,7 +19,7 @@ java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -sum
 java com.ibm.jvm.format.TraceFormat  Snap.20131027.144227.12648526.0004.trc -uservmid 30e41e00 ... podrobne indormace on VMID
 </dl>
 
-##### Javadumps - javacore.*.txt
+#### Javadumps - javacore.*.txt
 
 Javadumpy jsou analyzy JVM, obsahujici informace o vlaknech nactenych tridach a heap statistikach. Java parametr -Xdump:java ovlivnuje co se bude dit pri signalech jako napr. SIGQUIT nebo vaznych situacich
 
@@ -31,7 +29,7 @@ Javadumpy jsou analyzy JVM, obsahujici informace o vlaknech nactenych tridach a 
     IBM Support Assistent - IBM Thead and Monitor Dump Analyzer
 </dl>
 
-##### system dumps - core.*.dmp
+#### system dumps - core.*.dmp
 
 Java parametr -Xdump:system:events=vmstop,file=my.dmp ovlivnuje vytvareni heap dumpu.
 
@@ -44,7 +42,7 @@ IBM Support Assistent - IBM Thead and Monitor Dump Analyzer
 IBM Support Assistent - IBM Monitoring and Diagnostic Tools for Java - Dump Analyzer
 </dl>
 
-##### heap dumps
+#### heap dumps
 
 Obvykle sobory phd. Java parametr -Xdump:none -Xdump:heap:events=vmstop,opts=PHD+CLASSIC
 
@@ -58,8 +56,8 @@ Obvykle sobory phd. Java parametr -Xdump:none -Xdump:heap:events=vmstop,opts=PHD
 
 </dl>
 
-##### Console dumps
+#### Console dumps
 
 vystup jde do stdout a stderr. Aktivuje se java parametrem -Xdump:console:events=thrstart+thrstop,range=1..1
 
-##### ffdc
+#### ffdc

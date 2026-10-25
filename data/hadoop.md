@@ -1,17 +1,17 @@
 # Apache Hadoop
 
-### Architektura
+## Architektura
 
 - Node - jednotlivy pocitac
 - Rack - 30-40 Nodu na stejnem switchi - velky sitovy provoz
 - Cluster - Racky managovane pomoci Hadoop
 
-### Komponenty
+## Komponenty
 
 - Distribuovane filesystemy: Hadoop Distributed File System (HDFS), nebo IBM Spectrum Scale
 - MapReduce Engine - Framework na provadeni kalkulaci na datach v FS a obsahujici casovac a resource manager
 
-### Projekty souvisejici s Hadoop
+## Projekty souvisejici s Hadoop
 
 - Lucene je knihovna na engine textoveho vyhledavani napsana v Java
 - Hbase je Hadoop databaze
@@ -28,6 +28,6 @@
 - Jaql is primarily a query language for JavaScript Object Notation (JSON)
 - [IBM BigInsight Quick Start Edition](https://ibm-open-platform.ibm.com/biginsights/download-pages/download-qse-vm/?&S_TACT=M1610EPW)
 
-#### HDFS
+### HDFS
 
 FS na existujicich FS operacniho systemu, navrzeny k toleranci selhani komponent a k obsahovani velikych souboru. Male soubory - pomaly pristup. Hledani draha operace. Designovano na streamy nebo sekvencni data. Hadoop blok je soubor na disku o jiste velikosti (napriklad 128MB).

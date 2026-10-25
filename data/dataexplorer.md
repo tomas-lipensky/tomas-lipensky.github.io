@@ -3,14 +3,12 @@
 Puvodne Data Explorer od [Vivisimo](http://en.wikipedia.org/wiki/Vivisimo), pozdeji Vivisimo prevzala IBM a prejmenovala na IBM Infosphere Data Explorer, nyni IBM Watson Explorer. Data Explorer umi prochazet informacni zdroje, at jiz uvnitr
 podniku ci na internetu ci u obchodnich partneru, indexovat a kolektovat informace a nabizet jejich souhrn a vyhledavani. Komponenty WEX jsou [Zookeeper](https://zookeeper.apache.org/) (centralni spravce konfiguraci a synchronizaci sluzeb, podporujici clustery) a [Velocity](http://velocity.apache.org/engine/1.7/overview.html) (template engine - MVC pristup) od Apache.
 
-### Interni odkazy
-
-### Externi odkazy
+## Externi odkazy
 
 [Pekny popis WEX na DW](https://www.ibm.com/developerworks/community/blogs/IMRedbooks/entry/a_quick_view_of_ibm_infosphere_data_explore?lang=en)  
 [Knowledge Center](http://www.ibm.com/support/knowledgecenter/en/SS8NLW_11.0.0/watsonexplorer_11.0.0.html)  
 
-### Procesy, adresare, konfiguracni soubory
+## Procesy, adresare, konfiguracni soubory
 
 org.apache.zookeeper.server.quorum.QuorumPeerMain ... [Zookeeper](https://zookeeper.apache.org/)  
 /opt/IBM/IDE/AppBuilder/wlp/bin/tools/ws-server.jar AppBuilder ... AppBuilder  
@@ -22,7 +20,7 @@ org.eclipse.help.base.infocenterApplication ... InfoCenter
 /opt/ibm/IDE/Engine/bin/query-service  
 /opt/ibm/IDE/Engine/webserver/httpd ... Apache Http Server  
 
-### Start/stop/status/info
+## Start/stop/status/info
 
 **Start**
 nohup /opt/ibm/IDE/InfoCenter/IC_start.sh &amp; ... spusti Data Explorer InfoCenter  
@@ -43,7 +41,7 @@ nohup /opt/IBM/IDE/AppBuilder/wlp/bin/server start AppBuilder & ... nastartuje A
 velocity-cmd ping ... zkusi ping Explorera  
 Engine/bin/velocity-status ... Status Data Explorera, vypis procesu  
 
-### Sluzby
+## Sluzby
 
 http://localhost:9080/vivisimo/cgi-bin/admin  
 http://localhost:9081/ResultsModule  

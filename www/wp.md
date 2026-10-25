@@ -1,10 +1,10 @@
 # WebSphere Portal
 
-### Externi Odkazy:
+## Externi Odkazy:
 
 [IBM Support Assistant Lite](https://www-304.ibm.com/support/docview.wss?rs=688&uid=swg24008662) w WebSphere Portal  
 
-### wpscript
+## wpscript
 
 wp_root/bin/wpscript.sh -port 8882 ... interaktivni mod  
 wp_root/bin/wpscript.sh -port 8882 -conntype SOAP ... interaktivni mod, typ spojeni SOAP (RMI, NONE)  
@@ -34,7 +34,7 @@ $Look - MBeam Look
 $Access  
 $Paclist  
 
-### xmlaccess
+## xmlaccess
 
 Export celeho portalu:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  

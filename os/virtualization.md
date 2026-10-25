@@ -1,28 +1,28 @@
 # Virtualizace - Virtualni pocitace
 
-### KVM
+## KVM
 
 Linux reseni - interni odkaz [lin-vpars.html](lin-vpars.html)
 
-### libvirt
+## libvirt
 
 Linux reseni - interni odkaz [lin-vpars.html](lin-vpars.html)
 
-##### XEN
+#### XEN
 
 Linux reseni - interni odkaz [lin-vpars.html](lin-vpars.html)
 
-### [VirtualBox](http://www.virtualbox.org/)
+## [VirtualBox](http://www.virtualbox.org/)
 
 Linux prikazy na internim odkazu [lin-vpars.html](lin-vpars.html)
 
-### [VMWare](http://www.vmware.com/cz/)
+## [VMWare](http://www.vmware.com/cz/)
 
 Linux prikazy na internim odkazu [lin-vpars.html](lin-vpars.html) a [esx.html](esx.html)
 
-### Docker
+## Docker
 
-### Eucalyptus - cloud solution from Ubuntu
+## Eucalyptus - cloud solution from Ubuntu
 
 sudo euca_conf --no-rsync --discover-nodes ... zapne node controler  
 cd ~/.euca; sudo euca_conf --get-credentials mycreds.zip; unzip mycredents.zip ... ziska kredence od node controleru  
@@ -32,7 +32,7 @@ euca-authorize default -P tcp -p 22 -s 0.0.0./0 ... povoli ssh tok ze vsech mist
 euca-run-instances emi-A1 -k mykey -t c1.medium ... spusti image  
 wait -n5 euca-describe-instances ... kontroluje stav instance, aby jsme vedeli, kdy nastartovala  
 
-### [Vagrant](https://en.wikipedia.org/wiki/Vagrant_%28software%29)
+## [Vagrant](https://en.wikipedia.org/wiki/Vagrant_%28software%29)
 
 Virtualizacni konfigurator nad jednotlivymi virtualizacnimi resenimi.
 

@@ -1,6 +1,6 @@
 # HP-UX - File Systemy, LVM, zalohovani, Storage
 
-### Soubory
+## Soubory
 
 chacl ... (change access list) meni ACL k souborum  
 fuser -u data/data ... ukaze procesy uzivajici soubor /data/data  
@@ -8,7 +8,7 @@ fuser -cu /data ... procesy, ktere pristupuji na FS /data
 fuser -ku /dev/vg01/datavol ... zabije procesy, ktere pristupuji na LV datavol  
 lsacl ... ukaze ACL souboru  
 
-### FS - souborove systemy
+## FS - souborove systemy
 
 /etc/fstab ... FS, ktere se mountuji pri startu OS  
 bdf ... ukaze volne miso na FS  
@@ -47,7 +47,7 @@ vxtunefs ... nastaveni parametru VxFS FS
 vxumopunt -o force /data ... odmountuje hrubym zpusobem (zabije procesy) FS /data  
 vxupdate -n 7 /data ... upgradne verzi specifikace JFS/VxFS FS /data na verzi 7  
 
-### Swap
+## Swap
 
 swapon /dev/rdisk/disk4 ... vytvori swap na hdsik4  
 swapon -e /dev/rdisk/disk2 ... predtim jsme nechali na konci 1GB nista. Timto tam udelame ze zbytku swap  
@@ -55,7 +55,7 @@ swapon -p 4 -l 1024m /data ... Vytvori swapovaci misto velike az 1024MB, priorit
 swapoff /dev/rdisk/disk4 ... (11i v3) zrusi pouzivani disku4 jako swap  
 swapinfo ... informace o jednotlivych zarizenich swapu a jejich vyuziti
 
-### LVM - Logical Volume Manager
+## LVM - Logical Volume Manager
 
 lvmadm -t ... ukaze, jake verze LVM podporuje OS a jake parametry LVM  
 lvmadm -l ... (11i v3) ukaze, ktere disky jsou PV a ve kterych VG jsou  
@@ -65,7 +65,7 @@ swlist -l fileset -a state LVM.LVM-MIRROR-RUN LVM-MirrorDisk.LVM-MIRROR ... (11i
 swlist B9116* T277[1-7]* ... ukaze, zda je koupena licence na Veritas online LVM  
 swlist Base-VxVM-50 Base-VXVM ... zjsiti, zfda jsoun nainstalovane balocky pro Veritas LVM  
 
-### LV - Logical Volume
+## LV - Logical Volume
 
 lvdisplay /dev/vgdata/swapvol ... (logical volume display) ukaze hlavicku v LV swapvol z VG vgdata
 lvdisplay -v /dev/vg02/lv02 ... ukaze podrobne informace o LV lv02 z VG vg01  
@@ -77,7 +77,7 @@ lvreduce -L 8 /dev/vg01/rdatavol ... (logical volume reduce) zmensi LV na 8 MB, 
 lvremove /dev/vg01/datavol ... smaze LV datavol
 lvrmboot
 
-### VG - Volume group
+## VG - Volume group
 
 vgcfgrestore -n vg00 /dev/dsk/c2t0d0 ... Obnovi nastaveni nove vymeneneho PV (musi byt neaktivni)
 vgchange -a y datavg ... Prepne grupu do vary on (aktivni VG) VG datavg
@@ -96,7 +96,7 @@ vgremove vg01; rm -ir /dev/vg01 ... smaze VG vg01 (je treba vymazat i DSF, v 11i
 vgscan -apv ... oscanuje PV vsech VG a znovu vytvori /etc/lvmtab
 vgsync vg00 ... synchronizuje VG vg00
 
-### PV - Physical Volume
+## PV - Physical Volume
 
 pvchange -a n /dev/dsk/c2t0d0 ... nastavi PV c2t0d0 jako neaktivni
 pvcreate /dev/rdisk/disk5 ... (physical volume create) vytvori PV (na zacatku disku LVM hlavicky) a pripravi disk na vlozeni do VG  
@@ -105,21 +105,21 @@ pvdisplay /dev/disk/disk1 ... (physical volume display) ukaze hlavicku PV disk1
 pvdisplay -v /dev/dsk/c1t1d1 ... ukaze podrobne informace o PV c1t1d1 vcetne jednotlivych excentu z LV  
 pvmode /dev/disk/disk3 /dev/disk/disk2 ... presune vsechny fyzicke excenty z disku3 na disk2  
 
-### [Veritas LVM](/veritas/fs.html)
+## [Veritas LVM](/veritas/fs.html)
 
 vxinstall ... nastartuje Veritas VXVM moduly - startuje se poprve, kdyz se instaluje VXVM  
 /opt/VRTSob/bin/vea ... graficke nastavovani VXVM  
 vxdisk list ... seznam PV (disku v Veritas VM)  
 vxprint -g rootdg ... informace o rootdg  
 
-### Storage
+## Storage
 
 scsimgr get_attr -a wwid -H 64000/0xfs00/0x4 ... vypise WWID (HP-UX 11r3)  
 scsimgr get_attr -a lunid -H 1/0/2/1/0.0x50001fe15003112c.0x4001000000000000 ... vypise LUNID (HP-UX 11r3)  
 spmgr  
 autopath  
 
-### boot disk
+## boot disk
 
 [boot proces](manage.html#boot), [MP - Manangement processor](mp)  
 lvlboot -v ... ukaze boot definice spousteciho disku  
@@ -137,7 +137,7 @@ setboot -a x/x.x.x ... zmeni alternativni cestu k boot disku (PA-RISC i Integrit
 setboot -h x/x.x.x ... zmeni HA alternativni cestu k boot disku (PA-RISC i Integrity)  
 setboot -p x/x.x.x ... zmeni primarni cestu k boot disku (PA-RISC i Integrity)  
 
-### System backup
+## System backup
 
 fbackup -f - -i /var ... zazalohuje /var, vystup jde na standartni vystup
 frecover -R -f /dev/rmt0 ... obnoveni vsech souboru ze zalohy na pasce
@@ -153,7 +153,7 @@ mt -f /dev/rmt/0mn rew
 mt -f /dev/rmt/0mn fsf 1
 tar xvf /dev/rmt/0m soubor
 
-### Omniback
+## Omniback
 
 mc -r DS ... (media changer) vypise stav menice medii
 omniabort -ses 2008/08/05-28 ... prerusi backup
@@ -167,7 +167,7 @@ omnimm ... ovladani medii Omnibackupu
 omnimm -eject ESL9322 42 86 37 10 ... (omniback media manager
 xomni
 
-### Ignite backup - bootovatelny backup
+## Ignite backup - bootovatelny backup
 
 swlist IGNITE ... zjisti, zda je nainstalovany ignite  
 /opt/ignite/recovery/mnt_essentials ... defaultni definice include - co je zahrnuto v backupu  
@@ -185,7 +185,7 @@ make_net_recovery -s server.com -n3 -d "popis" ... vytvori zalohu na server serv
 make_media_install ... vytvori bootovatelne DVD z net ignite backupu  
 make_sys_image ... klonovani systemu na jiny server  
 
-### [DRD](http://docs.hp.com/en/5992-6590/index.html) - Dynamic Root Disk - 11i v2, 11i v3
+## [DRD](http://docs.hp.com/en/5992-6590/index.html) - Dynamic Root Disk - 11i v2, 11i v3
 
 swinstall -s /tmp/DynRootDisk*.depot DynRootDisk ... nainstaluje DRD  
 /var/opt/drd/drd.log ... logy drd  
@@ -201,7 +201,7 @@ drd runcmd [swinstall|swremove|swlist|swmodify|swverify|swjob|kctune|update-ux|v
 drd runcmd swinstall -s server:/mydepot PHSS_NNNNN ... nainstaluje na klonu soubory z /mydepot (ne z klonu)  
 drd mode -? ... ukaze volitelne prepinace  
 
-### Rozsireni LV:
+## Rozsireni LV:
 
 /usr/sbin/cmviewcl ... check up cluster
 bdf /opt
@@ -220,7 +220,7 @@ mknod /dev/vg01/group c 64 0x010000 ... on node B
 vgimport -v -s -m /tmp/vg01.map vg01 ... on node B
 check /etc/lvmtab. make sure vg01 already change. ... on node B
 
-### Zrcadleni VG00 - PA-RISC
+## Zrcadleni VG00 - PA-RISC
 
 pvcreate -fB /dev/rdisk/diskb ... vytvori PV s mistem pro LIF (boot sektor)  
 vgextend vg00 /dev/disk/diskb ... rozsiri VG o PV  
@@ -238,7 +238,7 @@ setboot ... zobrazi NVRAM
 reboot -ry 0 ... reboot  
 echo boot_string/S | abd /stand/vmunix /dev/kmem ... overi, ze se booovalo z noveho zrcadla  
 
-### Zrcadleni VG00 - Integrity
+## Zrcadleni VG00 - Integrity
 
 idisk -wf /tmp/[idf](idf.txt) /dev/rdisk/diskb ... vytvori EFI oddily na disku b  
 idisk /dev/rdisk/diskb ... ukaze EFI oddily na disku b  
@@ -260,7 +260,7 @@ setboot ... zobrazi NVRAM
 reboot -ry 0 ... reboot  
 echo boot_string/S | abd /stand/vmunix /dev/kmem ... overi, ze se booovalo z noveho zrcadla  
 
-### zruseni zrcadleni VG00 - Integrity
+## zruseni zrcadleni VG00 - Integrity
 
 for lv in /dev/vg00/lvol*; do lvextend -m 0 $lv; done ... zruseni zazrcadleni jednotlivych LV  
 vgreduce vg00 /dev/disk/diskb_p2  

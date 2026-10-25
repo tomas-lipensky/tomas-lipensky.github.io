@@ -2,22 +2,22 @@
 
 ## Běhání
 
-#### Magazíny
+### Magazíny
 
 [bezvabeh.cz](https://www.bezvabeh.cz/clanek/489-maraton-20-t-denn-tr-ninkov-pl-n-pro-pokro-il-mu-i-3-00-h-eny-3-20-h)  
 [https://www.bezeckyzavod.cz/](https://www.bezeckyzavod.cz/) ... termínovky  
 
-#### Filmy a videa
+### Filmy a videa
 
 [Parta maraton](https://www.ceskatelevize.cz/porady/11437836026-parta-maraton/) - výzva z gauče na maraton  
 
-#### Závody
+### Závody
 
 [https://www.bezeckyzavod.cz/](https://www.bezeckyzavod.cz/) ... termínovka běžeckých závodů  
 [https://ceskybeh.cz/terminovka](https://ceskybeh.cz/terminovka) ... termínovka  
 [https://oris.orientacnisporty.cz/](https://oris.orientacnisporty.cz/) ... orientační běhy  
 
-##### překážkové - ocr - obsracle course racing
+#### překážkové - ocr - obsracle course racing
 
 [https://www.mudlife.cz/jak-trenovat](https://www.mudlife.cz/jak-trenovat) ... jak trénovat  
 [https://www.prekazkovysport.cz/zavodni-serie/terminovka/](https://www.prekazkovysport.cz/zavodni-serie/terminovka/) ... terminovky OCR  
@@ -31,7 +31,7 @@ Excalibur race
 Urban challenge  
 [termínovka na bezeckyzavod.cz](https://www.bezeckyzavod.cz/zavody/extremni-prekazkove/)  
 
-##### silniční
+#### silniční
 
 [Termínovka na svetbehu.cz](https://www.svetbehu.cz/terminovka/)  
 [Brněnské běhy](https://brnenskebehy.cz/zavody) ... série cca 5km Brněnských závodů  
@@ -41,11 +41,11 @@ Urban challenge
 [https://www.behejbrno.com/](https://www.behejbrno.com/) ... Brněnské závody, běží se kola  
 [Brněnský masakr](https://www.brnenskymasakr.cz/propozice/) ... 16 září  
 
-##### orientační
+#### orientační
 
-##### krosové
+#### krosové
 
-#### Běžci, trenéři, školy
+### Běžci, trenéři, školy
 
 Miloš Škropil  
 Eda Kožušník  
@@ -60,8 +60,8 @@ Eda Kožušník
 
 ## Kolo
 
-#### Single traily
+### Single traily
 
-##### =
+#### =
 
 Florbal =====

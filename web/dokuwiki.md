@@ -1,3 +1,0 @@
-# dokuwiki
-
-tlipensky@OSW-TLIPENSKY:/mnt/c/Project/tomas/os$ cat win-ps.html | sed -e '1,/class..okno/d' | sed -e '/paticka/,$'d -e 's/<.div>//'  -e 's/<.h5>/==/g' -e 's/<h5>/==/g'  -e 's/<.h4>/===/g' -e 's/<h4>/===/g' -e 's/<.h3>/====/g' -e 's/<h3>/====/g'  -e 's/<.h2>/=====/g' -e 's/<h2>/=====/g'  -e 's/<.h1>/======/g' -e 's/<h1>/======/g' -e 's/<br>/\\\\/g' -e 's/<p>/\n/g' -e 's/<\/p>/\n/g' -e 's/pre>/code>/g' -e 's/<a href="/[/g' -e 's/<\/a>/](/g' -e 's/<\/a>/)/g' -e 's/">/|/g'^C
