@@ -46,7 +46,7 @@ update-initramfs -u -k all
 
 ====MS Code====
 
-```
+```bash
 sudo add-apt-repository -y "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EB3E94ADBE1229CF
 sudo apt update
@@ -89,7 +89,7 @@ After implementing the configuration, close Evolution, go to the command line an
 
 ====Teams====
 
-```
+```bash
 cd /opt
 git clone https://github.com/IsmaelMartinez/teams-for-linux
 cd teams-for-linux
@@ -109,7 +109,7 @@ Icon=/opt/teams-for-linux/teams.ico" > ~/.local/share/applications/teams-for-lin
 
 ====PowerShell====
 
-```
+```bash
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
 sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
@@ -123,7 +123,7 @@ pwsh
 
 ====Winexe====
 
-```
+```bash
 wget http://download.opensuse.org/repositories/home:/uibmz:/devel:/experimental/Debian_9.0/amd64/winexe_4.8.0.0-15_amd64.deb
 apt install ./winexe_4.8.0.0-15_amd64.deb
 mkdir -p /usr/local/samba/var/cache

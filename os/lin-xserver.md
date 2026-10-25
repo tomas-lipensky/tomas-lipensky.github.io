@@ -1,6 +1,6 @@
 # LINUX - X Windows
 
-### Externi odkazy
+## Externi odkazy
 
 [Popis xserver architektury](http://en.wikipedia.org/wiki/X_Window_System_protocols_and_architecture)  
 [SysAdminGuide](https://wiki.gnome.org/SysAdminGuide) na wiki.gnome.org - navod na spravu GNOME  

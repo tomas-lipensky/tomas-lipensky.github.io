@@ -67,7 +67,7 @@ route change 192.168.0.0/16 -interface $INTF
 route -n add -net 192.168.2.0/24 192.168.1.1  
 networksetup -listallnetworkservices #... nastaveni site, stere pretrva restart  
 networksetup -listnetworkserviceorder #.. jine vylistovani  
-networksetup -setadditionalroutes networkservice [dest1 mask1 gate1] [dest2 mask2 gate2] ... [destN maskN gateN]]  
+networksetup -setadditionalroutes networkservice [dest1 mask1 gate1] [dest2 mask2 gate2] ... [destN maskN gateN]
 
 **firewall - pf packet filtering**  
 `pfctl -d` ... zakáže packet filtering (firewall)  
