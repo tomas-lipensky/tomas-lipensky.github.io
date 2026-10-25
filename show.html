@@ -29,7 +29,7 @@ layout: null
   <input id="filter" placeholder="Filter files...">
   <div id="files"></div>
 </div>
-<div id="content">Select a file.</div>
+<div id="content"></div>
 <script>
 {% assign mds = site.static_files | where: "extname", ".md" %}
 const allFiles = [{% for f in mds %}{{ f.path | remove_first: "/" | jsonify }},{% endfor %}];
@@ -48,8 +48,7 @@ function renderList() {
 }
 
 async function load() {
-  const p = decodeURI(location.hash.slice(1));
-  if (!p) return;
+  const p = decodeURI(location.hash.slice(1)) || "start.md";
   const d = p.split("/")[0];
   if (byDir[d] && $("dir").value !== d) { $("dir").value = d; }
   renderList();
