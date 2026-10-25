@@ -125,8 +125,7 @@ Seznam aplikaci, jiny zpusob:
 print AdminControl.queryNames('type=Application,*')
 ```
 
-
-Seznam aplikaci a modulu:\\
+Seznam aplikaci a modulu:
 
 ```
 for ap in AdminApp.list().split():
@@ -134,8 +133,7 @@ for ap in AdminApp.list().split():
                 print ap + " : " + mo
 ```
 
-
-Seznam aplikaci a jejich prirazeni:\\
+Seznam aplikaci a jejich prirazeni:
 
 ```
 for ap in AdminApp.list().split():
@@ -144,8 +142,7 @@ for ap in AdminApp.list().split():
                         print ap + " - " + aaa[10:-1]
 ```
 
-
-Seznam aplikaci a prirazeni k serverum:\\
+Seznam aplikaci a prirazeni k serverum:
 
 ```
 for ap in AdminApp.list().split():
@@ -155,53 +152,49 @@ for ap in AdminApp.list().split():
                                 print mo + " - " + aaa[10:-1]
 ```
 
-
-Zastaveni Deployment Manazera:\\
+Zastaveni Deployment Manazera:
 
 ```
 AdminControl.stopServer('dmgr','NODE')
 ```
 
-nebo\\
+nebo
 
 ```
 AdminControl.invoke(AdminControl.completeObjectName('type=Server,processType=DeploymentManager,*'),'stop')
 ```
 
-
-Zastaveni Node agenta:\\
+Zastaveni Node agenta:
 
 ```
 AdminControl.stopServer('nodeagent','NODE')
 ```
 
-nebo\\
+nebo
 
 ```
 AdminControl.invoke(AdminControl.completeObjectName('type=Server,node=NODE,name=nodeagent,*'),'stop')
 ```
 
-
-Start Aplikacniho serveru:\\
+Start Aplikacniho serveru:
 
 ```
 AdminControl.startServer('server2','NODE')
 ```
 
-nebo\\
+nebo
 
 ```
 AdminControl.invoke(AdminControl.completeObjectName('type=Server,node=NODE,name=NODE,*'),'launchProcess', 'server2')
 ```
 
-nebo\\
+nebo
 
 ```
 AdminControl.invoke(AdminControl.queryNames('*:*,node=NODE',launchProcess', 'server2')
 ```
 
-
-Zastaveni Aplikacniho serveru:\\
+Zastaveni Aplikacniho serveru:
 
 ```
 AdminControl.stopServer('server2','NODE')
@@ -209,15 +202,14 @@ AdminControl.stopServer('server2','NODE')
 
 zastaveni vsech Ap. serveru na jednm node: [stopApsOnNode.py](stopApsOnNode.py)  
 
-Reset DMGR k replikaci manualnich zmen v XML na vsechny nody:\\
+Reset DMGR k replikaci manualnich zmen v XML na vsechny nody:
 
 ```
 wsadmin DMGR> set config [$AdminControl queryNames *:*,type=ConfigRepository,process=dmgr]
 wsadmin DMGR> $AdminControl invoke $config refreshRepositoryEpoch
 ```
 
-
-Reset NODE k prepsani manualnich zmen v XML na NODE konfiguraci z DMGRy:\\
+Reset NODE k prepsani manualnich zmen v XML na NODE konfiguraci z DMGRy:
 
 ```
 wsadmin NODE> set config [$AdminControl queryNames *:*,type=ConfigRepository,process=nodeagent]
@@ -227,12 +219,11 @@ wsadmin NODE> $AdminControl invoke $config refreshRepositoryEpoch
 wsadmin -f [timeout.py](timeout.py) ... nastaveni timeout v Administrativni konzoli  
 wsadmin -f [showMBeans.py](showMBeans.py) ... vypise bezici MBeans  
 
-Seznam aplikaci, ktere bezi:\\
+Seznam aplikaci, ktere bezi:
 
 ```
 AdminControl.queryNames('type=Application, node=NODE,*')
 ```
-
 
 Status vsech aplikaci: [StatusOfApps.py](StatusOfApps.py)  
 
@@ -242,7 +233,6 @@ Start zastavenych aplikaci:
 AdminControl.invoke(AdminControl.queryNames('type=AplicationManager,node=NODE,process=server1,*'),'startApplication','APLIKACE')
 ```
 
-
 Stop aplikace:
 
 ```
@@ -251,32 +241,28 @@ print AdminControl.queryNames('type=Application,name=APLIKACE,*') ... najdi apli
 AdminControl.invoke(AdminControl.queryNames('type=ApplicationManager,process=SERVER,*),'stopApplication','APLIKACE')
 ```
 
-
-Start clusteru:\\
+Start clusteru:
 
 ```
 print AdminControl.queryNames('type=Cluster,*')
 AdminControl.invoke(AdminControl.completeObjectName('type=Cluster,name=CLUSTER1,*'),'start')
 ```
 
-
-Zastaveni clusteru:\\
+Zastaveni clusteru:
 
 ```
 print AdminControl.queryNames('type=Cluster,*')
 AdminControl.invoke(AdminControl.completeObjectName('type=Cluster,name=CLUSTER1,*'),'stop')
 ```
 
-
-Vygenerovani konfigurace Web-pluginu:\\
+Vygenerovani konfigurace Web-pluginu:
 
 ```
 pluginGen = AdminControl.completeObjectName('type=PluginCfgGenerator,*')
 AdminControl.invoke(pluginGen,'generate',"C:/PROGRA~1/IBM/WebSphere/AppServer/profiles/Dmgr01/config CELL CELLMANAGER dmgr plugin-cfg.xml")
 ```
 
-
-Zapnuti logovani WebSphere komponent:\\
+Zapnuti logovani WebSphere komponent:
 
 ```
 print AdminControl.queryNames('type=TraceService,*')
@@ -284,10 +270,9 @@ ts=AdminControl.completeObjectName('type=TraceService,process=serve1,*')
 AdminControl.setAttribute(ts,'traceSpecification','com.ibm.ejs.*=all')
 ```
 
-
 Vypnuti zapinani aplikace pri startu aplikacniho serveru: [DisableAppl.py](DisableAppl.py)  
 
-listovani Virtual Hostu:\\
+listovani Virtual Hostu:
 
 ```
 wsadmin>print AdminConfig.list('VirtualHost')
@@ -305,8 +290,7 @@ wsadmin>print AdminConfig.show('admin_host(cells/TestCell|virtualhosts.xml#HostA
 [port 9043]
 ```
 
-
-pocet spojeni do DB, vycisteni fronty spojeni:\\
+pocet spojeni do DB, vycisteni fronty spojeni:
 
 ```
 ds=AdminControl.queryNames('*:type=DataSource,process=as_espacejobs_1,name=calbdsnp033_refonte,*')
@@ -315,8 +299,7 @@ print AdminControl.invoke(ds, "showAllPoolContents")&#8203;
 AdminControl.invoke(ds, "purg&#8203;ePoolContents", "immediate")&#8203;
 ```
 
-
-Start vsech Listeneru na messaging\\
+Start vsech Listeneru na messaging
 
 ```
 for lPort in AdminControl.queryNames('type=ListenerPort,*').split():
@@ -325,6 +308,5 @@ for lPort in AdminControl.queryNames('type=ListenerPort,*').split():
   if state == 'false':
     AdminControl.invoke(lPort, 'start')
 ```
-
 
 programek od Pavla k listovani url k aplikacim: [list_app_mod_vh_alias.jy](list_app_mod_vh_alias.jy)

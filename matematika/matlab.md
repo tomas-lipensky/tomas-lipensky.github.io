@@ -50,7 +50,6 @@ b=[sin(1),sin(0)]
 **X.^p** prvky matice X se vynásobí p-krát samz se sebou (mocnina)
 **X>Y** porovnání matic po složkách, souhlasi-li dimenze, vysledek matice plná nul a jednicek. (alternativy <, <=, >=, ==, ~=, &, |)
 
-
 #### Podmínky
 
 if elseif else end  

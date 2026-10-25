@@ -88,35 +88,35 @@ SQL> select status, database_status from v$instance ;
 
 #### SAP
 
-<h6>Start:</h6>
+**Start:**
 startsap_argisdb1_00
 startsap_argisas1_01
-<h6>Stop:</h6>
+**Stop:**
 stopsap_argisdb1_00
 stopsap_argisas1_01
-<h6>Status:</h6>
+**Status:**
 startsap check
-<b>Nastaveni a umisteni: </b>
+**Nastaveni a umisteni:**
 /usr/sap/PS1 ... sap adresar
 
 #### munin
 
 Bezi na portu 4949
-<h6>Start</h6>
+**Start**
 /munin/sbin/munin-node config /munin/etc/munin-node.conf
-<h6>Stop</h6>
+**Stop**
 kill -9 $(ps -aef|grep munin|grep -v grep|awk '{print $2}')
-<h6>informace o sluzbe</h6>
+**informace o sluzbe**
 homepage: [http://munin.projects.linpro.no/](http://munin.projects.linpro.no/)
 
 #### ESM
 
-<h6>Start: </h6>
+**Start:**
 /esm/esmrc start
 /etc/rc.esm
-<h6>Stop: </h6>
+**Stop:**
 /esm/esmrc stop
-<h6>Status: </h6>
+**Status:**
 /esm/esmrc status
 
 #### CWS
@@ -125,13 +125,13 @@ hmmon -GQs 1:0 ... informace o zdroji ?
 
 #### audit
 
-<h6>start:</h6>
+**start:**
 /usr/sbin/audit start
-<h6>stop:</h6>
+**stop:**
 /usr/sbin/audit shutdown
-<h6>status:</h6>
+**status:**
 ps -ef|grep auditbin
-<h6>info<h6>
+**info**
 audit query ... ukaze nastaveni  
 /etc/security/audit/* ... konfigurace  
 auditpr &lt; trail ... vypise systemove udalosti
@@ -139,7 +139,7 @@ auditselect -e "event == FILE_Write && date >= 05/03/99" trail | auditpr -h e,l,
 
 #### Proxy - squid
 
-<h6>Start:</h6>
+**Start:**
 echo "/usr/sbin/squid -D >/dev/console 2>&1" | at now
 
 #### pcpmm - testovaci software na funkcnost stranek
@@ -148,9 +148,9 @@ echo "/usr/sbin/squid -D >/dev/console 2>&1" | at now
 
 #### [accounting](http://docstore.mik.ua/orelly/networking/puis/ch10_02.htm)
 
-<h6>start/stop</h6>
+**start/stop**
 /usr/lib/acct/startup ... spusteni auditovani procesu  
-<h6>configure/info</h6>
+**configure/info**
 lastcomm ... vypis v minulosti spustench procesu s casem spusteni  
 acctcom ... vypis v minulosti spustenych procesu s informaci o vyuziti cpu/mem  
 /var/adm/pacct ... datovy soubor s informacemi o spustenych procesech v minulosti  
@@ -158,32 +158,32 @@ acctcom ... vypis v minulosti spustenych procesu s informaci o vyuziti cpu/mem
 
 #### RSCT (real scalar cluster technology)
 
-<h6>start</h6>
+**start**
 startsrc -s ctrmc ... start CSM (Cluste System Management) v /etc/inittab  
-<h6>status</h6>
+**status**
 lssrc -g rsct  
 lssrc -g rsct_rm  
-<h6>zdroje/odkazy</h6>
+**zdroje/odkazy**
 REDBOOKS: A Practical Guide for Resource Monitoring and Control (RMC)  
 http://post.doit.wisc.edu/library/aix51/usr/share/man/info/en_US/a_doc_lib/aixbman/rsct/rsct02.htm  
-<h6>popis soucasti<h6>
-<h6>CSM resource managers:</h6>
+**popis soucasti**
+**CSM resource managers:**
 IBM.DMSRM ... Domaind Management System RM (MS) - ridi INM.ManagedNode, IBM.NodeGroup, IBM.NodeAuthentificate, IBM.DmsCtrl  
 IBM.HWCTRLRM ... Hardware Control RM (MS)  
 IBM.CSMAgentRM ... CSM Client Resource Agent RM (Nodes)  
-<h6>Reacting to events</h6>
+**Reacting to events**
 IBM.ERRM ... Event Esponse RM  
 IBM.ServiceRM ... Service RM  
-<h6>Monitoring data</h6>
+**Monitoring data**
 IBM.FSRM ... Filesystem RM  
 IBM.HostRM ... Host RM (Lazy daemon)  
 IBM.SensorRM ... Sensor RM  
 IBM.WLM ... Workload Manager RM  
-<h6>Logging</h6>
+**Logging**
 IBM.AuditRM ... Audit Log RM  
-<h6>Further resource managers</h6>
+**Further resource managers**
 IBM.ConfigRM ... Configuration RM  
-<h6>nezarazene</h6>
+**nezarazene**
 IBM.DRM ... (Lazy daemon)  
 
 #### Ostatni

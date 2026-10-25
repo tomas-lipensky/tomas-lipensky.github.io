@@ -99,7 +99,6 @@ steps:
       GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
 ```
 
-
 ```
 - name: Vytvoření releasu, přiložení souborů
   run: |

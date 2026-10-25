@@ -23,7 +23,6 @@ liquibase --secure-parsing=false --defaultsFile=liquibase.docker.properties upda
 </databaseChangeLog>
 ```
 
-
 ```
 <databaseChangeLog
   xmlns="http://www.liquibase.org/xml/ns/dbchangelog"

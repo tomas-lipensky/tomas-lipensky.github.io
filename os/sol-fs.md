@@ -131,5 +131,4 @@ ls -la /dev/vx/dmp/*
 format
 ```
 
-
 Danail Staykov Kolev

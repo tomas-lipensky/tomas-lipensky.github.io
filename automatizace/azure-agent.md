@@ -120,7 +120,6 @@ az vm extension set \
   --settings '{}'
 ```
 
-
 az vm extension list --resource-group myResourceGroup --vm-name myVM -o table ... status  
 Set-AzureVMExtension -ExtensionName $extensionName -VM $vm -Publisher $publisher  -Version $version -PrivateConfiguration $privateConfig  -PublicConfiguration $publicConfig | Update-AzureVM  
 

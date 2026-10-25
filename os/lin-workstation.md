@@ -53,13 +53,11 @@ sudo apt update
 sudo apt -y install code
 ```
 
-
 ====Skype4Business====
 
 ```
 sudo apt-get install pidgin pidgin-sipe
 ```
-
 
 [https://blog.programster.org/ubuntu-16-04-configure-pidgin-for-skype-for-business-lync](https://blog.programster.org/ubuntu-16-04-configure-pidgin-for-skype-for-business-lync)
 
@@ -76,7 +74,6 @@ Conferece attenance: [https://askubuntu.com/questions/296875/lync-attendee-meeti
 ```
 sudo apt-get install evolution-ews
 ```
-
 
 Configure the online account for "Microsoft Exchange" like described on URL:
 [https://www.maketecheasier.com/access-microsoft-exchange-linux/](https://www.maketecheasier.com/access-microsoft-exchange-linux/)
@@ -99,7 +96,6 @@ cd teams-for-linux
 dist/linux-unpacked/teams-for-linux
 ```
 
-
 ```
 wget https://statics.teams.microsoft.com/hashedassets/favicon/prod/favicon-9f45b466.ico -o /opt/teams-for-linux/teams.ico
 echo "[Desktop Entry]
@@ -111,7 +107,6 @@ Exec=/opt/teams-for-linux/dist/linux-unpacked/teams-for-linux
 Icon=/opt/teams-for-linux/teams.ico" > ~/.local/share/applications/teams-for-linux.desktop
 ```
 
-
 ====PowerShell====
 
 ```
@@ -121,7 +116,6 @@ sudo apt-get update
 sudo apt-get install -y powershell
 pwsh
 ```
-
 
 ### AZCLI
 

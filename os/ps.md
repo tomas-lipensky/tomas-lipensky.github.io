@@ -227,7 +227,7 @@ cd "CN=Users
 dir | where {$_.name -eq tomas} | select *,@{Label='Path';Expression={$_.PSPath}} | del ... vymaze uzivatele  
 remove-ADUser tomas  
 $secure=ConvertTo-SecureString "Password1" -asplaintext -force
-new-ADUser franta -AccountPassword $sercure -Enabled $true\\  
+new-ADUser franta -AccountPassword $sercure -Enabled $true  
 Invoke-SqlCmd -hostname . -Database AdventureWorks2012 -query "SELECT TOP 10 * from person.person" | foreach { New-ADUser -name ("user" + $_.id) -AccountPassword $password -Enabled $true -Given name $_.FirstName -Surname $_.LastName } ... vytvoreni uzivatelu z SQL tabulky  
 
 ### COM integrace - COM objekty

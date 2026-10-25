@@ -92,7 +92,7 @@ $WAS/_uninst/uninstall -silent ... odinstalace WASu
 
 ##### Aplikace oprav, update
 
-Spustit <b>IBM Update Installer</b> - pruvodce instalaci update-u pro WAS, IHS, ..:  
+Spustit **IBM Update Installer** - pruvodce instalaci update-u pro WAS, IHS, ..:
 $UI/update.sh ... spusti UpdateInstaller pruvodce  
 $WAS/bin/versionInfo.sh ... Verze WASu  
 $WAS/logs/update/$VERZE/updatelog.txt
@@ -142,7 +142,7 @@ $WAS/bin/PropFilePasswordEncoder $PROFIL/properties/soap.client.props com.ibm.SO
 $PROFIL/bin/addNode.sh DMGRSERVER DMGRPORT ... federace nodu v profilu PROFIL k bunce (cell) spravovane DMGR DMGRSERVER s SOAP portem DMGRPORT  
 $PROFIL/bin/removeNode.sh DMGRSERVER DMGRPORT ... odtrzeni nodu v profilu PROFIL od bunce (cell) spravovane DMGR  
 $PROFIL/bin/renameNode.sh DMGRSERVER DMGRPORT NOVEJMENO ... Prejmenovani nodu v profilu PROFIL v bunce (cell) spravovane DMGR na NOVEJMENO  
-$PROFIL/bin/syncNode.sh DMGRSERVER DMGRPORT ... Synchronizace nastaveni <b>STOPLEHO</b> nodu v profilu PROFIL v bunce (cell) spravovane DMGR podle konfigurace na DMGR  
+$PROFIL/bin/syncNode.sh DMGRSERVER DMGRPORT ... Synchronizace nastaveni **STOPLEHO** nodu v profilu PROFIL v bunce (cell) spravovane DMGR podle konfigurace na DMGR
 $PROFIL/bin/syncNode.sh DMGRSERVER DMGRPORT -stopservers -restart ... Automaticky stopne servery, zesynchronizuje a nastartuje servery  
 $PROFIL/bin/backupConfig.sh ... zazalohovani profilu  
 $PROFIL/bin/restoreConfig.sh ... obnoveni profilu ze zalohy  
@@ -213,8 +213,8 @@ SIB (Service Integration Bus) je "domena zprav" ve vychozim WebSphere AS. Na SIB
 
 ##### Webovy server a webove sluzby
 
-Vytvoreni Weboveho Serveru je potreba k umozneni <b>generovani konfiguracniho</b> souboru k [WebSphere Pluginu](plugin.html). U IHS serveru s povolenou administracni konzolou umoznuje
- Webovy server i <b>stop</b> a <b>start</b> weboveho serveru, <b>propagaci konfiguracniho souboru</b>, atd.
+Vytvoreni Weboveho Serveru je potreba k umozneni **generovani konfiguracniho** souboru k [WebSphere Pluginu](plugin.html). U IHS serveru s povolenou administracni konzolou umoznuje
+ Webovy server i **stop** a **start** weboveho serveru, **propagaci konfiguracniho souboru**, atd.
 
 <tt>Servers &gt; Server Type &gt; Webserver &gt; New</tt>  
 

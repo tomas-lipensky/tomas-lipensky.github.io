@@ -25,7 +25,7 @@ Jsou jednotlive prikazy, je k dispozici [8 objektu](http://www.tutorialspoint.co
 &lt;%= [session](http://www.exforsys.com/tutorials/jsp/jsp-implicit-and-session-objects.html).getId ("title") %&gt; ... vypise id sezeni  
 &lt;%= new java.utilDate() %&gt; ... vypise cas  
 &lt;%= out.println ("ahoj") %&gt; ... vypise ahoj  
-&lt;%= [config](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html).getInitParameter("hello");%&gt; ... ziska paramert hello z web.xml\\	
+&lt;%= [config](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html).getInitParameter("hello");%&gt; ... ziska paramert hello z web.xml 
 
 ### JSP XML Skriptovaci znacky
 

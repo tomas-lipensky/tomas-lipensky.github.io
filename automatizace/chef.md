@@ -106,7 +106,7 @@ rpm -i chef-12.9.41-1.el6.x86_64.rpm ... instalace klineta
 mkdir /etc/chef ... vytvori adresar pro konfiguraci  
 cp chef-validator.pem /etc/chef/validation.pem ... zkopiruje validation privatni klic nutny k registraci klienta/node  
 knife ssl fetch -s https://chefserver:443 ... ziska verejny klic chef serveru a prida jej do klicenky duveryhodnych serveru pro knife prikaz  
-cp -r $HOME/.chef/trusted_certs /etc/chef/ ... prekopiruje klicenku do konfiguracniho adresare klienta\\
+cp -r $HOME/.chef/trusted_certs /etc/chef/ ... prekopiruje klicenku do konfiguracniho adresare klienta
 
 ```
 echo '
@@ -204,7 +204,7 @@ this_node.run_list &lt;&lt; "role[windows100]" ... nastavi run list
 ### resources
 
 [Vytvareni vlastnich LWRP resources](https://docs.chef.io/custom_resources.html)  
-[Vytvareni LWRP resources](http://dougireton.com/blog/2012/12/31/creating-an-lwrp/)\\
+[Vytvareni LWRP resources](http://dougireton.com/blog/2012/12/31/creating-an-lwrp/)
 
 ```
 file '/etc/motd' do
@@ -212,13 +212,11 @@ file '/etc/motd' do
 end
 ```
 
-
 ```
 file '/tmp/motd' do
   action :delete
 end
 ```
-
 
 ```
 package 'httpd'

@@ -24,13 +24,13 @@ org.eclipse.help.base.infocenterApplication ... InfoCenter
 
 ### Start/stop/status/info
 
-<b>Start</b>  
+**Start**
 nohup /opt/ibm/IDE/InfoCenter/IC_start.sh &amp; ... spusti Data Explorer InfoCenter  
 /opt/IBM/IDE/Engine/bin/velocity-startup --yes --start-query-service ... spusti Data Explorer Engine vcentne WebServeru  
 nohup /opt/IBM/IDE/ResultsModule/wlp/bin/server start ResultsModule & ... spusti Data Explorer Results Module  
 /opt/IBM/IDE/ZooKeeper/zookeeper/bin/zkServer.sh start ... nastartuje ZooKeeper  
 nohup /opt/IBM/IDE/AppBuilder/wlp/bin/server start AppBuilder & ... nastartuje AppBuilder  
-<b>Stop</b>  
+**Stop**
 /opt/IBM/IDE/Engine/bin/velocity-shutdown --yes ... zastavi Data Explorer Engine vcetne Web Serveru  
 /opt/IBM/IDE/ResultsModule/wlp/bin/server stop ResultsModule ... zastavi Data Explorer Results Module  
 /opt/IBM/IDE/AppBuilder/wlp/bin/server stop AppBuilder ... zastavi AppBuilder  
@@ -38,7 +38,7 @@ nohup /opt/IBM/IDE/AppBuilder/wlp/bin/server start AppBuilder & ... nastartuje A
 /opt/ibm/IDE/InfoCenter/IC_end.sh ... zastavi Data Explorer InfoCenter  
 /mnt/DataExplorer/IDE/Engine/bin/velocity-webserver stop ... stop jen Web Serveru  
 
-<b>Status</b>  
+**Status**
 /mnt/DataExplorer/IDE/Engine/bin/velocity-webserver info ... status Web Serveru  
 velocity-cmd ping ... zkusi ping Explorera  
 Engine/bin/velocity-status ... Status Data Explorera, vypis procesu  

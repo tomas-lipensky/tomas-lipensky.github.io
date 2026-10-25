@@ -155,7 +155,7 @@ printf ("%s\n", (1>0) ? ("Je hezky") : ("Prsi") ); ... jiny typ podminky
 
 next; ... skoci na konec podminky while, until, for  
 last; ... posledni prikaz v cyklu - okamzite ukonci cyklus  
-continue; ... rozdeli cyklus na casti, ktere se zvlast vykonaji pri redo a next\\  
+continue; ... rozdeli cyklus na casti, ktere se zvlast vykonaji pri redo a next  
 
 redo; ... znovu zacne provadet aktualni cyklus (bez overeni podminky)  
 last; ... Ukonci cyklus  
@@ -169,9 +169,9 @@ use jméno_modulu [[verze]seznam] ... pouziti moduku, knihovny
 grep { $_ > 4 } (1 2 3 4 5 6 7 8) ... vrati pole obsahujici cisla vetsi jak 4 (podpole puvodniho)  
 
 @POLE=qw(1 2 3) ... do pole priradi prvky '1' '2' '3' mezera oddelujici slova je jednodussi zpusob, nez davani prvku do uvozovek  
-@nadruhoy = <b>map</b> {$_ * $_} @cisla; ... kazde cislo v poli da nadruhou a vytvori druhe pole  
-my %zaplatil = <b>map</b> {$_ => 1} @lide; ... vytvori asociativni pole z normalniho pole, kazdy prvek z pole bude klic s hodnotou 1  
-print <b>map</b> { $_ =~ /a/ ? ($_) : () } (ahoj, Ahoj, AHOJ); ... vypise z pole vsechny slova, co maji v sobe male a  
+@nadruhoy = **map** {$_ * $_} @cisla; ... kazde cislo v poli da nadruhou a vytvori druhe pole
+my %zaplatil = **map** {$_ => 1} @lide; ... vytvori asociativni pole z normalniho pole, kazdy prvek z pole bude klic s hodnotou 1
+print **map** { $_ =~ /a/ ? ($_) : () } (ahoj, Ahoj, AHOJ); ... vypise z pole vsechny slova, co maji v sobe male a
 push(@POLE,'novy prvek') ... prida na konec pole prvek "novy provek"  
 pop(@POLE) ... vrati posledni prvek z pole a smaze ho z pole  
 scalar @POLE; - vrati pocet prvku pole POLE  
@@ -276,14 +276,12 @@ open(PS,"ps -e -o pid,stime,args |") || [[https://www.cs.cf.ac.uk/Dave/PERL/node
 while ( &lt;PS&gt; ) { print $_ } 
 ```
 
-
 Zpusob, jak do prikazu presmerovat vstup:
 
 ```
 open(MAIL, "| /bin/mailx -s test user\@localhost ") || die "Chyba: $!\n";
 print MAIL "Ahoj";
 ```
-
 
 ### Soubory/adresare
 

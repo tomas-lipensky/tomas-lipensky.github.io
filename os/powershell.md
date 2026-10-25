@@ -309,7 +309,6 @@ $acl=Get-Acl -Path $rsaFile
 $acl.Access 
 ```
 
-
 ==Pridani prav==
 
 ```
@@ -320,7 +319,6 @@ Set-Acl $rsaFile $acl
 $acl=Get-Acl -Path $rsaFile 
 $acl.Access 
 ```
-
 
 ### vzdalene spousteni
 
@@ -379,7 +377,7 @@ cd "CN=Users
 dir | where {$_.name -eq tomas} | select *,@{Label='Path';Expression={$_.PSPath}} | del ... vymaze uzivatele  
 remove-ADUser tomas  
 $secure=ConvertTo-SecureString "Password1" -asplaintext -force
-new-ADUser franta -AccountPassword $sercure -Enabled $true\\  
+new-ADUser franta -AccountPassword $sercure -Enabled $true  
 Invoke-SqlCmd -hostname . -Database AdventureWorks2012 -query "SELECT TOP 10 * from person.person" | foreach { New-ADUser -name ("user" + $_.id) -AccountPassword $password -Enabled $true -Given name $_.FirstName -Surname $_.LastName } ... vytvoreni uzivatelu z SQL tabulky  
 
 Get-ADGroup Skupina ... (portebuje RSAT) informace o AD skupine  
@@ -592,7 +590,6 @@ $contents = Get-Content -Path skript.ps1 -ErrorAction Stop
 $errors = $null
 $null = [System.Management.Automation.PSParser]::Tokenize($contents, [ref]$errors)
 ```
-
 
 ##### Kultura a lokalizace
 

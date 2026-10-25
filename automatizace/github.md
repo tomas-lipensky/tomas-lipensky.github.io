@@ -46,7 +46,6 @@ jobs:
      if: ${{ failure() && steps.aaa.conclusion == 'failure' }}
 ```
 
-
 #### Proměnné
 
 %%$![ CONTEXT]( CONTEXT.OBJEKT )%% ... Seznam contextů a objektů: [https://docs.github.com/en/actions/reference/workflows-and-actions/contexts](https://docs.github.com/en/actions/reference/workflows-and-actions/contexts)  
@@ -64,7 +63,7 @@ workflow_dispach: ... manuální spouštění
 
 ##### workflow_call
 
-[workflow_call](https://docs.github.com/en/actions/using-workflows/reusing-workflows)\\
+[workflow_call](https://docs.github.com/en/actions/using-workflows/reusing-workflows)
 
 ```
 inputs:
@@ -75,7 +74,6 @@ secrets:
   token:
     required: true
 ```
-
 
 workflow_call.outputs.PRVNI.description: "popis"  
 workflow_call.outputs.PRVNI.value: %%$![ job.EXAMPLE.outputs]( job.EXAMPLE.outputs.output1 )%%

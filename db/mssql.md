@@ -48,7 +48,6 @@ alter user glob with login=glob;  ... propojeni uzivatele glob v databazi s logi
     where name='log'
 ```
 
-
 == Seznam session a jejich stav: ==
 
 ```
@@ -90,7 +89,6 @@ FROM
     CROSS APPLY SYS.DM_EXEC_QUERY_PLAN(R.PLAN_HANDLE) QP
 --WHERE R.STATUS NOT IN ('BACKGROUND','SLEEPING')
 ```
-
 
 == Seznam blokujicich a uzamykajicich sezeni: ==
 

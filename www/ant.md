@@ -47,5 +47,4 @@ Priklad projektu na WebSphere
 &lt;/project&gt;
 ```
 
-
 &lt;property name"applicationName" value="APP1"&gt;

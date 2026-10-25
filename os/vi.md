@@ -63,21 +63,19 @@ PARAMETRY ... "g" - vsechny vyskyty na radku, "c" - potvrzeni kazde zmeny, "i" -
 
 ### PRIKLADY
 
-Smazani vsech radku, na kterych je vyraz "abc":\\
+Smazani vsech radku, na kterych je vyraz "abc":
 
 ```
 :g/abc/ d
 ```
 
-
-Mezi malym pismenem a velkym udela novy radek:\\
+Mezi malym pismenem a velkym udela novy radek:
 
 ```
 :1,$s/([a-z]\)\([A-Z]\)/\1\r\2/g
 ```
 
-
-Substutuce\\
+Substutuce
 
 ```
 :.,$s/a\{2,}/b/gi ... nahradi libovolny pocet A,a vetsi nez 2 pismenem b
@@ -107,7 +105,6 @@ Substutuce\\
 \u	uppercase character 	
 \U	non-uppercase character 
 ```
-
 
 ===Počeštění===
 

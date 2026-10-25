@@ -4,7 +4,7 @@
 1. Boot proces [Integrity](hp-integrity) serveru  
 2. Boot proces [PA-RISC](hp-parisc) serveru  
 [Souborove systemy a data](hp-fs)  
-[Sitove veci](hp-net)\\	
+[Sitove veci](hp-net) 
 [Sluzby](hp-services)  
 [HACMP - clustering](hp-cluster)  
 [nPary, vPary, VM, ...](hp-partitions)  

@@ -58,7 +58,7 @@ lspath ... ktery radic ovlada ktery disk
 lsattr -El dpo ... informace o DPO (Data Path Optimiser)  
 lsattr -El vpath5 ... informace o vpath  
 
-<h6>SDD</h6>
+**SDD**
 
 dpovgfix ... opravi volume groupu, ktera ma oboji - hdisky i vpathy  
 extendvg4vp ... extenduje volume groupu od vpathy  
@@ -79,7 +79,7 @@ querysn ... ukaze seriove cisla zarizeni
 vp2hd ... prevede vpathy na hdisky  
 
 SDclient ... graficke ovladani storage DSxxxx  
-/opt/ibm/dscli .. textove ovladani storage DSxxxx\\
+/opt/ibm/dscli .. textove ovladani storage DSxxxx
 
 ```
 2105 ==> ESS (mit FC ==> Fiber Channel connected, sonst SCSI)
@@ -88,7 +88,6 @@ SDclient ... graficke ovladani storage DSxxxx
 2145 ==> SAN Volume Controller Device
 2062 ==> SAN Volume Controller for Cisco MDS 9000
 ```
-
 
 addpaths - Fügt einem bestehenden vpath-Device weitere Pfade zu. Das Kommando ist dynamisch, der vpath ist aktiv und im Status "available".
 addpaths ... prida nove cesty  
@@ -113,7 +112,7 @@ lquerypr ... Ukazuje a meni rezervacni status (SCSI Locks).
 lquerypr -Vh /dev/hdisk ... ukaze reserved status  
 lquerypr -rh /dev/hdisk ... vyprazdni reserved status  
 
-<h6>SDDPCM</h6>
+**SDDPCM**
 pcmsrv - Deamon, der die Pfade überwacht.  
 pcmpath ... info a meneni SDDPCM zarizeni
 pcmpath query device ... seznam SDDPCM zarizeni
@@ -125,10 +124,10 @@ relbootsrv - Hebt SCSI-2 Reservierungen auf.
 sddpcmgetdata - Sammelt Debug-Information und Traces (File sddpcmdata_hostname_time.tar).  
 pdmtest - Umfangreiches Tool zum Testen und Debuggen.  
 
-<b>ESS</b>  
+**ESS**  
 [lsess](http://unix.derkeiler.com/Mailing-Lists/AIX-L/2005-10/0037.html)  
 
-<b>[ssa](http://www.alanward.info/Glossary/S/SSA.html)</b>
+**[ssa](http://www.alanward.info/Glossary/S/SSA.html)**
 diag -> Task Selection -> SSA Service Aids -> Set Service Mode ... seriove cisla disku  
 lsdev -C -t hdisk -c disk -s ssar -H ... ukaze ssa disky
 ssaadap -l hdisk59 ... ukaze, na kterem adapteru je zapojen disk 59  
@@ -138,12 +137,12 @@ ssaxlate -l hdisk5 ... info o ssa disku hdisk5
 [ssaload](http://www.alanward.info/Glossary/S/SSA_Commands/ssaload.htm) ... nahraji mikrokod na ssa disk  
 ssa_fw_status -a ssa0 ... ukaze stav baretie pro ssa0  
 
-<b>SCSI X-PCI RAIDs</b>  
+**SCSI X-PCI RAIDs**  
 sisraidmgr -L -j1 -l sisioa0 ... vypis raid zarizeni pod radicem sisioa0  
 sisraidmgr -h ... help k praci s RAID polema  
 ssaraid ... SSA raid
 
-<b>SVC</b>  
+**SVC**  
 $SVCCLI svcinfo lsvdisk | grep 600507680190025518000000000009E4 ... zjisti, zda je naasignovany disk z nasledujicim SCSIid  
 $SVCCLI svcinfo lsvdiskhostmap vdisk1465 ... infomace o disku 1465  
 
@@ -218,9 +217,8 @@ lsattr -El rpvserver0 ... atributy
 lsdev -Cc disk -t rpvclient ... GLVM disky
 mount -t glvm ... namountuje glvm disky
 [[https://www.ibm.com/support/knowledgecenter/en/ssw_aix_72/com.ibm.aix.cmds3/mkcifsmnt.htm|
-	mkcifsmnt]] -f /mnt -d share1 -h server1 -c user1  ... vytvori CIFS FS /mnt z disku share1 z windows pocitace server1 pod uzivatelem user1\\
+      mkcifsmnt]] -f /mnt -d share1 -h server1 -c user1  ... vytvori CIFS FS /mnt z disku share1 z windows pocitace server1 pod uzivatelem user1
 ```
-
 
 #### FS
 
@@ -313,7 +311,7 @@ lsnim -a if master To see NIM master hostname
 
 #### Storage, datova uloziste
 
-[MPIO](http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/devmpio.htm)\\
+[MPIO](http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp?topic=/com.ibm.aix.baseadmn/doc/baseadmndita/devmpio.htm)
 
 ```
 1724-100 = DS4100 = FAStT 100
@@ -332,12 +330,8 @@ FC 1750 ==> DS6000
 FC 2145 ==> SAN Volume Controller Device
 FC 2062 ==> SAN Volume Controller for Cisco MDS 9000
 
-
-
 pcmpath (devices.sddpcm.53.rte)
 datapath (devices.sdd.53.rte) - existuji zarizeni vpathX, ktere zastupuji cesty+disky na Storage
-
-
 
 /usr/sbin/pathtest
 ```
@@ -355,15 +349,15 @@ flcopy ... (flopy copy)
 
 ##### Rozsireni­ LV
 
-<i>Zjistit, zda se nejedna o cluster, napr. smitty clverify. Vice v kapitole [manage_diagnose](manage_diagnose.html)</i>
+*Zjistit, zda se nejedna o cluster, napr. smitty clverify. Vice v kapitole [manage_diagnose](manage_diagnose.html)*
 lsvg -l rootvg
 lsvg rootvg | grep FREE
 extendlv hd4 3
 lslv hd4
-<b>X</b>=1024*1024*(PP SIZE)*(LPs)/512
+**X**=1024*1024*(PP SIZE)*(LPs)/512
 (extendlv pokud je aix v. <= 5.2)  
-chfs -a size=<b>X</b> /dev/hd4
-<i>Jde-li o cluster zvetsime</i> smitty hacmp
+chfs -a size=**X** /dev/hd4
+*Jde-li o cluster zvetsime* smitty hacmp
 
 ##### Mirrorovani VG vg01 na jiny PV hdisk3
 
@@ -403,7 +397,7 @@ ssh node2 "importvg -L aaa hdisk43" (nebo extendvg aaa hdisk95)
 varyon
 ```
 
-<b>nebo</b>
+**nebo**
 
 ```
 HACMP smitty:

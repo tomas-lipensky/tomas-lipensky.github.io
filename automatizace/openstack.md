@@ -60,7 +60,7 @@ nova-manage service disable --host=NODE1 --service=SERVICE1 ... vypne sluzbu SER
 
 ### Availability zone. agregace, hostovaci masiny
 
-<b>Agregace (host agregate)</b> - je skupinovani hostu s asociovanymi metadaty. Host muze byt prirazen do vice agregaci. Agregace muze tvorit availability zonu.  
+**Agregace (host agregate)** - je skupinovani hostu s asociovanymi metadaty. Host muze byt prirazen do vice agregaci. Agregace muze tvorit availability zonu.
 [Pekny clanek na RedHat dokumentaci](https://access.redhat.com/documentation/en-us/red_hat_openstack_platform/8/html-single/architecture_guide/)  
 
 nova aggregate-list ... seznam agregaci a availability zon  

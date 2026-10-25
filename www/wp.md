@@ -38,13 +38,13 @@ $Paclist
 
 Export celeho portalu:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" <b>type="export"</b> export-users="false"&gt;  
+&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" **type="export"** export-users="false"&gt;  
 &lt;portal action="export"/&gt;  
 &lt;/request&gt;
 
 Ziskani seznamu vsech zdroju stejneho typu:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" <b>type="export"</b> create-oids="false"&gt;  
+&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" **type="export"** create-oids="false"&gt;  
 &lt;portal action="locate"&gt;  
 &lt;content-node action="export" objectid="*"/&gt;  
 &lt;/portal&gt;  
@@ -52,7 +52,7 @@ Ziskani seznamu vsech zdroju stejneho typu:
 
 Ziskani konkretni stranky z portalu pomoci nikatniho jmena:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" <b>type="export"</b>&gt;  
+&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" **type="export"**&gt;  
 &lt;portal action="locate"&gt;  
 &lt;content-node action="export" uniquename="wps.MyPortal.Welcome.My Page"/&gt;  
 &lt;/portal&gt;  
@@ -60,7 +60,7 @@ Ziskani konkretni stranky z portalu pomoci nikatniho jmena:
 
 Ziskani stranky se vsema potomkovyma objektama:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" <b>type="export"</b> create-oids="true"&gt;  
+&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" **type="export"** create-oids="true"&gt;  
 &lt;portal action="locate"&gt;  
 &lt;content-node action="export" objectid="wps.My Portal" export-descendents="true"/&gt;  
 &lt;/portal&gt;  
@@ -68,7 +68,7 @@ Ziskani stranky se vsema potomkovyma objektama:
 
 Modifikace Unikatniho jmena:  
 &lt;?xml version="1.0" encoding="UTF-8"?&gt;  
-&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" <b>type="update"</b> create-oids="false"&gt;  
+&lt;request type="update" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PortalConfig_1.3.xsd" **type="update"** create-oids="false"&gt;  
 &lt;portal action="locate"&gt;  
 &lt;content-node action="update" objectid="_6_003II98OB041FAI_255" uniquename="my.portal.news"/&gt;  
 &lt;/portal&gt;  

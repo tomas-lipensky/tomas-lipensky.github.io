@@ -91,7 +91,6 @@ docker swarm leave ... odpojení od swarmu
 ### Dockerfile
 
 Soubor z ktereho se builduji dalsi images
-   
 
 ```
 FROM local/c7-systemd
@@ -99,7 +98,6 @@ RUN yum -y install httpd; yum clean all; systemctl enable httpd.service
 EXPOSE 80
 CMD ["/usr/sbin/init"]
 ```
-
 
 docker build %%--%%rm -t local/c7-systemd-httpd ... vytvori z obrazu jiny obraz, provede prikazy z Dockerfile  
 

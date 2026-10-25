@@ -86,17 +86,17 @@ AdminTask.setTraceSpecification(â€™[-persist true -traceSpecification *=info ]â€
 
 ### Obrazy
 
-<b>ICO 2.4</b>  
+**ICO 2.4**  
 [Procedura na vytvoreni image template na ICO 2.4](http://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0/com.ibm.sco.doc_2.4/t_creating_smartcloud_orchestrat.html)  
 [http://www.redbooks.ibm.com/abstracts/sg248042b](http://www.redbooks.ibm.com/abstracts/sg248042b).html?Open|Creating Smart Virtual Appliances with IBM Image Construction and Composition Tool]] ... nastroj na customizaci obrazu po deployi  
 virtual solutions activation engine ... Cast IBM Image Construction and Composition Tool ktera po prvnim spusteni virtualni masiny nastavi obraz na pozadovane vlastnosti  
 [DW: Virtual appliances and the Open Virtualization Format](http://www.ibm.com/developerworks/library/l-open-virtualization-format-toolkit/) - [OVF](https://www.ibm.com/support/knowledgecenter/SSSHEC_7.6.0/deploy/cpt/cpt_aboutovf.html) format a toolit ktery pouziva virtual solutions activation engine  
 OVA (Open Virtual Applience) je tar balicek obsahujici OVF soubory a potrebne soubory, popisujici vlastnosti virtualni masiny (HW na kterem pojede, jmeno, virtualni disky atd)  
-<b>ICO 2.5</b>  
+**ICO 2.5**  
 [Pridani immage do ICO 2.5](http://www.ibm.com/support/knowledgecenter/SS4KMC_2.5.0/com.ibm.ico.doc_2.5/pc/pct_add_images_OpenStack.html)  
 [Cloudbase-init - tutorial](http://cloudbase-init.readthedocs.io/en/latest/tutorial.html#execution)  
 [Cludbase-init - documentation](https://media.readthedocs.org/pdf/cloudbase-init/latest/cloudbase-init.pdf)  
-<b>YAML</b>  
+**YAML**  
 [Popis YAMLu](http://docs.ansible.com/ansible/YAMLSyntax.html) - YAML Ain't Markup Language - na Ansible strankach  
 [Heat Orchestration Template](http://docs.ansible.com/ansible/YAMLSyntax.html) - [YAML](http://yaml.org/) soubor na popsani Heat obrazu  
 [Uvod do tvoreni Heat obrazu](https://support.rackspace.com/how-to/building-cloud-orchestration-templates/), [Heat obrazy1](https://developer.rackspace.com/blog/openstack-orchestration-in-depth-part-1-introduction-to-heat/) a [Heat obrazy 2](https://developer.rackspace.com/blog/openstack-orchestration-in-depth-part-2-single-instance-deployments/) na popsane naRackspace  
@@ -109,7 +109,7 @@ deployer -h SERVER -u USER -p PASSWORD -f skript.jy a1 a2 ... jython skript s ar
 
 ### Ukoly
 
-<b>[Pridani noveho region serveru](https://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0/com.ibm.sco.doc_2.4/c_depl_region_server.html)</b>
+**[Pridani noveho region serveru](https://www.ibm.com/support/knowledgecenter/SS4KMC_2.4.0/com.ibm.sco.doc_2.4/c_depl_region_server.html)**
 mkdir -p /opt/stack/vmware/wsdl/5.0  
 cd /opt/stack/vmware/wsdl/5.0  
 for i in vimService.wsdl vim.wsdl core-types.xsd query-messagetypes.xsd query-types.xsd

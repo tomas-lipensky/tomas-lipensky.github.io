@@ -45,7 +45,6 @@ LoadModule dav_svn_module     modules/mod_dav_svn.so
 &lt;/Location&gt;
 ```
 
-
 ##### Zaloha a oprava SVN repozitare
 
 svnadmin dump /svn > backup.svn.dumpfile ... zazalohovani SVN repozitare do dump souboru  

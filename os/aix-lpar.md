@@ -50,7 +50,7 @@ lscfg -vpl hdisk2 ... ukaze vitalni data virtualniho disku hdisk2, potrebne k in
 /usr/sbin/rsct/bin/rmcctrl -p ... povoli RMC demona pro vzdalene spojeni z HMC  
 lsrsrc IBM.ManagementServer ... ukaze HMC, ktere spravuje LPAR, pokud je nadefinovan (RMC)  
 /usr/sbin/rsrc/install/bin/recfgct ... reinicializuje cely RMC system na LPARu  
-<b>[RMC](http://publibn.boulder.ibm.com/doc_link/Ja_JP/a_doc_lib/aixbman/rsct/rscttfrm.htm) (Resource Monitoring and Control), soucast RSCT (Real scalar cluster technology):</b>  
+**[RMC](http://publibn.boulder.ibm.com/doc_link/Ja_JP/a_doc_lib/aixbman/rsct/rscttfrm.htm) (Resource Monitoring and Control), soucast RSCT (Real scalar cluster technology):**  
 IBM.DMSRM ... na HMC registruje HMC v NVRAM a zapistuje tam sifrovaci klice  
 IBM.CSMAgentRM ... na LPARu cte IP adresu HMC a sifrovaci klic z NVRAM na spravovanem systemu  
 IBM.DRM ... na LPARu automaticke pripojeni k HMC s daty od CSMAgenta  

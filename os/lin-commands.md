@@ -47,7 +47,6 @@ uuencode
 uudecode
 ```
 
-
 ##### json
 
 [jq](jq.html) - utilita na zpracovani JSON souboru a manipulaci s JSON objekty  
@@ -64,7 +63,6 @@ clock ... Cas ktery ukazuje bios
 hwclock ... Cas ktery ukazuje bios
 /sbin/hwclock -systohc ... podle systemoveho casu nastavi cas v biosu
 ```
-
 
 ===bash===
 
@@ -87,7 +85,6 @@ export $TMOUT=240 .. odpojeni po 4 minutach
 for i in `seq 1 8`; do echo $i; done
 ```
 
-
 ===Počestění===
 
 ```
@@ -107,7 +104,6 @@ symlinks ... kontroluje symbolicke odlazy na disku
 sfdisk -l -x |more ... ukaze logicke oddily vsech disku
 loadkeys /usr/share/kbd/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz ... nacteni prekladove tabulky pro klavesy
 ```
-
 
 ### SNPM
 

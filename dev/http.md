@@ -15,7 +15,6 @@ telnet tomas.lipensky.cz 80
 GET /
 ```
 
-
 ==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
 
 ```
@@ -24,7 +23,6 @@ GET / HTTP/1.1
 Host: tomas.lipensky.cz
 ```
 
-
 ==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
 
 ```
@@ -32,7 +30,6 @@ telnet tomas.lipensky.cz 80
 GET / HTTP/1.1
 Host: tomas.lipensky.cz
 ```
-
 
 ==Otestovani http sluzby pres http proxy==
 
@@ -40,7 +37,6 @@ Host: tomas.lipensky.cz
 telnet proxy.server.com 8080
 CONNECT google.com:80 HTTP/1.0
 ```
-
 
 ==Otestovani http sluzby, http/1.1 minimalni ziskani dat z http serveru:==
 
@@ -59,14 +55,12 @@ Connection: keep-alive
 Color=dark&taste=bitter
 ```
 
-
 ==HTTP Proxy==
 
 ```
 telnet 1.2.3.4 8080
 CONNECT 1.2.3.5:80 GET /
 ```
-
 
 ##### Dalsi prikazy pro http komunikaci
 

@@ -62,7 +62,6 @@ msg = {
 return m sg
 ```
 
-
 ### bloky (flows)
 
 [forEach (array iteration & completion)](https://flows.nodered.org/flow/43501a1b424434de0ffb)  

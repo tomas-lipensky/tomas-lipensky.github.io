@@ -35,7 +35,7 @@
 #### uzivatelsky EXEC mod
 
 disconnect 4 ... prerusi telnetove spojeni c. 4  
-<b>en</b> (enable) ... prepnuti do privilegovaneho modu  
+**en** (enable) ... prepnuti do privilegovaneho modu  
 
 logout ... odpojeni ze systemu  
 ping ip 192.168.2.1 ... pingne ip adresu 192.168.2.1  
@@ -81,7 +81,7 @@ traceroute ip 192.168.2.6
 
 #### Privilegovany mod
 
-<b>vse co v EXEC (normalnim) modu + nasledujici prikazy:</b>  
+**vse co v EXEC (normalnim) modu + nasledujici prikazy:**
 clock set 11:15:11 25 aug 2010 ... nastavi cas a datum  
 clear line 4 ... zrusi aktivni vty linku 4  
 copy run start ... zkopiruje aktualni konfiguraci do startovaci  
@@ -158,12 +158,12 @@ username cisco privilege 15 password 0 cisco ... vytvori uzivatele cisco s hesle
 
 #### routing - smerovani
 
-<h6>Staticky (AD =1)</h6>
+**Staticky (AD =1)**
 ip 0.0.0.0 0.0.0.0 1.2.3.4; ip classless ... defaultni route  
 
 ip route 1.2.3.0 255.255.255.0 1.2.3.4 ... konfigurace staticke routy pro sit 1.2.3.0/24 na router 1.2.3.4  
 ip default-network 1.2.3.4; ip classless ... defaultni route  
-<h6>EIGRP (AD = 90)</h6>
+**EIGRP (AD = 90)**
 router eigrp 10 ... Nastavovani EIGRP routovani, AS (autonomous system 10)  
 router eigrp 10; network 10.0.0.0 ... nastavi eigrp na site 10.0.0.0  
 router eigrp 10; passive-interface serial 0/1 ... nastavi seriovy port jako pasivni - nevysila, ani neprijma EIGRP data  
@@ -173,12 +173,12 @@ router eigrp 10; maximum-hops 140 ... zvysi maximalni pocet skoku pri routovani 
 
 router eigrp 10; no auto-summary ... bez auto-summary (distribuuje podsite mezi 2 routry)  
 ip summary-address eigrp 10 192.168.10.64 255.255.255.224 ... nastavi podsit, takze se pozivaji podsite, ne site  
-<h6>OSPF (Open shortest path first) (AD = 110)</h6>
+**OSPF (Open shortest path first) (AD = 110)**
 router ospf 1 ... Nastavovani Open Shortest Path First routovani (cislo procesu 1)  
 router ospf 1; network 10.0.0.0 0.127.255.255 area 0 ... bude se distribuovat sit 10.0.0.0/9 v oblasti 0  
 roiter ospf 1; area 1 range 192.168.10.64 255.255.255.224 ... nastavi podsit misto pouzivani cele site  
 int s0; ip ospf priority 2 ... zmeni prioritu zarizeni pri volbe Designated Router (DR) a Backup DR (BDR)  
-<h6>RIP (AD = 120)</h6>
+**RIP (AD = 120)**
 router rip ... nastavovani RIP routovani  
 
 router rip; network 10.0.0.0 ... bude se distribuovat sit 10.0.0.0  
@@ -189,7 +189,7 @@ no router rip ... zakaze rip
 
 #### firewall
 
-<b>standartni 1-99, 1300-1999</b>  
+**standartni 1-99, 1300-1999**
 access-list 10 deny host 172.16.30.2 ... zakaze prichozi pakety z 172.16.30.2  
 access-list 10 deny 172.16.30.3 ... zakaze prichozi pakety z 172.16.30.3  
 access-list 10 deny 172.16.32.0 0.0.15.255 ... zakaze prichozi pakety z 172.16.32.0/20  
@@ -197,17 +197,17 @@ access-list permit any ... povoli vse
 access-list permit 0.0.0.0 255.255.255.255 ... povoli vse  
 int Ethernet 0 ... nastavovani Ethernet 0  
 int Ethernet 0; ip access-group 10 out ... aplikuje firewall pravidlo 10 na vystup  
-<b>extended - rozsireny 100-199, 2000-2699</b>  
+**extended - rozsireny 100-199, 2000-2699**
 
 access-list 110 deny tcp any host 1.2.3.4 eq 23 log ... zakaze pakety odkudkoli na 1.2.3.4 na port 23. Loguje se  
 access-list 110 permit ip any any ... povoli vse  
 int fa0/0; access-group 110 in ... aplikuje se pravidlo 110 na prichozi pakety  
-<b>jmenne</b>  
+**jmenne**
 ip access-list standard RULE1 ... vytvori pojmenovane pravidlo  
 ip access-list standard RULE1; deny 1.2.3.4 ... zakaze zdrovove pakety z 1.2.3.4  
 ip access-list standard RULE1; permit any ... povoli ostatni  
 int e3;ip access-group RULE1 out ... aplikuje pravilo RULE1 na vystupu Ethernet 3  
-<b>casove</b>  
+**casove**
 
 time-range ho-http  
 time-range ho-http; periodic weekend 06:00 to 12:00  
@@ -264,9 +264,9 @@ int fa0/1; int f/1.2; ip address 192.168.10.46 255.255.255.240 ...
 
 #### WAN
 
-<h6>HDCL (High-Level Data-Link Control protocoL</h6>
+**HDCL (High-Level Data-Link Control protocoL**
 int s1/0; encalupsation hdlc  
-<h6>PPP</h6>
+**PPP**
 hostname R1  
 username R2 password HESLO ... nastavi jmeno routeru partnera a heslo  
 int s0  
@@ -274,7 +274,7 @@ int s0; encalupsation ppp ... nastavi uzavirani paketu typu PPP
 int s0; ppp authentication chap pap ... nastavi CHAP authentikaci, pokud partner nema, tak PAP authentikaci  
 
 debug ppp authentication ... ukazuje ppp autentifikacni pakety  
-<h6>PPPoE</h6>
+**PPPoE**
 int f0/0  
 int f0/0; pppoe enable group global  
 int f0/0; pppoe-client dial-pool-number 1  
@@ -283,7 +283,7 @@ int f0/0; ppp authentication chap callin
 int f0/0; ppp chap hostname R2  
 int f0/0; ppp password 0 HESLO  
 
-<h6>Frame Relay - jedno zarizeni</h6>
+**Frame Relay - jedno zarizeni**
 int s0  
 int s0; encalupsation framerelay (ietf) ... nastavi obalovani paketu Frame Relay (ietf kdyz partner neni Cisco)  
 int s0; interface-dlci 101 ... nastavi DLCI (data link connection identifiers) na 101  
@@ -293,7 +293,7 @@ do sh frame lmi ... lmi statistiky
 do sh frame map  
 do debug frame-relay lmi  
 
-<h6>Frame Relay - jedno zarizeni</h6>
+**Frame Relay - jedno zarizeni**
 int s0  
 int s0; encalupsation framerelay (ietf) ... nastavi obalovani paketu Frame Relay (ietf kdyz partner neni Cisco)  
 int s0; int s0.16 point-to-point ... nastavi podinterfejs  
@@ -306,7 +306,7 @@ int s0; int s0.104 point-to-point; ip address 1.2.4.4 255.255.255 ... nastavi ip
 int s0; int s0.104 point-to-point; interface-dlci 104 ... nastavi DLCI na 16  
 int s0; int s0.104 point-to-point; no ip directed-broadcast  
 do sh frame-relay pvc  
-<h6>Frame Relay Switch</h6>
+**Frame Relay Switch**
 frame-relay switching  
 int s0/0  
 int s0/0; encalupsation frame-relay  
@@ -321,7 +321,7 @@ int s0/1
 int s0/1; frame intf-type dce ... nastavi zarizeni na DCE (Data Communication equipment)  
 int s0/0; frame-relay route 201 interface Serial0/0 102  
 int s0/0; clock rate 64000  
-<h6>ISDN</h6>
+**ISDN**
 
 (config)# dialer-list 1 protocol ip permic ... definice datovych toku pro isdn  
 (config)# access-list 1 all  
@@ -390,7 +390,6 @@ int port-channel 1; int range f0/1-2; switchport mode trunk ... nastavi trunk mo
 int port-channel 1; int range f0/1-2; switchport mode nonegotiate ... vypne vyjednavani o spojeni a trunku  
 int port-channel 1; int range f0/1-2; channel-group 1 mode desirable  
 do sh int fa0/1 etherchannel ... ukaze nastaveni etherchannelu  
-
 
 #### VLAN - Vurtual LAN
 

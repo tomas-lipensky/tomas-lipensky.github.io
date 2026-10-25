@@ -14,7 +14,7 @@ lssrc -a | grep cluster
 ps ax | grep cluster
 /usr/sbin/cluster/clstat
 
-lssrc -ls clstrmgrES ... Cluster Information Services - info o jedoucim clusteru\\  
+lssrc -ls clstrmgrES ... Cluster Information Services - info o jedoucim clusteru  
 lssrc -ls grpsvcs ... detailni informace o Group Services - demon, co kontroluje Volume Groupy v clusteru
 lssrc -ls gsclvmd ... Concurrent Logical Volume Manager - VGID atd
 /usr/es/sbin/cluster/utilities/cltopinfo ... info o nadefinovanem clusteru  
@@ -102,7 +102,7 @@ dos.data
 Tivoli
 Netview
 RSCT
-<b>Min. klient</b>
+**Min. klient**
 cluster.adt.es
 cluster.doc.en_US.es
 cluster.es
@@ -111,7 +111,7 @@ cluster.license
 cluster.man.en_US.es
 cluster.man.en_US.cspoc
 cluster.msg.en_US.es
-<b>Dalsi</b>
+**Dalsi**
 cluster.doc.en_US.es
 cluster.es.cfs
 cluster.es.nfs

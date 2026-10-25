@@ -38,24 +38,24 @@ rmiregistry ... registr dostupnych sluzeb, jejich funkci a pripojovacich metod k
 
 ### Start/stop
 
-<b>Kompletni stop MDM</b>  
+**Kompletni stop MDM**
 su - -c "/opt/IBM/HTTPServer/bin/apachectl -k stop" ... stop IHS  
 $TOP/go/stop_local.sh ... stop MDM  
 /opt/IBM/WebSphere/profiles/Dmgr01/bin/stopManager.sh ... stop WAS DMGR  
 /opt/IBM/WebSphere/profiles/AppSrv01/bin/stopNode.sh ... stop WAS NODEAGENT  
 su - db2inst1 -c "db2stop" ... stop databaze  
 
-<b>Kompletni start MDM</b>  
+**Kompletni start MDM**
 db2start ... start DB2  
 /opt/IBM/WebSphere/profiles/Dmgr01/bin/startManager.sh ... start WAS DMGR  
 /opt/IBM/WebSphere/profiles/AppSrv01/bin/startNode.sh ... Start WAS NODEAGENT  
 $TOP/bin/go/start_local.sh ... start MDM  
 su - -c "/opt/IBM/HTTPServer/bin/apachectl -k start" ... start IHS  
 
-<b>Ovladani jednotlivych komponent</b>
+**Ovladani jednotlivych komponent**
 $TOP/bin/go/svc_control.sh --action=start  --svc_name=scheduler_WPCVM ... nastartuje pouze scheduler  
 
-<b>Status</b>  
+**Status**
 $TOP/bin/test_db.sh ... test pripojeni do DB  
 $TOP/bin/go/rmi_status.sh ... seznam vseh sluzeb a jejich status  
 $TOP/bin/go/get_service_status.sh --svc_name scheduler_LINUX01 ... status komponenty (sluzby)  
@@ -168,7 +168,6 @@ var result = exportEnv(envObjList, "LOOKUP_CONTENT_export_20140918_153200.zip");
 out.println("result: " + result);
 ```
 
-
 ==Export current “JOB_LOOKUP_EXPORT_” Tables content==
 
 ```
@@ -196,7 +195,6 @@ var result = exportEnv(envObjList, "JOB_LOOKUP_CONTENT_export.zip");
 out.println("result: " + result);
 ```
 
-
 ==Vymazani BUSINESS RULES==
 
 ```
@@ -217,7 +215,6 @@ var time2 = today().getTime();
 var delay = time2 - time1;
 out.writeln("Time : " + delay + " seconds");
 ```
-
 
 ### Databaze
 

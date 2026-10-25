@@ -111,7 +111,6 @@ test
 QUIT
 ```
 
-
 ##### sendmail
 
 rpm -i sendmail sendmail-cf sendmail-doc  
@@ -510,7 +509,7 @@ service autofs start/stop/status ... automounter
 /etc/auto.master  
 rpm -i xinetd
 /etc/xinetd.conf
-service xinetd start/stop/status/restart/reload\\
+service xinetd start/stop/status/restart/reload
 
 ```
 	chkconfig kudzu off        # Annoying RedHat new hardware detection

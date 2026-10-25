@@ -183,7 +183,6 @@ POST_DATA=`cat t_login.xml | sed -e "s:#USER:$VUSER:" -e "s:#PASSWD:$VPASSWD:"`
 
 curl -c c.cookies -b c.cookies -k -s --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' --data "$POST_DATA" https://${VCENTER_IP}/sdk
 
-
 ROOT_FOLDER=`curl -c c.cookies -b c.cookies -k --header 'Content-Type: text/xml; charset="utf-8"' --header 'SOAPAction: "urn:internalvim25/5.5"' -s --data @t_session.xml https://${VCENTER_IP}/sdk | xmllint --xpath "string(//*[name()='rootFolder'])" -`
 
 POST_DATA=`cat t_folder_child.xml | sed -e "s:#FOLDER:$ROOT_FOLDER:"`
@@ -225,7 +224,6 @@ for i in `seq 1 $NUMBER_OF`; do
     echo $VM_NAME $VM_DATASTORE
   fi
 done
-
 
 # list of datastores:
 # curl -c c.cookies -b c.cookies -v -k 'https://${VCENTER_IP}/folder?dcPath=DC'

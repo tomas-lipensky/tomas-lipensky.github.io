@@ -14,11 +14,11 @@ unset a b ... zrusi definici promenne a a b
 info exist a ... vrati 0 pokud promenna neexistuje, jinak 1  
 set len [string length RETEZEC] ... priradi promenne len delku retzce RETEZEC  
 global len ... nadefinuje promennou $len v procedure z globalniho globalni prostredi - lze k ni pristupovat z procedury  
-<b>cisla</b>  
+**cisla**  
 expr $CISLO*4 ... provede vypocet  
 expr sqrt(5*$CISLO) ... vypocita odmocninu z 5 x CISLO  
 incr a ... zvetsi hodnotu a o 1  
-<b>retezce</b>  
+**retezce**  
 
 append "ahoj" vazeny pane ... prida na konec skupiny pismen = ahojvazenypane  
 string length $TEXT ... delka retezce $TEXT  
@@ -37,7 +37,7 @@ string trim {Ahoj, jak se mas} ?Aash? ... oreze text na zacatku a na konci o pis
 string trimleft {Ahoj, jak se mas} ?Aash? ... oreze text na zacatku o pismena Aash az po bile znaky  
 string trimright {Ahoj, jak se mas} ?Aash? ... oreze text na konci o pismena Aash az po bile znaky  
 regexp "jak s" {Ahoj, jak se mas} ... najde regularni vyraz v textu a vypise 1, jinak 0  
-<b>seznamy</b> - specialni typy retezcu - prvky oddelene bilym znakem  
+**seznamy** - specialni typy retezcu - prvky oddelene bilym znakem  
 
 var SEZNAM [list a b c d] ... vytvoreni seznamu  
 lindex $TEXT 0 ... (List index) ukaze prvek/slovo o indexu 0  
@@ -56,7 +56,7 @@ concat $TEXT $SEZNAM ... vrati spojeny seznam TEXT a SEZNAM
 split {ahoj:pane} ?:o? ... rozdeli text na prvky (prvky oddelene prazdnym znakem - mezerou), oddelovaci znaky : a o  
 join {ahoj pane tomasi} : ... spoji prvky seznamu znakem : misto mezery = ahoj:pane:tomasi  
 
-<b>pole</b> - je seznam, kde indexy jsou slova  
+**pole** - je seznam, kde indexy jsou slova  
 
 set POLE1(prvek1) hodnota1 ... definuje pole POLE1 s indexem prvek1  
 array get POLE1 ... vypise vsechny prvky pole  
@@ -109,7 +109,7 @@ close FileID ... zavre soubor FileID
 
 ### Procedury
 
-Definice procedury\\
+Definice procedury
 
 ```
 proc podil {x y} {

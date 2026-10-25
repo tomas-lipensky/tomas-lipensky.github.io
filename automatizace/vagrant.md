@@ -22,7 +22,6 @@ sed -e 's/^Defaults\(.*\)requiretty\(.*\)/#Defaults\1requiretty\2/' -i /etc/sudo
 sed -e 's/^Defaults\(.*\)visiblepw\(.*\)/#Defaults\1visiblepw\2/' -i /etc/sudoers
 ```
 
-
 ### logy, debugging, ...
 
 export VAGRANT_LOG=debug ... zapne debug vypis Vagrantu  
@@ -35,7 +34,6 @@ rpm -i vagrant*rpm
 yum install libvirt-devel
 vagrant plugin install vagrant-libvirt --plugin-version 0.0.35
 ```
-
 
 ====Priprava lib-virt boxu====
 
@@ -68,7 +66,6 @@ qemu-img convert -f raw -O qcow2  /var/lib/libvirt/images/test.img  box.img
 tar cvzf custom_box.box ./metadata.json ./Vagrantfile ./box.img
 vagrant box add --name custom custom_box.box
 ```
-
 
 ### Pripojeni na VM
 

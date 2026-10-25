@@ -13,7 +13,7 @@ yum install mysql-zrm
 cd /etc/mysql-zrm  
 mkdir -v backupsetname  
 cp -vi mysql-zrm.conf backupsetname/  
-Pridame do mysql serveru uzivatele z mysql-zrm.conf:\\
+Pridame do mysql serveru uzivatele z mysql-zrm.conf:
 
 ```
 GRANT select show vie, create view, insert, update, create, drop, reload, shutdown, alter, super, lock tables, replication silent on *.* to 'backu-user'@'backuphost' identified by 'password';

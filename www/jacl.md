@@ -1,13 +1,12 @@
 # WebSphere Application Server - JACL
 
-Seznam aplikaci:\\
+Seznam aplikaci:
 
 ```
 $AdminApp list
 ```
 
-
-Status nodeagenta:\\
+Status nodeagenta:
 
 ```
 set nodeagent_status
@@ -21,8 +20,7 @@ else
 puts "nodeagent is not running, all application status is not available" 
 ```
 
-
-Status aplikacniho serveru:\\
+Status aplikacniho serveru:
 
 ```
 set server_status
@@ -35,8 +33,7 @@ else
 puts "server $server_status is not running, all application status is not available" 
 ```
 
-
-Status aplikace (jede/nejede):\\
+Status aplikace (jede/nejede):
 
 ```
 set myRunningApp [$AdminControl queryNames type,Application,name=myApp,*]
@@ -48,8 +45,7 @@ else
 puts "App myApp is not running"
 ```
 
-
-Restart aplikace:\\
+Restart aplikace:
 
 ```
 set appManager [$AdminControl querynames cell=myCell,node=myNode, type=ApplicationManager,process=myServer,*]
@@ -59,8 +55,7 @@ AdminControl invoke $appManager stopApplication myApp
 AdminControl invoke $appManager startApplication myApp 
 ```
 
-
-Stop vsech aplikaci:\\
+Stop vsech aplikaci:
 
 ```
 foreach app $apps {set appName [$AdminControl getAttribute $app name];

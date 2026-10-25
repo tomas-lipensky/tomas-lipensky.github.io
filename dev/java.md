@@ -79,7 +79,7 @@ A | B ... bitova operace XOR 1100 & 1001 = 0101 (priorita 7)
 ### Podminky, cykly
 
 if (podminka) {} else {}  
-(podminka) ? prikazy_pokua_pravda : prikazy_pokud_lez;\\
+(podminka) ? prikazy_pokua_pravda : prikazy_pokud_lez;
 
 ```
 switch (promenna) {
@@ -103,14 +103,14 @@ break; ... Vyskoci z cyklu for nebo while
 
 ### Tridy, objekty, funkce
 
-Definice tridy: cat trida.java\\
+Definice tridy: cat trida.java
 
 ```
 public class trida {
 int a; }
 ```
 
-Deklarace objektu tridy pokus: cat pokus.java\\
+Deklarace objektu tridy pokus: cat pokus.java
 
 ```
 public class pokus {
@@ -132,7 +132,7 @@ public class trida {
     public zdvoj () {
       a *= 2; }
 }</code>
-Deklarace objektu tridy pokus: cat pokus.java\\
+Deklarace objektu tridy pokus: cat pokus.java
 
 ```
 public class pokus {
@@ -143,7 +143,6 @@ public class pokus {
   }
 }
 ```
-
 
 ### Funkce
 
@@ -166,7 +165,6 @@ class hello (
 }
 ```
 
-
 ==apppletHello.java==
 
 ```
@@ -178,7 +176,6 @@ public class apHello extends java.applet.Applet {
 }
 ```
 
-
 ==appletHello.htm==
 
 ```
@@ -189,7 +186,6 @@ aplet appletHello.class neni podporovan prohlizecem
 &lt;/BODY&gt;
 &lt;/HTML&gt;
 ```
-
 
 ==servletHello.java==
 
@@ -227,7 +223,6 @@ public class servletHello extends HttpServlet {
 &lt;/servlet-mapping&gt;
 &lt;/web-app&gt;
 ```
-
 
 ==time.jsp==
 

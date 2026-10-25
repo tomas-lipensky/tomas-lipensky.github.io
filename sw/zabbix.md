@@ -4,7 +4,7 @@ zabbix_sender -z <server IP address> -p 10051 -s "New host" -k trap -o "test val
 ### Zabbix API
 
 [Zabbix API](https://www.zabbix.com/documentation/3.0/manual/api)  
-[Zabbix API priklad v Powershellu](https://gist.github.com/Sam-Martin/43c78a9efc4916f35971e21843ffd37b)\\
+[Zabbix API priklad v Powershellu](https://gist.github.com/Sam-Martin/43c78a9efc4916f35971e21843ffd37b)
 
 ```
 if(!$credential){

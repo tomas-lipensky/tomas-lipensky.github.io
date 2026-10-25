@@ -41,7 +41,7 @@ netcfg ... seznam sitovych karet
 + zapnout Nastaveni - Aplikace - Vyvoj - Ladeni USB</li>
 <li>Rozbalit android sdk treba do /usr/local/, spustin /usr/local/android-sdk*/tools/android a nainstalovat Android SDK tool - adb (v $SDK/platform-tools)</li>
 <li>rozbalit fastboot do /usr/local/android-sdk*/tools<li>
-<li>nastavit udev, aby mohli k zarizeni pristupovat i jini uzivatele nez root:\\
+<li>nastavit udev, aby mohli k zarizeni pristupovat i jini uzivatele nez root:
 
 ```
 echo 'SUBSYSTEM=="usb", ATTRS{idVendor}=="1004", ATTRS{idProduct}=="618e", MODE="0666"

@@ -33,7 +33,7 @@ Rem komentar ... komentar, pokud je prvni slovo na radku, jinak :Rem
 
 ### Podminky, cykly, vlastni funkce
 
-If ? then ?  Else\\
+If ? then ?  Else
 
 ```
 If (A>1 And B=True) Then
@@ -43,13 +43,11 @@ Else
 End If
 ```
 
-
 ```
 For I = 1 To 6
 ?
 Next
 ```
-
 
 ```
 do
@@ -57,13 +55,11 @@ do
 Loop Until ?
 ```
 
-
 ```
 do While ?
 ?
 Loop
 ```
-
 
 ```
 Select Case promenna
@@ -74,7 +70,6 @@ Select Case promenna
 End Case
 ```
 
-
 ```
 Function FUNKCE (jedenParametr, druhyParametr)
   ?
@@ -83,7 +78,7 @@ End Function
 ```
 
 Vysledek = FUNKCE (1, 2) ... volani funkce  
-Exit Function ... predcasne ukonceni funkce\\
+Exit Function ... predcasne ukonceni funkce
 
 ```
 Sub PODPROGRAM (jedenParametr, druhyParametr)

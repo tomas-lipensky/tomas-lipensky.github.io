@@ -15,7 +15,7 @@ alsamixer ... zesilovani, zeslabovani zvuku
 aplay aaa.wav ... prehraje a.wav  
 aplay -L ... vylistuje vsechny PCM  
 aplay -l .. vylistuje vsechny zarizeni, co mohou vydavat zvuk  
-aplay -vv -D front:CARD=Intel,DEV=0 /usr/share/sounds/ekiga/ring.wav\\  
+aplay -vv -D front:CARD=Intel,DEV=0 /usr/share/sounds/ekiga/ring.wav  
 aplay -D plug:surround51 chan-ad.wav - (ftp://ling.ll.hawaii.edu/pub/greg/Surround-SDL-testfiles.tgs) test surround zvuku  
 arecord -l ... seznam zarizeni na porizovani zvuku (input zarizeni)  
 arecord -f cd - | aplay - ... preposilani mikrofonu na vystup  
@@ -99,7 +99,7 @@ rtmp {
 
 ffmpeg -f v4l2 -framerate 10 -i /dev/video0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp:%%//%%10.0.0.4/live/test ... streamovani kamery  
 ffmpeg -s 1680x1050 -r 10 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp:%%//%%10.0.0.4/live/test ... streamovani obrazovky  
-rtmp:%%//%%10.0.0.4/live/test ... link z Browseru, otevre se prehravacem\\
+rtmp:%%//%%10.0.0.4/live/test ... link z Browseru, otevre se prehravacem
 
 ```
 rtmp {

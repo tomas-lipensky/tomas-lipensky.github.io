@@ -30,7 +30,6 @@ B --> C{"Option A"}
 B --> D{"Option B"}
 ```
 
-
 Pokud vstup je např. pdf., je dobré si jej převést na text sám, jinak Copilot udělá automaticky a spotřebuje víc kreditů
 
 Používat templaty místo detailních popisů

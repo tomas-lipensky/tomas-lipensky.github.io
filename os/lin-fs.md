@@ -219,7 +219,6 @@ hddtemp -d /dev/hda; telnet localhost 7634 .. demon, pres tcp ukazuje teplotu
 [[http://www.digipedia.pl/man/doc/view/sg_scan.8/|sg_scan]] ... Soucast balicku sg3_utils) scanuje SCSI disky /dev/sgX, nebo /dev/sdXX
 ```
 
-
 ==TEST - disky:==
 
 ```
@@ -233,7 +232,6 @@ procinfo
 
 /proc/sys/dev/cdrom/atoeject, autoclose, lock .. vlastnosti cdrom mechaniky: autovysunuti po odmountovani, autozasunuti pro mountovani, zamce pri mountovani
 ```
-
 
 ==INFO - disky:==
 
@@ -252,7 +250,6 @@ echo "scsi-qlascan" > /proc/scsi/qla2200/1 ... scan disku ze Storage
 echo "scsi remove-single-device" 3 0 1 0 > /proc/scsi/scsi ... odebrani disku ze storage z /dev
 echo "scsi add-single-device 3 0 0 0" > /proc/scsi/scsi ... pridani disku ze storage do /dev
 ```
-
 
 ### Vypalovani CD
 
@@ -303,7 +300,6 @@ resize2fs /dev/myvg/homevol
 mount /adr
 ```
 
-
 ##### Rozsireni FS v LVM s reiser
 
 mount /adr  
@@ -329,7 +325,6 @@ cat /tmp/aaa > /dev/hda1
 dd if=/dev/zero of filler_file; snc; rm filler_file ... zaplni zbyvajici misto na diku nulama,
 ```
 
-
 ==Vypalovani CD==
 
 ```
@@ -343,7 +338,6 @@ nebo
 ```
 mkisofs -J -r dir_with_files/ | cdrecord dev=ATAPI:0,1,0 -v -multi -pad -data -
 ```
-
 
 ##### Vytvoreni RAM-disku - disk z pameni ROM
 

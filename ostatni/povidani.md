@@ -1,7 +1,7 @@
 Ahoj a dobry den,
 jak již tušíte, jmenuji se Tomáš Lipenský. Pusobim v informatice, ale drive jsem ucil a ucil se matematiku.
 
-<b>Matematika</b>  
+**Matematika**  
 Vystudoval jsem odbornou matematiku a studoval jsem na doktorském
 (postgraduálním) programu Geometrie, topologie a globální analýza na
 Přírodovědecké fakultě Masarykovy univerzity v Brně. Student matematiky
@@ -14,7 +14,7 @@ asi 20. cervence 1999, kdyz jsem si probiral oznameni o prijetimi doslo oznameni
 Nabyl jsem pocitu, ze prirodovedecka fakulta zni velmi prestizne, a tak jsem se zcela nelogicky
 stal studentem logicke matematiky.
 
-<b>Sportovec</b>
+**Sportovec**
 jsem nejspise byl v roce 1999, kdy jsem se hlasil na pedagogickou fakultu v kombinaci s
 telocvikem, tvrde trenoval atletiku, obcas gymnastiku a tymove hry.
 Od te doby se stavam sportovcem cim dal mensim, jelikoz jsem clovek liny,
@@ -24,13 +24,13 @@ tramvjenku), jindy z duvodu poteseni (vylety a jine). Take obcas hraji tymove
 hry ve stylu fotbalu, nohejbalu a volejbalu. V zime si rad zabeham na bezkach
 ci zajezdim na prkne, nebo na lyzich, ale to tak 1x rocne. Asi tolik ke sportu.
 
-<b>Gymnazium Cechynska</b>
+**Gymnazium Cechynska**
 V davne minulosti jsem navstevoval ustav gymnazia na Cechynske 19. Tento ustav jiz zmenil adresu i jmeno, ale
 krome vzpominek zustalo jeste par fragmenu, mezi nimi i [tridni stranky](http://sweb.cz/oktava/).
 
-<b>Pocitacovy fanda</b>
+**Pocitacovy fanda**
 O tom asi svedci i slozeni techto stranek. Informace, ktere zde uverejnuji, jsou zde z lidumlinch cilu i z cilu prospecharskych. Moje hlava totiz
 odmita pamatovat si vsechny prikazy aktivne, proto sem obcas uklouzne zvedavym pohledem a nejakou tu informaci si osvezi.
 
-<b>Manzel a rodic</b>
+**Manzel a rodic**
 I toto je moje soucast zivota. Vubec se za ni nestydim a uzivam si techto chvil stravenych s mymi nejblizsimi.

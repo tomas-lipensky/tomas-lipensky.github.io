@@ -62,7 +62,6 @@ pipeline {
 }
 ```
 
-
 nebo když se nedefinuje akce souborem ale v UI:
 
 ```
@@ -71,7 +70,6 @@ node {
   stage {}
 }
 ```
-
 
 #### sekce agent
 
@@ -93,7 +91,6 @@ registryCredentialsId 'myPredefinedCredentialsInJenkins'
 }
 ```
 
-
 dockerfile {} ... vice na [https://www.jenkins.io/doc/book/pipeline/syntax/](https://www.jenkins.io/doc/book/pipeline/syntax/)
 
 ```
@@ -103,7 +100,6 @@ kubernetes {
                             yaml libraryResource("agents/android-agent.yaml")
                         }
 ```
-
 
 #### tools
 
@@ -176,7 +172,7 @@ withCredentials([ string(credentialsId: 'AA', variable: 'BB'), string(credential
 %%withCredentials([ usernamePassword(credentialsId: 'dxl-cz-github-user', usernameVariable: 'username', passwordVariable: 'password') ]) {sh 'git remote set-url origin "https://${username}:${password}@github.vodafone.com/VFCZ-DXL/${microserviceName}.git"' }%%  
 withNPM(npmrcConfig: 'npmrcs-cz') {} ... použije file npmrcs-cz a udělá z něj .npmrc  
 %%checkout([$class: 'GitSCM', branches: [name: 'develop'](name/ 'develop'), extensions: [$class: 'CleanBeforeCheckout']($class/ 'CleanBeforeCheckout'),userRemoteConfigs: [credentialsId: 'secret1',url: 'https://user@github.bbb.com/ccc/ddd.git'](credentialsId/ 'secret1',url/ 'https///user@github.bbb.com/ccc/ddd.git')])%%  
-withDockerRegistry([credentialsId: 'aaa', url: "https://REPOSITORY"]) ... provede docker login s kredencema\\
+withDockerRegistry([credentialsId: 'aaa', url: "https://REPOSITORY"]) ... provede docker login s kredencema
 
 ```
 configFileProvider([fileId:'conf_file', variable:'soubor']) {
@@ -184,7 +180,6 @@ configFileProvider([fileId:'conf_file', variable:'soubor']) {
         echo "Ctu soubor '${soubor}' ..." 
         servers = readJSON(file:soubor)  } }
 ```
-
 
 #### sekce post
 

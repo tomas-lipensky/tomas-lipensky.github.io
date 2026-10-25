@@ -2,7 +2,7 @@
 
 ### PA-RISC boot
 
-<h6>Boot proces na PA-RISC</h6>
+**Boot proces na PA-RISC**
 <li>POST ... Power-On Self Test - Test ulozeny v BootROM</li>
 <li>PDC ... Processor Dependent Code - Test ulozeny v BootROM</li>
 <li>IODC ... I/O Dependent Code - Test ulozeny v BootROM</li>
@@ -11,7 +11,7 @@
 <li>/stand/vmunix ... jadro</li>
 <li>init ... init proces s nadefinovanymi init levely a odpovidajicimi procesy</li>
 
-<h6>Struktura boot disku na PA-RISC</h6>
+**Struktura boot disku na PA-RISC**
 <li>LIF Header</li>
 <li>PVRA ... Physical Volume Reserved Area - Informace o PV</li>
 <li>BDRA ... Boot Data Reserved Area - Ukazatele na /stand, swap a /</li>
@@ -22,7 +22,7 @@
 <li>BBRA ... Bad Blocks Reserved Area - misto na ukadani dat misto poskozenych sektoru na disku</li>
 Boot disky bez LVM maji misto VGRA, LVs a volneho mista heden HSF oddil a na konci disku misto pro swap  
 
-<h6>Manualni boot proces - preruseni BCH stiskem klavesy Esc</h6>
+**Manualni boot proces - preruseni BCH stiskem klavesy Esc**
 help ... napoveda  
 in all ... ukaze informace o systemu  
 search ... vylistuje vsechny bootovaci zarizeni  
@@ -42,7 +42,7 @@ lan_addr ... Ukaze IP
 date ... datum a cas  
 reset ... restartuje server  
 
-<h6>ISL/IPL</h6>
+**ISL/IPL**
 hpux ... nastartuje jadro, jak je nadefinovano v HP-UX  
 hpux ls ... vylistuje seznam souboru v adresari /stand  
 hpux show autofile ... ukaze obsah souboru AUTO  

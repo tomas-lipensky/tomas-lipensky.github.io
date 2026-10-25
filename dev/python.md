@@ -202,15 +202,14 @@ break ... skoci na konec smycky (napr. while ci for)
 continue ... skoci na zacatek smycky  
 
 Podminene provedeni prikaz:  
-Jednoducha prazdna podminka - splnena vzdy, nic se neprovede:\\
+Jednoducha prazdna podminka - splnena vzdy, nic se neprovede:
 
 ```
 if True:
  pass
 ```
 
-
-Dvojita podminka:\\
+Dvojita podminka:
 
 ```
 if (a < 10):
@@ -219,8 +218,7 @@ else:
  prikazy
 ```
 
-
-trojita podminka:\\
+trojita podminka:
 
 ```
 if VYRAZ:
@@ -231,16 +229,14 @@ else:
  prikazy
 ```
 
-
-Cyklus While:\\
+Cyklus While:
 
 ```
 while VYRAZ:
     prikazy
 ```
 
-
-Cyklus While-else, dokud je splnena pokminka, prikazy1, pote prikazy2:\\
+Cyklus While-else, dokud je splnena pokminka, prikazy1, pote prikazy2:
 
 ```
 while VYRAZ:
@@ -249,8 +245,7 @@ else:
     prikazy2
 ```
 
-
-Cyklus For, priradi postupne do promenne i jednotlive prvky pole:\\
+Cyklus For, priradi postupne do promenne i jednotlive prvky pole:
 
 ```
 For i in pole:
@@ -259,7 +254,7 @@ For i in pole:
 
 for i in range(5) ... provede kroky pro 1, 2, 3, 4, 5  
 
-Cyklus For-else, priradi postupne do promenne i jednotlive prvky pole a provede s nimi prikazy1, pote prikazy2:\\
+Cyklus For-else, priradi postupne do promenne i jednotlive prvky pole a provede s nimi prikazy1, pote prikazy2:
 
 ```
 For i in pole:
@@ -268,8 +263,7 @@ else:
     prikazy2
 ```
 
-
-Try-except - provede prikazy1, pokud se nepovede z jakehokoli duvodu, neukonci program ale provede prikazy2. Nepovinne finally bude provedeno v kazdem pripade. Slouzi napriklad na korektni uzavreni otevrenych veci.\\
+Try-except - provede prikazy1, pokud se nepovede z jakehokoli duvodu, neukonci program ale provede prikazy2. Nepovinne finally bude provedeno v kazdem pripade. Slouzi napriklad na korektni uzavreni otevrenych veci.
 
 ```
 try:
@@ -288,7 +282,7 @@ except (ValueError, IOError): ... kdyz je chyba hodnoty, nebo vstupu
 except (TypeError, RuntimeError): ... kdyz je chybny typ promenne, nebo Runtime chyba  
 raise NameError, "Informace k vyjimce" ... vyvolani vyjimky daneho typu  
 
-Vlastni vyjimky:\\
+Vlastni vyjimky:
 
 ```
 class MyError(Exception):
@@ -301,7 +295,6 @@ try:
 except MyError, e:
    print "Vyjimka MyError s hodnnotuu: ', e.value
 ```
-
 
 ### Zakladni prikazy
 
@@ -367,14 +360,13 @@ print string.find.**name** ... vrati jmeno funkce
 return ... ukonci okamzite funkci  
 return 0 ... ukonci funkci a vrati 0;  
 
-definice funkce, nasleduji radky funkce zacinajici min. 1 prazdnym znakem. Prikazy funkce jsou vsechny radky se stejnym odsazenim (doporucuji se min 4 mezery), parametr2 nepovinny:\\
+definice funkce, nasleduji radky funkce zacinajici min. 1 prazdnym znakem. Prikazy funkce jsou vsechny radky se stejnym odsazenim (doporucuji se min 4 mezery), parametr2 nepovinny:
 
 ```
 def FUNKCE1 (parametr1, parametr2=0):
     """Dokumentacni retezec"""
     prikazy
 ```
-
 
 def FUNKCE2 (*parametry): for a in parametru: print parametry ... definice funkce s variabilnim poctem parametru  
 def FUNKCE3 (**aspole): for  i in aspole.keys(): print i, " : ", aspole[i] ... Definice funkce s asociativnim polem  
@@ -443,7 +435,6 @@ Box((400, 350), 120, 100) ... Box instance at (400, 350) with width 120 and heig
 end_graphics()
 ```
 
-
 ====Tridy====
 
 ```
@@ -471,8 +462,7 @@ kolemjdouci=fido.neznamy_clovek
 kolemjdouci(5)
 ```
 
-
-Dedicnost:\\
+Dedicnost:
 
 ```
 class Pes_vyje(Pes):
@@ -487,7 +477,6 @@ class Pes_vyje(Pes):
         print self.vyti
         return 1
 ```
-
 
 isinstance(fido, Pes) ... vrati 1 pokud je fido instanci tridy Pes, 0 kdyz neni  
 

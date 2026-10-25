@@ -52,7 +52,7 @@ CPU% podíl předchzích
 
 ##### free
 
-cat /proc/meminfo\\
+cat /proc/meminfo
 
 ```
 wget ()
@@ -70,7 +70,6 @@ wget ()
 
 _wget http://www.andreafortuna.org/robots.txt
 ```
-
 
 printf "GET / HTTP/1.1\r\nHost: pl-0-eu-central-1.dxwnh.mongodb.net\r\nUser-Agent: linux\r\nAccept: */*\r\n\r\n" | openssl s_client -connect server:port -quiet ... alternativa na curl https  
 

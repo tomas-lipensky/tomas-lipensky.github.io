@@ -504,7 +504,6 @@ networking:
   podSubnet: 192.168.0.0/16
 ```
 
-
 `kubeadm init --config=kubeadm-config.yaml --upload-certs | tee kubeadm-init.out` ... inicializace kubernetes pomoci ClusteConfiguration souboru, vytvoří control plane (cp) node  
 kubeadm config print init-defaults ... ukáže konfiguraci  
 `kubeadm token create` ... vytvoří token  
@@ -593,9 +592,8 @@ certificate=$(kubectl config view -o json | jq -r '.users.[] | select(.name == "
 key=$(kubectl config view -o json | jq -r '.users.[] | select(.name == "'${user}'") | .user."client-key"')
 ca=$(kubectl config view -o json | jq -r '.clusters.[] | select(.name == "'${cluster}'") | .cluster."certificate-authority"')
 server=$(kubectl config view -o json | jq -r '.clusters.[] | select(.name == "'${cluster}'") | .cluster.server')
-export token=$(kubectl create token default)\\
+export token=$(kubectl create token default)
 ```
-
 
 `curl ${server}/api/v1 --header "Authorization: Bearer $token" -k` ... autorizace pomocí tokenu  
 `%%curl --cert ${certificate} --key ${key} --cacert ${ca}  ${server}/api/v1/pods%%` ... list of pods  

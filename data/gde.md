@@ -77,7 +77,7 @@ sh vee-fs-xxxxxx.bin -e ... rozbali jen balicek
 
 vmd/bin/register_host
 [Problemy s registraci agenta](http://www-01.ibm.com/support/docview.wss?uid=swg21694500)  
-[Problemy se zastavenim agenta](http://www-01.ibm.com/support/docview.wss?uid=swg21689892)\\
+[Problemy se zastavenim agenta](http://www-01.ibm.com/support/docview.wss?uid=swg21689892)
 
 ```
 cat 'SERVER_HOSTNAME=server

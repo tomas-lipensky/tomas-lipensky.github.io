@@ -269,7 +269,7 @@ top ... vyuziti pameni, cpu
 vmstat 1 2 ... Vyuziti virtualni pameti, 2 testy po sekunde  
 kdump ... pri crashu jadra ulozi pamet na disk (do swap oddilu)
 [perf](https://perf.wiki.kernel.org/index.php/Tutorial) ... sledovani vykonu jadra - netrivialni prikaz  
-[Systemtap](http://sourceware.org/systemtap/) ... Informace o systemu atd\\
+[Systemtap](http://sourceware.org/systemtap/) ... Informace o systemu atd
 
 ```
 gdb install_root /java/jre/bin/java PID
@@ -293,7 +293,6 @@ sensors-detect .. nahraje moduly jadra pro sledovani senzoru
 stress -c 3 -i 2 -m3 --vm-bytes 128M -d1 --hdd-noclean --hdd-bytes 3G --timeout 30s .. (weather.ou.edu/%7Eapw/projects/stress) test procesoru, pameti i hdd zarov
 en, 30 sekud
 ```
-
 
 ### Pamet
 

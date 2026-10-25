@@ -201,7 +201,6 @@ function compare(a,b) {
 objs.sort(compare);
 ```
 
-
 ### JQuery
 
 %%<script src="jquery.js"></script>%% ... inicializace jquery  

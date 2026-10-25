@@ -120,7 +120,7 @@ file
 terraform_data ... třeba local  
 null_resource  
 
-for_each = toset(local.seznam_jmen) ... iterace celého resourcu\\
+for_each = toset(local.seznam_jmen) ... iterace celého resourcu
 
 ```
 dynamic "statemen" {
@@ -130,7 +130,7 @@ dynamic "statemen" {
   }
 }
 ```
- ... iterace bloku v resourcu\\
+ ... iterace bloku v resourcu
 
 ```
 lifecycle{

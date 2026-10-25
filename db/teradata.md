@@ -41,7 +41,7 @@ explain select * from employe
 pdestate  
 /etc/init.d/tpa restart .. Trusted Parallel application - PDE  
 xdbw - supervisor window -> help -> get config -> restart tpa ... nebo pomoci viewpoint  
-tail -f25   /var/log/messages - kdyz TPA nenastartuje\\
+tail -f25   /var/log/messages - kdyz TPA nenastartuje
 
 ```
 HELP 'HELP';
@@ -94,24 +94,19 @@ SPOOL = 50E6,
 TEMPORARY = 50E6,
 PASSWORD = (EXPIRE = 91, MINCHAR = 6, MAXLOGONATTEMPTS = 3, LOCKEDUSEREXPIRE = 5, REUSE = 365, DIGITS ='R', RESTRICTWORDS = 'Y', SPECCHAR ='P');
 
-
 SELECT * FROM dbc.profileinfov;
 
-
 SELECT * FROM dbc.accountinfo WHERE USERNAME='student102_p';
-
 
 SELECT * FROM dbc.accountinfo WHERE userorprofile='profile';
 
 SELECT * FROM dbc.accountinfo WHERE userorprofile='user' ORDER BY 1;
-
 
 CREATE USER STUDENT102_C AS PERM=0, PASSWORD =abcd12, PROFILE = student102_p;
 
 DROP PROFILE STUDENT102_P;
 
 ------------ Excercise 4 ----------
-
 
 HELP TABLE empolyee;
 
@@ -121,7 +116,6 @@ HELP INDEX employee;
 
 SELECT * from DBC.DatabasesV;
 SELECT * FROM DBC.DatabasesV WHERE DatabaseName='student102';
-
 
 SELECT * FROM DBC.dbcinfoV;
 
@@ -137,9 +131,7 @@ SELECT count(*) FROM DBC.ColumnsV WHERE DefaultValue is not NULL;
 SELECT COUNT(DISTINCT(TABLENAME)) FROM DBC.ColumnsV WHERE DefaultValue IS NOT NULL;
 SELECT COUNT(DISTINCT(TABLENAME || '.' || DatabaseName)) FROM DBC.ColumnsV WHERE DefaultValue IS NOT NULL;
 
-
 SELECT * FROM DBC.IndexConstraintsV;
-
 
 TCP/1025 ... DB port
 xdbw ... na serveru spusti prehled treminalu - 6. terminal je superuser, 5. je system out
@@ -161,7 +153,6 @@ SELECT * FROM DBC.DBQLRulesV WHERE USERNAME='student102'; ... ukaze pravidla z Q
 
 SELECT * FROM DBC.QryLogV WHERE USERNAME='student102'; ... Ukaze vsechny radky z query logu pro uzivatele
 
-
 /*
 ** comment
 */
@@ -182,8 +173,6 @@ SELECT count(*) FROM student101.trans;
 .logoff;
 .quit;
 
-
-
 LOGON 192.168.2.59/student101,teradata101;
 ARCHIVE DATA TABLES (student101.accounts), (student101.trans), (student101.customer), RELEASE LOCK, FILE=myarc;
 LOGOFF;
@@ -202,7 +191,6 @@ LOGOFF;
 LOGON 192.168.2.59/student102/teradata102;
 RESTORE DATA TABLES (student102.customer_copy) ( FROM (student102.customer) ), RELEASE LOCK, FILE=myarc;
 LOGOFF;
-
 
 google : teradata Dieter Noeth - odkazy na internetu, kde radi Dieter Noeth, TD expert
 Klaus Stock - skolitel

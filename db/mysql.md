@@ -79,7 +79,7 @@ mysqlimport -u root -pheslo db1 db1.sql ... obnova existujici databaze
 
 Architektura Master - Master, kruhy, kde kazdy je Master i slave. Vyhoda - rychlost pri cteni, synchroni data. Nevyhoda - pomalejsi zapis, zavisi na konektivite mezi nodama. CREATE, ALTER tabulky lockuje tabulku lokalne, pak teprve distribuuje. NDB brani uzivani savepointu a vraceni se v case.
 
-my.cnf:\\
+my.cnf:
 
 ```
 [mysqld]
@@ -109,12 +109,11 @@ C: change master to  MASTER_HOST="serverB.examble.com", MASTER_USER="replication
 C: start slave;
 ```
 
-
 ### Management node pro NDB
 
 Je to node, ktery provadi konfirgraci a management clusteru. Osvedceny postup je mit kazdy node na jinem serveru
 
-my.cnf na management nodu:\\
+my.cnf na management nodu:
 
 ```
 [ndb_mgm]
@@ -132,7 +131,7 @@ engine-condition-pushdown=1
 ndb-connectstring=manage.example.com:1186
 ```
 
-a /etc/config.ini:\\
+a /etc/config.ini:
 
 ```
 [ndb_mgmd default]

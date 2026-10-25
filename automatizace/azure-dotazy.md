@@ -25,7 +25,6 @@ AzureActivity
 | where Resource  contains "STG"  
 ```
 
-
 ====Application Insight====
 
 ```
@@ -38,7 +37,6 @@ summarize count(itemCount) by name |
 order by count_itemCount  
 ```
 
-
 ```
 requests
 | extend diagnosticsParsedUrl = parseurl(url)
@@ -50,6 +48,5 @@ requests
 | extend agent=tostring(d["ClientApplication"]) 
 | distinct agent, name, timestamp | summarize count() by agent 
 ```
-
 
 tostring() je potreba pouzit pri expandovani objektu, jinak hlaska `Please use an explicit cast as grouping by a 'dynamic' type is not supported.`

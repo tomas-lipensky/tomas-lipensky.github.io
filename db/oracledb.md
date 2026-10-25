@@ -252,7 +252,7 @@ Mozno pouzit DCA - Database Configuration Assistant
 ALTER DATABASE DEFAULT TEMPORARY TABLESPACE tempts2 ... vytvori ci zmeni docasnou tablespace na tempts2. Tato ts musi byt jiz vytoverna  
 ALTER DATABASE SET DEFAULT BIGFILE TABLESPACE ... Dynamicky zmeni velikost TS na BIGFILE  
 ALTER SYSTEM GLOBAL_NAME ... zmeneni jmena a domeny databaze. Musi se pak vypnout DB, predelat kontrolni soubor a znovu spostit  
-Vytvori Databazi vcetne Control File:\\
+Vytvori Databazi vcetne Control File:
 
 ```
 CREATE DATABASE mydb
@@ -280,7 +280,6 @@ CREATE DATABASE mydb
       SIZE 20M REUSE AUTOEXTEND ON MAXSIZE UNLIMITED;
 ```
 
-
 ##### Jednodussi vytvoreni DB
 
 CREATE DATABASE mydb2; ... Vytvori databazi mydb2, s TS: SYSTEM, SYSAUX v DB_CREATE_FILE_DEST a REDO + Control files tolikrat, kolik je definovano DB_CREATE_ONLINE_DEST_n v tet olokaci. Vse velikost 100MB. Pokud je UNDO_MANAGEMENT povolen, vytvori se i UNDO TS o velikosti 10MB.  
@@ -296,7 +295,7 @@ select NAME from V$DATAFILE; ... seznam datovych souboru
 RESETLOGS ... Oracle vytvori sam soubory pro REDO  
 NORESETLOGS ... REDO soubory se musi specifikovat pri vytvareni DB pomoci klicoveho slova LOGFILE  
 
-Vytvoreni kontrolniho souboru (napriklad pri poskozeni. Vytvori se kontrolni soubor uvedeni v PF dane databaze):\\
+Vytvoreni kontrolniho souboru (napriklad pri poskozeni. Vytvori se kontrolni soubor uvedeni v PF dane databaze):
 
 ```
 CREATE CONTROLFILE
@@ -316,7 +315,7 @@ ARCHIVELOG;
 ALTER DATABASE BACKUP CONTROLFILE to '/ora/control.bkp'; ... vytvori zaloho kontrolniho souboru  
 ALTER DATABASE BACKUP CONTROLFILE to TRACE; ... vytvori sekvenci SQL prikazu, ktera dokaze vytvorit soucasny kontrolni soubor  
 alter dadatabase datafile '/oracle/FIN02/system/system02.dbf' resize 1000M; ... zmeni velikost datoveho souboru  
-SELECT * FROM V$CONTROLFILE; ... seznam kontrolnich souboru\\  
+SELECT * FROM V$CONTROLFILE; ... seznam kontrolnich souboru  
 select VALUE from V$PARAMETER where name = 'control_files'; ... ukaze nazev kontrolniho souboru pro Databazi  
 
 #### SPF - Server Parameter File, PF a IPF - Initialisation PF
@@ -582,7 +581,6 @@ DECLARE
   end;
 ```
 
-
 Vystup lze videt v DBA_ADVISOR_*, nebo v Automatic Database Diagnostic Monitor v Enterprise Manager\\. Velikost UndoTS se doporucuje: UndoSpace_bloky = Undo_retention * Undo_blocks_per_second + overhead.
 
 ##### Balicek Flashback
@@ -599,7 +597,6 @@ BEGIN
   utbsiz_in_BM ;= DBMS_UNDO_ADV.RBU_MIGRATION;
 end;
 ```
-
 
 ### Objekty v databazich
 
@@ -680,7 +677,7 @@ rman @/dir/prikazy.txt  ... spusti RMAN a vykona prikazy v souboru prikazy.txt
 rman TARGET SYS/pwd@target_str ... Spusti RMAN a pripoji se do databaze  
 
 rman TARGET SYS/pwd@target_str LOG $ORACLE_HOME/dbs/log/my_log.log APPEND ... Spusti RMANm pripoji se do DB a exportuje logy do souboru  
-rman TARGET SYS/pwd@target_str CATALOG cat_usr/pwd@cat_str ... Spusti RMAN, pripoji se do DB a obnovi katalog\\
+rman TARGET SYS/pwd@target_str CATALOG cat_usr/pwd@cat_str ... Spusti RMAN, pripoji se do DB a obnovi katalog
 
 ```
 cat backup_full.rman
@@ -688,9 +685,8 @@ run {
    allocate channel d1 type disk;
    backup full database format '/export/rman/rman_%n_%T_%s_%p.bus';
 }
-rman nocatalog target / cmdfile='backup_full.rman' log='/export/rman/rman.log' ... spusti RMAN davkovy soubor\\
+rman nocatalog target / cmdfile='backup_full.rman' log='/export/rman/rman.log' ... spusti RMAN davkovy soubor
 ```
-
 
 #### Ovladani RMAN
 
@@ -707,7 +703,7 @@ RMAN> CONVERT DATADILE '/oradata/d1.dbf', '/oradata/d2.dbf' TO PLATFORM="Solaris
 
 #### DUMP
 
-EXPORT:\\
+EXPORT:
 
 ```
 # mkdir /export/oracle_exports
@@ -718,7 +714,7 @@ $ expdp system/passwd FULL=y DUMPFILE=exportdir:Oracle-Oct11-fullexp.dmp LOGFILE
 ```
 
 $ EXPDP system/passwd DUMPFILE=expdat.dmp DIRECTORY=dpump_dir TRANSPORT_TABLESPACES = tblspc1,tblspc2 ... exportuje data pro prenos tabulkovych prostoru mezi databazemi. Exp.dump je potrebny i spolu s datovymi soubory pro import do jine DB. Tabulkove prostory musi byt v read only modu, kdyz se dela dump.  
-IMPORT:\\
+IMPORT:
 
 ```
 startup

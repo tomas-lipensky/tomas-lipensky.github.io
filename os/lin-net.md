@@ -30,7 +30,7 @@ echo "alias net-pf-10 off\nalias ipv6 off" > /etc/modprobe.conf ... zakaze pouzi
 [systemd-resolve](https://wiki.archlinux.org/index.php/Systemd-resolved) --set-domain=home.local -i vpn0 ... nastaveni domeny pomoci systemd-resolve  
 systemd-resolve %%--%%status ... status  
 systemd-resolve %%--%%set-dns=10.0.0.138 -i wlp2s0 ... nastaveni DNS  
-/etc/systemd/network/soubor1\\
+/etc/systemd/network/soubor1
 
 ```
 [Match]
@@ -118,7 +118,7 @@ dhclient wlan0
 ##### Wifi [router](http://www.linuxreaders.com/2011/02/16/ubuntu-fedora-box-as-wifi-router/)
 
 yum install [hostapd](http://wireless.kernel.org/en/users/Documentation/hostapd) -y  
-vi /etc/hostapd/hostapd.conf:\\
+vi /etc/hostapd/hostapd.conf:
 
 ```
 # Customize these for your local configuration...
@@ -159,7 +159,7 @@ killall -HUP pppd ... ukonci spojeni s operatorem a ukonci pppd
 echo -e "alias bond0 bonding\n  
 options bond0 mode=active-backup arp_interval=1000\n  
 arp_ip_target=9.156.175.1,9.156.175.8 primary eth0 arp_validate_all" &gt;&gt; /etc/modprobe.conf  
-cat /etc/sysconfig/network-scripts/ifcfg-bond0\\
+cat /etc/sysconfig/network-scripts/ifcfg-bond0
 
 ```
 device=bond0
@@ -172,7 +172,7 @@ ONBOOT=yes
 GATEWAY=9.3.5.1
 ```
 
-cat /etc/sysconfig/network-scripts/ifcfg-eth0\\
+cat /etc/sysconfig/network-scripts/ifcfg-eth0
 
 ```
 DEVICE=eth0

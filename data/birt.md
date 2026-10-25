@@ -30,7 +30,7 @@ genReport.sh
 
 ### Operatory
 
-if-else operatory, na zaklade podminky se priradi cislo sloupci:\\
+if-else operatory, na zaklade podminky se priradi cislo sloupci:
 
 ```
 if (row["START_TIME_"] == null) { 1 }

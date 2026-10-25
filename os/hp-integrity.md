@@ -2,7 +2,7 @@
 
 ### Integrity boot
 
-<h6>Boot proces na Integrity</h6>
+**Boot proces na Integrity**
 <li>POST ... Power-On Self Test - Test ulozeny v BootROM</li>
 <li>PAL ... Processor Abstraction Layer</li>
 <li>SAL ... System Abstraction Layer</li>
@@ -11,7 +11,7 @@
 <li>/stand/vmunix ... jadro</li>
 <li>init ... init proces s nadefinovanymi init levely a odpovidajicimi procesy</li>
 
-<h6>Struktura boot disku na Integrity - struktura na vsech Xeon serverech stejna</h6>
+**Struktura boot disku na Integrity - struktura na vsech Xeon serverech stejna**
 <li>MBR ... Master Boot Sector</li>
 <li>GPT Partition Table ... tabulka Globaly Unique IDentifier - GUID - ukazaele na vsechny EFI oddily</li>
 <li>System Partition ... 1. EFI oddil, obsahuje nahravac kernelu a OS auto soubor: \efi\hpux\hpux.efi, \efi\hpux\auto, \efi\hp\tools\network\ping.efi, ...</li>
@@ -19,7 +19,7 @@
 <li>Service partition ... 3. oddil - HPSV - HP Service partition, FAT32 oddil, obsahujici diagnosticke a jine nastroje</li>
 <li>GPT Partition Table ... </li>
 
-<h6>[Manualni boot proces](http://www.intel/com/software/products/college/efishell/images/efi_shell_cmnd_1_1.pdf) - preruseni EFI stiskem klavesy Esc</h6>
+**[Manualni boot proces](http://www.intel/com/software/products/college/efishell/images/efi_shell_cmnd_1_1.pdf) - preruseni EFI stiskem klavesy Esc**
 [Seznam prikazu v EFI shellu](http://docstore.mik.ua/manuals/hp-ux/en/5991-1247B/ch04s13.html#aes-npar-287a)  
 help ... napoveda  
 devices ... vylistuje vsechny bootovaci zarizeni  
@@ -34,7 +34,7 @@ lanboot ... nastartuje system ze site z Ignite serveru
 exit ... navrat do EFI boot manazeru  
 reset ... restartuje server  
 
-<h6>ISL/IPL</h6>
+**ISL/IPL**
 showautofile ... ukaze obsah souboru auto (\efi\hpux\auto)  
 setauto "boot vmunix" ... nastaveni \efi\hpux\auto  
 boot vmunix ... nastartuje jadro, jak je nadefinovano v auto  

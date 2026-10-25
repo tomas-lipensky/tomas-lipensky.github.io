@@ -106,14 +106,12 @@ https:*login.microsoftonline.com/common/oauth2/v2.0/authorize?client_id=22c49a0d
 URL='https://login.microsoftonline.com/common/oauth2/nativeclient?code=DUMMY_CODE&session_state=DUMMY_STATE'
 ```
 
-
 5) you run these commands:
 
 ```
 CODE=$(echo $URL  | sed -e 's/.*code=//' -e 's/&.*//')
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=22c49a0d-d21c-4792-aed1-8f163c982546&code=$CODE&grant_type=authorization_code&redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient" https://login.microsoftonline.com/common/oauth2/v2.0/token | jq .refresh_token |  sed -e 's/"//g' > ~/.config/onedrive/refresh_token
 ```
-
 
 so in other words, you obtain the refresh token manually and store it into the config file.
 

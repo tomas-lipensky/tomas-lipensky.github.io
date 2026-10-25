@@ -83,7 +83,6 @@ ftp
 pdconfig
 ```
 
-
 #### Preklad adres na IP
 
 /etc/netsvc.conf ... poradi prekladu adres - lokalni, bind atd  

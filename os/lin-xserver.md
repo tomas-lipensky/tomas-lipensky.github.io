@@ -175,7 +175,6 @@ xmodmap -e "remove lock = Caps_Lock" ... vypne funkci CapsLock
 setxkbmap cz ... nastavi ceskou klavesnici pod X (resp. us anglickou, ...)
 ```
 
-
 ### Nastaveni plochy, setreni energie atd.
 
 xsetroot ... meni nastaveni prvniho (root) okna  
@@ -198,7 +197,6 @@ xhost - uplne zakaze sdileni techto Xek
 xauth list ... ukaze seznam certifikatu Magix-cookie
 /etc/X11/xdm/kdmrc -> "-listen tcp" + otevrit posty 6000-6010 na FireWallu
 ```
-
 
 ##### vnc server
 

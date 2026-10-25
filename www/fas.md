@@ -110,7 +110,7 @@ bin/chk-up LIVE1 ... zkontroluje kazdych 20 sec. dostupnost qserveru, indexy a u
 bin/chk-publishing STAGING ... zkontroluje datum business.xml pro publikace (v data/business)  
 bin/chk-valid-index LIVE1 ... zkontroluje indexy a podindexy instance LIVE1 oproti minimalimu cislu polozek MINITEMS nastavenych ve config/fasrc. RC=0, pokud je polozek vic.  
 bin/ws-query localhost 12180 'fh_location=/companyitems/nl_NL/categories&lt;{manutan_3074457345616669470_8563771665917835204}' ... posle dotaz na qserver a vrati datum,cas,queryID,page_time,round_trip_time,query  
-bin/ws-query localhost 12180 '//company/de_CH&amp;fh_secondid=7158312898563771665917839687' ... dalsi dotaz\\
+bin/ws-query localhost 12180 '//company/de_CH&amp;fh_secondid=7158312898563771665917839687' ... dalsi dotaz
 
 ```
 ~/bin/instance INSTANCE start/stop ... it will manually start/stop individual INSTANCE on the server. It runs ~/bin/run-job jobs/ACTION-instance-with-variable.kjb -Didentifier=INSTANCE. INSTANCE is from:
@@ -127,7 +127,6 @@ bin/ws-query localhost 12180 '//company/de_CH&amp;fh_secondid=715831289856377166
 ~/bin/deployment-agent-client ... runs ~/deployment-agent/bin/deployment-agent-client $@
 ~/deployment-agent/bin/deployment-agent-client ... runs java process with com.fredhopper.deployment.client.CLIMain class
 ```
-
 
 ##### Role:
 

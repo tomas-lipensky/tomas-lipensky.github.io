@@ -94,7 +94,6 @@ Notes:
 $lang['js']['nosmblinks'] = '';
 ```
 
-
 ### Image Links
 
 You can also use an image to link to another internal or external page by combining the syntax for links and [images](#images_and_other_files) (see below) like this:
@@ -232,7 +231,6 @@ Dokuwiki supports ordered and unordered lists. To create a list item, indent you
   - That's it
 ```
 
-
 Also take a look at the [FAQ on list items](doku>faq:lists).
 
 ## Text Conversions
@@ -278,7 +276,6 @@ Typography: [DokuWiki](DokuWiki) can convert simple text characters to their typ
 "He thought 'It's a man's world'..."
 ```
 
-
 The same can be done to produce any kind of HTML, it just needs to be added to the [pattern file](doku>entities).
 
 There are three exceptions which do not come from that pattern file: multiplication entity (640x480), 'single' and "double quotes". They can be turned off through a [config option](doku>config:typography).
@@ -300,7 +297,6 @@ I think we should do it
 
 >>> Then lets do it!
 ```
-
 
 I think we should do it
 
@@ -407,31 +403,23 @@ You can include code blocks into your documents by either indenting them by at l
 This is preformatted code all spaces are preserved: like              <-this
 ```
 
-
 ```
 This is pretty much the same, but you could use it to show that you quoted a file.
 ```
 
-
 Those blocks were created by this source:
 
 This is text is indented by two spaces.
-
-
 
 ```
   This is preformatted code all spaces are preserved: like              <-this
   
 ```
 
-
-
-
 ```
   This is pretty much the same, but you could use it to show that you quoted a file.
   
 ```
-
 
 ### Syntax Highlighting
 
@@ -451,7 +439,6 @@ class HelloWorldApp {
     }
 }
 ```
-
 
 The following language strings are currently recognized: *4cs, 6502acme, 6502kickass, 6502tasm, 68000devpac, abap, actionscript-french, actionscript, actionscript3, ada, algol68, apache, applescript, asm, asp, autoconf, autohotkey, autoit, avisynth, awk, bascomavr, bash, basic4gl, bf, bibtex, blitzbasic, bnf, boo, c, c_loadrunner, c_mac, caddcl, cadlisp, cfdg, cfm, chaiscript, cil, clojure, cmake, cobol, coffeescript, cpp, cpp-qt, csharp, css, cuesheet, d, dcs, delphi, diff, div, dos, dot, e, epc, ecmascript, eiffel, email, erlang, euphoria, f1, falcon, fo, fortran, freebasic, fsharp, gambas, genero, genie, gdb, glsl, gml, gnuplot, go, groovy, gettext, gwbasic, haskell, hicest, hq9plus, html, html5, icon, idl, ini, inno, intercal, io, j, java5, java, javascript, jquery, kixtart, klonec, klonecpp, latex, lb, lisp, llvm, locobasic, logtalk, lolcode, lotusformulas, lotusscript, lscript, lsl2, lua, m68k, magiksf, make, mapbasic, matlab, mirc, modula2, modula3, mmix, mpasm, mxml, mysql, newlisp, nsis, oberon2, objc, objeck, ocaml-brief, ocaml, oobas, oracle8, oracle11, oxygene, oz, pascal, pcre, perl, perl6, per, pf, php-brief, php, pike, pic16, pixelbender, pli, plsql, postgresql, povray, powerbuilder, powershell, proftpd, progress, prolog, properties, providex, purebasic, pycon, python, q, qbasic, rails, rebol, reg, robots, rpmspec, rsplus, ruby, sas, scala, scheme, scilab, sdlbasic, smalltalk, smarty, sql, systemverilog, tcl, teraterm, text, thinbasic, tsql, typoscript, unicon, uscript, vala, vbnet, vb, verilog, vhdl, vim, visualfoxpro, visualprolog, whitespace, winbatch, whois, xbasic, xml, xorg_conf, xpp, yaml, z80, zxbasic*
 
@@ -473,12 +460,10 @@ When you use the ''%%
 <?php echo "hello world!"; ?>
 ```
 
-
 If you don't want any highlighting but want a downloadable file, specify a dash (`-`) as the language code: ''%%
 
 ```
 %%''.
-
 
 ===== Embedding HTML and PHP =====
 
@@ -494,7 +479,6 @@ This is some <span style="color:red;font-size:150%;">inline HTML</span>
 <p style="border:2px dashed red;">And this is some block HTML</p>
 </HTML>
 ```
-
 
 <html>
 This is some <span style="color:red;font-size:150%;">inline HTML</span>
@@ -517,7 +501,6 @@ echo '<td>'.phpversion().'</td>';
 echo '</tr></table>';
 </PHP>
 ```
-
 
 <php>
 echo 'The PHP version: ';

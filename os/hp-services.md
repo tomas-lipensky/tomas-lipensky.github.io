@@ -50,7 +50,7 @@ accept/reject HP ... spusti/zastavi tisk na tiskove fronte HP
 
 #### Cluster
 
-<b>info:</b>
+**info:**
 cmviewcl
 
 #### swagent

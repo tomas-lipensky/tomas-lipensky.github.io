@@ -160,7 +160,7 @@ db2 get admin cfg ... vypis konfigurace nastaveni instance
 db2 get database manager configuration  
 db2 update db cfg using STMT_CONC LITERALS ... meni soubor sqllib/db2systm  
 db2 get db cfg for DB show detail  
-<h6>[Logging](http://www.ibm.com/developerworks/data/library/techarticle/0301kline/0301kline.html)</h6>
+**[Logging](http://www.ibm.com/developerworks/data/library/techarticle/0301kline/0301kline.html)**
 
 ### Prace s table space
 

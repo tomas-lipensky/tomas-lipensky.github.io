@@ -2,15 +2,15 @@
 
 ## [lpd](http://www.ahinc.com/aix/printer.htm)
 
-#### Start:
+#### Start
 
 startsrc -s lpd
 
-#### Stop:
+#### Stop
 
 stopsrc -s lpd
 
-#### Status:
+#### Status
 
 lssrc -s lpd
 /usr/lib/lpd/pio/etc/piolsvp -p ... vypis vsech tiskaren vcetne ovladace  

@@ -41,15 +41,13 @@ tnode=Chef::Node.load(node.name)
 
 ### Zdroje - Resorces
 
-[registry_key](https://docs.chef.io/resource_registry_key.html) ... memeni windows registru\\
+[registry_key](https://docs.chef.io/resource_registry_key.html) ... memeni windows registru
 
 ```
 ohai 'reload' do
   action :reload
 end
 ```
-
-  
 
 ```
 windows_package "aaa aaa" do
@@ -60,14 +58,12 @@ windows_package "aaa aaa" do
 end
 ```
 
-
 ```
 remote_file "#{localfilepath}" do
   source "#{url}"
   action :create_if_missing
 end
 ```
-
 
 ```
 windows_batch 'unzip_tsm_images' do
@@ -78,13 +74,11 @@ windows_batch 'unzip_tsm_images' do
 end
 ```
 
-
 ```
 windows_path 'C:\Perl64\bin' do
   action :add
 end
 ```
-
 
 ```
 execute 'create_ico_folder' do
@@ -92,7 +86,6 @@ execute 'create_ico_folder' do
   not_if { File.exists?("/tmp/ico") }
 end
 ```
-
 
 ```
 bash 'set file permissions' do
@@ -107,7 +100,6 @@ bash 'set file permissions' do
 end
 ```
 
-
 ```
 template "/busapps/rexu/100/_lgi/exploitsm/conf/#{node_name_lower}_rbckeur0" do
   source 'journal_key.erb'
@@ -117,7 +109,6 @@ template "/busapps/rexu/100/_lgi/exploitsm/conf/#{node_name_lower}_rbckeur0" do
 end
 ```
 
-
 ```
 powershell_script 'Run KMS Client' do
         code &lt;&lt;-EOH
@@ -126,7 +117,6 @@ powershell_script 'Run KMS Client' do
         EOH
 end
 ```
-
 
 ```
 file "#{arg1}" do
@@ -138,8 +128,6 @@ file "#{arg1}" do
     not_if do ::File.exists?("#{arg1}") end
     end
 ```
-
-    
 
 ```
 ruby_block 'display build timestamp attribute value' do

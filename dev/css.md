@@ -11,14 +11,13 @@
 &lt;LINK href="special.css" rel="stylesheet" type="text/css"&gt;
 ```
 
-
-nebo\\
+nebo
 
 ```
 &lt;HEAD&gt;
  &lt;STYLE type="text/css"&gt;
    H1 {border-width: 1; border: solid; text-align: center}
-pre.code {font-size:8pt;padding:0.5em;border:1px dashed #000;color:Black;overflow:visible;}\\
+pre.code {font-size:8pt;padding:0.5em;border:1px dashed #000;color:Black;overflow:visible;}
 #myid {border-width: 1; border: solid; text-align: center}
  &lt;/STYLE&gt;
 &lt;/HEAD&gt;
@@ -30,13 +29,11 @@ pre.code {font-size:8pt;padding:0.5em;border:1px dashed #000;color:Black;overflo
 &lt;BODY&gt;
 ```
 
-
-nebo:\\
+nebo:
 
 ```
 &lt;P style="font-size: 12pt; color: fuchsia"&gt;
 ```
-
 
 ### Priklady
 

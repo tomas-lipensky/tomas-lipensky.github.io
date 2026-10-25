@@ -91,7 +91,7 @@ lvdisplay -v /dev/vg02/lv02 ... ukaze podrobne informace o LV lv02 z VG vg01
 lvcreate -L 16 -n swapvol vg01 ... (logical volume create) vytvori LV swapvol v VG vg01 o velikosti 16MB
 lvcreate vg01 ... vytvori LV lvol0x (x nejmensi nepouzite cislo ve VG) ve VG vg01 o velikost 0MB  
 lvlnboot 
-lvextend -L 16 /dev/vg01/datavol /dev/disk/disk1 ... (logical volume extend) zvetsi LV datavol v vg01 <b>na</b> 16MB, prida misto z PV disk1
+lvextend -L 16 /dev/vg01/datavol /dev/disk/disk1 ... (logical volume extend) zvetsi LV datavol v vg01 **na** 16MB, prida misto z PV disk1
 lvreduce -L 8 /dev/vg01/rdatavol ... (logical volume reduce) zmensi LV na 8 MB, nebo ubere mirror
 lvremove /dev/vg01/datavol ... smaze LV datavol
 lvrmboot
@@ -230,7 +230,7 @@ swlist -l product | grep -i online ... Can I do it online
 lvextend  -l 239 /dev/vg00/lvol6
 fsadm -F vxfs -b 978944 /opt ... if I can do it online
 umount /dev/vg00/lvol6; extendfs /dev/vg00/lvol6; mount /dev/vg00/lvol6 ... if I'm not able to do it online
-<b>if cluster:</b>
+**if cluster:**
 vgexport -v -s -p -m vg01.map vg01 ... on node A and copy vg01.map to node B
 ll /dev/vg01 ... on node B ( check minor number for vg01. ex : 0x010000)
 vgexport vg01 ... on node B

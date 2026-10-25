@@ -351,7 +351,6 @@ Windows Update Launches   wupdmgr
 Wordpad   write
 ```
 
-
 ### Scenare
 
 ==Spusteni jako administrator==
@@ -360,7 +359,6 @@ Wordpad   write
 #spustit prikazovy radek s admin pravama
 PsExec.exe -s -i c:\Windows\System32\WindowsPowerShell\v1.0\powershell_ise.exe 
 ```
-
 
 ### Active Directory
 

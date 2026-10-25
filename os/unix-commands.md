@@ -326,7 +326,7 @@ aaa () {} ... definovani funkce
 
 ##### Parametry skriptu
 
-getopts ":s:a:" PARAMETR ... vrati parametr, se kterym byl volan prikaz (-XXX), kde povolene parametry jsou a a s\\
+getopts ":s:a:" PARAMETR ... vrati parametr, se kterym byl volan prikaz (-XXX), kde povolene parametry jsou a a s
 
 ```
 while getopts ":s:ab" PARAMETR; do

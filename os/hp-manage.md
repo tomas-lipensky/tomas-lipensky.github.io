@@ -56,7 +56,7 @@ model ... Informace o modelu serveru
 /usr/sbin/olrad ... (11v3) manipulace s OL* zarizenimi  
 olrad -q ... (11v3) ukaze realnou HW cestu k [OL*](http://docs.hp.com/en/5992-1908/5992-1908.pdf) (On-line Add and Replace) kartam  
 olrad -a 0-0-1-3 ... pokyn ke vlozeni karty do zvoleneho slotu (vypne napajeni slotu)  
-pdweb ... analyzuje zvolene sloty a zjisti, zda je bezpecne vymenit OL* zarizeni\\  
+pdweb ... analyzuje zvolene sloty a zjisti, zda je bezpecne vymenit OL* zarizeni  
 rad ... (11v1, 11v2) manipulace s OL* zarizenimi  
 rad -q ... (11v1, 11v2) ukaze realnou HW cestu k [OL*](http://docs.hp.com/en/5992-1908/5992-1908.pdf) (On-line Add and Replace) kartam  
 scsimgr get_attr -a wwid /dev/disk/disk1 ... (11v3) ukaze WWID disku ve Storage  
@@ -79,7 +79,7 @@ dmesg ... vypis udalosti jadra
 vi /etc/rc.config.d/nddconf
 /var/adm/kc.log ... logy vsech zmen na jadre (vsechny kc* prikazy)  
 
-<h6>HPUX =&gt; 11i v2</h6>
+**HPUX =&gt; 11i v2**
 kconfig ... manipulace s vmunix jadrem. bez parametru ukaze vsechna nakonfigurovana jadra  
 kconfig -av OldConfig ... ukaze podrovbe parametry o nakonfigurovanem jadre /stand/OldConfig/vmunix  
 kconfig -s OldConfig ... zkopiruje soucasnou konfiguraci jadra do OldConfig  
@@ -109,7 +109,7 @@ kclog 5 ... 5 poslednich udalosti
 kclog -t tunable 6 ... 6 poslednich zmen s parametry jadra  
 kcweb ... nastaveni ovladacu jadra pomogi grafckeho weboveho rozhrani  
 
-<h6>HPUX =&lt; 11i v1</h6>
+**HPUX =&lt; 11i v1**
 /stand/vmunix ... jadro  
 /stand/dlkm ... zkompilovane moduly  
 /stand/system ... txt soubor s konfiguraci  

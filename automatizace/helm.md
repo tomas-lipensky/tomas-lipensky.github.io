@@ -21,7 +21,6 @@ velikost: .Values.obraz.velikost
 obraz: {{ include "TL.vypisObraz" $ }}
 ```
 
-
 #####
 
 if ====
@@ -35,7 +34,6 @@ if ====
   # Jinak
 {{ end }}
 ```
-
 
 ### with
 
@@ -62,7 +60,7 @@ barvy: |-
 
 ## Operatory
 
-`%%velikost: ![ required "Je potřeba zadat velikost" .Values]( required "Je potřeba zadat velikost" .Values.velikost )%%` ... validace, zda proměnná je nadefinovaná\\
+`%%velikost: ![ required "Je potřeba zadat velikost" .Values]( required "Je potřeba zadat velikost" .Values.velikost )%%` ... validace, zda proměnná je nadefinovaná
 
 ```
 {{- if not (has .Values.lidi "Tom") }}
