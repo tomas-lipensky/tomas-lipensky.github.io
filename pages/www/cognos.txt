@@ -6,13 +6,11 @@
 <dt>[[#odkazy|Externi odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[www.ibm.com/cognos/training|Cognos BI training]]\\
 [[https://www-947.ibm.com/support/entry/myportal/support|IBM Support page]]\\
 [[http://www-01.ibm.com/support/docview.wss?uid=swg27027081|Fixlist for Cognos BI 10.2]]
 
-<a name="portfolio|]]
 ====Cognos portfolio====
 
 Cognos BI je zakladni produkt, jsou k dispozici dalsi placene nadstavby - FPM (financial performacne mangement) a nastroj pro KPI\\

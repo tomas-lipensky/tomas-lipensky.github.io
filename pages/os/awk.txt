@@ -39,12 +39,12 @@ sub(/a/,"b",$0) ... nahradi v $0 prvni a za b (nevypise, je treba pouzit print\\
 
 
 ====Priklady====
-[[http://people.cs.uu.nl/piet/docs/nawk/|awk]] ... programovatelny editor textu z stdin do stdout<br />
-awk '/^22/ || /^13/' .. jen radky, co zacinaji 22 nebo 13<br />
-awk '$1=="1",$1=="10"' .. jen radky co 1. slovo je mezi 1 a 10<br />
+[[http://people.cs.uu.nl/piet/docs/nawk/|awk]] ... programovatelny editor textu z stdin do stdout
+awk '/^22/ || /^13/' .. jen radky, co zacinaji 22 nebo 13
+awk '$1=="1",$1=="10"' .. jen radky co 1. slovo je mezi 1 a 10
 awk '!/^#/ && $2 == "162/udp"' /etc/services ... najde radky, ktere nezacinaji znakem # a druhe slovo je 162\\
-awk 'FS=":" $2=="mopb4sminim" { OFS=';' ; ORS="\n\n" } { print $5,$6 }' ... vypise 5 a 6 slovo z radku oddelene strednikem, kazdy radek oddeleyny 2 entrama, kde 2. slovo je mopb4sminim, oddelovac slov je :<br />
-awk 'BEGIN { print "Counting of 'mopb4sminim'" } /mopb4sminim/ { ++aaa } END   { print "'mopb4sminim' appears " aaa " times" }' ... secte vyskyty slova mopb4sminim<br />
+awk 'FS=":" $2=="mopb4sminim" { OFS=';' ; ORS="\n\n" } { print $5,$6 }' ... vypise 5 a 6 slovo z radku oddelene strednikem, kazdy radek oddeleyny 2 entrama, kde 2. slovo je mopb4sminim, oddelovac slov je :
+awk 'BEGIN { print "Counting of 'mopb4sminim'" } /mopb4sminim/ { ++aaa } END   { print "'mopb4sminim' appears " aaa " times" }' ... secte vyskyty slova mopb4sminim
 awk ' {split($1,TAB,".");printf("%s.ini",TAB[1]) }' ...\\
 awk -F"\"" ' { print $2 } ' ... napise 2 slovo, kde oddelovac je "\\
 echo "12345678" | awk '{ print substr($0,2,3) }' vypise 2. az 2+3 pismeno: 234\\

@@ -5,10 +5,10 @@
 
 
 
-Kromě těchto stránek najdete celou řadu ostatních dokumentu, se základy ovládání a používání programu Maple v českém jazyce. Zde je pár odkazů:<br/>
-[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Fakulty strojního inženýrství VUT v Brně]]<br/>
-[[http://www.math.muni.cz/~plch/|na stránkach doktora Romana Plcha na Katedře metematiky Přírodovědecké fakulty MU v Brně]]<br/>
-[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Vysoké školy chemicko-technologické v Praze]]<br/>
+Kromě těchto stránek najdete celou řadu ostatních dokumentu, se základy ovládání a používání programu Maple v českém jazyce. Zde je pár odkazů:
+[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Fakulty strojního inženýrství VUT v Brně]]
+[[http://www.math.muni.cz/~plch/|na stránkach doktora Romana Plcha na Katedře metematiky Přírodovědecké fakulty MU v Brně]]
+[[http://www.stud.fme.vutbr.cz/~yzakvl00/maple/index.html|na Ústavu matematiky Vysoké školy chemicko-technologické v Praze]]
 
 
 <dl>

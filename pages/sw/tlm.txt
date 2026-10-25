@@ -2,12 +2,12 @@
 ======TLM (Tivoli Licence Manager)======
 
 <h6>Start: </h6>
-startsrc -s tlmagent<br />
+startsrc -s tlmagent
 <h6>Stop: </h6>
-stopsrc -s tlmagent<br />
+stopsrc -s tlmagent
 <h6>Status: </h6>
-lssrc -a | grep tlmagent<br />
+lssrc -a | grep tlmagent
 <h6>Nastaveni a umisteni: </h6>
-tlmagent -[v|s|h|p]<br />
+tlmagent -[v|s|h|p]
 
    

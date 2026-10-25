@@ -8,17 +8,14 @@ ORS - metadata pro Informatica MDM
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[https://community.informatica.com/message/111559|comunity.informatica.com]]\\
 [[http://www.scribd.com/doc/239239225/MDM-901-Install-Guide#scribd|Install guide]]\\
 [[http://www.deepinopensource.com/informatica-tutorials-beginners/|Informatica for beginners]]\\
 
-<a name="interni|]]
 ====Interni odkazy====
 [[was.html|WAS]]\\
 
-<a name="url|]]
 ====URL aplikace====
 http://IP:7507/ ... MDM aplikace\\
 https://IP:9043/ibm/console/ ... WAS Administracni konzole\\

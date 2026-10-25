@@ -9,7 +9,7 @@
 
 include_recipe 'ibm_tsm-client::client-config_linux'  
 
-server_bag = <b>data_bag_item</b>('directory', 'file') ... vytvori objekt server_bag z databagu $CHEF/data-bags/directory/file.json  
+server_bag = **data_bag_item**('directory', 'file') ... vytvori objekt server_bag z databagu $CHEF/data-bags/directory/file.json  
   variable = server_bag['variable'] ... priradi hodnotu promenne variable z objektu server_bag  
   require 'chef/win32/version'  
   Chef::Application.fatal!('Ouch!!! Bailing out!!!') ... fatal error, vyskoci z behu chef-clienta  

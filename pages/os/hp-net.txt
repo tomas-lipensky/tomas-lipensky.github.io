@@ -17,11 +17,11 @@ swlist TOUR ... podpora IPv6 v 11i v1 a nizsich\\
 
 ====fyzicka sitova zarizeni a nastaveni 2. sitove vrstvy - link====
 
-ioscan -fC lan	... seznam sitovych adapteru v serveru, vcetne HW cest, ovladacu a nazvu SDF atd.<br />
+ioscan -fC lan	... seznam sitovych adapteru v serveru, vcetne HW cest, ovladacu a nazvu SDF atd.
 ll /dev/dlpi* ... seznam SDF potrebnych do diagnostickych nastroju (linkloop, lanadmin\\
 insf /d dlpi -e ... znovuvytvoreni SDF\\
 
-lanscan	... seznam sitovych karet, jejich MAC, ovladace, atd.<br />
+lanscan	... seznam sitovych karet, jejich MAC, ovladace, atd.
 lanadmin ... konfigurace parametru 2. sitove vrstvy pro sitove adaptery na HP &lt; 11i v3\\
 lanadmn -a 0 ... ukaze MAC adresu 1. sitove karty\\
 lanadmin -A 0x080009CCCCCC 0 ... nastavi MAC adresu prvni sitove karty na 08:00:09:CC:CC:CC\\
@@ -32,16 +32,16 @@ lanadmin -r 0 ... resetne sitovou kartu\\
 lanadmin -c 1 ... vynuluje pocitadla o link layer\\
 lanadmin -g 1 ... ukaze statistiky link layer vrstvy pro 2. sitovku\\
 nwmgr ... nahrada lanscan, lanadmin a linkloop v HP-UX 11i v3\\
-nwmgr ... nahrada lanscan v 11i v3 - seznam sitovych karet, jejich MAC, ovladace, atd.<br />
+nwmgr ... nahrada lanscan v 11i v3 - seznam sitovych karet, jejich MAC, ovladace, atd.
 nwmgr --get --attribute all -c lan0 ... ukaze veskere nastaveni spojove vrstvy 1. sitove karty\\
 nwmgr --get --attribute speed,mac -c lan0 ... ukaze nastaveni mac a rychlost 1. sitove karty\\
 nwmgr --set attribute all --from default -c lan0 ... nastavi defaultni nastaveni pro 1. sitovou karty\\
 nwmgr --set attribute speed=100fd -c lan0 ... nastavi rychlost prvni sitove karty na 100Mb/s a Full-Duplex\\
 nwmgr --ser attribute all --sa --from current -c lan0 ... ukozi aktualni nastaveni sitove karty do /etc/rc.config.d/, po restartu nastaveni nezmizi\\
 nwmgr --reset -c lan0 ... resetne sitovou kartu\\
-nwmgr --diagnose --attribute dest=0x0060b007c179 -c lan0 ...  test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)<br />
-linkloop [ -i N ] 0x0060b007c179 ... test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)<br />
-ndd ... parametry sitoveho nastaveni<br />
+nwmgr --diagnose --attribute dest=0x0060b007c179 -c lan0 ...  test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)
+linkloop [ -i N ] 0x0060b007c179 ... test konektivity na 2. sitove vrstve (link state) s jinym sitovym zarizenim s MAC 0x0060b007c179 (pouziva IEEE802.3 testovaci ramce)
+ndd ... parametry sitoveho nastaveni
 ndd -h ... ukaze vsechny nastavitelne parametry site\\
 ndd -h ip_forwarding ... ukaze popis parametru ip_forwarding\\
 ndd /dev/ip6 ? ... ukaze volitelne parametry ipv6\\
@@ -50,7 +50,7 @@ ndd --set /dev/ip ip_forwarding 0 ... zmeni nastaveni ip_forwarding\\
 
 
 ====nastaveni a informace o 3. sitove vrstve - newtork====
-ifconfig lanX	... informace o sitovem zarizeni<br />
+ifconfig lanX	... informace o sitovem zarizeni
 ifconfig lan0 128.1.1.1 netmask 255.255.0.0 up ... nastavi IP adresu pro sitovou kartu a aktivuje ji\\
 ifconfig lan0:1 129.1.1.1 netmask 255.255.0.0 up ... nastavi alias (multiplexing) pro lan0\\
 ifconfig lan0:1 0.0.0.0 ... vypne alias\\
@@ -60,7 +60,7 @@ ifconfig lan 1 down ... deaktivuje lan1, zakaze provoz\\
 ifconfig lan0 inet6 up ... aktivuje IPv6 pro kartu a nastavi lokalni IPv6 adredu\\
 ifconfig lan0:1 inet6 3ffe:1111:0000:0000:0230:6eff:fe1e:0ee0/64 up ... aktivuje alias IPv6 pro kartu lan0 a nastavi IPv6 adredu s maskou site 64 bitu\\
 ifconfig snap0:0 130.1.1.1 netmast 255.255.0.0 ... konfigurace 1 sitove karty ne pro IP/Ethernet, ale pro IP/IEEE 802.3 (vlany)\\
-netstat -in	... Sezanam sitovych zarizeni a jejich adres<br />
+netstat -in	... Sezanam sitovych zarizeni a jejich adres
 arp -a ... ukaze arp tabulkou\\
 arp -d aaa.com ... smaze ARP zaznam pro adresu aaa.com\\
 ping 1.2.3.4 ... poslani ICPM Hello na ip 1.2.3.4 na zjisteni, zda je dostupny\\
@@ -74,8 +74,8 @@ route -f ... smaze celou routovaci tabulku\\
 route inet6 add net 2222::/64 4567::8 1  ... prida IPv6 routu s hop-countem 1\\
 netstat -rn ... vypis routovaci tabulky\\
 traceroute 1.2.3.4 ... hledani routeru po ceste k ip 1.2.3.4\\
-nettl ... trace<br />
-netfmt ... trace<br />
+nettl ... trace
+netfmt ... trace
 tcpdump\\
 ethereal\\
 net-snmp\\
@@ -90,7 +90,7 @@ nslookup 1.2.3.4 www.seznam.cz ... zepta se na preklad jmena www.seznam.cz DNS s
 nsquery hosts sanfran.cz.hp.com ... nastroj na hledani problemu s prekladem jmen. Podle nsswitch provede dotaz na preklad\\
 dig @1.2.3.4 www.seznam.cz ... zepta se na preklad jmena www.seznam.cz DNS serveru 1.2.3.4\\
 dig @1.2.3.4 +short -x 128.1.1.2  ... zepta se na preklad adresy 128.1.1.2 DNS serveru 1.2.3.4, kratsi vypis\\
-landiag<br />
-gdc createconf ... nastaveni routovacich sluzeb<br />
+landiag
+gdc createconf ... nastaveni routovacich sluzeb
 grep -il SERVICE /etc/rc/config.d/* /sbin/init.d/* ... hledani skriptu pro jednotlive sluzby (apache, bootp, cde, ...)\\
    

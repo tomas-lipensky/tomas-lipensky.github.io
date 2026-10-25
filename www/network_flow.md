@@ -6,7 +6,7 @@ OSWAP ZAP ... MITP & penetration test tool
 SSLSplit ... MITP pro obecne SSL protokoly, ne jen na https  
 firebug ... doplnek pro Firefox pro zobrazovani http/https dotazu a odpovedi  
 
-<a name="tcpdump|tcpdump]]
+
 tcpdump -tn ... ukazuje tcp paket, adresy ukazuje v IP adresach  
 tcpdump -c 20 -s 0 -i any -A 'host 9.220.24.160' and 'tcp port http' ... ukaze jake balicky a jejich obsah sel na adresu/port  
 tcpdump -vv -x -X -s 1500 -i eth1 '[port 25](https://danielmiessler.com/study/tcpdump/)' ... vypise obsah paketu co chodi na SMTP (posta)  

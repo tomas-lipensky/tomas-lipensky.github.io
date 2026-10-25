@@ -1,5 +1,5 @@
-brarchive (or sapdba) ... Backup Redo-log file<br />
-brbackup (or sapdba) ... Backup one Tablespace (PASPUSER1D)<br />
-brrestore m archive_logs ... Restoring Redo-log file<br />
-brrestore (or sapdba) ... Restoring Tablespace (PSAPUSER1D) with recovering option<br />
+brarchive (or sapdba) ... Backup Redo-log file
+brbackup (or sapdba) ... Backup one Tablespace (PASPUSER1D)
+brrestore m archive_logs ... Restoring Redo-log file
+brrestore (or sapdba) ... Restoring Tablespace (PSAPUSER1D) with recovering option
    

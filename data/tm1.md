@@ -2,11 +2,6 @@
 
 ### Interni odkazy
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Externi odkazy
 
 [IBM Knowledge Center pro Cognos TM1](http://www-01.ibm.com/support/knowledgecenter/SS9RXT/welcome)  

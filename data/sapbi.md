@@ -4,7 +4,6 @@
 
 SAP Community Network (SCN)
 
-<a name="produkty|]]
 ### Produkty
 
 SAP BO BI (SAP BusinessObjects Business Intelligence platform) ... Business Inteligence produkt  

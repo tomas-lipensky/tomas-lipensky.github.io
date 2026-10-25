@@ -24,13 +24,14 @@ cat a.xml | xmllint --xpath "string(//*[name()='ManagedObjectReference'][$i]/@ty
 ## XSLT
 
 [XLST tutorial na w3schools](https://www.w3schools.com/xml/xsl_intro.asp)  
-[XLST info na whoishostingthis](http://wiht.link/XSLT-intro)  
+[XLST info na whoishostingthis](http://wiht.link/XSLT-intro)
+
 ##### Konverzni programy
 
-xsltproc<br/>
-saxon<br/>
-4SXLT<br/>
-Xalan<br/>
+xsltproc
+saxon
+4SXLT
+Xalan
 
 eXtensible Stylesheet Language Transformations ... cast specifikace XSL pro transformace XML do jinych formatu (XML, HTML, txt, csv, pdf, ...)
 

@@ -20,7 +20,6 @@ Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 <dt>[PL/SQL](#plsql)</dt>
 </dl>
 
-<a name="odkazy|]]
 ### Externi odkazy
 
 [Uvod](http://www.abclinuxu.cz/clanky/navody/oracle-1-uvod-distribuce-oraclexe) na abc linuxu  
@@ -46,7 +45,6 @@ Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 
 @/tmp/createtable.sql  
 
-<a name="tabulky|]]
 ### Tabulky
 
 #### Datove typy pro tabulky
@@ -83,7 +81,6 @@ CREATE TABLE nakupy (
 
 DESCRIBE zakaznici; popise sloupce, promenne a podminky nenulovosti tabulky zakaznici  
 
-<a name="zaznamy|]]
 ### Zaznamy v tabulce
 
 #### Vkladani
@@ -102,7 +99,6 @@ UPDATE zakaznici SET jmeno = 'Albert' WHERE id_zakaznika = 1; ... modifikuje zaz
 
 SELECT * FROM zakaznici;  
 
-<a name="plsql|]]
 ### PL/SQL
 
 PL/SQL (Procedural Laguage) rozsiruje moznosti SQL o bloky, deklarace promennych, podminky, smycky, kursory a definice procedur a funkci

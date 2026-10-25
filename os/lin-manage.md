@@ -49,9 +49,9 @@ rpm -qa ... vypise vsechny balicky
 rpm -qi BALICEK ... podrobny vypis o balicku BALICEK  
 rpm -q -qf '%{NAME}-%{VERSION}:%{RELEASE}:%{SUMMARY}(%{LICENCE},%{ARCH}),%{PACKAGER}'  
 rpm -q -qf '%{LICENCE}\n'|sort|uniq -c|sort -n  
-rpm -I a.rpm ... instalace a.rpm<br />
-rpm -u a.rpm ... update balickem u.rpm<br />
-rpm -V a.rpm ... overeni spravnosti nainstalovani a.rpm<br />
+rpm -I a.rpm ... instalace a.rpm
+rpm -u a.rpm ... update balickem u.rpm
+rpm -V a.rpm ... overeni spravnosti nainstalovani a.rpm
 rpm -Fvh --repackage *.rpm ... vrati nazpet updatovane balicky  
 rpm -Fvh --test *.rpm ... Otestuje, zda upgrade balicku bude ok  
 rpm --eval "%**find_requires"  ... vylistuje promennou RPM - **find_requires  
@@ -105,8 +105,8 @@ snap help ... napoveda
 /etc/login.defs ... nastaveni default parametru pro useradd (expirce, uid, atd)  
 authconfig --test|grep hashing ... ukaze vychozi hash algoritmus  
 authconfig --passalgo=sha512 --update ... zmeni vychozi hash algoritmus  
-chage ... zmena expirace uctu a hesla<br />
-chage -d 0 uzivatel ... expirace hesla = 0<br />
+chage ... zmena expirace uctu a hesla
+chage -d 0 uzivatel ... expirace hesla = 0
 chgrp ... zmeni skupinoveho vlastnika souboru  
 id root ... ikaze informace o uzivateli root  
 faillog -a ... ukaze, jestli naposledy uzivatel neuspel pri prihlasovani  
@@ -118,17 +118,17 @@ groupdel ... smaze grupu
 groups ... ukaze, kterych grup je uzivatel clenem  
 gpasswd ... meni, zamyka, odemyka a rusi heslo skupiny pro newgrp  
 getent ... ziskava informace o uzivatelich z jinych serveru  
-last ... vypis poslednich loginu<br />
+last ... vypis poslednich loginu
 newgrp -l users ... spusti novy shell a usivatel bude patrit jen do grupy users  
 passwd aaa ... zmena hesla uzivatele aaa  
-echo password | passwd %%--%%stdin username ... zmeni heslo v commandline<br />
+echo password | passwd %%--%%stdin username ... zmeni heslo v commandline
 openssl passwd -1 redhat123 ... napise hash hesla redhat123, da se vlozit do /etc/shadow  
 openssl passwd -1 -salt Etg2ExUZ redhat ... to same, urcim salt cast hesla  
-useradd ... prida uzivatele<br />
+useradd ... prida uzivatele
 usermod ... meni parametry uzivatelu  
 usermod -G news aaa ... prida uzivatele aaa do skupiny news  
 usermod -L aaa ... zamkne uzivatele aaa  
-usermod -p "" ... vynuluje heslo<br />
+usermod -p "" ... vynuluje heslo
 userdel aaa ... smaze usivatele aaa  
 
 ### Sluzby

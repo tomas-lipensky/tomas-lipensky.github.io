@@ -15,26 +15,22 @@
 <dt>[wsadmin: priklady administrace](#priklady)</dt>
 </dl>
 
-<a name="odkazy|]]
 ### Externi odkazy
 
 $WAS/web/mbeanDocs/index.html ... Popisy vsech MBean typu  
 
 [WebSphere Application Server Administration Using Jython](http://my.safaribooksonline.com/book/web-development/websphere/9780137043699) - kniha na Safari Books Online  
 
-<a name="interni|]]
 ### Interni odkazy
 
 [WAS](was.html)  
 [Python](../dev/pzthon.html)  
 [JACL](jacl.html)  
 
-<a name="wsadmin|]]
 ### wsadmin
 
 wsadmin pouziva k administraci 5 zakladnich commandu: AdminControl, AdminConfig, AdminApp, AdminTask a Help  
 
-<a name="AdminControl|]]
 ##### AdminControl:
 
 AdminControl.compleeObjectName('type=DeploymentManager,node=NODE1') ... vypise prvni obejkt, ktery odpovida zadani  
@@ -51,7 +47,6 @@ Graficky tool: [MBeanInspector](http://www.alphaworks.ibm.com/tech/mbeaninspecto
 AdminControl.setAttribute() ... nastavovani atributu  
 AdminControl.stopServer(SERVER_NAME, NODE_NAME) ... zastavi server na node  
 
-<a name="AdminConfig|]]
 ##### AdminConfig:
 
 print AdminConfig.types() ... seznam vsech TYPu objektu (konfiguracnich typu)  
@@ -79,7 +74,6 @@ AdminConfig.remove('SERVER_CONFIG_ID') ... odstraneni aplikacnihop serveru
 AdminConfig.save() ... ukozi zmeny udelane ve wsadminu  
 AdminConfig.reset() ... zrusi zmeny udelane ve wsadminu  
 
-<a name="AdminApp|]]
 ##### AdminApp:
 
 print AdminApp.help() ... seznam funkci AdminApp  
@@ -98,7 +92,6 @@ AdminApp.uninstallinstall('IVT App') ... odinstalace aplikace
 AdminApp.enitInteractive('IVM app') ... interaktivni editace aplikace  
 AdminApp.enit("IVT App", ["MapModulesToServers", ["IVT Application", "ivt_appr.war,WEB-INF/web.xml", "WebSphere:cell=CEL,node=NODE,server=SERVER,cluster=CLUSTER]("IVT Application", "ivt_appr.war,WEB-INF/web.xml", "WebSphere/cell=CEL,node=NODE,server=SERVER,cluster=CLUSTER)] ) ... editace app resveru, pote AdminConfig.save  
 
-<a name="AdminTask|]]
 ##### AdminTask
 
 print AdminTask.help('-commandGroups') ... Seznam vsech skupin administracnich ukolu  
@@ -112,14 +105,12 @@ AdminTask.listNodes() ... seznam Nodu
 AdminTask.listServerTypes() ... seznam typu serveru  
 AdminTask.showServerInfo(ID_applikacniho_serveru) ... ukaze informace o appl. serveru  
 
-<a name="Help|]]
 ##### Help
 
 print Help.AdminControl() ... vypise prikazy v baliku AdminControl  
 print Help.AdminControl('compleeObjectName') .... popise prikaz AdminControl.completeObjectName  
 print Help.attributes(AdminControl.completeObjectName('type=Server,node=NODE1,*')) ... vypise atributy daneho MBeanu  
 
-<a name="priklady|]]
 ### shell: uzitecne priklady
 
 ps -ef | grep -v grep | grep WebS | awk '{ print $(NF-2),$(NF-1),$(NF) }' | sort | uniq  

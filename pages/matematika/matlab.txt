@@ -5,7 +5,7 @@
 
 
 
-Volna alternativa k programu Maple je [[http://www.gnu.org/software/octave/|Octave]], ve kterem vsechny zaklady, o kterych zde pisi, funguji stejne, ci podobne, jako v Matlabu. Kromě těchto stránek najdete jistě celou řadu ostatních stranek, se základy ovládání a používání programu Matlab v českém jazyce. Ale třeba Vám budou právě tyto vyhovovat lépe než ty ostatní, jako třeba mě.<br/>
+Volna alternativa k programu Maple je [[http://www.gnu.org/software/octave/|Octave]], ve kterem vsechny zaklady, o kterych zde pisi, funguji stejne, ci podobne, jako v Matlabu. Kromě těchto stránek najdete jistě celou řadu ostatních stranek, se základy ovládání a používání programu Matlab v českém jazyce. Ale třeba Vám budou právě tyto vyhovovat lépe než ty ostatní, jako třeba mě.
 
 
 <dl>
@@ -39,14 +39,14 @@ b=[sin(1),sin(0)]\\
 <dl>
 <dt><b>Základní funkce</b></dt>
 <dd>
-<b>zeros(m,n)</b> - matice plná nul o rozměrech mxn<br/>
-<b>eye(m,n)</b> - jednotková matice o rozměrech mxn<br/>
+<b>zeros(m,n)</b> - matice plná nul o rozměrech mxn
+<b>eye(m,n)</b> - jednotková matice o rozměrech mxn
 <b>rand(m,n)</b> - matice o rozměrech mxn plná náhodných čísel v intervalu (0,1)\\
-<b>randn(m,n)</b> - matice o rozměrech mxn plná náhodných čísel v intervalu (-6?,6?)<br/>
-<b>min([a,b,c])</b> - minimum z a,b,c<br/>
-<b>max([a,b,c])</b> - maximum z a,b,c<br/>
-<b>abs(a)</b> - absolutni hodnota z a<br/>
-<b>disp('ahoj')</b> - vypíše hlášku "ahoj"<br/>
+<b>randn(m,n)</b> - matice o rozměrech mxn plná náhodných čísel v intervalu (-6?,6?)
+<b>min([a,b,c])</b> - minimum z a,b,c
+<b>max([a,b,c])</b> - maximum z a,b,c
+<b>abs(a)</b> - absolutni hodnota z a
+<b>disp('ahoj')</b> - vypíše hlášku "ahoj"
 
 </dl>
 
@@ -56,20 +56,20 @@ b=[sin(1),sin(0)]\\
 <dt><b>Základní operace s maticema</b></dt>
 <dd>
 \\
-<b>X+Y</b> součet matic, souhlasi-li dimenze<br/>
-<b>X+a</b> každé buňce matice X se přičte skalár a<br/>
-<b>X-Y</b> rozdíl matic, souhlasi-li dimenze<br/>
-<b>X-a</b> od každé buňky matice X se odečte skalár a<br/>
-<b>X*Y</b> součin matic, souhlasi-li dimenze<br/>
-<b>X*a</b> každá buňka matice X se vynásobí skalárem a<br/>
-<b>X'</b> matice X se transponuje a komplexně sdruží<br/>
-<b>X.'</b> matice X se transponuje<br/>
-<b>X^p</b> matice X se vynásobí p-krát sama se sebou (mocnina), souhlasi-li dimenze<br/>
-<b>X.+Y</b> součet matic po složkách, souhlasi-li dimenze<br/>
-<b>X.-Y</b> rozdíl matic po složkách, souhlasi-li dimenze<br/>
-<b>X.*Y</b> součin matic po složkách, souhlasi-li dimenze<br/>
-<b>X.^p</b> prvky matice X se vynásobí p-krát samz se sebou (mocnina)<br/>
-<b>X>Y</b> porovnání matic po složkách, souhlasi-li dimenze, vysledek matice plná nul a jednicek. (alternativy <, <=, >=, ==, ~=, &, |)<br/>
+<b>X+Y</b> součet matic, souhlasi-li dimenze
+<b>X+a</b> každé buňce matice X se přičte skalár a
+<b>X-Y</b> rozdíl matic, souhlasi-li dimenze
+<b>X-a</b> od každé buňky matice X se odečte skalár a
+<b>X*Y</b> součin matic, souhlasi-li dimenze
+<b>X*a</b> každá buňka matice X se vynásobí skalárem a
+<b>X'</b> matice X se transponuje a komplexně sdruží
+<b>X.'</b> matice X se transponuje
+<b>X^p</b> matice X se vynásobí p-krát sama se sebou (mocnina), souhlasi-li dimenze
+<b>X.+Y</b> součet matic po složkách, souhlasi-li dimenze
+<b>X.-Y</b> rozdíl matic po složkách, souhlasi-li dimenze
+<b>X.*Y</b> součin matic po složkách, souhlasi-li dimenze
+<b>X.^p</b> prvky matice X se vynásobí p-krát samz se sebou (mocnina)
+<b>X>Y</b> porovnání matic po složkách, souhlasi-li dimenze, vysledek matice plná nul a jednicek. (alternativy <, <=, >=, ==, ~=, &, |)
 </dl>
 
 
@@ -79,7 +79,7 @@ b=[sin(1),sin(0)]\\
 <dt><b>Podmínky</b></dt>
 <dd>
 if elseif else end\\
-for break end<br/>
+for break end
 while end</dd>
 </dl>
 

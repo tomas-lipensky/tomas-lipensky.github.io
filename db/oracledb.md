@@ -68,7 +68,7 @@ cat /etc/oratab ... SIDy, cesty atd.
 env | grep ORA ... ukaze informace z promennych s jakou instanci pracuji>br>
 $ORACLE_HOME/dbs/spfileorcl.ora ... defaultnni specifikacni soubor pro instanci  
 sqlplus / as sysdba; create spfile from pfile; ... vytvori se defaultni specificky soubor z aktualniho  
-$ORACLE_HOME/network/admin/listener.ora<BR>
+$ORACLE_HOME/network/admin/listener.ora
 $ORACLE_HOME/network/admin/tnsnames.ora  
 
 #### Nastroje
@@ -603,7 +603,6 @@ end;
 
 ### Objekty v databazich
 
-<a name="uzivatele|]]
 #### Uzivatele
 
 Zakladni uzivatele: SYS (pwd: CHANGE_ON_INSTALL), SYSTEM (pwd: MANAGER)
@@ -671,7 +670,6 @@ select * from DBA_LOCKS; ... seznam zamku
 select * from DBA_LOCK_INTERNAL;  
 select * from V$LOCKED_OBJECT; ... seznam zamknutych objektu  
 
-<a name="zalohovani|]]
 ### Zalohovani a obnova databazi
 
 #### Spusteni RMAN - Recovery MANager
@@ -707,7 +705,6 @@ RMAN> startup force nomount; ... nastartuje instanci, ale nemountuje databazi
 RMAN> CONVERT TABLESPACE tblspe1,tblspc2 TO PLATFORM 'Microsoft Windows NT' FORMAT '/temp/%U'; ... zkonvertuje tabulkovy prostor do formatu Windows NT  
 RMAN> CONVERT DATADILE '/oradata/d1.dbf', '/oradata/d2.dbf' TO PLATFORM="Solaris(tm) OE (32-bit)" FROM PLATFORM="HP TRu64 UNIX" DBFILE_NAME_CONVERT "/oradata/", "/oradatasun" PARALLELISM=5; ... konvertuje datove souboru  
 
-<a name="dump|]]
 #### DUMP
 
 EXPORT:\\
@@ -745,7 +742,6 @@ BEGIN BBMS_FILE_TRANSFER.COPY_FILE@DB(source_directory_object => "SOURCE_DIR', s
 DBMS_FILE_TRANSFER.PUT_FILE@DB1 ... prenos na jiny server  
 DBMS_FILE_TRANSFER.GET_FILE@DB1 ... prenos z jineho serveru  
 
-<a name="sqlloader|]]
 #### SQL*Loader - Import dat ze souboru
 
 SQL*Loader nacita data ze souboru do Oracle tabulek. Je to velice rychlaa cesta, jak nacist data do tabulek.

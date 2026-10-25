@@ -158,7 +158,7 @@ Set zip = objFSO.OpenTextFile(target, 2, vbtrue) ... otevre soubor pro zapis
 zip.Write "PK" & Chr(5) & Chr(6) & String( 18, Chr(0) ) ... zapise do souboru (hlavicku ZIPu)  
 zip.Close ... uzavre soubor  
 Set zip = nothing ... odstrani vazani promenne na objekt  
-Set ObjSehll(<a hreg="http://msdn.microsoft.com/en-us/library/windows/desktop/bb774063%28v=vs.85%29.aspx|shell.application]])  
+Set ObjSehll(<a href="http://msdn.microsoft.com/en-us/library/windows/desktop/bb774063%28v=vs.85%29.aspx|shell.application]])  
 
 ##### Pouziti v HTML
 

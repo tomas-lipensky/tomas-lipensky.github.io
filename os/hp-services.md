@@ -7,7 +7,6 @@ swapper ... deaktivuje procesy a tim jim zabranuje swapovat (page-in, page-out)
 
 ### sluzby obecne
 
-<a name="skuzby|]]
 who -r ... ukaze aktualni runlevel  
 init 0[s,S,1,2,3,4] ... zastaveni,single,single s konzolou,single+fs mounted,multiuser,metwork multiuser+graficky,HP VUE. Spusti se, ci zastavi sluzby, ktere jsou v /etc/rcX.d  
 sluzby:
@@ -36,25 +35,25 @@ ctrl+\ ... preruseni skriptu startovani/stopovani sluzeb
 
 #### lpd
 
-check if printer exists<br />
-ls -l /etc/lp/interface/name<br />
-grep IP /etc/lp/interface/*<br />
-ls -l /etc/lp/interface/model.orig/* (size:1561 for dumb.mag (wincor or ier),18413 for laser.mag (laser))<br />
-Create printer:<br />
-hppi -aq Enter the network printer name or IP address (q - quit): IP<br />
-lpadmin ... konfigurace tiskaren<br />
-lpadmin -xHP ... odstrani tiskovou frontu HP<br />
-lsched ... spousteni scheduleru<br />
-lpshut ... zastavi scheduler<br />
-disable/enable HP ... deaktivuje/aktivuje tiskovou frontu HP<br />
-accept/reject HP ... spusti/zastavi tisk na tiskove fronte HP<br />
+check if printer exists
+ls -l /etc/lp/interface/name
+grep IP /etc/lp/interface/*
+ls -l /etc/lp/interface/model.orig/* (size:1561 for dumb.mag (wincor or ier),18413 for laser.mag (laser))
+Create printer:
+hppi -aq Enter the network printer name or IP address (q - quit): IP
+lpadmin ... konfigurace tiskaren
+lpadmin -xHP ... odstrani tiskovou frontu HP
+lsched ... spousteni scheduleru
+lpshut ... zastavi scheduler
+disable/enable HP ... deaktivuje/aktivuje tiskovou frontu HP
+accept/reject HP ... spusti/zastavi tisk na tiskove fronte HP
 
 #### Cluster
 
-<b>info:</b><br />
-cmviewcl<br />
+<b>info:</b>
+cmviewcl
 
 #### swagent
 
-/sbin/init.d/swagentd stop<br />
-/sbin/init.d/swagentd start<br />
+/sbin/init.d/swagentd stop
+/sbin/init.d/swagentd start

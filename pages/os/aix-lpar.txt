@@ -9,28 +9,27 @@ Logicke oddily - LPARy se spravuji bud z HMC, nebo z IVM (Integrated Virtual Man
 [[#hmc|HMC]]</br>
 [[#vios|VIOS - Virtual I/O Server]]\\
 
-<a name="links|]]
 =====Externi odkazy=====
-HMC web kilent ... https://IP adresa HMC (Drive byl potreba WebSM)<br />
-IVM (Integrated Virtualization Manager) ... IP adresa VIO serveru<br />
-[[http://www-933.ibm.com/support/fixcentral/|IBM Support Fix Central]] ... podpora a update<br />
-[[http://www-947.ibm.com/systems/support/supportsite.wss/brandmain?brandind=5000025|IBM Systm p Support]]<br />
+HMC web kilent ... https://IP adresa HMC (Drive byl potreba WebSM)
+IVM (Integrated Virtualization Manager) ... IP adresa VIO serveru
+[[http://www-933.ibm.com/support/fixcentral/|IBM Support Fix Central]] ... podpora a update
+[[http://www-947.ibm.com/systems/support/supportsite.wss/brandmain?brandind=5000025|IBM Systm p Support]]
 [[http://www-947.ibm.com/systems/support/tools/systemplanningtool/|SPT]] system planning tool\\
-[[http://www14.software.ibm.com/webapp/set2/sas/f/vios/home.html|VIOS]]<br />
-[[http://www14.software.ibm.com/webapp/set2/sas/f/vios/documentation/home.html|Dokumentace k VIOS]]<br />
-[[http://www-03.ibm.com/systems/power/hardware/cod/index.html>CoD - Capacity on Demand]]<br />
-[[http://www-03.ibm.com/systems/power/software/linux/index.html|Linux on POWER machines]]<br />
-[[http://www-03.ibm.com/systems/power/software/virtualization/index.html|IBM Power Systems PowerVM]]<br />
-[[http://www-03.ibm.com/systems/power/hardware/reports/factsfeatures.html|IBM Power systems - facts and features]]<br />
-[[http://www-03.ibm.com/systems/storage/|IBM Servers - storage]]<br />
-[[http://www-03.ibm.com/services/sl/products/java2.html|IBM Support Line Supported Products List]]<br />
+[[http://www14.software.ibm.com/webapp/set2/sas/f/vios/home.html|VIOS]]
+[[http://www14.software.ibm.com/webapp/set2/sas/f/vios/documentation/home.html|Dokumentace k VIOS]]
+[[http://www-03.ibm.com/systems/power/hardware/cod/index.html>CoD - Capacity on Demand]]
+[[http://www-03.ibm.com/systems/power/software/linux/index.html|Linux on POWER machines]]
+[[http://www-03.ibm.com/systems/power/software/virtualization/index.html|IBM Power Systems PowerVM]]
+[[http://www-03.ibm.com/systems/power/hardware/reports/factsfeatures.html|IBM Power systems - facts and features]]
+[[http://www-03.ibm.com/systems/storage/|IBM Servers - storage]]
+[[http://www-03.ibm.com/services/sl/products/java2.html|IBM Support Line Supported Products List]]
 [[http://www-03.ibm.com/servers/aix/whitepapers/aix_vn.pdf|Virtual Networking on AIX 5L]]\\
 [[http://www-03.ibm.com/linux/|IBM and Linux]]\\
-[[http://www.redbooks.com|Redbooks]]: PowerVM Virtualization on IBM System p<br />
-[[http://www.ibm.com/support/publications/us/library/|IBM Product Information Centers]]<br />
+[[http://www.redbooks.com|Redbooks]]: PowerVM Virtualization on IBM System p
+[[http://www.ibm.com/support/publications/us/library/|IBM Product Information Centers]]
 [[http://publib.boulder.ibm.com/infocenter/eserver/v1r3s/index.jsp?topic=/iphcx/hmckickoff.htm|Seznam prikazu]]\\
-[[http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp|Power 5/6 info]]<br />
-[[http://publib.boulder.ibm.com/infocenter/systems/index.jsp|IBM System p and AIX Infocenter]]<br />
+[[http://publib.boulder.ibm.com/infocenter/pseries/v5r3/index.jsp|Power 5/6 info]]
+[[http://publib.boulder.ibm.com/infocenter/systems/index.jsp|IBM System p and AIX Infocenter]]
 [[http://santosh-aix.blogspot.com/|Santoschovy stranky o AIX a LPARech]]\\
 [[http://www.unixwerk.eu/aix/hmc-howto.html|HMC How to]] ... pekne HOWTO - prikazy HMC\\
 [[http://www.unixwerk.eu/aix/ios-howto.html|VIO How to]] ... pekne HOWTO - prikazy VIO\\
@@ -38,7 +37,6 @@ IVM (Integrated Virtualization Manager) ... IP adresa VIO serveru<br />
 [[http://www.lpar2rrd.com/install.htm?4.1#fragment-8|LPAR4RRD]] - webovy interface na ziskani info z HMC o managovanych masinach\\
 
 
-<a name="lpar|]]
 =====LPAR Klient - Logical Partition=====
 ==AIX==
 uname -L ... ukaze ID a nazev LPARu\\
@@ -77,15 +75,15 @@ vconfig ... nastavovani virtualnich sitovych karet z VIOS\\
 =====HMC - Hardware Manage Console=====
 [[https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/HMC%20Scanner|HMC Scanner]] ... java aplikace na pripojeni k HMC/IVM a stazeni informaci o managovanych systemech\\
 default uzivatel/heslo: hscroot/abc123
-Defaultni IP adresy spravovanych systemu P5-192.168.2.147,192.168.3.147, P6-169.254.2.147,169.254.2.147<br />
+Defaultni IP adresy spravovanych systemu P5-192.168.2.147,192.168.3.147, P6-169.254.2.147,169.254.2.147
 
 ===Virtualni terminaly ( "~.", "~~." - ukonceni terminalu)===
-mkvterm -m MSYST1 -p sinalfa2 ... mytvori novy terminal a prepne do nej<br />
-rmvterm -m MSTST1 --id 1 ... zrusi otevreny terminal<br />
-vtmenu ... interaktivni prepinani do jednotlivych konzoli. Opusti se bud: "~~.", nebo "~.ENTER"<br />
+mkvterm -m MSYST1 -p sinalfa2 ... mytvori novy terminal a prepne do nej
+rmvterm -m MSTST1 --id 1 ... zrusi otevreny terminal
+vtmenu ... interaktivni prepinani do jednotlivych konzoli. Opusti se bud: "~~.", nebo "~.ENTER"
 
 ===informace o HMC a sprava HMC (defaultni nastaveni uzivatele: hscroot/abc123>===
-asmmenu ... Advanced System Management<br />
+asmmenu ... Advanced System Management
 cpsysplan ... kopirovani sysplanu\\
 chhmc -c xntp -s enable ... povoli NTP sluzbu\\
 chhmc -c xntp -s add myserver.ntp.com ... nastavi ntp server\\
@@ -93,25 +91,25 @@ chsyspwd -M MSYST1 -t access --passwd --newpasswd noveheslo ... zmeni pristupove
 chsvcevent -o closeall ... zavre na HMC vsechny udalosti\\
 chsvcevent -p 85 -h MOPB4HMC-21 -o close ... zavre udalos 85\\
 deploysysplan -f SYSTEM.sysplan -M SYSTEM ... Nacte sysplan ze soyboru a prekonfiguruje P-System SYSTEM\\
-hmcshutdown -t 0 -r ... okamzity reboot HMC<br />
-lshmc -v ... ukaze verzi HMC<br />
-lshmc -r ... ukaze aknualni "remote settings"<br />
-lshmc -n ... Vypis sitoveho a vzdaleneho nastaveni HMC<br />
-lshmcusr ... Lists the property (name, role and description) of HMC user(s).<br />
-lslparutil<br />
-lsled -r sa -t phys -m MSYST1 ... ukaze stave vystrazneho svetla<br />
-lsrefcode ... Reference Code History<br />
-lscod ... Capacity on Demand<br />
-lsdump<br />
-lslic ... ukaze firmware - Licensed Internal Code<br />
+hmcshutdown -t 0 -r ... okamzity reboot HMC
+lshmc -v ... ukaze verzi HMC
+lshmc -r ... ukaze aknualni "remote settings"
+lshmc -n ... Vypis sitoveho a vzdaleneho nastaveni HMC
+lshmcusr ... Lists the property (name, role and description) of HMC user(s).
+lslparutil
+lsled -r sa -t phys -m MSYST1 ... ukaze stave vystrazneho svetla
+lsrefcode ... Reference Code History
+lscod ... Capacity on Demand
+lsdump
+lslic ... ukaze firmware - Licensed Internal Code
 lslic -M MSYST1 -t disk ... ukaze nainstalovany firmware a firmware, ktery je na disku k dispozici v adresari /opt/ccfw/data\\
 lslic -m 9133-55A-SN65D29DG-ICISTMP -t sys -r ftp -h 192.134.197.57 -u USERID --passwd PASSWORD -d /DIRECTORY ... ukaze aktualni FW, a jaky FW je k dispozici pres FTP\\
 lssvcevents ... ukaze udalosti spravovanych systemu\\
 lssvcevents -m USBSV3_B47-9117-MMA-10148DA -t hardware ... ukaze HW udalosti na manazovanem systemu\\
 lssvcevents -t hardware -d 30 --filter "status=Open" ... ukaze vsechny otevrene udalosti za poslednich 30 dni\\
-lssysconn -r all ... ukaze system resources connections - pripojene POWER servery vcetne parametu<br />
+lssysconn -r all ... ukaze system resources connections - pripojene POWER servery vcetne parametu
 lssysplan ... seznam sysplanu\\
-rnvi ... restricted-nvi - omezeny vi editor<br />
+rnvi ... restricted-nvi - omezeny vi editor
 bkprofdata -m MSYST1 -f /mnt/floppy/MyBackup .. zaloha profilu\\
 rstprofdata -m MSYST1 -f /var/hsc/profiles/SN/prof1 -l 1 ... kompletni obnaoveni profilu ze zalohy (l=2 backup priority, l=3 managed syst. priority)\\
 ls /var/hsc/profiles/SN/ ... seznam provilo na MSYST1 se seriovym cislem SN\\
@@ -123,11 +121,11 @@ chhmcusr -u hmcuser1 -t assign -o a -r resourcerole -v lpar_role ... prida doli 
 chhmcusr -u user -t passwd ... zmeni uzivatelovo heslo\\
 chsyspwd ... zmena hesla\\
 chsacfg, lssacfg ... meni Service Agent - upozornovani IBM o udalostech\\
-chsacfg -t email -o enable ... povoli odesilani mailu v pripade problemu<br />
-chsacfg -t email -o setsmtp -h 10.155.54.28 -p 25 ... nastavi smtp server a port<br />
-chsacfg -t email -o add -a czfrux@cz.ibm.com --events all ... nastavi emailovou adresu<br />
-lssacfg -t email ... ukaze nastaveni odesilani emailu<br />
-chsacfg -t email -o test -a all ... posle testovaci zpravu<br />
+chsacfg -t email -o enable ... povoli odesilani mailu v pripade problemu
+chsacfg -t email -o setsmtp -h 10.155.54.28 -p 25 ... nastavi smtp server a port
+chsacfg -t email -o add -a czfrux@cz.ibm.com --events all ... nastavi emailovou adresu
+lssacfg -t email ... ukaze nastaveni odesilani emailu
+chsacfg -t email -o test -a all ... posle testovaci zpravu
 chled -r sa -t phys -m MSYST1 -o off ... vypne vystrazne svetylko\\
 mkauthkeys --remove 'joe@somehost' ... smaze joe@somehost z authorized_keys2\\
 mksysplan -m SYSTEM -f SYSTEM.sysplan ... udela sysplan (soubor s nastavenim) P-Systemu SYSTEM\\
@@ -151,9 +149,9 @@ chsysstate -m MSYST1 -r sys -o onsysprof -f profil1 ... Prepne z "Power off" sta
 chsysstate -m MSYST1 -r sys -o on ... Prepne z "Power off" stavu na standby/activated - spusti vsechny LPARy, jez maji nastaveny autostart\\
 chsysstate -m MSYST1 -r sys -o off (--immed)... Pred uzitim, nesmi jet LPARy. Po uziti se (rychle) prepne system do "Power off"\\
 chsysstate -m MSYST1 -r sysprof -n xyz -o on ... zapne systemovy profil xyz\\
-chsysstate -m MSYST1 -r lpar -o shutdown -n pzadm02 (--immed) ... (okamzite) vypnuti LPARU = shutdown -hF<br />
-chsysstate -m MSYST1 -r lpar -o on -n pzadm02 -f Normal ... zapnuti LPARu s profilem Normal<br />
-chsysstate -m MSYST1 -r lpar -o shutdown -n frmpqdw00srb2xm --restart (--immed) ... reboot = shutdown -r(F)<br />
+chsysstate -m MSYST1 -r lpar -o shutdown -n pzadm02 (--immed) ... (okamzite) vypnuti LPARU = shutdown -hF
+chsysstate -m MSYST1 -r lpar -o on -n pzadm02 -f Normal ... zapnuti LPARu s profilem Normal
+chsysstate -m MSYST1 -r lpar -o shutdown -n frmpqdw00srb2xm --restart (--immed) ... reboot = shutdown -r(F)
 chsysstate -m MSYST1 -r lpar -o dumprestart { -n Name | --id PartitionID } ... udela dump a pote restart LPARu\\
 lshwres -m MSYST1 -r mem --level syst ... podrobne informace o pameti v systemu MSTST1\\
 lshwres -m MSYST1 -r proc --level syst ... podrobne informace o procesorech\\
@@ -162,21 +160,21 @@ lshwres -m HJ4P550B2 -r io --rsubtype slot -F lpar_name,phys_loc,drc_index,descr
 lshwres -m MSYST1 -r virtualio --rsubtype scsi ... vypis virtualnich IO zarizeni\\
 lshwres -m MSYST1 -r virtualio --rsubtype eth --level sys ... vypis virtualnich sitovych adapteru\\
 lshwres -m MSYST1 -r virtualio --rsubtype eth --level lpar ... vypis virtualnich sitovych adapteru pro jednotlive lpary\\
-lssyscfg -r sys -F name,state --header ... ukaze prehled spravovanych POWER systemu a jejich stav<br />
-lssyscfg -m MSYST1 -r lpar -F name,state --header ... ukaze prehled spravovanych lparu a jejich stav<br />
+lssyscfg -r sys -F name,state --header ... ukaze prehled spravovanych POWER systemu a jejich stav
+lssyscfg -m MSYST1 -r lpar -F name,state --header ... ukaze prehled spravovanych lparu a jejich stav
 lssyscfg -m MSYST1 -r sys -F active_lpar_share_idle_procs_capagle ... ukaze vsechny LPARy na MSYST1 a zda mohou poskytovat nevyuzity vyhraneny procesor\\
 
 
 ===informace o LPARech===
-lscod -m MSYST1 -t hist ... historie LPARu<br />
-lssyscfg -r sys -F name,type_model,ipaddr,state --header ... ukaze prehled spravovanych POWER systemu, IP, a jejich stav<br />
+lscod -m MSYST1 -t hist ... historie LPARu
+lssyscfg -r sys -F name,type_model,ipaddr,state --header ... ukaze prehled spravovanych POWER systemu, IP, a jejich stav
 lssyscfg -m MSYST1 -r lpar ... ukaze prehled LPARU ve spravovanem systemu MSYST1\\
 lssyscfg -m MSYST1 -r lpar -F lpar_name,state ... ukaze stav lparu na MSYST1\\
 lssyscfg -m MSYST1 -r prof --filter lpar_names=lpar2 ... ukaze prehled profilu oddilu ve spravovanem systemu MSYST1\\
 lssyscfg -m MSYST1 -r prof -F name,lpar_name,io_slots ... ukaze seznam profilu a prirazene karty\\
 lssyscfg -r sysprof ... ukaze prehled systemovych profilu\\
-lssyscfg -m MSYST1 -r proc --filter "lpar_name=LEF7LPAR2-SINITC3" ... ukaze prirazeni procesoru danemu lparu<br />
-lspartition -dlpar ... seznam LPARu, ktere podporuji DLPAR (dynamic lpar), ukaze status LPARu, ktere hlasi RMC (jestli je navazano spojeni)<br />
+lssyscfg -m MSYST1 -r proc --filter "lpar_name=LEF7LPAR2-SINITC3" ... ukaze prirazeni procesoru danemu lparu
+lspartition -dlpar ... seznam LPARu, ktere podporuji DLPAR (dynamic lpar), ukaze status LPARu, ktere hlasi RMC (jestli je navazano spojeni)
 lshwres -m MSYST1 -r proc -sys lpar ... nastaveni procesoru pro lpary\\
 lshwres -m MSYST1 -r proc --level lpar -F lpar_name,run_procs --header ... ukaze aktualni pocet virtualnich procesoru pro lpary\\
 lshwres -m MSYST1 -r proc --level lpar -F lpar_name,curr_proc_units ... ukaze aktualni pocet vyuzivanych procesoru pro lpary\\
@@ -187,8 +185,8 @@ chhwres -m MSYST -r proc -id 1 -r prof -i "pend_sharing_mode=keep_idle_procs|sha
 chsyscfg ... meni lpary, profil lparu, ci systemove profily\\
 chsyscfg -r {lpar | prof | sys | sysprof | frame} {-m managed-system | -e managed-frame} {-f configuration-file | -i "configuration-data"} ... zmeni parametry "configuration-data" nebo configuration-file na managed-system, ci managed-frame u lparu, profilu, systemovem profilu, atd.\\
 chsyscfg -m MSYST1 -r sys -i "new_name=sys1,power_off_policy=1" ... Zmeni power-off politiku na zpravovanem systemu 9406-570*89320051\\
-chsyscfg -m MSTST1 -r prof -i "name=Normal,lpar_name=LEF6LPAR5,proc_mode=shared,min_proc_units=1.0,desired_proc_units=2.0,max_proc_units=4.0,min_procs=1,desired_procs=2,max_procs=4,sharing_mode=cap,uncap_weight=0"<br />
-chsyscfg -m MSTST1 -r prof -i "name=Normal,lpar_name=LEF6LPAR5,min_mem=4096,desired_mem=8192,max_mem=12288" ... zmeni profil normal u lparu LEF6LPAR5<br />
+chsyscfg -m MSTST1 -r prof -i "name=Normal,lpar_name=LEF6LPAR5,proc_mode=shared,min_proc_units=1.0,desired_proc_units=2.0,max_proc_units=4.0,min_procs=1,desired_procs=2,max_procs=4,sharing_mode=cap,uncap_weight=0"
+chsyscfg -m MSTST1 -r prof -i "name=Normal,lpar_name=LEF6LPAR5,min_mem=4096,desired_mem=8192,max_mem=12288" ... zmeni profil normal u lparu LEF6LPAR5
 chsyscfg -r prof -m HJ4P550B2 -i "name=normal,lpar_name=HJ4MESB201,io_slots+=2103000B/none/1" ... prida slot 2103000B do provilu\\
 mksyscfg ... vytvari nove lpary, profil lparu, ci systemove profily\\
 mksyscfg -m MSYST -r {lpar | prof | sysprof} -i "parametry" -f file ... vytvori lpar,profil,systemovy profil na serveru SERVER s paramery "paramery" nebo ze souboru file\\
@@ -215,7 +213,7 @@ chhwred -m MSYST1 -r procpool -o s -p LPAR1 -a "shared_proc_pool_name=Production
 chhwred -m MSYST1 -r procpool -o s -p LPAR1 -a "shared_proc_pool_name=DefaultPool" ... vyrazeni LPAR1 z procesorove skupiny, kde byl\\
 chhwred -m MSYST1 -r procpool -o s --poolid 1 -a "new_name=Production,max_pool_proc_units=0,reserved_pool_proc_units=0" .. zruseni procesorove skupiny\\
 lshwres -m MSYST1 -r io --rsubtype {unit | bus | slot | iopool | taggedio} ... ukaze fyzicky hardware na spravovanem systemu managed-system\\
-lshwres -m MSYST1 -r io --rsubtype slot -F description,unit_phys_loc,bus_id,phys_loc,drc_name,lpar_id,drc_index --header ... ukaze hardwarove resources - sloty<br />
+lshwres -m MSYST1 -r io --rsubtype slot -F description,unit_phys_loc,bus_id,phys_loc,drc_name,lpar_id,drc_index --header ... ukaze hardwarove resources - sloty
 lshwres -m MSYST1 -r virtualio --rsubtype {eth | hsl | virtualopti | scsi | serial | slot} ... ukaze virtualni zarizeni na spravovanem systemu\\
 lshwres -m MSYST1 -r mem --level {lpar | sys} ... ukaze statistiku pameti na systemu, ci lparu\\
 lshwres -m MSYST1 -r proc --level {lpar | pool | sys} ... ukaze nastaveni procesoru\\
@@ -247,7 +245,6 @@ lshwres -r virtualio --rsubtype scsi -m sys1 ... seznam scsi virtualnich zarizen
 
 
 
-<a name="vios|]]
 =====VIO server - Virtual I/O server=====
 [[https://www.ibm.com/developerworks/community/wikis/home?lang=en#!/wiki/Power%20Systems/page/VIOS%20Advisor|VIOS advisor]] ... VIOS Performance advisor (prikaz part)\\
 
@@ -255,7 +252,7 @@ lsdev, mkdev, rmdev, entstat, atd. jsou pouzitelne z padmina stejne jako z roota
 
 installios ... spusti instalaci VIOS z HMC, nelze z IVM manazovanych systemu\\
 \\
-oem_setup_env ... pod padmin prepne na root uzivatele<br />
+oem_setup_env ... pod padmin prepne na root uzivatele
 cfgassist ... konfiguracni agent jako smitty - nastavuje pod padminem cas, hesla, bezpecnost, TPC/IP, update\\
 chdev -dev en3 -attr netaddr=10.0.0.5 netmask=266.0.0.0 state=up ... nastavi dalsi sitovou kartu a adresu\\
 chdev -dev vscsi0 -attr vscsi_path_to=30 -perm ... nastavi parametry vscsi0
@@ -272,20 +269,20 @@ startnetsvc ... spusti sitovou sluzbu, napr ssh, ldap, telnet\\
 stopnetsvc ... zastavi sitovou sluzbu, napr ssh, ldap, telnet\\
 viosecure ... meneni bezpecnosti VIO serveru\\
 viostat ... ukaze statistiky vytizeni CPU a I/O operaci na disky\\
-Pro spravu lze vyuzit WebSM menu (properties -> virtual IO Adapter ...)<br />
+Pro spravu lze vyuzit WebSM menu (properties -> virtual IO Adapter ...)
 
 ===Infoformace o zarizenich===
-lsdev -slots ... (padmin) seznam virtualnic slotu (konvence <20 pro sitove karty, >20 pro harddisky)<br />
+lsdev -slots ... (padmin) seznam virtualnic slotu (konvence <20 pro sitove karty, >20 pro harddisky)
 lsdev -virtual ... ukaze vsechny virtualni zarizeni - LPARu\\
 lsdev -vpd ... ukaze informace o platvorme - procesory, sbernice, disky - neco jako prtconf\\
 lsdev -dev vhost2 ... vylistuje konkretni zarizeni - sbernici vhost2\\
 lsdev -dev hdisk2 -vpd ... vylistuje konkretni zarizeni - hdisk2, vcetne informaci o adrese atd (vitalni informace)\\
-lsdev -type adapter|grep en ... seznam sitovych karet<br />
+lsdev -type adapter|grep en ... seznam sitovych karet
 lsdev -slots ... ukaze virtualni sloty LPARu (vhost)\\
 lsmap ... vypis zavislosti mapovani mezi virtualnimi a fyzickymi zarizenimi\\
-lsmap -vadapter vhost0 ... vypis virtualniho adapteru a vsech jeho zarizeni (vSCSI servru), znaceni: typ.model.S/N.cislo_lparu.slot<br />
-lsmap -all | grep vhost ... vypise virtualni masiny<br />
-lsmap -all | grep -p hdisk30 ... uukaze virtualni disk k disku hdisk30<br />
+lsmap -vadapter vhost0 ... vypis virtualniho adapteru a vsech jeho zarizeni (vSCSI servru), znaceni: typ.model.S/N.cislo_lparu.slot
+lsmap -all | grep vhost ... vypise virtualni masiny
+lsmap -all | grep -p hdisk30 ... uukaze virtualni disk k disku hdisk30
 lsmap -all -net ... ukaze definovane virtualni VLANy\\
 lsrep ... vypis repozitare "storage volume group"
 lsvopt ... seznam virtualnich CD/DVD mechanik\\
@@ -294,19 +291,19 @@ lshwres -m MSYST1 -r hea --rsubtype phys --level sys ... ukaze vyzicke HEA adapr
 lshwres -m MSYST1 -r hea --rsubtype logical --level sys ... ukaze logicke HEA adaptery\\
 lshwres -m MSYST1 -r hea --rsubtype logical --level port --filter "lpar_name=LPAR" ... ukaze prirazene logicke HEA porty prirazene lparu LPAR\\
 lshwres -m MSYST1 -r io --rsubtype slot ... ukaze I/O sloty\\
-oem_setup_env; fget_config -Av ... ukaze ktery disk je z ktere storage (darX)<br />
+oem_setup_env; fget_config -Av ... ukaze ktery disk je z ktere storage (darX)
 
 ===Upgrade vios pack===
-updateios -dev /mnt/lpp_source/vios14_fixpack92_lpp -install -accept<br />
-reboot<br />
-ioslevel ... Napise verzi VIO<br />
+updateios -dev /mnt/lpp_source/vios14_fixpack92_lpp -install -accept
+reboot
+ioslevel ... Napise verzi VIO
 
 ===VIOs backup/restore===
-backupios -file /mnt ... vytvori tar soubor obsahujici mksysb a jine<br />
-backupios -file /mnt/VIOS1_newP5_B2_220308.mksysb -mksysb ... vytvori jen mksysb soubor<br />
+backupios -file /mnt ... vytvori tar soubor obsahujici mksysb a jine
+backupios -file /mnt/VIOS1_newP5_B2_220308.mksysb -mksysb ... vytvori jen mksysb soubor
 
 ===Vytvoreni virtualnich zarizeni pro logicke oddily - SEA===
-mkvdev -sea ent0 -vadapter ent10 -default ent10 -defaultid 101 -attr ha_mode=auto ... vytvori z fyzicke sitove karty ent0 virtualni sitovou kartu ent10, PVID=101 (vlan).<br />
+mkvdev -sea ent0 -vadapter ent10 -default ent10 -defaultid 101 -attr ha_mode=auto ... vytvori z fyzicke sitove karty ent0 virtualni sitovou kartu ent10, PVID=101 (vlan).
 mkvdev -sea ent0 -vadapter ent1 ent2 -default ent1 defaultid 2 ... vytvori SEA (Shared Ethernet Adapter) ze sitove karty ent0, virtualni karty ent1, ent2 (muze jich byt az 16)\\
 mkdev -lnagg ent0 ent1 ... vytvori EtherCannel - (link aggregation) ze sitovych adapteru ent0 a ent1\\
 
@@ -322,9 +319,9 @@ mkvdev vdev hdisk1 vadapter vhost1 ... vytvori virtualni (bootovatelny) disk
 mkvdev vdev hdisk2 vadapter vhost0 dev client_disk1 ... vytvori virtualni disk s nazvem client_disk1\\
 
 ===Vytvoreni virtualnich zarizeni pro logicke oddily - VSCSI - disk z LV===
-mkvg -f -vg vioserver1VG hdisk1 hdisk5 ... vytvori VG vioserver1VG (konvence: VIOS_nameVG) z hdisk1 a hdisk5<br />
-extendvg vioservr1VG hdisk2 hdisk 6 ... rozsiri VG o hdisk2 a hdisk6<br />
-mklv -lv LPAR1hd1LV vioserver1VG 30G hdisk0 ... vytvori LV LPAR1hd1LV v VG vioserver1VG na hdisk0 (konvence:LPAR_nameHD_nameLV)<br />
+mkvg -f -vg vioserver1VG hdisk1 hdisk5 ... vytvori VG vioserver1VG (konvence: VIOS_nameVG) z hdisk1 a hdisk5
+extendvg vioservr1VG hdisk2 hdisk 6 ... rozsiri VG o hdisk2 a hdisk6
+mklv -lv LPAR1hd1LV vioserver1VG 30G hdisk0 ... vytvori LV LPAR1hd1LV v VG vioserver1VG na hdisk0 (konvence:LPAR_nameHD_nameLV)
 mkvdev -vdev LPAR1hd1LV vadapter vhost0 [-dev vtLPAR1hd1]... vytvori virtualni disk z LV LPAR1hd1LV [nazev zarizeni vtLPAR1hd1]\\
 
 ===Vytvoreni virtualnich zarizeni pro logicke oddily - VSCSI - disk ze souboru===
@@ -338,31 +335,31 @@ rmdev -dev vhost0 ... zrusi definici virtualniho SCSI adapteru host0\\
 rmdev -dev vhost0 -recursive ... smaze vhost0 vcetne vsech dcerinych zarizeni\\
 
 ===nastavovani parametru na klientovi (na LPARu)===
-chdev -dev fscsi0 -attr fc_err_recov=fast_fail dyntrk=yes -perm ... nastavi pernamentni zmenu (po vypnuti/zapnuti lparu) pro dynamic_tracking (paralelni zapisovani na disk) a fast_failover<br />
-chpath -l hdisk4 -p vscsi5 -a priority=2 ... na klientovi se nastavi priorita, s jakou se budou sdilet disky mezi vio servery<br />
-chdev -l hdisk5 -a hcheck_interval=20 -P ... nastavi interval zdravotnich kontrol<br />
-lasttr -El hdisk5 | grep hcheck_interval ... kontrola, zda je nastaven Health Check interval = 20<br />
-lasttr -El ent0 | grep media_speed ... kontrola, zda je nastavena rychlost na 1000_Full_Duplex<br />
-lsattr -El fscsi5|grep fc_err_recov ... kontrola, zda je nastaveno fast_fail<br />
-lsattr -El fscsi5|grep dyntrk ... kontrola, zda je nastaveno Dynamic Tracking FC Devices yes<br />
-lspath -AHE =l hdiskx -p vscsi5 ... Ukaze prioritu<br />
+chdev -dev fscsi0 -attr fc_err_recov=fast_fail dyntrk=yes -perm ... nastavi pernamentni zmenu (po vypnuti/zapnuti lparu) pro dynamic_tracking (paralelni zapisovani na disk) a fast_failover
+chpath -l hdisk4 -p vscsi5 -a priority=2 ... na klientovi se nastavi priorita, s jakou se budou sdilet disky mezi vio servery
+chdev -l hdisk5 -a hcheck_interval=20 -P ... nastavi interval zdravotnich kontrol
+lasttr -El hdisk5 | grep hcheck_interval ... kontrola, zda je nastaven Health Check interval = 20
+lasttr -El ent0 | grep media_speed ... kontrola, zda je nastavena rychlost na 1000_Full_Duplex
+lsattr -El fscsi5|grep fc_err_recov ... kontrola, zda je nastaveno fast_fail
+lsattr -El fscsi5|grep dyntrk ... kontrola, zda je nastaveno Dynamic Tracking FC Devices yes
+lspath -AHE =l hdiskx -p vscsi5 ... Ukaze prioritu
 
 ===Konvence===
-Nazev node (LPAR) nazevSERVERU_budova_serioveCISLO, napriklad Vio1_b2_db4ef<br />
-slot <20 ... eth karta<br />
-slot >20 ... hdisk, sudy na vio1, lichy na vio2, prvni hdisk, potom swap<br />
-vioServerVG ... nazev VG<br />
-[partitionName][hdX]LV ... nazev LV (saxsap15phd0LV)<br />
+Nazev node (LPAR) nazevSERVERU_budova_serioveCISLO, napriklad Vio1_b2_db4ef
+slot <20 ... eth karta
+slot >20 ... hdisk, sudy na vio1, lichy na vio2, prvni hdisk, potom swap
+vioServerVG ... nazev VG
+[partitionName][hdX]LV ... nazev LV (saxsap15phd0LV)
 
 ===VIO disky pro HACMP===
-Na VIO serverech:<br />
-chdev -dev hdisk1 -attr reserve_policy=no_reserve ... disk nebude v reserved modu (pouziti Enhanced Concurent Mode)<br />
-Na klientech:<br />
-chdev -l hidsk1 -a hcheck_interval=20 -a hcheck_mode=nonactive -P ... nastaveni parametru<br />
+Na VIO serverech:
+chdev -dev hdisk1 -attr reserve_policy=no_reserve ... disk nebude v reserved modu (pouziti Enhanced Concurent Mode)
+Na klientech:
+chdev -l hidsk1 -a hcheck_interval=20 -a hcheck_mode=nonactive -P ... nastaveni parametru
 
 ===Disky pri 2 VIOS, nebo pri 2 cestach===
 chdev -dev fscsi0 -attr fc_err_recov=fast_fail dytrynk=yes -perm
-chdev -dev hdisk1 -attr reserver_policy=no_reserve<br.
+chdev -dev hdisk1 -attr reserver_policy=no_reserve
 
 ===SEA a etherchannel cahnnel===
 mkdev -sea -ent0 -vadapter ent2 -defult ent2 -defaultid 1 -attr ha_mode=auto ctl_chan=ent3 netaddr=9.3.4.1 largesend=1 ... Nadefinuje SEA s failover, komunikacni kanal pres ent3\\

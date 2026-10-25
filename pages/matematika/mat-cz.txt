@@ -6,15 +6,15 @@
 
 
 
-  Odkazy na "internetové kihovničky": Na následujících stránkách se vyskytuje hodně odkazů na učební matematické texty:<br/>
-  [[http://www.fimuni.org/index.php|Studijni materialy na FI.MUNI.CZ]]<br/>
-  [[http://www.fi.muni.cz/zkusto/|Projekt Zkusto]] na FI.MUNI.CZ<br/>
-  [[http://adela.karlin.mff.cuni.cz/elib/|El. knihovna na UK MFF]] - funguje jen castecne<br/>
-  [[http://www.kma.zcu.cz/main.php?DRC=./STRUCTURE/05_ebooks/02_Skripta/&DRL=CZ&DROF=0|Stud. materialy z FAV ZCU]]<br/>
-  [[http://math.fce.vutbr.cz/vyuka/matematika/|Vyukove materialy]] na VUT Ustav matematiky a desk. geometrie<br/>
-  [[http://mat.fsv.cvut.cz/skripta/|Vyukove materialy]] na CVUT, Ustav matematiky na stavebni fakulte<br/>
-  [[http://mat.fsv.cvut.cz/skripta/|Studijní materialy]] Slezské univerzitě (matematický ústav)<br/>
-  [[http://home.pf.jcu.cz/~novakp08/Matematika/|Matematická skripta a texty na českém webu]]<br/>
+  Odkazy na "internetové kihovničky": Na následujících stránkách se vyskytuje hodně odkazů na učební matematické texty:
+  [[http://www.fimuni.org/index.php|Studijni materialy na FI.MUNI.CZ]]
+  [[http://www.fi.muni.cz/zkusto/|Projekt Zkusto]] na FI.MUNI.CZ
+  [[http://adela.karlin.mff.cuni.cz/elib/|El. knihovna na UK MFF]] - funguje jen castecne
+  [[http://www.kma.zcu.cz/main.php?DRC=./STRUCTURE/05_ebooks/02_Skripta/&DRL=CZ&DROF=0|Stud. materialy z FAV ZCU]]
+  [[http://math.fce.vutbr.cz/vyuka/matematika/|Vyukove materialy]] na VUT Ustav matematiky a desk. geometrie
+  [[http://mat.fsv.cvut.cz/skripta/|Vyukove materialy]] na CVUT, Ustav matematiky na stavebni fakulte
+  [[http://mat.fsv.cvut.cz/skripta/|Studijní materialy]] Slezské univerzitě (matematický ústav)
+  [[http://home.pf.jcu.cz/~novakp08/Matematika/|Matematická skripta a texty na českém webu]]
 
 
 
@@ -25,38 +25,38 @@
 
 [[http://www.math.muni.cz/~slovak/#1|prof. RNDr. Slovák]]:
 [[ftp://www.math.muni.cz/pub/math/people/Slovak/lectures/linearni.algebra/la.ps|Lineární algebra]], [[http://www.math.muni.cz/~slovak/Vyuka/la-priklady.ps|řešené příklady z lineární algebry]], [[ftp://www.math.muni.cz/pub/math/people/Slovak/lectures/algebraicka.geometrie/ag.ps|Elementární algebraická geometrie]], geometricke algoritmy,
-[[http://www.math.muni.cz/~slovak/Vyuka/gs.ps|geometrické struktury na varietách]], [[ftp://www.math.muni.cz/pub/math/people/Slovak/lectures/seminar.lie/lie.ps|reprezentace polojednoduchých Lieových algeber]]<br/>
+[[http://www.math.muni.cz/~slovak/Vyuka/gs.ps|geometrické struktury na varietách]], [[ftp://www.math.muni.cz/pub/math/people/Slovak/lectures/seminar.lie/lie.ps|reprezentace polojednoduchých Lieových algeber]]
 
 [[http://www.math.muni.cz/~rosicky/#Teaching|prof. RNDr. Rosicky]]:
-Matematická logika, Teorie mnozin, Základy matematiky<br/>
+Matematická logika, Teorie mnozin, Základy matematiky
 
 [[ftp://www.math.muni.cz/pub/math/people/Paseka/lectures/|doc. RNDr. Paseka]]:
 Kodovani, Kryptografie, Matematicka ekonomie, Geometricke modelovani,
-Pojmova analyza, Linearni algebra<br/>
+Pojmova analyza, Linearni algebra
 
 [[ftp://www.math.muni.cz/pub/math/people/Niederle/info/index.html|doc. RNDr. Niederle]]:
-Financni matematika<br/>
+Financni matematika
 
 [[http://www.math.muni.cz/~polak/|doc. RNDr. Polak]]:
-Teorie her, pologrupy<br/>
+Teorie her, pologrupy
 
-[[http://www.math.muni.cz/~cadek/|doc. RNDr. Cadek]]: Uvod do algebraicke topologie (e)<br/>
+[[http://www.math.muni.cz/~cadek/|doc. RNDr. Cadek]]: Uvod do algebraicke topologie (e)
 
 [[http://www.math.muni.cz/~janyska/skripta.html|doc. RNDr. Janyska]]:
-Afinni zobrazeni, Kruhove inverze<br/>
+Afinni zobrazeni, Kruhove inverze
 
 [[http://www.math.muni.cz/~kucera/|doc. RNDr. Kucera]]:
-Algebra II (Svazy, univerzalni algebra), Algoritmy teorie cisel <br/>
+Algebra II (Svazy, univerzalni algebra), Algoritmy teorie cisel 
 
 [[http://www.math.muni.cz/~dosla/|doc. RNDr. Dosla]]:
-Diferenční rovnice ve středoškolské matematice<br/>
+Diferenční rovnice ve středoškolské matematice
 
-Text k prednasce Prof. Dosleho [[dat/mat-pr.ps|matematicke programovani]]<br/>
+Text k prednasce Prof. Dosleho [[dat/mat-pr.ps|matematicke programovani]]
 
 [[http://www.math.muni.cz/~pospisil/vyuka.html|RNDr. Pospisil]]:
 Diferenciální a integrální počet funkcí jedné proměnné,
 Diferenciální počet funkcí více proměnných a diferenciální rovnice,
-Funkcionální analýza, Rovnice matematické fyziky<br/>
+Funkcionální analýza, Rovnice matematické fyziky
 
 [[http://www.math.muni.cz/~vesely/educ_cz.html|Doc. RNDr. Vesely]]:
 Numericke metody, Casove rady, Stochasticke procesy
@@ -68,44 +68,44 @@ Numericke metody, Casove rady, Stochasticke procesy
 
 
 
-[[http://adela.karlin.mff.cuni.cz/~jbures/|Doc. RNDr. Bureš Jarolím DrSc.]]: Lineární algebra<br/>
+[[http://adela.karlin.mff.cuni.cz/~jbures/|Doc. RNDr. Bureš Jarolím DrSc.]]: Lineární algebra
 
-[[http://adela.karlin.mff.cuni.cz/~drapal/|Doc. RNDr. Aleš Mrápal DrSc.]]: Teorie čísel a RSA, algebra, komutaticní okruhy<br/>
+[[http://adela.karlin.mff.cuni.cz/~drapal/|Doc. RNDr. Aleš Mrápal DrSc.]]: Teorie čísel a RSA, algebra, komutaticní okruhy
 
-[[http://www.kolej.mff.cuni.cz/~lmotm275/skripta/|Motl Luboš PhD.]], Miloš Zahradnik - lineární algebra, cviceni<br/>
+[[http://www.kolej.mff.cuni.cz/~lmotm275/skripta/|Motl Luboš PhD.]], Miloš Zahradnik - lineární algebra, cviceni
 
-[[http://www.karlin.mff.cuni.cz/~jelinek/|RNDr. Jelinek]]: Teorie funkci komplexni promenne<br/>
+[[http://www.karlin.mff.cuni.cz/~jelinek/|RNDr. Jelinek]]: Teorie funkci komplexni promenne
 
-[[http://adela.karlin.mff.cuni.cz/~kalenda/|RNDr. Kalenda Ondrej PhD.]] cviceni z matematicke analyzy a diferencialnich rovnic, texty k mat. analyze<br/>
+[[http://adela.karlin.mff.cuni.cz/~kalenda/|RNDr. Kalenda Ondrej PhD.]] cviceni z matematicke analyzy a diferencialnich rovnic, texty k mat. analyze
 
-[[http://adela.karlin.mff.cuni.cz/~malek/|Doc. RNDr. Málek Josef CSc.]]: matematická teorie pružnosti, matematika pro fyziky<br/>
+[[http://adela.karlin.mff.cuni.cz/~malek/|Doc. RNDr. Málek Josef CSc.]]: matematická teorie pružnosti, matematika pro fyziky
 
-[[http://adela.karlin.mff.cuni.cz/~maly/|Prof. RNDr. Maly DrSc.]]: Teorie miry a integralu, Teorie derivace a integralu pro pokrocile, Variacni pocet - rozdelane<br/>
+[[http://adela.karlin.mff.cuni.cz/~maly/|Prof. RNDr. Maly DrSc.]]: Teorie miry a integralu, Teorie derivace a integralu pro pokrocile, Variacni pocet - rozdelane
 
-[[http://adela.karlin.mff.cuni.cz/~netuka/|Prof. RNDr. Netuka DrSc.]]: Teorie potencialu, teorie míry a integrál<br/>
+[[http://adela.karlin.mff.cuni.cz/~netuka/|Prof. RNDr. Netuka DrSc.]]: Teorie potencialu, teorie míry a integrál
 
-[[http://artax.karlin.mff.cuni.cz/~poull9am|Mgr. Poul Lukáš]] Nejake texty k ODR, topoligii... (nefungují odkazy)<br/>
+[[http://artax.karlin.mff.cuni.cz/~poull9am|Mgr. Poul Lukáš]] Nejake texty k ODR, topoligii... (nefungují odkazy)
 
-[[http://adela.karlin.mff.cuni.cz/~pick/|Doc. RNDr. Pick Luboš, DSc.]] cviceni z matematicke analyzy a diferencialnich rovnic, texty k mat. analyze<br/>
+[[http://adela.karlin.mff.cuni.cz/~pick/|Doc. RNDr. Pick Luboš, DSc.]] cviceni z matematicke analyzy a diferencialnich rovnic, texty k mat. analyze
 
-[[http://adela.karlin.mff.cuni.cz/~pokorny/|Mgr. Pokorný Milan PhD.]]: matematika pro fyziky<br/>
+[[http://adela.karlin.mff.cuni.cz/~pokorny/|Mgr. Pokorný Milan PhD.]]: matematika pro fyziky
 
-[[http://adela.karlin.mff.cuni.cz/~rataj/|Doc. RNDr. Rataj Jan CSc.]]: bodové procesy<br/>
+[[http://adela.karlin.mff.cuni.cz/~rataj/|Doc. RNDr. Rataj Jan CSc.]]: bodové procesy
 
-[[http://adela.karlin.mff.cuni.cz/~ruzicka/|Mgr. Pick Luboš, PhD.]] kombinatoricka teorie grup, algebra, linearni algebra<br/>
+[[http://adela.karlin.mff.cuni.cz/~ruzicka/|Mgr. Pick Luboš, PhD.]] kombinatoricka teorie grup, algebra, linearni algebra
 
-[[http://adela.karlin.mff.cuni.cz/~smid/|Mgr. Šmíd Dalibor, PhD.]] sbirka na bilineární formy do lineární algebry<br/>
+[[http://adela.karlin.mff.cuni.cz/~smid/|Mgr. Šmíd Dalibor, PhD.]] sbirka na bilineární formy do lineární algebry
 
 [[http://adela.karlin.mff.cuni.cz/~soucek/|prof. RNDr. Vladimir Soucek DrSc.]]: Diferencialni geometrie křivek a ploch, Lineární algebra, Lieovy grupy, matematika pru fyziky, mat. analýza pro fyziky
 
 
-[[http://adela.karlin.mff.cuni.cz/~somberg/|Mgr. Somberg Petr PhD.]]: Algebraicka geometrie, Elipticke krivky, Algebraicka topologie, Integralni topologie, reprezentacni teorie, linearni algebra, mat. analyza<br/>
+[[http://adela.karlin.mff.cuni.cz/~somberg/|Mgr. Somberg Petr PhD.]]: Algebraicka geometrie, Elipticke krivky, Algebraicka topologie, Integralni topologie, reprezentacni teorie, linearni algebra, mat. analyza
 
-[[http://adela.karlin.mff.cuni.cz/~tuma/|Doc. RNDr. Tůma Jiří DrSc.]]: Lineární algebra, algebra, metody šifrování<br/>
+[[http://adela.karlin.mff.cuni.cz/~tuma/|Doc. RNDr. Tůma Jiří DrSc.]]: Lineární algebra, algebra, metody šifrování
 
-[[http://adela.karlin.mff.cuni.cz/~jvesely/|Doc. RNDr. Veselý Jiří CSc.]]: Mat. analyza čtená podruhé, <br/>
+[[http://adela.karlin.mff.cuni.cz/~jvesely/|Doc. RNDr. Veselý Jiří CSc.]]: Mat. analyza čtená podruhé, 
 
-[[http://adela.karlin.mff.cuni.cz/~kvyb6672/|Výborný Karel]], Motl a kol.: Sbírka příkladů k lineární algebře, matematika pro fzyiky<br/>
+[[http://adela.karlin.mff.cuni.cz/~kvyb6672/|Výborný Karel]], Motl a kol.: Sbírka příkladů k lineární algebře, matematika pro fzyiky
 
 
 
@@ -114,11 +114,11 @@ Numericke metody, Casove rady, Stochasticke procesy
 
 
 
-[[http://www.math.cas.cz/%7Ekrajicek/|Krajicek Jan]] Geometric Model Theory <br/>
-[[http://www.math.cas.cz/%7Esochor/|Seidler Antonín]] Klasická matematická logika, Metamatematika teorií množin <br/>
-[[http://www.math.cas.cz/%7Eseidler/|Seidler Jan]] Stochasticke diferencialni rovnice <br/>
-[[http://www.math.cas.cz/%7Etvrdy/|Tvrdý Milan]] Teorie integrálu, Lineární okrajové úlohy <br/>
-[[http://www.math.cas.cz/%7Evanzur/|doc. RNDr. Vanžura Jiří, CSc.]] Matematická analýza <br/>
+[[http://www.math.cas.cz/%7Ekrajicek/|Krajicek Jan]] Geometric Model Theory 
+[[http://www.math.cas.cz/%7Esochor/|Seidler Antonín]] Klasická matematická logika, Metamatematika teorií množin 
+[[http://www.math.cas.cz/%7Eseidler/|Seidler Jan]] Stochasticke diferencialni rovnice 
+[[http://www.math.cas.cz/%7Etvrdy/|Tvrdý Milan]] Teorie integrálu, Lineární okrajové úlohy 
+[[http://www.math.cas.cz/%7Evanzur/|doc. RNDr. Vanžura Jiří, CSc.]] Matematická analýza 
 
 
 
@@ -127,11 +127,11 @@ Numericke metody, Casove rady, Stochasticke procesy
 
 
 
-[[http://home.tiscali.cz/~ca080987/FEI/|Spider na FEI VUT]] Sktipta Doc. RNDr. Jaromíra Baštince z lineární algebry<br/>
-[[http://www.matematika.webz.cz/home.htm|cifrikova matematika]] zakladni texty k algebre, analyze...<br/>
-[[http://cs.wikipedia.org/wiki/Kategorie:Matematika|wikipedia cz]] - &#269;eské vydání wikipedie<br/>
-[[http://www.seznam.cz/Veda-a-technika/Prirodni-a-technicke-vedy/Matematika/|seznam]] - veda/matematika - matematické odkazy ze seznamu<br/>
-A pro pocitani zertovnych prikaldu je pekne se podivat na [[http://mks.mff.cuni.cz/|Korespondencni seminar KAM MFF UK]]<br/>
+[[http://home.tiscali.cz/~ca080987/FEI/|Spider na FEI VUT]] Sktipta Doc. RNDr. Jaromíra Baštince z lineární algebry
+[[http://www.matematika.webz.cz/home.htm|cifrikova matematika]] zakladni texty k algebre, analyze...
+[[http://cs.wikipedia.org/wiki/Kategorie:Matematika|wikipedia cz]] - &#269;eské vydání wikipedie
+[[http://www.seznam.cz/Veda-a-technika/Prirodni-a-technicke-vedy/Matematika/|seznam]] - veda/matematika - matematické odkazy ze seznamu
+A pro pocitani zertovnych prikaldu je pekne se podivat na [[http://mks.mff.cuni.cz/|Korespondencni seminar KAM MFF UK]]
 
 
 

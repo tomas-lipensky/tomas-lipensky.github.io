@@ -5,11 +5,6 @@ podniku ci na internetu ci u obchodnich partneru, indexovat a kolektovat informa
 
 ### Interni odkazy
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Externi odkazy
 
 [Pekny popis WEX na DW](https://www.ibm.com/developerworks/community/blogs/IMRedbooks/entry/a_quick_view_of_ibm_infosphere_data_explore?lang=en)  

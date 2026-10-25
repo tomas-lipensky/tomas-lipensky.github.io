@@ -68,11 +68,9 @@
   <dd>[[http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179|Java programovani pro web - tutorial na linux zone]]</dd>
 </dl>
 
-<a name="dev-infrastruktura|
+
 ====Infrastruktura pro vyvoj produktu====
 [[https://developer.ibm.com/open/amalgam8/|Amalgam8]] - Opensource platforma - integruje a loadbalancuje mikrosluzby\\
 [[https://developer.ibm.com/open/apache-toree/|Apache Toree]] - prostrednik pro komunikaci s Apache Spark nabizejici API pro interaktivni komunikaci s vypoctama\\
 [[http://www.spark.tc/spark-kernel-architecture/?cm_mc_uid=41539605277314736978328&cm_mc_sid_50200000=1473833868|Apache Spark]] - rychly clusterovaci software pro large-scale zpracovani dat\\
-]]
-
    

@@ -1,17 +1,17 @@
 
 ======AIX - Sluzby======
 
-lssrc -a - list system resource center - list of services, which are on and off<br />
-refresh -s syslogd ... znovun nacte demona syslogd<br />
-startsrc -l lpd ... start service lpd<br />
-stopsrc -s syslogd ... stop service<br />
+lssrc -a - list system resource center - list of services, which are on and off
+refresh -s syslogd ... znovun nacte demona syslogd
+startsrc -l lpd ... start service lpd
+stopsrc -s syslogd ... stop service
 
 ===/etc/inittab===
 
-chitab ... zmeni zaznam v inittabu<br />
-mkitab ... vytvori zaznam v inittabu<br />
-rmitab ... smaze zaznam v inittabu<br />
-telinit n ... zmeni runlevel na cislo n<br />
+chitab ... zmeni zaznam v inittabu
+mkitab ... vytvori zaznam v inittabu
+rmitab ... smaze zaznam v inittabu
+telinit n ... zmeni runlevel na cislo n
 
 ===nfs===
 
@@ -19,23 +19,23 @@ startsrc -g nfs ... start nfs service\\
 lssrc -g nfs ... list nfs services\\
 stopsrc ... stop nfs services\\
 /etc/services (mountd) ... nastavi privilegovany port pro mountd\\
-mknfs ... make nfs - start nfs<br />
-rmnfs ... remove nfs - stop nfs<br />
-chnfs ... change nfs - change options of nfs<br />
-mknfsexp ... make nfs export<br />
-mknfsmnt ... make nfs mount<br />
+mknfs ... make nfs - start nfs
+rmnfs ... remove nfs - stop nfs
+chnfs ... change nfs - change options of nfs
+mknfsexp ... make nfs export
+mknfsmnt ... make nfs mount
 /usr/sbin/mknfsexp -d '/export/mksysb' '-B' -S 'sys' -t 'rw' -h '10.10.20.0/24' -c '10.10.20.0/24' -r '10.10.20.0/24' ... prida mountpoint do /etc/exports\\
 /etc/xtab ... FS, ktere jsou namountovane na klienty (ktere pouziva nfs.mountd)\\
 
 ===automounter===
 
-automount<br />
-stopsrc -s automount<br />
+automount
+stopsrc -s automount
 
 ===nis===
 
-chypdom - change nis domain<br />
-ypset<br />
+chypdom - change nis domain
+ypset
 
 ===ldap===
 
@@ -55,50 +55,50 @@ gsk7cmd -cert -list -db /usr/ldap/etc/clientkey.kdb -pw PASSWD ... vylistuje duv
 idsldapsearch -h gsnixldap1 -D "cn=SI4,cn=Clients,ou=unix,ou=SI4,dc=customers,dc=fr,dc=ibm,dc=com" -w ANTKaf4! -p 636 -Z -K /usr/ldap/etc/clientkey.kdb -P PASSWD -s sub  -b "" objectclass=* ... vylistuje data z ldap serveru\\
 mksecldap -c -h gsnixldap1,gsnixldap2 -p 389 -a "cn=SI4,cn=Clients,ou=unix,ou=SI4,dc=customers,dc=fr,dc=ibm,dc=com" -p PASSWD -d "cn=aixdata,ou=unix,ou=SI4,dc=customers,dc=fr,dc=ibm,dc=com" -t 60 -A ldap_auth ... zmeni nastaveni ldap klienta\\
 
-ibmslapd<br />
-mksecldap<br />
+ibmslapd
+mksecldap
 
 ===dhcp===
 
-startsrc -s hdcpcd<br />
+startsrc -s hdcpcd
 
 ===nim===
 
-lsnim ... (list of Network Installer Manager) vypise seznam definovanych objektu<br />
-nimclient ... klient nimu<br />
-nim ... master nimu<br />
-nimconfig ... nastaveni nim masteru<br />
+lsnim ... (list of Network Installer Manager) vypise seznam definovanych objektu
+nimclient ... klient nimu
+nim ... master nimu
+nimconfig ... nastaveni nim masteru
 
 ===Listener===
 
-lsnrctl start<br />
-lsnrctl stop<br />
-lsnrctl stat<br />
-ps eaf | grep LISTENER<br />
+lsnrctl start
+lsnrctl stop
+lsnrctl stat
+ps eaf | grep LISTENER
 
 ===Oracle===
 
-sqlplus / as sysdba<br />
-SQL> startup<br />
-sqlplus / as sysdba<br />
-SQL> shutdown<br />
-ps eaf|grep Ť ora_ ť<br />
-<br />
-sqlplus /as sysdba<br />
-SQL> select status, database_status from v$instance ;<br />
+sqlplus / as sysdba
+SQL> startup
+sqlplus / as sysdba
+SQL> shutdown
+ps eaf|grep Ť ora_ ť
+
+sqlplus /as sysdba
+SQL> select status, database_status from v$instance ;
 
 ===SAP===
 
 <h6>Start:</h6>
-startsap_argisdb1_00<br />
-startsap_argisas1_01<br />
+startsap_argisdb1_00
+startsap_argisas1_01
 <h6>Stop:</h6>
-stopsap_argisdb1_00<br />
-stopsap_argisas1_01<br />
+stopsap_argisdb1_00
+stopsap_argisas1_01
 <h6>Status:</h6>
-startsap check<br />
+startsap check
 <b>Nastaveni a umisteni: </b>
-/usr/sap/PS1 ... sap adresar<br />
+/usr/sap/PS1 ... sap adresar
 
 
 
@@ -106,50 +106,50 @@ startsap check<br />
 
 ===munin===
 
-Bezi na portu 4949<br />
+Bezi na portu 4949
 <h6>Start</h6>
-/munin/sbin/munin-node config /munin/etc/munin-node.conf<br />
+/munin/sbin/munin-node config /munin/etc/munin-node.conf
 <h6>Stop</h6>
-kill -9 $(ps -aef|grep munin|grep -v grep|awk '{print $2}')<br />
+kill -9 $(ps -aef|grep munin|grep -v grep|awk '{print $2}')
 <h6>informace o sluzbe</h6>
 homepage: [[http://munin.projects.linpro.no/|http://munin.projects.linpro.no/]]
 
 ===ESM===
 
 <h6>Start: </h6>
-/esm/esmrc start<br />
-/etc/rc.esm<br />
+/esm/esmrc start
+/etc/rc.esm
 <h6>Stop: </h6>
-/esm/esmrc stop<br />
+/esm/esmrc stop
 <h6>Status: </h6>
-/esm/esmrc status<br />
+/esm/esmrc status
 
 ===CWS===
 
-hmmon -GQs 1:0 ... informace o zdroji ?<br />
+hmmon -GQs 1:0 ... informace o zdroji ?
 
 ===audit===
 
 <h6>start:</h6>
-/usr/sbin/audit start<br />
+/usr/sbin/audit start
 <h6>stop:</h6>
-/usr/sbin/audit shutdown<br />
+/usr/sbin/audit shutdown
 <h6>status:</h6>
-ps -ef|grep auditbin<br />
+ps -ef|grep auditbin
 <h6>info<h6>
 audit query ... ukaze nastaveni\\
 /etc/security/audit/* ... konfigurace\\
-auditpr &lt; trail ... vypise systemove udalosti<br />
+auditpr &lt; trail ... vypise systemove udalosti
 auditselect -e "event == FILE_Write && date >= 05/03/99" trail | auditpr -h e,l,R,t,c,r,p,P,h,T -v ... vyselektuje jen eventy FILE_Write\\
 
 ===Proxy - squid===
 
 <h6>Start:</h6>
-echo "/usr/sbin/squid -D >/dev/console 2>&1" | at now<br />
+echo "/usr/sbin/squid -D >/dev/console 2>&1" | at now
 
 ===pcpmm - testovaci software na funkcnost stranek===
 
-/usr/lpp/pcpmm/instance/tecad/etc/pcpmmtecad start ... Spousti nejakou cast pcpmm - tecad_logfile<br />
+/usr/lpp/pcpmm/instance/tecad/etc/pcpmmtecad start ... Spousti nejakou cast pcpmm - tecad_logfile
 
 ===[[http://docstore.mik.ua/orelly/networking/puis/ch10_02.htm|accounting]]===
 

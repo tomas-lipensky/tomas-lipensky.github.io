@@ -1,6 +1,5 @@
 # PA-RISC
 
-<a name="boot|]]
 ### PA-RISC boot
 
 <h6>Boot proces na PA-RISC</h6>

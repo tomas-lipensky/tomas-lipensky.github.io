@@ -6,7 +6,6 @@
 
 SAP Community Network (SCN)
 
-<a name="produkty|]]
 ====Produkty====
 SAP BO BI (SAP BusinessObjects Business Intelligence platform) ... Business Inteligence produkt\\
 SAP BIW (Business Information Warehouse), pozdeji zkraceno SAP BW, pozdeji znamo jako "SAP BI" - soucast Netweaveru\\

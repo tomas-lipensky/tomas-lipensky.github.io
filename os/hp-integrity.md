@@ -1,6 +1,5 @@
 # Integrity
 
-<a name="boot|]]
 ### Integrity boot
 
 <h6>Boot proces na Integrity</h6>

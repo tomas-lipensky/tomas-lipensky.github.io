@@ -11,5 +11,5 @@
 ==ATMega:==
 
 
-[[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]<br/>
+[[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]
 

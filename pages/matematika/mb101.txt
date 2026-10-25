@@ -7,14 +7,14 @@
 
  
 
-   <b>Program cvičení</b>:<br/>
+   <b>Program cvičení</b>:
    13.9. - opakování ze střední školy: komplexní čísla, okruhy čísel, zbytkové třídy
  
 
 
  
 
-<b>Teorie</b> k předmětu [[http://is.muni.cz/predmety/uplny_vypis?fakulta=1433;obdobi=3082;kod=MB101|Matematika I]]:<br/>
+<b>Teorie</b> k předmětu [[http://is.muni.cz/predmety/uplny_vypis?fakulta=1433;obdobi=3082;kod=MB101|Matematika I]]:
 <li>Texty k predmetu [[http://www.math.muni.cz/~lipensky/kadourek.html|Matematika I]] od doc. Kadourka</li>
 <li>Texty k predmetu [[http://is.muni.cz/el/1433/podzim2004/MB101/|Matematika I]] od Doc. Paseky</li>
 <li>Texty k predmetu [[ftp://www.math.muni.cz/pub/math/people/Rosicky/lectures/zm.pdf|Zaklady matematiky]] od prof. Rosickeho.</li>
@@ -38,7 +38,7 @@
 
 
 
-<b>Podmínky udělení zápočtu:</b><br/>
+<b>Podmínky udělení zápočtu:</b>
 Podmínka ke získání zápočtu je odevzdat každý týden vypracované úkoly, jež budou zadány na společném čvičení vedeném Mgr. Martinem Panákem Ph.D.. Účast na cvičeních v jednotlivých seminárních skupinách, tedy i v út. vedené mnou, jsou nepovinná a budou mít charakter cvičení i konzultace k předmětu či zadaným úkolům.
 Tolerance správně vyřešených a včas odevzdaných příkladů bude sdělena později.
 
@@ -46,7 +46,7 @@ Tolerance správně vyřešených a včas odevzdaných příkladů bude sdělena
 
 
 
-<b>Další informace:</b><br/>
+<b>Další informace:</b>
 [[data/mb101/mn.pdf|Pokus]] o dukaz 2 prikladu na ekvivalence mnozinovych vyroku
 
 

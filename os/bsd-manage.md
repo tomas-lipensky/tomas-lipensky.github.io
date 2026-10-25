@@ -6,8 +6,8 @@
 
 ##### Parametry jadra
 
-vi /etc/sysctl.conf<br />
-pkg_add ... prida balicek<br />
-pkg_info ... informace o baliccich<br />
-pkg_delete ... odebere balicek<br />
+vi /etc/sysctl.conf
+pkg_add ... prida balicek
+pkg_info ... informace o baliccich
+pkg_delete ... odebere balicek
 ftp -a ftp2.FreeBSD.org

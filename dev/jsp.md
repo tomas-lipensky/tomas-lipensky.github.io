@@ -10,13 +10,11 @@
 [JSP HTML Deklarace](#tridy)  
 [JSP XML Deklarace](#priklady)  
 
-<a name="odkazy|]]
 ### odkazy:
 
 [JAVA API Docs](http://docs.oracle.com/javaee/6/api/index.html) on Oracle  
 [JAVA](java.html)  
 
-<a name="HTMLznacky|]]
 ### HTML - Skriptovaci znacky
 
 Jsou jednotlive prikazy, je k dispozici [8 objektu](http://www.tutorialspoint.com/jsp/jsp_implicit_objects.htm)
@@ -29,7 +27,6 @@ Jsou jednotlive prikazy, je k dispozici [8 objektu](http://www.tutorialspoint.co
 &lt;%= out.println ("ahoj") %&gt; ... vypise ahoj  
 &lt;%= [config](http://docs.oracle.com/javaee/6/api/javax/servlet/ServletConfig.html).getInitParameter("hello");%&gt; ... ziska paramert hello z web.xml\\	
 
-<a name="XMLznacky|]]
 ### JSP XML Skriptovaci znacky
 
 V xml dokumnetech je se nepouziva &lt;% a %&gt; ale &lt;[jsp:expression](http://www.roseindia.net/jsp/xml-xhtml-jsp.shtml)&gt; a &lt;jsp:/expression&gt;]]

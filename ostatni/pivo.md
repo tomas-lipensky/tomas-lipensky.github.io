@@ -1,4 +1,4 @@
-[Domaci vareni piva](http://www.gorvin.mysteria.cz/pivo/pivo.htm#23)<br />
-[domaci mikro pivovary](http://www.domacimikropivovary.cz)<br />
-[www.homebrewing.cz](www.homebrewing.cz)<br />
+[Domaci vareni piva](http://www.gorvin.mysteria.cz/pivo/pivo.htm#23)
+[domaci mikro pivovary](http://www.domacimikropivovary.cz)
+[www.homebrewing.cz](www.homebrewing.cz)
 http://pivni.info/homebrewing/103-domaci-vareni-piva-aneb-jak-na-to.html

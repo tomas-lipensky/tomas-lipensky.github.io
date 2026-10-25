@@ -21,12 +21,12 @@ Raspberry Pi
 ##### 433
 
 [Lekce jak na 433](http://arduino8.webnode.cz/news/lekce-20-arduino-a-vyuziti-433-92-mhz/)  
-  [nakup 433](http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html)<br
+  [nakup 433](http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html)
   [jiny nakup 433](http://robotstore.cz/obchod/arduino/433mhz-vysilac-a-prijimac-sada-arduino-modulu/)  
 
 ##### ATMega:
 
-[gotronik.pl](http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html)<br/>
+[gotronik.pl](http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html)
 
 ### Raspberry Pi
 

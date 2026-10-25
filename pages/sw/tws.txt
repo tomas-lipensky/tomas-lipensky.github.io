@@ -2,10 +2,10 @@
 ======TWS (Tivoli Workload manager) - maestro======
 
 <h6>Status: </h6>
-ps -ef| grep tws ... vypise procesy a uzivatele jedouciho TWS klienta (mailman, writer, batchman, netman)<br />
+ps -ef| grep tws ... vypise procesy a uzivatele jedouciho TWS klienta (mailman, writer, batchman, netman)
 
 <h6>Start/Stop: </h6>
-/exploit/scripts/appli/StartStop/start_tws_client.ksh<br />
+/exploit/scripts/appli/StartStop/start_tws_client.ksh
 /opt/IBM/TWA/TWS/StartUp ... nastartuje netman (network management process) + WAS - ekvivalent conman start. Na Windows jeste Tivoli Token Service\\
 su - tws -c "conman start" ... nastartuje TWS\\
 su - tws -c "conman startappserver" ... nastartuje WAS\\
@@ -16,8 +16,8 @@ su - tws -c "conman shut"\\
 
 ====Cesty====
 %programFiles%/IBM/TWA/TWS\\
-/opt/Tivoli/TWS/twsadm<br />
-/opt/IBM/TWA/TWS<br />
+/opt/Tivoli/TWS/twsadm
+/opt/IBM/TWA/TWS
 grep echec /opt/IBM/TWA/TWS/stdlist/2014.10.24/* ... projde logy z 24.10.2014 a zjisti, ktery selhal\\
 
 ====Architektura====
@@ -32,19 +32,19 @@ Dynamic agent - agent ktery ma vic konektoru do aplikaci\\
 netman - master proces, ma spojeni\\
 batchman - 
 
-[[http://www.softpanorama.org/Admin/Tivoli/TWS/Reference/conman_commands.shtml|/opt/IBM/TWA/TWS/bin/conman]]<br />
-%setsym 1<br />
-%sj PRFIDB#@.@+state=ABEND ... ukaze ukoly, jez skoncily spatne<br />
+[[http://www.softpanorama.org/Admin/Tivoli/TWS/Reference/conman_commands.shtml|/opt/IBM/TWA/TWS/bin/conman]]
+%setsym 1
+%sj PRFIDB#@.@+state=ABEND ... ukaze ukoly, jez skoncily spatne
 %sj SERVER@JOBSTREAM.JOB ... ukaze ukol spusteny na SERVER, ktery se jmenuje JUBSTREAM.JOB\\
-%sj SICDB#BACKUP_ARCHIVE.ARCHIVE_LOG<br />
+%sj SICDB#BACKUP_ARCHIVE.ARCHIVE_LOG
 %sj SINICISIDB#PPJGIT05H.PPGITEXT2;info ... Ukaze, ktery skript se spousti\\
-%sj PRFIDB#BACKUP_ARCHIVE.ARCHIVE_LOG;std ... Ukaze vystup skriptu<br />
-<br />
-[[http://www.ibm.com/support/knowledgecenter/SSGSPN_8.6.0/com.ibm.tivoli.itws.doc_8.6/awsrgconmancmds.htm|conman]] sc ... (showcpus) seznam TWS domeny (manazer a agenti) - kde je I J, ten nazev agenta bezi na tomto stroji<br />
-conman unlink cpu=&lt;CPUID&gt;<br/>
-conman link cpu=&lt;CPUID&gt;<br />
+%sj PRFIDB#BACKUP_ARCHIVE.ARCHIVE_LOG;std ... Ukaze vystup skriptu
+
+[[http://www.ibm.com/support/knowledgecenter/SSGSPN_8.6.0/com.ibm.tivoli.itws.doc_8.6/awsrgconmancmds.htm|conman]] sc ... (showcpus) seznam TWS domeny (manazer a agenti) - kde je I J, ten nazev agenta bezi na tomto stroji
+conman unlink cpu=&lt;CPUID&gt;
+conman link cpu=&lt;CPUID&gt;
 conman [[https://www.ibm.com/support/knowledgecenter/SSGSPN_9.3.0/com.ibm.tivoli.itws.doc_9.3/distr/src_ref/awsrgshowjobs.htm?lang=en|sj]] ... ukaze probehle ukoly\\
-conman sj @#@ ... (showjobs) show jobs *#* ukaze seznam na vsech nodech vsech jobu<br />
+conman sj @#@ ... (showjobs) show jobs *#* ukaze seznam na vsech nodech vsech jobu
 conman sj UP10#@ ... ukaze vsechny ukoly na nodu UP10\\
 sj UP10#@;info ... ukaze vsechny ukoly na nodu UP10 a zobrazi info o skriptu\\
 conman sj @#@+state=abend ... Ukaze ukoly, jez skoncily spatne\\
@@ -53,9 +53,9 @@ conman shwodomain ... ukaze informace o domene\\
 conman sr ... (showresources) ukaze prostredky (promenne, kterymi se omezuji joby\\
 conman ss ... (showschedules) ukaze, jake posloupnosti ukolu jsou definovany (schedules, job streams)\\
 conman sp ... (showprompts) ukaze prompty - kde job ceka na inteakci\\
-/opt/tws8.1/sched.txt<br />
-/opt/tws8.1/prodsked<br />
-/opt/tws8.1/jobs.txt<br />
+/opt/tws8.1/sched.txt
+/opt/tws8.1/prodsked
+/opt/tws8.1/jobs.txt
 
 ====Agent====
 2 typy agentu - FTA (Fault Tolerant Agent) - ziska plan na zacatku dne a provadi tasky i kdyz neni spojeni na server. Standard - potrebuje spojeni. Taky Dynamic agent atd.

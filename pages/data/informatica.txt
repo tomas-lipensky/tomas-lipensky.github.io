@@ -10,7 +10,6 @@ Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[https://network.informatica.com/community/informatica-network|Informatica network]]\\
 [[https://marketplace.informatica.com/search-solr.jspa?facets=isservices:0;cid3:c-cat1;|Informatica marketplace]] - utility na stazeni\\
@@ -20,11 +19,9 @@ Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 [[https://marketplace.informatica.com/index.jspa|Informatica Marketplace]]\\
 [[https://network.informatica.com/downloadsView.jspa|Informatica Network - Downloads]]\\
 
-<a name="interni|]]
 ====Interni odkazy====
 [[was.html|WAS]]\\
 
-<a name="architektura|]]
 ====Architektura====
 
 
@@ -76,7 +73,7 @@ Data Integration Service
 Instalaci myslime vzdy instalaci Service Managera + volba - vytvorit domenu, nebo pridat k domene
 
 
-<a name="url|====URL====]]
+====URL====
 
 
 http://localhost:6008/administrator ... Administracni konzole\\

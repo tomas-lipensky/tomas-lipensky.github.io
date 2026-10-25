@@ -7,7 +7,6 @@
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[http://www-01.ibm.com/software/data/master-data-management/|Product information]] - on IBM sites\\
 [[https://www.ibm.com/developerworks/community/blogs/64033fdd-4a35-4733-852f-a39abcdf4fb3/?lang=en|MDM Developers]] - on IBM DevelopersWorks\\
@@ -15,18 +14,15 @@
 [[http://pic.dhe.ibm.com/infocenter/mdm/v10r1/index.jsp|MDM 10.1 documentation]] on IBM InfoCenter\\
 konkurence - [[http://www.informatica.com/us/products/master-data-management/mdm/|Informatica MDM]]\\
 
-<a name="interni|]]
 ====Interni odkazy====
 [[was.html|WAS]]\\
 [[../dev/pzthon.html|Python]]\\
 [[jacl.html|JACL]]\\
 
-<a name="portfolio|]]
 ====MDM portfolio====
 
 \\
 
-<a name="url|]]
 ====URL aplikace====
 http://IP:7507/ ... MDM aplikace\\
 https://IP:9043/ibm/console/ ... WAS Administracni konzole\\

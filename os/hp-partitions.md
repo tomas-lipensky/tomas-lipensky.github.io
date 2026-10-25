@@ -4,4 +4,4 @@ hpvmstatus ... informace o prostredcich ostatnich VM
 ##### VPAR
 
 vparstatus ... informace o prostredcich ostatnich vParu  
-vparstatus -A ... status VPARU<br />
+vparstatus -A ... status VPARU

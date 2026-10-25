@@ -2,7 +2,7 @@
 
 ##### status
 
-cmviewcl ... ukaze stav slusteru<br />
+cmviewcl ... ukaze stav slusteru
 cmviewcl -v ... Vice ukecany stav clusteru  
 cmviewcl -f line ... radkovy vypis pro scripty  
 
@@ -20,7 +20,7 @@ cmmodpkg -e -n node Package ... Umozni nodu node prijimat balicek
 ##### Konfigurace
 
 /etc/cmcluster/cmclnodelist ... seznam nodu  
-/etc/cmcluster/SD_CLUSTER.cfg ... nastaveni clusteru<br />
+/etc/cmcluster/SD_CLUSTER.cfg ... nastaveni clusteru
 cmquerycl -v [-q QS_HOST] -C cmclconfig.ascii -n node1 -n node2 ... vygeneruje prazdny konfiguracni soubor s nekterymi vyplnenymi udaji  
 cmcheckconf -v -C /etc/cmcluster/cmclconf.ascii ... otestuje syntaxi  
 cmapplyconf -v -C /etc/cmcluster/cmclconf.ascii ... zkompiluje configuraci do binarniho formatu  

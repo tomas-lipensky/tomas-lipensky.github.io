@@ -13,13 +13,11 @@
 [Tridy, objekty, funkce](#tridy)  
 [Priklady](#priklady)  
 
-<a name="odkazy|]]
 ### Externi odkazy:
 
 [Jave 1.5 API](http://download.oracle.com/javase/1.5.0/docs/api/)  
 [java.cz](http://java.cz)  
 
-<a name="soubory|]]
 ### Typy souboru
 
 ##### .java
@@ -44,7 +42,6 @@ jar tvf Archiv.jar ... otestuje jar archiv (Java Archiv)
 jar xvf Archiv.jar ... rozbali Archiv.jar  
 unzip -t Archiv.jar ... oteztuje JAR zabaleny zipem  
 
-<a name="promenne|]]
 ### Promenne
 
 char x; ... (Character) unicode znak, 2 bajty  
@@ -59,7 +56,6 @@ boolean	b; ... 0, 1 - lez pravda
 x = (int)8.2 ... konverze na cele cislo  
 final float Pi=3.14; ... definice konstanty (nelze menit)  
 
-<a name="operatory|]]
 ### Operatory
 
 (, ) ... seskupovani (priorita 16)  
@@ -80,7 +76,6 @@ A & B ... bitova operace a 1100 & 1001 = 1000 (priorita 9)
 A ^ B ... bitova operace nebo 1100 & 1001 = 1101 (priorita 8)  
 A | B ... bitova operace XOR 1100 & 1001 = 0101 (priorita 7)  
 
-<a name="podminky|]]
 ### Podminky, cykly
 
 if (podminka) {} else {}  
@@ -106,7 +101,6 @@ while (podminka) {}
 continue; ... Preskoci zbytek cyklu while, ci for a vrati se na zacatek na vyhodnocovani podminky  
 break; ... Vyskoci z cyklu for nebo while  
 
-<a name="tridy|]]
 ### Tridy, objekty, funkce
 
 Definice tridy: cat trida.java\\
@@ -151,7 +145,6 @@ public class pokus {
 ```
 
 
-<a name="funkce|]]
 ### Funkce
 
 Integer.toString(12) ... prevede celociselnou hodnotu na string  
@@ -161,7 +154,6 @@ Math.Random() ... Vygeneruje pseudonahodne cislo
 
 [^1]: Math.random()*6+1 ... prevede realne nahodne cislo na celociselne  
 
-<a name="priklady|]]
 ### Priklady:
 
 ==Hello.java==

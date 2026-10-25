@@ -5,8 +5,8 @@
 
 
 
-[[http://www.jstor.org/|JStor]] Journal Storage - vyhledavani ve vedeckych casopisech - 12 matematickych<br/>
-[[http://arxiv.org/|ArXiv]] Archiv (nejen) matematickych calnku<br/>
+[[http://www.jstor.org/|JStor]] Journal Storage - vyhledavani ve vedeckych casopisech - 12 matematickych
+[[http://arxiv.org/|ArXiv]] Archiv (nejen) matematickych calnku
 
 
 
@@ -15,15 +15,15 @@
 
 
 
-[[http://matwbn.icm.edu.pl/|Wirtualna Biblioteka Nauki-Kolekcja matematyczno-fizyczna]]<br/>
-[[http://www.math.nui.edu/~rusin/known-math/97/|Nejake texty]], lze menit v adrese koncova cisla roku<br/>
+[[http://matwbn.icm.edu.pl/|Wirtualna Biblioteka Nauki-Kolekcja matematyczno-fizyczna]]
+[[http://www.math.nui.edu/~rusin/known-math/97/|Nejake texty]], lze menit v adrese koncova cisla roku
 [[http://www.mat.univie.ac.at/~michor/|Peter Michor]] Differential 
-geometry<br/>
-[[http://www.cam.ac.uk/societies/archim/notes.htm|Matematicke texty1]]<br/>
-[[http://www.physik.tu-berlin.de/~erat/lect.html|Matematicke texty v nemcine]]<br/>
-[[http://www.mathlinks.info/em000_categories.htm#top|Matematicke texty3]]<br/>
-[[http://www.ams.org|AMS]]American Mathematical society<br/>
-[[http://www.math.fsu.edu/Science/Books.html|Math WWW Vl]] online knihovna<br/>
+geometry
+[[http://www.cam.ac.uk/societies/archim/notes.htm|Matematicke texty1]]
+[[http://www.physik.tu-berlin.de/~erat/lect.html|Matematicke texty v nemcine]]
+[[http://www.mathlinks.info/em000_categories.htm#top|Matematicke texty3]]
+[[http://www.ams.org|AMS]]American Mathematical society
+[[http://www.math.fsu.edu/Science/Books.html|Math WWW Vl]] online knihovna
 
 
 
@@ -31,8 +31,8 @@ geometry<br/>
 
 
 
-[[http://www.marxists.org/archive/marx/works/download/Marx_Mathematical_Manuscripts_1881.pdf|Mathematical manuscripts]] - Karl Marx<br/>
-[[[http://www.emis.de/monographs/KSM/kmsbookh.pdf|KMS]]] Kolář, Michor, Slovák - Natural operations in differential geometry<br/>
+[[http://www.marxists.org/archive/marx/works/download/Marx_Mathematical_Manuscripts_1881.pdf|Mathematical manuscripts]] - Karl Marx
+[[[http://www.emis.de/monographs/KSM/kmsbookh.pdf|KMS]]] Kolář, Michor, Slovák - Natural operations in differential geometry
 
 
 
@@ -40,10 +40,10 @@ geometry<br/>
 
 
 
-[[http://en.wikipedia.org/wiki/Portal:Mathematics|wikipedia en]] - anglické vydání wikipedie<br/>
-[[http://mathworld.wolfram.com/|mathworld.wolfram.com]]<br/>
-[[http://planetmath.org|planetmath]]<br/>
-[[http://www.math-atlas.org/|The Mathematical atlas]]<br/>
+[[http://en.wikipedia.org/wiki/Portal:Mathematics|wikipedia en]] - anglické vydání wikipedie
+[[http://mathworld.wolfram.com/|mathworld.wolfram.com]]
+[[http://planetmath.org|planetmath]]
+[[http://www.math-atlas.org/|The Mathematical atlas]]
 
 
 
@@ -51,8 +51,8 @@ geometry<br/>
 
 
 
-[[http://directory.google.com/Top/Science/Math/|Google]] - matematicke odkazy na tomto serveru<br/>
-[[http://dir.yahoo.com/Science/Mathematics/|Yahoo]] - matematicke odkazy na tomto serveru<br/>
+[[http://directory.google.com/Top/Science/Math/|Google]] - matematicke odkazy na tomto serveru
+[[http://dir.yahoo.com/Science/Mathematics/|Yahoo]] - matematicke odkazy na tomto serveru
 
 
 
@@ -61,9 +61,9 @@ geometry<br/>
 
 
 
-[[http://www.dpmms.cam.ac.uk/|Department of Pure Mathematics and Mathematical Statistics]] na Cambridge universiny - pod odlazem "people" a "List of all senior members of the department"<br/>
-[[http://www.maths.ox.ac.uk/|Mathemathical Institute]] - University of Oxford<br/>
-[[http://www.maths.ed.ac.uk/|University of Edinburgh]] - Math Department<br/>
+[[http://www.dpmms.cam.ac.uk/|Department of Pure Mathematics and Mathematical Statistics]] na Cambridge universiny - pod odlazem "people" a "List of all senior members of the department"
+[[http://www.maths.ox.ac.uk/|Mathemathical Institute]] - University of Oxford
+[[http://www.maths.ed.ac.uk/|University of Edinburgh]] - Math Department
 
 
    

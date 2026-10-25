@@ -36,9 +36,9 @@
 [Azure dotazy na logy a diagnostiku](automatizace/azure-dotazy) .. Kusto Query Language  
 [azure-runbook](azure-runbook)  
 [azure-arm](azure-arm)  
-#### = Komponenty, agenti
+#### Komponenty, agenti
 
-[azure agenti](automatizace/azure-agent)
+[azure agenti](azure-agent)
 
 ### Webove nastroje
 

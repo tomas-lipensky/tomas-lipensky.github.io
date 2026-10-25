@@ -2,12 +2,6 @@
 
 ### Obsah
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-<dt>[Interni odkazy](#interni)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Externi odkazy
 
 [Product information](http://www-01.ibm.com/software/data/master-data-management/) - on IBM sites  
@@ -19,17 +13,14 @@ konkurence - [Informatica MDM](http://www.informatica.com/us/products/master-dat
 [DW - Install cluster environment](http://www.ibm.com/developerworks/data/library/techarticle/dm-1402mdmcoll1/)  
 [DW - MDMCS Java API Extensions](http://www.ibm.com/developerworks/data/library/techarticle/dm-1312mdmjapi/index.html)  
 
-<a name="interni|]]
 ### Interni odkazy
 
 [WAS](was.html)  
 [Python](../dev/python.html)  
 [JACL](jacl.html)  
 
-<a name="portfolio|]]
 ### MDM portfolio
 
-<a name="url|]]
 ### URL aplikace
 
 http://IP:7507/ ... MDM aplikace  

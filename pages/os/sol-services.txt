@@ -2,23 +2,23 @@
 ======Solaris - Sluzby======
 
 =====Tisk=====
-Start:<br />
-/usr/lib/lp/lpsched<br />
-Stop:<br />
-/usr/lib/lp/lpshut<br />
-admintool ... nastaveni tiskovych sluzeb<br />
-lpadmin ... prida, odebere, zmeni, ukaze tiskarnu, tiskovou frontu<br />
-enable, disable ... Zakaze razeni do fronty<br />
-lpstat ... status tiskove fronty<br />
-cancel, lprm ... zrusi tiskovou ulohu<br />
-lp, lpr ... tisk<br />
+Start:
+/usr/lib/lp/lpsched
+Stop:
+/usr/lib/lp/lpshut
+admintool ... nastaveni tiskovych sluzeb
+lpadmin ... prida, odebere, zmeni, ukaze tiskarnu, tiskovou frontu
+enable, disable ... Zakaze razeni do fronty
+lpstat ... status tiskove fronty
+cancel, lprm ... zrusi tiskovou ulohu
+lp, lpr ... tisk
 
 =====Audit=====
-<b>status:</b><br />
-ps -ef | grep auditd<br />
-<b>Ostatni</b><br />
-audit ... zapne/vypne auditing, restartuje demona, zapise audit log soubor do jineho souboru<br />
-auditreduce ... Spoji audit log soubory<br />
-praudit ... prevede binarni kod log soubory do citelneho kodu<br />
+<b>status:</b>
+ps -ef | grep auditd
+<b>Ostatni</b>
+audit ... zapne/vypne auditing, restartuje demona, zapise audit log soubor do jineho souboru
+auditreduce ... Spoji audit log soubory
+praudit ... prevede binarni kod log soubory do citelneho kodu
 
    

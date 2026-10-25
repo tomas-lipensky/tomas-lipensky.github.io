@@ -30,10 +30,8 @@
 [Priprava na CCNA](http://www.samuraj-cz.com/clanek/priprava-na-cisco-ccna/)  
 [GNS](http://www.gns3.net/download) - Graphical Network Simulator - graficka simulace site, konfigurace routeru  
 
-<a name="mody|]]
 ## Mody
 
-<a name="mo-user|]]
 #### uzivatelsky EXEC mod
 
 disconnect 4 ... prerusi telnetove spojeni c. 4  
@@ -81,7 +79,6 @@ terminal history size 25 ... zmeni historii terminalu
 
 traceroute ip 192.168.2.6  
 
-<a name="mo-priv|]]
 #### Privilegovany mod
 
 <b>vse co v EXEC (normalnim) modu + nasledujici prikazy:</b>  
@@ -111,7 +108,6 @@ terminal monitor ... aktivuje debug mod
 
 un all (undebug all) ... vypne terminal monitor  
 
-<a name="mo-conf|]]
 #### konfiguracni mod
 
 banner motd # Ahoj, vitej # ... nastavi uvitaci hlasku  
@@ -158,10 +154,8 @@ service password-encryption ... nastavi kodovani hesel, aby nebyly videt v sh ru
 no service password-encryption ... vypne kodovani hesel  
 username cisco privilege 15 password 0 cisco ... vytvori uzivatele cisco s heslem cisco pro CDP  
 
-<a name="router|]]
 ## Router - smerovac
 
-<a name="ro-route|]]
 #### routing - smerovani
 
 <h6>Staticky (AD =1)</h6>
@@ -193,7 +187,6 @@ router rip; redistribute eigrp 10 metric 1 ... redistribuce eigrp AS 10 na RIP s
 router rip; passive-interface s0 ... nastavi, ze Serial0 nebude vysilat update, ale jen prijimat  
 no router rip ... zakaze rip  
 
-<a name="ro-firewall|]]
 #### firewall
 
 <b>standartni 1-99, 1300-1999</b>  
@@ -228,7 +221,6 @@ do sh access-list 10 ... ukaze access-list 10
 
 do sh ip access-list  
 
-<a name="ro-nat|]]
 #### NAT - Network Address Translation
 
 ip nat inside source static 10.1.1.1 170.46.2.2 ... nastavi staticky NAT  
@@ -257,7 +249,6 @@ do sh nat translation
 
 do debug ip nat  
 
-<a name="ro-vlan|]]
 #### vlany na routeru
 
 int fa0/1; ... nastavovani fa0/1  
@@ -271,7 +262,6 @@ int fa0/1; int f/1.2 ...
 int fa0/1; int f/1.2; encalupsation dot1q ...  
 int fa0/1; int f/1.2; ip address 192.168.10.46 255.255.255.240 ...  
 
-<a name="ro-wan|]]
 #### WAN
 
 <h6>HDCL (High-Level Data-Link Control protocoL</h6>
@@ -338,7 +328,6 @@ int s0/0; clock rate 64000
 (config)# int br0  
 (config-if)# dialer-group 1 ... aktivace ACL na interfejsu  
 
-<a name="switch|]]
 ## Switch - prepinac
 
 sh int trunk ... ukaze vsechny trunk porty  
@@ -359,7 +348,6 @@ sh vlan brief ... ukaze seznam vlanu
 sh vtp status ... ukaze status VTP  
 ip default-gateway 1.2.3.4 ... nastavi defaultni routu - jen pro switch  
 
-<a name="sw-port|]]
 #### nastavovani portu
 
 int f0/1 ... nastaveni fastethernet0/1 portu  
@@ -368,7 +356,6 @@ int f0/1; switchport port-security maximum 1 ... maximum mac address k f0/1 port
 int f0/1; switchport port-security violation shutdown ... v pripade poruseni pravide vypne port  
 mac-address-table static aaa.bbbb.cccc vlan 1 int fa0/5 ... nastavi statickou MAC adresu  
 
-<a name="sw-stp|]]
 #### STP - Spaning-tree protocol
 
 spanning-tree vlan 1 priority 4096 ... nastavi prioritu switche ve vlan 1 na 4096 pro volbu korenoveho switche  
@@ -404,7 +391,6 @@ int port-channel 1; int range f0/1-2; switchport mode nonegotiate ... vypne vyje
 int port-channel 1; int range f0/1-2; channel-group 1 mode desirable  
 do sh int fa0/1 etherchannel ... ukaze nastaveni etherchannelu  
 
-<a name="sw-vlan|]]
 
 #### VLAN - Vurtual LAN
 
@@ -438,7 +424,6 @@ do show vtp status ... ukaze nastaveni VTP
 
 do sh trunk  
 
-<a name="sw-firewall|]]
 #### switch firewall
 
 mac access-list extended RULE2 ... vytvori RULE2  
@@ -449,7 +434,6 @@ do show access-list ... ukaze access-listy
 do show access-group  
 int f0/6; mac address-group RULE2 ... aplikuje RULE2 na f0/6  
 
-<a name="ipv6|]]
 ## IP verze 6
 
 int f0/1; ipv6 enable ... zapne ipv6 pro f0/1  

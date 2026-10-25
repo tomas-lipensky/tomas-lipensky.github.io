@@ -5,12 +5,12 @@ TSM klient (scheduller) posloucha na portu 1501
 
 ===Start: ===
 
-/usr/tivoli/tsm/client/ba/bin/dsmc sched -servername= XXXXXXXX<br />
+/usr/tivoli/tsm/client/ba/bin/dsmc sched -servername= XXXXXXXX
 
 ===Stop: ===
 
-PID=$(ps -Af|grep "dsmc sched -servername= XXXXXXX"|grep -v grep|awk  ' { print $2 } ')<br />
-kill -9 $PID<br />
+PID=$(ps -Af|grep "dsmc sched -servername= XXXXXXX"|grep -v grep|awk  ' { print $2 } ')
+kill -9 $PID
 
 ===Status: ===
 
@@ -24,10 +24,10 @@ $DSM_DIR/dsmerror.log\\
 
 ===Nastaveni, umisteni, logy: ===
 
-/usr/local/scripts/tsm<br />
-/usr/tivoli/tsm/client/ba/bin/<br />
-/usr/tivoli/tsm/client/ba/bin/inclexcl.lst<br />
-/exploit/logs/tsm/<br />
+/usr/local/scripts/tsm
+/usr/tivoli/tsm/client/ba/bin/
+/usr/tivoli/tsm/client/ba/bin/inclexcl.lst
+/exploit/logs/tsm/
 /exploit/shells/tsm
 $DSM_DIR /usr/tivoli/tsm/client/ba/bin/dsm.sys ... konf soubor pro tsm client
 $DSMI_CONFIG /usr/tivoli/tsm/api/bin/dsm.opt
@@ -60,7 +60,7 @@ dsmc archive "/export/eznim/mksysb/ampsv01230prd_sysb" ... zazalohuje soubor jak
 dsmc arch -archsymlink=no '/*' ... nezalohuje symbolicke linky\\
 dsmc backup a b c ... zazalohuje soubory a b c\\
 dsmc inc / /usr /var ... incremental backup - zmeny oproti minulemu backupu. Muze se pouzit retantion period ve dnech, ci versioning, definovany v management class, kterou definuji TSM admini\\\\
-dsmc retrieve "/export/eznim/mksysb/ampsv01230prd_sysb" ... obnoveni zazalohovaneho souboru z archive<br />
+dsmc retrieve "/export/eznim/mksysb/ampsv01230prd_sysb" ... obnoveni zazalohovaneho souboru z archive
 dsmc restore /aaa ... obnoveni souboru /aaa ze zalohy backup\\
 dsmc rest -sub=yes "source_dir/rep1/*" /target_dir/ ... i s podadresari\\
 dsmc rest -pitdate 02/28/06 et -pittime 17:03:21 (from windows -fromdate -fromtime, todate totime) /a ... obnova souboru podle data\\
@@ -129,6 +129,6 @@ cancel proc migration
 TSM server posloucha na portu 1500\\
 
 <h6>Nastaveni a umisteni: </h6>
-dsmadmc<br />
+dsmadmc
 
    

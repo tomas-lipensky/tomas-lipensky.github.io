@@ -253,7 +253,6 @@ $HOME/.local/share/mime/globs ... definice koncovek souboru a nazvy MIME typu
 $HOME/.local/share/applications/mimeapps.list ... lokalni nastaveni pro uzivatele  
 $HOME/.local/share/applications/defaults.list ... lokalni nastaveni pro uzivatele  
 
-<a name="fonty|]]
 ### Fonty
 
 X Core fonts .. prvni, nevyhlazene fonty, jsou v xorg.conf, nacita je Xfs  
@@ -271,7 +270,6 @@ fc-cat ... informace o fontech v cache
 fc-cache /usr/share/X11/fonts/Type1... vytvori cache fontu  
 fc-scan /usr/share/X11/fonts/Type1 ... prozkouma adresar a najde fonty  
 
-<a name="oblibene|]]
 ### Oblibene programy
 
 xnview ... prohlizec obrazku (xorg-x11-fonts-100dpi xorg-x11-fonts-75dpi xorg-x11-fonts-misc xorg-x11-fonts-ISO8859-1-100dpi xorg-x11-fonts-ISO8859-1-75dpi)  

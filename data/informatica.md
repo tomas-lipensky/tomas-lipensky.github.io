@@ -4,12 +4,6 @@ Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 
 ### Obsah
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-<dt>[Interni odkazy](#interni)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Externi odkazy
 
 [Informatica network](https://network.informatica.com/community/informatica-network)  
@@ -20,12 +14,10 @@ Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 [Informatica Marketplace](https://marketplace.informatica.com/index.jspa)  
 [Informatica Network - Downloads](https://network.informatica.com/downloadsView.jspa)  
 
-<a name="interni|]]
 ### Interni odkazy
 
 [WAS](was.html)  
 
-<a name="architektura|]]
 ### Architektura
 
 Domena - je uzolovana administracni jednotka. Muze obsahovat mnoho nodu a sluzeb. Pro kazdou domenu je jedna Administracni konzole (Administrator tool)  
@@ -69,8 +61,6 @@ Data Integration Service
 ### Instal
 
 Instalaci myslime vzdy instalaci Service Managera + volba - vytvorit domenu, nebo pridat k domene
-
-<a name="url|====URL====]]
 
 http://localhost:6008/administrator ... Administracni konzole  
 

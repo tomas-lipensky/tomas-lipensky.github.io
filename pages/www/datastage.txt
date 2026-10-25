@@ -6,7 +6,6 @@
 <dt>[[#odkazy|Externi odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Odkazy====
 [[www.ibm.com/datastage/training|Datastage training]]\\
 [[http://publib.boulder.ibm.com/infocenter/ieduasst/imv1r0/index.jsp?topic=/com.ibm.iea.infosphere_is/infosphere_is/8.5/ProbDeter/MemoryUsage/player.html|IBM Education manager - Monitoring memory consumption of datastage process]]\\
@@ -16,7 +15,6 @@
 [[http://etl-tools.info/en/datastage/datastage_tutorial.htm|Datastage tutorial]]\\
 
 
-<a name="portfolio|]]
 ====Komponenty====
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:

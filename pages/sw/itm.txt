@@ -16,10 +16,10 @@ Tivoli Distributed Machine Monitor
 
 
 ==Start/stop/status: ==
-/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start<br />
+/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start
 /opt/Tivoli/lcf/dat/1/lcfd.sh stop ... stop\\
-ps -ef | grep -i dm_ep_engine ... status<br />
-ps -ef | grep lcf<br />
+ps -ef | grep -i dm_ep_engine ... status
+ps -ef | grep lcf
 
 
 
@@ -28,8 +28,8 @@ ps -ef | grep lcf<br />
 
 
 ==konfigurace/logy==
-/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Disk.conf.txt|LGE_generique_Process.conf]] ... konfigurace monitorovani procesu<br />
-/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Process.conf.txt|LGE_generique_Disk.conf]] ... konfigurace monitorovani disku<br />
+/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Disk.conf.txt|LGE_generique_Process.conf]] ... konfigurace monitorovani procesu
+/opt/Tivoli/lcf/dat/1/conf/[[LGE_generique_Process.conf.txt|LGE_generique_Disk.conf]] ... konfigurace monitorovani disku
 /opt/Tivoli/lcf/dat/1/conf/[[LGE_unix_checkErrpt.data.txt|LGE_unix_checkErrpt.data]] ... Konfigurace monitorovani errpt (syntaxe EXCLUDE=AAAAAA#AAAABB#...\\
 c:\ProgramFiles\tivoli\lcf\dat\1\conf\conf\[[LGE_windows_eventlog.data.txt|LGE_windows_eventlog.data]] & [[LGE_windows_eventlog_NortonAntivirus.conf.txt|LGE_windows_eventlog_NortonAntivirus.conf]] ... Windows NT Event monitor\\
 c:\ProgramFiles\tivoli\lcf\dat\1\conf\conf\[[LGE_windows_eventlogtime.data.txt|LGE_windows_eventlogtime.data]] & [[LGE_windows_eventlogtime_EventType.conf.txt|LGE_windows_eventlogtime_EventType.conf]] ... EventLog Time Monitoring\\
@@ -40,7 +40,7 @@ C:\tiv\lcf\dat\1\conf[[LGE_services_dns.data.txt|LGE_services_dns.data]] & [[LGE
 conf/[[LGE_preventive_aixchecking.data.txt|LGE_preventive_aixchecking.data]] ... memory usage\\
 conf/[[LGE_unix_cpuaverage.data.txt|LGE_unix_cpuaverage.data]] ... cpu usage\\
 touch /opt/Tivoli/lcf/dat/1/tmp/LGE_unix_checkErrpt.flag ... dokud existuje, tvori se log soubor LGE_unix_checkErrpt.log s logovanim konfigurace a udalosti\\
-tail -60 /opt/Tivoli/lcf/dat/1/tmp/LGE_generique_Disk.events<br />
+tail -60 /opt/Tivoli/lcf/dat/1/tmp/LGE_generique_Disk.events
 
 
 
@@ -54,19 +54,19 @@ ITMv5 ma javovske endpointy. Lze na nich spoustet Javaskripty.
 
 
 ==Start/stop/status: ==
-/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start<br />
-/opt/Tivoli/lcf/dat/1/lcfd.sh stop ... stop<br />
+/opt/Tivoli/lcf/dat/1/lcfd.sh start ... start
+/opt/Tivoli/lcf/dat/1/lcfd.sh stop ... stop
 a pak killnout zbyvajici jedouci procesy\\
-ps -ef | grep -i dmunix  ... status<br />
-ps -ef | grep lcf<br />
+ps -ef | grep -i dmunix  ... status
+ps -ef | grep lcf
 
 
 
 
 
 ==konfigurace/logy==
-/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_process.param ... konfigurace monitorovani procesu<br />
-/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_DMXFileSystem.param ... konfigurace monitorovani disku<br />
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_process.param ... konfigurace monitorovani procesu
+/opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_DMXFileSystem.param ... konfigurace monitorovani disku
 /opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_Maintenance_Mode.param ... konfigurace [[http://d12db054.de.ibm.com/q_dir/qmx/wes/qc4pl.nsf/procnum/WES-PRD-00632|maintenance flagu]]\\
 /opt/Tivoli/lcf/dat/1/LCFNEW/Tmw2k/Unix/TSA_file_filter.param.sample ... filefilter - monitorovani log souboru\\
 /LCFNEW/Tmw2k/bin/TSA_AllStartedServices.param\\
@@ -112,7 +112,7 @@ CANDLEHOME='/opt/IBM/ITM'\\
 /bin/ksh -c '/opt/IBM/ITM/bin/itmcmd agent -o db2inst2 start ud ... start ud agenta (DB2)\\
 itmcmd audit -h /opt/IBM/ITM -l both ... cleans ITM logs\\
 itmcmd help ... help\\
-/etc/rc.tma1<br />
+/etc/rc.tma1
 /opt/IBM/ITM/bin/cinfo -r ... status agentu\\
 cat /opt/IBM/ITM/config/.ConfigData/RunInfo ... status agentu\\
 /opt/IBM/ITM/bin/itmcmd agent start XXXX ... ITMv6, podrobnosti v /etc/rc.itmX\\
@@ -134,15 +134,15 @@ koqagent.exe ... MSSQL agent ($candlehome/tmaitm6_x64/corrupt .str ... situation
 ==konfigurace/logy==
 /opt/IBM/ITM/config/.ConfigData/k<xx>env ... konfigurace agenta\\
 /opt/IBM/ITM/CONFILES=C:\IBM\ITM\CONFILES\\
-/opt/IBM/ITM/CONFILES/ufs_all_configured.loc ... konfigurace monitorovani disku<br />
-/opt/IBM/ITM/CONFILES/ups_all_configured.loc ... konfigurace monitorovani procesu<br />
+/opt/IBM/ITM/CONFILES/ufs_all_configured.loc ... konfigurace monitorovani disku
+/opt/IBM/ITM/CONFILES/ups_all_configured.loc ... konfigurace monitorovani procesu
 C:\IBM\ITM\CONFILES\[[Service.cfg.txt|Service.cfg]] ... konfigurace monitorovani sluzeb (Win)\\
 C:\IBM\ITM\CONFILES\[[FS.cfg.txt|FS.cfg]] ... konfigurace monitorovani disku (Win)\\
 C:\IBM\ITM\CONFILES\[[Process.cfg.txt|Process.cfg]] ... konfigurace monitorovani procesu (Win)\\
 /opt/IBM/ITM/CONFILES/gsma_errpt_monitoring.param ... nastaveni alertovani errpt\\
 /opt/IBM/ITM/CONFILES/maintenance.cfg ... nastaveni [[http://d12db054.de.ibm.com/q_dir/qmx/wes/qc4pl.nsf/procnum/WES-PRD-00654?OpenDocument#_Section3|Maintenance window]]\\
 lsitab -a | grep tma\\
-rctma1:2:wait:/etc/rc.tma1 > /dev/console 2>&1 # Tivoli Management Agent<br />
+rctma1:2:wait:/etc/rc.tma1 > /dev/console 2>&1 # Tivoli Management Agent
 $candlhome/config/kcirunas.cfg ... konfigurace ITM pod jakym uzivatelem jet jakeho agenta. $candlehome/bin/UpdateAutoRun.sh prepise pak startup scripty\\
 
 
@@ -172,7 +172,7 @@ TEP (Tivoli Enterprise Portal)\\
 /usr/local/Tivoli/bin/aix4-r1/bin ... binarky TMR\\
 $DBDIR/???/logs ... logy\\
 [[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst148.htm#idx304|wdmcmd -e ANT_bckinfups1 -stop]] ... zastavi (nastartuje ITM na endpointu z TMR\\
-[[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst159.htm#idx326|wdmlseng -e Endpoint]] ... Vylistuje seznam Resourcu na Endpoint-u<br.
+[[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst159.htm#idx326|wdmlseng -e Endpoint]] ... Vylistuje seznam Resourcu na Endpoint-u
 [[http://publib.boulder.ibm.com/tividd/td/ITM/SH19-4569-03/en_US/HTML/dmumst161.htm#idx330|wdmmngcache -m INF_frmpqmn00srb2xm -l -v]] ... ukaze (-d smaze) (-v rozsireny) status Ednpointu z chache historie\\
 wep help ... napoveda k wep\\
 wep ls ... seznam endpointu\\

@@ -9,7 +9,7 @@
 
 ==Promenne, cykly, podminky, vystupy==
 SET AAA=HELO\\
-ECHO %AAA%<BR>
+ECHO %AAA%
 @echo %time% ... vypise aktualni cas\\
 ECHO %OS% ... bypise verzi operacniho systemu\\
 %USERNAME% ... aktualni uzivatel\\

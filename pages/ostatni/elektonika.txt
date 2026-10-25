@@ -17,14 +17,14 @@
   
   ==433==
   [[http://arduino8.webnode.cz/news/lekce-20-arduino-a-vyuziti-433-92-mhz/|Lekce jak na 433]]\\
-  [[http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html|nakup 433]]<br
+  [[http://arduino-shop.cz/arduino/1003-arduino-433mhz-vysilac-prijimac-1427821401.html|nakup 433]]
   [[http://robotstore.cz/obchod/arduino/433mhz-vysilac-a-prijimac-sada-arduino-modulu/|jiny nakup 433]]\\
   
   
   ==ATMega:==
   
 
-  [[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]<br/>
+  [[http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html|gotronik.pl]]
   
 
 

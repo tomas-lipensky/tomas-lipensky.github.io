@@ -56,7 +56,6 @@ mkfstools -i testdisk.vmdk testclone.vmdk -d thin ... naklonuje disk (bytvori ko
 vmkfstools -U testdisk.vmdk ... smaze existujici disk  
 vmkfstools -E testclone.vmdk test.vmdk ... prejmenuje disk  
 
-<a name="snapshot|]]
 ### Snapshoty, ESXv5
 
 vim-cmd vmsvc/get.snapshotinfo 3 ... informate o snapshotu  

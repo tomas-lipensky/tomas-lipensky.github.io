@@ -22,7 +22,6 @@ Administrace Oracle se nachazi na strankach [[oracle.html|Oracle]].
 </dl>
 
 
-<a name="odkazy|]]
 ====Externi odkazy====
 
 
@@ -50,7 +49,6 @@ Administrace Oracle se nachazi na strankach [[oracle.html|Oracle]].
 ===Spusteni SQL skriptu v sqlplus===
 @/tmp/createtable.sql\\
 
-<a name="tabulky|]]
 ====Tabulky====
 
 ===Datove typy pro tabulky===
@@ -84,7 +82,6 @@ CREATE TABLE nakupy (\\
 ===Popis tabulky===
 DESCRIBE zakaznici; popise sloupce, promenne a podminky nenulovosti tabulky zakaznici\\
 
-<a name="zaznamy|]]
 ====Zaznamy v tabulce====
 
 ===Vkladani===
@@ -99,7 +96,6 @@ UPDATE zakaznici SET jmeno = 'Albert' WHERE id_zakaznika = 1; ... modifikuje zaz
 ===vypis===
 SELECT * FROM zakaznici;\\
 
-<a name="plsql|]]
 ====PL/SQL====
 
 PL/SQL (Procedural Laguage) rozsiruje moznosti SQL o bloky, deklarace promennych, podminky, smycky, kursory a definice procedur a funkci

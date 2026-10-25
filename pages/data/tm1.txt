@@ -7,7 +7,6 @@
 <dt>[[#odkazy|Externi odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[http://www-01.ibm.com/support/knowledgecenter/SS9RXT/welcome|IBM Knowledge Center pro Cognos TM1]]\\
 [[http://czm.fel.cvut.cz/vyuka/A4M33CPM/Download/tm1_ug.pdf|Users guilde]] pro TM1\\

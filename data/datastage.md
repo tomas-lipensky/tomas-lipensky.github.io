@@ -2,11 +2,6 @@
 
 ### Index stranky
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Odkazy
 
 [IIS - dokumentace](http://www-01.ibm.com/support/docview.wss?uid=swg27041358#qs)  
@@ -18,7 +13,6 @@
 [IBM InfoSphere Information Server, system requirements](http://www-01.ibm.com/support/docview.wss?uid=swg21315971)  
 [Datastage tutorial](http://etl-tools.info/en/datastage/datastage_tutorial.htm)  
 
-<a name="portfolio|]]
 ### Komponenty
 
 Datastage (Infosphere Information Server) se sklada z nekolika komponent:

@@ -67,7 +67,6 @@ Seznam programovacich jazyku, se kterymi jsem se setkal a pouzival je na ruznych
   <dd>[Java programovani pro web - tutorial na linux zone](http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179)</dd>
 </dl>
 
-<a name="dev-infrastruktura|
 ### Infrastruktura pro vyvoj produktu
 
 [Amalgam8](https://developer.ibm.com/open/amalgam8/) - Opensource platforma - integruje a loadbalancuje mikrosluzby  

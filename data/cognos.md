@@ -6,7 +6,6 @@
 <dt>[Externi odkazy](#odkazy)</dt>
 </dl>
 
-<a name="odkazy|]]
 ### Externi odkazy
 
 [Cognos BI training](www.ibm.com/cognos/training)  
@@ -18,7 +17,6 @@
 [IBM Cognos Proven Practices: IBM Cognos 10 Dynamic Query Analyzer User Guide](http://www.ibm.com/developerworks/data/library/cognos/infrastructure/cognos_specific/page578.html)  
 [Logging Console and Monitoring](http://www.ibm.com/developerworks/data/library/cognos/page80.html)  
 
-<a name="portfolio|]]
 ### Cognos portfolio
 
 Cognos BI je zakladni produkt, jsou k dispozici dalsi placene nadstavby - FPM (financial performacne mangement) a nastroj pro KPI  

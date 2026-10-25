@@ -4,24 +4,16 @@ ORS - metadata pro Informatica MDM
 
 ### Obsah
 
-<dl>
-<dt>[Externi odkazy](#odkazy)</dt>
-<dt>[Interni odkazy](#interni)</dt>
-</dl>
-
-<a name="odkazy|]]
 ### Externi odkazy
 
 [comunity.informatica.com](https://community.informatica.com/message/111559)  
 [Install guide](http://www.scribd.com/doc/239239225/MDM-901-Install-Guide#scribd)  
 [Informatica for beginners](http://www.deepinopensource.com/informatica-tutorials-beginners/)  
 
-<a name="interni|]]
 ### Interni odkazy
 
 [WAS](was.html)  
 
-<a name="url|]]
 ### URL aplikace
 
 http://IP:7507/ ... MDM aplikace  

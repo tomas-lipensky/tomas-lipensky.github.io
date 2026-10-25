@@ -10,4 +10,4 @@
 
 ##### ATMega:
 
-[gotronik.pl](http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html)<br/>
+[gotronik.pl](http://www.gotronik.pl/zestawyuruchomieniowe/mod_avr_atmega16v1.html)

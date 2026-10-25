@@ -29,11 +29,11 @@ lsacl ... ukaze ACL souboru\\
 ====FS - souborove systemy====
 /etc/fstab ... FS, ktere se mountuji pri startu OS\\
 bdf ... ukaze volne miso na FS\\
-convertfs ... konverze FS aby podporoval dlouhe nazvy<br />
-dcopy ... kopirovani FS<br />
-edquota ... edituje kvoty<br />
-extendfs -F vxfs /dev/vg01/rdatavol ... (extend file system) zvetsi odmountovany VxFS na LV rdatavol na maximalni velikost LV<br />
-fsadm ... (file system administrate) meni namountovany FS (musi byt nainstalovany balicek)<br />
+convertfs ... konverze FS aby podporoval dlouhe nazvy
+dcopy ... kopirovani FS
+edquota ... edituje kvoty
+extendfs -F vxfs /dev/vg01/rdatavol ... (extend file system) zvetsi odmountovany VxFS na LV rdatavol na maximalni velikost LV
+fsadm ... (file system administrate) meni namountovany FS (musi byt nainstalovany balicek)
 fsadm -F vxfs -E /data ... ukaze statistiku fragmentace extentu (fragmentu) souboru na FS\\
 fsadm -F vxfs -D /data ... ukaze statistiku fragmentace adresaru\\
 fsadm -F vxfs -de -t 600 ... defragmentuje soubory i adresare po dobu max. 600 sekund\\
@@ -42,23 +42,23 @@ fsadm -F vxfs /data ... ukaze, zda FS /data podporuje soubory delsi nez 2 GB\\
 fsadm -F vxfs -o largefiles /data ... zapne podporu velkych souboru\\
 fsck -F vxfs /dev/vg01/rdatavol... (file system check) oprava poskozeneho, nekonzistentniho FS (zkontroluje podle jurnalu\\
 fsck -F vxfs -o full,nolog /dev/vg01/rdatavol ... Otestovani a oprava celeho VxFS, ne podle jurnalu\\
-fsdb ... (file system debugger) prohlizeni jurnalu FS a opravovani FS<br />
+fsdb ... (file system debugger) prohlizeni jurnalu FS a opravovani FS
 fstyp -v /dev/vg00/rlvol1 ... zjisti typ FS na LV lvol1, -v parametry FS\\
-quotacheck ... otestuje qvoty<br />
-mkfs ... make file system<br />
+quotacheck ... otestuje qvoty
+mkfs ... make file system
 mkfs -m /dev/vg01/rdatavol ... ukaze parametry FS na LV datavol\\
 mkfs -F vxfs -o ninode=unlimited,bsize=1024,version=6,inosize=265,logsize=2048,largefiles /dev/vg01/rdatavol 16384 ... vytvori FS na datavol s konkretnimi parametry\\
 mediainit -S -c 0 -t 3 /dev/disk/disk1 ... premaze zarizeni 3x samyma nulama, znici FS a vsechny data\\
 mount -F cdfs -o ro,cdcase,rr /dev/disk/disk1 /dvd ... namountuje CD/DVD\\
 mount -F lofs /data /optdata ... pripoji pripojeny FS /data taky na /optdata - podobne jako ln -s /data /optdata (Loopback FS)\\
 mount -F memfs -o size=1g -o ninode=1024 /tmp ... pripoje FS /tmp typu RAM disk, max. velikost 1g, max 1024 souboru (potrebuje balicek MemFS)\\
-newfs /dev/rdisk/hdisk3 ... vytvori novy file system HFS, nebo VxFS na hdisk3, to podle definice v /etc/default/fs<br />
-newfs_hfs ... Vytvori HFS FS<br />
+newfs /dev/rdisk/hdisk3 ... vytvori novy file system HFS, nebo VxFS na hdisk3, to podle definice v /etc/default/fs
+newfs_hfs ... Vytvori HFS FS
 newfs_vxfs ... Vytvori VxFS (JFS - Journaled FS)\\
 newfs -F hfs -R 1024 /dev/rdisk/disk2 ... vytvori HFS na zacatku hdisk2 a necha 1024 MB na konci volne pro swap\\
-pvcreate -B /dev/dsk/c2t6d0; mkboot /dev/dsk/c2t6d0 ... vytvareni bootovaciho zaznamu<br />
+pvcreate -B /dev/dsk/c2t6d0; mkboot /dev/dsk/c2t6d0 ... vytvareni bootovaciho zaznamu
 swlist -l product OnlineJFS* ... zjisti, zda je nainstalovany online meneni velikosti FS\\
-tunefs ... nastaveni parametru FS<br />
+tunefs ... nastaveni parametru FS
 /sbin/fs/vxfs/vxfsconvert /dev/vg01/rdatavol ... prevede FS HFS na VxFS. Je potreba minimalne 15% volneho mista a po konverzi fsck\\
 vxtunefs ... nastaveni parametru VxFS FS\\
 vxumopunt -o force /data ... odmountuje hrubym zpusobem (zabije procesy) FS /data\\
@@ -69,7 +69,7 @@ swapon /dev/rdisk/disk4 ... vytvori swap na hdsik4\\
 swapon -e /dev/rdisk/disk2 ... predtim jsme nechali na konci 1GB nista. Timto tam udelame ze zbytku swap\\
 swapon -p 4 -l 1024m /data ... Vytvori swapovaci misto velike az 1024MB, priorita swapovani 4 (standartne 1) v adresari /data\\
 swapoff /dev/rdisk/disk4 ... (11i v3) zrusi pouzivani disku4 jako swap\\
-swapinfo ... informace o jednotlivych zarizenich swapu a jejich vyuziti<br />
+swapinfo ... informace o jednotlivych zarizenich swapu a jejich vyuziti
 
 ====LVM - Logical Volume Manager====
 lvmadm -t ... ukaze, jake verze LVM podporuje OS a jake parametry LVM\\
@@ -82,40 +82,40 @@ swlist Base-VxVM-50 Base-VXVM ... zjsiti, zfda jsoun nainstalovane balocky pro V
 
 ====LV - Logical Volume====
 
-lvdisplay /dev/vgdata/swapvol ... (logical volume display) ukaze hlavicku v LV swapvol z VG vgdata<br />
+lvdisplay /dev/vgdata/swapvol ... (logical volume display) ukaze hlavicku v LV swapvol z VG vgdata
 lvdisplay -v /dev/vg02/lv02 ... ukaze podrobne informace o LV lv02 z VG vg01\\
-lvcreate -L 16 -n swapvol vg01 ... (logical volume create) vytvori LV swapvol v VG vg01 o velikosti 16MB<br />
+lvcreate -L 16 -n swapvol vg01 ... (logical volume create) vytvori LV swapvol v VG vg01 o velikosti 16MB
 lvcreate vg01 ... vytvori LV lvol0x (x nejmensi nepouzite cislo ve VG) ve VG vg01 o velikost 0MB\\
-lvlnboot <br />
-lvextend -L 16 /dev/vg01/datavol /dev/disk/disk1 ... (logical volume extend) zvetsi LV datavol v vg01 <b>na</b> 16MB, prida misto z PV disk1<br />
-lvreduce -L 8 /dev/vg01/rdatavol ... (logical volume reduce) zmensi LV na 8 MB, nebo ubere mirror<br />
-lvremove /dev/vg01/datavol ... smaze LV datavol<br />
-lvrmboot<br />
+lvlnboot 
+lvextend -L 16 /dev/vg01/datavol /dev/disk/disk1 ... (logical volume extend) zvetsi LV datavol v vg01 <b>na</b> 16MB, prida misto z PV disk1
+lvreduce -L 8 /dev/vg01/rdatavol ... (logical volume reduce) zmensi LV na 8 MB, nebo ubere mirror
+lvremove /dev/vg01/datavol ... smaze LV datavol
+lvrmboot
 
 ====VG - Volume group====
-vgcfgrestore -n vg00 /dev/dsk/c2t0d0 ... Obnovi nastaveni nove vymeneneho PV (musi byt neaktivni)<br />
-vgchange -a y datavg ... Prepne grupu do vary on (aktivni VG) VG datavg<br /> 
-vgcreate vgoracle /dev/disk/disk2 /dev/disk/disk3 ... (volume group create) vytvori VGDA na discich disk2, disk3 a priradi je do vg01. Na 11i v3 vytvori i DSF soubory<br />
+vgcfgrestore -n vg00 /dev/dsk/c2t0d0 ... Obnovi nastaveni nove vymeneneho PV (musi byt neaktivni)
+vgchange -a y datavg ... Prepne grupu do vary on (aktivni VG) VG datavg 
+vgcreate vgoracle /dev/disk/disk2 /dev/disk/disk3 ... (volume group create) vytvori VGDA na discich disk2, disk3 a priradi je do vg01. Na 11i v3 vytvori i DSF soubory
 mkdir /dev/vg02; mknod /dev/vg02/group c 64 0x020000; chown -R root:sys /dev/vg02; chmod -R 755 /dev/vg02; vgcreate vg02 /dev/dsk/c0t1d1 /dev/dsk/c1t1d1... na HP < v3 pripravi DSF a vytvori VG. 0xXX je poradi VG. Pokud je vice cest k disku, pridaji se vsechny\\
-vgchange<br />
-vgchange -a n vg01 ... deaktivuje VG vg01<br />
+vgchange
+vgchange -a n vg01 ... deaktivuje VG vg01
 vgcreate -V 2.1 -S 1t -s 4 vg01 /dev/disk/disk1 ... vytvori VG verze LVM 2.1, maximalni velikos VG 1TB, velikost Physical Excent 4 MB\\
-vgdisplay ... (volume group display) ukaze vsechny VG (jen hlavicky)<br />
+vgdisplay ... (volume group display) ukaze vsechny VG (jen hlavicky)
 vgdisplay -v vg02 ... ukaze vsechny informace o VG vg02, vcetne LV a PV\\
-vgexport vg01 ... exportuje (zrusi definice v OS) VG vg01, da se opet importovat<br />
-vgextend vg01 /dev/disk/disk3 ... Prida do VG vg01 disk disk3<br />
-vgimport<br />
+vgexport vg01 ... exportuje (zrusi definice v OS) VG vg01, da se opet importovat
+vgextend vg01 /dev/disk/disk3 ... Prida do VG vg01 disk disk3
+vgimport
 vgreduce vg01 /dev/dsik/disk3 ... odebere disk 3 z VG vg01\\
-vgremove vg01; rm -ir /dev/vg01 ... smaze VG vg01 (je treba vymazat i DSF, v 11i v3 prepinac -X)<br />
-vgscan -apv ... oscanuje PV vsech VG a znovu vytvori /etc/lvmtab<br />
-vgsync vg00 ... synchronizuje VG vg00<br />
+vgremove vg01; rm -ir /dev/vg01 ... smaze VG vg01 (je treba vymazat i DSF, v 11i v3 prepinac -X)
+vgscan -apv ... oscanuje PV vsech VG a znovu vytvori /etc/lvmtab
+vgsync vg00 ... synchronizuje VG vg00
 
 ====PV - Physical Volume====
 
-pvchange -a n /dev/dsk/c2t0d0 ... nastavi PV c2t0d0 jako neaktivni<br />
+pvchange -a n /dev/dsk/c2t0d0 ... nastavi PV c2t0d0 jako neaktivni
 pvcreate /dev/rdisk/disk5 ... (physical volume create) vytvori PV (na zacatku disku LVM hlavicky) a pripravi disk na vlozeni do VG\\
 pvcreate -f /dev/rdsk/c1d1t1 ... vytvori PV, pokud na disku uz nekdy PV existoval (prepise jej)\\
-pvdisplay /dev/disk/disk1 ... (physical volume display) ukaze hlavicku PV disk1<br />
+pvdisplay /dev/disk/disk1 ... (physical volume display) ukaze hlavicku PV disk1
 pvdisplay -v /dev/dsk/c1t1d1 ... ukaze podrobne informace o PV c1t1d1 vcetne jednotlivych excentu z LV\\
 pvmode /dev/disk/disk3 /dev/disk/disk2 ... presune vsechny fyzicke excenty z disku3 na disk2\\
 
@@ -150,33 +150,33 @@ setboot -h x/x.x.x ... zmeni HA alternativni cestu k boot disku (PA-RISC i Integ
 setboot -p x/x.x.x ... zmeni primarni cestu k boot disku (PA-RISC i Integrity)\\
 
 ====System backup====
-fbackup -f - -i /var ... zazalohuje /var, vystup jde na standartni vystup<br />
-frecover -R -f /dev/rmt0 ... obnoveni vsech souboru ze zalohy na pasce<br />
-<br />
-dump /usr ... zazalohuje FS /usr na pasku<br />
-restore ... obnovi FS z pasky<br />
-<br />
-rdump, rrestore <br />
-vgcfgdump, vgcfgrestore <br />
-<br />
+fbackup -f - -i /var ... zazalohuje /var, vystup jde na standartni vystup
+frecover -R -f /dev/rmt0 ... obnoveni vsech souboru ze zalohy na pasce
+
+dump /usr ... zazalohuje FS /usr na pasku
+restore ... obnovi FS z pasky
+
+rdump, rrestore 
+vgcfgdump, vgcfgrestore 
+
 tar cf /dev/rmt/0m /var ... 
-mt -f /dev/rmt/0mn rew<br />
-mt -f /dev/rmt/0mn fsf 1<br />
-tar xvf /dev/rmt/0m soubor<br />
+mt -f /dev/rmt/0mn rew
+mt -f /dev/rmt/0mn fsf 1
+tar xvf /dev/rmt/0m soubor
 
 
 ====Omniback====
-mc -r DS ... (media changer) vypise stav menice medii<br />
-omniabort -ses 2008/08/05-28 ... prerusi backup<br />
-omnistat ... (omnibackup status) Vypise stav backupu<br />
+mc -r DS ... (media changer) vypise stav menice medii
+omniabort -ses 2008/08/05-28 ... prerusi backup
+omnistat ... (omnibackup status) Vypise stav backupu
 omnidb ... pristup k databazi Omnibackupu\\
-omnidb -ses 2008/08/05-28 -rep | more ... Vypise stati<br />
-omnidatalist<br />
-omnidatashedule<br />
-omnidbcheck -extended<br />
+omnidb -ses 2008/08/05-28 -rep | more ... Vypise stati
+omnidatalist
+omnidatashedule
+omnidbcheck -extended
 omnimm ... ovladani medii Omnibackupu\\
-omnimm -eject ESL9322 42 86 37 10 ... (omniback media manager<br />
-xomni<br />
+omnimm -eject ESL9322 42 86 37 10 ... (omniback media manager
+xomni
 
 ====Ignite backup - bootovatelny backup====
 swlist IGNITE ... zjisti, zda je nainstalovany ignite\\
@@ -185,9 +185,9 @@ swlist IGNITE ... zjisti, zda je nainstalovany ignite\\
 /var/opt/ignite/client/recovery/archive_content ... dalsi definice pro ignite sitovy backup\\
 /var/opt/ignite/recovery/latest/recovery/latest/recovery.log ... log ignite\\
 /var/opt/ignite/clients/clients/client/recovery/latest/recovery.log ... log pro net ingite backup\\
-crontab -l | grep -i sauv_ignite<br />
-crontab -l | grep -i /usr/local/bin/sauv_system<br />
-/opt/ignite/bin/make_tape_recovery ... Vytvoreni ignite backupu na pasku<br />
+crontab -l | grep -i sauv_ignite
+crontab -l | grep -i /usr/local/bin/sauv_system
+/opt/ignite/bin/make_tape_recovery ... Vytvoreni ignite backupu na pasku
 make_tape_recovery -x include=/home/root -x inc_cross /data ... vytvori ignite backup vcetne /home/root, a vcetne FS /data\\
 make_tape_recovery -x inc_entire=vg00 -x exclude=/tmp ... zazalohuje cely VG vg00 krome /tmp\\
 make_tape_recovery -a /dev/rtape/tape00_BESTn -d "Nazev archivu" ... zazalohuje na pasku tape00, nastavi neprevijet, popis bude "Nazev archivu"\\
@@ -213,22 +213,22 @@ drd mode -? ... ukaze volitelne prepinace\\
 
 
 ====Rozsireni LV:====
-/usr/sbin/cmviewcl ... check up cluster<br />
-bdf /opt<br />
-lvdisplay /dev/vg00/lvol6<br />
-vgdisplay /dev/vg00<br />
-swlist -l product | grep -i online ... Can I do it online<br />
-lvextend  -l 239 /dev/vg00/lvol6<br />
-fsadm -F vxfs -b 978944 /opt ... if I can do it online<br />
-umount /dev/vg00/lvol6; extendfs /dev/vg00/lvol6; mount /dev/vg00/lvol6 ... if I'm not able to do it online<br />
-<b>if cluster:</b><br />
-vgexport -v -s -p -m vg01.map vg01 ... on node A and copy vg01.map to node B<br />
-ll /dev/vg01 ... on node B ( check minor number for vg01. ex : 0x010000)<br />
-vgexport vg01 ... on node B<br />
-mkdir /dev/vg01 ... on node B<br />
-mknod /dev/vg01/group c 64 0x010000 ... on node B<br />
-vgimport -v -s -m /tmp/vg01.map vg01 ... on node B<br />
-check /etc/lvmtab. make sure vg01 already change. ... on node B<br />
+/usr/sbin/cmviewcl ... check up cluster
+bdf /opt
+lvdisplay /dev/vg00/lvol6
+vgdisplay /dev/vg00
+swlist -l product | grep -i online ... Can I do it online
+lvextend  -l 239 /dev/vg00/lvol6
+fsadm -F vxfs -b 978944 /opt ... if I can do it online
+umount /dev/vg00/lvol6; extendfs /dev/vg00/lvol6; mount /dev/vg00/lvol6 ... if I'm not able to do it online
+<b>if cluster:</b>
+vgexport -v -s -p -m vg01.map vg01 ... on node A and copy vg01.map to node B
+ll /dev/vg01 ... on node B ( check minor number for vg01. ex : 0x010000)
+vgexport vg01 ... on node B
+mkdir /dev/vg01 ... on node B
+mknod /dev/vg01/group c 64 0x010000 ... on node B
+vgimport -v -s -m /tmp/vg01.map vg01 ... on node B
+check /etc/lvmtab. make sure vg01 already change. ... on node B
 
 ====Zrcadleni VG00 - PA-RISC====
 pvcreate -fB /dev/rdisk/diskb ... vytvori PV s mistem pro LIF (boot sektor)\\

@@ -283,7 +283,6 @@ db2 "select char(tabname,30),stats_time from syscat.tables where (stats_time &lt
 SLECT * FROM table FETCH FIRST 10 ROWS ONLY ... privnich 10 radku\\
 
 
-<a name="autentifikace|]]
 ====Autentifikace, GSS pluginy====
 [[https://www.ibm.com/support/knowledgecenter/SSEPGG_9.7.0/com.ibm.db2.luw.apdv.sample.doc/doc/java_jdbc/s-README.html|JDBC sample k gssapi_simple]]\\
 

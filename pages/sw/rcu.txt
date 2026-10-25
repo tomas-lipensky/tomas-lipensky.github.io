@@ -7,24 +7,19 @@
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[http://ariklalo.com/2012/05/26/repository-creation-utility-rcu-11-1-1-6-0-installation/|Navod na instalaci RCU]]\\
 
-<a name="interni|]]
 ====Interni odkazy====
 
-<a name="Popis|]]
 ====Popis====
 
 OFM RCU (Repository Creation Utility) je nastroj na definovani repozitaru pro jednotlive Oracle produkty (nova architektura Oracle produktu)\\
 
 
-<a name="soubory|]]
 ====Soubory/cesty====
 \\
 
-<a name="prikazy|]]
 ====Prikazy====
 
 

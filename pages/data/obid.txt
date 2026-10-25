@@ -7,14 +7,11 @@
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[http://en.wikipedia.org/wiki/Oracle_Discoverer|Popis na wiki]]\\
 
-<a name="interni|]]
 ====Interni odkazy====
 
-<a name="Popis|]]
 ====Popis====
 
 Oracle Business Inteligence Discoverer (drive jen Oracle Discverer) je nyni soucasti Oracle Fusion Middleware suite a je to nastroj na AdHoc reporty v ramci Oracle Database prostredi. 

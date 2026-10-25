@@ -7,7 +7,6 @@
 <dt>[[#interni|Interni odkazy]]</dt>
 </dl>
 
-<a name="odkazy|]]
 ====Externi odkazy====
 [[https://en.wikipedia.org/wiki/Pentaho|Wikipedie - Pentaho]]\\
 [[http://www.pentaho.com/|pentaho.com]]\\
