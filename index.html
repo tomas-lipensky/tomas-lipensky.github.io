@@ -43,7 +43,7 @@ function renderList() {
   const cur = location.hash.slice(1);
   $("files").innerHTML = (byDir[$("dir").value] || []).sort()
     .filter(p => p.toLowerCase().includes(q))
-    .map(p => `<a href="#${encodeURI(p)}" class="${p === decodeURI(cur) ? "active" : ""}">${p.split("/").slice(1).join("/")}</a>`).join("");
+    .map(p => `<a href="#${encodeURI(p)}" class="${p === decodeURI(cur) ? "active" : ""}">${p.split("/").slice(1).join("/").replace(/\.md$/, "")}</a>`).join("");
 }
 
 async function load() {
