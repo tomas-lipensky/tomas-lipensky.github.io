@@ -38,6 +38,7 @@ Invoke-RestMethod -Method Put -ContentType "application/json" -Headers $Headers 
 az login  
 TOKEN=$(az account get-access-token | jq .accessToken | sed -e 's/"//g') ... tady ziskame bareer kod  
 curl --location -H "Content-Type: application/json" -H 'Authorization: Bearer $TOKEN'  -X GET 'https://management.azure.com/subscriptions/YYY/providers/Microsoft.Compute/skus?api-version=2019-04-01'  
+
 ====SavedSearches 2017-03-03 - update/create====
 
 ```
