@@ -1,4 +1,6 @@
-# IBM Infosphere - Datastage
+---
+title: IBM Infosphere - Datastage
+---
 
 ## Odkazy
 

@@ -1,4 +1,6 @@
-# sunos
+---
+title: sunos
+---
 
 ## Interni odkazy
 

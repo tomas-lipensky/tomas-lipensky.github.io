@@ -1,4 +1,6 @@
-# HP-UX - Nastaveni site
+---
+title: HP-UX - Nastaveni site
+---
 
 ## balicky pro sit
 

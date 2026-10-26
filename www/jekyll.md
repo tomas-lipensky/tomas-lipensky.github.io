@@ -1,4 +1,6 @@
-# Jekyll
+---
+title: Jekyll
+---
 
 Statický generátor HTML stránek z Markdown souborů
 

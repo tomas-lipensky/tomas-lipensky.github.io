@@ -1,4 +1,6 @@
-# Redis
+---
+title: Redis
+---
 
 Redis patri mezi nerelacni (NoSQL) natabaze, tedy databaze dvojic - (klic, hodnota). Couch DB je databaze, ktera bezi jako sluzba, tedy typu Server - Klient.
 Vychozi port pro Couch DB je 6349. Redis komunikuje pres Redis klienta, nebo pomoci knihoven (napr. pro Ruby). Redis ma silnou stranku v RAM cachingu, tedy dosahuje velmi dobre rychlosti. Diky cachovani zapisu je to rychla DB i na zapis, hrozi vsak riziko ztraty dat havarii.

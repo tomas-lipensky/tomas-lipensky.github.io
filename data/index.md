@@ -1,4 +1,6 @@
-# index
+---
+title: index
+---
 
 ## Architektura
 
@@ -67,7 +69,6 @@ Physical MDM
 [Apache Kafka](https://en.wikipedia.org/wiki/Apache_Kafka) ... stream processing platforma (streamy jako logy, audio, video, ...) - [pekny tutorial](https://www.tutorialspoint.com/apache_kafka/apache_kafka_integration_spark.htm)
 [Apache Spark](https://en.wikipedia.org/wiki/Apache_Spark) ... cluster framework pouzitelny napr. s Kafka. Komponenty - Spark SQL, Spark streaming, GraphX, MLib Machine Learning
 
-
 ## Nastroje na rizeni rustu dat
 
 IBM InfoSphere Optim Grow ... Aplikace na spravu politiky rustu dat - presouvani dat na levnejsi media, zalohovani, mazani atd.
@@ -77,7 +78,6 @@ IBM InfoSphere Optim Grow ... Aplikace na spravu politiky rustu dat - presouvani
 [Infosphere Guardium Data Encryption - GDE](gde.html) ... Nastroj na enkrypci a zpristupneni dat na zaklade politik
 
 ## Big Data
-
 
 Netezza
 [Teradata Warehouse](../db/td) - datovy sklad pro strukturovana data v zadu peta bajtu

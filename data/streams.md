@@ -1,4 +1,6 @@
-# IBM Streams
+---
+title: IBM Streams
+---
 
 ## Sluzby
 

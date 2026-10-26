@@ -1,4 +1,6 @@
-# unix
+---
+title: unix
+---
 
 ## Unixové prikazy
 

@@ -1,4 +1,6 @@
-# azure-agent
+---
+title: azure-agent
+---
 
 ## Hybrid Worker
 

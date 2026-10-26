@@ -1,4 +1,6 @@
-# Cognos BI
+---
+title: Cognos BI
+---
 
 ## Externi odkazy
 

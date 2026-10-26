@@ -1,4 +1,6 @@
-# Pentaho
+---
+title: Pentaho
+---
 
 ## Externi odkazy
 

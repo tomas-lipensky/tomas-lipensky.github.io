@@ -1,4 +1,6 @@
-# AI - Artificial Intelligence - umělá inteligence
+---
+title: AI - Artificial Intelligence - umělá inteligence
+---
 
 ## = Nástroje
 

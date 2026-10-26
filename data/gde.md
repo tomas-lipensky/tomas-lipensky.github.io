@@ -1,4 +1,6 @@
-# Infosphere Guardium Data Encryption - GDE
+---
+title: Infosphere Guardium Data Encryption - GDE
+---
 
 ## Externi odkazy
 

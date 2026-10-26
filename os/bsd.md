@@ -1,4 +1,6 @@
-# bsd
+---
+title: bsd
+---
 
 ## Interni odkazy
 

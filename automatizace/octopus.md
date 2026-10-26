@@ -1,4 +1,6 @@
-# Octopus
+---
+title: Octopus
+---
 
 ## Agent - Tentacle
 

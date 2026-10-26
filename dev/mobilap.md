@@ -1,4 +1,6 @@
-# Mobilni aplikace
+---
+title: Mobilni aplikace
+---
 
 ## Externi odkazy
 

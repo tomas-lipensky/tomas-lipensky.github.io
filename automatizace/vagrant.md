@@ -1,4 +1,6 @@
-# Vagrant
+---
+title: Vagrant
+---
 
 Abstrakcni vrstva pro virtualizacni reseni. Vagrant zajistuje jednotne
 ovladani mnoha virtualizacnich technologii - libvirt, virtualbox,

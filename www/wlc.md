@@ -1,4 +1,6 @@
-# Oracle WebLogic Server
+---
+title: Oracle WebLogic Server
+---
 
 ## Interni odkazy
 

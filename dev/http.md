@@ -1,4 +1,6 @@
-# WEB - http
+---
+title: WEB - http
+---
 
 Sitovy protokol ktery slouzi hlavne na prenos HTML stranek. Pracuje na TCP protokolu, je typu state-less, navaze spojeni, ziska co chce a ukonci spojeni. HTTP protokol se pripojuje k webovym (http) serverum, jako treba [Apache](/linux/services.html#httpd).
 HTTP oddeluje pozadavek (request) od odpovedi (reply) prazdnym radkem.

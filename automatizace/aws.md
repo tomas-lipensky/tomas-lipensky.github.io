@@ -1,4 +1,6 @@
-# aws
+---
+title: aws
+---
 
 [https://health.aws.amazon.com/health/status](https://health.aws.amazon.com/health/status) ... informace o výpadcích v AWS  
 [https://aws.amazon.com/](https://aws.amazon.com/)  

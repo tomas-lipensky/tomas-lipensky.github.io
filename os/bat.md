@@ -1,4 +1,6 @@
-# Scripting - batch files
+---
+title: Scripting - batch files
+---
 
 ## Externi odkazy
 

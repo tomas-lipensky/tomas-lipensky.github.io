@@ -1,4 +1,6 @@
-# BSD
+---
+title: BSD
+---
 
 ## Externí odkazy
 

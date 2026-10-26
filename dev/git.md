@@ -1,4 +1,6 @@
-# GIT
+---
+title: GIT
+---
 
 ## Externi odkazy
 

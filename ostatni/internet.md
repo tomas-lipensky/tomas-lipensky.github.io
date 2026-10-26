@@ -1,4 +1,6 @@
-# internet
+---
+title: internet
+---
 
 ## IT
 

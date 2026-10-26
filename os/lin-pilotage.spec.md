@@ -1,4 +1,6 @@
-# lin-pilotage.spec
+---
+title: lin-pilotage.spec
+---
 
 Name: pilotage
 Version: 3.6.6

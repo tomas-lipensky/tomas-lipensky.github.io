@@ -1,4 +1,6 @@
-# IBM Cloud Private
+---
+title: IBM Cloud Private
+---
 
 ## Externi odkazy
 

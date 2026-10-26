@@ -1,4 +1,6 @@
-# etc-chatscripts-xxx
+---
+title: etc-chatscripts-xxx
+---
 
 ABORT BUSY ABORT 'NO CARRIER' ABORT ERROR
 '' AT

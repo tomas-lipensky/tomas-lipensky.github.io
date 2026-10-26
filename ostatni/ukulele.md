@@ -1,4 +1,6 @@
-# Ukulele
+---
+title: Ukulele
+---
 
 [Přehled akordů](https://ukulelko.cz/ukulele-akordy/)  
 [https://www.evasuchankova.cz/jak-pokorit-akordicke-znacky-ve-zpevnicich/](https://www.evasuchankova.cz/jak-pokorit-akordicke-znacky-ve-zpevnicich/) ... vysvětlené akordy pro klavír  

@@ -1,4 +1,6 @@
-# MySQL/MariaDB
+---
+title: MySQL/MariaDB
+---
 
 MariaDB je komunitni verze MySQL, ktera vznikla po prevzeni projekty MySQL firmou Oracle. Zachovava si prikazovou kompatibilitu.
 

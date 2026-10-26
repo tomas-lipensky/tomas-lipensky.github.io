@@ -1,4 +1,6 @@
-# sitecore
+---
+title: sitecore
+---
 
 ## URL
 

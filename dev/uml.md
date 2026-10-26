@@ -1,4 +1,6 @@
-# UML - Unified Modeling Language
+---
+title: UML - Unified Modeling Language
+---
 
 ## Externí odkazy
 

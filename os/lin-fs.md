@@ -1,4 +1,6 @@
-# LINUX - Souborove systemy, disky, LVM, ...
+---
+title: LINUX - Souborove systemy, disky, LVM, ...
+---
 
 ## Soubory
 

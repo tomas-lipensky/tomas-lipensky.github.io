@@ -1,4 +1,6 @@
-# AIX - Sprava systemu, balicky, uzivatele, ...
+---
+title: AIX - Sprava systemu, balicky, uzivatele, ...
+---
 
 ## Externi odkazy
 

@@ -1,4 +1,6 @@
-# Solaris - ostatni prikazy
+---
+title: Solaris - ostatni prikazy
+---
 
 mt ... (magnetic tape) ovladani pasky
 ufsdump ... zalohovani fs

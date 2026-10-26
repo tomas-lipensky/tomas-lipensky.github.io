@@ -1,4 +1,6 @@
-# linux
+---
+title: linux
+---
 
 ## Linuxove distribuce
 

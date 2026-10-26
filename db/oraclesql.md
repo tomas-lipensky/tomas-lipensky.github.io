@@ -1,4 +1,6 @@
-# oraclesql
+---
+title: oraclesql
+---
 
 Administrace Oracle se nachazi na strankach [Oracle](oracle.html).
 

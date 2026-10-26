@@ -1,4 +1,6 @@
-# hp-partitions
+---
+title: hp-partitions
+---
 
 oarstatus ... informace o prostredcich ostatnich nParu  
 hpvmstatus ... informace o prostredcich ostatnich VM  

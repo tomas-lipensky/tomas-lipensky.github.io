@@ -1,4 +1,6 @@
-# Informatica
+---
+title: Informatica
+---
 
 Stary nazev pro PowerCenter byl Power Mart. Proto zkratky pm.
 

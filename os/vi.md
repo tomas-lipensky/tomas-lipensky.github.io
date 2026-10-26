@@ -1,4 +1,6 @@
-# vi
+---
+title: vi
+---
 
 [Souhrn ovladani](http://lagmonster.org/docs/vi.html)  
 

@@ -1,4 +1,6 @@
-# manpage
+---
+title: manpage
+---
 
 ```
 .TH PILOTAGE 1 LOCAL

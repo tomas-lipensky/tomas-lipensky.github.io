@@ -1,4 +1,6 @@
-# VS Code
+---
+title: VS Code
+---
 
 ## Klavesove zkratky
 

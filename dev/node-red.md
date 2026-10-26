@@ -1,4 +1,6 @@
-# Node-Red
+---
+title: Node-Red
+---
 
 ## Externi odkazy
 

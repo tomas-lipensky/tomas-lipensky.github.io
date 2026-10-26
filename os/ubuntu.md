@@ -1,4 +1,6 @@
-# ubuntu
+---
+title: ubuntu
+---
 
 ## 18.04
 

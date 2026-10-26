@@ -1,4 +1,6 @@
-# LINUX - X Windows
+---
+title: LINUX - X Windows
+---
 
 ## Externi odkazy
 

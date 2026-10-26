@@ -1,4 +1,6 @@
-# oracledb
+---
+title: oracledb
+---
 
 SQL prikazy pro Oracle jsou na strance [Oracle SQL](oraclesql).
 

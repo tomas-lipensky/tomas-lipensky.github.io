@@ -1,4 +1,6 @@
-# Watson Explorer
+---
+title: Watson Explorer
+---
 
 Puvodne Data Explorer od [Vivisimo](http://en.wikipedia.org/wiki/Vivisimo), pozdeji Vivisimo prevzala IBM a prejmenovala na IBM Infosphere Data Explorer, nyni IBM Watson Explorer. Data Explorer umi prochazet informacni zdroje, at jiz uvnitr
 podniku ci na internetu ci u obchodnich partneru, indexovat a kolektovat informace a nabizet jejich souhrn a vyhledavani. Komponenty WEX jsou [Zookeeper](https://zookeeper.apache.org/) (centralni spravce konfiguraci a synchronizaci sluzeb, podporujici clustery) a [Velocity](http://velocity.apache.org/engine/1.7/overview.html) (template engine - MVC pristup) od Apache.

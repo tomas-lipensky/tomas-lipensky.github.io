@@ -1,4 +1,6 @@
-# Oracle Warehouse Builder
+---
+title: Oracle Warehouse Builder
+---
 
 ## Externi odkazy
 

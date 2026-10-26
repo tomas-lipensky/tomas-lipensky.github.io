@@ -1,4 +1,6 @@
-# OpenWRD
+---
+title: OpenWRD
+---
 
 ## Typy routru a firmware
 

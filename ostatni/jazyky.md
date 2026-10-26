@@ -1,4 +1,6 @@
-# jazyky
+---
+title: jazyky
+---
 
 ## Angličtina
 

@@ -1,4 +1,6 @@
-# Java
+---
+title: Java
+---
 
 [java virtual machine (JVM)](../sw/java.html) obecne  
 [J2EE](../web/j2ee.html) vyvoj  

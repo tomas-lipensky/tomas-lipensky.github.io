@@ -1,4 +1,6 @@
-# WebSphere Application Server
+---
+title: WebSphere Application Server
+---
 
 ## Interni odkazy
 

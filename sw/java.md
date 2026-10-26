@@ -1,4 +1,6 @@
-# Java aplikace
+---
+title: Java aplikace
+---
 
 ## Interni a Externi odkazy:
 

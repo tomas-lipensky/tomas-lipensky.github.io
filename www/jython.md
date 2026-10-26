@@ -1,4 +1,6 @@
-# [WebSphere Application Server](was.html) - jython
+---
+title: [WebSphere Application Server](was.html) - jython
+---
 
 ## Externi odkazy
 

@@ -1,4 +1,6 @@
-# UNIX - C
+---
+title: UNIX - C
+---
 
 so ... shared objects - sdilene knihovny  
 .a ... staticke knihovny  

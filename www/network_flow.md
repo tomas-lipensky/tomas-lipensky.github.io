@@ -1,4 +1,6 @@
-# network_flow
+---
+title: network_flow
+---
 
 ## Inspekce sitoveho toku
 

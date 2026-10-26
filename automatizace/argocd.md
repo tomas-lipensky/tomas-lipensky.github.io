@@ -1,4 +1,6 @@
-# argocd
+---
+title: argocd
+---
 
 ## Argo CD CLI
 

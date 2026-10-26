@@ -1,4 +1,6 @@
-# aix-errpt
+---
+title: aix-errpt
+---
 
 ref code B181e436:
 it means that HMC lost communication with the server intermitantly

@@ -1,4 +1,6 @@
-# pac
+---
+title: pac
+---
 
 [https://findproxyforurl.com/pac-functions/](https://findproxyforurl.com/pac-functions/)
 

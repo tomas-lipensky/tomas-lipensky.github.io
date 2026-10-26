@@ -1,4 +1,6 @@
-# registry
+---
+title: registry
+---
 
 Bit , vyjadreni , popis
 

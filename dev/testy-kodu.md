@@ -1,4 +1,6 @@
-# testy-kodu
+---
+title: testy-kodu
+---
 
 ## Slovnicek
 

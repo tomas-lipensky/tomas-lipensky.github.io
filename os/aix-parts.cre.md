@@ -1,4 +1,6 @@
-# aix-parts.cre
+---
+title: aix-parts.cre
+---
 
 parts:
 part_number = "10001"

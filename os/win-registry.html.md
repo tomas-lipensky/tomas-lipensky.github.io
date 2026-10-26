@@ -1,4 +1,6 @@
-# win-registry.html
+---
+title: win-registry.html
+---
 
 ## WER dumpy
 

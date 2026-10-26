@@ -1,4 +1,6 @@
-# hp-dsf
+---
+title: hp-dsf
+---
 
 /dev/tty0p0 ... ternminal device file  
 /tev/ttyp0p0 ... modem dial-in  

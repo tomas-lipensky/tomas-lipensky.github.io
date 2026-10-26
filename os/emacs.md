@@ -1,4 +1,6 @@
-# emacs
+---
+title: emacs
+---
 
 Ctrl-A ... Home  
 Ctrl-E ... End  

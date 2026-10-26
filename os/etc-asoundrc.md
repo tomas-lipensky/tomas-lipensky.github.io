@@ -1,4 +1,6 @@
-# etc-asoundrc
+---
+title: etc-asoundrc
+---
 
 #definice zvkuoveho zarizeni - bluetooth, viz hcitool
 

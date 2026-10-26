@@ -1,4 +1,6 @@
-# WebSphere MQ
+---
+title: WebSphere MQ
+---
 
 ## Externi odkazy
 

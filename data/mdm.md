@@ -1,4 +1,6 @@
-# MDM CS - Colaborative Server (PIM, CE)
+---
+title: MDM CS - Colaborative Server (PIM, CE)
+---
 
 ## Externi odkazy
 

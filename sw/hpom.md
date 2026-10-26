@@ -1,4 +1,6 @@
-# HP Operations Manager
+---
+title: HP Operations Manager
+---
 
 ## Start/stop/status:
 

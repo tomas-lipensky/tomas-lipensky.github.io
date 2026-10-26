@@ -1,4 +1,6 @@
-# etc-ppp-peers-xxx
+---
+title: etc-ppp-peers-xxx
+---
 
 hide-password
 nopcomp

@@ -1,4 +1,6 @@
-# arabstina
+---
+title: arabstina
+---
 
 ## Odkazy
 

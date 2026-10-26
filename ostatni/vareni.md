@@ -1,4 +1,6 @@
-# vareni
+---
+title: vareni
+---
 
 ## Veganska kuchyne
 

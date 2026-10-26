@@ -1,4 +1,6 @@
-# Berkley DB
+---
+title: Berkley DB
+---
 
 ## db4-utils
 

@@ -1,4 +1,6 @@
-# Azure Runbook
+---
+title: Azure Runbook
+---
 
 ## Automatizacni spojeni
 

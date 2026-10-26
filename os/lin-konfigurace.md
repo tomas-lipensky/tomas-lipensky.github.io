@@ -1,4 +1,6 @@
-# lin-konfigurace
+---
+title: lin-konfigurace
+---
 
 ## Ubuntu
 

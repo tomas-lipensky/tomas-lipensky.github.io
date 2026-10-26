@@ -1,4 +1,6 @@
-# etc-xorg-conf
+---
+title: etc-xorg-conf
+---
 
 ```
 Load "freetype" ... modul odpovedny za TrueType Fonty *.ttf

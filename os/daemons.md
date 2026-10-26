@@ -1,4 +1,6 @@
-# Tomas Lipensky - UNIX - Sluzby
+---
+title: Tomas Lipensky - UNIX - Sluzby
+---
 
 ## [ntp](http://www.akadia.com/services/ntp_synchronize.html)
 

@@ -12,7 +12,6 @@ Basically Available, Soft-state Eventual consistency)
 
 ## Relacni (SQL) databaze
 
-
 [MariaDB/MySQL](mysql.html)
 [postgresql.html](postgresql.html)
 [IBM DB2](db2.html)

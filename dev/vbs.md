@@ -1,4 +1,6 @@
-# VBScript
+---
+title: VBScript
+---
 
 ## Externi odkazy
 

@@ -1,4 +1,6 @@
-# WEB - Javascript
+---
+title: WEB - Javascript
+---
 
 ## JS servery
 

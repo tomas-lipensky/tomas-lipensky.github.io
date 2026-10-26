@@ -1,4 +1,6 @@
-# zivotopis
+---
+title: zivotopis
+---
 
 Životopis na [LinkedIn](http://www.linkedin.com/in/tomaslipensky)  
 

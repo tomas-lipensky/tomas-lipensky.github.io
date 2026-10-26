@@ -1,4 +1,6 @@
-# bash
+---
+title: bash
+---
 
 ## Odkazy
 

@@ -1,4 +1,6 @@
-# WEB - xml, DTD, XSLT
+---
+title: WEB - xml, DTD, XSLT
+---
 
 ## XML
 

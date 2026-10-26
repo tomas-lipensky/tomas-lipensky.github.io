@@ -1,4 +1,6 @@
-# Google cloud
+---
+title: Google cloud
+---
 
 [https://cloud.google.com/](https://cloud.google.com/)
 

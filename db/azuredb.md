@@ -1,4 +1,6 @@
-# azuredb
+---
+title: azuredb
+---
 
 ## Azure DB
 

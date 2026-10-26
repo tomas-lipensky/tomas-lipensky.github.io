@@ -1,4 +1,6 @@
-# Windows
+---
+title: Windows
+---
 
 ## Externi odkazy
 

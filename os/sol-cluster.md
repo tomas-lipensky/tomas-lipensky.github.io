@@ -1,4 +1,6 @@
-# Solaris - Cluster
+---
+title: Solaris - Cluster
+---
 
 [info na Veritas Cluster](http://www.datadisk.co.uk/html_docs/veritas/veritas_cluster.htm)
 [info na Veritas Cluster Task](http://www.datadisk.co.uk/html_docs/veritas/veritas_cluster_tasks.htm)

@@ -1,4 +1,6 @@
-# BPM
+---
+title: BPM
+---
 
 Business Process Manager
 

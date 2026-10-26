@@ -1,4 +1,6 @@
-# Oracle Business Inteligence Discoverer
+---
+title: Oracle Business Inteligence Discoverer
+---
 
 ## Externi odkazy
 

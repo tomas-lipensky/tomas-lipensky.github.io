@@ -1,4 +1,6 @@
-# povidani
+---
+title: povidani
+---
 
 Ahoj a dobry den,
 jak již tušíte, jmenuji se Tomáš Lipenský. Pusobim v informatice, ale drive jsem ucil a ucil se matematiku.

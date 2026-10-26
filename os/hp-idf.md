@@ -1,4 +1,6 @@
-# hp-idf
+---
+title: hp-idf
+---
 
 3
 EFI 500MB

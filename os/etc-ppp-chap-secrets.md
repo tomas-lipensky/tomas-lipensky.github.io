@@ -1,3 +1,5 @@
-# etc-ppp-chap-secrets
+---
+title: etc-ppp-chap-secrets
+---
 
 "gprs" * "gprs"

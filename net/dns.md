@@ -1,4 +1,6 @@
-# dns
+---
+title: dns
+---
 
 [https://mxtoolbox.com](https://mxtoolbox.com) ... Online DNS informacni nastroj  
 10.1.2.3.xip.io ... prelozi lokalni IP adresy na jmena, sluzba provozovana [http://xip.io/](http://xip.io/)

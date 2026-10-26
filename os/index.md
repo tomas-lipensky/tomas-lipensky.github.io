@@ -1,7 +1,7 @@
 ---
 layout: none
+title: Operační systémy
 ---
-# Operační systémy
 
 ## Síťě
 

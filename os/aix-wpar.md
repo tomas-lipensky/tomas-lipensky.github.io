@@ -1,4 +1,6 @@
-# aix-wpar
+---
+title: aix-wpar
+---
 
 ## WPAR - Workload Partition
 

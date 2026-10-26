@@ -1,4 +1,6 @@
-# Hyperion Essbase - EPM
+---
+title: Hyperion Essbase - EPM
+---
 
 EPM (Enterprise Performance Management) se sklada ze 2 hlavnich soucasti - Planning & Forcasting nebo Financial Close & Reporting management.
 

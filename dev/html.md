@@ -1,4 +1,6 @@
-# WEB - html
+---
+title: WEB - html
+---
 
 [w3schools.com](http://www.w3schools.com/html/html_tables.asp)  
 [www.jakpsatweb.cz/html/](http://www.jakpsatweb.cz/html/) ... prehledny popis html prikazu  

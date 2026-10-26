@@ -1,4 +1,6 @@
-# PA-RISC
+---
+title: PA-RISC
+---
 
 ## PA-RISC boot
 

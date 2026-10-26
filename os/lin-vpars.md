@@ -1,4 +1,6 @@
-# LINUX - Virtualni pocitace
+---
+title: LINUX - Virtualni pocitace
+---
 
 * Pro virtualizaci W2012, W10, W8 je potreba zapnout ochranu pameti v biosu, jinak se OS nespusti.
 * Pri konverzi obrazu z VMWare do KVM se smeni SATA radic na IDE. [Je treba radic zmenit](https://rbgeek.wordpress.com/2013/08/13/converting-a-vmware-workstation-virtual-machine-to-kvm/), jinak nenastartuje system, hlavne Windows

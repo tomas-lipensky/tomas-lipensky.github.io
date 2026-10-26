@@ -1,4 +1,6 @@
-# Ant
+---
+title: Ant
+---
 
 Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma za ukol zautomatizovat vytvareni programu pomoci nadefinovanych cilu, tedy napriklad kompilace, provadeni testu atd.
 

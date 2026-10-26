@@ -1,4 +1,6 @@
-# azure-dotazy
+---
+title: azure-dotazy
+---
 
 ## Query Language
 

@@ -1,4 +1,6 @@
-# hpux
+---
+title: hpux
+---
 
 ## Interni odkazy
 

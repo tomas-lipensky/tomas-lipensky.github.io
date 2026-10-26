@@ -1,4 +1,6 @@
-# web
+---
+title: web
+---
 
 ## Staticke weby
 

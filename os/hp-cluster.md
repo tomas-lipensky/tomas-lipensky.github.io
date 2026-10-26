@@ -1,4 +1,6 @@
-# HP-UX - cluster (Serviceguard)
+---
+title: HP-UX - cluster (Serviceguard)
+---
 
 ## status
 

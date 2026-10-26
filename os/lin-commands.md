@@ -1,4 +1,6 @@
-# LINUX - Ostatni prikazy
+---
+title: LINUX - Ostatni prikazy
+---
 
 http://www.ghacks.net/2009/08/02/manage-your-active-directory-from-linux-with-adtool/ .. spravovani Active directory z Linuxu  
 Nagios ... monitoring  

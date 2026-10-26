@@ -1,4 +1,6 @@
-# LINUX - Site, sitove nastaveni
+---
+title: LINUX - Site, sitove nastaveni
+---
 
 ## Konfiguracni soubory
 

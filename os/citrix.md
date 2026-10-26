@@ -1,4 +1,6 @@
-# citrix
+---
+title: citrix
+---
 
 ## Citrix client
 

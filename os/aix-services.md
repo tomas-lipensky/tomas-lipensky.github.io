@@ -1,4 +1,6 @@
-# AIX - Sluzby
+---
+title: AIX - Sluzby
+---
 
 lssrc -a - list system resource center - list of services, which are on and off
 refresh -s syslogd ... znovun nacte demona syslogd

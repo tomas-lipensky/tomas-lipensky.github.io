@@ -1,4 +1,6 @@
-# init.ora
+---
+title: init.ora
+---
 
 control_files = (/lcg03/control.001.dbf, /lcg03/control.002.dbf, /lcg03/control.003.dbf)  
 db_name = lcg03  

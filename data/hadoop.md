@@ -1,4 +1,6 @@
-# Apache Hadoop
+---
+title: Apache Hadoop
+---
 
 ## Architektura
 

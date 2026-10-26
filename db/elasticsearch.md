@@ -1,4 +1,6 @@
-# elasticsearch
+---
+title: elasticsearch
+---
 
 ElasticSearch je produkt pro analytiku a prohledávání. Součástí je Kibana pro vizualizaci. Data jsou ukládána v indexech ve formě JSON. Pro ovládání a hledání nabízí REST API.
 

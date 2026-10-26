@@ -1,4 +1,6 @@
-# HashiCorp Vault
+---
+title: HashiCorp Vault
+---
 
 ## API
 

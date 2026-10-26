@@ -1,4 +1,6 @@
-# Java aplikace - Maven
+---
+title: Java aplikace - Maven
+---
 
 Apache Maven - nastroj na spravu projektu. Umoznuje vest projekt od definice projektu, kompilaci zdrojovych kodu v Jave, testovani kodu, vytvareni dokumentaci, vytvareni internetovych stranek a distribuci balicku.
 

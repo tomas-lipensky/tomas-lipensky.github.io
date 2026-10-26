@@ -1,4 +1,6 @@
-# AIX - LPAR a virtualizace
+---
+title: AIX - LPAR a virtualizace
+---
 
 Logicke oddily - LPARy se spravuji bud z HMC, nebo z IVM (Integrated Virtual Manager), jez ma stejnou IP jako VIO  
 

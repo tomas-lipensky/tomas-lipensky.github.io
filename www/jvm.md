@@ -1,4 +1,6 @@
-# JVM a prepinace
+---
+title: JVM a prepinace
+---
 
 1.Dhttp.proxyHost=webcache.mydomain.com ... nastaveni http proxy serveru  
 2.Dhttp.proxyPort=8080 ... nastaveni http proxy portu  

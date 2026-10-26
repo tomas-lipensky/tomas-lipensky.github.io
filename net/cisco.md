@@ -1,4 +1,6 @@
-# CISCO
+---
+title: CISCO
+---
 
 ## Okazy
 

@@ -1,4 +1,6 @@
-# HP-UX - Sprava systemu
+---
+title: HP-UX - Sprava systemu
+---
 
 ## Administrace
 

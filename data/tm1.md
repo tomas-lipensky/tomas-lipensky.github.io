@@ -1,4 +1,6 @@
-# Cognos TM1
+---
+title: Cognos TM1
+---
 
 ## Externi odkazy
 

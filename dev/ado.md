@@ -1,4 +1,6 @@
-# Azure DevOps
+---
+title: Azure DevOps
+---
 
 ## Struktura
 

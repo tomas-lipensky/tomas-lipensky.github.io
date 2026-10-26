@@ -1,4 +1,6 @@
-# copilot
+---
+title: copilot
+---
 
 ## Odkazy
 

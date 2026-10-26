@@ -1,4 +1,6 @@
-# IBM WebSphere plugin
+---
+title: IBM WebSphere plugin
+---
 
 ## Externi odkazy
 

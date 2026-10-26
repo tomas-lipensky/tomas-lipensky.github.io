@@ -1,4 +1,6 @@
-# liquibase
+---
+title: liquibase
+---
 
 Automatizace nasazování databázových změn. Verzování změn, nasazování změn spolu s verzí aplikace.
 

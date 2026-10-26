@@ -1,4 +1,6 @@
-# term-ansicolor
+---
+title: term-ansicolor
+---
 
 ## Perl - Term::ANSIColor
 

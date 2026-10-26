@@ -1,4 +1,6 @@
-# azcli
+---
+title: azcli
+---
 
 ## Azure CLI
 

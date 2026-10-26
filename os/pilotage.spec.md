@@ -1,4 +1,6 @@
-# pilotage.spec
+---
+title: pilotage.spec
+---
 
 Name: pilotage
 Version: 3.6.6

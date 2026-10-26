@@ -1,4 +1,6 @@
-# Sprava systemu - uzivatele, balicky, jadro, logy...
+---
+title: Sprava systemu - uzivatele, balicky, jadro, logy...
+---
 
 admintool ... manazer nastaveni systemu
 boot ... poradi bootovacich medii

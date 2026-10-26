@@ -1,4 +1,6 @@
-# ansible
+---
+title: ansible
+---
 
 ## Odkazy
 

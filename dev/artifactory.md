@@ -1,4 +1,6 @@
-# Artifactory
+---
+title: Artifactory
+---
 
 URL:
 

@@ -1,4 +1,6 @@
-# HP-UX - File Systemy, LVM, zalohovani, Storage
+---
+title: HP-UX - File Systemy, LVM, zalohovani, Storage
+---
 
 ## Soubory
 

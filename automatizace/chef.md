@@ -1,4 +1,6 @@
-# chef
+---
+title: chef
+---
 
 ## Chef
 

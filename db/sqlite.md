@@ -1,4 +1,6 @@
-# SQ Lite
+---
+title: SQ Lite
+---
 
 ## Externi odkazy
 

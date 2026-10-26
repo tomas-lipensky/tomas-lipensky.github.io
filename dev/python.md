@@ -1,4 +1,6 @@
-# Python / Jython
+---
+title: Python / Jython
+---
 
 Jython je iplementace Pythonu cela napsana v Jave.
 

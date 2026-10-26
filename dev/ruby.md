@@ -1,4 +1,6 @@
-# RUBY
+---
+title: RUBY
+---
 
 ## Externi odkazy
 

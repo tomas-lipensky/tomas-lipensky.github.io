@@ -1,4 +1,6 @@
-# Solaris - Sluzby
+---
+title: Solaris - Sluzby
+---
 
 ## Tisk
 

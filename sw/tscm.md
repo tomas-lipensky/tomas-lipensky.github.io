@@ -1,4 +1,6 @@
-# TSCM (Tivoli Security Complience Manager)
+---
+title: TSCM (Tivoli Security Complience Manager)
+---
 
 https://mssd.boulder.ibm.com/spv/jaccookbook/install.php
 

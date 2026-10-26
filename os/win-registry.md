@@ -1,4 +1,6 @@
-# win-registry
+---
+title: win-registry
+---
 
 ## Prace s registrama
 

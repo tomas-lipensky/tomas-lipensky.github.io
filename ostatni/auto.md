@@ -1,4 +1,6 @@
-# auto
+---
+title: auto
+---
 
 ## Asistencni sluzby
 

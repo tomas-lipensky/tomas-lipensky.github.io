@@ -1,4 +1,6 @@
-# networking
+---
+title: networking
+---
 
 ## IPsec VPN tunnel
 

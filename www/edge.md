@@ -1,4 +1,6 @@
-# Edge
+---
+title: Edge
+---
 
 dscontrol highavailability status ... status loadbalanceru  
 dscontrol highavailability takeover ... prepnuti sluzby loadbalanceru na druhy node (active &gt; pasive, pasive &gt; active)  

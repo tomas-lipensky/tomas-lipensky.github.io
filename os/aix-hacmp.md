@@ -1,4 +1,6 @@
-# AIX - HACMP - High Availability Cluster Multi-Processing
+---
+title: AIX - HACMP - High Availability Cluster Multi-Processing
+---
 
 ## start/stop
 

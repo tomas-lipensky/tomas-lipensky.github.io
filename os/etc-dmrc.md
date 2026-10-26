@@ -1,4 +1,6 @@
-# etc-dmrc
+---
+title: etc-dmrc
+---
 
 [Desktop]
 Language=en_US.utf8

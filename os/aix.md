@@ -1,4 +1,6 @@
-# aix
+---
+title: aix
+---
 
 ## Interni odkazy
 

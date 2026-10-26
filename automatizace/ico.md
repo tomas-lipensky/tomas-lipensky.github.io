@@ -1,4 +1,6 @@
-# ICO a SCO
+---
+title: ICO a SCO
+---
 
 Ibm Cloud Orchestrator a SmarCloud Orchestrator
 

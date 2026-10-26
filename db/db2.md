@@ -1,4 +1,6 @@
-# IBM DB2
+---
+title: IBM DB2
+---
 
 ## Odkazy
 

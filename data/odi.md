@@ -1,4 +1,6 @@
-# Oracle Data Integrator
+---
+title: Oracle Data Integrator
+---
 
 ## Externi odkazy
 

@@ -1,4 +1,6 @@
-# Oracle Business Inteligence
+---
+title: Oracle Business Inteligence
+---
 
 ## Externi odkazy
 

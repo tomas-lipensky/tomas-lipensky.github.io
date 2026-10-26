@@ -1,4 +1,6 @@
-# Cognos BIRT
+---
+title: Cognos BIRT
+---
 
 ## Interni odkazy
 

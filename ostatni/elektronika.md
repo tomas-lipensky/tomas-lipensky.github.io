@@ -1,4 +1,6 @@
-# elektronika
+---
+title: elektronika
+---
 
 ## Weby
 

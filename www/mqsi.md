@@ -1,4 +1,6 @@
-# WebSphere Message Broker
+---
+title: WebSphere Message Broker
+---
 
 Puvodni produkt byl MQ Series Integrator
 

@@ -1,4 +1,6 @@
-# finance
+---
+title: finance
+---
 
 ## Nástroje
 

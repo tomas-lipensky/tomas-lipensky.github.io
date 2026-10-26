@@ -1,4 +1,6 @@
-# Mongo DB
+---
+title: Mongo DB
+---
 
 Mongo DB patri mezi nerelacni (NoSQL) natabaze, tedy databaze dvojic - (klic, hodnota). Couch DB je databaze, ktera bezi jako sluzba, tedy typu Server - Klient.
 Vychozi port pro Couch DB je 27017.

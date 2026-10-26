@@ -1,4 +1,6 @@
-# Machine learning - Strojove uceni
+---
+title: Machine learning - Strojove uceni
+---
 
 ## Externi odkazy
 

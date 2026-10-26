@@ -1,7 +1,7 @@
 ---
 layout: base
+title: Automatizace
 ---
-# Automatizace
 
 ## Architektura
 

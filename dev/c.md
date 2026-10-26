@@ -1,4 +1,6 @@
-# C#
+---
+title: C#
+---
 
 apt install dotnet-runtime-3.1  
 apt install dotnet-sdk-3.1  

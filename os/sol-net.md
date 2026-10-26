@@ -1,4 +1,6 @@
-# Solaris - Sit, nastaveni site
+---
+title: Solaris - Sit, nastaveni site
+---
 
 ## Nastaveni site
 

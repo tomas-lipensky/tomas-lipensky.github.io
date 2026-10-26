@@ -1,4 +1,6 @@
-# IBM HTTP Server
+---
+title: IBM HTTP Server
+---
 
 $IHS ... cesta k IHS, vetsinou /opt/IBM/HTTPServer
 

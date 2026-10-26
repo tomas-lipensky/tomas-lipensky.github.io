@@ -1,4 +1,6 @@
-# JBoss Application Server
+---
+title: JBoss Application Server
+---
 
 [JBoss - Getting Started Guide](http://docs.redhat.com/docs/en-US/JBoss_Enterprise_Application_Platform/4.3/pdf/Getting_Started_Guide/JBoss_Enterprise_Application_Platform-4.3-Getting_Started_Guide-en-US.pdf)  
 [Dokumentace k JBoss](http://www.jboss.org/jbossas/docs)  

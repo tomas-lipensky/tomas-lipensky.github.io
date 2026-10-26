@@ -1,4 +1,6 @@
-# AIX - Souborove systemy, LVM, disky, ...
+---
+title: AIX - Souborove systemy, LVM, disky, ...
+---
 
 ## Pristupy k souborum
 

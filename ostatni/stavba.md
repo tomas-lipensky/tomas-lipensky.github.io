@@ -1,4 +1,6 @@
-# stavba
+---
+title: stavba
+---
 
 ## elektro zarizeni
 

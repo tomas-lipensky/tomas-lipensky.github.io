@@ -1,4 +1,6 @@
-# lin-manpage
+---
+title: lin-manpage
+---
 
 .TH PILOTAGE 1 LOCAL
 .SH NAME

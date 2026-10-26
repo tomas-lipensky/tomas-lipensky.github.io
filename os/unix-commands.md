@@ -1,4 +1,6 @@
-# UNIX - Prikazy
+---
+title: UNIX - Prikazy
+---
 
 ## Odkazy
 

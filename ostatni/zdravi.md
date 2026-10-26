@@ -1,4 +1,6 @@
-# zdravi
+---
+title: zdravi
+---
 
 ## Doplnky stravy
 

@@ -1,4 +1,6 @@
-# IBM Cloud
+---
+title: IBM Cloud
+---
 
 ## Odkazy
 

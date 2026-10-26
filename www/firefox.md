@@ -1,4 +1,6 @@
-# Firefox
+---
+title: Firefox
+---
 
 ## Externi odkazy
 

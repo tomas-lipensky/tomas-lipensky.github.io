@@ -1,4 +1,6 @@
-# Lean
+---
+title: Lean
+---
 
 Metodologie zahrnující Agile - iterativní přístup, nebo třeba Kanban. Lean (z Toyoty) dělá jen hodnotné věci, nehodnotné zahazuje. Principy: Eliminate waste, Amplify learning - learn from failures, Decision making - consider all  posibilities, Early delivery, Team empowerement - tým rozhoduje, Build ingerguty, See in larger picture. Value mapping. Brainstorming. Seven forms of waste. Každý proces dělá waste: Software waste - extra features, Partly work done, extra process in software, task switching, splitting tassk between teams, waiting teams, Defects. 5 kroku: Specifikovat hodnotu, identifikovat value stream, create flow, pull based system like Kanban, Continuous improvement
 

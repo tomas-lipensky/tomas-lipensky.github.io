@@ -1,4 +1,6 @@
-# Integrity
+---
+title: Integrity
+---
 
 ## Integrity boot
 

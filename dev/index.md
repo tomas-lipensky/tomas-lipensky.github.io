@@ -41,7 +41,6 @@ JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani
 [ Hudson a Unit testy](http://wiki.hudson-ci.org/display/HUDSON/Unit+Test)
 [ Jenkins](https://wiki.jenkins-ci.org/display/JENKINS/Unit+Test) a Unit testy
 
-
 **[Programovací jazyky](http://www.whoishostingthis.com/resources/programming/):**
  [C](c.html)
  [Java](java.html)
@@ -54,7 +53,6 @@ JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani
  [BAT soubory](../os/bat.html)
  [VBScript](vbs.html)
  [GUI Designer: Koda](http://www.autoitscript.com/forum/topic/32299-gui-designer-koda-1730/) - [Autoit](http://www.autoitscript.com/site/) - Skriptovaci nastroj na Windows
-
 
 **Programovani pro WEB:**
   [http](http.html)

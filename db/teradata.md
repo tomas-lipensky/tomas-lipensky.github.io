@@ -1,4 +1,6 @@
-# Teradate
+---
+title: Teradate
+---
 
 ## odkazy
 

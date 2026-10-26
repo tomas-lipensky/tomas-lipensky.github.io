@@ -1,4 +1,6 @@
-# azure-arm
+---
+title: azure-arm
+---
 
 [http://armviz.io/](http://armviz.io/) - graficke zobrazeni ARM sablony + editor  
 [ARM template](https://docs.microsoft.com/en-us/azure/templates/)  

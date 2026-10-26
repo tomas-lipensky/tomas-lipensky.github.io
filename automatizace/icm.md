@@ -1,4 +1,6 @@
-# IBM Cloud Manager
+---
+title: IBM Cloud Manager
+---
 
 ## Externi odkazy
 

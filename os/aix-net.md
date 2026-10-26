@@ -1,4 +1,6 @@
-# AIX - sitove nastaveni, tcp/ip
+---
+title: AIX - sitove nastaveni, tcp/ip
+---
 
 ## info
 

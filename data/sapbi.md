@@ -1,4 +1,6 @@
-# SAP Business Inteligence
+---
+title: SAP Business Inteligence
+---
 
 ## Externi odkazy
 

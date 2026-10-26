@@ -1,4 +1,6 @@
-# MySQL/MariaDB - Zmanda
+---
+title: MySQL/MariaDB - Zmanda
+---
 
 ## Externi odkazy
 

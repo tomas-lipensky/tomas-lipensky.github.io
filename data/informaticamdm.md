@@ -1,4 +1,6 @@
-# Informatica MDM
+---
+title: Informatica MDM
+---
 
 ORS - metadata pro Informatica MDM
 

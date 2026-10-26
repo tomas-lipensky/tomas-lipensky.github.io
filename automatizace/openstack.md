@@ -1,4 +1,6 @@
-# OpenStack
+---
+title: OpenStack
+---
 
 ## Odkazy
 

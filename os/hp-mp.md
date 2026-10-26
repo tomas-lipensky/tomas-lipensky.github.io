@@ -1,4 +1,6 @@
-# MP - Management Processor
+---
+title: MP - Management Processor
+---
 
 Defaultni uzivatel: Admin/Admin
 

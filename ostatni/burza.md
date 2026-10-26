@@ -1,4 +1,6 @@
-# burza
+---
+title: burza
+---
 
 ## Nástroje
 

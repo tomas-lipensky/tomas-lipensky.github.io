@@ -1,4 +1,6 @@
-# Disky, LVM, souborove systemy
+---
+title: Disky, LVM, souborove systemy
+---
 
 ## odkazy
 

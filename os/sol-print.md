@@ -1,4 +1,6 @@
-# Solaris - tisk
+---
+title: Solaris - tisk
+---
 
 lpsystem -l ... informace o print serveru  
 lpshut ... zastavi print server  

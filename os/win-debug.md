@@ -1,4 +1,6 @@
-# win-debug
+---
+title: win-debug
+---
 
 [symstore.exe](https://docs.microsoft.com/en-us/windows/desktop/debug/symstore-command-line-options) ... [symstore](https://docs.microsoft.com/en-us/windows/desktop/debug/using-symstore) je nastroj na vytvareni knihoven symbolu (symbol store). Je obsahem balicku [Debugging Tools for Windows](https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/)  
 

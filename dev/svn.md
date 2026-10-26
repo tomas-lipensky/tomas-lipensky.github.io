@@ -1,4 +1,6 @@
-# Subversion
+---
+title: Subversion
+---
 
 ## Externi odkazy
 

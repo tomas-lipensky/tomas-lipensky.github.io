@@ -1,4 +1,6 @@
-# AIX - Tisk
+---
+title: AIX - Tisk
+---
 
 ## [lpd](http://www.ahinc.com/aix/printer.htm)
 

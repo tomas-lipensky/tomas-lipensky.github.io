@@ -1,4 +1,6 @@
-# elektonika
+---
+title: elektonika
+---
 
 ## Weby
 

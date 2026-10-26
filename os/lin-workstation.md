@@ -1,4 +1,6 @@
-# lin-workstation
+---
+title: lin-workstation
+---
 
 ## Install Ubuntu on encrypted physical volume
 

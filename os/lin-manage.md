@@ -1,4 +1,6 @@
-# LINUX - Sprava systemu, uzivatele, balicky, jadro, ...
+---
+title: LINUX - Sprava systemu, uzivatele, balicky, jadro, ...
+---
 
 ## Externi odkazy
 

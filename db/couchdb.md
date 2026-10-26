@@ -1,4 +1,6 @@
-# Couch DB
+---
+title: Couch DB
+---
 
 Couch DB patri mezi nerelacni (NoSQL) natabaze, tedy databaze dvojic - (klic, hodnota). Couch DB je databaze, ktera bezi jako sluzba, tedy typu Server - Klient.
 Vychozi port pro Couch DB je 5984. CouchDB komunikuje pres HTTP/JSON, tedy HTTP je ramec, ve kterem je uzacrena zprava v [JSON](http://json.org) specifikaci.

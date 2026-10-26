@@ -1,4 +1,6 @@
-# lin-media
+---
+title: lin-media
+---
 
 ## Scaner
 

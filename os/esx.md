@@ -1,4 +1,6 @@
-# ESX
+---
+title: ESX
+---
 
 ## Externi odkazy
 

@@ -1,4 +1,6 @@
-# Veritas - NetBackup
+---
+title: Veritas - NetBackup
+---
 
 ## Externi odkazy
 
