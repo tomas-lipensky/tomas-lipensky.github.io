@@ -2,7 +2,7 @@
 title: Jekyll
 ---
 
-Statický generátor HTML stránek z Markdown souborů, napsaný v Ruby. Používá šablonovací jazyk Liquid (bloky jako {{ page.title }} nebo {% if user %})
+{% raw %}Statický generátor HTML stránek z Markdown souborů, napsaný v Ruby. Používá šablonovací jazyk Liquid (bloky jako  {{ page.title }} nebo {% if user %}){% endraw %}
 
 ## _config.xml
 
