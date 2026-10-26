@@ -25,3 +25,8 @@ Statický generátor HTML stránek z Markdown souborů
 [Time machine](https://pages-themes.github.io/time-machine/)
 
 ## Front Matter v md dokumentech
+
+Je na začátku ohraničený řádky "---", "---". Nepovinné
+
+title: název stránky ... nahrazuje # nadpis první kategorie
+layout: default ... výchozí vzhled strany, bývá v tématu v adresáři _layouts

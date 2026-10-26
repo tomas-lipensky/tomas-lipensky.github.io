@@ -9,4 +9,3 @@ minima:
   show_excerpts: false
   nav_pages:
   - index.md
-  header_pages: []
