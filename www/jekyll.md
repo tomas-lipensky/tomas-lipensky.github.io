@@ -9,6 +9,7 @@ Statický generátor HTML stránek z Markdown souborů, napsaný v Ruby. Použí
 theme: minima ... Zobrazovací téma (šablona), v tomto případě minima  
 title: nadpis ... aktivní nadpis vedoucí do hlavní strany  
 description: moje stránky ... volitelný text ve formě html, který šablona ukazuje
+[default](https://jekyllrb.com/docs/configuration/front-matter-defaults/) ... výchozí hodnoty pro stránky  
 
 ## Témata
 
