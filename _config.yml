@@ -4,11 +4,4 @@ show_downloads: false
 
 minima:
   skin: dark
-  nav_pages:
-    - /net
-    - /www
-    - /db
-    - /dev
-    - /os
-    - /data
-    - /automatizace
+  show_excerpts: false
