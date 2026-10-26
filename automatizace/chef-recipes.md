@@ -1,6 +1,4 @@
-# chef-recipes
-
-## Chef - recipes
+# Chef - recipes
 
 ## Odkazy
 

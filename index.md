@@ -1,6 +1,4 @@
-# start
-
-## Vítejte
+# Vítejte
 
 [https://www.linkedin.com/in/tomaslipensky/](https://www.linkedin.com/in/tomaslipensky/) - Moje profesní představení  
 

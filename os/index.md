@@ -1,3 +1,6 @@
+---
+layout: none
+---
 # index
 
 ## Síťě

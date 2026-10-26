@@ -1,4 +1,4 @@
-# index
+# Webové technologie
 
 ## Architektura
 
@@ -124,7 +124,6 @@ telnet a specificky protokol viz [dev/http](../dev/http.html), smtp, ...
 [php](../dev/php.html)
 [java](../dev/java.html)
 [j2ee](j2ee.html) - webové aplikace v Javě
-
 
 ## Generátory statických stránek
 

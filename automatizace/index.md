@@ -1,3 +1,6 @@
+---
+layout: base
+---
 # Automatizace
 
 ## Architektura
