@@ -39,22 +39,22 @@ that is only problem blocking the usage ! OK, than, and what was the procedure t
 Inspired by [http://www.magicbluesmoke.org/getting-a-huion-hs610-working-in-linux/](http://www.magicbluesmoke.org/getting-a-huion-hs610-working-in-linux/) and [https://codeyarns.github.io/tech/2015-05-11-how-to-use-huion-420-with-ubuntu.html](https://codeyarns.github.io/tech/2015-05-11-how-to-use-huion-420-with-ubuntu.html), really easy:
 
 su -
-  mkdir ~/github.com
-  cd ~/github.com
-  git clone https://github.com/DIGImend/digimend-kernel-drivers
-  cd digimend-kernel-drivers
-  dpkg-buildpackage -b -uc  ## to find the missing packages, I need to install, to succeed with make
-  make
-  make install
-  ## replug the device and ensure you have a good AAA batery in a pen
-  apt install xournal ## to have a nice note pad for drawing
-  apt install gimp ## ti have a good graphical editor
+mkdir ~/github.com
+cd ~/github.com
+git clone https://github.com/DIGImend/digimend-kernel-drivers
+cd digimend-kernel-drivers
+dpkg-buildpackage -b -uc  ## to find the missing packages, I need to install, to succeed with make
+make
+make install
+## replug the device and ensure you have a good AAA batery in a pen
+apt install xournal ## to have a nice note pad for drawing
+apt install gimp ## ti have a good graphical editor
 
 To list information about the device or configure:
 
 lsusb
-  xsetwacom --list devices
-  xsetwacom --set "Wacom BambooFun 4x5 Pen stylus" PressureCurve 0 20 80 100
+xsetwacom --list devices
+xsetwacom --set "Wacom BambooFun 4x5 Pen stylus" PressureCurve 0 20 80 100
 
 and enjoy!
 
@@ -110,7 +110,7 @@ URL='https://login.microsoftonline.com/common/oauth2/nativeclient?code=DUMMY_COD
 
 5) you run these commands:
 
-```
+```bash
 CODE=$(echo $URL  | sed -e 's/.*code=//' -e 's/&.*//')
 curl -X POST -H "Content-Type: application/x-www-form-urlencoded" -d "client_id=22c49a0d-d21c-4792-aed1-8f163c982546&code=$CODE&grant_type=authorization_code&redirect_uri=https://login.microsoftonline.com/common/oauth2/nativeclient" https://login.microsoftonline.com/common/oauth2/v2.0/token | jq .refresh_token |  sed -e 's/"//g' > ~/.config/onedrive/refresh_token
 ```

@@ -21,23 +21,23 @@ Apache ANT - program, ktery je alternatuvou pro make pro jaovoske aplikace. Ma z
 ### Priklad projektu na WebSphere
 
 ```xml
-&lt;project name="Jmeno projektu" default="init"&gt;
-  &lt;property file="ant.properties"/&gt;
-  &lt;target name="init"&gt;
-    &lt;tstamp/&gt;
-    &lt;echo message="--- boild of ${ant.project.name} started at ${TSTAMP} on ${TODAY} by ant v.${ant.version} ---"/&gt;
-  &lt;/target&gt;
+<project name="Jmeno projektu" default="init">
+  <property file="ant.properties"/>
+  <target name="init">
+    <tstamp/>
+    <echo message="--- boild of ${ant.project.name} started at ${TSTAMP} on ${TODAY} by ant v.${ant.version} ---"/>
+  </target>
 
-  &lt;target name="stopApplication" description="Stop the specified appli"&gt;
-    &lt;echo message="--- Stopping the ${applicationnName}"/&gt;
-    &lt;wsadmin script="${softwareDir}\stopApplication.py" lang="jython" profile="{$softwareDir}\profile.py" port="${portNB}" conntype="soap"&gt;
-      &lt;arg value="${applicationName}&gt;
-      &lt;arg value="${clusterName}"&gt;
-    &lt;/wsadmin>
-  &lt;/target&gt;
+  <target name="stopApplication" description="Stop the specified appli">
+    <echo message="--- Stopping the ${applicationnName}"/>
+    <wsadmin script="${softwareDir}\stopApplication.py" lang="jython" profile="{$softwareDir}\profile.py" port="${portNB}" conntype="soap">
+      <arg value="${applicationName}>
+      <arg value="${clusterName}">
+    </wsadmin>
+  </target>
 
-  &lt;taskdef name="wsadmin" classname="com.ibm.websphere.ant.tasks.WsAdmin"/&gt;
-&lt;/project&gt;
+  <taskdef name="wsadmin" classname="com.ibm.websphere.ant.tasks.WsAdmin"/>
+</project>
 ```
 
 &lt;property name"applicationName" value="APP1"&gt;

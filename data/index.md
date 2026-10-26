@@ -26,8 +26,7 @@ Informatica PowerCenter Express - https://community.informatica.com/solutions/pc
 
 [IBM Steams](steams.html)  
 
-## Business Inteligence, <a fref="http://www.ibm.com/analytics/us/en/index.html|business analytics]] - reporting
-
+## Business Inteligence
 
 [IBM Cognos BI](cognos.html) - [Business Intelligence](http://en.wikipedia.org/wiki/Business_intelligence)  - Reporty, analyzy dashboardy a skorovani z dat
 [IBM Cognos TM1](tm1.html)
@@ -48,18 +47,15 @@ Microstrategy
 [Oracle Business Intelligence Discoverer](obid.html) (Oracle Discoverer)
 [Oracle Hyperion](hyperion.html) ... [Business Intelligence ](http://en.wikipedia.org/wiki/Business_intelligence)- rozhodavaci software a mereni vykonu podniku
 
-
 ## Master data management
 
-
-[InfoSphere MDM CS](mdm.html) - Master Data Management Colaboration Server (Colaboration Edition), Drive [WebSphere Product Center](http://www.ibm.com/developerworks/data/tutorials/dm0608lee/) nebo PIM
-Physical MDM - drive Transactional MDM, [WebSphere Customer Center](http://www-01.ibm.com/software/data/masterdata/customer/) -  <!--a href="wcc.html"-->WCC<!--/a-->, MDM Server
-Virtual MDM - drive MDM Hub, nebo MDS - Master Data Service
+[InfoSphere MDM CS](mdm.html) - Master Data Management Colaboration Server (Colaboration Edition)
+[WebSphere Product Center](http://www.ibm.com/developerworks/data/tutorials/dm0608lee/) nebo PIM
+Physical MDM
+[WebSphere Customer Center](http://www-01.ibm.com/software/data/masterdata/customer/)
 [informaticamdm.html](informaticamdm.html)Informatica MDM
 
-
 ## Data Explorers
-
 
 [IBM Watson Explorer](dataexplorer.html) - IBM InfoSphere Data Explorer ... Aplikace na prochazeni dat - objevuje, spojuje, nabizi a umoznuje prohledavani dat
 [ELK (Elastic stack)](https://www.quora.com/What-is-the-ELK-stack) - Log management platforma - prijimani logu a eventu, hledani v logach, analyza logu (bezpecnost, perfomance, ..). Vice na [qbox](https://qbox.io/blog/welcome-to-the-elk-stack-elasticsearch-logstash-kibana)

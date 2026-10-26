@@ -72,59 +72,53 @@ Aplikace v aplikacnich serverech vetsinou byvaji balene v baliccich:
 
 ## Aplikacni reseni postavene na Aplikacnich serverech
 
-<dl>
+### Commerce - nastroje pro obchod
 
-<dt>Commerce - nastroje pro obchod:</dt>
 IBM WSC (WebSphere Commerce) ... kompletni reseni pro e-commerce postavene na WebSphere AS, IBM Http Server a DB2
 [FAS (Fredhopper Access Server)](fas.html)
 
-<dt>Informacni portaly:</dt>
+### Informacni portaly
+
 [IBM WP (WebSphere Portal)](wp.html)
 JBoss EPP ... JBoss Enterprise Portal Platform, Soucasti JBoss Portal jako WebSphere Portal
 GateIn Portal ... jako WebSphere Portal
 
-<dt>Aplikace na rizeni procesu:</dt>
+### Aplikace na rizeni procesu
+
 IBM WPS (WebSphere Process Server) ... WAS ESB Rozsireny o spravu procesu
 [flownimd](http://www.softscout.com/software/Project-and-Business-Management/Flowcharting-and-Process-Modelling/FlowMind%28TM%29.html) ... Webovy a javovy integracni balik, ktey umoznuje graficke modelovani a definovani procesu
 
-<dt>Aplikacni servery pro telekomunikace:</dt>
+### Aplikacni servery pro telekomunikace:
+
 Mobicents (RedHat) ... Aplikacni server pro telekomunikace
 
-<dt>Aplikace pro bankovnictvi:</dt>
+### Aplikace pro bankovnictvi
+
 [SAB](http://www.sab-tm.com/) ... kombinace Cobol aplikaci a aplikace pro aplikacni server integrujici web-based interface se cobol enginem
 
-<dt>[Aplikace pro manipulaci dat - Business inteligence, warehousing, big data](../data/)</dt>
+### Aplikace na sledovani aplikacnich serveru
 
-<dt>Aplikace na sledovani aplikacnich serveru:</dt>
 [ITCAMDC](itcamdc.html) (IBM Tivoli  Composite Application Manager) ... Data Collector
-
-</dl>
 
 ## Aplikacni komponenty, API:
 
 Vetsina javovych aplikaci pouziva obecne komponenty, ktere uznadnuji jejich beh a vyvoj.
 
-<dl>
 Apache Jetspeed2 ... portal od Apache pod Apache licenci
 Apache Axis2 ... Implementace SOAP od Apache pro poskytovani WebServices. Upoznuje pridat WebServices (komunikujici treba pres SOAP) Webovym Aplikacim, nebo provozovat samotne WebService aplikace
-</dl>
 
 ## Testovani
 
-<dl>
 [JMeter](http://jmeter.apache.org/) ... Apache produkt k testovani vykonnosti Webu (http, https), SOAP, mailu atd
 [Java HotSwap](http://code.google.com/p/hotswap/) ... Technologie na dynamicke nahravani javovskych trid bez restartu JVM
-</dl>
 
 ## Vyvojove a integracni nastroje (IDE)
 
-<dl>
 Eclipse
 Application Server Toolkit ... Rozsireni Eclipse
 Rational Application Developer ... Prostredi rozsirujici Eclipse zahrnujici funkce Application Server Toolkit a dalsi
 IBM WebSphere Integration Developer ... Nastroj rozsirujici Rational Application Developer o business procesy. Integrace s WebSphere ESB Server, WebSphere Express Server, WebSphere Process Server, WebSphere Server, Tomcat Server
 JRebel ... plugin do IDE na online implementace javovskych trid do JVM (pomoci HotSwap)
-</dl>
 
 ## Inspekce a kontrola sitoveho toku
 
@@ -133,7 +127,6 @@ telnet a specificky protokol viz [dev/http](../dev/http.html), smtp, ...
 
 ## Vyvoj
 
-<dl>
 [http](../dev/http.html)
 [html](../dev/html.html)
 [css](../dev/css.html)
@@ -141,7 +134,6 @@ telnet a specificky protokol viz [dev/http](../dev/http.html), smtp, ...
 <!--dd>[php](../dev/php.html)</dd-->
 [java](../dev/java.html)
 [j2ee](j2ee.html) - Webove java aplikace
-</dl>
 
 ## Prohlizece
 
