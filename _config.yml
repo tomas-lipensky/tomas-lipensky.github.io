@@ -1,3 +1,14 @@
-theme: jekyll-theme-hacker
+theme: jekyll-theme-minima
 title: Tomáš Lipenský
 show_downloads: false
+
+minima:
+  skin: dark
+  nav_pages:
+    - /net
+    - /www
+    - /db
+    - /dev
+    - /os
+    - /data
+    - /automatizace
