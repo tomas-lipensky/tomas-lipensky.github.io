@@ -1,7 +1,8 @@
 theme: minima
 title: Tomáš Lipenský
 show_downloads: false
+header_pages: []
 
 minima:
+  skin: dark
   show_excerpts: false
-  header_pages: []
