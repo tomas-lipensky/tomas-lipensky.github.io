@@ -108,10 +108,4 @@ Substutuce
 \U	non-uppercase character 
 ```
 
-===Počeštění===
-
-```
-
-```
-
 [Programovani ve VI na ROOTovi](http://www.root.cz/clanky/editor-vim-a-programovani/)

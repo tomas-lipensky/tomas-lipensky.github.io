@@ -235,7 +235,7 @@ netdom join $SERVER_NAME /domain:$DOMAIN /UserD:$USER /PasswordD:PASSWORD ... pr
 [[https://docs.microsoft.com/en-us/powershell/scripting/core-powershell/console/powershell.exe-command-line-help?view=powershell-5.1|
 	PowerShell]] -Command "Get-EventLog -LogName security" ... spusti powershell a v nem uvedeny prikaz v soucasnem okne  
 
-====Windows vestavene programy====
+### Windows vestavene programy
 
 ```
 Accessibility Controls     access.cpl  
@@ -353,7 +353,7 @@ Wordpad   write
 
 ## Scenare
 
-==Spusteni jako administrator==
+### Spusteni jako administrator
 
 ```
 #spustit prikazovy radek s admin pravama

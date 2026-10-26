@@ -277,7 +277,7 @@ wsadmin>print AdminConfig.show('admin_host(cells/TestCell|virtualhosts.xml#HostA
 
 pocet spojeni do DB, vycisteni fronty spojeni:
 
-```
+```python
 ds=AdminControl.queryNames('*:type=DataSource,process=as_espacejobs_1,name=calbdsnp033_refonte,*')
 print AdminControl.invoke(ds, 'showPoolContents')
 print AdminControl.invoke(ds, "showAllPoolContents")&#8203;
@@ -286,7 +286,7 @@ AdminControl.invoke(ds, "purg&#8203;ePoolContents", "immediate")&#8203;
 
 Start vsech Listeneru na messaging
 
-```
+```python
 for lPort in AdminControl.queryNames('type=ListenerPort,*').split():
   state = AdminControl.getAttribute(lPort, 'started')
   print(lPort, "    ", state)

@@ -157,7 +157,7 @@ $JAVA_RT com.ibm.ccd.common.wpcsupport.util.SupportUtil --cmd=validateServc --sv
 
 ### MDM Skripty
 
-==Export lookup table==
+#### Export lookup table
 
 ```
 var envObjList = new EnvObjectList();

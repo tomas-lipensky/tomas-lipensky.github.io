@@ -139,7 +139,7 @@ $JAVA_RT com.ibm.ccd.common.wpcsupport.util.SupportUtil --cmd=validateServc --sv
 
 ## MDM Skripty
 
-==Export lookup table==
+### Export lookup table
 
 ```
 var envObjList = new EnvObjectList();
@@ -148,7 +148,8 @@ var result = exportEnv(envObjList, "LOOKUP_CONTENT_export_20140918_153200.zip");
 out.println("result: " + result);
 ```
 
-==Export current “JOB_LOOKUP_EXPORT_” Tables content==
+### Export current “JOB_LOOKUP_EXPORT_” 
+Tables content
 
 ```
 var envObjList = new EnvObjectList();
@@ -175,7 +176,7 @@ var result = exportEnv(envObjList, "JOB_LOOKUP_CONTENT_export.zip");
 out.println("result: " + result);
 ```
 
-==Vymazani BUSINESS RULES==
+### Vymazani BUSINESS RULES
 
 ```
 var ctgName = "BUSINESS_RULES";

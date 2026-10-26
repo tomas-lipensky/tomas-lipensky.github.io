@@ -68,7 +68,8 @@ name=##,service=LocalTxCM
 name=##,service=ManagedConnectionFactory  
 name=##,service=ManagedConnectionPool  
 
-==Dulezite atributy==:
+### Dulezite atributy
+
 ConnectionCount shows how many connections are currently open to the database.  
 AvailableConnectionCount shows how much room is left in the pool.  
 ConnectionCreatedCount keep running totals of the number of connections created  

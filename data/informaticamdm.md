@@ -35,6 +35,6 @@ $JAVA  -classpath $SIP_HOME/lib/siperian-common.jar com.siperian.common.security
 $SIP_HOME/postInstallSetup.sh -Ddatabase.password=$DB_PASSWORD-CMX -Dwebsphere.password=$WAS_PASSWORD ... nainstaluje MDM do aplikacniho serveru (WAS)  
 $SIP_HOME/patchInstallSetup.sh ... Aplikuje zaplaty  
 
-========Resource kit
+### Resource kit
 
 ../hub/resourcekid/automation/*Tools*/MDMResourceKit_BATCH/scripts/get_encr_pwd.cmd ... zakryptuje heslo

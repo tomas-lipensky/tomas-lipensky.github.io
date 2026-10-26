@@ -27,7 +27,7 @@
 `(echo > /dev/tcp/google.com/22) >/dev/null 2>&1 && echo "UP" || echo "DOWN"` ... netcat -zv google.com  
 cat < /dev/null > /dev/tcp/<hostname or ip>/<port>; echo $? ... to samé  
 
-== curl/wget ==
+#### curl/wget
 
 ```
 exec 3<>/dev/tcp/www.google.com/80
