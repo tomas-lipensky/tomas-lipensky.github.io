@@ -5,3 +5,4 @@ show_downloads: false
 minima:
   skin: dark
   show_excerpts: false
+  nav_pages: []
