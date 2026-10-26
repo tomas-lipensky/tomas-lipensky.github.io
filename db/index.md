@@ -1,4 +1,6 @@
-# index
+--- 
+title: Databáze
+---
 
 ## Druhy databazi
 

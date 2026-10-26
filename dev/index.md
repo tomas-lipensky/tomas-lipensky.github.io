@@ -1,4 +1,6 @@
-# index
+--- 
+title: Vývoj
+---
 
 Seznam programovacich jazyku, se kterymi jsem se setkal a pouzival je na ruznych urovnich a popis nekterych specifik, odkazy a postrehu z nich:
 

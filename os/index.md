@@ -1,7 +1,7 @@
 ---
 layout: none
 ---
-# index
+# Operační systémy
 
 ## Síťě
 
