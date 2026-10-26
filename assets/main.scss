@@ -1,0 +1,66 @@
+---
+---
+
+// 1. Import původního nastavení tématu Minima
+@import "minima";
+
+// 2. Natvrdo přepsané CSS třídy pro tmavý režim
+@media (prefers-color-scheme: dark) {
+  
+  body {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+  }
+
+  // Hlavička webu
+  .site-header {
+    background-color: #1a1a1a !important;
+    border-bottom-color: #333333 !important;
+  }
+
+  .site-title, .site-title:visited, .page-link {
+    color: #e0e0e0 !important;
+  }
+
+  // Odkazy
+  a, a:visited {
+    color: #64b5f6 !important;
+  }
+
+  // Patička webu
+  .site-footer {
+    background-color: #1a1a1a !important;
+    border-top-color: #333333 !important;
+    color: #888888 !important;
+  }
+
+  .footer-heading {
+    color: #e0e0e0 !important;
+  }
+
+  // Příspěvky a text
+  .post-title, .post-content h1, .post-content h2, .post-content h3 {
+    color: #ffffff !important;
+  }
+
+  .post-meta {
+    color: #888888 !important;
+  }
+
+  // Tabulky a blokové citace
+  table th, table td {
+    border-color: #333333 !important;
+  }
+
+  blockquote {
+    color: #888888 !important;
+    border-left-color: #333333 !important;
+  }
+
+  // Bloky s kódem (Markdown syntax highlighters)
+  pre, code, .highlight {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #333333 !important;
+  }
+}
