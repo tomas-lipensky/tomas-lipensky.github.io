@@ -191,7 +191,7 @@ ping\\
 rpcinfo -p localhost ... otevrene porty pres rpc\\
 ssldump -i any port 443 and host 9.220.24.160 ... ukaze SSL komunikaci (handshake atd)\\
 [[https://en.wikipedia.org/wiki/Strace|strace]] e trace=read,write -e read=29,30 -e write=29,30 -p 12343 ... smiruje cteni/zapis na socketu (pid 12343, socket 29,30)\\
-[[../web/network_flow.htmp#tcpdump|tcpdump]] ... cmuchac paketu\\
+[[../www/network_flow.htmp#tcpdump|tcpdump]] ... cmuchac paketu\\
 [[https://www.rationallyparanoid.com/articles/tcpdump.html|tcpdump]] -n -i any src host 1.2.3.4 dst net 10.1.2.0/24 port 80 ... na vsech zarizenich (-i any) ukaz pakety (IP a port cislo: -n) z IP adresy 1.2.3.4 na sit 10.1.2.0/24. port 80\\
 tracepath ... ukaze cestu paketu jako traceroute\\
 traceroute\\

@@ -34,13 +34,13 @@ Nerelační: [CouchDB](db/couchdb), [Berkeley DB](db/bdb), [MongoDB](db/mongodb)
 
 ## Webové technologie
 
-Webové servery a aplikační servery: [Apache/IHS](www/apache), [WebSphere Application Server](www/was), [www:JBoss](www/JBoss), [www:Tomcat](www/Tomcat), [IIS](web/iis), [web:nginx](web/nginx)  
+Webové servery a aplikační servery: [Apache/IHS](www/apache), [WebSphere Application Server](www/was), [JBoss](www/JBoss), [Tomcat](www/Tomcat), [IIS](www/iis), [nginx](www/nginx)  
 Webové testování: [Pingdom](https://tools.pingdom.com/), [site24x7](https://www.site24x7.com/web-page-analyzer.html) - nástroje pro testování doby načítání, Selenide - UI testy, JMeter - výkonnostní testy, Selenium, Sauce Labs, Cucumber, Mocha (Node.js), TestEngine, MSTest, Appium Xcode  
 Mocking - HTTP server s pravidly pro odpovědi a testování (např. statické odpovědi, přeposílání): WireMock  
-Messaging: [www:MQ](www/MQ), RabitMQ, [sw:Kafka](sw/Kafka)  
+Messaging: [MQ](www/MQ), RabitMQ, [Kafka](sw/Kafka)  
 E-commerce: [Fredhopper Application Server](www/fas)  
 [API](sw/api): GraphQL, [webhook.site](https://webhook.site) - testování webhooků  
-Content management: [www:Sitecore](www/Sitecore)  
+Content management: [Sitecore](www/Sitecore)  
 Wiki a publikační technologie: [dokuWiki](https://www.dokuwiki.org), [mdWiki](https://dynalon.github.io/mdwiki/)
 
 ## Data management, Business inteligence, Big data
@@ -55,41 +55,41 @@ Ostatní: [data:Hadoop](data/Hadoop), [data:obi](data/obi), [data:obid](data/obi
 
 [Java aplikace obecně](sw/java)  
 [IBM TSM - Tivoli Storage Manager](sw/tsm), [Veritas NetBackup](sw/netbackup), [EMC Networker](sw/networker)  
-Monitoring: [ITM - IBM Tivoli Monitoring](sw/itm), [sw:zabbix](sw/zabbix), [sw:grafana](sw/grafana), [sw:nagios](sw/nagios), [Netdata](https://github.com/netdata:netdata)  
+Monitoring: [ITM - IBM Tivoli Monitoring](sw/itm), [zabbix](sw/zabbix), [grafana](sw/grafana), [nagios](sw/nagios), [Netdata](https://github.com/netdata:netdata)  
 [Mobilní aplikace](sw/mobile)  
 Veritas LVM  
 Veritas Cluster  
 [TWS - IBM Tivoli Workload Scheduller](sw/tws), [BMC Control-M](sw/ctm), RunDeck  
 [TLM](sw/tlm), [TSCM](sw/tscm), [SRM](sw/srm), [Domino](sw/domino), [Edge](sw/edge), [SAP](sw/sap)  
 [Bezpečnost](sw/security)  
-[sw:blockchain](sw/blockchain): [sw:etherneum](sw/etherneum)  
-Instant Messaging: [sw:teams](sw/teams)  
-Kancelář: Office 365, LibreOffice, [sw:outlook:MS Outlook](sw/outlook/MS Outlook)  
+[blockchain](sw/blockchain): [etherneum](sw/etherneum)  
+Instant Messaging: [teams](sw/teams)  
+Kancelář: Office 365, LibreOffice, [outlook:MS Outlook](sw/outlook/MS Outlook)  
 Alertovací konzole: Alerta  
-Analýza obrazu: [sw:OpenCV](sw/OpenCV)  
+Analýza obrazu: [OpenCV](sw/OpenCV)  
 Process management, logic management: [automatizace:bpm](automatizace/bpm)  
 Business rules, decision management system: JSON Rules - JSON Rules Engine, OpenRules  
 [Active Directory](sw/ad)  
 [Machine learning - strojové učení](sw/ml)  
-Logování: [sw:splunk](sw/splunk), [sw:dynatrace](sw/dynatrace), [sw:datadog](sw/datadog)  
+Logování: [splunk](sw/splunk), [dynatrace](sw/dynatrace), [datadog](sw/datadog)  
 [AI](sq/ai): [https://www.phind.com/](https://www.phind.com/), [https://chat.openai.com/auth/login](https://chat.openai.com/auth/login)  
 Správa tajných údajů: [HashiCorp Vault](sw/vault)  
 Grafické aplikace: [photopea](https://www.photopea.com/)
-Autentifikace: [sw:autentifikace](sw/autentifikace)
+Autentifikace: [autentifikace](sw/autentifikace)
 
 ## Programování
 
-Jazyky: [dev:C](dev/C), [dev:csharp](dev/csharp), [dev:Java](dev/Java), J2EE, [dev:Perl](dev/Perl), [Python/Jython](dev/python), [TCL/JACL](dew/tcl), Unixové skripty, [sw:Ruby](sw/Ruby), [Visual Basic](dev/vbs), [dev:nodejs](dev/nodejs), [dev:node-red](dev/node-red), [dev:javascript](dev/javascript), [dev:jsp](dev/jsp), [dev:graphql](dev/graphql)  
-Verzování: [dev:svn](dev/svn), [dev:git](dev/git), [dev:tfs](dev/tfs)  
+Jazyky: [C](dev/C), [csharp](dev/csharp), [Java](dev/Java), J2EE, [Perl](dev/Perl), [Python/Jython](dev/python), [TCL/JACL](dew/tcl), Unixové skripty, [Ruby](sw/Ruby), [Visual Basic](dev/vbs), [nodejs](dev/nodejs), [node-red](dev/node-red), [javascript](dev/javascript), [jsp](dev/jsp), [graphql](dev/graphql)  
+Verzování: [svn](dev/svn), [git](dev/git), [tfs](dev/tfs)  
 Vývojové platformy: [GitHub](dev/github), GitLab, Bitbucket, [Azure DevOps/vsts](dev/ado)  
-Web: [dev:html](dev/html), [dev:css](dev/css), [dev:xml](dev/xml), [dev:php](dev/php)  
-Souborové formáty: [dev:json](dev/json), [dev:xml](dev/xml), [|Protobuf](https://developers.google.com/protocol-buffers) (něco jako typovaný JSON)  
-Protokoly: [dev:soap](dev/soap), [dev:http](dev/http), REST, [gRPC](https://grpc.io/docs/guides/)  
-Kvalita kódu: konvence, [dev:testy-kodu](dev/testy-kodu), Fortify, SonarQube, Coverity, lintery, CodeQL, Trivy, Gitleaks, Dependabot  
+Web: [html](dev/html), [css](dev/css), [xml](dev/xml), [php](dev/php)  
+Souborové formáty: [json](dev/json), [xml](dev/xml), [|Protobuf](https://developers.google.com/protocol-buffers) (něco jako typovaný JSON)  
+Protokoly: [soap](dev/soap), [http](dev/http), REST, [gRPC](https://grpc.io/docs/guides/)  
+Kvalita kódu: konvence, [testy-kodu](dev/testy-kodu), Fortify, SonarQube, Coverity, lintery, CodeQL, Trivy, Gitleaks, Dependabot  
 Balíčkové repozitáře: [JFrog Artifactory](dev/artifactory), Nexus, DevOps, GitHub  
-Ostatní: [dev:uml](dev/uml), [dev:term-ansicolor](dev/term-ansicolor), [dev:re](dev/re)gulární výrazy, [dev:code_revision](dev/code_revision), [testovací nástroje pro vývoj](dev/test_services)  
+Ostatní: [uml](dev/uml), [term-ansicolor](dev/term-ansicolor), [re](dev/re)gulární výrazy, [code_revision](dev/code_revision), [testovací nástroje pro vývoj](dev/test_services)  
 Buildovací nástroje: [Maven](dev/maven), Ant, Bundler
-IDE: [dev:visualstudio](dev/visualstudio), [VSCode](dev/code), Geany, Eclipse  
+IDE: [visualstudio](dev/visualstudio), [VSCode](dev/code), Geany, Eclipse  
 
 ## Matematika
 
@@ -102,19 +102,19 @@ Maple - několik základních příkazů v Maple
 [Získané certifikace uložené v Acclaim](https://www.youracclaim.com/user/tomas-lipensky)  
 [blog](blog/index)  
 [IT architektura](ostatni/itarch)  
-[ostatni:scrum](ostatni/scrum)  
+[scrum](ostatni/scrum)  
 [různé internetové odkazy](ostatni/internet)  
 [ostatní:media](ostatní/media) - knihy, audia, videa  
-[ostatni:elektronika](ostatni/elektronika)  
+[elektronika](ostatni/elektronika)  
 [dům/stavby](ostatni/dum)  
-[ostatni:ukulele](ostatni/ukulele)  
+[ukulele](ostatni/ukulele)  
 [vaření/pečení](ostatni/vareni)  
-[ostatni:auto](ostatni/auto)  
-[ostatni:pivo](ostatni/pivo)  
+[auto](ostatni/auto)  
+[pivo](ostatni/pivo)  
 [tvoření](ostatni/tvoreni)  
 [zdraví](ostatni/zdravi)  
-[ostatni:sport](ostatni/sport)  
-[ostatni:jazyky](ostatni/jazyky): [Arabština](other/arabstina)  
-[ostatni:burza](ostatni/burza)  
-[ostatni:finance](ostatni/finance)  
-[ostatni:rodokmeny](ostatni/rodokmeny)
+[sport](ostatni/sport)  
+[jazyky](ostatni/jazyky): [Arabština](ostatni/arabstina)  
+[burza](ostatni/burza)  
+[finance](ostatni/finance)  
+[rodokmeny](ostatni/rodokmeny)

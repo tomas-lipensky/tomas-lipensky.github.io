@@ -61,7 +61,7 @@ JUnit ... Testovani framework napsany v Jave - sada nastroju na testovani
   [php](php.html)
   [javascript](javascript.html)
   [mobilni aplikace](mobilap.html)
-  [j2ee aplikace](../web/j2ee.html)
+  [j2ee aplikace](../www/j2ee.html)
   [Java programovani pro web - tutorial na linux zone](http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179)
 
 ## Infrastruktura pro vyvoj produktu
