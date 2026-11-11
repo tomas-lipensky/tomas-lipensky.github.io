@@ -15,9 +15,9 @@ bx iam org ORG ... ukaze info o organizaci vcetne kvot
 
 ## aplikace
 
-bx app push ... nahraje aplikaci v aktualnim adresari  
-bx app list ... seznam aplikaci v aktualnim prostoru  
-bx app show APP1 ... informace o aplikace APP1  
+`bx app push` ... nahraje aplikaci v aktualnim adresari  
+`bx app list` ... seznam aplikaci v aktualnim prostoru  
+`bx app show APP1` ... informace o aplikace APP1  
 bx app logs APP1 --recent ... ukaze posledni logy aplikace  
 bx app stop APP1 ... zastavi aplikaci APP1  
 bx app start APP1 ... nastartuje aplikaci APP1  

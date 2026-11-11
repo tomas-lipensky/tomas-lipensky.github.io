@@ -101,7 +101,7 @@ SELECT * FROM zakaznici;\\
 PL/SQL (Procedural Laguage) rozsiruje moznosti SQL o bloky, deklarace promennych, podminky, smycky, kursory a definice procedur a funkci
 
 
-<tt>CREATE OR REPLACE PROCEDURE update_zakaznika (
+```CREATE OR REPLACE PROCEDURE update_zakaznika (
  p_id_zakaznika IN zakaznici.id_zakaznika%TYPE
  p_faktor IN NUMBER
 ) AS pocet_nakupu INTEGER;
@@ -116,6 +116,4 @@ EXCEPTION
  WHEN OTHERS THEN
   ROLLBACK;
 END update_zakaznika;
-</tt>
-
-   
+```

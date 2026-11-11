@@ -68,17 +68,18 @@ Get-AzSubscription … seznam predplatnych
 Set-AzContext $(Get-AzSubscription -SubscriptionName AAA) … vyber predplatneho  
 Enable-AzAlias [-Module <string>] [-Scope Process | CurrentUser | LocalMachine] ... nastaveni kompatibility Az a Az pomoci aliasu  
 Disable-AzAlias [-Module <string[]>] [-Scope Process | CurrentUser | LocalMachine] ... vypnuti aliasu  
+
 ## PowerShell AzureRm
 
-Login-AzureRmAccount ... pripojeni na Azure  
-Add-AzureRmAccount  
-Get-AzureRmSubscription ... seznam predplatnych  
-Set-AzureRmContext $(Get-AzureRmSubscription -SubscriptionName AAA) ... vyber predplatneho  
-Select-AzureRmSubscription -SubscriptionId "yoursubscriptionid" ... vyber subsciption  
+`Login-AzureRmAccount` ... pripojeni na Azure  
+`Add-AzureRmAccount`  
+`Get-AzureRmSubscription` ... seznam predplatnych  
+`Set-AzureRmContext $(Get-AzureRmSubscription -SubscriptionName AAA)` ... vyber predplatneho  
+`Select-AzureRmSubscription -SubscriptionId "yoursubscriptionid"` ... vyber subsciption  
 
 ## Resources a Resource groups (zdroje a skupiny/mnoziny zdroju)
 
-Get-AzResourceGroup ... seznam vsech Resource group  
+`Get-AzResourceGroup` ... seznam vsech Resource group  
 Get-AzResourceGroup | Export-AzResourceGroup -IncludeParameterDefaultValue ... ulozi Resource groupy jako JSON template  
 Get-AzResource -ResourceGroupName ExampleGroup -ResourceType Microsoft.ClassicCompute/virtualMachines ...  
 

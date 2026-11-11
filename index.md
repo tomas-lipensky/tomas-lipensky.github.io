@@ -72,7 +72,7 @@ Business rules, decision management system: JSON Rules - JSON Rules Engine, Open
 [Active Directory](sw/ad)  
 [Machine learning - strojové učení](sw/ml)  
 Logování: [splunk](sw/splunk), [dynatrace](sw/dynatrace), [datadog](sw/datadog)  
-[AI](sq/ai): [//www.phind.com/](https://www.phind.com/), [//chat.openai.com/auth/login](https://chat.openai.com/auth/login)  
+[AI](sw/ai): [//www.phind.com/](https://www.phind.com/), [//chat.openai.com/auth/login](https://chat.openai.com/auth/login)  
 Správa tajných údajů: [HashiCorp Vault](sw/vault)  
 Grafické aplikace: [photopea](https://www.photopea.com/)
 Autentifikace: [autentifikace](sw/autentifikace)
@@ -93,9 +93,9 @@ IDE: [visualstudio](dev/visualstudio), [VSCode](dev/code), Geany, Eclipse
 
 ## Matematika
 
-České a anglické matematické odkazy
-Matlab - několik základních příkazů v Matlabu
-Maple - několik základních příkazů v Maple
+České a anglické matematické odkazy  
+[mb003](matematika/mb003.md) - Poznámky k lineární algebře  
+[Maple](matematika/maple.md) - několik základních příkazů v Maple  
 
 ## Ostatní
 

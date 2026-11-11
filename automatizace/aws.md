@@ -68,9 +68,9 @@ aws s3api list-buckets --query  'Buckets[?starts_with(Name, `hands-on-cloud-exam
 `aws s3 sync s3:*ULOZISTE1/ADRESAR s3:*ULOZISTE2/ADRESAR --region us-west-2 --source-region us-east-1 --sse AES256  --delete` ... synchronizace bucketů  
 `aws s3 mv s3:*ULOZISTE1/CESTA s3:*ULOZISTE2/CESTA --recursive` ... přejmenování, přesun  
 `aws s3api put-object --bucket ULOZISTE --key ADRESAR/` ... vytvoření prázdného adresáře  
-aws s3 cp s3://ULOZISTE/ADRESAR ./ADRESAR --recursive ... rekurzivní kopírování  
-aws s3 cp ./ADRESAR s3://ULOZISTE/ADRESAR --recursive --exclude "*" --include "*.png" ... selektivní kopírování  
-aws s3 cp ./SOUBOR.png s3://ULOZISTE --storage-class ONEZONE_IA ... ukládání na konkrétnní typ storage  
+`aws s3 cp s3://ULOZISTE/ADRESAR ./ADRESAR --recursive` ... rekurzivní kopírování  
+`aws s3 cp ./ADRESAR s3://ULOZISTE/ADRESAR --recursive --exclude "*" --include "*.png"` ... selektivní kopírování  
+`aws s3 cp ./SOUBOR.png s3://ULOZISTE --storage-class ONEZONE_IA` ... ukládání na konkrétnní typ storage  
 
 ## Event Bridge
 
@@ -79,6 +79,7 @@ aws s3 cp ./SOUBOR.png s3://ULOZISTE --storage-class ONEZONE_IA ... ukládání 
 ## Lambda
 
 Joby ve formě v kontejnerů
+
 ## BeanStalk
 
 hostovaní webových aplikací
@@ -91,14 +92,14 @@ Správa infrastruktury - automatické patchování atd.
 
 ## Secretsmanager
 
-aws secretsmanager list-secrets ... vylistuje záznamy secretů  
-aws secretsmanager get-secret-value --secret-id MojeHeslo ... vypíše hodnotu secretu  
-aws secretsmanager get-secret-value --secret-id SECRET_IT --query SecretString --output text | jq -r .password ... vypíše heslo ve formě textu (bez zpětných lomítek). Zpracuje ho pomocí jq  
+`aws secretsmanager list-secrets` ... vylistuje záznamy secretů  
+`aws secretsmanager get-secret-value --secret-id MojeHeslo` ... vypíše hodnotu secretu  
+`aws secretsmanager get-secret-value --secret-id SECRET_IT --query SecretString --output text | jq -r .password` ... vypíše heslo ve formě textu (bez zpětných lomítek). Zpracuje ho pomocí jq  
 
 ## Bedrock
 
-aws bedrock list-foundation-models ... seznam dostupných modulů Bedrocku, včetně modelID a jejich možností  
+`aws bedrock list-foundation-models` ... seznam dostupných modulů Bedrocku, včetně modelID a jejich možností  
 
-#### =
+#### Q
 
 Amazon Q =====

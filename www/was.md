@@ -197,7 +197,7 @@ SIB (Service Integration Bus) je "domena zprav" ve vychozim WebSphere AS. Na SIB
 Vytvoreni Weboveho Serveru je potreba k umozneni **generovani konfiguracniho** souboru k [WebSphere Pluginu](plugin.html). U IHS serveru s povolenou administracni konzolou umoznuje
  Webovy server i **stop** a **start** weboveho serveru, **propagaci konfiguracniho souboru**, atd.
 
-<tt>Servers &gt; Server Type &gt; Webserver &gt; New</tt>  
+Servers &gt; Server Type &gt; Webserver &gt; New  
 
 Virtualni skupiny slouzi k vytvoreni tzv. skupin, ktere patri do stejneho Virtualniho jmena "Virtual Name". Obvykle 1 http server, nebo obecne 1 server s IP adresou hostuje nekolik
  domen - virtualnich jmennych adres. Do virtualni skupiny pak prirazujeme jednotlive aplikace, ktere jsou pod jedno virtualniu jmennou adresou. V nastaveni virtualni skupiny je treba

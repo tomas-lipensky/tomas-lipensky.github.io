@@ -14,7 +14,7 @@ Automatizacni nastroje jsou aplikace, ktere slouzi k automaticke opakujici se ci
 
 Development &amp; Operations - nastroje na pruzny, rychly a bezpecny vyvoj a aplikaci na produkci.
 
-[Objednani poskytovani u IBM: ](http://w3.devops.ibm.com/devops/#/toolchain/onboard)GitHub, Gerrit, Jenkins, uDeploy, Slack, Mural  
+[Objednani poskytovani u IBM:](http://w3.devops.ibm.com/devops/#/toolchain/onboard) GitHub, Gerrit, Jenkins, uDeploy, Slack, Mural  
 [GitHub enterprise](http://w3.devops.ibm.com/devops/#/toolchain/advanced/ghe) ... 150$/osoba/rok - portal - SCM, code review, trackovani problemu, publikace a integrace  
 Github free ... volna verze  
 Gerit ... volny webovy nastroj na spolupraci vyvojaru. Vyvojari vidi upravy jinych a mohou je schvalit/zamitnout. Spoluprace s SCM  

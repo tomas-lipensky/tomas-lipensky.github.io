@@ -271,10 +271,10 @@ ipl_varyon -i ... seznam hdisku, invormace o PVID a jestli jsou bootovatelne\\
 
 ===Magneticke pasky===
 
-lsdev -Cc tape</tt> ... Vypise vsachna zarizeni pro praci s magnetickou paskou
-lscfg -vl rmt*</tt> ... Vypise informcae o vsech mechanikach (serial number, ...)
-lsattr -El rmt0</tt> ... Vypise informace o prvni pasce a mechanice
-tapeutil -f /dev/smc0 devids</tt> ... Collects the WWN as recorded in the special device file for the given device (e.g. 'rmt5').
+lsdev -Cc tape ... Vypise vsachna zarizeni pro praci s magnetickou paskou
+lscfg -vl rmt* ... Vypise informcae o vsech mechanikach (serial number, ...)
+lsattr -El rmt0 ... Vypise informace o prvni pasce a mechanice
+tapeutil -f /dev/smc0 devids ... Collects the WWN as recorded in the special device file for the given device (e.g. 'rmt5').
 
 tctl -f smc0 status ... informace o mechanice/pasce
 tctl ... controls the tape recorder

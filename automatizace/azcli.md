@@ -4,26 +4,26 @@ title: azcli
 
 ## Azure CLI
 
-az login ... pripojeni k Azure  
-az account list --output table ... seznam predplatnyh  
-az account set --subscription "Testovani" ... vyber predplatneho  
-az account list-locations ... seznam lokaci  
-az account show … ukaze kde jsem pripojeny  
-az account show --query id … ukaze jenom subscription ID, kde jsem pripojeny  
-az rest --method get --url "https://management.azure.com/subscriptions/XYZ/providers/Microsoft.Authorization/roleAssignmentScheduleRequests?api-version=2020-10-01" ... PIM  
+`az login` ... pripojeni k Azure  
+`az account list --output table` ... seznam predplatnyh  
+`az account set --subscription "Testovani"` ... vyber predplatneho  
+`az account list-locations` ... seznam lokaci  
+`az account show` … ukaze kde jsem pripojeny  
+`az account show --query id` … ukaze jenom subscription ID, kde jsem pripojeny  
+`az rest --method get --url "https://management.azure.com/subscriptions/XYZ/providers/Microsoft.Authorization/roleAssignmentScheduleRequests?api-version=2020-10-01"` ... PIM  
 
 ## VM
 
-az vm list ... seznam VM  
-az vm list --query [*].[name,resourceGroup] ... seznam jen jmen a RG, vypis v tabulce  
-az account list-locations ... seznam datacenter/lokaci  
-az group create --name mojeRG --location eastus ... vytvori novy resource group  
-az vm image list ... seznam obrazu  
-az vm create --resource-group RGtlipensky --name VMtlipensky --size Standard_B1s --image UbuntuLTS --admin-username azureuser --generate-ssh-keys ... vytvori VM  
-az vm delete --resource-group RGtlipensky --name VMtlipensky  
-az account list-locations … seznam vsech lokaci  
-az vm extension set --resource-group RG --vm-name VM  --name IaaSDiagnostics --settings public-settings.json … nastaveni rozsirujicich metrik pro monitoring a statistiky  
-az vm run-command invoke -g RGSquidEA -n SquidEA02 --command-id RunShellScript --scripts 'hostname' ... spusteni linux prikazu na VM  
+`az vm list` ... seznam VM  
+`az vm list --query [*].[name,resourceGroup]` ... seznam jen jmen a RG, vypis v tabulce  
+`az account list-locations` ... seznam datacenter/lokaci  
+`az group create --name mojeRG --location eastus` ... vytvori novy resource group  
+`az vm image list` ... seznam obrazu  
+`az vm create --resource-group RGtlipensky --name VMtlipensky --size Standard_B1s --image UbuntuLTS --admin-username azureuser --generate-ssh-keys` ... vytvori VM  
+`az vm delete --resource-group RGtlipensky --name VMtlipensky  
+az account list-locations` … seznam vsech lokaci  
+`az vm extension set --resource-group RG --vm-name VM  --name IaaSDiagnostics --settings public-settings.json` … nastaveni rozsirujicich metrik pro monitoring a statistiky  
+`az vm run-command invoke -g RGSquidEA -n SquidEA02 --command-id RunShellScript --scripts 'hostname'` ... spusteni linux prikazu na VM  
 
 ### konfigurace diagnostickeho nastaveni
 
@@ -35,11 +35,12 @@ az vm diagnostics set --settings json.json --resource-group  RGtlipensky --vm-na
 
 ## storage account
 
-az storage account create --name satlipensky --resource-group RGtlipensky ... vytovori storage account  
+`az storage account create --name satlipensky --resource-group RGtlipensky` ... vytovori storage account  
 
 ## Resource
 
-az resource show --id "$ID" --query [id,location] --o tsv  
+`az resource show --id "$ID" --query [id,location] --o tsv`  
+
 ## AAD applikace
 
 az ad app create --display-name "MyBuildTestApp1" --homepage "http:*/localhost/MyBuildTestApp1" --password "VerySecureLongStringHereToRepresetTheSecretForTheApp" --identifier-uris http:*/localhost/MyBuildTestApp1 ... vytvori AD Aplikaci  
@@ -56,7 +57,7 @@ az network lb outbound-rule create --address-pool MyAddressPool --frontend-ip-co
 
 ## AKS - Azure Kubernetes Service
 
-https://docs.microsoft.com/en-us/azure/aks/ssh - zpusob pripojeni se na AKS node  
+<https://docs.microsoft.com/en-us/azure/aks/ssh> - zpusob pripojeni se na AKS node  
 `az aks create --resource-group myResourceGroup --name myAKSCluster --node-count 1 --enable-addons monitoring --generate-ssh-keys` ... Vytvori AKS cluster  
 `az aks install-cli` ... Stahne a nainstaluje kubectl  
 `az aks get-credentials --resource-group myResourceGroup --name myAKSCluster` ... Stahne a naistaluje kredence do kubectl (~/.kube/config)  
@@ -64,7 +65,7 @@ https://docs.microsoft.com/en-us/azure/aks/ssh - zpusob pripojeni se na AKS node
 
 ## ACR - Azure Container Registry
 
-az login --identity ... pripojeni do AZ  
-az acr login --name ManiTempRegistry ... pripoji se k ACR  
-az acr list ... seznam registru  
-docker pull manitempregistry.azurecr.io/hello-world:01 ... stahne obraz z registru do dockru
+`az login --identity` ... pripojeni do AZ  
+`az acr login --name ManiTempRegistry` ... pripoji se k ACR  
+`az acr list` ... seznam registru  
+`docker pull manitempregistry.azurecr.io/hello-world:01` ... stahne obraz z registru do dockru
