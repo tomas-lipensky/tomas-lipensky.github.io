@@ -6,8 +6,8 @@ Terraform je abstrakce pro konfiguraci infrastruktury (jak ARM, mozna Cloud Foun
 
 ## Komponenty
 
-tflint ... linter - zkontroluje kód a navrhne změny kvůli čitelnosti a standartizaci kódu  
-terraform-doc ... automatické generování dokumentace  
+`tflint` ... linter - zkontroluje kód a navrhne změny kvůli čitelnosti a `standartizaci` kódu  
+`terraform-doc` ... automatické generování dokumentace  
 Terratest ... testovani Tarraformovych sablon  
 Terragrunt ... umí generovat terraformy podle terragrunt parametrů - terraform soubory jsou šablona s parametrama  
 Yeoman ... pro praci s modulama  
@@ -31,15 +31,15 @@ TF_DATA_DIR=/prod ... kde se nachárá .terraform složka
 
 ### prikazy
 
-cd /adresar .. prejdu do adresare ktery obsahuje main.tf
-terraform init ... vytvori si docasne soubory, kde si kompiluje tf soubory  
-terraform validate ... overi syntaxi  
-terraform plan ...  pokusi se udelat deployment na necisto  
-terraform apply -autoapprove ... aplikuje zmenu, nevyzaduje schvalovani  
-terraform apply --var-file=dev.tfvars -var user=tomas ... vezme vstupni parametry se souboru dev.tfvars a nadefinuje promennou user=tomas  
+`cd /adresar` .. prejdu do adresare ktery obsahuje main.tf
+`terraform init` ... vytvori si docasne soubory, kde si kompiluje tf soubory  
+`terraform validate` ... overi syntaxi  
+`terraform plan` ...  pokusi se udelat deployment na necisto  
+`terraform apply -autoapprove` ... aplikuje zmenu, nevyzaduje schvalovani  
+`terraform apply --var-file=dev.tfvars -var user=tomas` ... vezme vstupni parametry se souboru dev.tfvars a nadefinuje promennou user=tomas  
 terraform apply --target='docker_service.vault[1]' ... naimplementuje změny pouze pro tento resource  
 terraform destroy -auto-approve ... smaze, co je nadefinovano v terraform definici  
-terraform import ... naimportuje do tfstate objekty z cloudu podle tf definic (objekty zminene v tf se nactou do tfstate  
+terraform import ... naimportuje do tfstate objekty z cloudu podle tf definic (objekty zminene v tf se nactou do tfstate)  
 terrafrom state rm azuread_service_principal.sp[3] ... odebere tento objekt z tfstate  
 terraform state list ... seznam objektů v tfstate  
 terraform state show vault_mount.volume ... ukáže nastavení daného objektu  

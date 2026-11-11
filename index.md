@@ -2,30 +2,30 @@
 title: Vítejte
 ---
 
-[https://www.linkedin.com/in/tomaslipensky/](https://www.linkedin.com/in/tomaslipensky/) - Moje profesní představení  
+[//www.linkedin.com/in/tomaslipensky/](https://www.linkedin.com/in/tomaslipensky/) - Moje profesní představení  
 
 Na stránkách se nachází především stručný průřez mými znalostmi a zkušenostmi. Obsah stránek používám jako osobní vědomostní databázi, ale můžete jej použít i pro řešení vašich úkolů a výzev.
 
 ## Sítě a operační systémy
 
-[OS](os/index): [AIX](os/aix), [Linux](os/linux), [os:bsd](os/bsd), [os:hpux](os/hpux), [Solaris/SunOS](os/sunos), [Unix obecně](os/unix), [MacOS](oś/macos), [os:Windows](os/Windows)/[PowerShell](os/powershell)  
-[Sítě](net/networking): [net:dns](net/dns), [net:Cisco](net/Cisco), [net:OpenWRT](net/OpenWRT), [F5 Big-IP - WAF](net/f5), [net:mitmproxy](net/mitmproxy), pfSense - open source bezpečnostní řešení  
+[OS](os/index): [AIX](os/aix), [Linux](os/linux), [bsd](os/bsd), [hpux](os/hpux), [Solaris/SunOS](os/sunos), [Unix obecně](os/unix), [MacOS](oś/macos), [Windows](os/Windows)/[PowerShell](os/powershell)  
+[Sítě](net/networking): [dns](net/dns), [Cisco](net/Cisco), [OpenWRT](net/OpenWRT), [F5 Big-IP - WAF](net/f5), [mitmproxy](net/mitmproxy), pfSense - open source bezpečnostní řešení  
 OS pro telefony: [Android](os/android)  
 
 ## Virtualizace a kontejnery
 
-[Virtualizace](os/virtualization): [VMware](os/esx), [os:citrix](os/citrix),  [os:docker](os/docker)  
+[Virtualizace](os/virtualization): [VMware](os/esx), [citrix](os/citrix),  [docker](os/docker)  
 
 ## Automatizace IT
 
 [Automatizace](automatizace/index):  
 Veřejné cloudy: [Azure](automatizace/azure), [IBM Cloud](automatizace/ibmcloud), [AWS](automatizace/aws), [Google Cloud](automatizace/google)  
 Abstrakce virtualizace, správa virtualizace a cloudu: [Terraform](automatizace/terraform), [IBM Cloud Orchestrator](automatizace/ico), [OpenStack](automatizace/openstack), [Vagrant](automatizace/vagrant), OpenShift nad Kubernetes  
-Správa konfigurace (configuration management): [automatizace:Ansible](automatizace/Ansible), [Chef](automatizace/chef), [DSC](automatizace/dsc), Puppet, SaltStack, CFEngine  
-Orchestrace kontejnerů: [automatizace:kubernetes](automatizace/kubernetes), [automatizace:helm](automatizace/helm) pro Kubernetes, Docker Swarm, OpenShift, Apache Mesos, EKS, AKS, ...  
+Správa konfigurace (configuration management): [Ansible](automatizace/Ansible), [Chef](automatizace/chef), [DSC](automatizace/dsc), Puppet, SaltStack, CFEngine  
+Orchestrace kontejnerů: [kubernetes](automatizace/kubernetes), [helm](automatizace/helm) pro Kubernetes, Docker Swarm, OpenShift, Apache Mesos, EKS, AKS, ...  
 Privátní cloudy: [IBM Cloud Manager](automatizace/ICM), [IBM Cloud Private](automatizace/icp)  
 [CI/CD](automatizace/cicd): [Jenkins](automatizace/jenkins), [Octopus](automatizace/octopus), [UrbanCode](automatizace/urbancode), [VSTS](automatizace/vsts), [Liquibase](automatizace/liquibase), Travis, Bamboo, Teamcity, [Github actions](automatizace/github), Gitlab, [Argo CD](automatizace/argocd)  
-Artefaktové repozitáře: [automatizace:nuget](automatizace/nuget)
+Artefaktové repozitáře: [nuget](automatizace/nuget)
 
 ## Databáze
 
@@ -45,11 +45,11 @@ Wiki a publikační technologie: [dokuWiki](https://www.dokuwiki.org), [mdWiki](
 
 ## Data management, Business inteligence, Big data
 
-Reporting: [Cognos BI](data/cognos), [data:Hyperion](data/Hyperion), [data:EssBase](data/EssBase), [data:BIRT](data/BIRT), [data:Pentaho](data/Pentaho), [data:SapBI](data/SapBI), [data:TM1](data/TM1)  
-ETL nástroje: [data:DataStage](data/Datastage), [data:InformaticaMDM](data/InformaticaMDM), [data:Streams](data/Streams)  
+Reporting: [Cognos BI](data/cognos), [Hyperion](data/Hyperion), [EssBase](data/EssBase), [BIRT](data/BIRT), [Pentaho](data/Pentaho), [SapBI](data/SapBI), [TM1](data/TM1)  
+ETL nástroje: [DataStage](data/Datastage), [InformaticaMDM](data/InformaticaMDM), [Streams](data/Streams)  
 MDM: [Infosphere MDM CS](data/mdm), [Informatica ETL](data/informatica)  
-Bezpečnost dat: [data:GDE](data/GDE)  
-Ostatní: [data:Hadoop](data/Hadoop), [data:obi](data/obi), [data:obid](data/obid), [data:odi](data/odi), [data:owb](data/owb)
+Bezpečnost dat: [GDE](data/GDE)  
+Ostatní: [Hadoop](data/Hadoop), [obi](data/obi), [obid](data/obid), [odi](data/odi), [owb](data/owb)
 
 ## Ostatní aplikace
 
@@ -64,15 +64,15 @@ Veritas Cluster
 [Bezpečnost](sw/security)  
 [blockchain](sw/blockchain): [etherneum](sw/etherneum)  
 Instant Messaging: [teams](sw/teams)  
-Kancelář: Office 365, LibreOffice, [outlook:MS Outlook](sw/outlook/MS Outlook)  
+Kancelář: Office 365, LibreOffice, [MS Outlook](sw/outlook/MS Outlook)  
 Alertovací konzole: Alerta  
 Analýza obrazu: [OpenCV](sw/OpenCV)  
-Process management, logic management: [automatizace:bpm](automatizace/bpm)  
+Process management, logic management: [bpm](automatizace/bpm)  
 Business rules, decision management system: JSON Rules - JSON Rules Engine, OpenRules  
 [Active Directory](sw/ad)  
 [Machine learning - strojové učení](sw/ml)  
 Logování: [splunk](sw/splunk), [dynatrace](sw/dynatrace), [datadog](sw/datadog)  
-[AI](sq/ai): [https://www.phind.com/](https://www.phind.com/), [https://chat.openai.com/auth/login](https://chat.openai.com/auth/login)  
+[AI](sq/ai): [//www.phind.com/](https://www.phind.com/), [//chat.openai.com/auth/login](https://chat.openai.com/auth/login)  
 Správa tajných údajů: [HashiCorp Vault](sw/vault)  
 Grafické aplikace: [photopea](https://www.photopea.com/)
 Autentifikace: [autentifikace](sw/autentifikace)
