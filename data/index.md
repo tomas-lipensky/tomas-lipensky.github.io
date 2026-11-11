@@ -6,7 +6,7 @@ title: index
 
 Obecne kazda aplikace pro nakladani s daty (ETL - extract transform load, business inteligenci, master data management, ...) se sklada z mnoha komponenet, pricemz jedna z komponent je:
 
-[aplikacni server](../web/) a aplikace v nem, ktera zajistuje webovy management
+[aplikacni server](../www/) a aplikace v nem, ktera zajistuje webovy management
 
 a dalsi komponenty, ktere provadi primo manipulaci s daty.
 

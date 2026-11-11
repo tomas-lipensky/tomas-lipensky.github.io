@@ -64,7 +64,7 @@
   <dd>[[php.html|php]]</dd>
   <dd>[[javascript.html|javascript]]</dd>
   <dd>[[mobilap.html|mobilni aplikace]]</dd>
-  <dd>[[../web/j2ee.html|j2ee aplikace]]</dd>
+  <dd>[[../www/j2ee.html|j2ee aplikace]]</dd>
   <dd>[[http://www.linuxzone.cz/index.phtml?ids=2&amp;idc=179|Java programovani pro web - tutorial na linux zone]]</dd>
 </dl>
 

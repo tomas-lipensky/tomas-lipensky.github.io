@@ -6,7 +6,7 @@ title: jazyky
 
 ## Arabština
 
-[other:arabstina](other/arabstina)  
+[arabstina](arabstina)  
 ## Francouzština
 
 ## Italština

@@ -73,6 +73,7 @@ ctrp-enter ... otevře okno pro doplňování kódu
 .github/linters/
 ## GH - GitHub CLI
 
+gh auth login -s "admin:org" ... login jako organization admin  
 gh alias set iv 'issue view --comments' ... vytvoření aliasu  
 gh iv https://github.com/a/b/issues/4 ... použití aliasu, zobrazení komentářů pro issue 5  
 gh issue view --comments https://github.com/a/b/issues/4 ... zobrazení komentářů pro issue 5  

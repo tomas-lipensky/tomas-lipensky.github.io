@@ -3,7 +3,7 @@
 ======Java======
 
 [[../sw/java.html|java virtual machine (JVM)]] obecne\\
-[[../web/j2ee.html|J2EE]] vyvoj\\
+[[../www/j2ee.html|J2EE]] vyvoj\\
 
 
 ====Obsah:====

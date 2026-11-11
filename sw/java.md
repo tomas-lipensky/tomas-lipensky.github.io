@@ -4,9 +4,9 @@ title: Java aplikace
 
 ## Interni a Externi odkazy:
 
-[Aplikacni servery](../web/index.html)  
+[Aplikacni servery](../www/index.html)  
 [Programovaci jazyk java](../dev/java.html)  
-[J2EE](../web/j2ee.html)  
+[J2EE](../www/j2ee.html)  
 [Testcontainers](https://testcontainers.com/guides/getting-started-with-testcontainers-for-java/) ... definování Docker test kontejnerů v Maven projektu, konterjer se vytvoří pouze na test v režii Maven buildu  
 
 ## Nastroje z prikazove radku a JVM prepinace

@@ -11,9 +11,9 @@
 ====Interni a Externi odkazy:====
 
 
-[[../web/index.html|Aplikacni servery]]\\
+[[../www/index.html|Aplikacni servery]]\\
 [[../dev/java.html|Programovaci jazyk java]]\\
-[[../web/j2ee.html|J2EE]]\\
+[[../www/j2ee.html|J2EE]]\\
 [[https://testcontainers.com/guides/getting-started-with-testcontainers-for-java/|Testcontainers]] ... definování Docker test kontejnerů v Maven projektu, konterjer se vytvoří pouze na test v režii Maven buildu\\
 
 
