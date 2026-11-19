@@ -12,32 +12,32 @@ title: LINUX - Sluzby
 
 [DHCP](http://interperson.ic.cz/dhcp.php)  
 
-iptables -I INPUT -p udp --dport 67 -j ACCEPT  
-rpm -i dhcp  
-service dhcpd start/stop/status/configtest  
-/etc/dhcpd.conf  
-/etc/sysconfig/dhcpd  
-/var/lib/dhcpd/dhcpd.leases .. historie pridelenych adres  
+`iptables -I INPUT -p udp --dport 67 -j ACCEPT`  
+`rpm -i dhcp`  
+`service dhcpd start/stop/status/configtest`  
+`/etc/dhcpd.conf`  
+`/etc/sysconfig/dhcpd`  
+`/var/lib/dhcpd/dhcpd.leases` .. historie pridelenych adres  
 
 ## DNS - Domain Name Server - named - BIND
 
 [DNS](http://interperson.ic.cz/dns.php) -  BIND (berkley Internet Name Domain)
 
 rpm -i bind system-config-bind  
-iptables -t udp,tcp --dports 53,921,953 ... port pro preklad adres, pro lightwight resolving a pro ovladani Bindu pomoci rndc  
-service named start/stop/status/restart/reload  
-/etc/sysconfig/named  
-/etc/named.conf  
-/etc/rndc.conf  
-dig a.b.c ... otestuje dotaz - podrobny vypis  
-host a.c.v ... dotaz na server uvedeny v /etc/resolv.conf  
-nslookup a.b.c ... dotaz na DNS server  
-rndc-confgen > rndc.conf ... generovani klice pro rnd  
-rndc reload ... povi Bindu, ze ma znovu nacist konfiguracni soubory  
+`iptables -t udp,tcp --dports 53,921,953` ... port pro preklad adres, pro lightwight resolving a pro ovladani Bindu pomoci rndc  
+`service named start/stop/status/restart/reload`  
+`/etc/sysconfig/named`  
+`/etc/named.conf`  
+`/etc/rndc.conf`  
+`dig a.b.c` ... otestuje dotaz - podrobny vypis  
+`host a.c.v` ... dotaz na server uvedeny v /etc/resolv.conf  
+`nslookup a.b.c` ... dotaz na DNS server  
+`rndc-confgen > rndc.conf` ... generovani klice pro rnd  
+`rndc reload` ... povi Bindu, ze ma znovu nacist konfiguracni soubory  
 
 ## NTP - Network Time Protocol
 
-rpm -i ntp ntpd  
+r`pm -i ntp ntpd`  
 iptables -p udp --dport 123  
 service ntp start/stop/status  
 /etc/ntp.conf  
@@ -513,22 +513,22 @@ rpm -i xinetd
 /etc/xinetd.conf
 service xinetd start/stop/status/restart/reload
 
-```
-	chkconfig kudzu off        # Annoying RedHat new hardware detection
-	chkconfig isdn off         # ISDN controller
-	chkconfig nscd off         # Network authentication (not needed when standalone)
-	chkconfig gpm off          # Some kind of mouse server
-	chkconfig sendmail off     # Mail utility (not needed for non-server)
-	chkconfig netfs off        # Automatically mount network file systems
-	chkconfig ntpd off         # Network Time Protocol daemon (not needed when standalone)
-	chkconfig autofs off       # Automounter
-	chkconfig rawdevices off   # Creates raw devices for Oracle, etc.
-	
-	chkconfig cups off         # Printer daemon (not needed if you don't have a printer)
-	chkconfig postfix off      # Postfix mail system (not needed for non-server)
-	chkconfig smpppd off       # SuSE meta PPP daemon
-	chkconfig fbset off        # Framebuffer devices ?
-	chkconfig splash off
-	chkconfig splash_early off
-	chkconfig splash_late off
+```bash
+chkconfig kudzu off        # Annoying RedHat new hardware detection
+chkconfig isdn off         # ISDN controller
+chkconfig nscd off         # Network authentication (not needed when standalone)
+chkconfig gpm off          # Some kind of mouse server
+chkconfig sendmail off     # Mail utility (not needed for non-server)
+chkconfig netfs off        # Automatically mount network file systems
+chkconfig ntpd off         # Network Time Protocol daemon (not needed when standalone)
+chkconfig autofs off       # Automounter
+chkconfig rawdevices off   # Creates raw devices for Oracle, etc.
+
+chkconfig cups off         # Printer daemon (not needed if you don't have a printer)
+chkconfig postfix off      # Postfix mail system (not needed for non-server)
+chkconfig smpppd off       # SuSE meta PPP daemon
+chkconfig fbset off        # Framebuffer devices ?
+chkconfig splash off
+chkconfig splash_early off
+chkconfig splash_late off
 ```

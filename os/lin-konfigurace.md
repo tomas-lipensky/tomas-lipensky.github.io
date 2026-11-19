@@ -11,8 +11,8 @@ LVM sifrovane na urovni PV nebo [LV](https://petrnosek.cz/lvm-a-sifrovani-dat-na
 root LV - sifrovat ci nesifrovat? Sifrovat = chrani proti nabootovani z docasneho media a podstrceni uzivatele se sudo pravy, ktery pri behu rozsifrovaneho disku pristoupi na pocitac i proti jinym zmenam konfigurace  
 ## Pravidelne cisteni Snap balicku
 
-snap list | grep disabled  
-snap remove &&--revision=45 nazev_balicku  
+`snap list | grep disabled`  
+`snap remove &&--revision=45 nazev_balicku`  
 
 ## update balicku
 

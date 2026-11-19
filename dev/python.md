@@ -35,28 +35,28 @@ Jython je iplementace Pythonu cela napsana v Jave.
 
 ### Prikazy
 
-python ... spusti interaktivni prekladac  
-python -c 'print "Ahoj"' ... spusti prikaz  
-python soubor.py ... spustu soubor v pythonu  
-pydoc string ... popis knihovny string
-pydoc -p 82 ... spusti http server na portu 82 s napovedou k pythonu  
-jython ... spusti interaktivni prekladac Jythonu  
-echo 'toydi deified idiot' | python -c "print raw_input()[::-1]"
+`python` ... spusti interaktivni prekladac  
+`python -c 'print "Ahoj"'` ... spusti prikaz  
+`python soubor.py` ... spustu soubor v pythonu  
+`pydoc string` ... popis knihovny string
+`pydoc -p 82` ... spusti http server na portu 82 s napovedou k pythonu  
+`jython` ... spusti interaktivni prekladac Jythonu  
+`echo 'toydi deified idiot' | python -c "print raw_input()[::-1]"`
 
 ### Virtualni prostredi + instalace doplnku mitmproxy pro VP
 
-sudo yum install python-virtualenv  
-virtualenv -p /usr/local/bin/python2.7 ~/Desktop/mitmproxy  
-cd ~/Desktop/mitmproxy  
-. bin/activate  
-python -m venv ADRESAR ... vytvoří virtuální prostředí my_project_env  
-source ADRESAR/bin/activate ... aktivuje virtuální prostředí  
-pip install mitmproxy ... nainstaluje balíček mitmproxy - buď globálně, nebo do aktivovaného virtuálního prostředí  
-python3 -m pip install -r requirements.txt ... instalace z **requirement.txt** souboru  
-python3.12 -m pip install --user ddgs==1.2 ... jiný způsob na instalaci balíčku, jen pro daného uživatele  
+`sudo yum install python-virtualenv`  
+`virtualenv -p /usr/local/bin/python2.7 ~/Desktop/mitmproxy`  
+`cd ~/Desktop/mitmproxy`  
+`. bin/activate`  
+`python -m venv ADRESAR` ... vytvoří virtuální prostředí my_project_env  
+`source ADRESAR/bin/activate` ... aktivuje virtuální prostředí  
+`pip install mitmproxy` ... nainstaluje balíček mitmproxy - buď globálně, nebo do aktivovaného virtuálního prostředí  
+`python3 -m pip install -r requirements.txt` ... instalace z **requirement.txt** souboru  
+`python3.12 -m pip install --user ddgs==1.2` ... jiný způsob na instalaci balíčku, jen pro daného uživatele  
 [pipx](https://github.com/pypa/pipx) install pycowsay ... nainstaluje lokálně pro daný adresář knihovnu (nemusí se používat venv)  
-pipx list ... seznam nainstalovaných knihoven  
-pipx run skript parametry ... spustí python aplikaci s parametrama a nainstalovanýma knihovnama  
+`pipx list` ... seznam nainstalovaných knihoven  
+`pipx run skript parametry` ... spustí python aplikaci s parametrama a nainstalovanýma knihovnama  
 [uv](https://pypi.org/project/uv/) ... jeden nástroj na nahrazení pip, poetry, pyenv, twine, virtualenv  
 
 ### Moduly

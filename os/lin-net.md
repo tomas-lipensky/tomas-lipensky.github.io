@@ -15,11 +15,11 @@ echo "alias net-pf-10 off\nalias ipv6 off" > /etc/modprobe.conf ... zakaze pouzi
 /etc/network/interface ... nove nastaveni site (Ubuntu 18.04)  
 /etc/netplan ... nastaveni sitovych karet  
 [systemd-resolve](https://wiki.archlinux.org/index.php/Systemd-resolved) --set-domain=home.local -i vpn0 ... nastaveni domeny pomoci systemd-resolve  
-systemd-resolve --status ... status  
-systemd-resolve --set-dns=10.0.0.138 -i wlp2s0 ... nastaveni DNS  
+`systemd-resolve --status` ... status  
+`systemd-resolve --set-dns=10.0.0.138 -i wlp2s0` ... nastaveni DNS  
 /etc/systemd/network/soubor1
 
-```
+```conf
 [Match]
 Name=enp0s4
 
@@ -28,61 +28,62 @@ DHCP=yes
 DNS=192.168.1.1
 ```
 
-sudo systemctl restart systemd-resolved ... restart demona  
+`sudo systemctl restart systemd-resolved` ... restart demona  
 
 ## Nastaveni sitoveho provozu
 
-ifconfig -a ... ukaze vsechny sitove karty vcetne nastaveni adres  
-ip a l ... ukaze vsechny sitove karty vcetne nastaveni adres  
-ifconfig etho 192.168.1.1 netmask 255.255.255.0  
-ifconfig 1 10.1.1.1 netmask 255.255.255.0  
-ifconfig eth0 del 1.2.3.4/24  
-ifconfig eth0 hw ether 00:11:22:33:44:55 ... nastavi MAC adresu sitove karty  
-ethtool eth0 ... ukaze parametry sitovky  
-mii-tool -v eth0 ... ukaze parametry sitove karty  
-mii-tool -F 100baseTx-FD eth0 ... nastaveni full duplexu  
-ethtool -s eth0 autoneg off duplex full ... nastaveni full duplexu  
-ifdown eth0; ifup eth0 ... restart sitovky  
-sysctl -a|grep eth0 ... nastaveni patametru jadra  
-sysctl -p ... nacte nastaveni site z /etc/sysctl.conf  
-route add default gw 1.2.3.4 ... prida do routovaci tabulky defaultni gw 1.2.3.4  
-route add -net 192.168.37.0 netmask 255.255.255.0 gw 192.168.2.101  
-route add 192.168.37.141 gw 192.168.2.101  
-ip addr show ... ukaze nastaveni sitovych karet  
-ip a l ... seznam sitovych karet a jejich nastaveni  
-ip addr add 192.168.2.1/24 dev eth0 ... nastavi sitovou kartu  
-ip addr add 192.168.3.1/24 brd + dev eth0 ... druha sitova adresa pro sitovku  
-ip a del 192.168.3.1/24 dev eth0 ... Odebere sitovou adresu  
-ip addr flush dev eth0 ... vynulavani nastaveni sitovky  
-ip link set dev eth0 up ... aktivuje sitovou kartu - virtualne prispoji na sitove vrstve  
-ip l set eth0 down ... deaktivuje sitovou kartu - virtualne odpoji na sitove vrstve  
-ip neigh show ... ukaze sousedy (jako arp -a)  
-ip route add  
+`ifconfig -a` ... ukaze vsechny sitove karty vcetne nastaveni adres  
+`ip a l` ... ukaze vsechny sitove karty vcetne nastaveni adres  
+`ifconfig etho 192.168.1.1 netmask 255.255.255.0`  
+`ifconfig 1 10.1.1.1 netmask 255.255.255.0`  
+`ifconfig eth0 del 1.2.3.4/24`  
+`ifconfig eth0 hw ether 00:11:22:33:44:55` ... nastavi MAC adresu sitove karty  
+`ethtool eth0` ... ukaze parametry sitovky  
+`mii-tool -v eth0` ... ukaze parametry sitove karty  
+`mii-tool -F 100baseTx-FD eth0` ... nastaveni full duplexu  
+`ethtool -s eth0 autoneg off duplex full` ... nastaveni full duplexu  
+`ifdown eth0; ifup eth0` ... restart sitovky  
+`sysctl -a|grep eth0` ... nastaveni patametru jadra  
+`sysctl -p` ... nacte nastaveni site z /etc/sysctl.conf  
+`route add default gw 1.2.3.4` ... prida do routovaci tabulky defaultni gw 1.2.3.4  
+`route add -net 192.168.37.0 netmask 255.255.255.0 gw 192.168.2.101`  
+`route add 192.168.37.141 gw 192.168.2.101`  
+`ip addr show` ... ukaze nastaveni sitovych karet  
+`ip a l` ... seznam sitovych karet a jejich nastaveni  
+`ip addr add 192.168.2.1/24 dev eth0` ... nastavi sitovou kartu  
+`ip addr add 192.168.3.1/24 brd + dev eth0` ... druha sitova adresa pro sitovku  
+`ip a del 192.168.3.1/24 dev eth0` ... Odebere sitovou adresu  
+`ip addr flush dev eth0` ... vynulavani nastaveni sitovky  
+`ip link set dev eth0 up` ... aktivuje sitovou kartu - virtualne prispoji na sitove vrstve  
+`ip l set eth0 down` ... deaktivuje sitovou kartu - virtualne odpoji na sitove vrstve  
+`ip neigh show` ... ukaze sousedy (jako arp -a)  
+`ip route add`  
 ip route list (ip route show)  
-ip r l (ip r s) ... seznam routovaci rabulky  
-ip route add default via 192.168.0.254  
-ip route add 129.39.133.132 255.255.255.255 via  62.187.136.32  
-/sbin/ip route add 192.168.195.160/27 via 192.168.196.1 dev eth2  
-ipcalc -p 192.168.195.160 255.255.255.224 Napise suffix  
-ipcalc -h 10.240.8.4 ... napise sitove jmeno k adrese 10.240.8.4 (pouzito napr. /usr/sbin/dhclient-script)
-vconfig ... nastavovani virtualnich sitovych karet z VIO serveru na P-Series  
-modprobe 8021q ... povoleni VLANU  
-setup ... RedHat, Fedora atd konfiguracni textovy agent  
+`ip r l (ip r s)` ... seznam routovaci rabulky  
+`ip route add default via 192.168.0.254`  
+`ip route add 129.39.133.132 255.255.255.255 via 62.187.136.32`  
+`/sbin/ip route add 192.168.195.160/27 via 192.168.196.1 dev eth2`  
+`ipcalc -p 192.168.195.160 255.255.255.224` ...  Napise suffix  
+`ipcalc -h 10.240.8.4` ... napise sitove jmeno k adrese 10.240.8.4 (pouzito napr. /usr/sbin/dhclient-script)
+`vconfig` ... nastavovani virtualnich sitovych karet z VIO serveru na P-Series  
+`modprobe 8021q` ... povoleni VLANU  
+`setup` ... RedHat, Fedora atd konfiguracni textovy agent  
 
 ## Bezdratova zarizeni
 
-rfkill list all ... ukaze sitova zarizen a jejich stav - vypnuto/zapnuto  
+`rfkill list all` ... ukaze sitova zarizen a jejich stav - vypnuto/zapnuto  
+
 ## Bezdratova sit
 
-aircrack BIT.ivs ... Vypocita WEP, nebo WPE klic ze stopy site v souboru BIT.ivs  
-airodump-ng ... uklada pakety, ktere vycmucha bezdratova sitova karta ve vzduchu  
-airodump-ng wlan0 -w BIT --channel 4 ... uklada pakety do souboru BIT  
-aireplay-ng ... vysila pakety za ucelem ziskani stopy sitoveho provozu na mozne vypocitani klice  
-iwconfig wlan0 up ... povoli wifi kartu  
-iwconfig wlan0 mode managed key 11111111 ... Nastavi hodnotu 64-bit WEP klice a nastaveni karty jako klienta  
-iwconfig wlan0 key 1111-1111-1111-1111 ... nastavi hodnotu 128-bit WEP klice  
-iwconfig wlan0 essid "ESSID" ... povel k pripojeni k siti ESSID  
-iwconfig wlan0 mode master ... Nastaveni karty jako access Pointu  
+`aircrack BIT.ivs` ... Vypocita WEP, nebo WPE klic ze stopy site v souboru BIT.ivs  
+`airodump-ng` ... uklada pakety, ktere vycmucha bezdratova sitova karta ve vzduchu  
+`airodump-ng wlan0 -w BIT --channel 4` ... uklada pakety do souboru BIT  
+`aireplay-ng` ... vysila pakety za ucelem ziskani stopy sitoveho provozu na mozne vypocitani klice  
+`iwconfig wlan0 up` ... povoli wifi kartu  
+`iwconfig wlan0 mode managed key 11111111` ... Nastavi hodnotu 64-bit WEP klice a nastaveni karty jako klienta  
+`iwconfig wlan0 key 1111-1111-1111-1111` ... nastavi hodnotu 128-bit WEP klice  
+`iwconfig wlan0 essid "ESSID"` ... povel k pripojeni k siti ESSID  
+`iwconfig wlan0 mode master` ... Nastaveni karty jako access Pointu  
 iwconfig wlan0 mode managed ... Nastaveni karty jako klienta  
 iwconfig wlan0 rate 11M ... Nastavi rychlost karty  
 iwconfig wlan0 channel 2  ... Nastavi kanal, na kterem bude pracovat  

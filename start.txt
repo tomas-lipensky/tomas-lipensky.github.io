@@ -4,7 +4,7 @@
 Na stránkách se nachází predevšim stručný průřez mých znalostí a zkušenotí. Obsah stránek používám jako osobní vědomostní databázi, ale můžete jej použít i pro řešení vaších úkolů a výzev.
 
 ==== Sítě a operační systémy====
-[[os:index|OS]]: [[os:aix|AIX]], [[os:linux|Linux]], [[os:bsd]], [[os:hpux]], [[os:sunos|Solaris/SunOS]], [[os:unix|Unix obecne]], [[oś:macos|MacOS]], [[os:Windows]]/[[os:powershell|PowerShell]]\\
+[[os:index|OS]]: [[os:aix|AIX]], [[os:linux|Linux]], [[os:bsd]], [[os:hpux]], [[os:sunos|Solaris/SunOS]], [[os:unix|Unix obecne]], [[os:macos|MacOS]], [[os:Windows]]/[[os:powershell|PowerShell]]\\
 [[net:networking|Site]]: [[net:dns]], [[net:Cisco]], [[net:OpenWRT]], [[net:f5|F5 Big-IP - waf]], [[net:mitmproxy]], pfSense - opensource bezpecnostni reseni\\
 OS pro telefony: [[os:android|Android]]\\
 

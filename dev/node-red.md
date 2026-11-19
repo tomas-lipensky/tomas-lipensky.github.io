@@ -9,15 +9,15 @@ title: Node-Red
 
 ## Instalace offline (na intranetu)
 
-npm install -g npmbox ... instalace nmpbox balicku  
-npmbox npmbox ... stahne npmbox a zavislosti do balicku  
-npm install pm2 -g ... nainstaluje se libovolny balik, treba pm2  
-npmbox pm2 ... zabali se nainstalovany balik  
-scp npmbox.npmbox pm2.npmbox root@offline-server:. ... pretahne se balicek npmbox.npmbox a pm2 na vzdaleny offline server  
-ssh  root@offline-server ... pripojime se na server  
-tar --no-same-owner --no-same-permissions -xvzf npmbox.npmbox ... rozbali se archiv  
-npm install --global --cache ./.npmbox.cache --optional --cache-min 99999999999 --shrinkwrap false npmbox ... nainstaluje se obsah balicku - npmbox  
-npmunbox pm2.npmbox --global ... nainstaluje se pm2 z baliku  
+`npm install -g npmbox` ... instalace nmpbox balicku  
+`npmbox npmbox` ... stahne npmbox a zavislosti do balicku  
+`npm install pm2 -g` ... nainstaluje se libovolny balik, treba pm2  
+`npmbox pm2` ... zabali se nainstalovany balik  
+`scp npmbox.npmbox pm2.npmbox root@offline-server:.` ... pretahne se balicek npmbox.npmbox a pm2 na vzdaleny offline server  
+`ssh  root@offline-server` ... pripojime se na server  
+`tar --no-same-owner --no-same-permissions -xvzf npmbox.npmbox` ... rozbali se archiv  
+`npm install --global --cache ./.npmbox.cache --optional --cache-min 99999999999 --shrinkwrap false npmbox` ... nainstaluje se obsah balicku - npmbox  
+`npmunbox pm2.npmbox --global` ... nainstaluje se pm2 z baliku  
 
 #### Jiny zpusob
 

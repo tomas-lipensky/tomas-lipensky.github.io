@@ -22,19 +22,19 @@ title: Perl
 
 ## Binarky perlu
 
-perl -e 'print scalar localtime(1234567890)"\n"' ... prevede cas v sekundach do citelne podoby  
-perl -e 'print crypt("mypassword","Bz");' ... Zahashuje "mypassword" pro uziti v /etc/shadow  
-perl -pi -e 's/\r\n/\n/g' input.file ... prevede dosovy txt do unixoveho  
-perl -e '$now=time;$then=$now-(24*60*60*60);while(&lt;&gt;){split /\s+/;(@_[7]>=$then)&& print;}'  
-perl -e "print join(\"\n\", @INC);" ... ukaze cesty ke knihovnam  
-pp -o skript.exe skript.pl ... vytvoreni binarky (vyzaduje balicek PAR::Packer) - balik s knihovnama, perl.exe atd. se rozbali do tempu a pak spusti  
+`perl -e 'print scalar localtime(1234567890)"\n"'` ... prevede cas v sekundach do citelne podoby  
+`perl -e 'print crypt("mypassword","Bz");'` ... Zahashuje "mypassword" pro uziti v /etc/shadow  
+`perl -pi -e 's/\r\n/\n/g' input.file` ... prevede dosovy txt do unixoveho  
+`perl -e '$now=time;$then=$now-(24*60*60*60);while(&lt;&gt;){split /\s+/;(@_[7]>=$then)&& print;}'`  
+`perl -e "print join(\"\n\", @INC);"` ... ukaze cesty ke knihovnam  
+`pp -o skript.exe skript.pl` ... vytvoreni binarky (vyzaduje balicek PAR::Packer) - balik s knihovnama, perl.exe atd. se rozbali do tempu a pak spusti  
 
-perldoc -v '$"' ... napoveda o promenne $"  
-perldoc -f printf ... napoveda o prikazu printf  
-perldoc -q read ... najde "read" v FAQ perlu  
-perldoc Data::Dumper ... napoveda k modulu  
-perldoc -l Data::Dumper ... ukaze soubor modulu  
-perldoc -m Data::Dumper ... ukaze obsah modulu  
+`perldoc -v '$"'` ... napoveda o promenne $"  
+`perldoc -f printf` ... napoveda o prikazu printf  
+`perldoc -q read` ... najde "read" v FAQ perlu  
+`perldoc Data::Dumper` ... napoveda k modulu  
+`perldoc -l Data::Dumper` ... ukaze soubor modulu  
+`perldoc -m Data::Dumper` ... ukaze obsah modulu  
 [perl2exe](http://www.indigostar.com/perl2exe.php) ... Nastroj na kompilaci balicku a knihoven do spustitelneho souboru  
 cpan -i Nagios::NRPE::Packet ... stahne a nainstaluje modul Nagios::NRPE::Packet  
 PERL_MM_USE_DEFAULT=1 perl -fi PAR::Packer ... stahne a nainstaluje modul PAR::Archive bez ptani na zavislosti  
@@ -42,9 +42,9 @@ PERL_MM_USE_DEFAULT=1 perl -MCPAN -e 'install PAR::Packer' ... jina alternativa 
 
 ## One liners - jednoradkace
 
-cat last-1.xml | perl -MHTML::Entities -lne 'print decode_entities($_)' ... dekoduje HTML kodovani (apersand kodovani &apm;xxx;)
+`cat last-1.xml | perl -MHTML::Entities -lne 'print decode_entities($_)'` ... dekoduje HTML kodovani (apersand kodovani &apm;xxx;)
 
-echo "12/11/2016 00:53:24"|perl -MTime::Local -lne'my ($a,$b,$c,$d,$e,$f)=split(/[\s\/:]+/, $_);my $time = timelocal($f,$e,$d,$a,$b-1,$c); print "$time";'
+`echo "12/11/2016 00:53:24"|perl -MTime::Local -lne'my ($a,$b,$c,$d,$e,$f)=split(/[\s\/:]+/, $_);my $time = timelocal($f,$e,$d,$a,$b-1,$c); print "$time";'`
 
 ## Promenne
 

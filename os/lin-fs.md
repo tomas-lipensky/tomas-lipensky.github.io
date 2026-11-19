@@ -4,27 +4,27 @@ title: LINUX - Souborove systemy, disky, LVM, ...
 
 ## Soubory
 
-stat soubor ... informace o souboru - cas modifikace, pristupu atd.  
+`stat soubor` ... informace o souboru - cas modifikace, pristupu atd.  
 
 ### Pristup k souborum procesama
 
-fuser /mnt/a ... seznam procesu, tere vyuzivatji /mnt/a  
-fuser -vk /mnt/a ... vypise vsechny procesy, ktere pristupovaly na /mnt/a a zabije je  
-lsof ... vypis otevrenych souboru  
-ls -l /proc/*/fd/* ... dalsi zpusob jak vylistovat otevrene soubory  
+`fuser /mnt/a` ... seznam procesu, tere vyuzivatji /mnt/a  
+`fuser -vk /mnt/a` ... vypise vsechny procesy, ktere pristupovaly na /mnt/a a zabije je  
+`lsof` ... vypis otevrenych souboru  
+`ls -l /proc/*/fd/*` ... dalsi zpusob jak vylistovat otevrene soubory  
 
 ### Prava k souborum
 
-chown -R root:root /etc ... zmeni vlastnika adresare a souboru rekurzivne  
-chgrp root /etc/hosts ... zmeni skupinu vlastnika souboru  
-chmod 755 aaa.txt ... zmeni pristupova prava k souboru  
-tune2fs -l /dev/sda3  ... zapne ACL funkcionalitu na FS  
-mount -o acl /dev/sda ... namountovani s ACL funkcionalitou  
-getfacl ... ukaze ACL (Access Control List) pristupy  
-setfacl -m u:visitor:rx /home/schedule.txt ... nastavi ACL na soubor /home/schedule.txt, ze uzivatel visitor ma pristup rx  
-setfacl -x g:visitors /home/schedule.txt ... zrusi ACL na soubor /home/schedule.txt pro skupinu visitors  
-setfacl -m d:u:student:rw /home ... nastavi defaultni ACL pro adresar /home pro studenta na rw  
-setfacl --remove-default /home ... zrusi defaultni prava k adresari home  
+`chown -R root:root /etc` ... zmeni vlastnika adresare a souboru rekurzivne  
+`chgrp root /etc/hosts` ... zmeni skupinu vlastnika souboru  
+`chmod 755 aaa.txt` ... zmeni pristupova prava k souboru  
+`tune2fs -l /dev/sda3`  ... zapne ACL funkcionalitu na FS  
+`mount -o acl /dev/sda` ... namountovani s ACL funkcionalitou  
+`getfacl` ... ukaze ACL (Access Control List) pristupy  
+`setfacl -m u:visitor:rx /home/schedule.txt` ... nastavi ACL na soubor /home/schedule.txt, ze uzivatel visitor ma pristup rx  
+`setfacl -x g:visitors /home/schedule.txt` ... zrusi ACL na soubor /home/schedule.txt pro skupinu visitors  
+`setfacl -m d:u:student:rw /home` ... nastavi defaultni ACL pro adresar /home pro studenta na rw  
+`setfacl --remove-default /home` ... zrusi defaultni prava k adresari home  
 
 ## Souborove systemy
 

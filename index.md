@@ -2,13 +2,13 @@
 title: Vítejte
 ---
 
-[//www.linkedin.com/in/tomaslipensky/](https://www.linkedin.com/in/tomaslipensky/) - Moje profesní představení  
+[linkedin.com/in/tomaslipensky/](https://www.linkedin.com/in/tomaslipensky/) - Moje profesní představení  
 
 Na stránkách se nachází především stručný průřez mými znalostmi a zkušenostmi. Obsah stránek používám jako osobní vědomostní databázi, ale můžete jej použít i pro řešení vašich úkolů a výzev.
 
 ## Sítě a operační systémy
 
-[OS](os/index): [AIX](os/aix), [Linux](os/linux), [bsd](os/bsd), [hpux](os/hpux), [Solaris/SunOS](os/sunos), [Unix obecně](os/unix), [MacOS](oś/macos), [Windows](os/Windows)/[PowerShell](os/powershell)  
+[OS](os/index): [AIX](os/aix), [Linux](os/linux), [bsd](os/bsd), [hpux](os/hpux), [Solaris/SunOS](os/sunos), [Unix obecně](os/unix), [MacOS](os/macos), [Windows](os/Windows)/[PowerShell](os/powershell)  
 [Sítě](net/networking): [dns](net/dns), [Cisco](net/Cisco), [OpenWRT](net/OpenWRT), [F5 Big-IP - WAF](net/f5), [mitmproxy](net/mitmproxy), pfSense - open source bezpečnostní řešení  
 OS pro telefony: [Android](os/android)  
 
@@ -83,7 +83,7 @@ Jazyky: [C](dev/C), [csharp](dev/csharp), [Java](dev/Java), J2EE, [Perl](dev/Per
 Verzování: [svn](dev/svn), [git](dev/git), [tfs](dev/tfs)  
 Vývojové platformy: [GitHub](dev/github), GitLab, Bitbucket, [Azure DevOps/vsts](dev/ado)  
 Web: [html](dev/html), [css](dev/css), [xml](dev/xml), [php](dev/php)  
-Souborové formáty: [json](dev/json), [xml](dev/xml), [|Protobuf](https://developers.google.com/protocol-buffers) (něco jako typovaný JSON)  
+Souborové formáty: [json](dev/json), [xml](dev/xml), [Markdown](dev/md), [YAML](dev/yaml), [csv](dev/csv), [Protobuf](https://developers.google.com/protocol-buffers) (typovaný JSON)  
 Protokoly: [soap](dev/soap), [http](dev/http), REST, [gRPC](https://grpc.io/docs/guides/)  
 Kvalita kódu: konvence, [testy-kodu](dev/testy-kodu), Fortify, SonarQube, Coverity, lintery, CodeQL, Trivy, Gitleaks, Dependabot  
 Balíčkové repozitáře: [JFrog Artifactory](dev/artifactory), Nexus, DevOps, GitHub  

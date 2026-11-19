@@ -16,23 +16,23 @@ title: Java
 
 javac hello.java ... zkompiluje zdrojovy kod hello.java do hello.class  
 
-javadoc ... dokumentace k jave  
+`javadoc` ... dokumentace k jave  
 
 ### .class
 
-java hello ... spusti hello.class v JVM (Java Virtual Machine)  
-appletviewer apHello.htm ... prohlizec appletu  
-javap hello.class ... dekompilace .class do .java  
-jdb ... debugger  
+`java hello` ... spusti hello.class v JVM (Java Virtual Machine)  
+`appletviewer apHello.htm` ... prohlizec appletu  
+`javap hello.class` ... dekompilace .class do .java  
+`jdb` ... debugger  
 
 ### .jar
 
-java -jar Archiv.jar ... spusti program v archivu Archiv.jar  
+`java -jar Archiv.jar` ... spusti program v archivu Archiv.jar  
 
-jar cvf Archiv.jar *.class ... vytvori jar archiv (Java Archiv)  
-jar tvf Archiv.jar ... otestuje jar archiv (Java Archiv)  
-jar xvf Archiv.jar ... rozbali Archiv.jar  
-unzip -t Archiv.jar ... oteztuje JAR zabaleny zipem  
+`jar cvf Archiv.jar *.class` ... vytvori jar archiv (Java Archiv)  
+`jar tvf Archiv.jar` ... otestuje jar archiv (Java Archiv)  
+`jar xvf Archiv.jar` ... rozbali Archiv.jar  
+`unzip -t Archiv.jar` ... oteztuje JAR zabaleny zipem  
 
 ## Promenne
 

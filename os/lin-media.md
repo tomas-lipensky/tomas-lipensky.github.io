@@ -4,27 +4,27 @@ title: lin-media
 
 ## Scaner
 
-xsane ... scanovani ze scaneru, videa atd. - vyuziva [SANE](http://www.sane-project.org) (Scanner Access Now Easy)  
-sane-find-scanner ... najde USB scannery  
-scanimage -d 'smfp:usb;04e8;3469;ZF5RB8KG1F00KNZ' --page-format A4 --resolution=300 --format=tiff -b ... nascanuje obrazek do tiffu  
-xsane 'smfp:net;10.0.0.15' ... graficke scanovani, sitove spojeni s Samsung M2070  
-convert out1.tif -resize 50% prihlaska2.png ... zkonvertuje a zmenisi obrazek  
-convert *png prihlaska.pdf ... vytvori pdf  
+`xsane` ... scanovani ze scaneru, videa atd. - vyuziva [SANE](http://www.sane-project.org) (Scanner Access Now Easy)  
+`sane-find-scanner` ... najde USB scannery  
+`scanimage -d 'smfp:usb;04e8;3469;ZF5RB8KG1F00KNZ' --page-format A4 --resolution=300 --format=tiff -b` ... nascanuje obrazek do tiffu  
+`xsane 'smfp:net;10.0.0.15'` ... graficke scanovani, sitove spojeni s Samsung M2070  
+`convert out1.tif -resize 50% prihlaska2.png` ... zkonvertuje a zmenisi obrazek  
+`convert *png prihlaska.pdf` ... vytvori pdf  
 
 ## Multimedia
 
 [Inspirace jak stahovat multimedia](http://blog.root.cz/nekolikero-postrehu-z-pc-sveta/jak-stahnout-multimedialni-obsah-z-internetu/)  
 /proc/asound/cards  
-alsamixer ... zesilovani, zeslabovani zvuku  
-aplay aaa.wav ... prehraje a.wav  
-aplay -L ... vylistuje vsechny PCM  
-aplay -l .. vylistuje vsechny zarizeni, co mohou vydavat zvuk  
-aplay -vv -D front:CARD=Intel,DEV=0 /usr/share/sounds/ekiga/ring.wav  
-aplay -D plug:surround51 chan-ad.wav - (ftp://ling.ll.hawaii.edu/pub/greg/Surround-SDL-testfiles.tgs) test surround zvuku  
-arecord -l ... seznam zarizeni na porizovani zvuku (input zarizeni)  
-arecord -f cd - | aplay - ... preposilani mikrofonu na vystup  
-arecord -f cd - | tee output.wav | aplay - ... preposilani mikrofonu na vystup, zaroven nahravani  
-ffmpeg -f alsa -i hw:0,0 -t 30 out.wav ... zaznam zvuku ze zarizeni 0,0 (z arecord -l) po dobu 30 sekund do wav souboru  
+`alsamixer` ... zesilovani, zeslabovani zvuku  
+`aplay aaa.wav` ... prehraje a.wav  
+`aplay -L` ... vylistuje vsechny PCM  
+`aplay -l` .. vylistuje vsechny zarizeni, co mohou vydavat zvuk  
+`aplay -vv -D front:CARD=Intel,DEV=0 /usr/share/sounds/ekiga/ring.wav`  
+`aplay -D plug:surround51 chan-ad.wav ftp://ling.ll.hawaii.edu/pub/greg/Surround-SDL-testfiles.tgs` ... test surround zvuku  
+`arecord -l` ... seznam zarizeni na porizovani zvuku (input zarizeni)  
+`arecord -f cd - | aplay -` ... preposilani mikrofonu na vystup  
+`arecord -f cd - | tee output.wav | aplay -` ... preposilani mikrofonu na vystup, zaroven nahravani  
+`ffmpeg -f alsa -i hw:0,0 -t 30 out.wav` ... zaznam zvuku ze zarizeni 0,0 (z arecord -l) po dobu 30 sekund do wav souboru  
 [ffmpeg](https://trac.ffmpeg.org/wiki/Capture/ALSA) -f alsa -ac 1 -ar 44100  -i default:CARD=U0x46d0x809 -t 30 out.wav ... zaznam ze zarizeni (z arecord -L - ID zarizeni nezavisle na rebootu), channel 1, rate 44100 hz  
 modprobe snd-aloop pcm_substreams=1 ... nahrani modulu na nahravani zvuku z aplikace (loopback zarizeni), vyzaduje upravu /etc/asound.conf  
 fmpeg -f alsa -ac 2 -ar 44100 -i hw:Loopback,1,0 out.wav ... zaznam z loopback zarizeni (z aplikace)  
@@ -78,13 +78,13 @@ ffmpeg -i output.mkv -c:v libx264 -crf 0 -preset veryslow output-smaller.mkv ...
 [http://4youngpadawans.com/stream-camera-video-and-audio-with-ffmpeg/](http://4youngpadawans.com/stream-camera-video-and-audio-with-ffmpeg/) ... streamovani a sledovani videa  
 [https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam](https://wiki.archlinux.org/index.php/FFmpeg#Recording_webcam) ... hodne pouziti ffmpeg  
 
-#### Streamovani
+### Streamovani
 
 sudo apt install libnginx-mod-rtmp
 
 na konec /etc/nginx/nginx.conf pridat:
 
-```
+```conf
 rtmp {
     server {
             listen 1935;
@@ -105,7 +105,7 @@ ffmpeg -f v4l2 -framerate 10 -i /dev/video0 -c:v libx264 -crf 0 -preset ultrafas
 ffmpeg -s 1680x1050 -r 10 -f x11grab -i :0.0 -c:v libx264 -crf 0 -preset ultrafast -b:v 128k -an -threads 0 -tune zerolatency -s 1028x768 -r 10 -f flv rtmp://10.0.0.4/live/test ... streamovani obrazovky  
 rtmp://10.0.0.4/live/test ... link z Browseru, otevre se prehravacem
 
-```
+```conf
 rtmp {
     server {
         listen 1935;
@@ -117,7 +117,8 @@ rtmp {
 }
 ```
 
-a nahraje se do /usr/local/nginx/rtmp mp4 soubory. Prehrava se pak pomoci url: rtmp://10.0.0.4/vod/file_example_MP4_640_3MG.mp4 pro video file_example_MP4_640_3MG.mp4  
+a nahraje se do /usr/local/nginx/rtmp mp4 soubory. Prehrava se pak pomoci url: rtmp://10.0.0.4/vod/file_example_MP4_640_3MG.mp4 pro video file_example_MP4_640_3MG.mp4 
+
 ## Kamera
 
 v4l2-ctl --list-devices ... seznam zarizeni asociovanych s kamerou  
@@ -126,6 +127,7 @@ v4l2-ctl -c brightness=0 ... zmena nastaveni jasu
 ffmpeg -f v4l2 -list_formats all -i /dev/video0 ... podporovane formatypro zarizeni kamery  
 ffmpeg -f v4l2 -framerate 25 -video_size 640x480 -i /dev/video0 output.mkv ... zaznam z kamery do souboru  
 [fakecam](https://snapcraft.io/fakecam) ... virtualni kamera, kde se da menit pozadi  
+
 ## CD
 
 cdda2wav -JD /dev/cdrom ... vylistuje stopy z CD  

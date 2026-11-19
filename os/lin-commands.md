@@ -7,105 +7,96 @@ Nagios ... monitoring
 http://www.kegel.com/linux/pxe.html ... network boot and remote install  
 simple-scan ... scanovani  
 scanbutond ... demon, ktery monitoruje tlacitko scaneru a provadi akce  
-xte 'sleep 5' 'str ahoj' 'key Return' ... posle z klavesnice retezec 'ahoj'. Soucast balicku xautomation  
-xte 'sleep 5' 'mousemove 9999 0' ... posune mys na pozici (9999,0)  
+`xte 'sleep 5' 'str ahoj' 'key Return'` ... posle z klavesnice retezec 'ahoj'. Soucast balicku xautomation  
+`xte 'sleep 5' 'mousemove 9999 0'` ... posune mys na pozici (9999,0)  
 
 ## Prostredi - zeme, jazyk, kodovani
 
-locale ... vypise nastaveni prostredi  
+`locale` ... vypise nastaveni prostredi  
 /etc/sysconfig/i18n ... nastaveni prostredi po startu  
 LS_ALL, ... promenna, nastavujici prostredi  
-convmv -f iso-8859-1 -t utf8 -r --nosmart --notest . ... zkonvertuje kodovani souboru z iso1 do utf8  
+`convmv -f iso-8859-1 -t utf8 -r --nosmart --notest .` ... zkonvertuje kodovani souboru z iso1 do utf8  
 
-===Soubory===
+## Soubory
 
-```
-ar .. informace o objektech knihoven
-ldd .. ukaze sdilene knihovny binarky
-nm .. symboly objektu
-objdump .. informace o objektech
-strings .. tisknutelne znaky ze souboru
-ht .. prohlizec, editor a analyzatorf ELF
-elfsh .. prohlizenu ELFu
-strace .. roztraceje binarku
-gdb .. trace ?
-ltrace .. trace na knihovny ?
-lsof .. ukaze, jake programy binarka vyuziva
-ndisasm .. disassembler
-elfgrep hleda knihovny v ELFech
-file .. rozpozna, co je to za soubor
-sstrip .. odstrani informace z hlavicky (balicek ELF Kickers) - ztizi analyzu EL
-Fu
-fenris - dalsi nastroje
-nasm
-locate   ... vyhledava soubory pomoci idexu z updatedb
-updatedb ... prohleda vsechny soubory na disku a naindexuje
-hash     ... rychle cesty k souborum - seznam pouzitych prikazu s absolutni cestou
-for i in *.html; do mv $i `basename $i .html`.shtml; done ... prejmenuje vsechny .html soubory na .shtml
-echo 30 > /proc/sys/vm/swappiness ... nastavi ochotu swapovat na 30 z 100, standatne je nastavena na 60/100
-Paragon NTFS (www.ntfs-linux.com ... software umoznujici cteni a zapis na NTFS disky
-compress
-uuencode
-uudecode
-```
+`ar` .. informace o objektech knihoven  
+`ldd` .. ukaze sdilene knihovny binarky  
+`nm` .. symboly objektu  
+`objdump` .. informace o objektech  
+`strings` .. tisknutelne znaky ze souboru  
+`ht` .. prohlizec, editor a analyzatorf ELF  
+`elfsh` .. prohlizenu ELFu  
+`strace` .. roztraceje binarku  
+`gdb` .. trace ?  
+`ltrace` .. trace na knihovny ?  
+`lsof` .. ukaze, jake programy binarka vyuziva  
+`ndisasm` .. disassembler  
+`elfgrep` hleda knihovny v ELFech  
+`file` .. rozpozna, co je to za soubor  
+`sstrip` .. odstrani informace z hlavicky (balicek ELF Kickers) - ztizi analyzu EL  
+Fu  
+fenris - dalsi nastroje  
+nasm  
+`locate`   ... vyhledava soubory pomoci idexu z updatedb  
+`updatedb` ... prohleda vsechny soubory na disku a naindexuje  
+`hash`     ... rychle cesty k souborum - seznam pouzitych prikazu s absolutni cestou  
+for i in *.html; do mv $i `basename $i .html`.shtml; done ... prejmenuje vsechny .html soubory na .shtml  
+echo 30 > /proc/sys/vm/swappiness ... nastavi ochotu swapovat na 30 z 100, standatne je nastavena na 60/100  
+Paragon NTFS <www.ntfs-linux.com> ... software umoznujici cteni a zapis na NTFS disky  
+compress  
+uuencode  
+uudecode  
 
 ### json
 
 [jq](jq.html) - utilita na zpracovani JSON souboru a manipulaci s JSON objekty  
 
-1.- ruzne --
+## ruzne ##
 
-```
-look hello ... mrkne do slovniku (/usr/share/dict/words) na slova co zacinaji hello
-watch -n 60 tail /etc/mtab ...  kazdych 60 sekund provede prikaz tail /etc/mtab
-ldd PROGRAM ... zjisti jake knihovny uziva nejaky program PROGRAM
-telinit 5 ... zmeni runlevel na 5
-nice -n 20 find ... sousti se snizenou prioritou find ?
-clock ... Cas ktery ukazuje bios
-hwclock ... Cas ktery ukazuje bios
-/sbin/hwclock -systohc ... podle systemoveho casu nastavi cas v biosu
-```
+`look hello` ... mrkne do slovniku (/usr/share/dict/words) na slova co zacinaji hello  
+`watch -n 60 tail /etc/mtab` ...  kazdych 60 sekund provede prikaz tail /etc/mtab  
+`ldd PROGRAM` ... zjisti jake knihovny uziva nejaky program PROGRAM  
+`telinit 5` ... zmeni runlevel na 5  
+`nice -n 20 find` ... sousti se snizenou prioritou find ?  
+`clock` ... Cas ktery ukazuje bios  
+`hwclock` ... Cas ktery ukazuje bios  
+`/sbin/hwclock -systohc` ... podle systemoveho casu nastavi cas v biosu  
 
-===bash===
+## bash
 
-```
-motd : zobrazuje "tipy dne" pri prihlaseni na konzolu
-/etc/motd ... soubor pro tipy dne
+motd : zobrazuje "tipy dne" pri prihlaseni na konzolu  
+/etc/motd ... soubor pro tipy dne  
 
-set bell-style none - vypne beeper
-$PS1 .. promenna odpovidajici za prompt
-barva: "\e[Xm" X - cislo barvy, X=0 defaultni
-barva+zvyrazneni: "\e[X;1m"
-man console_codes
+set bell-style none - vypne beeper  
+$PS1 .. promenna odpovidajici za prompt  
+barva: "\e[Xm" X - cislo barvy, X=0 defaultni  
+barva+zvyrazneni: "\e[X;1m"  
+man console_codes  
 
-priklad nastaveni promptu:
-shopt -s extglob .. zapina interpretaci promennych $PS1
-export PS1="[c:$?]$PWD> " .. $? vystupni kod posledni procedury
-export PS1="\e[34;1m[\u@\h]\e[0m[\t] \e[31;1m[\w]\]\n\e[32;1m\$ \e[0m"  .. viceradkovy prompt [user@host] time ...
-export $TMOUT=240 .. odpojeni po 4 minutach
+### priklad nastaveni promptu
 
-for i in `seq 1 8`; do echo $i; done
-```
+shopt -s extglob .. zapina interpretaci promennych $PS1  
+export PS1="[c:$?]$PWD> " .. $? vystupni kod posledni procedury  
+export PS1="\e[34;1m[\u@\h]\e[0m[\t] \e[31;1m[\w]\]\n\e[32;1m\$ \e[0m"  .. viceradkovy prompt [user@host] time ...  
+export $TMOUT=240 .. odpojeni po 4 minutach  
 
-===Počestění===
+for i in `seq 1 8`; do echo $i; done  
 
-```
-export LC_ALL="cs_CZ"
-(dalsi promenne: LC_COLLATE, LC_TIME, LC_MONETARY, LC_MEASUREMENT, LC_CTYPE, LC_NUMERIC, LC_MESSAGES, LC_PAPER, LC_NAME, LC_ADDRESS, LC_TELEPHONE, LC_IDENTIFICATION="en_US")
-setxkbmap cz_qwerty
-```
+## Počestění
 
-[Pocesteni na ROOTovi](http://www.root.cz/diskuse/592/71867/)
+export LC_ALL="cs_CZ"  
+(dalsi promenne: LC_COLLATE, LC_TIME, LC_MONETARY, LC_MEASUREMENT, LC_CTYPE, LC_NUMERIC, LC_MESSAGES, LC_PAPER, LC_NAME, LC_ADDRESS, LC_TELEPHONE, LC_IDENTIFICATION="en_US")  
+setxkbmap cz_qwerty  
 
-```
-cat /var/log/httpd/access_log ... spojeni apache
-cat /var/log/secure ... dulezity log
-tunelp ... ladi tiskarny
-chkconfig ... prace se sluzbama (--list, --add, --del,...)
-symlinks ... kontroluje symbolicke odlazy na disku
-sfdisk -l -x |more ... ukaze logicke oddily vsech disku
-loadkeys /usr/share/kbd/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz ... nacteni prekladove tabulky pro klavesy
-```
+## [Pocesteni na ROOTovi](http://www.root.cz/diskuse/592/71867/)
+
+cat /var/log/httpd/access_log ... spojeni apache  
+cat /var/log/secure ... dulezity log  
+tunelp ... ladi tiskarny  
+chkconfig ... prace se sluzbama (--list, --add, --del,...)  
+symlinks ... kontroluje symbolicke odlazy na disku  
+sfdisk -l -x |more ... ukaze logicke oddily vsech disku  
+loadkeys /usr/share/kbd/keymaps/i386/qwertz/de-latin1-nodeadkeys.map.gz ... nacteni prekladove tabulky pro klavesy  
 
 ## SNPM
 

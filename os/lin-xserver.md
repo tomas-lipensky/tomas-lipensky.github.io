@@ -11,17 +11,17 @@ title: LINUX - X Windows
 ### X Windows
 
 [startx, xinit](http://xwinman.org/basics.php)
-startx -- :1 ... spusteni druheho Xwindows  
-startx -- :2 ... spusteni tretiho Xwindows  
-gimp --display :2 ... spusteni gimpu ve tretim Xwindows  
+`startx -- :1` ... spusteni druheho Xwindows  
+`startx -- :2` ... spusteni tretiho Xwindows  
+`gimp --display :2` ... spusteni gimpu ve tretim Xwindows  
 /etc/X11/xdm/Xsession ... globalni nastaveni manazeru oken  
 ~/.xinitrc ... uzivatelske nastaveni manazeru oken (spusteni manazeru: exec WM)  
 xinit /usr/bin/ck-launch-session startlxde ... spusteni okenniho manazeru LXDE z prikazove radky s [ConsoleKit](http://www.freedesktop.org/wiki/Software/ConsoleKit) (s podporou HAL)  
 
 ##### Konfigurace, testy konfiguracni soubory
 
-Xorg -configure ... nacte vsechny ovladace, detekuje hardware a zapise to do xorg.conf  
-xorgcfg -textmode ... nastaveni X-ek v textovem rezimu  
+`Xorg -configure` ... nacte vsechny ovladace, detekuje hardware a zapise to do xorg.conf  
+`xorgcfg -textmode` ... nastaveni X-ek v textovem rezimu  
 xorgconfig, x86config ... nastaveni X-ek  
 X -probeonly ... spusti X-ka jen pro otestovani nastaveni  
 ddcprobe ... kontrola, zda kudzu spravne detekoval vlastnosti monitoru a karty  

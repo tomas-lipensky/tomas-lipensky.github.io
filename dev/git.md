@@ -35,19 +35,19 @@ sme
 
 ## Vytvoreni repozitare, prace s repozitari
 
-git init ... vytvoreni lokalniho repozitare v aktualnim adresari  
-git clone git@github.rtp.raleigh.ibm.com:tomas.lipensky-cz/bi-dwh_tools.git ... vytvori adresar bi_dwh_tools s klonem repozitare z URL  
-git remote -v ... vypise repozitare a jejich adresy v danem git adresari  
-git remote ... ukaze aktualni vzdaleny repozitar  
-git remote add repo2 URL ... prida novy vzdaleny repozitar (git server)  
-git fetch repo2 ... ziskani vsech zmen ve vsech vetvich z git serveru repo2, co nejsou v lokalnim repu, neprepise lokalni soubory  
-git pull vetev1 ... fetch z git serveru a aplikovani zmen (merge) na vetev vetev1  
-git pull ... fetch a merge  
-git push origin master ... publikuje zmeny vetve master na git server origin  
-git push origin test:master ... publikuje lokalni vetev test do vzdalene master  
-git push ... publikuje zmeny vsech vetvi na aktualni git server  
-git remote show repo2 ... ukaze stav na servery repo2  
-git remote rename origin repo2 ... prejmenuje git server origin na repo2  
+`git init` ... vytvoreni lokalniho repozitare v aktualnim adresari  
+`git clone git@github.rtp.raleigh.ibm.com:tomas.lipensky-cz/bi-dwh_tools.git` ... vytvori adresar bi_dwh_tools s klonem repozitare z URL  
+`git remote -v` ... vypise repozitare a jejich adresy v danem git adresari  
+`git remote` ... ukaze aktualni vzdaleny repozitar  
+`git remote add repo2 URL` ... prida novy vzdaleny repozitar (git server)  
+`git fetch repo2` ... ziskani vsech zmen ve vsech vetvich z git serveru repo2, co nejsou v lokalnim repu, neprepise lokalni soubory  
+`git pull vetev1` ... fetch z git serveru a aplikovani zmen (merge) na vetev vetev1  
+`git pull` ... fetch a merge  
+`git push origin master` ... publikuje zmeny vetve master na git server origin  
+`git push origin test:master` ... publikuje lokalni vetev test do vzdalene master  
+`git push` ... publikuje zmeny vsech vetvi na aktualni git server  
+`git remote show repo2` ... ukaze stav na servery repo2  
+`git remote rename origin repo2` ... prejmenuje git server origin na repo2  
 
 ### Prace s kodem, schvalovani zmen, historie
 
@@ -89,6 +89,7 @@ Vice info: [https://git-scm.com/book/en/v1/Git-Basics-Tagging](https://git-scm.c
 `git tag -a 1.0.0 -m "initial version" 20721acbb115cc33848dfcc21` ... otaguje commit, jehoz check sum, nebo jeho cast je v parametru  
 `git show 1.0.1` ... ukaze zmeny pro dany tag  
 `git tag` ... seznam tagu  
+`git push origin --delete TAG` ... smaže na vzdáleném repozitáři tag TAG  
 `git tag pracovni` ... prida lehky tag - bez komentaru, k posledimu commitu  
 `git tag -l "prac*"` ... vylistuje vsechny tagy, co zacinaji na prac  
 `git push REMOTE TAG` ... odesle zmeny do repozitare REMOTE s tagem TAG, jinak se tagy neprenasi  
@@ -99,19 +100,19 @@ Vice info: [https://git-scm.com/book/en/v1/Git-Basics-Tagging](https://git-scm.c
 
 Vice o vetvich: [https://git-scm.com/book/en/v1/Git-Branching-Basic-Branching-and-Merging](https://git-scm.com/book/en/v1/Git-Branching-Basic-Branching-and-Merging)
 
-git checkout master ... prepne HEAD - ukazatel na aktualni vetev na "master" a prehodi vsechny soubory na aktualni soubory z vetver master  
-git checkout -b hotfix1 ... vytvori z aktualni vetve novou vetev hotfix1 a prepne se do ni  
-git commit -a -d "oprava hotfix1" ... add (-a = add na vsechny soubory, co se zmenily) a commit (schvaleni zmen)  
-git checkout master ... prepne zpet do puvodni vetve  
-git branch -d hotfix1 ... smaze vetev hotfix1  
-git branch ... seznam vetvi, ukaze aktualni  
-git checkout -b hotfix1 origin/hotfix1 ... vytvori novou lokalni vetev - kopii vzdalene vetve hotfig1  
-git rebase master ... jako merge, ale není fast forward, feature branch A-B-C-D, master branch A-B-E-F, vysledek A-B-E-F-C-D
-git merge master ... sjednoti zmeny - prijme zmeny z master do aktualni branche, feature branch A-B-C-D, master branch A-B-E-F, vysledek A-B-C-D-E-F  
+`git checkout master` ... prepne HEAD - ukazatel na aktualni vetev na "master" a prehodi vsechny soubory na aktualni soubory z vetver master  
+`git checkout -b hotfix1` ... vytvori z aktualni vetve novou vetev hotfix1 a prepne se do ni  
+`git commit -a -d "oprava hotfix1"` ... add (-a = add na vsechny soubory, co se zmenily) a commit (schvaleni zmen)  
+`git checkout master` ... prepne zpet do puvodni vetve  
+`git branch -d hotfix1` ... smaze vetev hotfix1  
+`git branch` ... seznam vetvi, ukaze aktualni  
+`git checkout -b hotfix1 origin/hotfix1` ... vytvori novou lokalni vetev - kopii vzdalene vetve hotfig1  
+`git rebase master` ... jako merge, ale není fast forward, feature branch A-B-C-D, master branch A-B-E-F, vysledek A-B-E-F-C-D
+`git merge master` ... sjednoti zmeny - prijme zmeny z master do aktualni branche, feature branch A-B-C-D, master branch A-B-E-F, vysledek A-B-C-D-E-F  
 
 ### git vnitrnosti
 
-git count-objects -v ... statistiky objektu  
+`git count-objects -v` ... statistiky objektu  
 
 ### git flow
 
@@ -120,10 +121,10 @@ lze ridit vyvoj (management vice vetvi) jednodusseji.
 
 ### Vyreseni konfliktu
 
-git checkout master  
-git branch nova-vetev-na-ulozeni-konfliktnich-commitu  
-git fetch --all  
-git reset --hard origin/master  
+`git checkout master`  
+`git branch nova-vetev-na-ulozeni-konfliktnich-commitu`  
+`git fetch --all`  
+`git reset --hard origin/master`  
 
 ### GitLab
 
@@ -136,7 +137,7 @@ curl -k --header "PRIVATE-TOKEN: $TOKEN" https://gitlab.url.com/api/v3/groups/my
 ##### procisteni .git adresare
 
 Zdroj: [https://stackoverflow.com/questions/5613345/how-to-shrink-the-git-folder](https://stackoverflow.com/questions/5613345/how-to-shrink-the-git-folder):  
-```
+```bash
 git clone remote-url
 for branch in `git branch -a | grep remotes | grep -v HEAD | grep -v master`; do
     git branch --track ${branch##*/} $branch

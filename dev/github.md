@@ -9,6 +9,7 @@ https://www.githubstatus.com/ ... Status zdraví služeb
 ## GitHub akce
 
 [GitHub akce](/automatizace/github)  
+[GitHub akce - syntaxe](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions), práva tokenů  
 
 ## GitHub markdown
 
@@ -16,6 +17,12 @@ https://www.githubstatus.com/ ... Status zdraví služeb
 [Barevný text](https://github.com/orgs/community/discussions/31570)  
 [Vysouvací bloky](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections)  
 [emoji symboly](https://github.com/ikatyang/emoji-cheat-sheet/blob/github-actions-auto-update/README.md)  
+
+## GitHub nástroje
+
+### mani
+
+`mani run add_codeowners --tags-expr 'services && ! template'` ... provede akci add_codeowners nad všemi repozitáři s tagem services, které neobsahují tag template.  
 
 ## GitHub Copilot
 
@@ -73,19 +80,19 @@ ctrp-enter ... otevře okno pro doplňování kódu
 .github/linters/
 ## GH - GitHub CLI
 
-gh auth login -s "admin:org" ... login jako organization admin  
-gh alias set iv 'issue view --comments' ... vytvoření aliasu  
-gh iv https://github.com/a/b/issues/4 ... použití aliasu, zobrazení komentářů pro issue 5  
-gh issue view --comments https://github.com/a/b/issues/4 ... zobrazení komentářů pro issue 5  
-gh repo list  ORG -L 300 --json name,repositoryTopics | jq '.[] | select(.repositoryTopics != null)' ... vylistuje repozitáře organizace ORG, které mají nadefinovaný nějaký topic (jak tag)  
-gh repo set-default ORG/repo ... nastaví výchozí repozitář - mohu pal přímo pracovat s pull requesty, issues, konfigurací atd  
-gh org list ... seznam organizací  
-gh pr list ... seznam pull requestů  
-gh pr view 462 ... zobrazí PR 462  
-gr pr review 8 -a -R https://github.com/organizace/repozitar ... schválí pull request v daném repu  
-gh pr merge 462 ... mergne PR 462  
-gh run list ... reznam běhů akcí  
-gh workflow list ... seznam akcí - workflow  
+`gh auth login -s "admin:org"` ... login jako organization admin  
+`gh alias set iv 'issue view --comments'` ... vytvoření aliasu  
+`gh iv https://github.com/a/b/issues/4` ... použití aliasu, zobrazení komentářů pro issue 5  
+`gh issue view --comments https://github.com/a/b/issues/4` ... zobrazení komentářů pro issue 5  
+`gh repo list  ORG -L 300 --json name,repositoryTopics | jq '.[] | select(.repositoryTopics != null)'` ... vylistuje repozitáře organizace ORG, které mají nadefinovaný nějaký topic (jak tag)  
+`gh repo set-default ORG/repo` ... nastaví výchozí repozitář - mohu pal přímo pracovat s pull requesty, issues, konfigurací atd  
+`gh org list` ... seznam organizací  
+`gh pr list` ... seznam pull requestů  
+`gh pr view 462` ... zobrazí PR 462  
+`gr pr review 8 -a -R https://github.com/organizace/repozitar` ... schválí pull request v daném repu  
+`gh pr merge 462` ... mergne PR 462  
+`gh run list` ... reznam běhů akcí  
+`gh workflow list` ... seznam akcí - workflow  
 
 ### GH API
 

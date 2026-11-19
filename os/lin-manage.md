@@ -12,33 +12,33 @@ StressLinux ([www.srtesslinux.org](http://www.stresslinux.org)) - distribuce na 
 
 ## Runlevely
 
-runlevel ... ukaze aktualni runlevel  
-init 5 ... prepne do levelu 5  
+`runlevel` ... ukaze aktualni runlevel  
+`init 5` ... prepne do levelu 5  
 
-#### Virtualni konzole
+### Virtualni konzole
 
-chvt 1 ... prepne monitor do 1. konzole  
+`chvt 1` ... prepne monitor do 1. konzole  
 
 ## balicky
 
-#### Debian, Ubuntu, ...
+### Debian, Ubuntu, atd
 
-dpkg -i aaa.deb ... nainstaluje balicek  
-dpkg -l ... seznam vsech balicku  
-dpkg -l aaa ... zjisti, zda je balicek nainstalovany  
-dpkg -L aaa ... vylistuje soubory nainstalovaneho balicku  
-dpkg -r aaa ... odinstaluje balicek  
-dpkg -S /a/b ... najde balicek, ktery vlastni tento soubor  
-apt-get install|remover|update|upgrade ... vzdalena instalace balicku a jine sluzby  
-aptitude install|search|remove ... vzdalene hledani, instalace balicku a jine  
-less /var/log/apt/history.log ... historie prikazu apt  
-apt list -a linux-firmware ... ukaze nainstalovany a starsi balicek  
-apt install linux-firmware=1.173 ... ponizi verzi nainstalovaneho balicku  
-apt-mark hold linux-firmware ... zafixuje verzi balicku, nebude se upgradovat  
-apt-cache showpkg linux-firmware ... ukaze udaje o balicku  
-apt-cache policy linux-firmware ... ukaze aktualni, dostupny balicek  
+`dpkg -i aaa.deb` ... nainstaluje balicek  
+`dpkg -l` ... seznam vsech balicku  
+`dpkg -l aaa` ... zjisti, zda je balicek nainstalovany  
+`dpkg -L aaa` ... vylistuje soubory nainstalovaneho balicku  
+`dpkg -r aaa` ... odinstaluje balicek  
+`dpkg -S /a/b` ... najde balicek, ktery vlastni tento soubor  
+`apt-get install|remover|update|upgrade` ... vzdalena instalace balicku a jine sluzby  
+`aptitude install|search|remove` ... vzdalene hledani, instalace balicku a jine  
+`less /var/log/apt/history.log` ... historie prikazu apt  
+`apt list -a linux-firmware` ... ukaze nainstalovany a starsi balicek  
+`apt install linux-firmware=1.173` ... ponizi verzi nainstalovaneho balicku  
+`apt-mark hold linux-firmware` ... zafixuje verzi balicku, nebude se upgradovat  
+`apt-cache showpkg linux-firmware` ... ukaze udaje o balicku  
+`apt-cache policy linux-firmware` ... ukaze aktualni, dostupny balicek  
 
-#### Redhat, fedora, suse, ...
+### Redhat, fedora, suse, atd
 
 cat /etc/*-release; cat /etc/issue; ... distribuce a verze linuxu
 /etc/yum.repos/*.repo ... definice repozitaru pro yum  
@@ -91,24 +91,24 @@ wget -q http://download.virtualbox.org/virtualbox/debian/oracle_vbox.asc -O- | r
 rpm --import http://www.skype.com/products/skype/linux/rpm-public-key.asc ... Skype GPG klic  
 rpm -Uhv http://apt.sw.be/redhat/el5/en/i386/rpmforge/RPMS/rpmforge-release-0.5.2-2.el5.rf.i386.rpm ... Repozitar pro RedHat RHEL 5  
 
-#### snap
+### snap
 
-snap list ... seznam nainstalovanych balicku  
-snap remove "core" --revision="6531" ... smazani jedne (stare) verze balicku core  
-snap info anbox ... informace o balicku anbox  
-snap search microsoft ... hledani balicku  
-snap refresh --list ... update balicku  
-snap help ... napoveda  
+`snap list` ... seznam nainstalovanych balicku  
+`snap remove "core" --revision="6531"` ... smazani jedne (stare) verze balicku core  
+`snap info anbox` ... informace o balicku anbox  
+`snap search microsoft` ... hledani balicku  
+`snap refresh --list` ... update balicku  
+`snap help` ... napoveda  
 
 ## Uzivatele
 
 /etc/skel/ ... defaultni home directory  
 /etc/default/useradd ... nastaveni default parametru pro useradd  
 /etc/login.defs ... nastaveni default parametru pro useradd (expirce, uid, atd)  
-authconfig --test|grep hashing ... ukaze vychozi hash algoritmus  
-authconfig --passalgo=sha512 --update ... zmeni vychozi hash algoritmus  
-chage ... zmena expirace uctu a hesla
-chage -d 0 uzivatel ... expirace hesla = 0
+`authconfig --test|grep hashing` ... ukaze vychozi hash algoritmus  
+`authconfig --passalgo=sha512 --update` ... zmeni vychozi hash algoritmus  
+`chage` ... zmena expirace uctu a hesla
+`chage -d 0 uzivatel` ... expirace hesla = 0
 chgrp ... zmeni skupinoveho vlastnika souboru  
 id root ... ikaze informace o uzivateli root  
 faillog -a ... ukaze, jestli naposledy uzivatel neuspel pri prihlasovani  
