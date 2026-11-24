@@ -6,7 +6,7 @@ title: macos
 
 ### Finder
 
-defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES ... nastaví, že Finder ukazuje plnou cestu pro aktuální zobrazení  
+`defaults write com.apple.finder _FXShowPosixPathInTitle -bool YES` ... nastaví, že Finder ukazuje plnou cestu pro aktuální zobrazení  
 Shift-Command-G ... dialog na zadání cesty, kam se přemístit  
 
 ## Sluzby

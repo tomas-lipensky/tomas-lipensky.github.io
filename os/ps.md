@@ -34,18 +34,18 @@ gci -r| sort -descending -property length | select -first 10 name, length … 10
 Promenne jsou objekty, mohou obsahovat 1-dimenzionalni promenne, ale i sady promennych
 
 help variables  
-get-variable ... seznam promennych  
-$PSVersionTable ... objekt obsahujici hodnotu verze  
-$profile ... profilovy powershell  
-$a="$profile je profil" ... vlozeni promenne do promenne  
-$a="$profile je retezec" ... nezameni $profile za jeji hodnotu  
-$text="Ahoj, moje cislo je {0:N0} je to {1:P2} procent" -f 50.5432 0.15555 ... formatovani textu  
-$d=Get-Date; "Dnes je {0: d. M. YYYY H:mm:ss}" -f $d ... formatovani datumu  
-$a="1"; [int]$a ... prevede retezec na cele cislo  
-$? ... true posledni prikaz bez chyby. False- posledni prikaz selhal  
+`get-variable` ... seznam promennych  
+`$PSVersionTable` ... objekt obsahujici hodnotu verze  
+`$profile` ... profilovy powershell  
+`$a="$profile je profil"` ... vlozeni promenne do promenne  
+`$a="$profile je retezec"` ... nezameni $profile za jeji hodnotu  
+`$text="Ahoj, moje cislo je {0:N0} je to {1:P2} procent" -f 50.5432 0.15555` ... formatovani textu  
+`$d=Get-Date; "Dnes je {0: d. M. YYYY H:mm:ss}" -f $d` ... formatovani datumu  
+`$a="1"; [int]$a` ... prevede retezec na cele cislo  
+`$?` ... true posledni prikaz bez chyby. False- posledni prikaz selhal  
 [xml]$pes='<dogs><dog name="alik"/><dog name="cvalik"/></dogs>'  
 $pes.dogs.dog[0] ... ukaze vlastnost dogs, prvni prvek z pole  
-$p[5..-1] ... vsechny prvky od 5teho do posledniho  
+`$p[5..-1]` ... vsechny prvky od 5teho do posledniho  
 $soubor | Get-Content C:\aaa.txt ... nacte vsechny radky do promenne typu pole  
 ${C:\aaa.txt}=$soubor ... ulozi obsah promenne do souboru  
 $pole=1,2,3,4,5 ... definice pole  
@@ -64,17 +64,17 @@ C:\Windows\System32\WindowsPowerShell\v1.0\*ps1xml ... vychozi vzhled zobrazeni 
 
 ## Operatory
 
-help operators
-#, <# #> ... komentare  
-> >> 2> 2&>> ... presmerovani vystupu jako v shellu  
-1.and -or -not -xor ... logicke operatory  
-2.gt -lt -le ge -eq -like -clike ... binarni operatory (kdyz zacina na c - case sensitive, i - case insensitive)  
-+ - * / %  ... aritmeticke operatory  
-() ... operatorove zavorky  
-$p -is "array" ... napise, zda je promenna pole  
-"ahoj pane" -replace "pane","kluku" ... substituce  
-(1..10) -join ";" ... spoji prvky pole pomoci oddelovace, vrati jako text  
-"1,2,3" -split "," ... vrati pole, kde rozdeli text podle oddelovacu  
+`help operators`  
+`#, <# #>` ... komentare  
+`> >> 2> 2&>>` ... presmerovani vystupu jako v shellu  
+`-and -or -not -xor` ... logicke operatory  
+`-gt -lt -le ge -eq -like -clike` ... binarni operatory (kdyz zacina na c - case sensitive, i - case insensitive)  
+`+ - * / \%`  ... aritmeticke operatory  
+`()` ... operatorove zavorky  
+`$p -is "array"` ... napise, zda je promenna pole  
+`"ahoj pane" -replace "pane","kluku"` ... substituce  
+`(1..10) -join ";"` ... spoji prvky pole pomoci oddelovace, vrati jako text  
+`"1,2,3" -split ","` ... vrati pole, kde rozdeli text podle oddelovacu  
 
 ## Funkce
 
