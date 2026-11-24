@@ -11,20 +11,20 @@ title: UNIX - Prikazy
 
 ## Obrazovka
 
-echo ... napise na obrazovku text  
+`echo` ... napise na obrazovku text  
 
-clear ... vycisti screen  
-tty ...  ukaze, ktera konzole je aktivni  
-stty ... ukaze a meni parametry terminalu  
+`clear` ... vycisti screen  
+`tty` ...  ukaze, ktera konzole je aktivni  
+`stty` ... ukaze a meni parametry terminalu  
 [screen](http://www.unixwerk.de/unix/screens.html) ... multitasking terminalu v jednom procesu  
 
 ## Procesy
 
 /proc/$pid/fd/* ... seznam otevrenych souboru danym procesem  
-at ... jednou spousteny proces  
-batch ... spusti se proces, kdyz system neni vytizen  
-bg ... rozjeti procesu a prevedeni do pozadu  
-crontab ... pravidelne spoustene procesy  
+`at` ... jednou spousteny proces  
+`batch` ... spusti se proces, kdyz system neni vytizen  
+`bg` ... rozjeti procesu a prevedeni do pozadu  
+`crontab` ... pravidelne spoustene procesy  
 disown -h %1 ... zprosti vlastnictvi k prosesu na pozadi (proces se neukonci odlogovanim)  
 exec skript ... narhadi aktoualni behove prostredi (tedy napr. skript, shell atd) spustenim prikazu "skript"  
 fg ... navrat preruseneho procesu do popredi  
