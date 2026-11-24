@@ -33,7 +33,10 @@ title: unix
 `(echo > /dev/tcp/google.com/22) >/dev/null 2>&1 && echo "UP" || echo "DOWN"` ... netcat -zv google.com  
 `cat < /dev/null > /dev/tcp/<hostname or ip>/<port>; echo $?` ... to samé  
 
-#### curl/wget
+### curl/wget
+
+`printf "GET / HTTP/1.1\r\nHost: pl-0-eu-central-1.dxwnh.mongodb.net\r\nUser-Agent: linux\r\nAccept: */*\r\n\r\n" | openssl s_client -connect server:port -quiet` ... alternativa na curl https  
+`{ echo -e "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r" >&3; cat <&3 ; } 3<> /dev/tcp/www.google.com/80` ... jako curl  
 
 ``` bash
 exec 3<>/dev/tcp/www.google.com/80
@@ -41,27 +44,7 @@ echo -e "GET / HTTP/1.1\r\nhost: http://www.google.com\r\nConnection: close\r\n\
 cat <&3
 ```
 
-.... curl, nebo wget  
-
-#### ntp
-
-`cat </dev/tcp/time.nist.gov/13` ... ntp server  
-
-#### ps
-
-for i in $(ls /proc/[0-9]*/cmdline ); do echo $i $(cat $i 2>/dev/null) | tr '\0' ' '; echo; done ... ps -ef  
-`ls /proc/6/tasks` ... seznam threadů, jako ps -T -p 6  
-echo $[^1]
-
-[^1]:  $(cat /proc/uptime | cut -d. -f1) - ($(cat stat | awk '{ print $22}') / $(cat stat | awk '{ print $22}') )  ... kolik sekund jede proces  
-echo $[^2]
-
-[^2]:  $(cat stat | awk '{ print $14}') + $(cat stat | awk '{ print $15}') + $(cat stat | awk '{ print $16}') + $(cat stat | awk '{ print $17}')  ... kolik tiků si vzal proces  
-CPU% podíl předchzích  
-
-#### free
-
-`cat /proc/meminfo`
+nebo
 
 ``` bash
 wget ()
@@ -80,8 +63,21 @@ wget ()
 _wget http://www.andreafortuna.org/robots.txt
 ```
 
-`printf "GET / HTTP/1.1\r\nHost: pl-0-eu-central-1.dxwnh.mongodb.net\r\nUser-Agent: linux\r\nAccept: */*\r\n\r\n" | openssl s_client -connect server:port -quiet` ... alternativa na curl https  
+### ntp
 
-`{ echo -e "GET / HTTP/1.0\r\nHost: www.google.com\r\n\r" >&3; cat <&3 ; } 3<> /dev/tcp/www.google.com/80` ... jako curl  
+`cat </dev/tcp/time.nist.gov/13` ... ntp server  
 
-`grep -v "rem_address" /proc/net/tcp | awk '{x=strtonum("0x"substr($3,index($3,":")-2,2)); for (i=5; i>0; i-=2) x = x"."strtonum("0x"substr($3,i,2))}{print x":"strtonum("0x"substr($3,index($3,":")+1,4))}'` ... jako netstat -anL
+### ps
+
+`for i in $(ls /proc/[0-9]*/cmdline ); do echo $i $(cat $i 2>/dev/null) | tr '\0' ' '; echo; done` ... ps -ef  
+`ls /proc/6/tasks` ... seznam threadů, jako ps -T -p 6  
+`echo $(( $(cat /proc/uptime | cut -d. -f1) - ($(cat stat | awk '{ print $22}') / $(cat stat | awk '{ print $22}') ))`  ... kolik sekund jede proces  
+`echo $(( $(cat stat | awk '{ print $14}') + $(cat stat | awk '{ print $15}') + $(cat stat | awk '{ print $16}') + $(cat stat | awk '{ print $17}') ))`  ... kolik tiků si vzal proces  
+
+### free
+
+`cat /proc/meminfo`
+
+### netstat
+
+`grep -v "rem_address" /proc/net/tcp | awk '{x=strtonum("0x"substr($3,index($3,":")-2,2)); for (i=5; i>0; i-=2) x = x"."strtonum("0x"substr($3,i,2))}{print x":"strtonum("0x"substr($3,index($3,":")+1,4))}'` ... jako netstat -anL  
